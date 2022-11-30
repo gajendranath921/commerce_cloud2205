@@ -1,0 +1,101 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Collection Browser - Defaults
+================================*/
+// All Defaults connected to the Collection Browser
+
+
+@import "../support/_collectionBrowser-mixins.scss";
+
+.yw-coll-browser {
+    > .yw-listview-actioncontainer > .y-toolbar {
+        border: none;
+    }
+
+    &-container {
+        .z-treerow .z-treecell,
+        .z-listcell-content,
+        .z-treecell-content {
+            cursor: $collection-browser__tree-view-content--cursor;
+        }
+        .yw-coll-browser-hyperlink {
+            @if $_collection-browser__hyperlink-label--color {
+                .yw-coll-browser & {
+                    color: $_collection-browser__hyperlink-label--color;
+                }
+            }
+            &.z-label:hover {
+                text-decoration: underline;
+            }
+            &:hover {
+                cursor: $collection-browser__hyperlink-label-hover--cursor;
+                color: $collection-browser__hyperlink-label-hover--color;
+            }
+        }
+        .yw-coll-browser-focused .yw-coll-browser-hyperlink {
+            color: $collection-browser__focused-element-hyperlink-label--color;
+        }
+        .z-listitem,
+        .z-treerow,
+        .yw-grid-view-tile {
+            &:hover .yw-coll-browser-hyperlink {
+                text-decoration: underline;
+            }
+        }
+        .yw-listview-cell .yw-compound-renderer-container,
+        .yw-grid-view-container .bottom-panel-container{
+            padding-left: $collection-browser__status-icons-container--padding-left;
+            
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+    .yw-collection-browser-inset & {
+        @if variable-exists(collection-browser-inset__default--padding) and ($collection-browser-inset__default--padding != 0){
+            padding: $collection-browser-inset__default--padding;
+            background: $collection-browser-inset__default--bg-color;
+
+            > .yw-coll-browser-container {
+                background-color: transparent;
+
+                > div {
+                    background-color: $collection-browser-inset__container--bg-color;
+                }
+            }
+            &-multiselect {
+                > .yw-listview-bottom-bar {
+                    // margin-right: $collection-browser-inset__default--padding * -1;
+                    // margin-left: $collection-browser-inset__default--padding * -1;
+                    padding-left: $collection-browser-inset__default--padding;
+                    padding-right: $collection-browser-inset__default--padding;
+                }
+            }
+        }
+    }
+}
+
+.yw-collection-preview {
+    .z-listbox-body {
+        background-color: $collection-browser__collection-preview--bg-color;
+        background-position: $collection-browser__collection-preview--bg-position;
+        background-repeat: no-repeat;
+        width: 100% !important; /* FIX FOR WRONG ZK WIDTH CALCULATION */
+    }
+    &-empty-list.z-listbox .z-listbox-body {
+        background: $collection-browser__collection-preview--bg-color;
+    }
+    .z-listitem {
+        border-bottom: $collection-browser__collection-preview--list-item-border-bottom;
+
+        &,
+        &:first-child {
+            .z-listcell-content {
+                padding: $_collection-browser__collection-preview-item--padding;
+            }
+        }
+    }    
+}
+

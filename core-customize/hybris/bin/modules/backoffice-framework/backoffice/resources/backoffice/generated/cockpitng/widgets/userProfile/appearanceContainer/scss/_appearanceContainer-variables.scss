@@ -1,0 +1,10 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$user-profile-appearance-default--spacing: $container-spacing-default_two-thirds; //16px
+$user-profile-appearance-title-color: var(--bo-title-color);
+$user-profile-appearance-title-size: $font-size__h4;
+$user-profile-appearance-title-height: 40px;
+$user-profile-appearance-tab-height: 53px;

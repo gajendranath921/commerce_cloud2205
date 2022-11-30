@@ -1,0 +1,277 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    z-Buttons
+================================*/
+// Definitions of the z-Buttons (Basic Button Component)
+
+@charset "UTF-8";
+@import "../support/_cockpit-variables.scss";
+
+.z-button {
+    // height: $editor-defaults__button--height;
+    @include _add-default-button-styles();
+
+    &.y-btn-primary,
+    &.yw-btn-primary {
+        //@include _add-primary-button-styles();
+        @include _additional-button-styles(
+                        $editor-defaults__button-primary--color,
+                        $editor-defaults__button-primary--bg-color,
+                        $editor-defaults__button-primary--border-color,
+                        $editor-defaults__button-primary--font-weight,
+                        $editor-defaults__button-primary-hover--color,
+                        $editor-defaults__button-primary-hover--bg-color,
+                        $editor-defaults__button-primary-hover--border-color,
+                        $editor-defaults__button-primary-active--color,
+                        $editor-defaults__button-primary-active--bg-color,
+                        $editor-defaults__button-primary-active--border-color);
+    }
+
+    &.y-btn-secondary {
+        //@include _add-secondary-button-styles();
+        @include _additional-button-styles(
+                        $editor-defaults__button-secondary--color,
+                        $editor-defaults__button-secondary--bg-color,
+                        $editor-defaults__button-secondary--border-color,
+                        $editor-defaults__button-secondary--font-weight,
+                        $editor-defaults__button-secondary-hover--color,
+                        $editor-defaults__button-secondary-hover--bg-color,
+                        $editor-defaults__button-secondary-hover--border-color,
+                        $editor-defaults__button-secondary-active--color,
+                        $editor-defaults__button-secondary-active--bg-color,
+                        $editor-defaults__button-secondary-active--border-color);
+    }
+
+    &.y-btn-transparent {
+        @include _transparent-button-styles();
+    }
+
+    &.y-btn-warning {
+        @include _additional-button-styles(
+                        $editor-defaults__button-warning--color,
+                        $editor-defaults__button-warning--bg-color,
+                        $editor-defaults__button-warning--border-color,
+                        $editor-defaults__button-secondary--font-weight,
+                        $editor-defaults__button-warning-hover--color,
+                        $editor-defaults__button-warning-hover--bg-color,
+                        $editor-defaults__button-warning-hover--border-color,
+                        $editor-defaults__button-warning-active--color,
+                        $editor-defaults__button-warning-active--bg-color,
+                        $editor-defaults__button-warning-active--border-color);
+    }
+
+    &.y-btn-danger {
+        @include _additional-button-styles(
+                        $editor-defaults__button-danger--color,
+                        $editor-defaults__button-danger--bg-color,
+                        $editor-defaults__button-danger--border-color,
+                        $editor-defaults__button-secondary--font-weight,
+                        $editor-defaults__button-danger-hover--color,
+                        $editor-defaults__button-danger-hover--bg-color,
+                        $editor-defaults__button-danger-hover--border-color,
+                        $editor-defaults__button-danger-active--color,
+                        $editor-defaults__button-danger-active--bg-color,
+                        $editor-defaults__button-danger-active--border-color);
+    }
+
+    &.y-btn-success {
+        @include _additional-button-styles(
+                        $editor-defaults__button-success--color,
+                        $editor-defaults__button-success--bg-color,
+                        $editor-defaults__button-success--border-color,
+                        $editor-defaults__button-secondary--font-weight,
+                        $editor-defaults__button-success-hover--color,
+                        $editor-defaults__button-success-hover--bg-color,
+                        $editor-defaults__button-success-hover--border-color,
+                        $editor-defaults__button-success-active--color,
+                        $editor-defaults__button-success-active--bg-color,
+                        $editor-defaults__button-success-active--border-color);
+    }
+    &.y-btn-accept {
+        @include _additional-button-styles(
+                        $editor-defaults__button-accept--color,
+                        $editor-defaults__button-accept--bg-color,
+                        $editor-defaults__button-accept--border-color,
+                        $editor-defaults__button-secondary--font-weight,
+                        $editor-defaults__button-accept-hover--color,
+                        $editor-defaults__button-accept-hover--bg-color,
+                        $editor-defaults__button-accept-hover--border-color,
+                        $editor-defaults__button-accept-active--color,
+                        $editor-defaults__button-accept-active--bg-color,
+                        $editor-defaults__button-accept-active--border-color);
+    }
+    &.y-btn-reject {
+        @include _additional-button-styles(
+                        $editor-defaults__button-reject--color,
+                        $editor-defaults__button-reject--bg-color,
+                        $editor-defaults__button-reject--border-color,
+                        $editor-defaults__button-secondary--font-weight,
+                        $editor-defaults__button-reject-hover--color,
+                        $editor-defaults__button-reject-hover--bg-color,
+                        $editor-defaults__button-reject-hover--border-color,
+                        $editor-defaults__button-reject-active--color,
+                        $editor-defaults__button-reject-active--bg-color,
+                        $editor-defaults__button-reject-active--border-color);
+    }
+    &.y-btn-attention {
+        @include _additional-button-styles(
+                        $editor-defaults__button-attention--color,
+                        $editor-defaults__button-attention--bg-color,
+                        $editor-defaults__button-attention--border-color,
+                        $editor-defaults__button-secondary--font-weight,
+                        $editor-defaults__button-attention-hover--color,
+                        $editor-defaults__button-attention-hover--bg-color,
+                        $editor-defaults__button-attention-hover--border-color,
+                        $editor-defaults__button-attention-active--color,
+                        $editor-defaults__button-attention-active--bg-color,
+                        $editor-defaults__button-attention-active--border-color);
+    }
+}
+
+.ye-text-button {
+    text-align: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    text-transform: none;
+    white-space: normal;
+    padding: 0;
+    height: auto;
+    min-height: 0;
+    border-color: transparent;
+
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $editor-defaults__button-text--bg-color;
+        color: $editor-defaults__button-text--color;
+        box-shadow: none;
+        border-color: transparent;
+    }
+    &:hover {
+        color: $editor-defaults__button-text-hover--color;
+        text-decoration: $editor-defaults__button-text-hover--text-decoration;
+    }
+    &[disabled], &[disabled]:hover, &[disabled]:active {
+        color: $editor-defaults__button-text--color;
+        opacity: $editor-defaults__button-text-disabled--opacity;
+        text-decoration: none;
+        border-color: transparent;
+    }
+}
+
+.z-a {
+    font-family: $font-family__text;
+    background-color: $editor-defaults__button-text--bg-color;
+    color: $editor-defaults__button-link--color;
+    text-decoration: none;
+    box-shadow: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $editor-defaults__button-text--bg-color;
+        color: $editor-defaults__button-link-hover--color;
+        text-decoration: $editor-defaults__button-text-hover--text-decoration;
+        box-shadow: none;
+    }
+    &[disabled], &[disabled]:hover, &[disabled]:active {
+        color: $editor-defaults__button-link--color;
+        opacity: $editor-defaults__button-text-disabled--opacity;
+        text-decoration: none;
+    }
+}
+
+.ye-btn-container > button {
+    &.ye-btn-cancel.z-button {
+        padding: 0;
+    }
+}
+
+.ye-btn-container > button.z-button.y-btn-primary {
+    margin-top: .3em;
+}
+
+.ye-delete-btn,
+.cng_admin_deleteButton,
+.yo-delete-btn,
+.removeWidgetBtn {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: none;
+        content: $_editor-defaults__item-delete-button--content;
+        font-family: $_editor-defaults__item-delete-button--font-family;
+        font-size: $editor-defaults__item-delete-button--font-size;
+        line-height: $editor-defaults__item-delete-button--line-height;
+        color: $editor-defaults__icon--color;
+        text-align: center;
+    }
+    &:hover {
+        color: $editor-defaults__button-hover--color;
+        border: 0.0625rem solid $editor-defaults__button-hover--border-color;
+        border-radius: $editor-defaults__button--border-radius;
+        background-color: $editor-defaults__button-hover--bg-color;
+    }
+    &:active {
+        box-shadow: none;
+        color: $_container__action-selected--color;
+        border: 0.0625rem solid $editor-defaults__button--border-color;
+        border-radius: $editor-defaults__button--border-radius;
+        background-color: $editor-defaults__button-active--bg-color;
+        outline-color: $editor-defaults__button-active--outline-color;
+    }
+    &:focus {
+        outline: $_button__icon-focus-outline-width dotted $_button__icon-focus-outline-color;
+        outline-offset: $_button__icon-focus-outline-offset;
+    }
+    &:disabled, &[disabled] {
+        color: $editor-defaults__item-delete-button-disabled--color;
+        opacity: $editor-defaults__item-delete-button-disabled--opacity;
+    }
+}
+
+
+.z-upload-hover {
+    .ye-dndfileupload-upload-container & {
+        background-color: transparent;
+        border-color: transparent;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none;
+
+        &.z-button {
+            &.ye-text-button {
+            text-decoration: underline;
+            border-color: transparent;
+            }
+        }
+    }
+
+    &.z-button.y-btn-primary {
+        background-color: $editor-defaults__button-primary-hover--bg-color;
+    }
+
+}
+
+.cng-font-icon {
+    font-family: $editor-defaults__action-button--font-family;
+    font-size: $editor-defaults__action-button--font-size;
+    height: 100%;
+    width: 100%;
+    min-height: 28px;
+    min-width: 28px;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    color: inherit !important;
+}

@@ -1,0 +1,66 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Extended Group 
+================================*/
+// Styling of the Extended Group 
+
+@import "../support/_create-variables.scss";
+
+.ya-extended-group-cnt {
+    text-align: left;
+    position: relative;
+    background-color: $_button__action-tool--bg-color;
+    color: $_button__action-tool--color;
+    border: $_create__toolbar-action-button--border;
+    border-radius: $_create__toolbar-action-button--border-radius;
+    // box-shadow: $create__create-new-action--box-shadow;
+    overflow: hidden;
+
+    img {
+        z-index: $create__toolbar-action-extended-group-image--z-index;
+        display: inline-block;
+        float: none;
+        position: absolute;
+    }
+    > a.ya-create-type-selector-button.z-toolbarbutton,
+    > .z-image {
+        margin: nth($create__toolbar-action-split-group-items-overlap--margin, 1) 0;
+    }
+    button.z-button {
+        height: $create__toolbar-action-extended-group-create-type-button--height;
+        width: $create__toolbar-action-extended-group-create-type-button--width;
+    }
+    a.ya-create-type-selector-button.z-toolbarbutton {
+        width: $create__toolbar-action-extended-group-create-type-button--width;
+        display: inline-block;
+        float: none;
+        text-align: center;
+        box-shadow: none;
+        border: none;
+        
+        &:hover {
+            @if $create__create-new-action-hover--box-shadow {
+                box-shadow: $create__create-new-action-hover--box-shadow;
+            }
+        }
+    }
+    &.ya-cng-extended-action-container-hover {
+        background-color: $create__create-new-button-hover--bg-color;
+        color: $create__create-new-button-hover--color;
+        border-color: $_create__create-new-button-hover--border-color;
+        cursor: pointer;
+
+        a.ya-create-type-selector-button.z-toolbarbutton {
+            &,
+            &:hover {
+                @if $create__create-new-action-hover--box-shadow {
+                    box-shadow: $create__create-new-action-hover--box-shadow;
+                }
+                color: inherit;
+                background-color: transparent;
+            }
+        }
+    }
+}

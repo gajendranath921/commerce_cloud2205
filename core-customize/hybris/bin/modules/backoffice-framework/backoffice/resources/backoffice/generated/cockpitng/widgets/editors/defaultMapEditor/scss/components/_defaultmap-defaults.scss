@@ -1,0 +1,47 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+.ye-list-inline {
+    position: relative;
+    width: 100%;
+    float: left;
+    min-height: $editor-defaults__editor-key--font-size * 2;
+}
+
+.ye-list-listbox-defaultmap {
+    .z-listcell-content {
+        position: relative;
+
+        .ye-remove-button {
+            display: none;
+            width: $editor-defaults__listitem-btn--size;
+            height: $editor-defaults__listitem-btn--size;
+            right: $editor-defaults__listitem--padding;
+            top: 50%;
+            position: absolute;
+            transform: translate3d(0, -50%, 0);
+            color: $_button__icon--color;
+        }
+        &:hover {
+            .ye-remove-button {
+                display: block;
+            }
+        }
+    }
+    .ye-map-add-label {
+
+        color: $_editor-defaults__list-box-add-action--color;
+        display: inline;
+        cursor: pointer;
+        &:before {
+            content: $_editor-defaults__list-box-add-action-icon--content;
+            margin-left: floor($editor-defaults__listitem--margin/2);
+            margin-right: $editor-defaults__listitem--margin;
+            font-family: $_editor-defaults__list-box-add-action-icon--font-family;
+            font-size: $_editor-defaults__list-box-add-action-icon--font-size;
+        }
+    }
+    .ye-map-add-icon.z-image {
+        display: none;
+    }
+}

@@ -1,0 +1,183 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Checkbox, Radiobox
+================================*/
+// Default styling of Checkbox & Radiobox in Cockpitng
+@charset "UTF-8";
+@import "../support/_cockpit-variables.scss";
+
+.z-checkbox,
+.z-radio {
+    position: relative !important;
+    padding-left: $editor-defaults__inputbox-container--padding-left;
+    line-height: $editor-defaults__inputbox--size;
+    margin-bottom: $editor-defaults__inputbox-container--margin-bottom;
+    min-height: $editor-defaults__inputbox--size;
+    display: inline-block;
+
+    label {
+        display: inline-block;
+        padding-left: 0;
+        padding-right: $editor-defaults__inputbox-container--padding-right;
+        width: auto;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -(ceil($editor-defaults__inputbox--size/2));
+            display: inline-block;
+            width: $editor-defaults__inputbox--size;
+            height: $editor-defaults__inputbox--size;
+            background: $editor-defaults__inputbox--bg-color;
+            border: $editor-defaults__inputbox--border-width solid $editor-defaults__inputbox--border-color;
+        }
+    }
+
+    input {
+        display: none;
+        position: absolute !important;
+    }
+
+    &:hover input ~ &-content{
+        &:before {
+            border-color: $editor-defaults__inputbox-hover--border-color;
+        }
+        &:after {
+            color: $editor-defaults__inputbox-hover--color;
+        }
+    }
+}
+
+input {
+    &,
+    &:hover {
+        &:disabled, &[disabled] {
+            .z-checkbox & ~ label.z-checkbox-content,
+            .z-radio & ~ label.z-radio-content {
+                opacity: $editor-defaults__button-text-disabled--opacity;
+                @if $editor-defaults__inputbox-disabled-label--color {
+                    color: $editor-defaults__inputbox-disabled-label--color;
+                }
+                &:before {
+                    border-color: $editor-defaults__inputbox-disabled--border-color;
+                    cursor: default;
+                }
+            }
+        }
+        &:checked {
+            &:disabled, &[disabled] {
+                opacity: $editor-defaults__button-text-disabled--opacity;
+                cursor: default;
+
+                .z-checkbox & ~ label.z-checkbox-content {
+                    &:before {
+                        background-color: $editor-defaults__inputbox-selected-disabled--bg-color;
+                        color: $editor-defaults__inputbox-selected-disabled--color;
+                    }
+                }
+                .z-radio & ~ label.z-radio-content {
+                    &:before {
+                        border-color: $editor-defaults__inputbox-selected-disabled--border-color;
+                    }
+                    &:after {
+                        background-color: $editor-defaults__inputbox-selected-disabled--color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.z-checkbox {
+    label {
+        &:before {
+            overflow: hidden;
+            border-radius: $editor-defaults__input-field--border-radius;
+        }
+    }
+
+    input {
+        height: 0;
+        width: 0;
+        border: 0;
+        padding: 0;
+        margin: 0;
+
+        &:checked ~ label.z-checkbox-content:before {
+            content: $_editor-defaults__box-check-icon--content;
+            font-family: $editor-defaults__box-button-icon--font-family;
+            font-size: $_editor-defaults__checkbox-checked-icon--font-size;
+            line-height: $editor-defaults__checkbox-checked-icon--line-height;
+            text-align: center;
+        }
+        &:checked:not([disabled]) ~ label.z-checkbox-content:before {
+            background: $editor-defaults__inputbox--bg-color;
+            background-color: $editor-defaults__inputbox--bg-color;
+            border-color: $editor-defaults__checkbox-checked--border-color;
+            color: $_editor-defaults__box-check-icon--color;
+        }
+
+        &:checked:not([disabled]) ~ label.z-checkbox-content:focus,
+        &:checked:not([disabled]) ~ label.z-checkbox-content:hover {
+            &:before {
+                border-color: $editor-defaults__checkbox-checked--hover-border-color;
+            }
+        }
+
+        &[disabled]:checked ~ label.z-checkbox-content:before {
+            background: $editor-defaults__inputbox-selected-disabled--bg-color;
+            background-color: $editor-defaults__inputbox-selected-disabled--bg-color;
+            color: $editor-defaults__inputbox-selected-disabled--color;
+        }
+        &[type=checkbox] {
+            margin-left: 0;
+            position: relative;
+            width: 10%;
+        }
+    }
+}
+
+.z-radio {
+    label {
+        &:before {
+            border-radius: ceil($editor-defaults__inputbox--size/2);
+            color: transparent;
+        }
+        @if($editor-defaults__radiobox-selected-icon--size){
+            &:after {
+                position: absolute;
+                left: $editor-defaults__radiobox-selected-icon--left;
+                top: 50%;
+                display: block;
+                width: $editor-defaults__radiobox-selected-icon--size;
+                height: $editor-defaults__radiobox-selected-icon--size;
+                border-radius: ceil($editor-defaults__radiobox-selected-icon--size/2);
+                transform: translate3d(-50%,-50%,0);
+            }
+        }
+    }
+
+    input {
+        &:checked + label{
+            &:before {
+                border-radius: ceil($editor-defaults__inputbox--size/2);
+                color: $editor-defaults__radiobox-selected--color;
+            }
+            @if($editor-defaults__radiobox-selected-icon--size){
+                &:after {
+                    content: "";
+                    background: $editor-defaults__radiobox-selected--color;
+
+                    .yw-advancedsearch-sortorder-div & {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,476 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Cockpit Window Defaults
+================================*/
+// Layout & Coloring Defaults for Windows
+
+@charset "UTF-8";
+@import "../support/_cockpit-mixins.scss";
+
+body {
+    background: $body-bg-color;
+    font-weight: $font-weight-normal;
+    font-style: normal;
+    font-family: $font-family__text !important;
+    font-size: $font-size__base;
+    scrollbar-color: $scrollbar-thumb--background-color transparent;
+    padding: 0;
+
+    & ::-webkit-scrollbar {
+        width: $scrollbar--width;
+        height:$scrollbar--height;
+        background-color: transparent;
+    };
+    & ::-webkit-scrollbar-corner {
+        background-color: transparent;
+    };
+    & ::-webkit-scrollbar-thumb {
+        border-radius: $scrollbar-thumb--border-radius;
+        background-color: $scrollbar-thumb--background-color;
+    };
+}
+
+.z-label, .z-radio-content, .z-checkbox-content {
+    font-family: $font-family__text;
+    font-size: $font-size__base;
+}
+
+.yw-modal-responsive {
+    width: 90%!important;
+    max-width: 1020px!important;
+    left: 50%!important;
+    transform: translateX(-50%)!important;
+}
+
+
+// main layout* zk7-revised //
+.z-window-embedded .z-window-content > .mainWidgetSlot {
+    bottom: 0;
+    height: auto !important;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.z-window-embedded,
+.z-window-content {
+    background-color: transparent;
+}
+.z-listbox, .z-panel-children, .z-panel-header {
+    border-color: $window__default-container--border-color;
+}
+
+.z-panel-head {
+    padding: 1px $window__default--padding;
+    background: $window__default--bg-color;
+}
+
+.yw-perspective-container > .yw-persp-chld > .z-tabbox-top > .z-tabpanels > .z-tabpanel {
+    padding-top: 0;
+    background: transparent;
+}
+
+.z-borderlayout {
+    background: $window__borderlayout--bg-color;
+    // @include _addWindowMoldAttribute(background, $window__borderlayout--bg-color, $_window-light__borderlayout--bg-color);
+
+    &-icon {
+        line-height: $_window__borderlayout-icon--line-height;
+        font-size: $_window__borderlayout-icon--font-size;
+
+        @if $window__borderlayout-icon--bg-color {
+            background: $window__borderlayout-icon--bg-color;
+        }
+        @if $window__borderlayout-icon--color {
+            color: $window__borderlayout-icon--color;
+        }
+        &:hover {
+            background: $window__borderlayout-icon-hover--bg-color;
+            color: $window__borderlayout-icon-hover--color;
+        }
+    }
+}
+
+.z-center,
+.z-north,
+.z-south,
+.z-west,
+.z-east {
+    color: $editor-defaults__content--color; //$editor-defaults__label-field--color;
+    border: medium none;
+    background-color: $window__borderlayout--bg-color;
+}
+
+.z-north,
+.z-south,
+.z-west,
+.z-east {
+    &-splitter {
+        height: $window__splitter--size;
+        width: $window__splitter--size;
+        overflow: visible;
+        background-color: $window__splitter--color;
+
+        &-button {
+            border-radius: $_window__splitter-button--border-radius;
+            border: $_window__splitter-button--border;
+            color: $window__splitter-button--color;
+            border-color: $window__splitter--color;
+            background-color: $_window__splitter-button--bg-color;
+
+            &:hover {
+                color: $window__splitter-button-hover--color;
+                background-color: $window__splitter-button-hover--bg-color;
+                border-color: $window__splitter-button-hover--bg-color;
+            }
+            @include _setAngleIcons(z-icon-caret);
+        }
+    }
+    &-splitter-button &-icon[class*="icon-caret"] {
+        left: auto;
+        top: auto;
+        font-size: $_window__borderlayout-icon--font-size;
+        width: 100%;
+        text-align: center;
+        color: $window__splitter-button--color;
+    }
+    &-collapsed {
+        border-width: 0;
+        padding: $window__collapsed--padding;
+        overflow: visible;
+
+        &:hover {
+            @if $window__default-hover--bg-color != $window__default--bg-color {
+                background: $window__default-hover--bg-color;
+            }
+            .z-borderlayout-icon:before {
+                color: $window__splitter-button-hover--color;
+                background-color: $window__splitter-button-hover--bg-color;
+                border-color: $window__splitter-button-hover--bg-color;
+            }
+        }
+        background-color: $window__borderlayout--bg-color;
+        border-color: $window__splitter--color;
+
+        .z-borderlayout-icon {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            &:before {
+                position: absolute;
+                left: 50%;
+                height: $_window__splitter-button-vertical--size;
+                width: $_window__splitter-button-horizontal--size;
+                transform: translate3D(-50%, -50%, 0);
+                border-radius: $_window__splitter-button--border-radius;
+                border: $_window__splitter-button--border;
+                line-height: $_window__splitter-button-vertical--line-height;
+                border-color: $window__splitter--color;
+                background-color: $_window__splitter-button--bg-color;
+
+                @if $_window__default-collapsed-spacing--right {
+                    right: $_window__default-collapsed-spacing--right;
+                }
+            }
+            &.z-icon-angle-double {
+                &-right,
+                &-left {
+                    &:before {
+                        top: 50%;
+                        height: $_window__splitter-button-horizontal--size;
+                        width: $_window__splitter-button-vertical--size;
+                        line-height: $_window__splitter-button-horizontal--line-height;
+                       //transform: translate3d(-50%, -50%, 0);
+                    }
+                }
+                &-right:before {
+                    left: 100%;
+                }
+                &-left:before {
+                    left: 0;
+                }
+            }
+        }
+        @include _setAngleIcons('z-borderlayout-icon.z-icon-angle-double');
+    }
+}
+
+.z-north,
+.z-south {
+    &-splitter {
+        border-right: none;
+        border-left: none;
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: $window__splitter-hit--size;
+            transform: translate3d(0, -50%, 0);
+            width: 100%;
+        }
+
+        &-button {
+            height: $_window__splitter-button-vertical--size;
+            width: $_window__splitter-button-horizontal--size;
+            // margin-top: $window__splitter--size * -1;
+            margin-top: floor($window__splitter--size/2);
+            transform: translate3d(0, -50%, 0);
+        }
+    }
+    &-icon[class*="icon-caret"] {
+        line-height: $_window__splitter-button-vertical--line-height; //$_window__borderlayout-icon--line-height;
+    }
+}
+
+.z-west,
+.z-east {
+    &-splitter {
+        &:before {
+            content: "";
+            position: absolute;
+            width: $window__splitter-hit--size;
+            transform: translate3d(-50%, 0, 0);
+            height: 100%;
+        }
+
+        &-button {
+            height: $_window__splitter-button-horizontal--size;
+            width: $_window__splitter-button-vertical--size;
+            margin-left: floor($window__splitter--size/2);
+            transform: translate3d(-50%, 0, 0);
+        }
+    }
+    &-icon[class*="icon-caret"] {
+        line-height: $_window__splitter-button-horizontal--line-height;
+    }
+}
+
+// .z-north-splitter-button {
+//     margin-top: $_window__splitter-button--spacing-v * -1;
+// }
+// .z-south-splitter-button {
+//     margin-top: $_window__splitter-button--spacing-v;
+// }
+
+.z-temp,
+.z-modal-mask {
+    background: none repeat scroll 0 0 $_window__overlay-mask--bg-color;
+    opacity: $_window__overlay-mask--opacity;
+}
+
+.z-window {
+    color: $window__popup--text-color;
+    background: $window__popup--bg-color;
+    &.z-window-shadow {
+        border-radius: $window-highlighted__modal--border-radius;
+        border-color: transparent;
+        box-shadow: $window-highlighted__modal--box-shadow;
+        .z-window-content {
+            > table:last-child {
+                display: flex;
+                justify-content: flex-end;
+                padding: $window__popup__footer-padding;
+            }
+            > table:first-child {
+                padding: $window__popup__content-padding;
+                .z-messagebox-icon.z-messagebox-error,
+                .z-messagebox .z-messagebox-error {
+                    display: none;
+                }
+            }
+            .z-separator {
+                &.z-separator-horizontal,
+                &.z-separator-horizontal-bar {
+                    border-bottom: $window-popup__separator-line;
+                    background: none;
+                 }
+            } 
+        }
+    }
+    &-modal-shadow,
+    &-overlapped-shadow,
+    &-popup-shadow,
+    &-embedded-shadow,
+    &-highlighted-shadow {
+        border-radius: 0;
+    }
+
+    &-modal-tl,
+    &-modal-tr,
+    &-modal-hl,
+    &-modal-hr,
+    &-modal-hm {
+        background: $window__default-hover--bg-color;
+    }
+    &-modal-cl,
+    &-modal-cr {
+        background: $window__popup--bg-color;
+    }
+    &-modal-cm {
+        border: none;
+        padding: $window__default--padding 0;
+    }
+    .z-window-content {
+        padding: 0;
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        color: $window__popup-header--color;
+        background: $window__popup-header--bg-color;
+        padding: $window__popup-header--padding;
+        font-family: $font-family__text;
+        font-size: $window__popup-header--font-size;
+        font-weight: $_window__popup-header--font-weight;
+        box-shadow: $_window__popup-header--box-shadow;
+
+        .z-caption-content {
+            line-height: $_window__default-header-caption--line-height;
+            // padding-top: $_window__default-header-caption--padding-top;
+            font-size: $window__popup-header--font-size;
+            font-weight: $_window__default-header-caption--font-weight;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        > .z-caption {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            // padding-right: $window__default-header-caption--padding-right;
+            min-height: $window__default-header-caption--min-height;
+
+            // > .z-window-close {
+            //     margin-top: $_window__popup-header-caption-content--margin-top;
+            //     position:absolute;
+            //     right: 0;
+            //     top: 0;
+            // }
+            // .z-caption-content {
+            //     padding-top: $_window__popup-header-caption-content--margin-top;
+            // }
+        }
+
+        // .z-window-icon.z-window-close {
+        //     position: absolute;
+        //     right: 8px;
+        //     top: 4px;
+        // }
+    }
+    &-highlighted {
+        &.yw-modal-catalogversiondiff {
+            .widgetTemplate > .z-vlayout > .z-vlayout-inner:first-child {
+                padding: 0 $window-highlighted__header-element--padding-x;
+            }
+        }
+        .z-tabbox-accordion .z-tabpanel .z-tab-selected + .z-tabpanel-content {
+            padding: 0;
+        }
+        .widget_body.widgetTemplate {
+            &,
+            > .yw-visjs-chart-container {
+                background: $window__popup--bg-color;
+                max-height: 100%;
+            }
+        }
+    }
+    &-popup {
+        border-radius: $window__popup--border-radius;
+    }
+    &-highlighted {
+        background: $window-highlighted__modal--bg-color;
+        border-radius: $window-highlighted__modal--border-radius;
+        border-color: $window-highlighted__modal--border-color;
+        box-shadow: $window-highlighted__modal--box-shadow;
+    }
+    &-move-ghost {
+        background: $window-highlighted__modal-ghost--bg-color;
+        border-radius: $window-highlighted__modal--border-radius;
+        border-color: $window-highlighted__modal--border-color;
+        opacity: $window-highlighted__modal-ghost--opacity;
+    }
+}
+
+
+
+/*===== WINDOW ICON ======*/
+
+.z-window-icon {
+    color: $window__icon--color;
+    @if $_window__icon--bg-color {
+        background-color: $_window__icon--bg-color;
+    }
+    &:hover {
+        @if $window__icon-hover--color {
+            color: $window__icon-hover--color;
+        } @else {
+            color: $window__icon--color;
+        }
+    }
+    &.z-window-close {
+        @include _add-default-button-styles();
+        display: block;
+        height: $window__icon-close-button--size;
+        width: $window__icon-close-button--size;
+        background: $window__icon-close--bg-color;
+        border-color: transparent;
+        padding: 0;
+        margin: 0;
+
+        .z-icon-remove,
+        .z-icon-close,
+        .z-icon-times {
+            width: $window__icon-close-button--size;
+            height: $window__icon-close-button--size;
+            // position: absolute;
+            // top: 8px;
+            // right: 10px;
+            // padding: 0;
+
+            &:before {
+                content: $_window__icon-close--content;
+                font-family: $window__icon-button--font-family;
+                font-size: $_window__icon-close--font-size;
+                line-height: $window__icon-close--size;
+                width: $window__icon-close--size;
+                height: $window__icon-close--size;
+                position: relative;
+                top: $window__icon-close--position-top;
+                right: $window__icon-close--position-right;
+            }
+        }
+    }
+}
+
+.yw-collapsed-down {
+    .z-north-header {
+//        height: 50px;
+        border-bottom: $window__splitter--size solid $window__splitter--color !important;
+    }
+}
+
+/***************************************************************/
+/******************* TO SORT: Div. CSS Rules *******************/
+// should be defined in different scss-Files - todo: check where
+
+// important disabled defaults
+.safari .z-textbox-disabled {
+    color: black !important;
+}
+
+.z-menupopup-content .z-menuitem-disabled,
+.z-menupopup-content .z-menuitem-disabled * {
+    color: $blue__greyish--300 !important;
+}
+/***************** END TO SORT: Div. CSS Rules *****************/
+/***************************************************************/
+

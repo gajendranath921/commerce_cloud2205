@@ -1,0 +1,11 @@
+#Ant properties
+#Wed Nov 02 12:32:49 CET 2022
+version.api=2205
+vendor=hybris
+group.id=de.hybris.platform
+name=npmancillary
+description=npmancillary
+builddate=20221102 1232
+releasedate=20220601 2009
+version=2205.6
+module.name=platform-module

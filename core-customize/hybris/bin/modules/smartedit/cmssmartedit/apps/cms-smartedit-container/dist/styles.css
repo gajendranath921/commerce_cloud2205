@@ -1,0 +1,124 @@
+@import '../node_modules/cmscommons/dist/styles.css';.se-component-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 270px;
+  padding: 8px;
+  margin: 4px 8px 0;
+  border: 2px solid transparent;
+  cursor: grab;
+}
+.se-component-item:active, .se-component-item:hover {
+  border: 2px dashed #d9d9d9;
+  border-radius: 4px;
+}
+.se-component-item:active {
+  cursor: grabbing;
+}
+
+.se-component-item--details-type {
+  color: #51555a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.se-component-item--image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4285714286rem;
+  line-height: 1.4;
+  font-weight: 400;
+  height: 36px;
+  width: 36px;
+  position: relative;
+  background: #2b78c5;
+  margin-right: 8px;
+  color: white;
+  border-radius: 4px;
+}
+
+.se-component-item--details,
+.se-component-item--details-type {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  word-break: break-all;
+  width: 200px;
+}
+
+.se-component-item--details-type {
+  color: #6a6d70;
+}.se-media-container-field__media-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0 16px;
+}
+
+.se-media-container-cell--mobile {
+  order: 4;
+}
+.se-media-container-cell--desktop {
+  order: 2;
+}
+.se-media-container-cell--tablet {
+  order: 3;
+}
+.se-media-container-cell--widescreen {
+  order: 1;
+}
+
+.se-media__action-icon {
+  color: #0a6ed1;
+  margin-right: 8px;
+  width: 12px;
+}
+.se-media__action-icon--basic {
+  font-size: 1.1428571429rem;
+  line-height: 1.25;
+  font-weight: 400;
+}
+.se-media__action-icon--basic::before {
+  vertical-align: middle;
+}
+.se-media__action-icon--delete {
+  color: #bb0000;
+}
+
+.se-media-action-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: transparent;
+  text-decoration: none;
+  height: 32px;
+}
+.se-media-action-btn[disabled] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.se-media-upload-form-wrapper {
+  display: block;
+}
+.se-media-upload-form-wrapper--spaced {
+  margin-top: 16px;
+}
+
+.se-media-upload-form__header-folder fd-popover-control .selected-container .se-item-printer {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 156px;
+}
+
+.se-media-upload-form__header-folder.is-invalid fd-popover-control .selected-container .fd-button {
+  border-color: #bb0000;
+}

@@ -1,0 +1,809 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-compareview-grid {
+  background-color: var(--bo-base-background);
+  font-family: var(--bo-font-family);
+  display: block;
+  max-height: calc(100% - 32px - 24px - 2 * 16px);
+  max-width: calc(100% - 32px);
+  height: calc(100% - 32px - 24px - 2 * 16px);
+  min-height: calc(100% - 32px - 24px - 2 * 16px);
+  width: calc(100% - 32px);
+  overflow: auto;
+  position: absolute;
+  margin: 16px; }
+  .yw-compareview-grid > .y-table {
+    border-color: var(--bo-list-border-color);
+    background-color: inherit; }
+    .yw-compareview-grid > .y-table > tbody:last-child {
+      border-bottom: 1px solid var(--bo-list-border-color); }
+  .yw-compareview-grid .y-table {
+    background-color: var(--bo-container-background);
+    color: var(--bo-list-text-color); }
+    .gecko .yw-compareview-grid .y-table {
+      display: inline-block;
+      margin-bottom: -4px; }
+    .yw-compareview-grid .y-table .y-tablerow.y-tablerow-collapsed, .yw-compareview-grid .y-table .y-tablerow.y-tablerowsgroup-collapsed {
+      display: none; }
+    .yw-compareview-grid .y-table .y-tablerow.yw-compareview-localized-row-current:not(.y-tablerowsgroup-collapsed) {
+      opacity: 1;
+      display: flex; }
+    .yw-compareview-grid .y-table .y-tablerow .y-icon-loceditor {
+      display: none; }
+    .yw-compareview-grid .y-table .y-tablerow.yw-compareview-localized-row-current .y-icon-loceditor {
+      display: inherit;
+      position: absolute;
+      top: 8px;
+      right: 20px;
+      padding: 0;
+      /*overwriting*/
+      min-height: auto;
+      /*overwriting*/
+      border: none; }
+      .yw-compareview-grid .y-table .y-tablerow.yw-compareview-localized-row-current .y-icon-loceditor.z-button:hover, .yw-compareview-grid .y-table .y-tablerow.yw-compareview-localized-row-current .y-icon-loceditor.z-button:focus, .yw-compareview-grid .y-table .y-tablerow.yw-compareview-localized-row-current .y-icon-loceditor.z-button:active {
+        background-color: transparent;
+        /*overwriting*/
+        box-shadow: none;
+        /*overwriting*/ }
+      .yw-compareview-grid .y-table .y-tablerow.yw-compareview-localized-row-current .y-icon-loceditor:after {
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0); }
+    .yw-compareview-grid .y-table .y-tablerow, .yw-compareview-grid .y-table .y-tablerow.y-tablerow-header:not(.y-tablerowsgroup-collapsed) {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+    .yw-compareview-grid .y-table .y-tablerows {
+      display: block;
+      position: relative;
+      z-index: 1; }
+      .yw-compareview-grid .y-table .y-tablerows .yw-compareview-cell-content:before {
+        display: none !important; }
+      .yw-compareview-grid .y-table .y-tablerows tr:first-child .y-tablecell-sticky .yw-compareview-cell-content:after {
+        display: none; }
+    .yw-compareview-grid .y-table .y-tablecell-header-sticky .yw-compareview-cell-content:before {
+      display: none !important; }
+    .yw-compareview-grid .y-table .y-tablecell,
+    .yw-compareview-grid .y-table .y-tablecell-header {
+      -webkit-box-ordinal-group: 2;
+      -moz-box-ordinal-group: 2;
+      -ms-flex-order: 2;
+      -webkit-order: 2;
+      order: 2;
+      display: block; }
+      .yw-compareview-grid .y-table .y-tablecell:first-child .yw-compareview-cell-content,
+      .yw-compareview-grid .y-table .y-tablecell-header:first-child .yw-compareview-cell-content {
+        border-left: 1px solid var(--bo-list-border-color); }
+      .yw-compareview-grid .y-table .y-tablecell .yw-compareview-cell-content,
+      .yw-compareview-grid .y-table .y-tablecell-header .yw-compareview-cell-content {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1; }
+    .yw-compareview-grid .y-table .y-tablecell-header-sticky,
+    .yw-compareview-grid .y-table .y-tablecell-sticky {
+      -webkit-box-ordinal-group: 1;
+      -moz-box-ordinal-group: 1;
+      -ms-flex-order: 1;
+      -webkit-order: 1;
+      order: 1;
+      left: inherit !important;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+      .yw-compareview-grid .y-table .y-tablecell-header-sticky .yw-image-pin-icon,
+      .yw-compareview-grid .y-table .y-tablecell-sticky .yw-image-pin-icon {
+        cursor: default; }
+      .yw-compareview-grid .y-table .y-tablecell-header-sticky.yw-compareview-header-summary-item .yw-compareview-cell-content:before,
+      .yw-compareview-grid .y-table .y-tablecell-sticky.yw-compareview-header-summary-item .yw-compareview-cell-content:before {
+        top: 16px; }
+  .yw-compareview-grid .y-tableheader,
+  .yw-compareview-grid .y-tablerows {
+    background-color: var(--bo-base-background); }
+  .yw-compareview-grid .y-scroll-table-container {
+    background: transparent; }
+    .yw-compareview-grid .y-scroll-table-container .y-table,
+    .yw-compareview-grid .y-scroll-table-container .y-tableheader,
+    .yw-compareview-grid .y-scroll-table-container .y-tablerows {
+      background-color: inherit; }
+  .yw-compareview-grid .y-table.y-scroll-y + .y-scroll-table-container .y-tableheader,
+  .yw-compareview-grid .y-table.y-scroll-y + .y-scroll-table-container .y-tableheader .y-tableheader-cell {
+    background-color: var(--bo-base-background); }
+  .yw-compareview-grid .y-tablecell-sticky, .yw-compareview-grid .y-tablecell-header-sticky {
+    position: relative;
+    left: 0;
+    border: none;
+    z-index: 3; }
+  .yw-compareview-grid .y-tablerows .y-tablecell-sticky:first-child {
+    z-index: 2; }
+  .yw-compareview-grid .yw-compareview-cell-content {
+    width: 328px;
+    padding: 8px 16px;
+    position: relative; }
+    .yw-compareview-grid .yw-compareview-cell-content:before {
+      background-color: var(--bo-list-background);
+      border-top: 1px solid var(--bo-list-border-color);
+      border-left: 1px solid var(--bo-list-border-color);
+      border-left-width: 2px;
+      margin-left: -17px;
+      width: 100%;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1; }
+    .yw-compareview-grid .yw-compareview-cell-content:after {
+      border-top: 1px solid var(--bo-list-border-color);
+      position: absolute;
+      top: 0; }
+  .yw-compareview-grid .yw-compareview-section-header-row .yw-compareview-cell-content:before {
+    border-top: 1px solid var(--bo-list-border-color); }
+  .yw-compareview-grid .yw-compareview-section-header-row.y-tablerow-collapsed .yw-compareview-section-header-expand-trigger:before {
+    content: "\e1e2"; }
+  .yw-compareview-grid .y-tablecell-sticky .yw-compareview-cell-content,
+  .yw-compareview-grid .y-tablecell-header-sticky .yw-compareview-cell-content {
+    z-index: 1; }
+    .yw-compareview-grid .y-tablecell-sticky .yw-compareview-cell-content:before,
+    .yw-compareview-grid .y-tablecell-header-sticky .yw-compareview-cell-content:before {
+      width: calc(100% + 1px);
+      margin-right: -1px;
+      border-right: 1px solid var(--bo-list-border-color);
+      background-color: inherit; }
+  .yw-compareview-grid .y-tablecell-sticky:first-child,
+  .yw-compareview-grid .y-tablecell-header-sticky:first-child {
+    background-color: var(--bo-base-background); }
+  .yw-compareview-grid .y-tableheader .y-tablerow:first-child .y-tablecell-header-sticky .yw-compareview-cell-content {
+    border-top-left-radius: 4px;
+    z-index: 0; }
+  .yw-compareview-grid .y-tableheader .y-tablerow:first-child .y-tablecell-header-sticky:before {
+    background-color: inherit;
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    margin-top: -4px;
+    margin-left: 12px;
+    top: auto;
+    left: auto;
+    z-index: -1; }
+  .yw-compareview-grid .y-tableheader .y-tablerow:first-child .y-tablecell-header-sticky ~ .y-tablecell-header-sticky .yw-compareview-cell-content {
+    border-top-left-radius: 0; }
+  .yw-compareview-grid .y-tableheader .y-tablerow:first-child .y-tablecell-header-sticky ~ .y-tablecell-header-sticky:before {
+    content: normal; }
+  .yw-compareview-grid tr:first-child .y-tablecell-sticky .yw-compareview-cell-content {
+    top: 0; }
+    .yw-compareview-grid tr:first-child .y-tablecell-sticky .yw-compareview-cell-content:after {
+      position: absolute;
+      top: inherit;
+      margin-left: -17px;
+      height: 1500px;
+      width: calc(100% + 1px);
+      content: "";
+      display: inline-block; }
+  .yw-compareview-grid tr:first-child .y-tablecell-sticky:first-child .yw-compareview-cell-content:after {
+    display: none; }
+
+.yw-compareview-diff-only.yw-compareview-grid .y-table tbody.y-tablerows tr.y-tablerow:not(.yw-compareview-different-mark) {
+  display: none; }
+.yw-compareview-diff-only.yw-compareview-grid .y-table tbody.y-tablerows tr.y-tablerow.yw-compareview-localized-row-current.yw-compareview-different-mark:not(.y-tablerowsgroup-collapsed) {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  opacity: inherit; }
+.yw-compareview-diff-only.yw-compareview-grid .y-table tbody.y-tablerows tr.y-tablerow.yw-compareview-localized-row-current.yw-compareview-different-mark.y-tablerowsgroup-collapsed {
+  display: none; }
+.yw-compareview-diff-only.yw-compareview-grid .y-table tbody.y-tablerows tr.y-tablerow.yw-compareview-localized-row-current.yw-compareview-localized-row-indifferent {
+  display: none; }
+
+.yw-com_hybris_cockpitng_widgets_compare {
+  background: var(--bo-base-background); }
+
+tr.yw-compareview-localized-row-translation .yw-compareview-attribute-name-label {
+  display: none; }
+
+.yw-compareview-grid .y-table .y-tablerow,
+.yw-compareview-hyperlink {
+  overflow-wrap: break-word; }
+
+body.edge .yw-compareview-grid .y-table .y-tablerow,
+body.edge .yw-compareview-hyperlink,
+body.ie .yw-compareview-grid .y-table .y-tablerow,
+body.ie .yw-compareview-hyperlink {
+  word-break: break-all; }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-compareview-header-title {
+  font-size: 1.5rem; }
+
+.yw-compareview-leftslot-widget {
+  display: inline-block; }
+  .yw-compareview-leftslot-widget .yw-navigationhistory {
+    padding-left: 16px; }
+
+.yw-compareview-rightslot {
+  padding-right: 16px; }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-compareview-grid .y-tableheader {
+  position: relative;
+  display: block;
+  overflow: visible; }
+  .yw-compareview-grid .y-tableheader:before {
+    top: -1500px;
+    height: 1500px;
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: inherit; }
+  .yw-compareview-grid .y-tableheader .y-btn {
+    min-height: 28px; }
+  .yw-compareview-grid .y-tableheader .yw-image-pin-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    width: 28px;
+    right: 43px;
+    top: 12px;
+    color: var(--bo-button-text-color);
+    position: absolute;
+    cursor: pointer; }
+    .yw-compareview-grid .y-tableheader .yw-image-pin-icon:hover {
+      cursor: pointer; }
+    .yw-compareview-grid .y-tableheader .yw-image-pin-icon:before {
+      content: "\e0a0";
+      font-family: var(--bo-content-icon-font-family);
+      font-size: 16px; }
+  .yw-compareview-grid .y-tableheader .y-tablecell-header-sticky .yw-image-pin-icon {
+    color: var(--bo-button-active-color);
+    background: var(--bo-button-active-background); }
+  .yw-compareview-grid .y-tableheader .yw-image-remove-item-icon {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    right: 11px;
+    top: 12px;
+    background: transparent;
+    display: inline-block;
+    position: absolute; }
+    .yw-compareview-grid .y-tableheader .yw-image-remove-item-icon:hover {
+      cursor: pointer; }
+    .yw-compareview-grid .y-tableheader .yw-image-remove-item-icon:before {
+      content: "\e03e";
+      font-family: var(--bo-content-icon-font-family);
+      font-size: 16px;
+      transform: translate3d(-50%, -50%, 0);
+      left: 50%;
+      top: 50%;
+      position: absolute; }
+  .yw-compareview-grid .y-tableheader .y-tablecell-header_last .yw-compareview-cell-content {
+    border-top-right-radius: 4px; }
+  .yw-compareview-grid .y-tableheader .yw-compareview-cell-content {
+    border-top: none;
+    border-bottom: 1px solid var(--bo-container-border-color);
+    padding-top: 12px;
+    padding-bottom: 0;
+    color: var(--bo-page-header-text-color);
+    height: 100%; }
+    .yw-compareview-grid .y-tableheader .yw-compareview-cell-content:before {
+      top: 16px;
+      border-bottom: 1px solid var(--bo-list-border-color);
+      border-bottom-color: var(--bo-list-border-color);
+      left: 0;
+      margin-left: 0; }
+    .yw-compareview-grid .y-tableheader .yw-compareview-cell-content > div:first-child {
+      padding-top: 28px;
+      padding-bottom: 18px;
+      display: block; }
+    .yw-compareview-grid .y-tableheader .yw-compareview-cell-content > span:first-child {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  .yw-compareview-grid .y-tableheader > .y-tablerow {
+    height: auto !important;
+    overflow: visible;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+    .yw-compareview-grid .y-tableheader > .y-tablerow > th {
+      height: auto; }
+  .yw-compareview-grid .y-tableheader .y-tablerow:first-child .y-tablecell-header-sticky .yw-compareview-cell-content {
+    border-top-left-radius: 4px;
+    z-index: 0; }
+  .yw-compareview-grid .y-tableheader .y-tablerow:first-child .y-tablecell-header-sticky:before {
+    background-color: inherit;
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    margin-top: -4px;
+    margin-left: 12px;
+    top: auto;
+    left: auto;
+    z-index: -1; }
+  .yw-compareview-grid .y-tableheader .y-tablerow:first-child .y-tablecell-header-sticky ~ .y-tablecell-header-sticky .yw-compareview-cell-content {
+    border-top-left-radius: 0; }
+  .yw-compareview-grid .y-tableheader .y-tablerow:first-child .y-tablecell-header-sticky ~ .y-tablecell-header-sticky:before {
+    content: normal; }
+  .yw-compareview-grid .y-tableheader .yw-compareview-different-mark .yw-compareview-mark-icon {
+    margin-top: 6px; }
+.yw-compareview-grid .yw-compareview-header-summary-item {
+  vertical-align: bottom; }
+  .yw-compareview-grid .yw-compareview-header-summary-item .yw-compareview-cell-content {
+    text-align: left; }
+.yw-compareview-grid .yw-compareview-header-summary-add {
+  bottom: 58px;
+  padding-left: 8px;
+  padding-right: 8px;
+  line-height: 1.25rem;
+  font-size: 14px;
+  height: 28px;
+  display: block;
+  position: absolute; }
+  .yw-compareview-grid .yw-compareview-header-summary-add:before {
+    top: 1px;
+    margin-right: 8px;
+    display: inline-block;
+    position: relative;
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e058";
+    background-color: inherit; }
+.yw-compareview-grid .yw-compareview-header-summary-label {
+  padding-bottom: 86px;
+  padding-top: 7px; }
+.yw-compareview-grid .yw-compareview-diff-only-checkbox {
+  bottom: 42px;
+  font-size: 14px;
+  display: block;
+  width: auto; }
+  .yw-compareview-grid .yw-compareview-diff-only-checkbox .z-checkbox-content {
+    font-weight: inherit; }
+
+.yw-compareview-empty {
+  overflow: hidden; }
+  .yw-compareview-empty .y-table, .gecko .yw-compareview-empty .y-table {
+    display: block;
+    overflow: auto; }
+  .yw-compareview-empty .y-table .y-tableheader {
+    overflow: visible; }
+  .yw-compareview-empty .y-table .y-tableheader:before,
+  .yw-compareview-empty .y-table .yw-compareview-header-summary-empty:first-child:after,
+  .yw-compareview-empty .y-table .yw-compareview-diff-only-checkbox {
+    display: none; }
+  .yw-compareview-empty .y-table .y-tableheader,
+  .yw-compareview-empty .y-table .y-tableheader .y-tablerow {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100% !important; }
+  .yw-compareview-empty .y-table .yw-compareview-header-summary-empty:first-child {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto; }
+    .yw-compareview-empty .y-table .yw-compareview-header-summary-empty:first-child .yw-compareview-cell-content {
+      padding: 370px 0 0;
+      top: 50%;
+      left: 50%;
+      width: 310px;
+      margin-top: -40px;
+      height: auto;
+      transform: translate(-50%, -50%);
+      background-image: url("images/island.svg");
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      margin-left: 0;
+      text-align: center;
+      border: none;
+      position: absolute; }
+  .yw-compareview-empty .y-table .yw-compareview-header-summary .yw-compareview-header-summary-label {
+    padding-top: 30px;
+    text-align: center;
+    display: block; }
+  .yw-compareview-empty .y-table .yw-compareview-header-summary-add {
+    bottom: 30px;
+    border: 1px solid var(--bo-button-border-color);
+    padding: 12px 12px;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--bo-button-text-color);
+    height: auto;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--bo-button-background); }
+    .yw-compareview-empty .y-table .yw-compareview-header-summary-add:hover {
+      color: var(--bo-button-hover-color);
+      background-color: var(--bo-button-hover-background);
+      text-decoration: none; }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-compareview-grid .yw-compareview-header-summary-item .yw-compareview-cell-content,
+.yw-compareview-grid .yw-compareview-attribute-name .yw-compareview-cell-content,
+.yw-compareview-grid .yw-compareview-section-name .yw-compareview-cell-content {
+  width: 286px; }
+.yw-compareview-grid .yw-compareview-header-summary-item.y-scroll-sticky-left .yw-compareview-cell-content:before,
+.yw-compareview-grid .yw-compareview-attribute-name.y-scroll-sticky-left .yw-compareview-cell-content:before,
+.yw-compareview-grid .yw-compareview-section-name.y-scroll-sticky-left .yw-compareview-cell-content:before {
+  width: 287px; }
+.yw-compareview-grid .y-tablerows {
+  margin-top: -1px;
+  display: inline-table;
+  overflow: visible; }
+  .yw-compareview-grid .y-tablerows .yw-compareview-cell-content:before {
+    height: 1500px; }
+  .yw-compareview-grid .y-tablerows > tr:last-child {
+    overflow: visible; }
+.yw-compareview-grid .yw-compareview-section-name-label {
+  margin: 0; }
+
+/* Status */
+/* Button Color Scheme */
+.yw-compareview-grid .y-table.y-scroll-animate-position.y-scroll-animate .y-tableheader,
+.yw-compareview-grid .y-table.y-scroll-animate-position.y-scroll-animate .y-tablecell-sticky,
+.yw-compareview-grid .y-table.y-scroll-animate-position.y-scroll-animate .y-tablecell-header-sticky {
+  transition: top 0.1s 0.02s ease-out, left 0.1s 0.02s ease-out; }
+.yw-compareview-grid .y-table.y-scroll-animate-position .y-tablecell-sticky:first-child,
+.yw-compareview-grid .y-table.y-scroll-animate-position .y-tablecell-header-sticky:first-child {
+  background-color: var(--bo-base-background); }
+  .yw-compareview-grid .y-table.y-scroll-animate-position .y-tablecell-sticky:first-child:after,
+  .yw-compareview-grid .y-table.y-scroll-animate-position .y-tablecell-header-sticky:first-child:after {
+    position: absolute;
+    top: 0;
+    height: 1500px;
+    width: 1500px;
+    left: -1500px;
+    background-color: inherit;
+    content: "";
+    box-shadow: none;
+    margin-left: 12px; }
+  .yw-compareview-grid .y-table.y-scroll-animate-position .y-tablecell-sticky:first-child .yw-compareview-cell-content:before,
+  .yw-compareview-grid .y-table.y-scroll-animate-position .y-tablecell-header-sticky:first-child .yw-compareview-cell-content:before {
+    background-color: var(--bo-list-background); }
+.yw-compareview-grid .y-table-active.y-scroll-x .y-tablecell-header-sticky,
+.yw-compareview-grid .y-table-active.y-scroll-x .y-tablecell-sticky {
+  opacity: 0 !important; }
+.yw-compareview-grid .y-table-active.y-scroll-y .y-tableheader {
+  opacity: 0 !important; }
+.yw-compareview-grid .y-table.y-scroll-bar-active.y-scroll-x + .y-scroll-table-container .y-tableheader:before {
+  top: 0;
+  height: 8px;
+  background-color: var(--bo-base-background); }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-compareview-different-mark .yw-compareview-mark-icon:before {
+  font-family: var(--bo-content-icon-font-family);
+  content: "\e0d0";
+  margin: 0 2px;
+  color: var(--bo-negative-color);
+  font-size: 12px;
+  font-weight: normal; }
+.y-tablecell-sticky .yw-compareview-different-mark .yw-compareview-mark-icon, .y-tablecell-header-sticky .yw-compareview-different-mark .yw-compareview-mark-icon,
+.yw-compareview-different-mark .y-tablecell-sticky .yw-compareview-mark-icon,
+.yw-compareview-different-mark .y-tablecell-header-sticky .yw-compareview-mark-icon {
+  display: none; }
+.yw-compareview-map-arrow:before {
+  font-family: var(--bo-content-icon-font-family);
+  content: "\e1ed";
+  margin: 0 8px;
+  color: var(--bo-button-icon-color); }
+.yw-compareview-grid .y-table .yw-compareview-cell-content {
+  background-color: var(--bo-list-background);
+  height: 100%;
+  border-top: 1px solid var(--bo-list-border-color);
+  border-right: 1px solid var(--bo-list-border-color); }
+.yw-compareview-grid .y-table .yw-compareview-localized-row-translation .yw-compareview-cell-content {
+  border-top: none; }
+.yw-compareview-grid .y-table .yw-compareview-localized-row-current .yw-compareview-cell-content:after {
+  top: -1px; }
+.yw-compareview-grid .y-tablerows .yw-compareview-different-mark {
+  color: var(--bo-negative-color); }
+.yw-compareview-grid .y-tablerows .yw-compareview-attribute-value:not(.yw-compareview-different-mark) {
+  color: var(--bo-list-text-color); }
+.yw-compareview-grid .y-tablerows .yw-compareview-attribute-value.z-drag-over .yw-compareview-cell-content {
+  background-color: var(--bo-list-selected-background); }
+.yw-compareview-grid .yw-compareview-section-name .yw-compareview-cell-content:after, .yw-compareview-grid .yw-compareview-attribute-name .yw-compareview-cell-content:after, .yw-compareview-subsection-header-row.y-tablerow .yw-compareview-section-name .yw-compareview-cell-content:after {
+  display: none; }
+.yw-compareview-section-header-row .yw-compareview-cell-content {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: 40px; }
+  .y-table .yw-compareview-section-header-row .yw-compareview-cell-content {
+    border-top: 1px solid var(--bo-list-border-color); }
+.yw-compareview-header-summary-label, .yw-compareview-section-name-label {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700; }
+.yw-compareview-section-name-label {
+  margin: 0; }
+.yw-compareview-section-header-expand-trigger.z-button {
+  float: right;
+  min-height: 16px;
+  height: 16px;
+  line-height: 16px;
+  background: transparent;
+  box-shadow: none;
+  border: none; }
+  .yw-compareview-section-header-expand-trigger.z-button:hover, .yw-compareview-section-header-expand-trigger.z-button:focus, .yw-compareview-section-header-expand-trigger.z-button:active {
+    min-height: 16px;
+    height: 16px;
+    line-height: 16px;
+    background: transparent;
+    box-shadow: none;
+    border: none; }
+  .yw-compareview-section-header-expand-trigger.z-button:before {
+    font-family: var(--bo-content-icon-font-family);
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    content: "\e1e1";
+    color: var(--bo-button-text-color);
+    margin-top: -8px;
+    margin-left: -8px;
+    top: 50%; }
+.yw-compareview-localized-row-current .yw-compareview-cell-content:before, .yw-compareview-localized-row-translation .yw-compareview-cell-content:before {
+  border-top: none; }
+.yw-compareview-localized-row-current .yw-compareview-cell-content:after {
+  right: 0;
+  left: 0;
+  content: "";
+  display: block; }
+.yw-compareview-localized-row-current.y-tablerow-collapsed .yw-compareview-language-differentiator {
+  display: none; }
+.yw-compareview-localized-row-translation .yw-compareview-cell-content:after {
+  right: 0;
+  left: 12px;
+  content: "";
+  display: block; }
+.yw-compareview-localized-row-translation .yw-compareview-attribute-name .yw-compareview-cell-content:after {
+  border-color: transparent; }
+.yw-compareview-attribute-name .yw-compareview-language-differentiator {
+  float: right; }
+.yw-compareview-compound-panel {
+  height: auto;
+  display: block;
+  clear: left;
+  text-align: left;
+  position: absolute;
+  min-height: 16px;
+  bottom: 18px; }
+  .yw-compareview-compound-panel ~ .yw-image-container:last-child,
+  .yw-compareview-compound-panel ~ .yw-compareview-hyperlink:last-child {
+    margin-bottom: 32px; }
+.yw-compareview-compound-container {
+  display: inline-block;
+  margin-right: 8px; }
+  .yw-compareview-compound-container:last-child {
+    margin-right: 0; }
+.yw-compareview-tile-narrow, .yw-compareview-header-item .yw-tile-title-only {
+  height: auto;
+  text-align: center; }
+  .yw-compareview-tile-narrow > .z-label, .yw-compareview-header-item .yw-tile-title-only > .z-label {
+    margin: 0 0 5px;
+    height: 58px;
+    min-height: 58px;
+    overflow: hidden;
+    display: block;
+    text-align: left; }
+    .yw-compareview-tile-narrow > .z-label:hover, .yw-compareview-header-item .yw-tile-title-only > .z-label:hover {
+      cursor: pointer;
+      color: var(--bo-list-active-text-color); }
+    .y-tablecell-header-sticky .yw-compareview-tile-narrow > .z-label, .y-tablecell-header-sticky .yw-compareview-header-item .yw-tile-title-only > .z-label {
+      color: var(--bo-list-active-text-color); }
+.yw-compareview-header-item .yw-tile-title-only {
+  display: block; }
+  .yw-compareview-header-item .yw-tile-title-only > .z-label {
+    display: block; }
+  .yw-compareview-header-item .yw-tile-title-only .yw-compareview-hyperlink {
+    margin-top: 0; }
+.yw-compareview-header-item.y-tablecell-header-sticky .yw-compareview-hyperlink {
+  color: var(--bo-link-color); }
+.yw-compareview-header-item .yw-compareview-mark-icon {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  width: 16px;
+  height: 16px;
+  display: inline-block; }
+  .yw-compareview-header-item .yw-compareview-mark-icon:before {
+    margin-left: -4px;
+    left: 50%; }
+.yw-compareview-header-item .yw-compareview-hyperlink {
+  margin: 0 0 5px;
+  width: 100%;
+  display: block; }
+.yw-compareview-header-item .yw-image-container {
+  height: 150px;
+  margin: 0 auto;
+  line-height: 141px;
+  max-height: 150px;
+  text-align: center; }
+  .yw-compareview-header-item .yw-image-container + .yw-compareview-hyperlink {
+    margin-top: 12px; }
+  .yw-compareview-header-item .yw-image-container .z-image {
+    border: 1px solid var(--bo-list-border-color);
+    max-height: 150px;
+    max-width: 100%; }
+    .yw-compareview-header-item .yw-image-container .z-image[src*="mime-icons/icon_filetype_unknown.png"] {
+      border: none; }
+.yw-compareview-hyperlink {
+  color: var(--bo-link-color);
+  font-size: 14px;
+  overflow: hidden;
+  display: block;
+  text-align: left; }
+  .yw-compareview-hyperlink:hover {
+    text-decoration: underline; }
+  .yw-compareview-hyperlink[disabled], .yw-compareview-hyperlink[disabled]:hover, .yw-compareview-hyperlink[disabled]:active {
+    color: var(--bo-link-color) !important;
+    background-color: transparent !important;
+    opacity: 1; }
+.y-tableheader .yw-compareview-in-progress .yw-compareview-cell-content {
+  color: var(--bo-list-text-color); }
+.y-tableheader .yw-compareview-in-progress .yw-compareview-header-summary-label {
+  width: 28px;
+  padding-left: 28px;
+  padding-top: 7px;
+  line-height: 28px;
+  color: transparent;
+  overflow: hidden;
+  position: relative; }
+  .y-tableheader .yw-compareview-in-progress .yw-compareview-header-summary-label:before {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    animation: rotate 700ms infinite linear;
+    background: url("images/icon_in-progress_spin.svg") no-repeat center;
+    background-size: 16px auto;
+    position: absolute; }
+.y-tableheader .yw-compareview-in-progress .yw-compareview-mark-icon:before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  margin-left: -14px;
+  margin-top: -14px;
+  border-radius: 14px;
+  animation: rotate 700ms infinite linear;
+  background: url("images/icon_in-progress_spin.svg") no-repeat center;
+  background-size: 16px auto; }
+.y-tableheader .yw-compareview-in-progress .yw-compareview-mark-icon:after {
+  display: none; }
+.y-tableheader .yw-compareview-in-progress .yw-compareview-hyperlink, .y-tableheader .yw-compareview-in-progress .yw-compareview-hyperlink:hover {
+  opacity: 0.4;
+  text-decoration: none;
+  cursor: default; }
+.y-tableheader .yw-compareview-in-progress .yw-image-container .z-image,
+.y-tableheader .yw-compareview-in-progress .yw-compareview-compound-panel {
+  opacity: 0.4; }
+.yw-compareview-attribute-value-entry {
+  display: block;
+  overflow: hidden; }
+.yw-compareview-attribute-value-error, .yw-compareview-cell-content .ye-instant-editor-label-access-denied {
+  font-style: italic; }
+.yw-compareview-value-image-preview {
+  max-width: 150px;
+  max-height: 200px; }
+.yw-compareview-attribute-value .z-popup .z-popup-content {
+  max-width: 150px;
+  max-height: 200px; }
+.yw-compareview-attribute-value .yw-compareview-value-image {
+  height: 20px;
+  margin-right: 8px; }
+.yw-compareview-attribute-value .yw-compareview-value-label-container {
+  display: inline; }
+.yw-compareview-attribute-name .yw-compareview-language-differentiator {
+  position: absolute;
+  top: 5px;
+  right: 45px;
+  color: var(--bo-list-text-color); }
+  .yw-compareview-attribute-name .yw-compareview-language-differentiator.yw-compareview-different-mark {
+    color: var(--bo-negative-color); }
+.yw-compareview-subsection-header-row .yw-compareview-section-name-label {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700; }
+.yw-compareview-subsection-header-row .yw-compareview-cell-content.yw-compareview-section-header {
+  padding: 8px 16px 8px 32px; }
+  .yw-compareview-subsection-header-row .yw-compareview-cell-content.yw-compareview-section-header:before {
+    margin-left: -32px; }
+.yw-compareview-subsection-row .yw-compareview-attribute-name.y-tablecell-sticky .yw-compareview-cell-content.z-div {
+  padding-left: 48px; }
+.yw-compareview-collection-header-container .yw-expandCollapse {
+  right: 12px;
+  top: 7px;
+  background-size: 0; }
+  .yw-compareview-collection-header-container .yw-expandCollapse:before {
+    width: auto;
+    font-family: var(--bo-content-icon-font-family);
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    content: "\e1e1";
+    color: var(--bo-button-text-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%); }
+    .ie .yw-compareview-collection-header-container .yw-expandCollapse:before {
+      transform: translateY(-50%) translateX(0%); }
+  .yw-compareview-collection-header-container .yw-expandCollapse:hover:before {
+    color: var(--bo-button-hover-color); }
+.yw-compareview-collection-header-container.yw-collection-collapsed .yw-expandCollapse:before {
+  content: "\e1e2"; }
+.yw-compareview-collection-header-container.yw-collection-collapsed + .yw-compareview-collection-values-container {
+  display: none; }
+.yw-compareview-collection-header-container .z-label {
+  font-style: italic; }
+.yw-compareview-collection-values-container {
+  border-top: 1px solid var(--bo-list-border-color);
+  margin-top: 5px;
+  padding-top: 5px; }
+.yw-compareview-attribute-value-entry {
+  margin-bottom: 5px; }
+.yw-compareview-diff-only.yw-compareview-grid .y-table tbody.y-tablerows tr.y-tablerow.yw-compareview-localized-row-indifferent .yw-compareview-attribute-value:not(.yw-compareview-different-mark) .yw-compareview-cell-content .z-div,
+.yw-compareview-diff-only.yw-compareview-grid .y-table tbody.y-tablerows tr.y-tablerow .yw-compareview-language-differentiator:not(.yw-compareview-different-mark) {
+  display: none; }
+.yw-compareview-grid .yw-collection-collapsible.yw-collection-collapsed .yw-collection-show-more-container:after {
+  content: "\e1e2"; }
+.yw-compareview-grid .yw-collection-collapsible.yw-collection-collapsed .yw-collection-values-container {
+  display: none; }
+.yw-compareview-grid .yw-collection-collapsible:not(.yw-collection-collapsed) .yw-collection-show-more-container:after {
+  content: "\e1e1"; }
+.yw-compareview-grid .yw-collection-collapsible .yw-collection-show-more-container:after {
+  font-family: var(--bo-content-icon-font-family);
+  position: absolute;
+  right: 12px; }
+.yw-compareview-grid .yw-collection-collapsible .yw-collection-show-more-container .z-label:hover {
+  text-decoration: underline; }
+.yw-compareview-grid .yw-collection-collapsible .yw-collection-show-more-container .z-label, .yw-compareview-grid .yw-collection-collapsible .yw-collection-show-more-container:after {
+  font-size: 14px;
+  line-height: 19px; }
+.yw-compareview-grid .yw-collection-collapsible .yw-collection-show-more-container {
+  color: var(--bo-button-text-color);
+  cursor: pointer;
+  margin-top: 5px; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }

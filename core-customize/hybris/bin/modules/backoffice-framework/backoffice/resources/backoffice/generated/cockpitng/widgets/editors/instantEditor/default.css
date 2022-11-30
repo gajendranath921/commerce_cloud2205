@@ -1,0 +1,59 @@
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Default Instant Editor
+================================*/
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/*================================
+    instant-Editor Defaults
+================================*/
+.ye-instant-editor.z-div:after {
+  content: ' ';
+  display: block;
+  clear: both; }
+.ye-instant-editor-buttons-container {
+  z-index: 1;
+  text-align: right;
+  margin-top: 4px; }
+  .ye-instant-editor-buttons-container .z-button {
+    width: 40px;
+    height: 40px; }
+  .ye-instant-editor-buttons-container .ye-instant-editor-button-confirm .z-icon-check:before {
+    content: "\e05b";
+    font-family: var(--bo-content-icon-font-family); }
+  .ye-instant-editor-buttons-container .ye-instant-editor-button-cancel {
+    margin-right: 8px; }
+    .ye-instant-editor-buttons-container .ye-instant-editor-button-cancel .z-icon-close:before {
+      content: "\e03e";
+      font-family: var(--bo-content-icon-font-family); }
+.ye-instant-editor-editor-container .yw-loceditor-caption .y-icon-loceditor {
+  margin-bottom: 8px; }
+.ye-instant-editor-editor-container > .z-div > .yw-loceditor {
+  margin-top: -24px; }
+.ye-instant-editor-label-editable {
+  margin-top: 9px;
+  margin-left: 9px;
+  line-height: 16px; }
+  .ye-instant-editor-label-editable:hover {
+    text-decoration: underline;
+    cursor: pointer; }
+  .yw-editorarea-tabbox-tabpanels .ye-instant-editor-label-editable.z-label {
+    margin-bottom: 12px;
+    line-height: 16px; }
+.ye-instant-editor-attribute-label-container,
+.ye-instant-editor-attribute-label-container > .z-label {
+  line-height: 16px; }
+.ye-instant-editor-component-hidden {
+  display: none !important; }
+.ye-instant-editor-attribute-label-container {
+  height: 40px;
+  display: table; }
+  .ye-instant-editor-attribute-label-container > span.z-label {
+    line-height: 16px;
+    vertical-align: middle;
+    display: table-cell;
+    word-break: normal;
+    width: 100%; }

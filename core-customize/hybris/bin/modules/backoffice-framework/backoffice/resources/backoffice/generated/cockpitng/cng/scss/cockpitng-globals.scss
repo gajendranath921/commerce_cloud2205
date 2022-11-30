@@ -1,0 +1,495 @@
+
+
+
+@charset "UTF-8";
+@import "globals/__cockpitng-colors.scss";
+@import "globals/__cockpitng-icon-content.scss";
+
+// Typography
+// ====================
+$font-size__base:          14px;
+$font-size__small:         12px;
+$font-size__large:         16px;
+$font-size__extra-small:   $font-size__small; // compatible with old code
+$font-size__semi-base:     $font-size__base; // compatible with old code
+$font-size__medium:        $font-size__large; // compatible with old code
+
+$font-size__h1:            3rem; // ~48px
+$font-size__h2:            2rem; // ~32px
+$font-size__h3:            1.5rem; // ~24px
+$font-size__h4:            1.25rem; // ~20px
+$font-size__h5:            1rem; // ~16px
+$font-size__h6:            .875rem; // ~14px
+
+$font-size__kpi_large:  3rem;     //48px
+$font-size__kpi_medium: 2.25rem;  //36px
+$font-size__title-large:     2.125rem; //34px
+
+$font-family-sap-icons: "SAP-icons";
+$font-family-commerce-bo-extended: "commerce_BO_extended";
+$font-family-opensans: "Open Sans", sans-serif;
+$font-family-fontawesome: "FontAwesome", sans-serif;
+
+$font-family__text: var(--bo-font-family);
+$font-family__text_light: var(--bo-font-family-light);
+$font-family__text_bold: var(--bo-font-family-bold);
+$font-family__icon: var(--bo-content-icon-font-family);//$font-family-sap-icons, $font-family-commerce-bo-extended, $font-family-fontawesome;
+
+// TODO: Deprecate Soon
+$_font-family__icon: $fd-icons-name, $font-family-commerce-bo-extended;
+
+$font-weight-light: map-get($fd-weights, "light");
+$font-weight-normal: map-get($fd-weights, "normal");
+$font-weight-bold: map-get($fd-weights, "bold");
+
+$font-style-italic: italic;
+
+$content-focus-outline-offset: -.1875rem;
+
+// Scroll Bar appearance
+$scrollbar--width: var(--bo-scrollbar-width);
+$scrollbar--height: var(--bo-scrollbar-height);
+$scrollbar-thumb--background-color: var(--bo-scrollbar-thumb-background-color);
+$scrollbar-thumb--border-radius: var(--bo-scrollbar-thumb-border-radius);
+
+// Generic Coloring
+// ======================
+
+// login
+$body__default--bg-color: var(--bo-container-background);
+$body__login--bg-color: var(--bo-container-background);
+//should be re-mapped and removed
+$loginPages__body-default--bg-color: var(--bo-container-background);
+
+//Validation Colors
+$validation__error--color: var(--bo-error-color);
+$validation__error--bg-color: var(--bo-error-background);
+$validation__warn--color: var(--bo-warning-color);
+$validation__warn--bg-color: var(--bo-warning-background);
+$validation__info--color: var(--bo-information-color);
+$validation__info--bg-color: var(--bo-information-background);
+
+// systembar
+$navigation__top-menu--bg-color: var(--bo-list-background);
+$navigation__top-menu-item--bg-color: transparent; //interim definition will be removed, is temporary in place for the first step on theme unification
+$navigation__top-menu-item-hover--bg-color: var(--bo-list-hover-background); // undefined //interim definition will be removed, is temporary in place for the first step on theme unification
+$navigation__top-menu-item-selected--bg-color: var(--bo-list-selected-background); // undefined //interim definition will be removed, is temporary in place for the first step on theme unification
+
+$navigation__top-menu-primary--color: var(--bo-title-color);
+$navigation__top-menu-secondary--color: var(--bo-text-color);
+
+$navigation__popup--bg-color: var(--bo-list-background);
+// $navigation__popup--color: #32363a; //interim definition will be removed, is temporary in place for the first step on theme unification
+$navigation__popup-hover--bg-color: var(--bo-list-hover-background);
+$navigation__popup-selected--bg-color: var(--bo-list-selected-background);
+
+
+
+// radio / checkbox base-colors
+$form-defaults__input-icon--bg-color: var(--bo-button-background);
+$form-defaults__input-icon--color: var(--bo-button-icon-color);
+$form-defaults__input-icon-active--color: var(--bo-selected-color);
+$form-defaults__input-icon-selected--color: $form-defaults__input-icon-active--color;
+$form-defaults__input-icon-mark--color: var(--bo-selected-color);
+$form-defaults__input-icon-disabled--color: var(--bo-content-icon-color);
+$form-defaults__input-icon-selected-disabled--color: var(--bo-selected-color);
+
+$_form-defaults__input-switch-unactive---border-color: var(--bo-input-border-color);
+$_form-defaults__input-switch-unactive---bg-color: var(--bo-input-background);
+$_form-defaults__input-switch-active---border-color: var(--bo-input-hover-border-color);
+
+$form-defaults__input-placeholder--color: var(--bo-placeholder-text-color);
+
+$form-defaults__box--border-color: var(--bo-container-border-color);
+$form-defaults__box--color: var(--bo-container-color);
+$form-defaults__box--bg-color: var(--bo-container-background);
+$form-defaults__box-shadow--color: false;
+$form-defaults__box-disabled--bg-color: var(--bo-container-background);
+$form-defaults__box-disabled--color: var(--bo-content-disabled-text-color);
+$form-defaults__box-disabled--border-color: var(--bo-container-border-color);
+$form-defaults__input--color: var(--bo-input-text-color);
+$form-defaults__input-focus--color: var(--bo-input-text-color);
+
+$defaults__content-box-shadow-small: var(--bo-content-shadow-small);
+
+$form-defaults__input--bg-color: var(--bo-input-background);
+$_form-defaults__input-hover--color: var(--bo-input-text-color);
+$_form-defaults__input-hover--border-color: var(--bo-input-hover-border-color);
+$_form-defaults__input-button--bg-color: var(--bo-button-background);
+$_form-defaults__input-button-hover--border-color: var(--bo-button-hover-border-color);
+$_form-defaults__localized-label--bg-color: var(--bo-container-background);
+$form-defaults__label-highlight--color: var(--bo-selected-color);
+
+$_default__content-wrapper--bg-color: var(--bo-container-background);
+$_default__content-container--bg-color: var(--bo-container-background);
+$_default__content--color: var(--bo-text-color);
+$_default__header--color: var(--bo-page-header-text-color);
+$_default__header--bg-color: var(--bo-page-header-background); 
+$_default__delimiter--border-color: var(--bo-container-border-color);
+$_default__sidebar--bg-color: var(--bo-container-background);
+$_default__footer--bg-color: var(--bo-page-footer-background);
+$_default__splitter--color: var(--bo-container-border-color);
+$_default__explorertree-toolbar--border-color: var(--bo-toolbar-separator-color);
+$_default__modal-overlay-shadow--bg-color: var(--bo-container-background);
+
+/* Status */
+$_default__status-positive--color: var(--bo-positive-color);
+$_default__status-positive--background: var(--bo-success-background);
+$_default__status-alert--color: var(--bo-warning-color);
+$_default__status-alert--background: var(--bo-warning-background);
+$_default__status-negative--color: var(--bo-negative-color);
+
+$_default__status-negative--background: var(--bo-error-background);
+$_default__status-neutral--color: var(--bo-neutral-color);
+$_default__status-neutral--background: var(--bo-neutral-background);
+$_default__status-info--color: var(--bo-information-color);
+$_default__status-info--background: var(--bo-information-background);
+
+$_default-negative__content-wrapper--bg-color: var(--bo-error-background);
+$_default-negative__content--color: var(--bo-negative-color);
+$_default-negative__content-icon--color: var(--bo-button-error-text-color);
+$_default-negative__content-icon-selected--bg-color: var(--bo-button-error-active-background);
+$_default-negative-list__item--border-color: var(--bo-error-border-color);
+$_default-negative__content-box--border-color: var(--bo-error-border-color);
+$_default-negative__delimiter--border-color: var(--bo-error-border-color)r;
+
+$_default-list__item--color: var(--bo-list-text-color);
+$_default-list__item-hover--bg-color: var(--bo-list-hover-background);
+$_default-list__item--bg-color: var(--bo-list-background);
+
+$_default-list__item-selected--bg-color: var(--bo-list-selected-background);
+$_default-list__item-selected-hover--bg-color: var(--bo-list-selected-hover-background);
+$_default-list__item-selected--border-bottom: var(--bo-container-border-width) solid var(--bo-list-selected-border-color);
+$_default-list__item--border-color: var(--bo-list-border-color);
+$_default-list__item-focused--color: var(--bo-list-active-text-color);
+$_default-list__item-box-focused--color: var(--bo-list-active-text-color);
+$_default-list__item-box-selected--color: var(--bo-button-selected-color);
+$_default-list__item-box-selected--border-color: var(--bo-list-selected-border-color);
+
+$_default-list__table-header--color: var(--bo-list-table-header-color);
+$_default-list__table-header--bg-color: var(--bo-list-table-header-background);
+
+$_popup__wrapper--bg-color: var(--bo-container-background);
+$window__popup--box-shadow: var(--bo-content-shadow-large);
+
+// labels
+$form-defaults__label--color: var(--bo-content-label-color);
+$form-defaults__label-disabled--color: var(--bo-content-disabled-text-color);
+$form-defaults__box-emtpy--color: var(--bo-text-color);
+$form-defaults__label-info--color: var(--bo-content-label-color);
+$_form-defaults__label-bright--background: var(--bo-content-selected-background);
+
+// navigation-menu-item
+$_navigation__menu-item--color: var(--bo-list-text-color);
+$_navigation__menu-item-selected--color: var(--bo-list-text-color);
+$_navigation__tabs--border-color: var(--bo-list-border-color);
+
+// menu-item-checkmark
+$_menu-item-check-icon--color: var(--bo-content-icon-color);
+$_menu-item-check-icon-disabled--color: var(--bo-content-icon-color);
+
+$_container__action--color: var(--bo-button-icon-color);
+$_container__action-disabled--color: var(--bo-button-icon-color);
+$_container__action-selected--color: var(--bo-button-selected-color);
+$_container__action-hover--color: var(--bo-button-hover-color);
+$_container__action-hover--bg-color: var(--bo-button-hover-background);
+$_container__action-selected--bg-color: var(--bo-button-selected-background);
+$_container__action-secondary--color: var(--bo-button-text-color);
+$_container__action-secondary-hover--color: var(--bo-button-text-color);
+$_container__action-alert--color: var(--bo-negative-color);
+$_container__action-alert-hover--color:  var(--bo-negative-color);
+// $editor-defaults__input-box--border-color: $form-defaults__box--border-color;
+// should be properly replaced (over-all)
+$editor-defaults__input-box-disabled--border-color: var(--bo-input-readonly-border-color);
+$editor-defaults__input-box-disabled--bg-color: var(--bo-input-readonly-background);
+$editor-defaults__input-box-disabled--color: var(--bo-input-text-color);
+$editor-defaults__action-button-disabled--color: var(--bo-button-icon-color);
+$editor-defaults__input-box-disabled--opacity: var(--bo-content-disabled-opacity);
+// find better solution for action-hover-border-state
+$editor-defaults__action-button-hover--border-color: var(--bo-button-hover-border-color);
+
+$_layout-panels__panel--box-shadow: var(--bo-content-shadow-small);
+$_layout-panels__panel--bg-color: var(--bo-container-background);
+
+
+$_label__level-1--color: var(--bo-content-label-color); // = $_default__header--color, = $_default__content--color
+$_label__level-2--color: var(--bo-content-label-color); // = $form-defaults__box--color
+$_label__level-3--color: var(--bo-content-label-color); // = $form-defaults__label--color
+$_label__level-4--color: var(--bo-content-label-color); // = $form-defaults__input-placeholder--color
+
+// popup
+$_editor-defaults__popup-box--border-color: var(--bo-list-border-color);
+$_editor-defaults__popup-box-delimiter--border-color: var(--bo-list-border-color);
+$_editor-defaults__popup-box--bg-color: var(--bo-container-background);
+$_editor-defaults__popup-box-item--bg-color: var(--bo-list-background);
+
+// sidebar
+$_sidebar__header--bg-color: var(--bo-container-background);
+
+// action
+$_action__text--color: var(--bo-text-color); // #0a6ed1
+$_action__icon-button--bg-color: var(--bo-button-background);
+$_action__icon-button--color: var(--bo-button-text-color);
+$_action__icon-button--border-color: var(--bo-button-border-color);
+$_action__icon-button-active--bg-color: var(--bo-button-active-background);
+$_action__button--bg-color: var(--bo-button-background);
+$_action__button--color: var(--bo-button-text-color);
+
+$_button__action-tool--bg-color: var(--bo-toolbar-background);
+$_button__action-tool--color: var(--bo-button-text-color);
+
+$_button__action-tool-label--bg-color: var(--bo-toolbar-background);
+$_button__action-tool-label--color: var(--bo-content-label-color);
+
+$_button__action-tool--border-color: var(--bo-button-border-color);
+$_button__action-tool--shadow-color: transparent;
+$_button__action-tool-hover-active-focus--bg-color: var(--bo-button-active-background);
+$_button__action-tool-hover-active-focus--color: var(--bo-button-active-color);
+$_button__action-tool-disabled--opacity: 0.4;
+
+// icon button
+$_button__icon--color: var(--bo-button-text-color);
+$_button__icon-hover--color: var(--bo-button-hover-color);
+$_button__icon-hover--bg-color: var(--bo-button-hover-background);
+$_button__icon-selected--bg-color: var(--bo-button-active-color);
+$_button__icon-active--color: var(--bo-button-active-color);
+$_button__icon-disabled--opacity: 0.4;
+$_button__icon-focus-outline-width: var(--bo-content-focus-outline-width,.0625rem);
+$_button__icon-focus-outline-color: var(--bo-button-focus-outline-color);
+$_button__icon-focus-outline-offset: $content-focus-outline-offset;
+
+/* Button Color Scheme */
+$_button-primary--color: var(--bo-button-primary-text-color);
+$_button-secondary--color: var(--bo-button-text-color);
+$_button-hover--color: var(--bo-button-hover-color);
+$_button-active--color: var(--bo-button-active-color);
+$_button-disabled--color: var(--bo-button-text-color);
+$_button-light-hover--color: var(--bo-button-text-color);
+$_button-light-active--color: var(--bo-button-active-color);
+
+$_button-warning--color: var(--bo-button-warning-text-color);
+$_button-warning-hover--color: var(--bo-button-warning-hover-text-color);
+$_button-warning-active--color: var(--bo-button-warning-active-text-color);
+
+$_button-danger--color: var(--bo-button-error-text-color);
+$_button-danger-hover--color: var(--bo-button-error-hover-text-color);
+$_button-danger-active--color: var(--bo-button-error-active-text-color);
+
+$_button-success--color: var(--bo-button-success-text-color);
+$_button-success-hover--color: var(--bo-button-success-hover-text-color);
+$_button-success-active--color: var(--bo-button-success-active-text-color);
+
+// Sizing
+// ====================
+$boxes--border__thin: 1px;
+$boxes--border__medium: 2px;
+$_boxes__border__selected: 3px;
+
+$_layout--splitter-default--size: 2px;
+$_layout--splitter-large--size: 4px;
+$_layout-panels__panel--border-radius: $fd-border-radius;
+
+$form-defaults__input-icon--size: 16px;
+$form-defaults__input-icon-mark--size: 6px;
+$form-defaults__input-icon--border-width: 1px;
+
+$editor-defaults__input-box--border-radius: $_layout-panels__panel--border-radius;
+$editor-defaults__input-field-focus--border-color: var(--bo-input-focus-border-color);
+$editor-defaults__input-field--border-radius: var(--bo-input-border-radius);
+$editor-defaults__input-field--border-width: $boxes--border__thin;
+$editor-defaults__input-split-inner--border-radius: 0;
+$editor-defaults__input-split-inner--border-width: $boxes--border__thin;
+
+$editor-defaults__inline-box--height: 40px;
+$editor-defaults__inline-box--border-radius: 4px;
+$editor-defaults__inline-box-delete-btn--size: 24px;
+$editor-defaults__popup-box--max-height: 8 * $editor-defaults__inline-box--height;
+$editor-defaults__inline-box-compact--size: $fd-forms-height--compact;
+
+$editor-defaults__list-item--height: 40px;
+$editor-defaults__list-item-large--height: 48px;
+$editor-defaults__list-item-small--height: 30px;
+
+$editor-defaults__popup-box-header--height: 50px;
+$_editor-defaults__popup-box--border-radius: 4px;
+$_editor-defaults__popup-box--default-shadow-blur: 4px;
+$_editor-defaults__popup-box--default-shadow-opacity: 0.05;
+$_editor-defaults__label-block--spacing-bottom: 6px;
+// $_editor-defaults__popup-box-button-footer-height: 76px; // = calc lineheight (36px) + 2* padding (20px)
+
+$editor-defaults__input-box-btn--padding: 0 5px;
+$editor-defaults__action-button--border-width: $boxes--border__thin;
+
+$_default__modal--border-radius: .25rem;;
+
+$toolbar__default--height: 52px;
+$toolbar__shell--height: 48px;
+
+$toolbar__button-default--size: 28px;
+$toolbar__button-medium--size: 24px;
+$toolbar__button-small--size: 16px;
+$toolbar__button-large--size: 40px;
+
+$toolbar__button-default--border-width: $boxes--border__thin;
+$toolbar__button-default--height: $toolbar__button-default--size;
+$toolbar__button-small--height: $toolbar__button-small--size;
+
+$toolbar__button-default--border-radius: var(--bo-button-border-radius);
+$toolbar__button-small--border-radius: 2px;
+
+
+$_default__action-icon--font-size: $font-size__base;
+$_default__tab-bar--height: $toolbar__default--height;
+$_default__delimiter--border-width: $boxes--border__thin;
+$_button__action-tool-label--size: 20px;
+
+$_container-spacing-default__core:		map-get($fd-spacing, "base"); // 4px // will get renamed to base after used base is deprecated
+$_container-spacing-default__regular:	map-get($fd-spacing, "reg"); // 24px
+$_container-spacing-default__small:		map-get($fd-spacing, "s"); // 16px
+$_container-spacing-default__tiny:		map-get($fd-spacing, "xxs"); // 8px
+$_container-spacing-default__medium:	map-get($fd-spacing, "m"); // 32px
+$_container-spacing-default__large:		map-get($fd-spacing, "xxl"); // 48px
+
+//will get deprecated, use $_container-spacing-default__regular instead
+$container-spacing-default__base: 			$_container-spacing-default__regular; // 30px; // $_container-spacing-default__regular // 24px
+//not necessarily deprecated
+$container-spacing-default__half: 			floor($container-spacing-default__base/2);  // 15px; // 12px
+$container-spacing-default__third: 			ceil($container-spacing-default__base/3);   // 10px; // 8px
+$container-spacing-default__two-thirds: 	ceil($container-spacing-default__base/3 * 2);   // 20px; // 16px
+$container-spacing-default_two-thirds: 		ceil($container-spacing-default__base/3 * 2);   // 20px;
+$container-spacing-default__semi-third: 	ceil($container-spacing-default__base/2.5); // 12px; // 10px
+
+// Color box variables
+$color-box-popup-min-width: 400px;
+$color-box-default-input-height: $toolbar__button-medium--size;
+$color-box-default-input-width: 55px;
+$color-box-content-border: 1px solid var(--bo-container-border-color);
+
+//deprecated
+$globals__toolbar--height: $toolbar__default--height;
+$globals__sidebar--width: 300px;
+
+//Systembar navigation menu
+$navigation__top-menu--height: $toolbar__shell--height; //interim definition will be removed, is temporary in place for the first step on theme unification
+
+//Toolbar
+$toolbar__vertical-centering-base--height: $toolbar__button-default--height;
+
+$default-mandatory-field--color: var(--bo-input-required-color);
+$default-mandatory-field--font-weight: $font-weight-bold;
+$default-mandatory-field--font-size: $font-size__base;
+$default-mandatory-field--margin-left: $_container-spacing-default__core;
+
+$default-icon--color: var(--bo-content-icon-color);
+// Global icon font content
+$globals-font-family:$font-family__icon;
+$globals-icons-accept--content: _getIconGlyphContentValue("accept");
+$globals-icons-decline--content: _getIconGlyphContentValue("decline");
+
+//Global Mixins
+
+@mixin _iconButtonDefault($glyph, $size: $toolbar__button-default--size, $border-radius: $editor-defaults__inline-box--border-radius) {
+	width: $size;
+    height: $size;
+    min-height: $size;
+    line-height: $size;
+    padding: 0;
+    background-color: transparent;
+    border-color: transparent;
+    color: $_button__icon--color;
+    @include _getIconGlyph($glyph);
+    font-family: $font-family__icon;
+    font-size: $font-size__base;
+    text-align: center;
+	display: inline-block;
+
+    &:hover {
+        color: $_button__icon-hover--color;
+        box-shadow: none;
+    }
+
+    &:focus {
+        z-index: 5;
+        outline: $_button__icon-focus-outline-width dotted $_button__icon-focus-outline-color;
+        outline-offset: $_button__icon-focus-outline-offset;
+    }
+
+    &:active {
+        color: $_button__icon-active--color;
+        box-shadow: none;
+    }
+
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:active {
+        opacity: $_button__icon-disabled--opacity;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+
+    &:before {
+    	width: $form-defaults__input-icon--size;
+    	height: $form-defaults__input-icon--size;
+    }
+}
+
+@mixin _actionToolDefaults($border-radius:$toolbar__button-default--border-radius, $size:$toolbar__button-default--size){
+    width: $size;
+    height: $size;
+    background-color: $_button__action-tool--bg-color;
+    color: $_button__action-tool--color;
+    border: $boxes--border__thin solid $_button__action-tool--border-color;
+    border-radius: $border-radius;
+    font-size: $font-size__small;
+    padding: 0;
+    line-height: $size;
+    text-align: center;
+    box-shadow: 0 1px 0 0 $_button__action-tool--shadow-color;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $_button__action-tool-hover-active-focus--color;
+        background-color: $_button__action-tool-hover-active-focus--bg-color;
+        border-color: $_button__action-tool-hover-active-focus--bg-color;
+    }
+    &:disabled {
+        opacity: $_button__action-tool-disabled--opacity;
+    }
+}
+
+@mixin _addDefaultMandatoryFlag(){
+    &:after {
+        content: "*";
+        color: $default-mandatory-field--color;
+        font-size: $default-mandatory-field--font-size;
+        position: relative;
+        top: -2px;
+        font-weight: $default-mandatory-field--font-weight;
+    }
+}
+
+@mixin setTreeIconGlyph($key, $glyph){
+	@if $key and $glyph {
+	    $keyWithoutDot: str-replace($key, ".", "_");
+		&-#{$keyWithoutDot}.y-tree-icon {
+
+		    background-image: none;
+
+		    &:before {
+		    	font-family: $font-family__icon;
+		    	content: _getIconGlyphContentValue($glyph);
+		    	color: $default-icon--color;
+		    }
+		}
+	}
+}
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}

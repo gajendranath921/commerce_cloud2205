@@ -1,0 +1,72 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+// Component Specific Variables
+
+// $configurableflow__header--bg-color: $white;
+
+$configurableflow__info--bg-color: transparent;//$validation__info--bg-color;
+$configurableflow__info--color: $form-defaults__box--color;//$_container__action--color; //$validation__info--color;
+$configurableflow__info--border-color: transparent; //$_editor-defaults__popup-box-delimiter--border-color;
+$_configurableflow__info--border-bottom: $boxes--border__thin solid $configurableflow__info--border-color;
+$_configurableflow__info--padding: $_container-spacing-default__small;
+$_configurableflow__info--font-size: $font-size__base;
+// $configurableflow__info-loceditor--color: $grey__default--200;
+
+$configurableflow__breadcrumb--bg-color: $_editor-defaults__popup-box-item--bg-color;
+$configurableflow__breadcrumb--color: $form-defaults__label--color;
+$_configurableflow__breadcrumb--padding: $_container-spacing-default__small;
+$configurableflow__breadcrumb-arrow--color: $configurableflow__breadcrumb--color;
+$_configurableflow__breadcrumb-arrow--content: _getIconGlyphContentValue("slim-arrow-right");
+$_configurableflow__breadcrumb-arrow--font-size: $font-size__small;
+$_configurableflow__breadcrumb-arrow--font-family: $font-family__icon;
+$_configurableflow__breadcrumb-arrow--width: $_container-spacing-default__tiny;
+$configurableflow__breadcrumb-label--font-size: $font-size__small;
+$_configurableflow__breadcrumb-label--left: $_container-spacing-default__small;
+$_configurableflow__breadcrumb-label--right: $_container-spacing-default__small;
+$configurableflow__breadcrumb-sublabel--font-size: $font-size__base;
+$_configurableflow__breadcrumb-active--color: var(--bo-step-active-color);
+$_configurableflow__breadcrumb-active--border-bottom: $_boxes__border__selected solid var(--bo-step-active-indicator-color);
+
+
+$_configurableflow__z-label-error--border: $boxes--border__thin dashed;
+$configurableflow__z-label-error--color: $validation__error--color; //$red__default;
+$_configurableflow__z-label-error--padding: 5px;
+
+// $configurableflow__warn--bg-color: $validation__warn--bg-color;
+// $configurableflow__warn--color: $validation__warn--color;
+// $configurableflow__error--bg-color: $validation__error--bg-color;
+// $configurableflow__error--color: $validation__error--color;
+// $configurableflow__error-loceditor--color: $configurableflow__info-loceditor--color;
+// $configurableflow__btn-primary--color: $blue__dark--100;
+// $configurableflow__modal-headline--font-size: $font-size__large;
+
+// $configurableflow__navigation--border-color: $_editor-defaults__popup-box-delimiter--border-color;
+$configurableflow__navigation--border: $boxes--border__thin solid $_editor-defaults__popup-box-delimiter--border-color;
+// $_configurableflow__navigation--border-top: $boxes--border__thin solid $_editor-defaults__popup-box-delimiter--border-color;
+$_configurableflow__navigation-button--margin: $_container-spacing-default__small;
+$configurableflow__navigation--height: $_configurableflow__navigation-button--margin * 2 + $editor-defaults__inline-box--height;
+
+$_configurableflow__wizard-property--margin-bottom: $_container-spacing-default__small;
+$_configurableflow__wizard-property-label--color: $_label__level-3--color;
+$configurableflow__wizard-property-label-mandatory--font-weight: $font-weight-bold;
+
+// $configurableflow__base--space: $container-spacing-default__third; //To be replaced when working on validaton constraints
+
+// $configurableflow__window--max-width: 800px;
+$configurableflow__window--min-width: 300px;
+$_configurbleflow__content--padding: $_container-spacing-default__tiny $_container-spacing-default__small;
+$configurableflow__content--min-height: 250px; 
+$configurableflow__content--max-height: 420px;
+$configurableflow__bp-m--min-height: 720px;
+$configurableflow__content-bp-m--max-height: calc(100vh - 300px);
+
+$configurableflow__textarea-buttons--margin-top: 10px;
+
+$configurableflow__window-size: (
+    small: (width: 30%, max-width: 500px),
+    medium: (width: 60%, max-width: 800px),
+    large: (width: 90%, max-width: 1200px)
+);

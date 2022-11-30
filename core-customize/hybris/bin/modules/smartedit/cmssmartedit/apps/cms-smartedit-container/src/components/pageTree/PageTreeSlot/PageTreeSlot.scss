@@ -1,0 +1,44 @@
+.se-page-tree {
+    &-node {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        border-bottom: 1px solid #f1f1f1;
+        width: 100%;
+
+        &-expand {
+            background: #e7f1fa;
+        }
+
+        &--icon {
+            font-size: 14px;
+            line-height: 16px;
+            color: var(--sapContent_IconColor);
+            margin-right: 10px;
+        }
+    }
+
+    &-slot-node {
+        &--name {
+            font-family: '72';
+            font-size: 14px;
+            line-height: 16px;
+            color: var(--sapContent_LabelColor);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-menu {
+            margin: 0 0 0 auto;
+            min-width: 60px;
+            &--icon {
+                margin: 0 0 0 16px;
+                font-size: 14px;
+                line-height: 16px;
+                color: var(--sapContent_IconColor);
+            }
+        }
+    }
+}

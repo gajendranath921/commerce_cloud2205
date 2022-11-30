@@ -1,0 +1,143 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-extendedsplitlayout {
+  position: relative;
+  background: var(--bo-base-background); }
+  .yw-extendedsplitlayout-toolbar {
+    width: 100%;
+    height: 52px;
+    background-color: var(--bo-page-header-background);
+    padding: 0 32px;
+    text-align: right;
+    position: absolute; }
+    .yw-extendedsplitlayout-toolbar-action {
+      height: 100%;
+      display: inline-block; }
+      .yw-extendedsplitlayout-toolbar-action .cng-action {
+        margin: 0; }
+        .yw-extendedsplitlayout-toolbar-action .cng-action table td, .yw-extendedsplitlayout-toolbar-action .cng-action-group table td {
+          vertical-align: middle; }
+  .yw-extendedsplitlayout-toolbar + .yw-extendedsplitlayout-holder {
+    padding-top: 52px; }
+  .yw-extendedsplitlayout-holder, .yw-extendedsplitlayout-box-wrapper {
+    height: 100%;
+    display: flex; }
+  .yw-extendedsplitlayout-twin-south, .yw-extendedsplitlayout-box-wrapper {
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .yw-extendedsplitlayout-box {
+    width: 33%;
+    height: 100%; }
+    .yw-extendedsplitlayout-box:last-child {
+      width: 34%; }
+      .yw-extendedsplitlayout-box:last-child > .ui-resizable-handle {
+        border-right-width: 0; }
+  .yw-extendedsplitlayout-box-wrapper, .yw-extendedsplitlayout-box {
+    min-width: 100px;
+    min-height: 100px;
+    overflow: hidden; }
+  .yw-extendedsplitlayout-single > .yw-extendedsplitlayout-box {
+    width: 100%;
+    border-radius: 4px; }
+  .yw-extendedsplitlayout-twin-south > .yw-extendedsplitlayout-box, .yw-extendedsplitlayout-twinmix-left > .yw-extendedsplitlayout-box-wrapper > .yw-extendedsplitlayout-box, .yw-extendedsplitlayout-twinmix-right > .yw-extendedsplitlayout-box-wrapper > .yw-extendedsplitlayout-box {
+    width: 100%;
+    height: 50%; }
+  .yw-extendedsplitlayout-twin-south > .yw-extendedsplitlayout-box-first {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px; }
+  .yw-extendedsplitlayout-twin-south > .yw-extendedsplitlayout-box-second {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px; }
+  .yw-extendedsplitlayout-twin-east > .yw-extendedsplitlayout-box-first {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
+  .yw-extendedsplitlayout-twin-east > .yw-extendedsplitlayout-box-second {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px; }
+  .yw-extendedsplitlayout-box-wrapper, .yw-extendedsplitlayout-twin-east > .yw-extendedsplitlayout-box, .yw-extendedsplitlayout-twinmix-left > .yw-extendedsplitlayout-box, .yw-extendedsplitlayout-twinmix-right > .yw-extendedsplitlayout-box {
+    width: 50%; }
+  .yw-extendedsplitlayout-box-wrapper > .ui-resizable-e, .yw-extendedsplitlayout-box > .ui-resizable-e {
+    width: 0;
+    cursor: ew-resize;
+    right: 0;
+    border: 0 solid var(--bo-container-border-color);
+    border-right-width: 4px; }
+  .yw-extendedsplitlayout-box > .ui-resizable-s {
+    height: 0;
+    cursor: ns-resize;
+    bottom: 0;
+    border: 0 solid var(--bo-container-border-color);
+    border-bottom-width: 4px; }
+  .yw-extendedsplitlayout-content-box {
+    width: 100%;
+    height: 100%;
+    min-width: 100px;
+    min-height: 100px; }
+    .yw-extendedsplitlayout-content-box .yw-explorerTree-toolbar {
+      border-bottom-width: 1px;
+      padding: 0 4px; }
+      .yw-extendedsplitlayout-content-box .yw-explorerTree-toolbar .yw-explorerTree-right-holder .yw-explorerTree-secondary-actions.ya-action-slot {
+        padding-left: 0; }
+      .yw-extendedsplitlayout-content-box .yw-explorerTree-toolbar > .yw-explorerTree-actions,
+      .yw-extendedsplitlayout-content-box .yw-explorerTree-toolbar > .yw-explorerTree-right-holder {
+        margin-bottom: -1px; }
+  .yw-extendedsplitlayout-holder .yw-extendedsplitlayout-holder {
+    padding: 16px; }
+  .yw-extendedsplitlayout-holder .yw-extendedsplitlayout-holder .yw-extendedsplitlayout-box {
+    background-color: var(--bo-base-background);
+    box-shadow: var(--bo-content-shadow-small); }
+  .yw-extendedsplitlayout-chooser-action .cng-action-icon {
+    box-shadow: none; }
+    .yw-extendedsplitlayout-chooser-action .cng-action-icon.yw-chosen-layout_mixleft, .yw-extendedsplitlayout-chooser-action .cng-action-icon.yw-chosen-layout_mixright, .yw-extendedsplitlayout-chooser-action .cng-action-icon.yw-chosen-layout_single, .yw-extendedsplitlayout-chooser-action .cng-action-icon.yw-chosen-layout_triple, .yw-extendedsplitlayout-chooser-action .cng-action-icon.yw-chosen-layout_twixe, .yw-extendedsplitlayout-chooser-action .cng-action-icon.yw-chosen-layout_twixs {
+      font-family: var(--bo-content-icon-font-family);
+      font-size: 16px !important;
+      color: inherit !important;
+      width: 28px;
+      height: 28px;
+      overflow: hidden;
+      padding-left: 28px;
+      padding-top: 28px;
+      box-sizing: border-box;
+      background-position: 0 0;
+      background-size: 28px auto;
+      background-repeat: no-repeat; }
+    .yw-extendedsplitlayout-chooser-action .cng-action-icon.yw-chosen-layout_mixleft:before {
+      content: "\e694"; }
+    .yw-extendedsplitlayout-chooser-action .cng-action-icon.yw-chosen-layout_mixright:before {
+      content: "\e695"; }
+    .yw-extendedsplitlayout-chooser-action .cng-action-icon.yw-chosen-layout_single:before {
+      content: "\e696"; }
+    .yw-extendedsplitlayout-chooser-action .cng-action-icon.yw-chosen-layout_triple:before {
+      content: "\e697"; }
+    .yw-extendedsplitlayout-chooser-action .cng-action-icon.yw-chosen-layout_twixe:before {
+      content: "\e698"; }
+    .yw-extendedsplitlayout-chooser-action .cng-action-icon.yw-chosen-layout_twixs:before {
+      content: "\e699"; }
+  .yw-extendedsplitlayout-chooser-action.cng-action-enabled.ya-cng-action-container-hover .cng-action-icon, .yw-extendedsplitlayout-chooser-action.cng-action-enabled:hover .cng-action-icon, .yw-extendedsplitlayout-chooser-action.cng-action-enabled:focus .cng-action-icon {
+    box-shadow: none; }
+  .yw-extendedsplitlayout-chooser-action table {
+    position: relative;
+    margin-right: 18px; }
+    .yw-extendedsplitlayout-chooser-action table:after {
+      content: "\e1ef";
+      font-family: var(--bo-content-icon-font-family);
+      font-size: 14px;
+      line-height: 16px;
+      display: block;
+      position: absolute;
+      right: -16px;
+      width: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center; }
+  .yw-extendedsplitlayout-dndconfig-action.z-hbox {
+    position: relative; }
+    .yw-extendedsplitlayout-dndconfig-action.z-hbox .cng-action-icon {
+      width: 28px;
+      height: 28px;
+      overflow: hidden;
+      padding-left: 28px;
+      padding-top: 28px;
+      box-sizing: border-box; }

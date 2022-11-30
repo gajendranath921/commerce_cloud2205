@@ -1,0 +1,74 @@
+/* Status */
+/* Button Color Scheme */
+/*================================
+   Y PERMISSION SKINNING
+================================*/
+.yw-modal-permissionmanagementgroup .yw-com_hybris_cockpitng_borderlayout .z-borderlayout,
+.yw-modal-permissionmanagementgroup .yw-borderlayout .opaquetrue .yw-layoutregion.z-south {
+  background: var(--bo-container-background); }
+.yw-modal-permissionmanagementgroup .z-north, .yw-modal-permissionmanagementgroup .z-north.yw-collapsed-down .z-north-header {
+  background: var(--bo-container-background); }
+.yw-modal-permissionmanagementgroup .z-north .z-north-header button.yw-expandCollapse {
+  margin-top: -8px; }
+.yw-modal-permissionmanagementgroup .z-center {
+  background: var(--bo-container-background); }
+  .yw-modal-permissionmanagementgroup .z-center.yw-collapsed-down {
+    background: var(--bo-container-background); }
+.yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-north-header .yw-caption-container > .z-caption-content > button.yw-expandCollapse, .yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-north-header .yw-caption-container > .z-caption-content > button.yw-collapsibleContainer-locked, .yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-north-header .yw-caption-container > .z-caption-content > button.yw-collapsibleContainer-unlocked,
+.yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-center-header .yw-caption-container > .z-caption-content > button.yw-expandCollapse,
+.yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-center-header .yw-caption-container > .z-caption-content > button.yw-collapsibleContainer-locked,
+.yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-center-header .yw-caption-container > .z-caption-content > button.yw-collapsibleContainer-unlocked {
+  top: 50%;
+  margin-top: -8px; }
+.yw-modal-permissionmanagementgroup tbody.z-listbox-emptybody td {
+  background: transparent; }
+.yw-modal-permissionmanagementgroup .yw-collapsed-down .z-north-header, .yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-south-header {
+  border-color: var(--bo-container-background) !important;
+  padding: 8px 16px; }
+  .yw-modal-permissionmanagementgroup .yw-collapsed-down .z-north-header .z-south-caption, .yw-modal-permissionmanagementgroup .yw-collapsed-down .z-north-header .yw-caption-container, .yw-modal-permissionmanagementgroup .yw-collapsed-down .z-north-header .z-caption-content > .z-button, .yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-south-header .z-south-caption, .yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-south-header .yw-caption-container, .yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-south-header .z-caption-content > .z-button {
+    top: -2px; }
+.yw-modal-permissionmanagementgroup .yw-layoutregion.z-south, .yw-modal-permissionmanagementgroup .yw-layoutregion.z-south > .z-south-body {
+  min-height: 64px; }
+.yw-modal-permissionmanagementgroup .yw-borderlayout .yw-caption-container {
+  min-height: auto; }
+.yw-modal-permissionmanagementgroup .yw-textsearch-single {
+  padding: 1px 16px; }
+.yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-north-header, .yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-center-header {
+  height: auto;
+  padding: 8px 16px; }
+.yw-modal-permissionmanagementgroup .yw-collapsibleContainer-caption > .z-north-body {
+  height: auto !important; }
+.yw-modal-permissionmanagementgroup .yw-coll-browser .yw-listview-actioncontainer {
+  padding-top: 0; }
+.yw-modal-permissionmanagementgroup .z-listbox-body {
+  background: var(--bo-container-background); }
+
+.yw-permission-controll-cell {
+  height: 20px;
+  width: 20px; }
+.yw-permission-cell-inherit-denied-false, .yw-permission-cell-denied-false, .yw-permission-cell-inherit-denied-true, .yw-permission-cell-denied-true {
+  height: 16px;
+  width: 16px;
+  position: relative; }
+  .yw-permission-cell-inherit-denied-false:before, .yw-permission-cell-denied-false:before, .yw-permission-cell-inherit-denied-true:before, .yw-permission-cell-denied-true:before {
+    content: "\e03e";
+    position: absolute;
+    font: normal normal normal 16px var(--bo-content-icon-font-family);
+    width: 100%;
+    text-align: center;
+    line-height: 18px; }
+.yw-permission-cell-denied-false:before, .yw-permission-cell-inherit-denied-false:before {
+  content: "\e05b"; }
+.yw-permission-cell-inherit-denied-true, .yw-permission-cell-inherit-denied-false {
+  color: var(--bo-neutral-color); }
+.yw-permission-cell-denied-false {
+  color: var(--bo-success-color); }
+.yw-permission-cell-denied-true {
+  color: var(--bo-error-color); }
+.yw-permission-cell-disabled {
+  opacity: 0.5;
+  cursor: default; }
+  .yw-permission-cell-disabled:hover {
+    cursor: default; }
+.yw-permission-notpersisted {
+  font-style: italic; }

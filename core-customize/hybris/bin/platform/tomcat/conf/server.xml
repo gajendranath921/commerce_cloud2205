@@ -1,0 +1,663 @@
+
+<Server port="-1" shutdown="SHUTDOWN">
+
+  <!-- For security reasons remote JMX access is disabled. You can still use local process to access JMX beans. If you need to enable remote JMX - uncomment this listener
+  <Listener className="org.apache.catalina.mbeans.JmxRemoteLifecycleListener" rmiRegistryPortPlatform="9003" rmiServerPortPlatform="9004" />
+  -->
+
+  <!-- If you want to use the jndi uncoment this listener
+  <Listener className="de.hybris.tomcat.HybrisGlobalResourcesLifecycleListener"  dataSourceName="${db.pool.fromJNDI}"/>
+  -->
+
+  <GlobalNamingResources>
+
+		<!-- If you want to use the jndi database resource please set db.pool.fromJNDI property and uncomment following block and listener above.
+			 Furthermore you have to copy the related jdbc library from platform/lib/dbdriver to the tomcat/lib folder -->
+		<!-- <Resource 	name="${db.pool.name}"
+ 						auth="Container"
+ 						type="javax.sql.DataSource"
+              		maxTotal="90"
+              		maxIdle="90"
+              		maxWaitMillis="10000"
+              		testWhileIdle="true"
+						timeBetweenEvictionRunsMillis="10000"
+						minEvictableIdleTimeMillis="300000"
+						numTestsPerEvictionRun="100"
+						testOnBorrow="true"
+						testOnReturn="true"
+              		username="sa"
+             		password=""
+              		driverClassName="org.hsqldb.jdbcDriver"
+			url="jdbc:hsqldb:file:/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/data/hsqldb/mydb;shutdown=true;hsqldb.tx=MVCC;hsqldb.log_size=256"
+			useStatementFacade="false"/>
+        -->
+
+		<!-- If you want to use a mail JNDI resource please set mail.fromJNDI property and uncomment following block.
+		     Furthermore you have to copy the mail library from ext/core/lib to tomcat/lib -->
+		<!-- <Resource 	name="mail/Session" auth="Container"
+		        		type="javax.mail.Session"
+		        		mail.transport.protocol="smtp"
+		        		mail.smtp.host="${mail.smtp.server}"
+		        		mail.smtp.from="test@hybris.de"
+		        		description="Global E-Mail Resource"
+		    		/>-->
+
+  </GlobalNamingResources>
+
+
+  <Service name="Catalina" >
+
+	<Executor     name="hybrisExecutor"
+			        namePrefix="hybrisHTTP"
+			        maxThreads="200"
+			        minSpareThreads="40"
+			        maxIdleTime="10000"/>
+
+    <Connector port="9001"
+			   maxHttpHeaderSize="8192"
+			   maxPostSize="6291456"
+               maxThreads="200"
+               protocol="HTTP/1.1"
+               executor="hybrisExecutor"
+               enableLookups="false"
+               acceptCount="100"
+               connectionTimeout="20000"
+               URIEncoding="UTF-8"
+               disableUploadTimeout="true" />
+
+    <Connector port="9002"
+			   maxHttpHeaderSize="8192"
+			   maxPostSize="6291456"
+               maxThreads="150"
+               protocol="HTTP/1.1"
+               executor="hybrisExecutor"
+               enableLookups="false"
+               acceptCount="100"
+               connectionTimeout="20000"
+               disableUploadTimeout="true"
+               URIEncoding="UTF-8"
+               SSLEnabled="true"
+					scheme="https"
+					secure="true"
+					clientAuth="false"
+   				sslProtocol = "TLS"
+   				keyAlias="1"
+   				keystoreFile="${catalina.home}/lib/keystore"
+   				keystorePass="123456"
+                />
+
+    <!--
+    This might evaluate into 
+    <Connector protocol="AJP/1.3" port="8009" proxyPort="${proxy.http.port}" redirectPort="${proxy.ssl.port}" useIPVHosts="${tomcat.ajp.useipv}" />  
+    where the tomcat.ajp.port is mandatory property to render this connector. 
+     --> 
+		<Connector  protocol="AJP/1.3"  URIEncoding="UTF-8"  port="8009" useIPVHosts="false"  secretRequired="false"  enableLookups="false"  connectionTimeout="20000"  backlog="100" executor="hybrisExecutor"  />
+	
+
+    <Engine name="Catalina" defaultHost="localhost" startStopThreads="0">
+
+			<Valve 	className="org.apache.catalina.valves.AccessLogValve"
+             		directory="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/log/tomcat"
+	      		 	prefix="access."
+        	   		suffix=".log"
+	      		 	pattern="combined"
+          />
+
+      <Host 	name="localhost"
+      			appBase="webapps"
+		       	unpackWARs="false"
+		       	autoDeploy="false"
+		       	startStopThreads="0">
+		       	
+		        <Valve className="org.apache.catalina.valves.ErrorReportValve" 
+		               showReport="false" 
+		               showServerInfo="false"/>
+
+			<!-- 'maintenanceweb' extension's context for tenant 'master' -->
+			<Context path="/maintenance" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform/ext/maintenanceweb/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'mediaweb' extension's context for tenant 'master' -->
+			<Context path="/medias" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform/ext/mediaweb/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'processing' extension's context for tenant 'master' -->
+			<Context path="/processing" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform/ext/processing/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'testweb' extension's context for tenant 'junit' -->
+			<Context path="/test" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform/ext/testweb/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'hac' extension's context for tenant 'master' -->
+			<Context path="" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform/ext/hac/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar,*_hac.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'hac' extension's context for tenant 'junit' -->
+			<Context path="/hac_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform/ext/hac/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar,*_hac.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'oauth2' extension's context for tenant 'master' -->
+			<Context path="/authorizationserver" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform/ext/oauth2/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'oauth2' extension's context for tenant 'junit' -->
+			<Context path="/authorizationserver_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform/ext/oauth2/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,javax.servlet.jsp.jstl-*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'adminapi' extension's context for tenant 'master' -->
+			<Context path="/adminapi" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/platform/adminapi/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'backoffice' extension's context for tenant 'master' -->
+			<Context path="/backoffice" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,webfragment*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'embeddedserver' extension's context for tenant 'master' -->
+			<Context path="/embeddedserver" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/platform/embeddedserver/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'groovynature' extension's context for tenant 'master' -->
+			<Context path="/groovynature" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/platform/groovynature/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'kiwi' extension's context for tenant 'master' -->
+			<Context path="/kiwi" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/custom/kiwi/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'mediaconversion' extension's context for tenant 'master' -->
+			<Context path="/mediaconversion" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/platform/mediaconversion/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'tiger' extension's context for tenant 'master' -->
+			<Context path="/tiger" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/custom/tiger/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'tomcatembeddedserver' extension's context for tenant 'master' -->
+			<Context path="/tomcatembeddedserver" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/platform/tomcatembeddedserver/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'acceleratorservices' extension's context for tenant 'master' -->
+			<Context path="/acceleratorservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/core-accelerator/acceleratorservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,velocity-tools*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,velocity-tools*.jar, *jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'acceleratorservices' extension's context for tenant 'junit' -->
+			<Context path="/acceleratorservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/core-accelerator/acceleratorservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,velocity-tools*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,velocity-tools*.jar, *jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'adaptivesearchwebservices' extension's context for tenant 'master' -->
+			<Context path="/adaptivesearchwebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/adaptive-search/adaptivesearchwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'adaptivesearchwebservices' extension's context for tenant 'junit' -->
+			<Context path="/adaptivesearchwebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/adaptive-search/adaptivesearchwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'cmssmarteditwebservices' extension's context for tenant 'master' -->
+			<Context path="/cmssmarteditwebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/cmssmarteditwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'cmssmarteditwebservices' extension's context for tenant 'junit' -->
+			<Context path="/cmssmarteditwebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/cmssmarteditwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'cmswebservices' extension's context for tenant 'master' -->
+			<Context path="/cmswebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/web-content-management-system/cmswebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'cmswebservices' extension's context for tenant 'junit' -->
+			<Context path="/cmswebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/web-content-management-system/cmswebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'merchandisingcmswebservices' extension's context for tenant 'master' -->
+			<Context path="/merchandisingcmswebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/cds-merchandising/merchandisingcmswebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'assistedservicewebservices' extension's context for tenant 'master' -->
+			<Context path="/assistedservicewebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/assisted-services/assistedservicewebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'assistedservicewebservices' extension's context for tenant 'junit' -->
+			<Context path="/assistedservicewebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/assisted-services/assistedservicewebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'commercewebservices' extension's context for tenant 'master' -->
+			<Context path="/occ" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/commerce-services/commercewebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'commercewebservices' extension's context for tenant 'junit' -->
+			<Context path="/rest_junit_occ" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/commerce-services/commercewebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'couponwebservices' extension's context for tenant 'master' -->
+			<Context path="/couponwebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/coupon/couponwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'couponwebservices' extension's context for tenant 'junit' -->
+			<Context path="/couponwebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/coupon/couponwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'datahubadapter' extension's context for tenant 'master' -->
+			<Context path="/datahubadapter" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/data-hub-adapter/datahubadapter/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'odata2webservices' extension's context for tenant 'master' -->
+			<Context path="/odata2webservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/integration-apis/odata2webservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'ordermanagementwebservices' extension's context for tenant 'master' -->
+			<Context path="/ordermanagementwebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/order-management/ordermanagementwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'ordermanagementwebservices' extension's context for tenant 'junit' -->
+			<Context path="/ordermanagementwebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/order-management/ordermanagementwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'b2bordermanagementwebservices' extension's context for tenant 'master' -->
+			<Context path="/b2bordermanagementwebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/order-management/b2bordermanagementwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'b2bordermanagementwebservices' extension's context for tenant 'junit' -->
+			<Context path="/b2bordermanagementwebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/order-management/b2bordermanagementwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'warehousingwebservices' extension's context for tenant 'master' -->
+			<Context path="/warehousingwebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/order-management/warehousingwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'warehousingwebservices' extension's context for tenant 'junit' -->
+			<Context path="/warehousingwebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/order-management/warehousingwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'permissionswebservices' extension's context for tenant 'master' -->
+			<Context path="/permissionswebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/web-services-commons/permissionswebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'permissionswebservices' extension's context for tenant 'junit' -->
+			<Context path="/permissionswebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/web-services-commons/permissionswebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'personalizationwebservices' extension's context for tenant 'master' -->
+			<Context path="/personalizationwebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization/personalizationwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'personalizationwebservices' extension's context for tenant 'junit' -->
+			<Context path="/personalizationwebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization/personalizationwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,*jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'previewwebservices' extension's context for tenant 'master' -->
+			<Context path="/previewwebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/web-content-management-system/previewwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'previewwebservices' extension's context for tenant 'junit' -->
+			<Context path="/previewwebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/web-content-management-system/previewwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'smarteditwebservices' extension's context for tenant 'master' -->
+			<Context path="/smarteditwebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smarteditwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'smarteditwebservices' extension's context for tenant 'junit' -->
+			<Context path="/smarteditwebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smarteditwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'smartedit' extension's context for tenant 'master' -->
+			<Context path="/smartedit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedit/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'cmssmartedit' extension's context for tenant 'master' -->
+			<Context path="/cmssmartedit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/cmssmartedit/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'merchandisingsmartedit' extension's context for tenant 'master' -->
+			<Context path="/merchandisingsmartedit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/cds-merchandising/merchandisingsmartedit/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'personalizationsmartedit' extension's context for tenant 'master' -->
+			<Context path="/personalizationsmartedit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization/personalizationsmartedit/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'personalizationpromotionssmartedit' extension's context for tenant 'master' -->
+			<Context path="/personalizationpromotionssmartedit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-promotion/personalizationpromotionssmartedit/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'personalizationsearchsmartedit' extension's context for tenant 'master' -->
+			<Context path="/personalizationsearchsmartedit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-search/personalizationsearchsmartedit/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'orbeonweb' extension's context for tenant 'master' -->
+			<Context path="/web-orbeon" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/yforms/orbeonweb/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'xyformsweb' extension's context for tenant 'master' -->
+			<Context path="/xyformsweb" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/yforms/xyformsweb/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'xyformsweb' extension's context for tenant 'junit' -->
+			<Context path="/xyformsweb_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/yforms/xyformsweb/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'yacceleratorstorefront' extension's context for tenant 'master' -->
+			<Context path="/yacceleratorstorefront" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/base-accelerator/deprecated/yacceleratorstorefront/web/webroot" useHttpOnly="true">
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="false" tldScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,json-taglib*.jar,*jstl-1*.jar" defaultPluggabilityScan="false" pluggabilityScan="${tomcat.util.scan.StandardJarScanFilter.jarsToScan},taglibs-standard-impl*.jar,spring-security-taglibs-*.jar,spring-webmvc*.jar,json-taglib*.jar,*jstl-1*.jar" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'yempty' extension's context for tenant 'master' -->
+			<Context path="/yempty" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/platform/yempty/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'ywebservices' extension's context for tenant 'master' -->
+			<Context path="/ywebservices" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/web-services-commons/ywebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+			<!-- 'ywebservices' extension's context for tenant 'junit' -->
+			<Context path="/ywebservices_junit" docBase="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/web-services-commons/ywebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+				<JarScanner >
+					<JarScanFilter defaultTldScan="true" defaultPluggabilityScan="true" />
+				</JarScanner>
+			</Context>
+
+
+      </Host>
+
+    </Engine>
+
+  </Service>
+
+</Server>

@@ -1,0 +1,115 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Switch-Type Checkbox
+================================*/
+// Default styling of Checkbox & Radiobox in Cockpitng
+
+@charset "UTF-8";
+@import "../support/_cockpit-variables.scss";
+
+.ye-switch-checkbox.z-checkbox {
+    min-height: $editor-defaults__switch-checkbox--min-height;
+    line-height: $editor-defaults__switch-checkbox--line-height;
+    min-width: $editor-defaults__switch-checkbox-guide--width;
+    padding-top: $_editor-defaults__switch-checkbox-padding-top;
+    padding-bottom: $_editor-defaults__switch-checkbox-padding-bottom;
+    padding-left: 0;
+    width: auto;
+
+    label {
+        font-size: $_editor-defaults__switch-checkbox-label--font-size;
+        line-height: $editor-defaults__switch-checkbox--line-height;
+        padding-left: $editor-defaults__switch-checkbox--padding-left;
+        margin-left: $editor-defaults__switch-checkbox-guide--width;
+
+        &:before,
+        &:after {
+            content: "";
+            transition: $editor-defaults__switch-checkbox--transition;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+        &:before {
+            width: $editor-defaults__switch-checkbox-guide--width;
+            height: $editor-defaults__switch-checkbox-guide--height;
+            border-radius: $editor-defaults__switch-checkbox-guide--border-radius;
+            background: $editor-defaults__switch-checkbox-guide--bg-color;
+            border: $editor-defaults__switch-checkbox-guide--border;
+        }
+
+        &:after {
+            width: $editor-defaults__switch-checkbox-btn--size;
+            height: $editor-defaults__switch-checkbox-btn--size;
+            border-radius: $editor-defaults__switch-checkbox-btn--border-radius;
+            border: $editor-defaults__switch-checkbox--border;
+            background: $editor-defaults__switch-checkbox-btn--bg-color;
+        }
+
+        &:hover {
+            &:before {
+                border-color: $editor-defaults__switch-checkbox-hover--border-color;
+            }
+            &:after {
+                border-color: $editor-defaults__switch-checkbox-hover--border-color;
+                background: $editor-defaults__switch-checkbox-hover--bg-color;
+            }
+        }
+
+        &:empty {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    input:checked ~ label.z-checkbox-content {
+        &:before {
+            background: $editor-defaults__switch-checkbox-guide-checked--bg-color;
+            border-color: $editor-defaults__switch-checkbox-guide-checked--border-color;
+            content: '';
+        }
+
+        &:after {
+            margin-left: $editor-defaults__switch-checkbox--margin-left;
+            background: $editor-defaults__switch-checkbox-checked--bg-color;
+            border-color: $editor-defaults__switch-checkbox-checked--border-color;
+        }
+
+        &:focus,
+        &:hover {
+            &:before {
+                border-color: $editor-defaults__switch-checkbox-guide-checked--border-color;
+            }
+        }
+    }
+}
+
+.ye-switch-checkbox.z-checkbox {
+    &.z-checkbox-disabled,
+    &.z-checkbox-switch-disabled {
+        label.z-checkbox-content {
+            &:before {
+                &:hover, &:focus, &:active {
+                    opacity: $editor-defaults__switch-checkbox-disabled-opacity;
+                    cursor: auto;
+                    background: $editor-defaults__switch-checkbox-guide--bg-color;
+                    border: $editor-defaults__switch-checkbox-guide--border;
+                }
+            }
+            &:after {
+                &:hover, &:focus, &:active {
+                    opacity: $editor-defaults__switch-checkbox-disabled-opacity;
+                    cursor: auto;
+                    border: $editor-defaults__switch-checkbox--border;
+                    background: $editor-defaults__switch-checkbox-btn--bg-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+/* Status */
+/* Button Color Scheme */
+/*
+ * Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved.
+ */
+div.yw-explorerTree .y-tree-icon-outboundsyncbackoffice_explorer_treenode_outboundsync.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-outboundsyncbackoffice_explorer_treenode_outboundsync.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e6b3";
+    color: var(--bo-content-icon-color); }

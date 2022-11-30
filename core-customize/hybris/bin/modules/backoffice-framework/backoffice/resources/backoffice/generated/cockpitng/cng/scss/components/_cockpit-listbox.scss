@@ -1,0 +1,354 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    z-Listbox
+================================*/
+// Defintions of the z-Listbox and it's cells / contents
+
+@charset "UTF-8";
+@import "../support/_cockpit-mixins.scss";
+
+.z-listitem,
+.z-listbox-odd {
+    background: $_list-default__content-bg-color;
+    color: $list-default__content--color;
+    &.z-listitem{
+        background: $_list-default__content-bg-color;
+        color: $list-default__content--color;
+    }
+}
+
+div.z-listcell-content {
+    background: none !important;
+    border: none;
+    color: $list-default__content--color;
+    padding: $list-default__content--cell-padding;
+    line-height: $list-default__content--line-height;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:hover {
+        background: $list-default__content-hover--bg-color;
+        color: $list-default__content-hover--color;
+    }
+
+    .z-label {
+        color: $editor-defaults__box--text-color;
+    }
+}
+
+.z-listcell-content, .z-listgroup-content, .z-listgroupfoot-content, .z-listfooter-content, .z-listheader-content {
+    font-family: $font-family__text;
+    font-size: $font-size__base;
+}
+
+//zk-override
+.z-listitem{
+    border-color: $list-default__content--border-color;
+    color: $list-default__content--color;
+    &:first-child {
+        .z-listcell-content,
+        .z-listgroup-content {
+            padding: $list-default__content--cell-padding;
+        }
+    }
+}
+
+.z-listbox-body {
+    background: $_list-default__content-bg-color;
+    box-shadow: $list-box-default-shadow;
+
+    .z-listcell {
+        border: none;
+        border-top: $list-default__content--border-width solid $list-default__content--border-color;
+        background: transparent;
+    }
+}
+
+.z-listitem,
+.z-listitem.z-listbox-odd {
+    &:hover {
+        .z-listcell {
+            border-color: transparent;
+        }
+
+        .z-listcell-content {
+            color: $list-default__content-hover--color !important;
+        }
+    }
+}
+
+
+div.z-listbox-header .z-listhead-bar {
+    border-color: $list-default__content--border-color;
+    background: transparent;
+    background-color: transparent;
+}
+
+.z-listbox-body .z-listitem:first-child .z-listcell {
+    border-top-width: 0;
+}
+tr.z-listitem {
+    background: $_list-default__content-bg-color;
+    transition: background-color .1s;
+    color: $list-default__content--color;
+
+    /* HOVER */
+    &:hover {
+        background: $list-default__content-hover--bg-color;
+        color: $list-default__content-hover--color;
+    }
+
+    &,
+    &:hover {
+        .z-listcell,
+        .z-listcell.z-draggable-over {
+            background: transparent;
+        }
+    }
+}
+
+tr.z-listitem {
+    /* SELECTED */
+    &-selected.z-listitem {
+        background-color: $list-default__content-selected--bg-color;
+        color: $list-default__content-selected--color;
+
+        &:hover {
+             /* SELECTED + HOVER */
+            color: $list-default__content-selected--color;
+            background: $list-default__content-selected-hover--bg-color !important;
+
+            .z-listcell-content {
+                color: $list-default__content-selected--color;
+            }
+        }
+    }
+}
+
+/* EMPTY STATE */
+.z-listbox-emptybody {
+    td {
+        padding-top: $list-default__content-empty--padding-y !important; //!important needs to override zk.wcs
+        padding-bottom: $list-default__content-empty--padding-y !important;
+        background: $list-default__content-empty--bg-color;
+        line-height: $list-default__content--line-height;
+    }
+    .z-listbox-emptybody-content {
+        font-family: $font-family__text;
+        font-size: $font-size__base;
+        color: $_list-default__content-empty--color;
+        font-style: $font-style-italic;
+    }
+}
+
+.z-listbox-header, .z-listheader, .z-listheadbar {
+    color: $list-default__header--color;
+    background: $list-default__header--bg-color;
+}
+
+// Override shouldn't be the fix default, it should be only where it is needed
+// .z-listbox {
+//     &-header,
+//     &-body {
+//         width: 100% !important; //FIX FOR THE WRONG WIDTH CALCULATION
+//     }
+// }
+
+.z-listheader-content {
+    color: $list-default__header--color;
+    padding: $list-default__header--padding;
+    line-height: $list-default__header--line-height;
+    font-size: $list-default__header--font-size;
+    @if $_list-default__header--font-weight {
+        font-weight: $_list-default__header--font-weight;
+    }
+    @if $_list-default__header--text-transform {
+        text-transform: $_list-default__header--text-transform;
+    }
+}
+
+.z-listbox-header-border,
+.z-listheader {
+    background: $list-default__header--bg-color;
+    color: $list-default__header--color;
+    border-color: $list-default__content--border-color;
+    z-index: 1;
+}
+
+.z-listheader-image,
+.z-listitem-image-checkbox,
+.z-listitem-image-radio,
+.z-listgroup-image-checkbox,
+.z-listgroup-image-radio,
+.z-listgroupfoot-image {
+    background-image: url("images/check-sprite.png");
+}
+
+/*====== checkable listitem ======*/
+
+.z-listitem-checkable,
+.z-listheader-checkable {
+    border-radius: $editor-defaults__input-field--border-radius;
+    border-color: $editor-defaults__inputbox--border-color;
+    width: $editor-defaults__inputbox--size;
+    height: $editor-defaults__inputbox--size;
+    vertical-align: middle;
+    color: $editor-defaults__input-field--color;
+    background: $editor-defaults__input-field--bg-color;
+    &:hover {
+        background: $editor-defaults__box-hover--bg-color;
+        border-color: $editor-defaults__input-field-hover--border-color;
+    }
+}
+
+.z-listitem-selected > .z-listcell > .z-listcell-content {
+    color: $list-default__content-selected--color;
+}
+
+//.z-listitem-selected > .z-listcell > .z-listcell-content > .z-listitem-checkable {
+//    border-color: $editor-defaults__inputbox-selected--border-color;
+//}
+
+.z-listitem-selected {
+    .z-listcell {
+        .z-listitem-checkable {
+            &:hover {
+                border-color: $editor-defaults__inputbox-hover--border-color;
+            }
+        }
+    }
+}
+
+
+.z-listitem-selected > .z-listcell > .z-listcell-content > .z-listitem-checkable .z-listitem-icon.z-icon-check,
+.z-listheader-checkable.z-listheader-checked .z-listheader-icon {
+    //color: $editor-defaults__inputbox-selected--color;
+    background-color: $editor-defaults__checkbox-checked--bg-color;
+    border-color: $editor-defaults__checkbox-checked--border-color;
+    color: $editor-defaults__checkbox-checked--color;
+    font-size: $_editor-defaults__inputbox--font-size;
+    border-radius: $editor-defaults__input-field--border-radius;
+}
+
+// .z-listitem-selected > .z-listcell > .z-listcell-content > .z-listitem-checkable .z-listitem-icon.z-icon-radio {
+//     background: $editor-defaults__inputbox-selected--color;
+// }
+
+.z-listitem-checkable.z-listitem-checkbox,
+.z-listitem-checkable.z-listitem-radio,
+.z-listheader-checkable {
+    margin-right: $list-default__header-checkable--margin-right;
+}
+
+.z-listitem {
+    > .z-listcell > .z-listcell-content > .z-listitem-checkable {
+        position: relative;
+
+        &.z-listitem-radio {
+            border-width: 0;
+        }
+
+        .z-listitem-icon.z-icon-radio {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: $editor-defaults__inputbox--border-width * -1;
+            margin-left: 0;
+        //    margin-left: -(ceil($editor-defaults__inputbox--size/2));
+            display: inline-block;
+            width: $editor-defaults__inputbox--size;
+            height: $editor-defaults__inputbox--size;
+            background: transparent;
+            border: $editor-defaults__inputbox--border-width solid;
+            border-color: inherit;
+            border-radius: ceil($editor-defaults__inputbox--size/2);
+            transform: translate3d(-50%,-50%,0);
+        }
+    }
+    &:hover > .z-listcell > .z-listcell-content > .z-listitem-checkable.z-listitem-radio {
+        border-color: $editor-defaults__checkbox-checked--border-color;
+    }
+    &-selected > .z-listcell > .z-listcell-content > .z-listitem-checkable {
+        .z-listitem-icon.z-icon-radio {
+            // background: $editor-defaults__inputbox-selected--color;
+            // border-radius: ceil($editor-defaults__inputbox--size/2);
+            @if($editor-defaults__radiobox-selected-icon--size){
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    display: block;
+                    width: $editor-defaults__radiobox-selected-icon--size;
+                    height: $editor-defaults__radiobox-selected-icon--size;
+                    border-radius: ceil($editor-defaults__radiobox-selected-icon--size/2);
+                    transform: translate3d(-50%,-50%,0);
+                    background: $editor-defaults__radiobox-selected--bg-color;
+                }
+            }@else {
+                background: $editor-defaults__radiobox-selected--bg-color;
+            }
+        }
+    }
+}
+
+/*====== sortable listitem header ======*/
+
+.z-listheader-sort {
+    line-height: 0;
+    z-index: 1;
+
+    .z-listheader-content {
+        display: inline-block;
+        max-width: 100%;
+        padding-right: $_list-default__header-sortable--padding-right;
+        text-overflow: ellipsis;
+    }
+
+    .z-listheader-sorticon {
+        position: static;
+        float: right;
+        line-height: inherit;
+        margin-left: $_list-default__header-sortable-icon--margin-left;
+        color: inherit;
+
+        i {
+            position: static;
+            display: inline;
+            color: inherit;
+
+            &:before {
+                content: "";
+                color: inherit;
+                display: inline-block;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: $_list-default__header-sortable-icon--width;
+                height: $_list-default__header-sortable-icon--height;
+                position: absolute;
+                top: auto;
+                left: auto;
+                right: auto;
+                color: transparent;
+                background-size: $_list-default__header-sortable-icon--bg-size;
+            }
+
+            &:not([class]):before {
+                background-image: $_list-default__header-sortable-icon--bg-image;
+            }
+        }
+        .z-icon-caret-up {
+            &:before {
+                background-image: $_list-default__header-sort-asc-icon--bg-image;
+            }
+        }
+        .z-icon-caret-down {
+            &:before {
+                background-image: $_list-default__header-sort-desc-icon--bg-image;
+            }
+        }
+    }
+}

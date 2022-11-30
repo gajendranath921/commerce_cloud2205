@@ -1,0 +1,51 @@
+/* Status */
+/* Button Color Scheme */
+.oms-widget-footer {
+  height: 80px;
+  padding: 16px;
+  text-align: right;
+  border-top: 1px solid var(--bo-list-border-color); }
+
+.oms-widget-stockleveladjustment-configuration-footer {
+  height: 80px; }
+
+.oms-widget-stockadjustment-configuration--separator {
+  height: 16px; }
+
+.oms-widget-stockleveladjustment-header {
+  height: 60px; }
+
+.oms-widget-stockadjustment-list-container-h {
+  border-top: 1px solid var(--bo-list-border-color);
+  height: calc(100% - 172px);
+  overflow: scroll;
+  padding-bottom: 48px; }
+
+.oms-widget-stockadjustment-header,
+.oms-widget-stockadjustment-list-container-h {
+  padding-left: 16px;
+  padding-right: 16px; }
+
+.oms-widget-stockadjustment-configuration {
+  border-top: 1px solid var(--bo-list-border-color); }
+
+.oms-widget-stockadjustment-list-container .z-grid-header {
+  background: transparent; }
+
+.oms-widget-stock-adjustment-btn-check:before {
+  color: var(--bo-button-accept-text-color);
+  content: "\e05b";
+  font-family: var(--bo-content-icon-font-family);
+  font-size: 14px; }
+
+.oms-widget-stock-adjustment-btn-edit:before {
+  color: var(--bo-button-icon-color);
+  content: "\e038";
+  font-family: var(--bo-content-icon-font-family);
+  font-size: 14px; }
+
+.oms-widget-stock-adjustment-btn-remove:before {
+  color: var(--bo-button-reject-text-color);
+  content: "\e03e";
+  font-family: var(--bo-content-icon-font-family);
+  font-size: 14px; }

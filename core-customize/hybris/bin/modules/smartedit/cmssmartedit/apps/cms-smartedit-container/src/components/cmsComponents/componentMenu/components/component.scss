@@ -1,0 +1,44 @@
+.se-component-item {
+    @include se-flex-row();
+    position: relative;
+    width: 270px;
+    padding: fd-space('xxs');
+    margin: fd-space('base') fd-space('xxs') 0;
+    border: 2px solid transparent;
+    cursor: grab;
+    &:active,
+    &:hover {
+        border: 2px dashed fd-color('neutral', 3);
+        border-radius: fd-space('base');
+    }
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+.se-component-item--details-type {
+    color: fd-color('text', 2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.se-component-item--image {
+    @include se-flex-row(center);
+    @include fd-type('3');
+    height: 36px;
+    width: 36px;
+    position: relative;
+    background: fd-color('accent', 13);
+    margin-right: fd-space('xxs');
+    color: fd-color('text', 5);
+    border-radius: fd-space('base');
+}
+
+.se-component-item--details,
+.se-component-item--details-type {
+    @include se-text-ellipsis();
+    width: 200px;
+}
+
+.se-component-item--details-type {
+    color: fd-color('text', 3);
+}

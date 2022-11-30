@@ -1,0 +1,51 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    z-Grid
+================================*/
+// Defintions of the z-grid
+
+@charset "UTF-8";
+@import "../support/_cockpit-variables.scss";
+
+div.z-grid {
+    border: none;
+    &-header {
+        background: $_grid-defaults__header--bg-color;
+        
+        tr.z-columns,
+        tr.z-auxhead,
+        .z-column {
+            background: transparent;
+        }
+        div.z-column-content {
+            color: $_grid-defaults__header--color;
+            font-weight: $_grid-defaults__header--font-weight;
+        }
+        th.z-column,
+        th.z-auxheader {
+            border: none;
+        }
+    }
+}
+
+
+
+tr.z-grid-odd td.z-row-inner,
+tr.z-grid-odd .z-cell,
+tr.z-grid-odd,
+div.z-grid tr.z-row td.z-row-inner,
+div.z-grid tr.z-row td.z-cell {
+    border-bottom: $_grid-defaults__cell--border;
+    background: transparent;
+    border: none;
+}
+
+.z-row:hover > .z-row-inner > .z-row-content {
+    color: $_grid-defaults__row-hover--color;
+}
+
+.z-grid-header-bg {
+    display: none;
+}

@@ -1,0 +1,87 @@
+/* Status */
+/* Button Color Scheme */
+/*================================
+    User profile locale settings
+================================*/
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Systembar Variables
+================================*/
+/* Status */
+/* Button Color Scheme */
+.yw-com_hybris_backoffice_widgets_userprofile_localesetting {
+  height: 100%;
+  width: 100%; }
+
+.yw-localeSetting {
+  height: 100%;
+  width: 100%;
+  padding: 16px; }
+  .yw-localeSetting .localeSetting-title {
+    height: 26px; }
+    .yw-localeSetting .localeSetting-title > span {
+      font-size: 1.25rem;
+      padding-left: 24px;
+      color: var(--bo-title-color); }
+  .yw-localeSetting .localeSetting-content {
+    height: calc(100% - 26px); }
+    .yw-localeSetting .localeSetting-content .z-tabbox {
+      height: 100%; }
+      .yw-localeSetting .localeSetting-content .z-tabbox .z-tabs {
+        padding: 20px 50px 20px 50px;
+        width: 100% !important;
+        height: 60px; }
+        .yw-localeSetting .localeSetting-content .z-tabbox .z-tabs .z-tabs-content {
+          border: 1px solid var(--bo-button-primary-background);
+          border-radius: 4px; }
+        .yw-localeSetting .localeSetting-content .z-tabbox .z-tabs .z-tab {
+          width: 50%;
+          padding: 0px;
+          background: transparent; }
+          .yw-localeSetting .localeSetting-content .z-tabbox .z-tabs .z-tab .z-tab-text {
+            min-height: auto;
+            color: var(--bo-text-color);
+            background: var(--bo-button-background);
+            border-color: var(--bo-button-border-color);
+            padding: 6px; }
+        .yw-localeSetting .localeSetting-content .z-tabbox .z-tabs .z-tab-selected {
+          background-color: var(--bo-button-primary-background);
+          height: 100%; }
+          .yw-localeSetting .localeSetting-content .z-tabbox .z-tabs .z-tab-selected .z-tab-text {
+            color: var(--bo-button-primary-text-color) !important;
+            background: var(--bo-button-primary-background);
+            border-color: var(--bo-button-primary-border-color); }
+      .yw-localeSetting .localeSetting-content .z-tabbox .z-tabpanels {
+        height: calc(100% - 60px); }
+        .yw-localeSetting .localeSetting-content .z-tabbox .z-tabpanels .z-tabpanel {
+          height: 100% !important;
+          border-width: 0;
+          padding: 0 0 0 0;
+          background: transparent;
+          padding-top: 8px; }
+          .yw-localeSetting .localeSetting-content .z-tabbox .z-tabpanels .z-tabpanel .z-listbox {
+            border: none;
+            width: 85% !important;
+            height: 100%;
+            position: relative;
+            left: 50px;
+            overflow: auto; }
+            .yw-localeSetting .localeSetting-content .z-tabbox .z-tabpanels .z-tabpanel .z-listbox .z-listbox-body {
+              box-shadow: none; }
+          .yw-localeSetting .localeSetting-content .z-tabbox .z-tabpanels .z-tabpanel .z-listitem {
+            background: transparent; }
+            .yw-localeSetting .localeSetting-content .z-tabbox .z-tabpanels .z-tabpanel .z-listitem:hover {
+              background: var(--bo-list-selected-hover-background); }
+            .yw-localeSetting .localeSetting-content .z-tabbox .z-tabpanels .z-tabpanel .z-listitem .z-listcell {
+              border-top: none; }
+              .yw-localeSetting .localeSetting-content .z-tabbox .z-tabpanels .z-tabpanel .z-listitem .z-listcell .z-listcell-content {
+                color: var(--bo-text-color); }
+              .yw-localeSetting .localeSetting-content .z-tabbox .z-tabpanels .z-tabpanel .z-listitem .z-listcell .z-listitem-checkable {
+                border-color: var(--bo-field-border-color);
+                border-radius: 2px;
+                background: transparent; }
+                .yw-localeSetting .localeSetting-content .z-tabbox .z-tabpanels .z-tabpanel .z-listitem .z-listcell .z-listitem-checkable:focus, .yw-localeSetting .localeSetting-content .z-tabbox .z-tabpanels .z-tabpanel .z-listitem .z-listcell .z-listitem-checkable:hover {
+                  border-color: var(--bo-input-hover-border-color); }
+                .yw-localeSetting .localeSetting-content .z-tabbox .z-tabpanels .z-tabpanel .z-listitem .z-listcell .z-listitem-checkable .z-listitem-icon {
+                  color: var(--bo-selected-color); }

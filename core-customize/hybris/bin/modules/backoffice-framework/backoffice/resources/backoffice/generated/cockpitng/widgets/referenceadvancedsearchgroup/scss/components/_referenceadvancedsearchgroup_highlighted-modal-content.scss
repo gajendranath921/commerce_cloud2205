@@ -1,0 +1,70 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "../support/_referenceadvancedsearchgroup_variables.scss";
+
+.z-window-highlighted .yw-referencesearch-advancedsearch {
+	.yw-advancedsearch {
+		.yw-caption-container.yw-noncollapsible-caption {
+			padding-left: $referenceadvancedsearchgroup__popup-container--padding-x;
+			padding-right: $referenceadvancedsearchgroup__popup-container--padding-x;
+		}
+		.yw-toggle-advanced-search[style*="display:none;"] + .yw-search-mode-container {
+			padding-left: 0;
+		}
+		.yw-active-attributes-grid {
+			> .z-grid-header,
+			> .z-grid-body {
+				> table {
+					@if $referenceadvancedsearchgroup__advancedsearch-attributes-container--border-space-x != false {
+						border-left-width: $referenceadvancedsearchgroup__advancedsearch-attributes-container--border-space-x;
+						border-right-width: $referenceadvancedsearchgroup__advancedsearch-attributes-container--border-space-x;
+					}
+				}
+			}
+		}
+		.z-grid {
+			&-header .z-column,
+			.yw-active-attributes-grid .z-cell:not(.yw-advancedsearch-line),
+			.yw-add-field-row .z-row-inner,
+			.yw-add-field-row .z-cell {
+				&:first-child {
+					padding-left: $referenceadvancedsearchgroup__popup-container--padding-x;
+				}
+				&:last-child {
+					padding-right: $referenceadvancedsearchgroup__popup-container--padding-x;
+				}
+			}
+			@if $_referenceadvancedsearchgroup__popup-container-advancedsearch-add-button--right {
+				 .yw-add-field-row .z-row-inner,
+				 .yw-add-field-row .z-cell {
+				 	&:last-child .yw-advancedsearch-add-btn.z-button {
+				 		right: $_referenceadvancedsearchgroup__popup-container-advancedsearch-add-button--right;
+				 	}
+				 }
+			}
+		}
+	}
+	.yw-coll-browser-container {
+		tr.z-listhead th:first-of-type .z-listheader-content,
+		.z-listitem > td:first-of-type .z-listcell-content {
+			padding-left: $referenceadvancedsearchgroup__popup-container--padding-x;
+		}
+		tr.z-listhead th:nth-last-of-type(2) .z-listheader-content,
+		.z-listitem > td:last-of-type .z-listcell-content {
+			padding-right: $referenceadvancedsearchgroup__popup-container--padding-x;
+		}
+		.z-listitem > td:first-child .z-listcell-content,
+		tr.z-listhead th.yw-listview-colheader:first-child {
+			&:before {
+				left: $referenceadvancedsearchgroup__popup-container--padding-x;
+			}
+		}
+		.z-listitem > td:last-of-type .z-listcell-content,
+		tr.z-listhead th.yw-listview-colheader:nth-last-of-type(2){
+			&:before {
+				right: $referenceadvancedsearchgroup__popup-container--padding-x;
+			}
+		}
+	}
+}

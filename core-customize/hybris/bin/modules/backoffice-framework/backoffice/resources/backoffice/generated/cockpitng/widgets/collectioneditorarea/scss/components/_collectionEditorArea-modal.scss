@@ -1,0 +1,26 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+.yw-modal-collectionEditorAreaGroup {
+	min-width: 400px;
+	
+	@media screen and (max-width: 400px){
+		min-width: 90%;
+	}
+    .yw-listview-actioncontainer {
+        @if $collection-editor-area__modal-listview-actioncontainer--padding-top {
+            padding-top: $collection-editor-area__modal-listview-actioncontainer--padding-top;
+        }
+        @if $_collection-editor-area__modal-listview-actioncontainer--margin-top {
+            margin-top: $_collection-editor-area__modal-listview-actioncontainer--margin-top;
+        }
+    }
+
+    .yw-com_hybris_cockpitng_backoffice_collectionEditorArea  {
+        border-top: $_collection-editor-area__modal-container--border-width solid $_collection-editor-area__modal-container--border-color;
+    }
+
+    .yw-collection-preview-east {
+        border-left: $_collection-editor-area__modal-container--border-width solid $_collection-editor-area__modal-container--border-color;
+    }
+}

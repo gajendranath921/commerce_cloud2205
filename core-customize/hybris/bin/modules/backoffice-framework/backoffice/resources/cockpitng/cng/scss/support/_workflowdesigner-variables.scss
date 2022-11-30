@@ -1,0 +1,47 @@
+@import "cockpitng-globals.scss";
+
+$workflowdesigner__chart-container--height: 680px;
+$workflowdesigner__chart-empty--bg-image: url('../images/workflowdesigner/empty-workflow-placeholder.png') no-repeat center center;
+
+$workflowdesigner__toolbar--border-top: $boxes--border__thin solid var(--bo-list-border-color);
+$workflowdesigner__toolbar--border-bottom: $workflowdesigner__toolbar--border-top;
+$workflowdesigner__toolbar--padding: 7px $container-spacing-default__half;
+$workflowdesigner__toolbar--bg-color: var(--bo-list-background);
+
+$workflowdesigner__toolbar-button--padding: ($container-spacing-default__half / 2) $container-spacing-default__third;
+$workflowdesigner__toolbar-button--color: var(--bo-text-color);
+$workflowdesigner__toolbar-button-hover--color: var(--bo-highlight-color);
+$workflowdesigner__toolbar-button-icon--size: 18px;
+$workflowdesigner__toolbar-button-icon--left: $container-spacing-default__third;
+$workflowdesigner__toolbar-button-icon--top: 50%;
+
+$workflowdesigner__toolbar-button-icon-left: 10px;
+$workflowdesigner__toolbar-button-icon-default-color: var(--bo-neutral-color);;
+
+$workflowdesigner__toolbar-button-icon-close-font-family: "SAP-icons";
+$workflowdesigner__toolbar-button-icon-close-content: _getIconGlyphContentValue('decline'); // "\e03e"
+
+$workflowdesigner__toolbar-button-label--font-size: $font-size__base;
+$workflowdesigner__toolbar-button-label--line-height: 22px;
+
+$workflowdesigner__toolbar-separator--height: 28px;
+$workflowdesigner__toolbar-separator--margin: 5px ($container-spacing-default__half / 2);
+$workflowdesigner__toolbar-separator--bg-color: var(--bo-list-border-color);
+
+$workflowdesigner__button-container--border-top: $boxes--border__thin solid var(--bo-list-border-color);
+$workflowdesigner__button-container--padding: $container-spacing-default__third ($container-spacing-default__third *2);
+
+$workflowdesigner__notification-bar--top: ($editor-defaults__inline-box--height + ($container-spacing-default__third * 2) + $workflowdesigner__toolbar-button-label--line-height + (nth($workflowdesigner__toolbar--padding, 1) * 2) + (nth($workflowdesigner__toolbar-button--padding, 1) * 2) + (nth($workflowdesigner__toolbar--border-top, 1) * 2)); //115px;
+
+$workflowdesigner__add-popup--min-width: 165px;
+$workflowdesigner__add-popup-item--border-top: transparent;
+$workflowdesigner__add-popup-item--color: var(--bo-list-text-color);
+$workflowdesigner__add-popup-item-content--color: var(--bo-list-text-color);
+$workflowdesigner__add-popup-item-content-hover--bg-color: var(--bo-list-hover-background);
+$workflowdesigner__add-popup-item-text-hover--color: var(--bo-list-text-color);
+
+$workflowdesigner__toolbar-edit-button--bg-color: var(--bo-button-background);
+$workflowdesigner__toolbar-edit-button--text-color: var(--bo-button-icon-color);
+$workflowdesigner__toolbar-edit-button--border: $boxes--border__thin solid var(--bo-button-border-color);
+
+

@@ -1,0 +1,34 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+.label-warning {
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    position: relative;
+    display: inline-block;
+    line-height: 20px;
+
+    &:before {
+        font-family: $admin-defaults-icon--font-family;
+        content: $admin-icon-warning-icon;
+        font-size: $admin-defaults-icon--font-size;
+        color: $admin-icon-warning-icon--color;
+        position: relative;
+        margin-right: 8px;
+    }
+}
+
+.yw-validationInfo {
+    font-size: $font-size__base;
+    padding: 2px;
+    
+    &.yw-error & {
+        color: var(--bo-button-error-text-color);
+    }
+    &.yw-warning & {
+        color: var(--bo-button-warning-text-color);
+    }
+    &.yw-success & {
+        color: var(--bo-button-success-text-color);
+    }
+}

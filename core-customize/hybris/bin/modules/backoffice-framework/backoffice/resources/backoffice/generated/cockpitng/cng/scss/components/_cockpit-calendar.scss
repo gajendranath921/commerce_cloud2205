@@ -1,0 +1,184 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    z-Calendar
+================================*/
+// Defines Basic Calendar Component (coloring, spacing)
+@charset "UTF-8";
+.z-datebox-popup {
+    background: $_calendar__wrapper--bg-color;
+}
+.z-calendar {
+        border: none;
+        background: $_calendar__wrapper--bg-color;
+        &-header {
+            background: inherit;
+            color: $editor-defaults__box--text-color;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: $_calendar__header--height;
+            padding: $_calendar__header--padding;
+
+            & > a {
+                line-height: $_calendar__header--line-height;
+                flex: 0 0 auto;
+            }
+            &:hover {
+                background: none;
+            }
+        }
+
+        &-title {
+            .z-calendar-text {
+                color: $_calendar__header-title--color;
+                font-family: $font-family__text;
+                font-size: $_calendar__header-title--font-size;
+                font-weight: $_calendar__header-title--font-weight;
+                border-color: transparent;
+                border: $editor-defaults__button--border-width solid transparent;
+                padding: $_calendar__header-title--left-padding $_calendar__header-title--top-padding;
+                &:hover {
+                    color: $editor-defaults__button-hover--color;
+                    border-color: $editor-defaults__button-hover--border-color;
+                    background: $editor-defaults__button-hover--bg-color;
+                    border-radius: $_calendar__header-button--border-radius;
+                }
+            }
+        }
+        &-header &-icon {
+            position: relative;
+            .z-icon-angle-right {
+                &:before {
+                    content: $_calendar__button-icon-right--content;
+                    font-family: $_calendar__button-icon--font-family;
+                }
+            }
+            .z-icon-angle-left {
+                &:before {
+                    content: $_calendar__button-icon-left--content;
+                    font-family: $_calendar__button-icon--font-family;
+                }
+            }
+            &.z-calendar-left,
+            &.z-calendar-right {
+                color: $editor-defaults__button--color;
+                cursor: pointer;
+                border: $editor-defaults__button--border-width solid transparent;
+                background: transparent;
+                &:hover {
+                    color: $editor-defaults__button-hover--color;
+                    border-color: $editor-defaults__button-hover--border-color;
+                    background: $editor-defaults__button-hover--bg-color;
+                    border-radius: $_calendar__header-button--border-radius;
+                }
+            }
+        }
+
+        .z-calendar-body {
+            font-family: $font-family__text;
+            padding: $_calendar__body--padding;
+            font-size: $_calendar__body--font-size;
+            background: $_calendar__wrapper--bg-color;
+            .z-calendar-cell,
+            th {
+                font-family: $font-family__text;
+                font-weight: $_calendar__calendar-cell--font-weight;
+                width: $_calendar__calendar-cell--size;
+                height: $_calendar__calendar-cell--size;
+                border-radius: $_calendar__calendar-cell--border-radius;
+            }
+
+            th {
+                background: none;
+                text-transform: uppercase;
+                color: $_calendar__calendar-cell-day--color;
+                font-size: 0;  //hide full day
+
+                &:first-letter {
+                    font-size: $_calendar__calendar-cell-day-first-letter--font-size; // show only first letter of day
+                }
+            }
+        }
+
+        .z-calendar-cell {
+            border: 1px solid $_calendar__wrapper--bg-color;
+            color: $_calendar__calendar-cell-text--color;
+            background: $_calendar__calendar-cell-working--bg-color;
+            &:hover {
+                background: $_calendar__calendar-cell-hover--bg-color;
+            }
+            &.z-calendar-weekend {
+                background: $_calendar__calendar-cell-nonworking--bg-color;
+            }
+            &.z-calendar-weekday {
+                background: $_calendar__calendar-cell-working--bg-color;
+            }
+            &.z-calendar-outside {
+                background: $_calendar__wrapper--bg-color;
+            }
+            &.z-calendar-weekend,
+            &.z-calendar-weekday,
+            &.z-calendar-outside {
+                &:hover {
+                    background: $_calendar__calendar-cell-hover--bg-color;
+                }
+            }
+            &.z-calendar-selected {
+                color: $_calendar__calendar-cell-selected--color;
+                background: $_calendar__calendar-cell-selected--bg-color;
+                &:hover {
+                    background: $_calendar__calendar-cell-selected-hover--bg-color;
+                }
+            }
+        }
+        &-left[disabled],
+        &-right[disabled],
+        &-disabled {
+            background-color: transparent !important;
+        }
+    }
+
+    .z-timebox {
+        .z-timebox-input {
+            font-family: $font-family__text;
+        }
+    }
+
+//     .z-timebox {
+//         background: $_calendar__wrapper--bg-color;
+//         .z-timebox-input {
+//             color: $editor-defaults__input-field--color;
+//             border-color: $editor-defaults__box--border-color;
+//             background: $editor-defaults__input-field--bg-color;
+//             &:hover {
+//                 border-color: $editor-defaults__input-field-hover--border-color;
+//                 background: $editor-defaults__box-hover--bg-color;
+//             }
+//         }
+//         .z-timebox-button {
+//             @include _add-default-button-styles();
+//             padding: 0;
+//             &:hover,
+//             &:active {
+//                 background: none;
+//             }
+//             a.z-timebox-icon {
+//                 border: none;
+//                 background: none;
+//                 &:hover {
+//                     color: $editor-defaults__box-button-hover--color;
+//                     background: $editor-defaults__box-button-hover--bg-color;
+//                     border-color: $editor-defaults__button-hover--border-color;
+//                 }
+//                 &:active {
+//                     color: $editor-defaults__button-active--color;
+//                     background: $editor-defaults__button-active--bg-color;
+//                     border-color: $editor-defaults__button-active--border-color;
+//                 }
+//             }
+//         }
+//     }
+
+

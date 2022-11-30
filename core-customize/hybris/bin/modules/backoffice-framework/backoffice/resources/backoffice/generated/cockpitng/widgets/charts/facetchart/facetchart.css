@@ -1,0 +1,402 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-solrfacetchart {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap; }
+  .yw-solrfacetchart.widget_body {
+    background: var(--bo-container-background);
+    height: 100%; }
+  .yw-solrfacetchart-combobox.z-combobox {
+    min-height: 28px;
+    height: 28px;
+    border-radius: var(--bo-button-border-radius);
+    line-height: 0;
+    position: relative;
+    z-index: 0;
+    border: var(--bo-container-border-width) solid var(--bo-input-border-color); }
+    .yw-solrfacetchart-combobox.z-combobox:hover .z-combobox-input,
+    .yw-solrfacetchart-combobox.z-combobox:hover .z-combobox-input + .z-combobox-button {
+      cursor: pointer;
+      border-color: transparent; }
+    .yw-solrfacetchart-combobox.z-combobox:hover {
+      border-color: var(--bo-button-text-color); }
+  .yw-solrfacetchart-combobox .z-combobox-button, .yw-solrfacetchart-combobox .z-combobox-input {
+    height: 28px;
+    min-height: 28px;
+    background: transparent; }
+    .yw-solrfacetchart-combobox .z-combobox-button, .yw-solrfacetchart-combobox .z-combobox-button:active, .yw-solrfacetchart-combobox .z-combobox-button:focus, .yw-solrfacetchart-combobox .z-combobox-input, .yw-solrfacetchart-combobox .z-combobox-input:active, .yw-solrfacetchart-combobox .z-combobox-input:focus {
+      border-color: transparent; }
+  .yw-solrfacetchart-combobox .z-combobox-button {
+    position: static;
+    width: 28px;
+    padding: 3px 0 2px 0;
+    min-height: 26px;
+    height: 26px;
+    margin-top: -1px; }
+    .yw-solrfacetchart-combobox .z-combobox-button:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1; }
+    .yw-solrfacetchart-combobox .z-combobox-button .z-combobox-icon, .yw-solrfacetchart-combobox .z-combobox-button:focus .z-combobox-icon, .yw-solrfacetchart-combobox .z-combobox-button:hover .z-combobox-icon, .yw-solrfacetchart-combobox .z-combobox-button:active .z-combobox-icon {
+      border-color: transparent; }
+  .yw-solrfacetchart-combobox .z-combobox-input {
+    width: 250px;
+    padding-top: 3px !important;
+    padding-bottom: 2px !important; }
+    .yw-solrfacetchart-combobox .z-combobox-input:active, .yw-solrfacetchart-combobox .z-combobox-input:focus, .yw-solrfacetchart-combobox .z-combobox-input:focus + .z-combobox-button {
+      border-color: transparent; }
+    .yw-solrfacetchart-combobox .z-combobox-input:hover + .z-combobox-button {
+      border-color: transparent; }
+    .yw-solrfacetchart-combobox .z-combobox-input:hover,
+    .yw-solrfacetchart-combobox .z-combobox-input:hover + .z-combobox-button, .yw-solrfacetchart-combobox .z-combobox-input:focus,
+    .yw-solrfacetchart-combobox .z-combobox-input:focus + .z-combobox-button, .yw-solrfacetchart-combobox .z-combobox-input:active,
+    .yw-solrfacetchart-combobox .z-combobox-input:active + .z-combobox-button {
+      border-color: transparent; }
+    .yw-solrfacetchart-combobox .z-combobox-input:hover + .z-combobox-button:before, .yw-solrfacetchart-combobox .z-combobox-input:focus + .z-combobox-button:before, .yw-solrfacetchart-combobox .z-combobox-input:active + .z-combobox-button:before {
+      border-color: transparent; }
+  .yw-solrfacetchart-toppanel {
+    padding: 0 16px;
+    height: 50px;
+    border-bottom: var(--bo-container-border-width) solid var(--bo-list-border-color);
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 100%;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .yw-solrfacetchart-toppanel .yw-solrfacetchart-chart-title {
+      font-size: 1.25rem;
+      line-height: 1rem;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 auto;
+      -moz-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto; }
+    .yw-solrfacetchart-toppanel-facetchooser {
+      padding-left: 8px; }
+      .yw-solrfacetchart-toppanel-facetchooser .z-label {
+        display: none; }
+    .yw-solrfacetchart-toppanel-filter-button.z-button {
+      width: 28px;
+      height: 28px;
+      background-color: var(--bo-toolbar-background);
+      color: var(--bo-button-text-color);
+      border: 1px solid var(--bo-button-border-color);
+      border-radius: var(--bo-button-border-radius);
+      font-size: 12px;
+      padding: 0;
+      line-height: 28px;
+      text-align: center;
+      box-shadow: 0 1px 0 0 transparent;
+      position: static;
+      display: block;
+      transition: background-color .05s, border-color .05s;
+      min-height: auto; }
+      .yw-solrfacetchart-toppanel-filter-button.z-button:hover, .yw-solrfacetchart-toppanel-filter-button.z-button:active, .yw-solrfacetchart-toppanel-filter-button.z-button:focus {
+        color: var(--bo-button-active-color);
+        background-color: var(--bo-button-active-background);
+        border-color: var(--bo-button-active-background); }
+      .yw-solrfacetchart-toppanel-filter-button.z-button:disabled {
+        opacity: 0.4; }
+      .yw-solrfacetchart-toppanel-filter-button.z-button:before {
+        content: "\e076";
+        font-size: 14px;
+        font-family: var(--bo-content-icon-font-family);
+        position: static;
+        display: inline; }
+    .yw-solrfacetchart-toppanel-filters-container {
+      padding-left: 8px;
+      display: block;
+      position: relative;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+      -moz-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto; }
+    .yw-solrfacetchart-toppanel-filters {
+      padding-bottom: 16px; }
+      .yw-solrfacetchart-toppanel-filters-popup .yw-solrfacetchart-toppanel-filters {
+        display: block;
+        width: 100%; }
+      .yw-solrfacetchart-toppanel-filters .z-label {
+        margin-bottom: 6px;
+        color: var(--bo-container-color); }
+      .yw-solrfacetchart-toppanel-filters > .z-div {
+        position: relative;
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-top: 1px solid var(--bo-list-border-color); }
+        .yw-solrfacetchart-toppanel-filters > .z-div:first-child {
+          border-top-color: transparent; }
+        .yw-solrfacetchart-toppanel-filters > .z-div > .z-div {
+          display: block;
+          width: 100%; }
+        .yw-solrfacetchart-toppanel-filters > .z-div > .z-label {
+          width: calc(100% - 16px);
+          display: block;
+          line-height: 24px;
+          margin-bottom: 6px;
+          font-weight: 700; }
+        .yw-solrfacetchart-toppanel-filters > .z-div > .ye-delete-btn {
+          right: 16px;
+          top: 16px;
+          position: absolute; }
+      .yw-solrfacetchart-toppanel-filters-popup {
+        width: 320px;
+        border: 1px solid var(--bo-list-border-color);
+        margin-top: 12px;
+        overflow: visible;
+        box-shadow: none; }
+        .yw-solrfacetchart-toppanel-filters-popup:before, .yw-solrfacetchart-toppanel-filters-popup:after {
+          content: '';
+          position: absolute;
+          top: -8px;
+          right: 6px;
+          border-bottom: 8px solid var(--bo-container-background);
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent; }
+        .yw-solrfacetchart-toppanel-filters-popup:before {
+          border-bottom-color: var(--bo-list-border-color);
+          top: -9px; }
+        .yw-solrfacetchart-toppanel-filters-popup .ye-delete-btn {
+          width: 16px; }
+          .yw-solrfacetchart-toppanel-filters-popup .ye-delete-btn.z-button {
+            height: 24px; }
+            .yw-solrfacetchart-toppanel-filters-popup .ye-delete-btn.z-button:hover {
+              text-decoration: none; }
+          .ye-remove-enabled > .yw-solrfacetchart-toppanel-filters-popup .ye-delete-btn {
+            display: none; }
+        .yw-solrfacetchart-toppanel-filters-popup .z-label {
+          max-width: calc(100% - 24px);
+          display: inline-block;
+          margin-bottom: 0; }
+        .yw-solrfacetchart-toppanel-filters-popup .z-chosenbox,
+        .yw-solrfacetchart-toppanel-filters-popup .z-combobox,
+        .yw-solrfacetchart-toppanel-filters-popup .yw-solrfacetchart-toppanel-filters > .z-div,
+        .yw-solrfacetchart-toppanel-filters-popup .yw-solrfacetchart-filters > .z-div {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          width: 100%;
+          display: block; }
+          .yw-solrfacetchart-toppanel-filters-popup .z-chosenbox:last-child,
+          .yw-solrfacetchart-toppanel-filters-popup .z-combobox:last-child,
+          .yw-solrfacetchart-toppanel-filters-popup .yw-solrfacetchart-toppanel-filters > .z-div:last-child,
+          .yw-solrfacetchart-toppanel-filters-popup .yw-solrfacetchart-filters > .z-div:last-child {
+            margin-bottom: 0; }
+        .yw-solrfacetchart-toppanel-filters-popup .yw-solrfacetchart-toppanel-filters > .z-div:first-child {
+          margin-top: 0; }
+      .yw-solrfacetchart-toppanel-filters .z-combobox {
+        margin-bottom: 8px; }
+        .yw-solrfacetchart-toppanel-filters .z-combobox:last-child {
+          margin-bottom: 0; }
+      .yw-solrfacetchart-toppanel-filters-counter {
+        min-width: 14px;
+        height: 16px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        color: var(--bo-contrast-text-color);
+        background: var(--bo-highlight-color);
+        border-radius: var(--bo-input-border-radius);
+        padding: 0 4px;
+        right: 2px;
+        top: 2px;
+        z-index: 1;
+        transform: translate3d(50%, -50%, 0);
+        text-align: center;
+        position: absolute; }
+        .yw-solrfacetchart-toppanel-filters-counter:empty {
+          display: none; }
+  .yw-solrfacetchart-charts {
+    flex: 2 1 70%;
+    overflow: hidden; }
+    .yw-solrfacetchart-charts .z-charts[data-highcharts-chart="3"] .highcharts-root {
+      position: relative;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      margin: 0;
+      max-width: 110%; }
+    .yw-solrfacetchart-charts .highcharts-container {
+      width: 100% !important;
+      height: 350px !important;
+      min-height: 350px !important;
+      margin-top: 58px;
+      margin-bottom: -8px; }
+      .yw-solrfacetchart-charts .highcharts-container .highcharts-axis-labels text {
+        color: var(--bo-tile-title-color) !important;
+        fill: var(--bo-tile-title-color) !important; }
+    .yw-solrfacetchart-charts .highcharts-root {
+      width: auto !important;
+      height: 100% !important;
+      min-height: 350px !important;
+      display: block;
+      margin: 0 auto; }
+      .yw-dashboard-slot-ghost .yw-solrfacetchart-charts .highcharts-root {
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        max-width: 100%; }
+    .yw-solrfacetchart-charts .highcharts-background {
+      height: 100%;
+      width: 100%;
+      fill: var(--bo-container-background) !important; }
+    .yw-solrfacetchart-charts .highcharts-axis text {
+      color: var(--bo-tile-title-color) !important;
+      fill: var(--bo-tile-title-color) !important; }
+    .yw-solrfacetchart-charts .highcharts-xaxis path {
+      stroke: var(--bo-list-border-color) !important; }
+    .yw-solrfacetchart-charts .highcharts-grid.highcharts-yaxis-grid path {
+      stroke: var(--bo-list-border-color) !important; }
+    .yw-solrfacetchart-charts .highcharts-title {
+      display: none; }
+    .yw-solrfacetchart-charts .highcharts-series > rect {
+      stroke-width: 0; }
+    .yw-solrfacetchart-charts .highcharts-tick {
+      display: none; }
+    .yw-solrfacetchart-charts .highcharts-text-outline {
+      display: none; }
+    .yw-solrfacetchart-charts .highcharts-no-data, .yw-solrfacetchart-charts .highcharts-label text {
+      color: var(--bo-tile-title-color) !important;
+      fill: var(--bo-tile-title-color) !important; }
+    .yw-solrfacetchart-charts .highcharts-label.highcharts-tooltip text > tspan:nth-child(3) {
+      display: none !important; }
+  .yw-solrfacetchart-rightpanel {
+    flex: 1 1 30%; }
+    .yw-solrfacetchart-rightpanel:empty {
+      display: none; }
+    .yw-solrfacetchart-rightpanel-container {
+      padding: 8px 32px 8px 0;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center;
+      width: 100%; }
+      .yw-solrfacetchart-rightpanel-container-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; }
+    .yw-solrfacetchart-rightpanel-total-product-count {
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--bo-text-color);
+      display: inline-block;
+      text-align: center; }
+      .yw-solrfacetchart-rightpanel-total-product-count-label {
+        color: var(--bo-text-color);
+        flex: 0 1 auto;
+        width: 100%;
+        padding-bottom: 16px; }
+    .yw-solrfacetchart-rightpanel-go-to-all-products-button, .yw-solrfacetchart-rightpanel-add-new-product-button {
+      color: var(--bo-button-icon-color);
+      margin-bottom: 8px;
+      font-size: 14px;
+      text-decoration: none;
+      position: relative;
+      display: flex;
+      padding: 8px;
+      border-radius: 4px;
+      background-color: transparent; }
+      .yw-solrfacetchart-rightpanel-go-to-all-products-button:hover, .yw-solrfacetchart-rightpanel-add-new-product-button:hover {
+        text-decoration: none;
+        background-color: var(--bo-button-hover-background); }
+      .yw-solrfacetchart-rightpanel-go-to-all-products-button:focus, .yw-solrfacetchart-rightpanel-go-to-all-products-button:active, .yw-solrfacetchart-rightpanel-add-new-product-button:focus, .yw-solrfacetchart-rightpanel-add-new-product-button:active {
+        text-decoration: none;
+        background-color: var(--bo-button-active-color); }
+      .yw-solrfacetchart-rightpanel-go-to-all-products-button:before, .yw-solrfacetchart-rightpanel-add-new-product-button:before {
+        position: relative;
+        display: inline-block;
+        margin-right: 8px;
+        font-family: var(--bo-content-icon-font-family);
+        font-size: 16px;
+        content: "\e1de"; }
+    .yw-solrfacetchart-rightpanel-add-new-product-button:before {
+      content: "\e058"; }
+  .yw-solrfacetchart-bottompanel {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    text-align: center;
+    min-height: 85px;
+    border-top: var(--bo-container-border-width) solid var(--bo-list-border-color); }
+    .yw-solrfacetchart-bottompanel-onepoint {
+      padding: 12px 8px 10px;
+      background-color: transparent;
+      cursor: pointer;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+      .yw-solrfacetchart-bottompanel-onepoint:hover {
+        background-color: var(--bo-list-hover-background); }
+      .yw-solrfacetchart-bottompanel-onepoint-value {
+        display: block;
+        font-size: 1.5rem;
+        color: var(--bo-text-color); }
+      .yw-solrfacetchart-bottompanel-onepoint-label {
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 400;
+        padding: 2px 0 4px;
+        display: block; }
+      .yw-solrfacetchart-bottompanel-onepoint-color-label {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        text-align: center;
+        display: inline-block; }
+        .yw-solrfacetchart-bottompanel-onepoint-color-label:before {
+          content: "\e255";
+          font-family: var(--bo-content-icon-font-family);
+          font-size: 16px; }

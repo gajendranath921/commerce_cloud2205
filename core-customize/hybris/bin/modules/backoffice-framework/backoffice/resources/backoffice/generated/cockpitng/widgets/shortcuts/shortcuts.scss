@@ -1,0 +1,54 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+@import 'scss/support/shortcuts-variables.scss';
+
+.yw-shortcuts-widget {
+
+    &.widget_body {
+    	height: 100%;
+    }
+    .yw-shortcuts-header {
+        	font-size: $font-size__base;
+        	padding: $shortcuts-header-padding;
+        	border-bottom: $shortcuts-header-border-bottom;
+       }
+
+	.yw-listbox-body {
+		border:none;
+
+		.z-listitem {
+			&:hover > .z-listcell > .z-listcell-content {
+            	color: var(--bo-list-text-color);
+            }
+			&-selected {
+				&:hover > .z-listcell > .z-listcell-content {
+					color: var(--bo-list-text-color);
+				}
+			}
+
+			&.z-drag-over {
+				background: $shortcuts-item-dragged-over-background;
+			}
+		}
+
+		.z-listitem-selected {
+			.z-listcell {
+				border-bottom: $shortcuts-item-selected-border-bottom;
+			}
+		}
+
+		.z-listcell{
+    		border:none;
+
+    		.z-listcell-content{
+				padding-left:36px;
+    			font-size:$font-size__base;
+    			background: transparent;
+    			color: var(--bo-list-text-color);
+    		}
+    	}
+    }
+
+}

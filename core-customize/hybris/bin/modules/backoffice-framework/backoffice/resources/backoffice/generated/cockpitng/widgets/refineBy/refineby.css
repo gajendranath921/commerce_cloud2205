@@ -1,0 +1,74 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Refine By Widget
+================================*/
+/* Status */
+/* Button Color Scheme */
+.yw-refineby {
+  height: 100%;
+  background: var(--bo-container-background);
+  color: var(--bo-text-color);
+  overflow: auto; }
+  .yw-refineby .yw-main-container {
+    padding: 16px; }
+  .yw-refineby .yw-info-container {
+    font-style: italic; }
+  .yw-refineby .yw-facet-container > .yw-facet-slot:not(:first-child) .yw-facet-name {
+    padding-top: 16px; }
+  .yw-refineby .yw-facet-name {
+    display: block;
+    font-weight: 700;
+    padding: 8px 0;
+    color: var(--bo-list-text-color); }
+    .yw-refineby .yw-facet-name.z-label {
+      color: var(--bo-content-label-color); }
+  .yw-refineby .yw-toggle-facets {
+    display: block;
+    margin: 8px 0 12px;
+    color: var(--bo-text-color); }
+    .yw-refineby .yw-toggle-facets:hover {
+      cursor: pointer;
+      color: var(--bo-text-color); }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-refineby .yw-colour-facet-box {
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 8px 8px 0;
+  background-color: var(--bo-container-background);
+  border: 1px solid var(--bo-button-border-color);
+  border-radius: var(--bo-button-border-radius);
+  position: relative;
+  display: inline-block; }
+  .yw-refineby .yw-colour-facet-box-selected {
+    border: 2px solid var(--bo-list-selected-border-color); }
+    .yw-refineby .yw-colour-facet-box-selected:after {
+      color: var(--bo-selected-color);
+      content: "\e05b";
+      text-shadow: 0px 0px 2px var(--bo-content-shadow-small);
+      font-family: var(--bo-content-icon-font-family);
+      font-size: 14px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: block; }
+
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Refine By Checkboxes
+================================*/
+/* Status */
+/* Button Color Scheme */
+.yw-refineby .z-checkbox {
+  display: block;
+  margin-bottom: 12px; }

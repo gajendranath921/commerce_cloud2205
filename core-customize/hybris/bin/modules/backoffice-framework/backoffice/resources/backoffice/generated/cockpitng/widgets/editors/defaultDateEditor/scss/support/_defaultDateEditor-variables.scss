@@ -1,0 +1,11 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$date-editor__invalid-box--border-color: $validation__error--color; 
+
+$date-editor__box-focus--border-color: $editor-defaults__input-field-focus--border-color;
+$date-editor__box-inner--border-radius: $editor-defaults__input-split-inner--border-radius;
+$date-editor__box-button--border-radius: $editor-defaults__input-box--border-radius;
+$date-editor__box-input--border-radius: $editor-defaults__input-field--border-radius;

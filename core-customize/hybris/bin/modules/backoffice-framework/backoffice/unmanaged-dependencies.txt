@@ -1,0 +1,11 @@
+backoffice-core-22.05.0-RC12.jar
+backoffice-widgets-22.05.0-RC12.jar
+cockpitadmin-22.05.0-RC12.jar
+cockpitcore-22.05.0-RC12.jar
+cockpit-data-integration-22.05.0-RC12.jar
+cockpit-demo-widgets-22.05.0-RC12.jar
+cockpitframework-22.05.0-RC12.jar
+cockpit-module-aggregator-22.05.0-RC12.jar
+cockpit-standard-editors-22.05.0-RC12.jar
+cockpittesting-22.05.0-RC12.jar
+cockpitwidgets-22.05.0-RC12.jar

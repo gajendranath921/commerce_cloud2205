@@ -1,0 +1,306 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    z-Components
+================================*/
+// Different changes on z-Components
+
+@charset "UTF-8";
+@import "../support/_cockpit-variables.scss";
+
+/*====== timezone ======*/
+.z-datebox-timezone select {
+    line-height: 1;
+    height: 30px;
+    font-size: $font-size__small;
+    background: #fff;
+    color: #555555;
+    border: 1px solid white;
+    padding: 0 7px;
+    width: 100%;
+}
+
+.z-combobox-input, .z-bandbox-input, .z-datebox-input, .z-timebox-input, .z-spinner-input, .z-doublespinner-input {
+    font-family: $editor-defaults__content--font-family;
+    font-size: $editor-defaults__content--font-size;
+}
+
+.z-combobox-input:focus, .z-bandbox-input:focus, .z-datebox-input:focus, .z-spinner-input:focus, .z-doublespinner-input:focus {
+    //border-color: #66afe9;
+    //outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.z-combobox-invalid, .z-bandbox-invalid, .z-datebox-invalid, .z-timebox-invalid, .z-spinner-invalid, .z-doublespinner-invalid {
+    border-color: $editor-defaults__invalid-box--border-color !important;
+}
+
+.z-messagebox{
+    &-question {
+        &:after {
+            font-family: $messagebox-popup__icon-font;
+            color: $messagebox-popup__icon-color;
+            content: $messagebox-popup__messagebox-question-icon--content;
+        }
+    }
+    &-information {
+        &:after {
+            font-family: $messagebox-popup__icon-font;
+            color: $messagebox-popup__icon-color;
+            content: $messagebox-popup__messagebox-infomation-icon--content;
+        }
+    }
+}
+// .z-messagebox-question {
+//     background-image: url("images/icon_dialog_question_default.png");
+//     background-position: center;
+// }
+
+/*====== combobox/bandbox-button ======*/
+
+//everything related to z-combobox and z-bandbox in _cockpit-box-defaults.scss
+
+// .z-combobox .z-combobox-button {
+// }
+// .z-bandbox .z-bandbox-button,
+// .z-combobox .z-combobox-button {
+// }
+
+.z-combobox .z-combobox-button.z-combobox-disabled,
+.z-bandbox .z-bandbox-button.z-bandbox-disabled,
+.z-bandbox-button[disabled] {
+    background-color: $editor-defaults__input-box-disabled--bg-color !important;
+    i[class*="-icon"] {
+        background: none !important;
+        &:before {
+            //color: $editor-defaults__input-box-disabled--color;
+            opacity: $editor-defaults__input-box-disabled--opacity;
+        }
+    }
+}
+
+.z-combobox,
+.z-bandbox,
+.z-datebox,
+.z-timebox,
+.z-spinner,
+.z-doublespinner {
+    &-disabled * {
+        background-color: $editor-defaults__input-box-disabled--bg-color !important;
+
+        .bulkedit-attr-cleared.ye-validation-error &,
+        .bulkedit-attr-cleared.ye-validation-warning &,
+        .bulkedit-attr-cleared.ye-validation-info & {
+            background-color: transparent !important;
+        }
+    }
+}
+.z-combobox-disabled *, .z-bandbox-disabled *, .z-datebox-disabled *, .z-timebox-disabled *, .z-spinner-disabled *, .z-doublespinner-disabled * {
+    background-color: $editor-defaults__input-box-disabled--bg-color !important;
+    color: $editor-defaults__action-button-disabled--color !important;
+    border-color: $editor-defaults__box-disabled--border-color !important;
+}
+input[disabled] {
+    + .z-combobox-button:hover,
+    + .z-bandbox-button:hover,
+    + .z-datebox-button:hover,
+    + .z-timebox-button:hover,
+    + .z-spinner-button:hover,
+    + .z-doublespinner-button:hover,
+    + .z-combobox-button:active,
+    + .z-bandbox-button:active,
+    + .z-datebox-button:active,
+    + .z-timebox-button:active,
+    + .z-spinner-button:active,
+    + .z-doublespinner-button:active,
+    + .z-datebox-button:hover {
+        border-color: $editor-defaults__box-disabled--border-color;
+    }
+}
+
+/*====== timebox/spinner-button ======*/
+.z-timebox-button, .z-spinner-button, .z-doublespinner-button {
+    > a:hover {
+        background: #a6b3c4;
+        color: #fff;
+    }
+    &:hover > i {
+        border-top: #3c4c66;
+    }
+}
+
+.invisibleWidgetChildren {
+    display: none;
+}
+
+
+/*====== Content-Splitter ======*/
+
+.splitterChildrenContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.splitterChildrenContainer_split {
+    visibility: hidden;
+}
+
+.splitterChildrenContainer .z-splitter-vertical-outer-td,
+.splitterChildrenContainer .z-splitter-horizontal-outer {
+    background: none;
+}
+
+.z-splitter-vertical-outer-td:HOVER .splitterChildrenContainer_split,
+.z-splitter-horizontal-outer:HOVER .splitterChildrenContainer_split {
+    visibility: visible;
+}
+
+
+/*====== Render-Status Display ======*/
+
+.cng-busy {
+    background-color: $window__popup--bg-color;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.cng-busy > .z-renderdefer {
+    left: 50%;
+    position: relative;
+    margin-left: -8px;
+}
+
+
+/*====== Loading Indicator ======*/
+.z-temp * {
+    background-color: transparent;
+}
+
+.z-loading {
+    cursor: wait;
+    white-space: nowrap;
+    padding: 0;
+    top: 40% !important;
+    left: 50% !important;
+    font-size: $editor-defaults__loading--font-size;
+    color: $editor-defaults__loading--color;
+    border: none;
+    display: inline;
+    width: 0;
+    overflow: visible;
+
+    &-indicator {
+        @include _popupDefaults();
+        padding: $editor-defaults__loading-indicator--padding;
+        text-transform: capitalize;
+        white-space: nowrap;
+        border: none;
+        display: inline-block;
+        background-color: inherit;
+        transform: translateX(-50%);
+    }
+    &-icon{
+        // background-image: url(images/loading-spinner.gif);
+        width: $editor-defaults__loading-icon--size;
+        height: $editor-defaults__loading-icon--size;
+        left: auto;
+        // position: static !important;
+        margin: 0 auto;
+        margin-bottom: $editor-defaults__loading--margin-y;
+    }
+    &,
+    .z-temp & {
+        background-color: $editor-defaults__loading--bg-color;
+
+        &-indicator{
+            font-size: $editor-defaults__loading--font-size;
+            color: $editor-defaults__loading--color;
+        }
+    }
+}
+
+.z-apply-mask {
+    background-color: $editor-defaults__loading-mask--bg-color;
+}
+
+.z-apply-loading {
+    @include _popupDefaults();
+    background-color: $editor-defaults__loading--bg-color;
+    line-height: $_editor-defaults__loading-small--line-height;
+    color: $editor-defaults__loading--color;
+
+    &-indicator {
+        padding: $_editor-defaults__loading-small--padding;
+        font-size: $_editor-defaults__loading-small--font-size;
+    }
+    &-icon {
+        width: $_editor-defaults__loading-small-icon--size;
+        height: $_editor-defaults__loading-small-icon--size;
+        margin-right: $_editor-defaults__loading-small-icon--margin-right;
+    }
+    .z-apply-mask + & {
+        background: transparent;
+    }
+}
+.z-renderdefer {
+    width: $_editor-defaults__loading-tiny-icon--size;
+    height: $_editor-defaults__loading-tiny-icon--size;
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.z-loading-icon,
+.z-apply-loading-icon,
+.z-renderdefer {
+    position: relative;
+    background-image: none;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        min-width: $_editor-defaults__loading-icon--min-height;
+        min-height: $_editor-defaults__loading-icon--min-height;
+        background-image: url(images/icon_loading-indicator.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: rotating $_editor-defaults__loading-icon--animation-duration linear infinite;
+    }
+}
+
+.z-fileupload-manager {
+    .z-popup-content {
+        margin: $_container-spacing-default__tiny $_container-spacing-default__small;
+        .z-fileupload-remove {
+            color: $default-icon--color;
+            margin-left: $_container-spacing-default__core;
+            vertical-align: top;
+        }
+        .z-fileupload-progress.z-progressmeter {
+            .z-progressmeter-image {
+                background: $fileupload-progress-image--bg-color;
+            }
+        }
+    }
+}

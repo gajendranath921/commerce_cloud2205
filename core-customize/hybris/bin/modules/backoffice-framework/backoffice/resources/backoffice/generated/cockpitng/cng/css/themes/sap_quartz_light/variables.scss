@@ -1,0 +1,363 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@charset "utf-8";
+@import "_sap_variables.scss";
+:root {
+  /*** Font ***/
+  --bo-font-family: var(--sapFontFamily);
+  --bo-font-family-light: var(--sapFontLightFamily);
+  --bo-font-family-bold: var(--sapFontBoldFamily);
+  --bo-font-size: var(--sapFontSize);
+  --bo-font-size-small: var(--sapFontSmallSize);
+  --bo-font-size-large: var(--sapFontLargeSize);
+  --bo-font-size-h1: var(--sapFontHeader1Size);
+  --bo-font-size-h2: var(--sapFontHeader2Size);
+  --bo-font-size-h3: var(--sapFontHeader3Size);
+  --bo-font-size-h4: var(--sapFontHeader4Size);
+  --bo-font-size-h5: var(--sapFontHeader5Size);
+  --bo-font-size-h6: var(--sapFontHeader6Size);
+
+  /*** Icon ***/
+  --bo-content-icon-font-family: "SAP-icons", "commerce_BO_extended", "FontAwesome", "custom-icons";
+  --bo-content-icon-color: var(--sapContent_IconColor);
+  --bo-content-contrast-icon-color: var(--sapContent_ContrastIconColor);
+  --bo-content-icon-marker-color: var(--sapContent_MarkerIconColor);
+
+  /*** Primary Colors ***/
+  --primary1: rgb(53, 74, 95); //#354a5f
+  --primary2: rgb(10, 110, 209); //#0a6ed1
+  --primary3: rgb(255, 255, 255); //#ffffff
+  --primary4: rgb(237, 239, 240); //#edeff0
+  --primary5: rgb(137, 145, 154); //#89919a
+  --primary6: rgb(50, 54, 58); //#32363a
+  --primary7: rgb(106, 109, 112); //#6a6d70
+
+  /*** Accent Colors ***/
+  /* Accents are used as basis for other control parameters such as rating indicator or marker text colors. */
+  --bo-accent-color1: var(--sapAccentColor1);
+  --bo-accent-color2: var(--sapAccentColor2);
+  --bo-accent-color3: var(--sapAccentColor3);
+  --bo-accent-color4: var(--sapAccentColor4);
+  --bo-accent-color5: var(--sapAccentColor5);
+  --bo-accent-color6: var(--sapAccentColor6);
+  --bo-accent-color7: var(--sapAccentColor7);
+  --bo-accent-color8: var(--sapAccentColor8);
+  --bo-accent-color9: var(--sapAccentColor9);
+  --bo-accent-color10: var(--sapAccentColor10);
+
+  /*** Chart Ordered Colors ***/
+  --bo-chart-ordered-color1: var(--sapChart_OrderedColor_1);
+  --bo-chart-ordered-color2: var(--sapChart_OrderedColor_2);
+  --bo-chart-ordered-color3: var(--sapChart_OrderedColor_3);
+  --bo-chart-ordered-color4: var(--sapChart_OrderedColor_4);
+  --bo-chart-ordered-color5: var(--sapChart_OrderedColor_5);
+  --bo-chart-ordered-color6: var(--sapChart_OrderedColor_6);
+  --bo-chart-ordered-color7: var(--sapChart_OrderedColor_7);
+  --bo-chart-ordered-color8: var(--sapChart_OrderedColor_8);
+  --bo-chart-ordered-color9: var(--sapChart_OrderedColor_9);
+  --bo-chart-ordered-color10: var(--sapChart_OrderedColor_10);
+  --bo-chart-ordered-color11: var(--sapChart_OrderedColor_11);
+  --bo-chart-ordered-color12: var(--sapChart_OrderedColor_12);
+
+  /*** Main UI ***/
+  --bo-base-color: var(--sapBaseColor);
+  --bo-base-background: var(--sapBackgroundColor);
+  --bo-brand-color: var(--sapBrandColor);
+  --bo-field-border-color: var(--sapField_BorderColor);
+  --bo-text-color: var(--sapTextColor);
+  --bo-content-label-color: var(--sapContent_LabelColor);
+  --bo-content-disabled-opacity: var(--sapContent_DisabledOpacity);
+  --bo-border-radius: var(--sapElement_BorderCornerRadius);
+  --bo-border-width: var(--sapElement_BorderWidth);
+
+  /*** Highlights - Interaction States ***/
+  --bo-highlight-color: var(--sapHighlightColor);
+  --bo-selected-color: var(--sapSelectedColor);
+  --bo-active-color: var(--sapActiveColor);
+
+  /*** Content Selected (Toggled) states ***/
+  --bo-content-selected-background: var(--sapContent_Selected_Background);
+  --bo-content-selected-text-color: var(--sapContent_Selected_TextColor);
+  --bo-content-selected-hover-background: var(--sapContent_Selected_Hover_Background);
+
+  /*** Home/Shell ***/
+  --bo-shell-home-background: var(--sapShell_Background);
+  --bo-shell-background: var(--sapShellColor);
+  --bo-shell-border-color: var(--sapShell_BorderColor);
+  --bo-shell-text-color: var(--sapShell_TextColor);
+  --bo-shell-interactive-color: var(--sapShell_InteractiveTextColor);
+  --bo-shell-hover-background: var(--sapShell_Hover_Background);
+  --bo-shell-active-background: var(--sapShell_Active_Background);
+  --bo-shell-active-text-color: var(--sapShell_Active_TextColor);
+  --bo-content-badge-background: var(--sapContent_BadgeBackground);
+  --bo-content-badge-text-color: var(--sapContent_BadgeTextColor);
+
+  /*** Tile and Card Colors ***/
+  --bo-tile-text-color: var(--sapTile_TextColor);
+  --bo-tile-title-color: var(--sapTile_TitleTextColor);
+  --bo-tile-background: var(--sapTile_Background);
+  --bo-tile-hover-background: var(--sapTile_Hover_Background);
+  --bo-tile-active-background: var(--sapTile_Active_Background);
+  --bo-tile-border-color: var(--sapTile_BorderColor);
+  --bo-tile-hover-border-color: var(--sapTile_Interactive_BorderColor);
+
+  /*** Page Header and Footer Colors ***/
+  /* Pages optionally show a header and/or a footer. */
+  --bo-page-header-background: var(--sapPageHeader_Background);
+  --bo-page-header-border-color: var(--sapPageHeader_BorderColor);
+  --bo-page-header-text-color: var(--sapPageHeader_TextColor);
+  --bo-page-footer-background: var(--sapPageFooter_Background);
+  --bo-page-footer-border-color: var(--sapPageFooter_BorderColor);
+  --bo-page-footer-text-color: var(--sapPageFooter_TextColor);
+
+  /*** Container(object, panels, popovers, dialogs ...) Colors ***/
+  /* The object header of a page */
+  --bo-object-header-background: var(--sapObjectHeader_Background);
+  --bo-object-header-hover-background: var(--sapObjectHeader_Hover_Background);
+  --bo-object-header-border-color: var(--sapObjectHeader_BorderColor);
+
+  /* Container(Group Controls such as panels, popovers, dialogs) */
+  --bo-container-color: var(--sapTextColor);
+  --bo-container-border-width: var(--sapGroup_BorderWidth);
+  --bo-container-background: var(--sapGroup_ContentBackground);
+  --bo-container-border-color: var(--sapGroup_ContentBorderColor);
+
+  /*** Title Toolbars for Control Groups ***/
+  --bo-group-title-background: var(--sapGroup_TitleBackground);
+  --bo-group-title-border-color: var(--sapGroup_TitleBorderColor);
+  --bo-group-title-text-color: var(--sapGroup_TitleTextColor);
+  --bo-toolbar-background: var(--sapToolbar_Background);
+  --bo-toolbar-separator-color: var(--sapToolbar_SeparatorColor);
+
+  /*** List and Table Colors ***/
+  --bo-list-background: var(--sapList_Background);
+  --bo-list-border-color: var(--sapList_BorderColor);
+  --bo-list-border-width: var(--sapList_BorderWidth);
+  --bo-list-text-color: var(--sapList_TextColor);
+  --bo-list-active-background: var(--sapList_Active_Background);
+  --bo-list-active-text-color: var(--sapList_Active_TextColor);
+  --bo-list-selected-background: var(--sapList_SelectionBackgroundColor);
+  --bo-list-selected-border-color: var(--sapList_SelectionBorderColor);
+  --bo-list-selected-hover-background: var(--sapList_Hover_SelectionBackground);
+  --bo-list-hover-background: var(--sapList_Hover_Background);
+  --bo-list-group-header-background: var(--sapList_GroupHeaderBackground);
+  --bo-list-group-header-border: var(--sapList_GroupHeaderBorderColor);
+  --bo-list-group-header-text-color: var(--sapList_GroupHeaderTextColor);
+  --bo-list-footer-background: var(--sapList_FooterBackground);
+  --bo-list-footer-text-color: var(--sapList_FooterTextColor);
+  --bo-list-table-header-color: var(--sapList_TableGroupHeaderTextColor);
+  --bo-list-table-header-border-color: var(--sapList_TableGroupHeaderBorderColor);
+  --bo-list-table-header-background: var(--sapList_TableGroupHeaderBackground);
+  --bo-list-table-footer-border-color: var(--sapList_TableFooterBorder);
+
+  /*** Text Colors ***/
+  --bo-title-color: var(--sapTitleColor);
+  --bo-content-disabled-text-color: var(--sapContent_DisabledTextColor);
+  --bo-contrast-text-color: var(--sapContent_ContrastTextColor);
+
+  /*** Hyperlinks ***/
+  --bo-link-color: var(--sapLinkColor);
+  --bo-link-hover-color: var(--sapLink_Hover_Color);
+  --bo-link-active-color: var(--sapLink_Active_Color);
+  --bo-link-visited-color: var(--sapLink_Visited_Color);
+
+  /*** Button ***/
+  /* Standard */
+  --bo-button-border-width: var(--sapButton_BorderWidth);
+  --bo-button-border-radius: var(--sapButton_BorderCornerRadius);
+  --bo-button-background: var(--sapButton_Background);
+  --bo-button-border-color: var(--sapButton_BorderColor);
+  --bo-button-text-color: var(--sapButton_TextColor);
+  --bo-button-icon-color: var(--sapButton_IconColor);
+  --bo-button-hover-background: var(--sapButton_Hover_Background);
+  --bo-button-hover-border-color: var(--sapButton_Hover_BorderColor);
+  --bo-button-hover-color: var(--sapButton_Hover_TextColor);
+  --bo-button-active-background: var(--sapButton_Active_Background);
+  --bo-button-active-color: var(--sapButton_Active_TextColor);
+  --bo-button-active-border-color: var(--sapButton_Active_BorderColor);
+  /* Selected (Toggled) State */
+  --bo-button-selected-color: var(--sapButton_Selected_TextColor);
+  --bo-button-selected-background: var(--sapButton_Selected_Background);
+  --bo-button-selected-border-color: var(--sapButton_Selected_BorderColor);
+  --bo-button-selected-hover-background: var(--sapButton_Selected_Hover_Background);
+  --bo-button-selected-hover-border-color: var(--sapButton_Selected_Hover_BorderColor);
+  /* Emphasized */
+  --bo-button-primary-background: var(--sapButton_Emphasized_Background);
+  --bo-button-primary-border-color: var(--sapButton_Emphasized_BorderColor);
+  --bo-button-primary-text-color: var(--sapButton_Emphasized_TextColor);
+  --bo-button-primary-hover-background: var(--sapButton_Emphasized_Hover_Background);
+  --bo-button-primary-hover-border-color: var(--sapButton_Emphasized_Hover_BorderColor);
+  --bo-button-primary-hover-text-color: var(--sapButton_Emphasized_Hover_TextColor);
+  --bo-button-primary-active-background: var(--sapButton_Emphasized_Active_Background);
+  --bo-button-primary-active-border-color: var(--sapButton_Emphasized_Active_BorderColor);
+  --bo-button-primary-active-text-color: var(--sapButton_Emphasized_Active_TextColor);
+  /* Accept (Positive) */
+  --bo-button-accept-text-color: var(--sapButton_Accept_TextColor);
+  --bo-button-accept-background: var(--sapButton_Accept_Background);
+  --bo-button-accept-border-color: var(--sapButton_Accept_BorderColor);
+  --bo-button-accept-hover-background: var(--sapButton_Accept_Hover_Background);
+  --bo-button-accept-hover-border-color: var(--sapButton_Accept_Hover_BorderColor);
+  --bo-button-accept-hover-text-color: var(--sapButton_Accept_Hover_TextColor);
+  --bo-button-accept-active-background: var(--sapButton_Accept_Active_Background);
+  --bo-button-accept-active-border-color: var(--sapButton_Accept_Active_BorderColor);
+  --bo-button-accept-active-text-color: var(--sapButton_Accept_Active_TextColor);
+  /* Reject (Negative) */
+  --bo-button-reject-text-color: var(--sapButton_Reject_TextColor);
+  --bo-button-reject-background: var(--sapButton_Reject_Background);
+  --bo-button-reject-border-color: var(--sapButton_Reject_BorderColor);
+  --bo-button-reject-hover-background: var(--sapButton_Reject_Hover_Background);
+  --bo-button-reject-hover-border-color: var(--sapButton_Reject_Hover_BorderColor);
+  --bo-button-reject-hover-text-color: var(--sapButton_Reject_Hover_TextColor);
+  --bo-button-reject-active-background: var(--sapButton_Reject_Active_Background);
+  --bo-button-reject-active-border-color: var(--sapButton_Reject_Active_BorderColor);
+  --bo-button-reject-active-text-color: var(--sapButton_Reject_Active_TextColor);
+  /* Attention */
+  --bo-button-attention-text-color: var(--sapButton_Attention_TextColor);
+  --bo-button-attention-background: var(--sapButton_Attention_Background);
+  --bo-button-attention-border-color: var(--sapButton_Attention_BorderColor);
+  --bo-button-attention-hover-background: var(--sapButton_Attention_Hover_Background);
+  --bo-button-attention-hover-border-color: var(--sapButton_Attention_Hover_BorderColor);
+  --bo-button-attention-hover-text-color: var(--sapButton_Attention_Hover_TextColor);
+  --bo-button-attention-active-background: var(--sapButton_Attention_Active_Background);
+  --bo-button-attention-active-border-color: var(--sapButton_Attention_Active_BorderColor);
+  --bo-button-attention-active-text-color: var(--sapButton_Attention_Active_TextColor);
+
+  /*** Message Buttons ***/
+  /* Negative Button Type */
+  --bo-button-error-text-color: var(--sapButton_Negative_TextColor);
+  --bo-button-error-background: var(--sapButton_Negative_Background);
+  --bo-button-error-border-color: var(--sapButton_Negative_BorderColor);
+  --bo-button-error-hover-background: var(--sapButton_Negative_Hover_Background);
+  --bo-button-error-hover-border-color: var(--sapButton_Negative_Hover_BorderColor);
+  --bo-button-error-hover-text-color: var(--sapButton_Negative_Hover_TextColor);
+  --bo-button-error-active-background: var(--sapButton_Negative_Active_Background);
+  --bo-button-error-active-border-color: var(--sapButton_Negative_Active_BorderColor);
+  --bo-button-error-active-text-color: var(--sapButton_Negative_Active_TextColor);
+  /* Critical Button Type */
+  --bo-button-warning-text-color: var(--sapButton_Critical_TextColor);
+  --bo-button-warning-background: var(--sapButton_Critical_Background);
+  --bo-button-warning-border-color: var(--sapButton_Critical_BorderColor);
+  --bo-button-warning-hover-background: var(--sapButton_Critical_Hover_Background);
+  --bo-button-warning-hover-border-color: var(--sapButton_Critical_Hover_BorderColor);
+  --bo-button-warning-hover-text-color: var(--sapButton_Critical_Hover_TextColor);
+  --bo-button-warning-active-background: var(--sapButton_Critical_Active_Background);
+  --bo-button-warning-active-border-color: var(--sapButton_Critical_Active_BorderColor);
+  --bo-button-warning-active-text-color: var(--sapButton_Critical_Active_TextColor);
+  /* Success Button Type */
+  --bo-button-success-text-color: var(--sapButton_Success_TextColor);
+  --bo-button-success-background: var(--sapButton_Success_Background);
+  --bo-button-success-border-color: var(--sapButton_Success_BorderColor);
+  --bo-button-success-hover-background: var(--sapButton_Success_Hover_Background);
+  --bo-button-success-hover-border-color: var(--sapButton_Success_Hover_BorderColor);
+  --bo-button-success-hover-text-color: var(--sapButton_Success_Hover_TextColor);
+  --bo-button-success-active-background: var(--sapButton_Success_Active_Background);
+  --bo-button-success-active-border-color: var(--sapButton_Success_Active_BorderColor);
+  --bo-button-success-active-text-color: var(--sapButton_Success_Active_TextColor);
+  /* Information Button Type */
+  --bo-button-information-text-color: var(--sapButton_Information_TextColor);
+  --bo-button-information-background: var(--sapButton_Information_Background);
+  --bo-button-information-border-color: var(--sapButton_Information_BorderColor);
+  --bo-button-information-hover-background: var(--sapButton_Information_Hover_Background);
+  --bo-button-information-hover-border-color: var(--sapButton_Information_Hover_BorderColor);
+  --bo-button-information-hover-text-color: var(--sapButton_Information_Hover_TextColor);
+  --bo-button-information-active-background: var(--sapButton_Information_Active_Background);
+  --bo-button-information-active-border-color: var(--sapButton_Information_Active_BorderColor);
+  --bo-button-information-active-text-color: var(--sapButton_Information_TextColor);
+
+  /*** Button/ Switch Track ***/
+  --bo-button-track-selected-background: var(--sapButton_Track_Selected_Background);
+  --bo-button-track-selected-text-color: var(--sapButton_Track_Selected_TextColor);
+  --bo-button-track-background: var(--sapButton_Track_Background);
+  --bo-button-track-text-color: var(--sapButton_Track_TextColor);
+
+  /*** Token ***/
+  --bo-button-token-background: var(--sapButton_TokenBackground);
+  --bo-button-token-border-color: var(--sapButton_TokenBorderColor);
+
+  /*** Field - Input Controls ***/
+  --bo-input-background: var(--sapField_Background);
+  --bo-input-border-color: var(--sapField_BorderColor);
+  --bo-input-text-color: var(--sapField_TextColor);
+  --bo-placeholder-text-color: var(--sapField_PlaceholderTextColor);
+  --bo-input-hover-background: var(--sapField_Hover_Background);
+  --bo-input-hover-border-color: var(--sapField_Hover_BorderColor);
+  --bo-input-active-border-color: var(--sapField_Active_BorderColor);
+  --bo-input-focus-background: var(--sapField_Focus_Background);
+  --bo-input-focus-border-color: var(--sapField_Focus_BorderColor);
+  --bo-input-readonly-background: var(--sapField_ReadOnly_Background);
+  --bo-input-readonly-border-color: var(--sapField_ReadOnly_BorderColor);
+  --bo-input-required-color: var(--sapField_RequiredColor);
+  --bo-input-invalid-color: var(--sapField_InvalidColor);
+  --bo-input-invalid-background: var(--sapField_InvalidBackground);
+  --bo-input-warning-color: var(--sapField_WarningColor);
+  --bo-input-warning-background: var(--sapField_WarningBackground);
+  --bo-input-success-color: var(--sapField_SuccessColor);
+  --bo-input-success-background: var(--sapField_SuccessBackground);
+  --bo-input-information-color: var(--sapField_InformationColor);
+  --bo-input-information-background: var(--sapField_InformationBackground);
+
+  --bo-input-border-width: var(--sapField_BorderWidth);
+  --bo-input-invalid-border-width: var(--sapField_InvalidBorderWidth);
+  --bo-input-border-radius: var(--sapField_BorderCornerRadius);
+
+  /*** Semantic Colors ***/
+  /* Semantic colors can be used to convey status to specific elements. */
+  --bo-negative-color: var(--sapNegativeColor);
+  --bo-critical-color: var(--sapCriticalColor);
+  --bo-positive-color: var(--sapPositiveColor);
+  --bo-informative-color: var(--sapInformativeColor);
+  --bo-neutral-color: var(--sapNeutralColor);
+
+  /*** Alert Colors ***/
+  /* The alert colors are used as base for Alert backgrounds and borders. */
+  --bo-error-color: var(--sapErrorColor);
+  --bo-warning-color: var(--sapWarningColor);
+  --bo-success-color: var(--sapSuccessColor);
+  --bo-information-color: var(--sapInformationColor);
+
+  /*** Semantic Background Colors ***/
+  /* Semantic background colors are used for semantic/ alert type controls. */
+  --bo-error-background: var(--sapErrorBackground);
+  --bo-warning-background: var(--sapWarningBackground);
+  --bo-success-background: var(--sapSuccessBackground);
+  --bo-information-background: var(--sapInformationBackground);
+  --bo-neutral-background: var(--sapNeutralBackground);
+
+  /*** Semantic Border Colors ***/
+  /* Semantic borders colors are used for semantic/ alert type controls. */
+  --bo-error-border-color: var(--sapErrorBorderColor);
+  --bo-warning-border-color: var(--sapWarningBorderColor);
+  --bo-success-border-color: var(--sapSuccessBorderColor);
+  --bo-information-border-color: var(--sapInformationBorderColor);
+  --bo-neutral-border-color: var(--sapNeutralBorderColor);
+
+  /*** Focus ***/
+  --bo-button-focus-outline-color: var(--sapContent_FocusColor);
+  --bo-content-focus-outline-color: var(--sapContent_FocusColor);
+  --bo-content-focus-outline-style: var(--sapContent_FocusStyle);
+  --bo-content-focus-outline-width: var(--sapContent_FocusWidth);
+
+  /*** Shadow Levels ***/
+  --bo-content-shadow-small: var(--sapContent_Shadow0);
+  --bo-content-shadow-medium: var(--sapContent_Shadow1);
+  --bo-content-shadow-large: var(--sapContent_Shadow2);
+  --bo-content-shadow-x-large: var(--sapContent_Shadow3);
+  --bo-content-header-shadow: var(--sapContent_HeaderShadow);
+  --bo-content-text-shadow: var(--sapContent_TextShadow);
+
+  /*** Special Interaction Colors ***/
+  --bo-block-layer-background: var(--sapBlockLayer_Background);
+  /* drag and drop */
+  --bo-dnd-active-color: var(--sapContent_DragAndDropActiveColor);
+
+  /*** General Legend Colors ***/
+  --bo-legend-working-background: var(--sapLegend_WorkingBackground);
+  --bo-legend-nonworking-background: var(--sapLegend_NonWorkingBackground);
+
+  /*** Scroll Bar ***/
+  --bo-scrollbar-width: var(--sapScrollBar_Dimension);
+  --bo-scrollbar-height: var(--sapScrollBar_Dimension);
+  --bo-scrollbar-thumb-border-radius: var(--sapScrollBar_Dimension);
+  --bo-scrollbar-thumb-background-color: var(--sapScrollBar_FaceColor);
+}

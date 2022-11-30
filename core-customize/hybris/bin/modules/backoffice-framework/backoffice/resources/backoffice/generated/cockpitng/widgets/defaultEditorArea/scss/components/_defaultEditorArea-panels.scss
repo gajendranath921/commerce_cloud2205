@@ -1,0 +1,281 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Editor-Area: Panels
+================================*/
+// Defines Panel-Details needed for the Editor-Area
+
+.yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed,
+td.yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-attrcell {
+    padding: $editor-area__tabpanel-attribute-cell--padding;
+
+    &:emtpy {
+        padding-bottom: 0;
+    }
+}
+
+.yw-editorarea-tabbox-tabpanels-tabpanel-groupbox {
+    background: $editor-area__tabpanel-groupbox--bg-color;
+    border: none;
+    .z-window-highlighted & {
+        @if $_editor-area__window-highlighted-tabpanel-groupbox--margin-x {
+            margin-right: $_editor-area__window-highlighted-tabpanel-groupbox--margin-x;
+            margin-left: $_editor-area__window-highlighted-tabpanel-groupbox--margin-x;
+        }
+    }
+
+    td.z-hbox-separator{
+        width: $editor-area__tabpanel-groupbox-hbox-separator--width;
+    }
+
+    .z-groupbox-content {
+        .z-tablechildren {
+            .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+    }
+
+    &-ed {
+        // padding-right: $editor-area__tabpanel-groupbox-ed--padding-right;
+        // padding-bottom: $editor-area__tabpanel-groupbox-ed--padding-bottom;
+
+        &::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        &,
+        &-editor {
+            .z-window-highlighted & {
+                width: 100%;
+            }
+            .yw-editor-area-main-content .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox & {
+                .z-window-highlighted & {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    &-desc {
+        -webkit-flex: 0 1 100%;
+        -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
+
+        .z-label{
+            font-size: $editor-area__tabpanel-description-text--font-size;
+            line-height: $editor-area__tabpanel-description-text--line-height;
+            font-weight: normal;
+            padding: $editor-area__tabpanel-groupbox-desc-label--padding;
+            margin-bottom: 0;
+        }
+    }
+
+    .yw-loceditor {
+        position: relative;
+
+        &-caption {
+            padding-right: $editor-defaults__loceditor-caption--padding-right;
+            width:100%;
+            overflow: hidden;
+            position: static;
+
+            > .y-icon-loceditor {
+                position: absolute;
+                right: 0;
+                bottom: 100%;
+            }
+            > .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-attrcell-label {
+                &,
+                &-mandatory-attribute {
+                    + .y-icon-loceditor {
+                        top: 0;
+                        bottom: auto;
+                    }
+                }
+            }
+        }
+
+        .yw-feature-value-container.yw-feature-value-container-with-unit {
+            .ye-com_hybris_cockpitng_editor_defaulttext,
+            .z-doublebox {
+                border-right-width: 0;
+                border-top-right-radius: $editor-defaults__input-split-inner--border-radius;
+                border-bottom-right-radius: $editor-defaults__input-split-inner--border-radius;
+
+                &:focus {
+                    border-right-width: $_editor-area__input-field-focus--border-width;
+                }
+            }
+        }
+    }
+
+    &-attrcell-label.z-label {
+        margin-bottom: 0;
+    }
+
+    > .z-groupbox-content {
+        padding: $editor-area__tabpanel-groupbox-body--padding;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        > table {
+            width: auto;
+            tr td >table {
+                width: 100%;
+                table-layout: fixed;
+            }
+            .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-attrcell {
+                &:only-child{
+                    display: inline-block;
+                    box-sizing: content-box;
+                    width: calc(50% - #{2 * $editor-area__tabpanel-groupbox-content--padding-x}) !important;
+                }
+            }
+        }
+    }
+    &-caption {
+        padding: $editor-area__tabpanel-groupbox-header-caption--padding;
+    }
+}
+
+.yw-collapsibleContainer-container .yw-com_hybris_cockpitng_backoffice_defaultEditorArea .z-tabbox-content .yw-editorarea-tabbox-tabpanels-tabpanel .z-groupbox-content > table {
+    width: 50%;
+
+    .z-hbox-separator {
+        display: none;
+    }
+}
+
+.yw-editor-area-main-content .yw-editorarea-tabbox.yw-static-section-active > .z-tabbox-content-wrapper .z-tabbox-content > table {
+    width: 100%;
+}
+
+.yw-loceditor {
+    & .yw-loceditor-fixed-open,
+    & .yw-loceditor-dynamic-content {
+
+        .ye-com_hybris_cockpitng_editor_boolean_wrapper .z-hbox {
+            td table td {
+                margin-right: 0;
+                margin-left: $editor-defaults__loceditor-radio-group--margin-left;
+            }
+        }
+    }
+}
+
+.yw-editorarea-tabbox-tabpanels-tabpanel {
+    .z-window-highlighted & {
+        > .z-div:first-child {
+            .yw-info-box:first-child {
+                margin-top: $container-spacing-default__third * -1;
+            }
+        }
+    }
+}
+
+.yw-editor-area-main-content {
+    .z-groupbox {
+        &-header .z-caption-content,
+        &-title-content {
+            color: $editor-area__tabpanel-groupbox-header-caption--color;
+            font-weight: $editor-area__tabpanel-groupbox-header-caption--font-weight;
+            @if ($editor-area__tabpanel-groupbox-header-caption--text-transform){
+                text-transform: $editor-area__tabpanel-groupbox-header-caption--text-transform;
+            }
+        }
+        &-header {
+            &:after{
+                clear: both;
+                display: block;
+                content: '';
+            }
+            .z-caption-content,
+            .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-caption.z-caption {
+                &,
+                &:hover{
+                    &:after {
+                        content: "";
+                        width: 100%;
+                        position: absolute;
+                        bottom: $editor-area__tabpanel-delimit-horizontal--border-width * -1;
+                        border-bottom: none;
+                        height: $editor-area__tabpanel-delimit-horizontal--border-width;
+                        display: block;
+                        left: 0;
+                    }
+                }
+                @if($editor-area__tabpanel-delimit-show-on-hover-only){
+                    &:after {
+                        content: normal;
+                    }
+                }
+            }
+
+            .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-caption {
+                &.z-caption {
+                    width: 100%;
+                    background: $editor-area-centered__groupbox--bg-color;
+                    top: 0 !important;
+                    border: 0;
+                    padding: $editor-area__tabpanel-groupbox-header-caption--padding;
+                    white-space: normal;
+                    min-height: $editor-area__tabpanel-groupbox-header-caption--min-height;
+                    display: block;
+
+                    @if $editor-area__tabpanel-groupbox-header-caption-hover--bg-color {
+                        &:hover {
+                            background: $editor-area__tabpanel-groupbox-header-caption-hover--bg-color;
+                        }
+                    }
+                }
+                .z-caption-content {
+                    font-family: $font-family__text;
+                    font-size: $editor-area__tabpanel-groupbox-header-caption--font-size;
+                    line-height: $editor-area__tabpanel-groupbox-header-caption--line-height;
+                    padding: $editor-area__tabpanel-groupbox-header-caption-text--padding;
+                }
+                .yw-expandCollapse.z-button {
+                    top: $editor-area__tabpanel-groupbox-header-caption--space-top;
+                }
+            }
+        }
+        &-collapsed .z-groupbox-header {
+            .z-caption-content:hover,
+            .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-caption.z-caption {
+                border-bottom-width: 0;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .yw-editorarea-tabbox-tabpanels-tabpanel .z-groupbox-header {
+        padding: 0;
+        height: auto;
+    }
+
+}
+
+.yw-modal-notificationEA {
+    .yw-listview-actioncontainer.yw-editorarea-actioncontainer,
+    .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .yw-editorarea-tabbox-tabs-tab{
+        &:first-child {
+            padding-left: 20px;
+        }
+        &:last-child {
+            padding-right: 20px;
+        }
+    }
+}

@@ -1,0 +1,1164 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Editors
+================================*/
+// Basics for all Editors (action-icon, label, editor-specials)
+
+@charset "UTF-8";
+@import "../support/_cockpit-mixins.scss";
+
+.galleryContainer {
+    overflow-y: auto;
+}
+
+.galleryImgSlot {
+    width: 64px;
+    height: 64px;
+    display: inline-table;
+    padding: 2px;
+    margin: 2px;
+    border: thin #CDCDCD solid;
+}
+
+.defaultTabWidget {
+    background: #FFF !important;
+
+    .z-tabpanel {
+        padding: 0 !important;
+    }
+}
+
+.editorAreaHeader .z-hbox {
+    table td {
+        &,
+        &:first-child {
+            padding: 5px 0px;
+        }
+    }
+    .z-label {
+        font-weight: bold;
+    }
+}
+
+// EDIT/PROPERTY LABELS
+// ====================
+//
+
+.yw-editorarea-tabbox-tabpanels,
+.yw-editorarea-label-container,
+.yw-wizard-property,
+.ye-complextype-main-cnt {
+    .z-label {
+        display: inline-block;
+        margin-bottom: $editor-defaults__label-field--margin-bottom;
+        color: $editor-defaults__label-field--color;
+        line-height: $editor-defaults__label-field--line-height;
+    }
+}
+
+// -- should be moved to editor-area styling
+.yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-attrcell-label {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-all;
+
+    .ie &,
+    .edge & {
+        word-break: break-all;
+    }
+}
+
+.yw-wizard-property {
+    > .z-label {
+        overflow-wrap: break-word;
+        max-width: 100%;
+
+        .ie &,
+        .edge & {
+            word-break: break-all;
+        }
+    }
+
+    .yw-loceditor-caption {
+        padding-right: $editor-defaults__loceditor-caption--padding-right;
+        min-height: $editor-defaults__loceditor-caption--min-height;
+        position: relative;
+
+        > .y-icon-loceditor {
+            right: 0;
+        }
+    }
+    &.ye-validation-error,
+    &.ye-validation-warn,
+    &.ye-validation-info {
+        > .z-label {
+            padding-right: $editor-defaults__editor-validation-label--padding-right;
+        }
+    }
+    &,
+    &.ye-validation-error,
+    &.ye-validation-warn,
+    &.ye-validation-info {
+        .yw-loceditor .yw-loceditor-caption > .y-icon-loceditor {
+            top: $editor-defaults__wizard-popup-locedtior-icont--top;
+            position: absolute;
+            left: auto;
+        }
+    }
+}
+
+
+// LOCALIZED VALUES
+// ====================
+//
+
+.yw-loceditor {
+    border: none;
+    &-caption > .z-caption-content {
+        display: block;
+    }
+
+    &-row-editor {
+        width: 100%;
+        display: table-cell;
+
+        .yw-loceditor-fixed-open &,
+        .yw-loceditor-dynamic-content & {
+            > .z-div >,
+            > .z-div .yw-feature-value-subeditor > {
+                .ye-list .ye-list-toolbar,
+                .ye-list .ye-list-content .z-listbox,
+                .z-textbox,
+                .z-decimalbox,
+                .z-intbox,
+                .z-longbox,
+                .z-doublebox {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+
+            .yw-feature-value-subeditor > .ye-default_boolean_editor_radiogroup {
+                border-left-color: inherit;
+            }
+
+            .yw-feature-value-subeditor {
+                border-width: 0;
+                border-color: $editor-defaults__box--border-color;
+            }
+
+            .bulkedit-content & {
+                display: table-cell;
+            }
+        }
+    }
+
+    &-fixed-open &-row > &-row-editor,
+    &-dynamic-content &-row > &-row-editor {
+        > div {
+            margin-left: -1px;
+        }
+    }
+    &-row-wysiwyg > &-row-editor {
+        display: block !important;
+    }
+}
+
+// -- moved to _cockpit-validation
+// Validation icon for localized editor
+// .ye-validation-exclamation-icon {
+//     .ye-validation-error {
+//         background-position: -32px 0px;
+//     }
+//     .ye-validation-warn {
+//         background-position: -16px 0px;
+//     }
+//     .ye-validation-info {
+//         background-position: 0px 0px;
+//     }
+// }
+
+
+// -- class-definitions connected to ye-validation-local-{validation-state}
+// -- got removed with changes in CNG-1076, styling beneath therefor accounted as deprecated
+//
+// Validation colors for specific locales in localized editor
+//
+// .yw-loceditor-row-editor .z-div .ye-input-text,
+// .yw-editorarea-tabbox-tabpanels-tabpanel .z-label.yw-loceditor-row-locale  {
+//     .ye-validation-local-error > & {
+//         background: $orange__default--100;
+//         border: 1px solid $orange__default--200;
+//         color: $orange__default--200;
+//     }
+//     .ye-validation-local-warn > & {
+//         background: #fff9e9;
+//         border: 1px solid #ff9914;
+//         color: #ff9914;
+//     }
+//     .ye-validation-local-info > & {
+//         background: #e5eff8;
+//         border: 1px solid #025eba;
+//         color: #025eba;
+//     }
+// }
+
+
+// -- moved to _cockpit-validation
+// .ye-editor-validation-popup {
+//     &.z-window-popup {
+//         background: $window__popup--bg-color none repeat scroll 0 0;
+//         border: 1px solid #acacac;
+//         box-shadow: 0px 0px 12px 1px rgba(127, 144, 164, 0.23);
+
+//         margin-top: -9px;
+//         max-width: 270px;
+//         min-width: 270px;
+
+//         .z-vlayout-inner .ye-validation-popup-row-cnt {
+//             &.ye-validation-error,
+//             &.ye-validation-warn,
+//             &.ye-validation-info {
+//                 &:before {
+//                     @include _validation-icon(false){
+//                         margin: 0px 10px 0px 0;
+//                         color: $_editor-defaults__validation-info--color;
+//                     };
+//                     // position: absolute;
+//                     // content: '';
+//                     // width: 16px;
+//                     // height: 16px;
+//                     // margin: 0px 10px 0px 0;
+//                     // background: url("images/icon_validation_sprite.png") no-repeat;
+//                 }
+//             }
+//             &.ye-validation-warn:before {
+//                 color: $_editor-defaults__validation-warn--color;
+//                 // background-position: -16px 0;
+//             }
+//             &.ye-validation-error:before {
+//                 color: $_editor-defaults__validation-error--color;
+//                 // background-position: -32px 0;
+//             }
+//         }
+//     }
+// }
+// .ye-editor-validation-popup .ye-editor-validation-popup-content {
+//     max-height: 400px;
+//     overflow: auto;
+// }
+// VALIDATION //
+// Mainly Editors, Should be combined with those in Editor Area? Or simply delclared in a separate File _cockpit-validation.scss (not yet existing)
+
+// .ye-localized .ye-validation-exclamation-icon {
+//     position: relative;
+//     top: $editor-defaults__icon--size;
+// }
+
+// -- moved to _cockpit-validation
+// .ye-validation-info .yw-loceditor-caption span.y-icon-loceditor,
+// .ye-validation-warn .yw-loceditor-caption span.y-icon-loceditor,
+// .ye-validation-error .yw-loceditor-caption span.y-icon-loceditor {
+//     margin-right: $editor-defaults__icon--size + 4px;
+//     // background-position: 0 -112px;
+// }
+
+
+.ye-validation-info,
+.ye-validation-warn,
+.ye-validation-error {
+    .yw-loceditor-caption.yw-editorarea-label-container {
+        width: $_editor-defaults__editor-validation-loceditor-caption--width;
+        .y-icon-loceditor {
+            right: $_editor-defaults__editor-validation-loceditor-icon--right;
+        }
+    }
+    .ye-validation-panel.ye-localized .ye-validation-exclamation-icon {
+        z-index: 1;
+        top: 0;
+    }
+}
+
+.yw-loceditor.z-groupbox-collapsed .z-groupbox-header,
+.yw-loceditor .z-groupbox-header {
+    top: 0;
+    border: none;
+}
+
+.y-icon-loceditor,
+.y-icon-loceditor.z-button,
+.y-attributepicker-localized .z-tree-icon > i {
+    color: $_editor-defaults__editor-localized-icon--color;
+    position: relative;
+
+    &:after {
+        content: $_editor-defaults__editor-localized-icon--content;
+        font-size: $_editor-defaults__editor-localized-icon--font-size;
+        font-family: $_editor-defaults__editor-localized-icon--font-family;
+        position: absolute;
+        top: $_editor-defaults__editor-localized-icon--top;
+        left: $_editor-defaults__editor-localized-icon--left;
+        transform: $_editor-defaults__editor-localized-icon--transform;
+    }
+}
+
+.y-icon-loceditor,
+.y-attributepicker-localized .z-tree-icon {
+    cursor: pointer;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.y-icon-loceditor {
+    .yw-loceditor-fixed-closed & {
+        color: $_editor-defaults__editor-localized-icon--color;
+        border: transparent;
+    }
+    .yw-loceditor-fixed-open & {
+        color: $_editor-defaults__editor-localized-icon-active--color;
+    }
+    .ye-validation-info & {
+        background-position: 0 -48px;
+    }
+    .ye-validation-warn & {
+        background-position: 0 -64px;
+    }
+    .ye-validation-error & {
+        background-position: 0 -80px;
+    }
+    .yw-loceditor-caption & {
+        float: right;
+        margin-bottom: 1px;
+    }
+    &-diabled {
+        .yw-loceditor-caption & {
+            &,
+            &:hover {
+                cursor: default;
+                opacity: 0.4;
+                color: $_editor-defaults__editor-localized-icon--color;
+            }
+        }
+    }
+}
+
+.z-label.yw-loceditor-row-locale {
+    & {
+        font-size: $editor-defaults__input-field--font-size;
+        background-color: $editor-defaults__locedit-label--bg-color;
+        border: $editor-defaults__locedit-label--border;
+        font-weight: $editor-defaults__locedit-label--font-weight !important;
+        padding: $editor-defaults__locedit-label--padding;
+        min-width: $editor-defaults__locedit-label--width;
+        color: $editor-defaults__locedit-label--color;
+        height: $editor-defaults__inline-box--height;
+        @if $_editor-defaults__locedit-label--line-height {
+            line-height: $_editor-defaults__locedit-label--line-height;
+        }
+        border-radius: $_editor-defaults__locedit-label--border-radius;
+        white-space: nowrap;
+        vertical-align: $_editor-defaults__locedit-label--vertical-align;
+        display: table-cell;
+        border-right: none;
+        text-align: left;
+    }
+
+    .yw-loceditor-row-wysiwyg & {
+        border: none;
+        background: none;
+        padding: 0;
+        color: var(--bo-text-color);
+        border-radius: $editor-defaults__input-field--border-radius $editor-defaults__input-field--border-radius 0 0;
+        height: $editor-defaults__inline-box--height;
+        line-height: $editor-defaults__inline-box--height;
+        display: block;
+        width: 100%;
+        border-bottom-width: 0;
+        margin-bottom: 0;
+        width: auto;
+        min-width: auto;
+    }
+}
+
+// rich editor
+@mixin _replaceCkeditorIcon($cke-class-name, $font-icon-name: "") {
+    @if ($font-icon-name == "") {
+        $font-icon-name: $cke-class-name;
+    }
+    &.cke_button__#{$cke-class-name}_icon {
+        font-family: $font-family__icon;
+        color: $_container__action--color;
+        text-align: center;
+        background-image: none !important;
+        background: none !important;
+        font-size: var(--bo-font-size-large);
+        @include _getIconGlyph($font-icon-name);
+
+    }
+}
+
+.ye-wysiwyg .z-ckeditor {
+    overflow: visible !important;
+    .cke.cke_chrome {
+        border: none;
+        box-shadow: $editor-defaults__richeditor-container--box-shadow;
+        background: $editor-defaults__richeditor-container--bg-color;
+        padding: $editor-defaults__richeditor-container--padding;
+    }
+
+    .cke_inner {
+        .cke_top, .cke_bottom {
+            background: $editor-defaults__richeditor-container--bg-color;
+            padding: 0;
+        }
+
+        .cke_top .cke_toolbox {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .cke_combo_button {
+                @include _add-default-button-styles();
+
+                .cke_combo_text {
+                    font-family: $editor-defaults__richeditor-text--font-family;
+                    font-size: $editor-defaults__richeditor-text--font-size;
+                    color: $editor-defaults__richeditor-header--button-color;
+                }
+
+                .cke_combo_open .cke_combo_arrow {
+                    border-top-color: $editor-defaults__richeditor-header--button-border-color;
+                    cursor: pointer;
+                }
+            }
+
+            .cke_toolbar .cke_toolgroup {
+                background: inherit;
+                border: none;
+
+                a.cke_button {
+                    @include _add-default-button-styles();
+                    @include _transparent-button-styles();
+                    cursor: pointer;
+
+                    span.cke_button_label {
+                        font-family: $editor-defaults__richeditor-text--font-family;
+                        font-size: $editor-defaults__richeditor-text--font-size;
+                    }
+                }
+            }
+
+        }
+
+        .cke_bottom {
+            .cke_resizer {
+                border-right-color: $editor-defaults__richeditor-header--button-border-color;
+            }
+
+            .cke_path .cke_path_item {
+                color: $editor-defaults__richeditor-footer--action-color;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: inherit;
+                    color: $editor-defaults__richeditor-footer--button-hover-color;
+                }
+            }
+        }
+
+        .cke_contents {
+            background-color: $editor-defaults__richeditor-content--bg-color;
+            border: $editor-defaults__richeditor-content--border;
+
+            &:hover {
+                border-color: $editor-defaults__richeditor-content--hover-border-color;
+            }
+
+            .cke_wysiwyg_frame {
+                background-color: $editor-defaults__richeditor-content--bg-color;
+
+                &:focus {
+                    z-index: 5;
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                    outline-offset: $editor-defaults__richeditor-content--focused-outline-offset;
+                    outline-width: $editor-defaults__richeditor-content--focused-outline-width;
+                    outline-color: $editor-defaults__richeditor-content--focused-outline-color;
+                    outline-style: $editor-defaults__richeditor-content--focused-outline-style;
+                }
+            }
+        }
+    }
+
+    .cke_source {
+        background-color: $editor-defaults__richeditor-content--bg-color;
+        color: $editor-defaults__richeditor-content--color;
+    }
+
+    .cke_button_disabled {
+        opacity: $_button__icon-disabled--opacity;
+        &, &:hover, &:active {
+            cursor: not-allowed !important;
+            border: none !important;
+            background: none !important;
+            box-shadow: none !important;
+
+            .cke_button_icon {
+                color: var(--bo-button-icon-color);
+            }
+        }
+    }
+
+    .cke_button_label {
+        color: $_container__action--color;
+    }
+
+    span.cke_button_icon {
+        // _replaceCkeditorIcon($ckeditor-className, $font-icon-name)
+        @include _replaceCkeditorIcon("image", "background");
+        @include _replaceCkeditorIcon("bold", "bold-text");
+        @include _replaceCkeditorIcon("italic", "italic-text");
+        @include _replaceCkeditorIcon("bulletedlist", "bullet-text");
+        @include _replaceCkeditorIcon("source", "source-code");
+        @include _replaceCkeditorIcon("undo", "response");
+        @include _replaceCkeditorIcon("redo", "forward");
+        @include _replaceCkeditorIcon("link", "chain-link");
+        @include _replaceCkeditorIcon("specialchar", "richtexteditor_specialcharacters");
+        @include _replaceCkeditorIcon("subscript", "richtexteditor_subscript");
+        @include _replaceCkeditorIcon("superscript", "richtexteditor_superscript");
+        @include _replaceCkeditorIcon("table", "table-view");
+        @include _replaceCkeditorIcon("justifyblock", "text-align-justified");
+        @include _replaceCkeditorIcon("justifyleft", "text-align-left");
+        @include _replaceCkeditorIcon("justifycenter", "text-align-center");
+        @include _replaceCkeditorIcon("justifyright", "text-align-right");
+        @include _replaceCkeditorIcon("numberedlist", "numbered-text");
+        @include _replaceCkeditorIcon("paste");
+        @include _replaceCkeditorIcon("copy");
+        @include _replaceCkeditorIcon("cut", "scissors");
+        @include _replaceCkeditorIcon("find", "search");
+        @include _replaceCkeditorIcon("radio", "bo-strategy-management");
+        @include _replaceCkeditorIcon("exportpdf", "pdf-reader");
+        @include _replaceCkeditorIcon("print");
+        @include _replaceCkeditorIcon("textcolor", "text-color");
+        @include _replaceCkeditorIcon("underline", "underline-text");
+        @include _replaceCkeditorIcon("strike", "strikethrough");
+        @include _replaceCkeditorIcon("maximize", "full-screen");
+        @include _replaceCkeditorIcon("indent");
+        @include _replaceCkeditorIcon("outdent");
+        @include _replaceCkeditorIcon("iframe", "globe");
+        @include _replaceCkeditorIcon("anchor", "flag");
+        @include _replaceCkeditorIcon("save");
+        @include _replaceCkeditorIcon("unlink", "broken-link");
+        @include _replaceCkeditorIcon("language", "translate");
+        @include _replaceCkeditorIcon("form");
+        @include _replaceCkeditorIcon("newpage", "document");
+        @include _replaceCkeditorIcon("templates", "document-text");
+        @include _replaceCkeditorIcon("preview", "detail-view");
+        @include _replaceCkeditorIcon("about", "information");
+        @include _replaceCkeditorIcon("checkbox", "complete");
+    }
+
+    .cke_toolbar {
+        &_separator {
+            background-color: var(--bo-list-border-color);
+            margin: 0 4px;
+        }
+    }
+    
+}
+
+.yw-loceditor-fixed-open,
+.yw-loceditor-dynamic-content {
+    .yw-loceditor-row-wysiwyg .yw-loceditor-row-locale + .yw-loceditor-row-editor .ye-wysiwyg .z-ckeditor > .cke {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    // .ye-com_hybris_cockpitng_editor_boolean_wrapper tr tr {
+    //     border: $editor-defaults__locedit-box--border-width solid $grey__default--900;
+    //     border-right: none;
+    // }
+    .yw-loceditor-row-editor > .z-div {
+        > .yw-feature-value-container-with-unit > div.z-div {
+            min-height: 100%;
+            height: auto;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+
+            .safari & {
+                .z-combobox {
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: flex;
+
+                    &-button {
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: flex;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -webkit-flex-direction: column;
+                        flex-direction: column;
+                        -webkit-box-pack: center;
+                        -webkit-justify-content: center;
+                        justify-content: center;
+                    }
+                    &-input {
+                        -webkit-box-flex: 1;
+                        -webkit-flex: 1;
+                        flex: 1;
+                    }
+                }
+            }
+            .ie10,
+            .ie11 & {
+                .z-combobox {
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    &-input{
+                        vertical-align: middle;
+                    }
+                    &-button {
+                        height: ($editor-defaults__inline-box--height - 2 * $editor-defaults__locedit-box--border-width);
+                        border-right: $editor-defaults__locedit-box--border-width solid $editor-defaults__box--border-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.yw-loceditor-dynamic-content {
+    .yw-loceditor-row-wysiwyg .z-label.yw-loceditor-row-locale {
+        margin-top: $editor-defaults__label-field--margin-bottom;
+    }
+}
+
+/* It disables border for validation but border is needed */
+
+// .yw-wizard-content .yw-loceditor-fixed-open input.ye-input-text.ye-com_hybris_cockpitng_editor_defaulttext.z-textbox,
+// .yw-wizard-content .yw-loceditor-dynamic-content input.ye-input-text.ye-com_hybris_cockpitng_editor_defaulttext.z-textbox {
+//     border: 0 none;
+// }
+
+.yw-loceditor-row,
+.yw-loceditor-row-wysiwyg {
+    margin-bottom: $editor-defaults__locedit-options--margin-y;
+    position: relative;
+    display: block;
+    border-collapse: separate;
+    border-radius: $editor-defaults__input-field--border-radius;
+    .yw-loceditor-fixed-closed & {
+        margin-bottom: 0;
+    }
+}
+
+.yw-loceditor-fixed-closed .yw-loceditor-row {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+
+    // .ye-com_hybris_cockpitng_editor_boolean_wrapper tr tr {
+    //     border: none;
+    // }
+}
+
+.yw-loceditor-fixed-closed .yw-loceditor-row-editor {
+    display: block;
+    padding: $boxes--border__thin; // padding for border width
+}
+
+
+.yw-loceditor-fixed-open-wysiwyg .yw-loceditor-row {
+    display: block;
+    border: 0 none;
+}
+
+.yw-loceditor .ye-default-reference-editor-bandbox .z-bandbox-input {
+    border-width: $editor-defaults__locedit-box--border-width;
+    border-right-width: 0;
+}
+
+// .yw-loceditor-row .z-bandbox {
+//     border-spacing: 0;
+// }
+
+.yw-loceditor .ye-default-reference-editor .z-bandbox-button {
+    border-width: $editor-defaults__locedit-box--border-width;
+}
+
+// check if necessary (seems duplicate)
+.yw-loceditor-collapsed .yw-loceditor-fixed-closed {
+    .yw-loceditor-row {
+        width: 100%;
+
+        .yw-loceditor-row-locale {
+            border: $editor-defaults__locedit-box--border-width solid $editor-defaults__box--border-color;
+            border-right: none;
+        }
+    }
+    .yw-loceditor-row-locale {
+        &:after, &:before {
+            width: $editor-defaults__locedit-box--border-width;
+            background: $editor-defaults__box--border-color;
+            left: $editor-defaults__locedit-label--width;
+            bottom: 0;
+            top: 0;
+            content: '';
+            position: absolute;
+        }
+        &::after {
+            left: inherit;
+            right: 0;
+        }
+    }
+}
+
+.yw-loceditor-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: stretch;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+
+    > .yw-loceditor-row-locale {
+        min-height: $editor-defaults__box--height;
+        height: auto;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        -ms-flex-align: center;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-bottom: 0;
+        background: $editor-defaults__loceditor-caption--background;
+        border-right: $editor-defaults__loceditor-caption--border-right;
+    }
+    > .yw-loceditor-row-editor {
+        display: block;
+        -ms-flex: 1 1 auto;
+        -webkit-box-flex: 1;
+        flex: 1 1 auto;
+        // border-left: $editor-defaults__locedit-box--border-width solid $editor-defaults__locedit-box--border-color;
+    }
+}
+
+.yw-loceditor-fixed-open .yw-loceditor-row {
+    width: 100%;
+}
+
+.yw-loceditor .yw-loceditor-disabled {
+    border: $editor-defaults__locedit-box--border-width solid $editor-defaults__box-disabled--border-color;
+    height: $editor-defaults__box--height;
+    line-height: $editor-defaults__input-field--line-height;
+    // text-align: center;
+    padding: $_editor-defaults__input-box-disabled--padding;
+
+    & > .z-label {
+        line-height: $_editor-defaults__input-box-disabled-label--line-height;
+        margin: 0;
+        font-style: italic;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        height: $_editor-defaults__input-box-disabled-label--height;
+    }
+}
+
+// Y EDITOR STYLING
+// ====================
+//
+
+// READ ONLY STYLES
+.z-textbox[readonly], .z-decimalbox[readonly], .z-intbox[readonly], .z-longbox[readonly], .z-doublebox[readonly],
+.z-textbox-readonly {
+    background: $editor-defaults__input-box-disabled--bg-color;
+    border-color: $editor-defaults__input-box-disabled--border-color;
+}
+
+/*
+.ye-com_hybris_cockpitng_editor_defaultdecimal input,
+.ye-com_hybris_cockpitng_editor_defaultbigdecimal input,
+.ye-com_hybris_cockpitng_editor_defaultfloat input,
+.ye-com_hybris_cockpitng_editor_defaultinteger input,
+.ye-com_hybris_cockpitng_editor_defaultshort input,
+.ye-com_hybris_cockpitng_editor_defaultbyte input,
+.ye-com_hybris_cockpitng_editor_defaultlong input,
+input.ye-com_hybris_cockpitng_editor_defaultdecimal,
+input.ye-com_hybris_cockpitng_editor_defaultbigdecimal,
+input.ye-com_hybris_cockpitng_editor_defaultfloat,
+input.ye-com_hybris_cockpitng_editor_defaultinteger,
+input.ye-com_hybris_cockpitng_editor_defaultshort,
+input.ye-com_hybris_cockpitng_editor_defaultbyte,
+input.ye-com_hybris_cockpitng_editor_defaultlong,
+*/
+.ye-input-text,
+.y-general-textinput,
+.ye-onpremise-pk-editor.z-textbox {
+    width: 100%;
+}
+
+table.ye-com_hybris_cockpitng_editor_defaultdate td.z-hbox-separator {
+    display: none;
+}
+
+.yw-custompopup-referenceeditor {
+    width: $window__custom-popup-reference-editor--width;
+    height: $window__custom-popup-reference-editor--height;
+    min-height: $window__custom-popup-reference-editor--height;
+}
+
+.attribute-label-description {
+    display: inline;
+    margin: $editor-defaults__editor-label-description-icon--margin;
+    color: $editor-defaults__editor-label-description-icon--color;
+    cursor: pointer;
+
+    &:before {
+        content: $editor-defaults__editor-label-description-icon--content;
+        font-family: $editor-defaults__editor-label-description-icon--font-family;
+        font-size: $editor-defaults__editor-label-description-icon--font-size;
+        top: $editor-defaults__editor-label-description-icon--top;
+        position: relative;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        color: $editor-defaults__editor-label-description-icon-selected--color;
+    }
+}
+
+.ye-rows-height {
+    height: $editor-defaults__editor-rows-height;
+}
+
+textarea.ye-input-text.z-textbox {
+    .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed-editor &,
+    .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-attrcell & {
+         max-width: 100%;
+    }
+    .yw-loceditor-row-editor > .z-div > & {
+        display: block;
+        width: 100% !important;
+    }
+}
+
+.ye-list .ye-list-content div.z-listbox-body {
+    // Do not remove this will break the responsive behavior of the editor area
+    width: 100% !important;
+}
+
+.yw-widget-rendering-error-container {
+    border-style: dashed;
+    border-width: thin;
+    margin: 5px;
+    padding: 5px;
+    width: auto;
+    border-color: darkred;
+}
+
+// Y RANGE EDITOR STYLING
+// ====================
+// basic styling for editors in range mode
+
+.ye-range {
+    .ye-range-label {
+        font-size: $editor-defaults__range-label-field--font-size;
+        text-transform: uppercase;
+        margin-top: 0;
+
+        .yw-loceditor-fixed-open .yw-loceditor-row-editor > .z-div > &,
+        .yw-loceditor-dynamic-content .yw-loceditor-row-editor > .z-div > & {
+            padding-left: $editor-defaults__range-localized-label-field--padding-left;
+        }
+    }
+
+    .ye-range-editor-featurevalue + .ye-range-label {
+        margin-top: $editor-defaults__range-label-field--margin-top;
+    }
+    &-endpoint {
+        margin-top: $editor-defaults__range-label-field--margin-top;
+        display: block;
+        overflow: hidden;
+        height: auto;
+
+        .y-toolbar &,
+        .ye-toolbar &,
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .ye-range-label {
+            display: block;
+            margin-bottom: $editor-defaults__range-endpoint-label--margin-top;
+        }
+        > .ye-range-label.z-label {
+            margin-bottom: 0;
+        }
+
+        & + & {
+            padding-top: $editor-defaults__range-endpoint-container--margin-top;
+        }
+    }
+}
+
+.yw-feature-value-container-with-unit {
+    height: 100%;
+
+    > div {
+        display: table-cell;
+
+        &.z-div {
+            vertical-align: top;
+            height: 100%;
+
+            &:first-child {
+                width: $editor-defaults__range-featurevalue--width-percentage;
+            }
+
+            &:last-child {
+                width: $editor-defaults__range-combobox--width-percentage;
+
+                .yw-loceditor-fixed-open &,
+                .yw-loceditor-dynamic-content & {
+
+                    .z-combobox,
+                    .z-combobox-input,
+                    .z-combobox-button {
+                        min-height: $editor-defaults__list-item--height;
+                        height: 100%;
+                    }
+                    .ie11 &,
+                    .ie10 & {
+                        border: $editor-defaults__locedit-box--border-width solid $grey__default--900;
+                        vertical-align: middle;
+
+                        .z-combobox,
+                        .z-combobox-input,
+                        .z-combobox-button {
+                            border:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .yw-editorarea-label-container {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+
+        &:empty {
+            width: 0 !important;
+            padding: 0;
+        }
+        & + .z-div {
+            -webkit-box-flex: 2;
+            -webkit-flex: 2 1 62%;
+            -ms-flex: 2 1 62%;
+            flex: 2 1 62%;
+            display: block;
+        }
+    }
+
+    .yw-feature-value-unit-container {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 1 36%;
+        -ms-flex: 1 1 36%;
+        flex: 1 1 36%;
+        display: block;
+        &:not(:first-child) .z-combobox-input {
+            border-radius: $editor-defaults__input-split-inner--border-radius;
+        }
+        .z-combobox-input {
+            &,
+            &:focus,
+            &:hover {
+                border-right: none;
+            }
+            &:hover {
+                &,
+                & + .z-combobox-button {
+                    border-color: $editor-defaults__box-focus--border-color;
+                }
+            }
+            &:focus {
+                &,
+                & + .z-combobox-button {
+                    border-color: $editor-defaults__box-focus--border-color;
+                    @if ($_editor-defaults__input-field-focus--border-width){
+                        border-width: $_editor-defaults__input-field-focus--border-width;
+                    }
+                }
+            }
+        }
+        .z-combobox-button {
+            &,
+            &:focus,
+            &:hover {
+                border-left: none;
+            }
+        }
+        .z-combobox {
+            box-shadow: none;
+            .z-combobox-input {
+                @if $_editor-defaults__box-icon-button--bg-color {
+                    background-color: $_editor-defaults__box-icon-button--bg-color;
+                }
+            }
+            &:hover {
+                .z-combobox-input,
+                .z-combobox-button {
+                    border-color: $editor-defaults__inputbox-hover--border-color;
+                }
+            }
+            &-open,
+            &-open:hover {
+                .z-combobox-input,
+                .z-combobox-input:focus + .z-combobox-button,
+                .z-combobox-input:hover + .z-combobox-button,
+                .z-combobox-button {
+                    border-color: $editor-defaults__box-focus--border-color;
+                }
+            }
+        }
+    }
+
+    .yw-feature-value-subeditor {
+        margin-right: $editor-defaults__input-field--border-width * -1;
+
+        > {
+            .z-textbox,
+            .z-decimalbox,
+            .z-intbox,
+            .z-longbox,
+            .z-doublebox {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+}
+
+.yw-feature-value-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    .yw-feature-value-subeditor {
+        width: 100%;
+        margin-right: -1px;
+        position: relative;
+        z-index: 1;
+        &:last-child {
+            > .z-hbox {
+                &,
+                table {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.yw-feature-value-container > .yw-feature-value-subeditor:last-child .ye-com_hybris_cockpitng_editor_boolean_wrapper tr tr {
+    border-right-width: $editor-defaults__locedit-box--border-width;
+}
+
+
+.yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-attrcell [class*="ye-validation-"] > .ye-validation-panel:not([class*="ye-localized"]) .y-icon {
+    position: absolute;
+    right: 0;
+    top: -($editor-defaults__label-field--line-height + $editor-defaults__label-field--margin-bottom);
+}
+
+.z-chosenbox {
+    min-height: $editor-defaults__chosenbox--min-height;
+    padding-bottom: $editor-defaults__chosenbox--padding;
+
+    &.z-chosenbox-focus {
+        border-color: $editor-defaults__box-focus--border-color;
+    }
+
+    &-input {
+        height: $editor-defaults__chosenbox-input--height;
+        margin-bottom: $editor-defaults__chosenbox-input--margin-bottom;
+    }
+    &-item {
+        height: $editor-defaults__chosenbox-item--height;
+        border-radius: $editor-defaults__chosenbox-item--border-radius;
+        margin-top: $editor-defaults__chosenbox-item--margin;
+        max-width: $editor-defaults__chosenbox-item--max-width;
+        background-color: $editor-defaults__chosenbox-item--bg-color;
+        white-space: normal;
+        height: auto;
+
+        &-content {
+            font-size: $editor-defaults__chosenbox-item--font-size;
+            line-height: $editor-defaults__chosenbox-item--line-height;
+            padding: $editor-defaults__chosenbox-item--padding;
+            color: $editor-defaults__chosenbox-item--color;
+            white-space: normal;
+            height: auto;
+            max-height: none;
+            max-width: 100%;
+        }
+    }
+    &-button {
+        right: $editor-defaults__chosenbox-item-close-btn--right;
+
+        .z-chosenbox-icon {
+            color: $editor-defaults__chosenbox-item-close-btn--color;
+            opacity: $editor-defaults__chosenbox-item-close-btn--opacity;
+        }
+        &:hover .z-chosenbox-icon {
+            background: transparent;
+            color: $editor-defaults__chosenbox-item-close-btn-hover--color;
+            opacity: $editor-defaults__chosenbox-item-close-btn-hover--opacity;
+        }
+    }
+    &-option {
+        font-size: $selectbox__combobox-input--font-size;
+        padding: $selectbox__combobox-popup--text-indent;
+        border-top: $editor-defaults__input-field--border-width solid $selectbox__combobox-comboitem--border-color;
+        min-height: $selectbox__combobox-comboitem--min-height;
+        color: $editor-defaults__chosenbox-option--color;
+        line-height: 1;
+
+        &-hover {
+            background-color: $selectbox__combobox-hover--bg-color;
+            color: $editor-defaults__chosenbox-option-hover--color;
+        }
+
+        &:first-child {
+            border-top-color: transparent;
+        }
+    }
+}
+
+.ye-default-editor-readonly {
+
+	.z-radio {
+		opacity: $editor-default-disabled-opacity;
+	}
+}

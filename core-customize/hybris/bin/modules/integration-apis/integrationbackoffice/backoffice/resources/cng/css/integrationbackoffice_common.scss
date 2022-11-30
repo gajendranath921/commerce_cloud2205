@@ -1,0 +1,101 @@
+/*
+ * Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved.
+ */
+
+@import "cockpitng-globals.scss";
+
+.integrationbackoffice-modal-body {
+  border-top: 1px solid var(--bo-field-border-color);
+  border-bottom: 1px solid var(--bo-field-border-color);
+  padding: 15px 20px 35px 20px;
+}
+
+.integrationbackoffice-modal-body-no-button {
+    border-top: 1px solid var(--bo-field-border-color);
+    padding: 15px 20px 20px 20px;
+}
+
+.integrationbackoffice-modal-label {
+    color: var(--bo-content-label-color);
+    font-size: $font-size__base;
+    font-weight: normal;
+    line-height: 14px;
+}
+
+.integrationbackoffice-modal-button {
+    float: right;
+    margin: 10px;
+}
+
+.integrationbackoffice-editor-white-background {
+  background: var(--bo-container-background);
+}
+
+/* Toolbar */
+.integrationbackoffice-toolbar {
+    background-color: var(--bo-page-header-background) !important;
+}
+
+.integrationbackoffice-toolbar .yw-toolbar-after {
+    float: right;
+}
+
+.integrationbackoffice-toolbar .z-hbox-separator {
+    visibility: hidden;
+}
+
+.integrationbackoffice-toolbar-exportconfig .yw-toolbar-actions {
+    margin-left: 20px;
+}
+
+.use-full-qualifier-container {
+    margin: -10px -20px 10px;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--bo-field-border-color)
+}
+
+/* Splitlayout */
+.integrationbackoffice-editor-splitlayout .z-splitlayout-splitter {
+    cursor: ew-resize;
+    width: 0;
+    border: 0 solid var(--bo-base-background);
+    border-right-width: 4px;
+}
+
+/* Listbox */
+.integrationbackoffice-generic-listbox {
+    border: none;
+}
+
+.integrationbackoffice-generic-listbox .z-listheader-content {
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.integrationbackoffice-generic-listbox .z-listcell-content {
+    font-size: $font-size__base;
+}
+
+.integrationbackoffice-generic-listbox .z-listheader {
+    height: 55px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+.integrationbackoffice-generic-listbox tbody.z-listbox-emptybody td{
+    background: var(--bo-container-background) !important;
+}
+
+// set icon for the first levels of Integration UI Tools
+div.yw-explorerTree .y-tree-icon {
+  @include setTreeIconGlyph("integrationbackoffice_explorer_treenode_maintenance", "integration");
+}
+
+div.yw-explorerTree .y-tree-icon {
+  @include setTreeIconGlyph("integrationbackoffice_explorer_treenode_integrationApis", "integrateapi");
+}
+
+div.yw-explorerTree .y-tree-icon {
+  @include setTreeIconGlyph("integrationbackoffice_explorer_typenode_exportconfig", "exportconfig");
+}

@@ -1,0 +1,81 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-brand-setting {
+  height: 100%;
+  overflow: auto;
+  background: var(--bo-base-background); }
+  .yw-brand-setting .brand-setting-header {
+    height: 72px;
+    background: var(--bo-container-background);
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    box-shadow: var(--bo-content-shadow-small); }
+    .yw-brand-setting .brand-setting-header-title {
+      font-size: 1.5rem; }
+    .yw-brand-setting .brand-setting-header-buttons {
+      margin-right: 0px;
+      margin-left: auto; }
+      .yw-brand-setting .brand-setting-header-buttons .z-button {
+        margin-left: 16px; }
+  .yw-brand-setting .brand-setting-container {
+    background: var(--bo-container-background);
+    padding: 24px;
+    margin: 24px;
+    border-radius: 4px;
+    box-shadow: var(--bo-content-shadow-small);
+    max-height: calc(100% - 120px);
+    overflow: scroll; }
+
+.logo-setting-info {
+  color: var(--bo-content-label-color);
+  display: block;
+  padding-top: 8px; }
+
+.logo-setting-content {
+  padding-top: 16px; }
+  .logo-setting-content .logo-upload-container {
+    padding: 16px 0px; }
+    .logo-setting-content .logo-upload-container .logo-upload-label {
+      display: block;
+      padding-bottom: 16px;
+      color: var(--bo-content-label-color); }
+    .logo-setting-content .logo-upload-container .logo-btns-container {
+      display: flex;
+      width: 372px;
+      padding-right: 8px;
+      padding-bottom: 4px; }
+    .logo-setting-content .logo-upload-container .logo-preview-container {
+      width: 372px;
+      height: 112px;
+      box-shadow: var(--bo-content-shadow-small);
+      border-radius: 4px;
+      border: 0;
+      padding: 8px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .logo-setting-content .logo-upload-container .logo-preview-container > img {
+        max-width: 340px;
+        max-height: 96px; }
+    .logo-setting-content .logo-upload-container .logo-reset-btn,
+    .logo-setting-content .logo-upload-container .logo-upload-btn {
+      font-size: 16px;
+      font-family: var(--bo-content-icon-font-family);
+      width: 28px;
+      min-height: 28px;
+      padding: 0;
+      height: 28px; }
+    .logo-setting-content .logo-upload-container .logo-upload-btn {
+      margin-left: auto;
+      margin-right: 0; }
+      .logo-setting-content .logo-upload-container .logo-upload-btn:after {
+        content: "\e038"; }
+    .logo-setting-content .logo-upload-container .logo-reset-btn {
+      margin-left: 8px; }
+      .logo-setting-content .logo-upload-container .logo-reset-btn:after {
+        content: "\e249"; }

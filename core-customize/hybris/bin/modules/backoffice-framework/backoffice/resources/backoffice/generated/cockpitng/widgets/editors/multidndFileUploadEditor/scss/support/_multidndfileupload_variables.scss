@@ -1,0 +1,20 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$multidndfileupload__preview-list--margin-bottom: $_container-spacing-default__tiny;
+$multidndfileupload__preview-list--border-radius: $_layout-panels__panel--border-radius;
+$multidndfileupload__preview-list--border-color: $_default-list__item--border-color;
+$multidndfileupload__preview-list-item--height: $editor-defaults__inline-box--height;
+$multidndfileupload__preview-list-item--padding-left: $container-spacing-default__third;
+$multidndfileupload__preview-list-item--padding-right: $multidndfileupload__preview-list-item--padding-left + $editor-defaults__inline-box-delete-btn--size;
+$multidndfileupload__preview-image--border: false; //$boxes--border__thin solid $multidndfileupload__preview-list--border-color;
+$_multidndfileupload__preview-image--border-radius: 0;
+$multidndfileupload__preview-image--margin-right: $_container-spacing-default__tiny;
+$multidndfileupload__preview-image--max-width: $toolbar__button-medium--size;
+$multidndfileupload__preview-image--max-height: $toolbar__button-small--size;
+$multidndfileupload__preview-file-name--max-width: calc(100% - #{$multidndfileupload__preview-image--margin-right + $multidndfileupload__preview-image--max-width});
+$multidndfileupload__preview-file-name--padding-left: $multidndfileupload__preview-image--max-width + $multidndfileupload__preview-image--margin-right;
+$_multidndfileupload__preview-file-name--border-top: none;
+$multidndfileupload__preview-delete-btn--right: floor(($multidndfileupload__preview-list-item--height - $editor-defaults__inline-box-delete-btn--size)/2);

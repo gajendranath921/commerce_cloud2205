@@ -1,0 +1,27 @@
+/* Status */
+/* Button Color Scheme */
+.yw-dnd-config-popup {
+  width: 260px;
+  margin: 7px;
+  padding: 12px 16px;
+  overflow: visible; }
+.yw-dnd-config-main-info.z-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 12px; }
+.yw-dnd-config-additional-info.z-label {
+  display: block;
+  color: var(--bo-content-label-color);
+  padding-top: 12px; }
+.yw-dnd-config-type-combo + .yw-dnd-config-additional-info.z-label {
+  margin-top: 12px; }
+  .yw-dnd-config-type-combo + .yw-dnd-config-additional-info.z-label:before {
+    content: "";
+    position: absolute;
+    margin-top: -12px;
+    border-top: 1px solid var(--bo-container-border-color);
+    left: 0;
+    top: auto;
+    bottom: auto;
+    right: 0; }

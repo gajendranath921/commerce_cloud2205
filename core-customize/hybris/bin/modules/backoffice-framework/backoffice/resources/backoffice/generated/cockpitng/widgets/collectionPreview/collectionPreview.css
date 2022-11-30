@@ -1,0 +1,47 @@
+/* Status */
+/* Button Color Scheme */
+.yw-collection-preview-cnt {
+  width: 100%;
+  height: 100%;
+  background: var(--bo-container-background); }
+  .yw-collection-preview-cnt > div.z-listbox {
+    border: none; }
+  .yw-collection-preview-cnt > div.z-listboxdiv .z-listbox-body .z-listitem {
+    background: none; }
+  .yw-collection-preview-cnt > div.z-listboxdiv .z-listbox-body .z-listcell {
+    padding: 8px; }
+  .yw-collection-preview-cnt div.z-listbox-body .z-listitem-selected div.yw-collection-prev-imgcontainer img {
+    border-color: var(--bo-list-selected-border-color); }
+
+.yw-collection-prev-imgcontainer {
+  background-color: var(--bo-container-background);
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--bo-list-border-color);
+  border-radius: 4px;
+  position: relative; }
+  .yw-collection-prev-imgcontainer img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+.yw-collection-prev-label > .z-label, .yw-collection-prev-descr > .z-label {
+  padding: 8px 0 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block; }
+  .yw-collection-prev-label > .z-label:empty, .yw-collection-prev-descr > .z-label:empty {
+    display: none; }
+
+.z-window .yw-collection-preview-center .mediaInfoCnt {
+  float: left;
+  width: 40%; }
+  .z-window .yw-collection-preview-center .mediaInfoCnt > .z-vlayout-inner {
+    padding-bottom: 0 !important; }
+.z-window .yw-collection-preview-center .mediaPreviewCnt {
+  float: left;
+  width: 60%; }
+.z-window .yw-collection-preview-center .mediaPreview {
+  overflow: hidden; }

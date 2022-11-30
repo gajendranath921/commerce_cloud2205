@@ -1,0 +1,61 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "../support/_dndvalidation-variables.scss";
+
+.y-dnd-validation-popup {
+    width: $DndValidation__popup--width;
+    background-color: $DndValidation__popup--bg-color;
+    .z-window-header {
+        padding-bottom: $DndValidation__header--padding-bottom;
+        background: none;
+        box-shadow: none;
+        padding-top: $_container-spacing-default__tiny;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .z-window-content {
+        max-height: $DndValidation__content--max-height;
+    }
+    .z-checkbox,
+    .z-radio{
+        line-height: $DndValidation__checkbox--height;
+        height: $DndValidation__checkbox--height;
+        // label:before {
+        //     left: $DndValidation__checkbox-label-before--left;
+        //     top: $DndValidation__checkbox-label-before--top;
+        // }
+    }
+    .y-window-container {
+    /*    display: flex;
+        flex-direction: column;
+    */
+        height: 100%;
+    }
+    .y-summary-error-info {
+        padding: $DndValidation__summary-error--padding;
+        color: $DndValidation__summary-error--color;
+    }
+    .y-multi-select {
+        display: inline-block;
+        margin: $DndValidation__checkbox-multi-select--margin;
+    }
+    .y-control-container {
+        padding: $DndValidation__control-container--padding;
+        text-align: right;
+    }
+
+    .y-ignore-save.z-button {
+        margin-left: $DndValidation__save-btn--margin-left;
+    }
+}
+
+.y-multi-select.y-multi-state-check.z-checkbox:after {
+    content: "";
+    position: absolute;
+    top: $DndValidation__checkbox-multi-select-multistate--top;
+    left: $DndValidation__checkbox-multi-select-multistate--left;
+    width: $DndValidation__checkbox-multi-select-multistate--width;
+    height: $DndValidation__checkbox-multi-select-multistate--height;
+    background: $DndValidation__checkbox-multi-select-multistate--bg-color;
+}

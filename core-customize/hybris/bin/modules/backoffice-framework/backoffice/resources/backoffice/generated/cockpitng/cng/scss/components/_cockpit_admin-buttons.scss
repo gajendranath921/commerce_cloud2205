@@ -1,0 +1,163 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "../support/_cockpit_admin-mixins.scss";
+
+//_cockpit_admin-buttons
+
+// Buttons
+.connectBtn,
+.removeWidgetBtn,
+.templateBtn,
+.addWidgetBtn,
+.widget_toolbar .addWidgetBtn,
+.ye-toolbar .widget_toolbar .addWidgetBtn,
+.y-toolbar .widget_toolbar .addWidgetBtn,
+.invisibleChildrenBtn,
+.settingsBtn,
+.groupBtn {
+	height:16px;
+    width: 16px;
+    background-repeat: no-repeat;
+
+    &:hover {
+    	background-color: $admin-defaults__widget-buttons-hover--bg-color;
+    	background-repeat: no-repeat;
+        color: $admin-defaults__widget-buttons-hover--color;
+    }
+    &:active {
+    	box-shadow: none;
+    }
+}
+.addWidgetBtn {
+	&, &:hover {
+		@include _addFontIcon($admin-icon-add--content);
+	}
+}
+.connectBtn.connectBtn{
+    &_connected {
+        // background-image: url(images/icon_status_link_good.png);
+        @include _addFontIcon($admin-icon-connect--content);
+    }
+    &_disconnected {
+        // background-image: url(images/icon_func_link_available.png);
+        @include _addFontIcon($admin-icon-disconnect--content);
+    }
+}
+.removeWidgetBtn {
+    background: $admin-defaults__remove-widget-button--background;
+    color: $admin-defaults__remove-widget-button--color;
+
+	&:hover {
+        background: $admin-defaults__remove-widget-button--hover-background;
+        color: $admin-defaults__remove-widget-button--hover-color;
+	}
+    &:active, &:focus {
+        background: $admin-defaults__remove-widget-button--active-background;
+        color: $admin-defaults__remove-widget-button--active-color;
+    }
+    .widgetClipboard & {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+    }
+}
+.exitBtn {
+    padding-top: 15px;
+    padding-left: 10px;
+    float: left;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+}
+.templateBtn {
+    &_activated {
+        // background-image: url(images/templateIconActive.png);
+        @include _addFontIcon($admin-icon-template--content);
+    }
+    &_deactivated {
+        // background-image: url(images/templateIconInactive.png);
+        @include _addFontIcon($admin-icon-template--content);
+        opacity: $admin-defaults-disabled-icon--opacity;
+    }
+}
+
+.invisibleChildrenBtn {
+	&, &:hover {
+    	// background-image: url(images/icon_notvisible_16x16.png);
+        @include _addFontIcon($admin-icon-not-visible--content);
+	}
+
+    .cng-adminmode-symbolic & {
+        display: none;
+    }
+}
+
+.invisibleWidgetChildren > .widget_cnt > .widget_toolbar .addWidgetBtn {
+    // background-image: url("images/icon_plus_dark_16x16.png");
+    @include _addFontIcon($admin-icon-add--content);
+    opacity: $admin-defaults-disabled-icon--opacity;
+}
+
+.settingsBtn {
+	&, &:hover {
+    	// background-image: url(images/icon_edit_available_16x16.png);
+    	// background-position: 2px 2px;
+        @include _addFontIcon($admin-icon-edit--content);
+	}
+}
+
+.groupBtn {
+	&, &:hover {
+    	// background-image: url(images/icon_func_group.png);
+    	// background-position: 2px 2px;
+        @include _addFontIcon($admin-icon-add-group--content);
+
+	    &.ungroup {
+	        // background-image: url(images/icon_func_ungroup.png);
+            @include _addFontIcon($admin-icon-add-group--content);
+            opacity: $admin-defaults-disabled-icon--opacity;
+	    }
+	}
+}
+
+.settingsContent {    
+    button.z-button {
+        width: $admin-defaults__z-button--size;
+        height: $admin-defaults__z-button--size;
+    }
+}
+
+.widgetConnWizardRemoveBtnContainer,
+.settingsContent,
+.widget-sockets-content { 
+    .yo-delete-btn {
+        & {
+            background: none;
+        }
+        &:hover {
+            color: $admin-defaults__button-hover--color;
+            border: 0.0625rem solid $admin-defaults__button-hover--border-color;
+            border-radius: $admin-defaults__button--border-radius;
+            background-color: $admin-defaults__button-hover--bg-color;
+        }
+        &:active {
+            box-shadow: none;
+            color: $admin-defaults__button-selected-color;
+            border: 0.0625rem solid $admin-defaults__button--border-color;
+            border-radius: $admin-defaults__button--border-radius;
+            background-color: $admin-defaults__button-active--bg-color;
+            outline-color: $admin-defaults__button-active--outline-color;
+        }
+        &:focus {
+            outline: $_button-focus-outline-width dotted $_button-focus-outline-color;
+            outline-offset: $_button-focus-outline-offset;
+        }
+    }
+}
+
+.cng-adminmode .widget_toolbar .z-toolbarbutton {
+    padding: 0;
+    margin: 0 4px;
+    line-height: $admin-defaults-icon--font-size;
+}

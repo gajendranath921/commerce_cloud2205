@@ -1,0 +1,180 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Highilighte Window
+================================*/
+// Layout & Coloring for Highlighted Windows
+@charset "UTF-8";
+@import "../support/_cockpit-mixins.scss";
+
+.z-window-highlighted {
+    .z-window-header {
+        box-shadow: $messagebox-popup__messagebox-header-shadow;
+        height: $messagebox-popup__messagebox-header-height;
+    }
+    .z-window-content {
+        > .z-hbox:first-child {
+            background: $window__popup--bg-color;
+            width: 100%;
+            table-layout: fixed;
+            word-break: break-all;
+        }
+        > .z-hbox {
+            font-size: $messagebox-popup__messagebox-content-font-size;
+            padding: $messagebox-popup__messagebox-content-box-padding;
+        }
+    }
+    &-icon.z-window-highlighted-close {
+        background: url("images/icon_func_modal_close.png") no-repeat scroll center center #6F7C91;
+        height: 26px;
+        width: 26px;
+    }
+    &-header {
+        font-size: $font-size__large;
+        font-weight: 400;
+        padding-top: 0px;
+        line-height: 25px;
+    }
+    .z-center,
+    .z-north,
+    .z-south,
+    .z-west,
+    .z-east {
+        &-header {
+            .yw-caption-container {
+                position: relative;
+            }
+        }
+    }
+}
+
+.yw-info-box {
+    overflow: auto;
+    background: $_window__info-box--bg-color;
+    color: $_window__info-box--color;
+    border-color: $_window__info-box--border-color;
+    border-style: solid;
+    border-width: $_window__info-box--border-width;
+    padding: $_window__info-box--padding;
+    margin-bottom: $_window__info-box--margin-bottom;
+
+    .yw-editorarea-tabbox-tabpanels-tabpanel & {
+        padding-left: $_window__info-box-editorarea--padding-x;
+        padding-right: $_window__info-box-editorarea--padding-x;
+    }
+    .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox & {
+        padding: $_window__info-box-editorarea-section--padding;
+    }
+
+    .z-vlayout-inner > &{
+        border-right-width: 0;
+        border-left-width: 0;
+    }
+
+    .z-groupbox-content > & {
+        -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+    }
+
+    .z-vlayout-inner:first-child > & {
+        &:first-child {
+            border-top-width: 0;
+        }
+    }
+
+    .yw-wizard-layout > .z-vlayout-inner + .z-vlayout-inner > & {
+        &:last-child {
+            margin-bottom: $boxes--border__thin * -1;
+        }
+    }
+}
+
+
+
+
+/*================================
+    Messagebox Window
+================================*/
+// Layout & Coloring for Message Windows
+
+
+
+// .z-window .z-messagebox .z-html {
+//     text-align: justify;
+//     display: inline-block;
+// }
+.z-messagebox {
+    word-break: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+
+    &-window {
+        &.z-window-highlighted,
+        &.z-window-modal {
+            background: $window-highlighted__modal--bg-color;
+            border-radius: $window-highlighted__modal--border-radius;
+            border-color: transparent;
+            box-shadow: $window-highlighted__modal--box-shadow;
+
+            .z-window-content {
+                padding: $_window-highlighted__messagebox-content--padding;
+                div.z-messagebox-buttons {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding: $messagebox-popup__messagebox-footer-padding;
+                }
+            }
+            .z-hbox-separator {
+                width: $_window-highlighted__messagebox-separator--width;
+            }
+        }
+
+        &-footer {
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: $messagebox-popup__messagebox-footer-padding;
+
+            .z-messagebox-button.z-button:first-child {
+            	@extend .z-button.y-btn-primary;
+            }
+        }
+    }
+    .z-label {
+        font-family: $_window-highlighted__messagebox-label--font-family;
+        font-size: $_window-highlighted__messagebox-label--font-size;
+        color: $_window-highlighted__messagebox-label--font-color;
+    }
+    .z-window & .z-html {
+        text-align: justify;
+        display: inline-block;
+    }
+
+    &-icon {
+        background-position: center;
+    }
+    &-question {
+        background-image: none;
+    }
+    &-button.z-button {
+        width: auto;
+        min-width: $messagebox-popup__messagebox-btn-min-width;
+        margin-left: $messagebox-popup__messagebox-btn-margin-left;
+    }
+    &-window &-icon {
+        width: $_window-highlighted__messagebox-icon--size;
+        height: $_window-highlighted__messagebox-icon--size;
+    }
+}
+
+// for message box close button rendered in front of title
+.z-messagebox-window.z-window.z-window-highlighted.z-window-shadow {
+    .z-window-header.z-window-header-move {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}

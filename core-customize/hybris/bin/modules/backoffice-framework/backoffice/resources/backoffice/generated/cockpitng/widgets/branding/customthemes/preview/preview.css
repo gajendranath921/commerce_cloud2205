@@ -1,0 +1,124 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-theme-preview {
+  width: 100%;
+  height: 100%; }
+  .yw-theme-preview-container {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%; }
+  .yw-theme-preview-shellbar {
+    flex: 0 0 48px; }
+    .yw-theme-preview-shellbar-action {
+      color: var(--bo-shell-interactive-color); }
+      .yw-theme-preview-shellbar-action.menu {
+        margin-left: -40px;
+        margin-right: 8px; }
+    .yw-theme-preview-shellbar a {
+      text-decoration: none; }
+      .yw-theme-preview-shellbar a:hover, .yw-theme-preview-shellbar a:focus, .yw-theme-preview-shellbar a:active {
+        text-decoration: none; }
+  .yw-theme-preview-main {
+    flex: 1 1 0;
+    display: flex;
+    flex-flow: row; }
+  .yw-theme-preview-navbar {
+    background-color: var(--bo-container-background);
+    flex: 0 1 48px;
+    box-shadow: 0 0 1px var(--bo-container-border-color); }
+    .yw-theme-preview-navbar .yw-toolbar-vertical .ya-toggle-active {
+      background-color: var(--bo-list-selected-background);
+      border-bottom: var(--bo-list-border-width) solid var(--bo-list-selected-border-color); }
+    .yw-theme-preview-navbar .yw-toolbar-vertical .ya-toggle:hover:not(.ya-toggle-active) {
+      background-color: var(--bo-list-hover-background); }
+    .yw-theme-preview-navbar .ya-toggle {
+      width: 48px;
+      height: 48px;
+      padding: 8px 0 0 8px; }
+    .yw-theme-preview-navbar .ya-toggle .cng-action-icon {
+      width: 32px;
+      height: 32px;
+      font-size: 20px; }
+      .yw-theme-preview-navbar .ya-toggle .cng-action-icon:after {
+        color: var(--bo-button-icon-color); }
+  .yw-theme-preview-content {
+    flex: 1 1 auto; }
+    .yw-theme-preview-content-header {
+      background: var(--bo-base-color);
+      height: 74px;
+      padding: 18px 24px;
+      display: flex;
+      flex-flow: row; }
+      .yw-theme-preview-content-header-title {
+        color: var(--bo-text-color);
+        flex: 0 0 auto;
+        white-space: nowrap; }
+        .yw-theme-preview-content-header-title .z-label {
+          font-size: var(--bo-font-size-h3); }
+      .yw-theme-preview-content-header-buttons {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: row-reverse;
+        align-items: start; }
+        .yw-theme-preview-content-header-buttons .y-btn-primary {
+          margin-right: 16px; }
+    .yw-theme-preview-content-tabs {
+      background: var(--bo-base-color);
+      color: var(--bo-text-color);
+      height: 48px;
+      padding: 16px 0 0 24px;
+      display: flex; }
+      .yw-theme-preview-content-tabs span {
+        height: 100%; }
+        .yw-theme-preview-content-tabs span.active {
+          margin-right: 24px;
+          border-bottom: 3px solid var(--bo-active-color);
+          border-radius: 3px;
+          color: var(--bo-selected-color); }
+    .yw-theme-preview-content-details {
+      background: var(--bo-base-background);
+      padding: 20px 24px; }
+      .yw-theme-preview-content-details .title {
+        color: var(--bo-text-color); }
+        .yw-theme-preview-content-details .title .z-label {
+          font-size: var(--bo-font-size-h5); }
+      .yw-theme-preview-content-details .panel {
+        background: var(--bo-base-color);
+        padding: 19px 22px;
+        margin-top: 24px;
+        color: var(--bo-text-color); }
+        .yw-theme-preview-content-details .panel .z-label {
+          font-size: var(--bo-font-size); }
+        .yw-theme-preview-content-details .panel .description {
+          color: var(--bo-content-label-color);
+          margin-bottom: 20px; }
+        .yw-theme-preview-content-details .panel div {
+          margin-bottom: 10px; }
+        .yw-theme-preview-content-details .panel .section1 {
+          margin-bottom: 0;
+          display: flex;
+          flex-flow: row; }
+          .yw-theme-preview-content-details .panel .section1 label {
+            flex: 1 0 auto;
+            line-height: 28px;
+            cursor: auto; }
+          .yw-theme-preview-content-details .panel .section1 span {
+            flex: 0 0 auto; }
+      .yw-theme-preview-content-details .tableHeader {
+        display: flex;
+        flex-flow: row;
+        margin-top: 32px;
+        margin-bottom: 8px; }
+        .yw-theme-preview-content-details .tableHeader .title {
+          flex: 0 0 auto;
+          line-height: 28px; }
+        .yw-theme-preview-content-details .tableHeader .mode {
+          flex: 1 1 auto;
+          display: flex;
+          flex-flow: row-reverse;
+          align-items: start; }
+      .yw-theme-preview-content-details .tableBody .positive .z-label {
+        color: var(--bo-positive-color); }

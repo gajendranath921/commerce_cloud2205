@@ -1,0 +1,121 @@
+/* Status */
+/* Button Color Scheme */
+.yw-com_hybris_cockpitng_widgets_customersupport_sessionContext {
+  overflow: auto;
+  padding: 0 0 15px; }
+  .yw-com_hybris_cockpitng_widgets_customersupport_sessionContext .header-container .z-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 45px; }
+  .yw-com_hybris_cockpitng_widgets_customersupport_sessionContext .z-vlayout-inner {
+    padding-bottom: 0 !important; }
+  .yw-com_hybris_cockpitng_widgets_customersupport_sessionContext .y-session-context-label-container {
+    padding: 0 5px 10px; }
+  .yw-com_hybris_cockpitng_widgets_customersupport_sessionContext .y-session-context-label-key {
+    color: var(--bo-content-label-color);
+    font-size: 12px;
+    display: block; }
+  .yw-com_hybris_cockpitng_widgets_customersupport_sessionContext .y-session-context-label-value {
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+    color: var(--bo-content-label-color); }
+    .yw-com_hybris_cockpitng_widgets_customersupport_sessionContext .y-session-context-label-value-color {
+      color: var(--bo-link-color); }
+  .yw-com_hybris_cockpitng_widgets_customersupport_sessionContext .y-session-context-customer-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e082";
+    color: var(--bo-button-icon-color);
+    font-size: 23px; }
+  .yw-com_hybris_cockpitng_widgets_customersupport_sessionContext .y-session-context-ticket-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e1a9";
+    color: var(--bo-button-icon-color);
+    font-size: 25px; }
+  .yw-com_hybris_cockpitng_widgets_customersupport_sessionContext .y-session-context-order-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e0c3";
+    color: var(--bo-button-icon-color);
+    font-size: 25px; }
+
+.cs-session-context-icon-area {
+  width: 30px; }
+
+.y-sessioncontext-content .y-session-content-padding-box .z-tablechildren {
+  vertical-align: middle; }
+
+.cs-session-context-content {
+  padding-left: 16px; }
+
+.cs-session-context-btn-area {
+  margin-top: 10px;
+  display: flex; }
+  .cs-session-context-btn-area .cs-end-seesion-btn {
+    width: 50%;
+    margin-right: 8px;
+    color: var(--bo-button-reject-text-color);
+    border-color: var(--bo-button-reject-border-color); }
+  .cs-session-context-btn-area .y-start-call-btn {
+    margin-right: 8px;
+    width: 50%;
+    position: relative;
+    color: var(--bo-button-accept-text-color);
+    border-color: var(--bo-button-accept-border-color);
+    font-weight: normal; }
+    .cs-session-context-btn-area .y-start-call-btn:before {
+      color: var(--bo-button-accept-text-color);
+      font-family: var(--bo-content-icon-font-family);
+      content: "\e217";
+      font-size: 14px;
+      margin-right: 0.375rem; }
+  .cs-session-context-btn-area .y-end-call-btn {
+    margin-right: 8px;
+    width: 50%;
+    position: relative;
+    color: var(--bo-button-reject-text-color);
+    border-color: var(--bo-button-reject-border-color);
+    font-weight: normal; }
+    .cs-session-context-btn-area .y-end-call-btn:before {
+      font-family: var(--bo-content-icon-font-family);
+      content: "\e217";
+      font-size: 14px;
+      color: var(--bo-button-error-background);
+      margin-right: 0.375rem; }
+
+.cs-session-duration {
+  display: flex;
+  margin-top: 8px; }
+  .cs-session-duration .cs-stop-watch {
+    margin-left: 8px;
+    font-family: var(--bo-font-family-bold); }
+
+.y-session-context-end-session {
+  margin: 0;
+  float: left; }
+  .y-session-context-end-session .z-button, .y-session-context-end-session .z-button:hover {
+    background: transparent;
+    border: 1px solid;
+    border-right: 0 none;
+    height: 50px; }
+.y-session-context-content {
+  padding-top: 15px; }
+.y-session-context-asm {
+  font-size: 12px; }
+  .y-session-context-asm-container {
+    margin-top: 16px; }
+    .y-session-context-asm-container table {
+      width: 100%; }
+  .y-session-context-asm-icon {
+    margin-left: 8px;
+    width: 40px;
+    height: 40px;
+    background: transparent; }
+    .y-session-context-asm-icon:before {
+      font-family: var(--bo-content-icon-font-family);
+      content: "\e00f";
+      color: var(--bo-button-icon-color);
+      font-size: 24px;
+      right: 3px;
+      position: relative;
+      vertical-align: middle; }

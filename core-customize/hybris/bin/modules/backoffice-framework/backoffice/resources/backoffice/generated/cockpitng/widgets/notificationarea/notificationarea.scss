@@ -1,0 +1,181 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+@import "../systemBarWidget/scss/support/_systembar-variables.scss";
+
+$notification_icon--font-family: $font-family__icon;
+$notification_message--padding-x: $container-spacing-default__half;
+$notification_message--padding-y: $container-spacing-default__semi-third;
+$notification_message--border-width: $boxes--border__thin;
+$notification_icon-close--content: _getIconGlyphContentValue('decline');
+$notification_icon-close--font-family: $font-family__icon;
+$notification_icon-close--font-size: $font-size__large;
+$notification_icon-close--right: $_container-spacing-default__small;
+$notification_icon-close--top: $notification_message--padding-y + 1px;
+
+$notification_icon-success--content: _getIconGlyphContentValue('message-success');
+$notification_icon-failure--content: _getIconGlyphContentValue('message-error');
+$notification_icon-warn--content: _getIconGlyphContentValue('message-warning');
+$notification_icon-info--content: _getIconGlyphContentValue('message-information');
+$notification_icon-status--font-family: $notification_icon--font-family;
+$notification_icon-status--font-size: $font-size__large;
+$notification_icon-status--left: $notification_icon-close--right;
+$notification_icon-status--top: $notification_icon-close--top;
+$notification_icon-status--width: $toolbar__button-small--size;
+
+$notification_text--color: $_default__header--color;
+$notification_link--color: $_action__text--color;
+$notification_message--top-position: $systembar__container--height + $_container-spacing-default__medium;
+
+$notification_neutral--color: $_default__status-neutral--color;
+$notification_neutral--bg-color: $_default__status-neutral--background;
+$notification_success--color: $_default__status-positive--color;
+$notification_success--bg-color: $_default__status-positive--background;
+$notification_failure--color: $_default__status-negative--color;
+$notification_failure--bg-color: $_default__status-negative--background;
+$notification_warn--color: $_default__status-alert--color;
+$notification_warn--bg-color: $_default__status-alert--background;
+$notification_info--color: $_default__status-info--color;
+$notification_info--bg-color: $_default__status-info--background;
+
+$notification_message--padding: $notification_message--padding-y ($notification_icon-status--width + 2* $notification_message--padding-x) $notification_message--padding-y $notification_message--padding-x; //padding-right of 45px for close icon
+$notification_message-status--padding-left: $notification_icon-status--width + 2* $notification_message--padding-x; //padding-left of 45px for status icon
+$notification_message--border-radius: $_layout-panels__panel--border-radius;
+$notification_window-message-close-icon--width: $toolbar__button-medium--size;
+$notification_window-message-close-icon--margin-right: $notification_message--border-width * -1;
+$notification_window-message--padding-right: $notification_message--padding-x + $notification_window-message-close-icon--width + $notification_window-message-close-icon--margin-right;
+$notification_window-message--z-index: 1002;
+$notification_window--z-index: 12000;
+
+.yw-notification {
+    position: absolute;
+    z-index: $notification_window--z-index;
+    top: $notification_message--top-position;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto!important;
+
+    &-type{
+        color: $notification_text--color;
+    }
+    &-message {
+        display: block;
+        padding: $notification_message--padding;
+        //box-shadow: 0 0 1px $notification_border--color;
+        //background: url("images/icon_close-window-bright.png") 99% 50% no-repeat;
+        background-color: $notification_neutral--bg-color;
+        border: $notification_message--border-width solid $notification_neutral--color;
+        border-radius: $notification_message--border-radius;
+        cursor: pointer;
+        text-align: left;
+        word-wrap: break-word;
+        position: relative;
+        
+        .z-label {
+            color: $notification_text--color;
+        }
+        a {
+            color: $notification_link--color;
+        }
+
+        &:before {
+            content: '';
+            font-family: $notification_icon-status--font-family;
+            font-size: $notification_icon-status--font-size;
+            top: $notification_icon-status--top;
+            left: $notification_icon-status--left;
+            width: $notification_icon-status--width;
+            display: none;
+            position: absolute;
+        }
+
+        &:after {
+            content: $notification_icon-close--content;
+            font-family: $notification_icon-close--font-family;
+            display: inline-block;
+            font-size: $notification_icon-close--font-size;
+            position: absolute;
+            right: $notification_icon-close--right;
+            top: $notification_icon-close--top;
+            cursor: pointer;
+        }
+
+        &.success,
+        &.failure,
+        &.warning,
+        &.info {
+            padding-left: $notification_message-status--padding-left;
+
+            &:before {
+                display: block;
+            }
+        }
+
+        &.success {
+            background-color: $notification_success--bg-color;
+            border-color: $notification_success--color;
+
+            &:before {
+                content: $notification_icon-success--content;
+                color: $notification_success--color;
+            }
+        }
+        &.failure {
+            background-color: $notification_failure--bg-color;
+            border-color: $notification_failure--color;
+
+            &:before {
+                content: $notification_icon-failure--content;
+                color: $notification_failure--color;
+            }
+        }
+        &.warning {
+            background-color: $notification_warn--bg-color;
+            border-color: $notification_warn--color;
+
+            &:before {
+                content: $notification_icon-warn--content;
+                color: $notification_warn--color;
+            }
+        }
+        &.info {
+            background-color: $notification_info--bg-color;
+            border-color: $notification_info--color;
+
+            &:before {
+                content: $notification_icon-info--content;
+                color: $notification_info--color;
+            }
+        }
+    }
+
+    /* Special Skin changes for Wizzard/Window */
+    .z-window-highlighted & {
+        position: relative;
+        top: 0;
+        
+
+        &-message {
+            padding-right: $notification_window-message--padding-right;
+            z-index: $notification_window-message--z-index;
+            border-radius: 0;
+
+            &:after {
+                width: $notification_window-message-close-icon--width;
+                margin-right: $notification_window-message-close-icon--margin-right;
+                text-align: center;
+                display: block;
+            }
+            .z-label{
+                word-wrap: break-word;
+                padding-left: 0;
+                
+                &.yw-notification-type {
+                    word-wrap: normal;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

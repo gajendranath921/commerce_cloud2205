@@ -1,0 +1,56 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$defaultTabWidget__tab-text--font-size: $font-size__base;
+$defaultTabWidget__tab-text--padding: false; 
+$defaultTabWidget__tab-text--font-weight: $font-weight-normal;
+$defaultTabWidget__tab-text--color: var(--bo-title-color);
+$defaultTabWidget__tab-text--line-height: round(($defaultTabWidget__tab-text--font-size * 2));
+$defaultTabWidget__tab-selected--color: var(--bo-highlight-color);
+$defaultTabWidget__tab-selected--border-bottom: 2px solid var(--bo-highlight-color);
+$defaultTabWidget__tab-selected--outline-offset: -.0625rem;
+$defaultTabWidget__tab-selected--outline-style: var(--bo-content-focus-outline-style);
+$defaultTabWidget__tab-selected--outline-width: var(--bo-content-focus-outline-width);
+$defaultTabWidget__tab-selected--outline-color: var(--bo-content-focus-outline-color);
+$defaultTabWidget__tab--bg-color: var(--bo-page-header-background);
+$defaultTabWidget__widget--bg-color: var(--bo-container-background);
+
+.defaultTabWidget {
+    background-color: $defaultTabWidget__widget--bg-color !important;
+    
+    .z-tab {
+        div {
+            background: $defaultTabWidget__tab--bg-color !important;
+        }
+
+        .z-tab-text {
+            color: $defaultTabWidget__tab-text--color;
+            font-weight: $defaultTabWidget__tab-text--font-weight;
+            line-height: $defaultTabWidget__tab-text--line-height;
+            @if $defaultTabWidget__tab-text--padding {
+                padding: $defaultTabWidget__tab-text--padding;
+            }
+            font-size: $defaultTabWidget__tab-text--font-size;
+        }
+
+        &-selected {
+            .z-tab-text {
+                color: $defaultTabWidget__tab-selected--color;
+                border-bottom: $defaultTabWidget__tab-selected--border-bottom;
+
+                .z-label:focus {
+                    outline-offset: $defaultTabWidget__tab-selected--outline-offset;
+                    outline-style: $defaultTabWidget__tab-selected--outline-style;
+                    outline-width: $defaultTabWidget__tab-selected--outline-width;
+                    outline-color: $defaultTabWidget__tab-selected--outline-color;
+                }
+            }
+        }
+    }
+
+    > .widget_cnt > .z-tabbox > .z-tabs > .z-tabs-header > .z-tabs-content {
+        border-bottom: none;
+    }
+}

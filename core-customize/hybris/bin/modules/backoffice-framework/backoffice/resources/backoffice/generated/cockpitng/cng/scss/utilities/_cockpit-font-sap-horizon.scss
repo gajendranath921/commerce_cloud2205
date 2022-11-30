@@ -1,0 +1,18 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: "SAP-icons-horizon";
+    src: url("font/SAP-Horizon/SAP-icons.eot");
+    src: url("font/SAP-Horizon/SAP-icons.eot?#iefix") format("embedded-opentype"),
+         url("font/SAP-Horizon/SAP-icons.woff") format("woff"),
+         url("font/SAP-Horizon/SAP-icons.ttf") format("truetype");
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

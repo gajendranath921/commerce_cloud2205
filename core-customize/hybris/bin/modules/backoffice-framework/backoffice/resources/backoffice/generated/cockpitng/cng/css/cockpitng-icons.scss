@@ -1,0 +1,94 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@charset "UTF-8";
+
+@import "../scss/utilities/_cockpit-font-open-sans.scss";
+@include _setIconFont("font/");
+
+@font-face {
+    font-family: "FontAwesome";
+    src: url("../../zkau/web/b8ab4b71/zul/less/font/fontawesome-webfont.eot?v=4.3.0");
+    src: url("../../zkau/web/b8ab4b71/zul/less/font/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url(/backoffice/zkau/web/b8ab4b71/zul/less/font/fontawesome-webfont.woff2?v=4.3.0) format("woff2"), url(/backoffice/zkau/web/b8ab4b71/zul/less/font/fontawesome-webfont.woff?v=4.3.0) format("woff"), url(/backoffice/zkau/web/b8ab4b71/zul/less/font/fontawesome-webfont.ttf?v=4.3.0) format("truetype"), url(/backoffice/zkau/web/b8ab4b71/zul/less/font/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cs-font-sheet {
+	padding: $_container-spacing-default__tiny;
+
+	&-body {
+		background: #ccc;
+		text-align: center;
+		@include open-sans-font-face();
+	}
+	&-wrapper {
+		text-align: center;
+		background: $white;
+		margin: 0 auto;
+		max-width: 980px;
+
+		h1 {
+			font-size: $font-size__h1;
+		}
+	}
+	&-content {
+		display: flex;
+		flex-wrap: wrap;
+		width: auto;
+		margin: 0 auto;
+		text-align: left;
+		padding: 0 4px;
+
+		a {
+			width: 100px;
+			height: auto;
+			margin: 5px 2px;
+			min-height: 60px;
+			border: 1px solid #666;
+			display: block;
+			text-align: center;
+
+			&:before {
+				content: "";
+				width: 28px;
+				color: #666;
+				height: 28px;
+				display: block;
+				margin: 10px auto;
+				font-size: 22px;
+			}
+		}
+		span {
+			display: block;
+			border-top: 1px solid #666;
+			font-size: $font-size__small;
+			margin: 0;
+			padding: 3px;
+		}
+		&#fd-icons {
+			a {
+				&:before {
+					font-family: $font-family__icon;
+				}
+				@each $name, $glyph in $fd-icons {
+					&.icon_#{$name}:before {
+						content: _getGlyph($glyph);
+					}
+				}
+			}
+		}
+		&#awsomefont-icons {
+			a {
+				&:before {
+					font-family: $font-family-fontawesome;
+				}
+				@each $name, $glyph in $awsomefont-icons {
+					&.icon_#{$name}:before {
+						content: _getGlyph($glyph);
+					}
+				}
+			}
+		}
+	}
+}

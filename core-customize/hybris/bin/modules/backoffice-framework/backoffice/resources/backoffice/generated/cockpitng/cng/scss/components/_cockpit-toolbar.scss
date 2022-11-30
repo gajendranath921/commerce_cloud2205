@@ -1,0 +1,324 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Cockpit Toolbar
+================================*/
+// Definitions of Tabs, Tabpanel
+@charset "UTF-8";
+@import "../support/_cockpit-variables.scss";
+
+/*====== ICONS FOR TOOLBAR ======*/
+
+/* TODO USE PSEUDOCLASS FOR GENERAL BUTTON STYLE
+[class^="y-icon-"],
+[class*=" y-icon-"]{
+
+ }
+ */
+//check if is this toolbar-only definition
+.y-icon {
+    width: $editor-defaults__icon--size;
+    height: $editor-defaults__icon--size;
+    display: inline-block;
+}
+
+/*===== TOOLBAR GENERAL ======*/
+
+/*===== z-TOOLBAR ======*/
+.z-toolbar {
+    background-color: $toolbar-defaults__ztoolbar--bg-color;
+    border-bottom: none;
+    padding: $toolbar-defaults__ztoolbar--padding;
+    min-height: $toolbar-defaults__ztoolbar--min-height;
+
+    .z-button {
+        border: none;
+        margin: $toolbar-defaults__ztoolbar-button--margin;
+        padding: $toolbar-defaults__ztoolbar-button--padding;
+        background: none;
+    }
+}
+
+/*===== y-TOOLBAR ======*/
+
+.y-toolbar,
+.yw-listview-bottom-bar {
+    .z-label.number-of-items-label {
+        padding: $toolbar-defaults__ytoolbar-number-of-items--padding;
+        line-height: $toolbar-defaults__ytoolbar-number-of-items--line-height;
+    }
+
+    .z-paging {
+        border: none;
+
+        &-input,
+        &-text {
+            margin-top: 0;
+        }
+    }
+}
+
+.cng-action {
+    &:hover {
+        cursor: pointer;
+    }
+    &-icon {
+        vertical-align: middle;
+    }
+    &-enabled {
+        transition: $editor-defaults__action-button--transition;
+    }
+    &-text {
+        padding-left: 2px;
+        padding-right: 2px;
+        white-space: nowrap;
+    }
+    &-disabled {
+        &:hover {
+            cursor: default !important;
+        }
+    }
+    // styling for within the y-toolbar (could be altered to general)
+    .yw-extendedsplitlayout-toolbar &,
+    .yw-explorerTree-toolbar &,
+    .ye-toolbar &,
+    .y-toolbar & {
+        background-color: $_toolbar-defaults__action-button--bg-color;
+        color: $_toolbar-defaults__action-button--color;
+        border: $_toolbar-defaults__action-button--border;
+        border-radius: $_toolbar-defaults__action-button--border-radius;
+        overflow: hidden;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &-icon {
+            vertical-align: middle;
+        }
+        .cng-action-icon {
+            display: block;
+            margin: $_toolbar-defaults__action-button-icon--margin;
+            font-size: $_toolbar-defaults__action-button-icon--font-size;
+        }
+        .z-hbox-separator {
+            display: none;
+        }
+        td:last-child > .cng-action-text {
+            padding-right: 4px;
+            padding-left: 1px;
+        }
+        td:only-child > .cng-action-text {
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+        &-enabled.ya-cng-action-container-hover,
+        &:hover {
+            color: $_toolbar-defaults__action-button-hover--color;
+            background-color: $_toolbar-defaults__action-button-hover--bg-color;
+            border-color: $_toolbar-defaults__action-button-hover--border-color;
+        }
+
+        &:active {
+            color: $_toolbar-defaults__action-button-active--color;
+            background-color: $_toolbar-defaults__action-button-active--bg-color;
+            border-color: $_toolbar-defaults__action-button-active--border-color;
+        }
+
+        &-disabled {
+            opacity: $_button__action-tool-disabled--opacity;
+
+            &:hover {
+                cursor: default !important;
+            }
+            .cng-action-text {
+                color: $_toolbar-defaults__action-button--color;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $_toolbar-defaults__action-button--bg-color;
+                color: $_toolbar-defaults__action-button--color;
+                border-color: $_toolbar-defaults__action-button--border-color;
+            }
+        }
+    }
+}
+
+.y-toolbar {
+    overflow: hidden;
+
+    &-leftslot {
+        float: left;
+
+        .cng-action-group {
+            margin-right: $toolbar-defaults__ytoolbar-leftslot-action-group--margin;
+        }
+    }
+
+    &-rightslot {
+        float: right;
+
+        .cng-action-group {
+            margin-left: $toolbar-defaults__ytoolbar-rightslot-action-group--margin;
+        }
+    }
+
+    .z-hbox-separator {
+        width: $toolbar-defaults__ytoolbar-separator--width;
+
+        @if $toolbar-defaults__ytoolbar-separator--bg-color {
+            background-color: $toolbar-defaults__ytoolbar-separator--bg-color;
+        }
+    }
+
+    .z-paging-button,
+    .yw-itemSelectorButton,
+    .cng-action-enabled .cng-action-icon {
+        @if $toolbar-defaults__ytoolbar-button--shadow {
+            box-shadow: $toolbar-defaults__ytoolbar-button--shadow;
+        }
+        &:hover,
+        &:focus {
+            @if $toolbar-defaults__ytoolbar-button-hover-focus--shadow {
+                box-shadow: $toolbar-defaults__ytoolbar-button-hover-focus--shadow;
+            }
+        }
+    }
+
+    .z-paging-button[disabled] {
+        &:hover,
+        &:focus {
+            @if $toolbar-defaults__ytoolbar-button-disabled-hover-focus--shadow {
+                box-shadow: $toolbar-defaults__ytoolbar-button-disabled-hover-focus--shadow;
+            }
+        }
+    }
+
+    .cng-action-group {
+        display: inline-block;
+
+        > tbody {
+            display: inline-table;
+        }
+
+        td {
+            > .z-label {
+                line-height: $window__action-group-label--line-height;
+                padding: $window__action-group-label--padding;
+                color: $window__action-group-label--color;
+                display: inline-block;
+            }
+        }
+
+        + .cng-action-group {
+            &:before {
+                content: "";
+                display: inline-block;
+                margin-right: $window__action-group-delimiter--margin-x;
+                height: $window__action-group-delimiter--height;
+                z-index: $window__action-group-delimiter--z-index;
+                width: 0;
+                float: left;
+            }
+        }
+
+        + .cng-action-separator {
+            &:before {
+                border-left: $window__action-group-delimiter--border;
+                margin-left: $window__action-group-delimiter--margin-x;
+            }
+        }
+    }
+
+}
+
+/*===== STATUS BAR ======*/
+
+.y-statusbar {
+    background: $toolbar-defaults__statusbar--bg-color;
+}
+
+/*===== TOOLBAR BUTTON ======*/
+
+.ye-toolbarbutton,
+.ye-toolbar .z-toolbarbutton,
+.y-toolbar .z-toolbarbutton {
+    display: block;
+    float: left;
+    background-color: $_toolbar-defaults__action-button--bg-color;
+    color: $_toolbar-defaults__action-button--color;
+    border: $_toolbar-defaults__action-button--border;
+    border-radius: $_toolbar-defaults__action-button--border-radius;
+
+    &:focus,
+    &:hover {
+        color: $_toolbar-defaults__action-button-hover--color;
+        background-color: $_toolbar-defaults__action-button-hover--bg-color;
+        border-color: $_toolbar-defaults__action-button-hover--border-color;
+    }
+    &[disabled]{
+        &,
+        &:hover,
+        &:focus {
+            opacity: $_button__action-tool-disabled--opacity;
+            background-color: $_toolbar-defaults__action-button--bg-color;
+            color: $_toolbar-defaults__action-button--color;
+            border-color: $_toolbar-defaults__action-button--border-color;
+        }
+    }
+}
+
+.z-toolbarbutton {
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: $toolbar-defaults__toolbarbutton-hover--bg-color; //#6f7c91;
+        box-shadow: none;
+        border: none;
+    }
+
+    .ye-toolbar &,
+    .y-toolbar & {
+        &,
+        .z-toolbarbutton-body,
+        .z-toolbarbutton-body .z-toolbarbutton-content {
+            margin: $toolbar-defaults__toolbarbutton--margin;
+            padding: $toolbar-defaults__toolbarbutton--padding;
+        }
+        &:hover {
+            // &,
+            .z-toolbarbutton-body {
+                border: none;
+            }
+        }
+        > .z-toolbarbutton-content {
+            display: inline-block;
+            @if (nth($_toolbar-defaults__action-button--border,1) > 0) {
+                margin: nth($_toolbar-defaults__action-button--border,1) * -1;
+            }
+        }
+    }
+
+    .ye-toolbar .widget_toolbar &,
+    .y-toolbar .widget_toolbar & {
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+
+        &,
+        &:hover,
+        &:focus {
+            background-color: transparent;
+        }
+    }
+
+    &-content,
+    &:hover &-content {
+        color: $toolbar-defaults__toolbarbutton-content--color;
+    }
+}
+
+

@@ -1,0 +1,41 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-permission-legend {
+  display: table;
+  padding: 12px 12px 16px; }
+  .yw-permission-legend-holder {
+    display: table-cell;
+    padding: 5px 8px; }
+    .yw-permission-legend-holder > span {
+      float: left;
+      line-height: 19px; }
+      .yw-permission-legend-holder > span.z-label {
+        padding-left: 4px;
+        padding-right: 8px; }
+  .yw-permission-legend-icon-inherited-ig, .yw-permission-legend-icon-g, .yw-permission-legend-icon-inherited-id, .yw-permission-legend-icon-d {
+    height: 17px;
+    width: 17px;
+    position: relative;
+    display: inline-block; }
+    .yw-permission-legend-icon-inherited-ig:before, .yw-permission-legend-icon-g:before, .yw-permission-legend-icon-inherited-id:before, .yw-permission-legend-icon-d:before {
+      content: "\e03e";
+      position: absolute;
+      font: normal normal normal 16px var(--bo-content-icon-font-family);
+      color: inherit;
+      width: 100%;
+      text-align: center;
+      line-height: 19px; }
+  .yw-permission-legend-icon-g:before, .yw-permission-legend-icon-inherited-ig:before {
+    content: "\e05b"; }
+  .yw-permission-legend-icon-inherited-id, .yw-permission-legend-icon-inherited-ig {
+    color: var(--bo-neutral-color); }
+  .yw-permission-legend-icon-g {
+    color: var(--bo-success-color); }
+  .yw-permission-legend-icon-d {
+    color: var(--bo-error-color); }

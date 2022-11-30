@@ -1,0 +1,35 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-userprofie-container {
+  width: 168px; }
+  .yw-userprofie-container .yw-username-label {
+    font-size: 1.25rem;
+    margin: 8px 0px 16px 16px;
+    color: var(--bo-content-label-color);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block; }
+  .yw-userprofie-container .yw-profile-settings .z-listcell-content,
+  .yw-userprofie-container .yw-signout .z-listcell-content {
+    margin-left: 24px; }
+  .yw-userprofie-container .yw-profile-settings:before,
+  .yw-userprofie-container .yw-signout:before {
+    font-family: var(--bo-content-icon-font-family);
+    position: absolute;
+    margin-top: 4px;
+    color: var(--bo-content-label-color);
+    font-size: medium; }
+  .yw-userprofie-container .yw-profile-settings:before {
+    content: "\e0a6"; }
+  .yw-userprofie-container .yw-signout:before {
+    content: "\e022"; }
+.yw-userprofie-btn img {
+  height: 28px;
+  border-radius: 50%; }
+.yw-systemBarContainer .yw-userprofie-btn.z-toolbarbutton:hover, .yw-systemBarContainer .yw-userprofie-btn.z-toolbarbutton:active {
+  background-color: transparent !important; }
+.yw-systemBarContainer .yw-statusToolbar span[style="display: none;"] + .yw-userprofie-btn.z-toolbarbutton {
+  background-color: transparent; }

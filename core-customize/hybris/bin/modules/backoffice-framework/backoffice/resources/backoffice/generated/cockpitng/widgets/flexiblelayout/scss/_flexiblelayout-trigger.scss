@@ -1,0 +1,51 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "support/_flexiblelayout-variables.scss";
+
+.yw-flexlayout-trigger {
+    background: $flexlayout__trigger-summary--bg-color;
+
+    &:after {
+        font-family: $flexlayout__icon--font-family;
+        content: $flexlayout__trigger--content;
+        font-size: $flexlayout__trigger--font-size;
+        position: relative;
+    }
+
+
+    &, 
+    &-summary {
+        width: $flexlayout__trigger--button-size;
+        height: $flexlayout__trigger--button-size;
+        border-radius: $flexlayout__trigger--border-radius;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: inline-block;
+        cursor: pointer;
+        vertical-align: top;
+
+        .ya-toggle-active &,
+        &:hover,
+        &:focus {
+            background-color: $flexlayout__trigger-hover--bg-color;
+        }
+    }
+
+    &-summary {
+        font-family: $flexlayout__icon--font-family;
+        font-size: $flexlayout__trigger--font-size;
+        background: $flexlayout__trigger-summary--bg-color;
+        color: $flexlayout__trigger-summary--color;
+        text-align: center;
+
+        &:after {
+            content: $flexlayout__trigger-summary--content;
+            line-height: $flexlayout__trigger-summary--icon--line-height;
+        }
+
+        &:hover {
+            color: $flexlayout__trigger-summary--hover-color;
+        }
+    }
+}

@@ -1,0 +1,179 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "../support/_collectionBrowser-variables.scss";
+
+.yw-treeview {
+    &-cell {
+        display: table-cell;
+        padding-left: $collection-browser__tree-item-label--padding-left;
+
+        &-data-attr {
+            font-style: italic;
+        }
+        /* Spacing for IMG + Label */
+        @if $collection-browser__tree-item-preview-to-label--space != $collection-browser__tree-item-label--padding-left {
+            &-preview + &-label {
+                padding-left: $collection-browser__tree-item-preview-to-label--space;
+            }
+        }
+        &-preview {
+            width: $collection-browser__list-view-preview-image--max-size;
+            text-align: center;
+            box-sizing: content-box;
+            vertical-align: middle;
+
+            &:empty {
+                display: none;
+            }
+        }
+    }
+    &-row-subnode {
+        background: $collection-browser__tree-item-subnode--bg-color;
+    }
+}
+
+.yw-coll-browser-tree-view-table {
+    > .z-tree-body > table {
+        background-color: $collection-browser__default--bg-color;
+    }
+    .z-treerow {
+        background-color: transparent;
+    }
+    .z-tree-body td.z-treecell,
+    .z-tree-footer td.z-treefooter {
+        border: none;
+        border-top: $collection-browser__tree-item--border;
+        padding: $collection-browser__tree-item--padding;
+        position: relative;
+        background: transparent;
+    }
+    .z-tree-body > table {
+        margin-top: nth($collection-browser__tree-item--border, 1) * -1;
+    }
+    @if $_collection-browser__tree-item-topnode--border-color {
+        .z-tree-body .yw-treeview-row-topnode.z-treerow .z-treecell {
+            border-top-color: $_collection-browser__tree-item-topnode--border-color;
+        }
+    }
+    @if $_collection-browser__tree-item-subnode--border-color {
+        .z-tree-body .yw-treeview-row-subnode.z-treerow .z-treecell {
+            border-top-color: $_collection-browser__tree-item-subnode--border-color;
+        }
+    }
+    @if $collection-browser__side-content-indent--padding {
+        .z-tree-body td.z-treecell,
+        .z-tree-footer td.z-treefooter {
+            &:before {
+                content: "";
+                border-top: inherit;
+                border-top-width: nth($collection-browser__tree-item--border, 1);
+                position: absolute;
+                left: $collection-browser__side-content-indent--padding;
+                right: $collection-browser__side-content-indent--padding;
+                top: 0;
+            }
+        }
+    
+        .z-tree-body .yw-treeview-row-topnode.z-treerow:first-child .z-treecell{
+            &:before{
+                border: none;
+            }
+        }
+    }
+
+    .z-tree-body .z-treecell-content {
+        padding-left: $collection-browser__tree-view-content--padding-left;
+    }
+    table {
+        table-layout: auto !important;
+    }
+    &-empty .z-treechildren {
+        font-weight: normal;
+        color: $collection-browser__tree-item-emptynode--color;
+        font-style: italic;
+        text-align: center;
+    }
+    .z-treerow {
+        > .z-treecell:hover {
+            @if $collection-browser__list-view-hover--bg-color {
+                background-color: $collection-browser__list-view-hover--bg-color;
+                box-shadow: $collection-browser__list-item--box-shadow $collection-browser__list-view-hover--bg-color;
+            }
+            &.z-label {
+                text-decoration: underline;
+            }
+        }
+        &.yw-coll-browser-focused > .z-treecell {
+            background-color: $collection-browser__list-view-focus--bg-color;
+            @if $collection-browser__list-item--box-shadow {
+                box-shadow: $collection-browser__list-item--box-shadow $collection-browser__tree-item-highlight--color;
+            }
+            
+            &:hover {
+                background-color: $collection-browser__list-view-focus-hover--bg-color;
+                @if $collection-browser__list-item--box-shadow {
+                    box-shadow: $collection-browser__list-item--box-shadow $collection-browser__tree-item-highlight--color;
+                }
+            }
+            @if $_collection-browser__list-view-focused--font-weight {
+                .z-label {
+                    font-weight: $_collection-browser__list-view-focused--font-weight;
+                }
+            }
+            @if $_collection-browser__list-view-focused--box-shadow {
+                &:first-child {
+                    &,
+                    &:hover {
+                        box-shadow: $_collection-browser__list-view-focused--box-shadow;
+                    }
+                }
+            }
+        }
+        &.z-treerow-selected {
+            > .z-treecell {
+                background-color: $collection-browser__list-view-selected--bg-color;
+                @if $collection-browser__list-item--box-shadow {
+                    box-shadow: $collection-browser__list-item--box-shadow $collection-browser__tree-item-highlight--color;
+                }
+                &:hover {
+                    background-color: $collection-browser__list-view-selected-hover--bg-color;
+                    @if $collection-browser__list-item--box-shadow {
+                        box-shadow: $collection-browser__list-item--box-shadow $collection-browser__tree-item-highlight--color;
+                    }
+                    &.z-label {
+                        text-decoration: underline;
+                    }
+                }
+                @if $_collection-browser__list-view-selected--font-weight {
+                    .z-label {
+                        font-weight: $_collection-browser__list-view-selected--font-weight;
+                    }
+                }
+            }
+            &.yw-coll-browser-focused > .z-treecell {
+                background-color: $collection-browser__list-view-selected-focus--bg-color;
+                @if $collection-browser__list-item--box-shadow {
+                    box-shadow: $collection-browser__list-item--box-shadow $collection-browser__tree-item-highlight--color;
+                }
+
+                &:hover {
+                    background-color: $collection-browser__list-view-selected-focus-hover--bg-color;
+                    @if $collection-browser__list-item--box-shadow {
+                        box-shadow: $collection-browser__list-item--box-shadow $collection-browser__tree-item-highlight--color;
+                    }
+                }
+            }
+            + .z-treerow-selected > .z-treecell {
+                border-top-color: $collection-browser__list-item-selected-delimiter--border-color;
+            }
+
+        }
+        &.z-treerow-disabled .z-treecell {
+            &:hover {
+                background-color: $collection-browser__default--bg-color;
+                box-shadow: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,334 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "../support/_compare-variables.scss";
+
+.yw-compareview-grid {
+  .y-tableheader {
+    position: relative;
+    display: block;
+    overflow: visible;
+
+    &:before {
+      top: $compareview__header-mask--top;
+      height: $compareview__component-mask--size;
+      content: "";
+      position: absolute;
+      width: 100%;
+      background-color: inherit;
+    }
+
+    .y-btn {
+      min-height: $_compareview__header-icon-button--min-height;
+    }
+
+    .yw-image-pin-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: $compareview__header-icon--size;
+      width: $compareview__header-icon--size;
+      right: $compareview__header-pin-button--right;
+      top: $compareview__header-pin-button--top;
+      color: $_compareview__header-icon-button--color;
+      position: absolute;
+      cursor: pointer;
+      
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:before {
+        content: $_compareview__header-pin-button--content;
+        font-family: $compareview__header-icon--font;
+        font-size: $_compareview__header-icon-button--font-size;
+      }
+    }
+
+    .y-tablecell-header-sticky {
+      .yw-image-pin-icon {
+        color: $_compareview__header-pin-button--sticky-color;
+        background: $_compareview__header-pin-button--sticky-background;
+      }
+    }
+    
+    .yw-image-remove-item-icon {
+      width: $compareview__header-icon--size;
+      height: $compareview__header-icon--size;
+      line-height: $compareview__header-icon--size;
+      right: $compareview__header-close-button--right;
+      top: $compareview__header-close-button--top;
+      background: transparent; //url("images/icon_close-column_default.svg") no-repeat center;
+      display: inline-block;
+      position: absolute;
+
+      &:hover {
+      //  background: transparent;
+      //  background-image: url("images/icon_close-column_hover.svg");
+        cursor: pointer;
+      }
+
+      &:before {
+        content: $_compareview__header-close-button--content;
+        font-family: $compareview__header-icon--font;
+        font-size: $_compareview__header-icon-button--font-size;
+        transform: translate3d(-50%,-50%,0);
+        left: 50%;
+        top: 50%;
+        position: absolute;
+      }
+    }
+    @if $compareview__header--border-radius {
+      .y-tablecell-header_last .yw-compareview-cell-content {
+        border-top-right-radius: $compareview__header--border-radius;
+      }
+    }
+    .yw-compareview-cell-content {
+      border-top: none;
+      @if $_compareview__header--border-bottom-color {
+        border-bottom: $compareview__cell-defaults--border-width solid $_compareview__header--border-bottom-color;
+      } @else {
+        border-bottom: $compareview__row-header-border-top;
+      }
+      padding-top: $compareview-flex__header-cell--padding-top;
+      padding-bottom: 0;
+      @if $_compareview__row-header--color {
+        color: $_compareview__row-header--color;
+      }
+      height: 100%;
+
+      &:before {
+        top: $compareview__column-header-cell--top;
+        border-bottom: $compareview__column--border;
+        border-bottom-color: $compareview__row-header--border-color;
+        left: 0;
+        margin-left: 0;
+      }
+      > div {
+        &:first-child {
+          padding-top: $_compareview-flex__header-cell-container--padding-top;
+          padding-bottom: $compareview__header-cell--padding-bottom;
+          display: block;
+        }
+      }
+      > span {
+        &:first-child {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    > .y-tablerow {
+      height: auto !important;
+      overflow: visible;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      > th {
+        height: auto;
+      }
+    }
+    @if $compareview__header--border-radius {
+      .y-tablerow:first-child .y-tablecell-header-sticky {
+        .yw-compareview-cell-content {
+          border-top-left-radius: $compareview__header--border-radius;
+          z-index: 0;
+        }
+        &:before {
+          background-color: inherit;
+          content: "";
+          width: $compareview__header--border-radius * 2;
+          height: $compareview__header--border-radius * 2;
+          position: absolute;
+          margin-top: $compareview__header--border-radius * -1;
+          margin-left: $compareview__header--border-radius * -1 + $compareview__name-column--margin-left;
+          top: auto;
+          left: auto;
+          z-index: -1;
+        }
+        ~ .y-tablecell-header-sticky {
+          .yw-compareview-cell-content {
+            border-top-left-radius: 0;
+          }
+          &:before {
+            content: normal;
+          }
+        }
+      }
+    }
+    .yw-compareview-different-mark .yw-compareview-mark-icon {
+      margin-top: $_compareview__header-difference-indicator--margin-top;
+    }
+  }
+  .yw-compareview-header-summary {
+    &-item {
+      vertical-align: bottom;
+
+      .yw-compareview-cell-content {
+        text-align: left;
+      }
+    }
+    &-add {
+      bottom: $compareview__header-add-button--bottom;
+      @if $_compareview__header-show-diff-only--padding-x {
+        padding-left: $_compareview__header-show-diff-only--padding-x;
+        padding-right: $_compareview__header-show-diff-only--padding-x;
+      }
+      line-height: $compareview__header-add-button--line-height;
+      font-size: $compareview__header-buttons--font-size;
+      height: $_compareview__header-icon-button--min-height;
+  //    padding-bottom: $compareview__header-buttons--padding-bottom;
+      display: block;
+      position: absolute;
+
+      &:before {
+        // width: $compareview__header-icon--size;
+        // height: $compareview__header-icon--size;
+        top: $compareview__header-buttons-icon--top;
+        margin-right: $compareview__header-buttons-icon--margin-right;
+        // background: url("images/icon_add-column.svg") no-repeat center;
+        display: inline-block;
+        position: relative;
+        font-family: $compareview__header-icon--font;
+        content: $_compareview__header-add-icon--content;
+        background-color: inherit;
+      }
+    }
+    &-label {
+      padding-bottom: $_compareview__header-title-label--padding-bottom;
+      padding-top: $_compareview__header-title-label--padding-top;
+    }
+  }
+  .yw-compareview-diff-only-checkbox {
+    bottom: $compareview__header-show-diff-only--bottom;
+    font-size: $compareview__header-buttons--font-size;
+//    padding-bottom: $compareview__header-buttons--padding-bottom;
+    display: block;
+    width: auto;
+
+    .z-checkbox-content {
+      font-weight: inherit;
+    }
+  }
+
+}
+
+.yw-compareview-empty {
+  overflow: hidden;
+
+  .y-table {
+    &,
+    .gecko & {
+      display: block;
+      overflow: auto;
+    }
+        
+    .y-tableheader {
+      overflow: visible;
+    }
+
+    .y-tableheader:before,
+    .yw-compareview-header-summary-empty:first-child:after,
+    .yw-compareview-diff-only-checkbox {
+      display: none;
+    }
+
+    .y-tableheader,
+    .y-tableheader .y-tablerow {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100% !important;
+    }
+
+    .yw-compareview-header-summary {
+      &-empty:first-child {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+
+        .yw-compareview-cell-content {
+          padding: $compareview__empty-container--padding;
+          top: $compareview__empty-content--top;
+          left: $compareview__empty-content--left;
+          width: $compareview__empty-container--width;
+          margin-top: $compareview__empty-content--padding-top;
+          height: auto;
+          transform: translate(-50%,-50%);
+          background-image: url("images/island.svg"); // compareView homepage logo
+          background-position: right top;
+          background-repeat: no-repeat;
+          background-color: transparent;
+          margin-left: 0;
+          text-align: center;
+          border: none;
+          position: absolute;
+        }
+      }    
+      .yw-compareview-header-summary-label {
+        padding-top: $compareview__empty-item--padding;
+        text-align: center;
+        display: block;
+      }
+
+      &-add {
+        bottom: $compareview__empty-button--bottom;
+        border: $compareview__empty-button--border;
+        // border-radius: $compareview__empty-button--border-radius;
+        padding: $compareview__empty-button--padding;
+        font-size: $compareview__empty-button--font-size;
+        line-height: $compareview__empty-button--line-height;
+        color: $compareview__empty-button--color;
+        height: auto;
+        // text-transform: uppercase;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        background-color: $_compareview__empty-button--bg-color;
+
+        // &:before {
+        //   margin-right: $compareview__empty-button-icon--margin-right;
+        //   width: $compareview__empty-button-icon--thickness;
+        //   height: $compareview__empty-button-icon--size;
+        //   background: $compareview__empty-button--color;
+        //   left: $compareview__empty-button-icon--left;
+        //   margin-left: $compareview__empty-button-icon-border--margin;
+        //   margin-top: $compareview__empty-button-icon-adjust--margin;
+        //   position: absolute;
+        //   content: '';
+        //   top: 50%;
+        // }
+        // &:after {
+        //   margin-right: $compareview__empty-button-icon--margin-right;
+        //   width: $compareview__empty-button-icon--size;
+        //   height: $compareview__empty-button-icon--thickness;
+        //   background: $compareview__empty-button--color;
+        //   left: $compareview__empty-button-icon--left;
+        //   margin-top: $compareview__empty-button-icon-border--margin;
+        //   margin-left: $compareview__empty-button-icon-adjust--margin;
+        //   position: absolute;
+        //   content: '';
+        //   top: 50%;
+        // }
+        &:hover {
+          color: $compareview__empty-button-hover--color;
+          background-color: $compareview__empty-button-hover--bg-color;
+          text-decoration: none;
+          
+          // &:after,
+          // &:before {
+          //   background-color: $compareview__empty-button-hover--color;
+          // }
+        }
+      }
+    }
+  }
+}

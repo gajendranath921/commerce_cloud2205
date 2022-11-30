@@ -1,0 +1,325 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+//    Mixins
+//================================
+@charset "UTF-8";
+@import "_cockpit-variables.scss";
+
+@mixin _colored-background-border ($color, $bg-color, $border-color-only:false) {
+    background: $bg-color;
+    @if $border-color-only {
+        border-color: $color;
+    }@else {
+        border: $editor-defaults__input-field--border-width solid $color;
+    }
+}
+
+@mixin _text-selection-part ($selected-bg-color, $selected-color){
+    @if $selected-bg-color {
+        background-color: $selected-bg-color;
+    }
+    @if $selected-color != "default" {
+        color: $selected-color;
+    }
+}
+
+@mixin _text-selection ($bg-color:"default", $color:"default") {
+    &::selection {
+        @include _text-selection-part($bg-color, $color);
+    }
+    &::-moz-selection {
+        @include _text-selection-part($bg-color, $color);
+    }
+}
+
+@mixin _opacity ($opacity) {
+    $opacity-ie: $opacity * 100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity-ie})";
+    filter: alpha(opacity=$opacity-ie);
+    -moz-opacity: $opacity;
+    -khtml-opacity: $opacity;
+    opacity: $opacity;
+}
+
+@mixin _bg-shadow-coloring ($bg-color, $percentage:10%, $shadow:false) {
+    background-color: $bg-color;
+    @if $shadow {
+        box-shadow: $shadow;
+    } @else {
+        box-shadow: 0 2px 0 darken($bg-color, $percentage);
+    }
+}
+
+@mixin _prefixed ($type, $value) {
+    -webkit-#{$type}: $value;
+    -moz-#{$type}: $value;
+    -ms-#{$type}: $value;
+    #{$type}: $value;
+}
+
+@mixin _no-user-select () {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin _add-error-notification-box-side-directional-pointers ($direction:left,
+    $color-inner: $notification-box-defaults__box--bg-color,
+    $color-outer: $notification-box-defaults__box--border-color,
+    $pointer-size: $notification-box-defaults__side-pointer--size,
+    $pointer-border-width: $notification-box-defaults__box--border-width){
+    $border-direction: right;
+    $translateX: -100%;
+    @if $direction != left {
+        $border-direction: left;
+        $direction: right;
+        $translateX: 0;
+    }
+    &-#{$direction} {
+        #{$direction}: $notification-box-defaults__box--border-width !important;
+
+        &:before {
+            border-#{$border-direction}-color: $color-inner;
+            transform: translateX($translateX);
+            //#{$direction}: -$pointer-size;
+        }
+        &:after {
+            border-#{$border-direction}-color: $color-outer;
+            transform: translateX($translateX);
+            //#{$direction}: -($pointer-size + 2 * $pointer-border-width);
+        }
+    }
+}
+
+@mixin _add-default-button-styles () {
+    font-family: $font-family__text;
+    font-size: $font-size__base;
+    color: $editor-defaults__button--color;
+    background-color: $editor-defaults__button--bg-color;
+    border: $editor-defaults__button--border;
+    border-radius: $editor-defaults__button--border-radius;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: $editor-defaults__button--font-size;
+    line-height: $editor-defaults__button--line-height;
+    padding: $editor-defaults__button--padding;
+    transition: background-color .3s;
+    @include _prefixed(user-select, none);
+
+    &:hover {
+        color: $editor-defaults__button-hover--color;
+        background-color: $editor-defaults__button-hover--bg-color;
+        border: $editor-defaults__button-hover-border;
+        box-shadow: none;
+    }
+
+    &:focus {
+        outline: $editor-defaults__button-focus-outline-width dotted $editor-defaults__button-focus-outline-color;
+        outline-offset: $editor-defaults__button-focus-outline-offset;
+        color: $editor-defaults__button--color;
+        border: $editor-defaults__button--border;
+        background-color: $editor-defaults__button--bg-color;
+    }
+
+    &:active {
+        color: $editor-defaults__button-active--color;
+        background-color: $editor-defaults__button-active--bg-color;
+        border-color: $editor-defaults__button-active--border-color;
+        box-shadow: none;
+    }
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:active {
+        opacity: $editor-defaults__button-disabled--opacity;
+        color: $editor-defaults__button--color;
+        background: $editor-defaults__button--bg-color;
+        border: $editor-defaults__button--border;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+}
+
+@mixin _additional-button-styles ($color, $bg-color, $border-color, $font-weight, $color-hover, $bg-color-hover, $border-color-hover,$color-active, $bg-color-active, $border-color-active){
+    color: $color;
+    background-color: $bg-color;
+    border: $editor-defaults__button--border-width solid $border-color;
+    font-weight: $font-weight;
+
+    &:hover,
+    &:focus {
+        color: $color-hover;
+        background-color: $bg-color-hover;
+        box-shadow: none;
+        border-color: $border-color-hover;
+    }
+    &:active {
+        color: $color-active;
+        background-color: $bg-color-active;
+        box-shadow: none;
+        border-color: $border-color-active;
+    }
+
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:active {
+        opacity: $editor-defaults__button-disabled--opacity;
+        color: $color;
+        background-color: $bg-color;
+        border-color: $border-color;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+}
+
+@mixin _transparent-button-styles () {
+    border: 1px solid;
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+
+    &:hover {
+        color: $editor-defaults__button-hover--color;
+        border: $editor-defaults__button-hover-border;
+        background: $editor-defaults__button-hover--bg-color;
+    }
+
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:active {
+        border-color: transparent;
+        background: transparent;
+        opacity: $editor-defaults__button-disabled--opacity;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+}
+
+
+@mixin _validation-icon ($margin: 0, $content:$_editor-defaults__validation-icon--content){
+    content: $content;
+    width: $_editor-defaults__validation-icon--size;
+    height: $_editor-defaults__validation-icon--size;
+    @if $margin {
+        margin: $margin;
+    }
+    font-size: $_editor-defaults__validation-icon--font-size;
+    font-family: $_editor-defaults__validation-icon--font-family;
+    //background: url("images/icon_validation_sprite.png") no-repeat;
+    @content;
+}
+
+@mixin _pointingPopupDefaults ($z-index:false) {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: $navigation-popup__pointer-menu-pointer-default--border-size solid transparent;
+    @if $z-index {
+        z-index: $z-index;
+    }
+    @content;
+}
+
+@mixin _add-modified-button-bg-position($bg-position-value, $modifier){
+    &#{$modifier} {
+        &,
+        &:hover,
+        &:focus,
+        &[disabled],
+        &[disabled]:hover {
+            background-position: $bg-position-value;
+        }
+    }
+}
+
+@mixin _popupDefaults(){
+    color: $window__popup-content--color;
+    background-color: $window__popup--bg-color;
+    border-radius: $window__popup--border-radius;
+    border-color: transparent;
+    box-shadow: $window__popup--box-shadow;
+    font-family: $font-family__text;
+}
+
+@mixin _actionToolDefaults($border-radius:$toolbar__button-default--border-radius, $size:$toolbar__button-default--size){
+    width: $size;
+    height: $size;
+    background-color: $_button__action-tool--bg-color;
+    color: $_button__action-tool--color;
+    border: $boxes--border__thin solid $_button__action-tool--border-color;
+    border-radius: $border-radius;
+    font-size: $font-size__small;
+    padding: 0;
+    line-height: $size; //ceil($size * 0.85);
+    text-align: center;
+    box-shadow: 0 1px 0 0 $_button__action-tool--shadow-color;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $_button__action-tool-hover-active-focus--color;
+        background-color: $_button__action-tool-hover-active-focus--bg-color;
+        border-color: $_button__action-tool-hover-active-focus--bg-color;
+    }
+    &:disabled {
+        opacity: $_button__action-tool-disabled--opacity;
+    }
+}
+
+@mixin _combineInputAndButtonBox($type){
+    .#{$type} {
+        & &-button:hover > i {
+            color:  $editor-defaults__box--text-color;
+        }
+        &-input + &-button,
+        &-input:focus + &-button {
+            border-left: none;
+        }
+        &-button,
+        &-button:hover {
+            border-left: none;
+        }
+        &-input {
+            border-right: none;
+        }
+    }
+}
+
+@mixin _setAngleIcons($selector, $stateSelector:':before'){
+    .#{$selector} {
+        &-down {
+            &#{$stateSelector} {
+                font-family: $window__icon-button--font-family;
+                content: $window__icon-button-down--content;
+                color: $window__icon-button--color;
+            }
+        }
+        &-up {
+            &#{$stateSelector} {
+                font-family: $window__icon-button--font-family;
+                content: $window__icon-button-up--content;
+                color: $window__icon-button--color;
+            }
+        }
+        &-left {
+            &#{$stateSelector} {
+                font-family: $window__icon-button--font-family;
+                content: $window__icon-button-left--content;
+                color: $window__icon-button--color;
+            }
+        }
+        &-right {
+            &#{$stateSelector} {
+                font-family: $window__icon-button--font-family;
+                content: $window__icon-button-right--content;
+                color: $window__icon-button--color;
+            }
+        }
+    }
+}
+
+

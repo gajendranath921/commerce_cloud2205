@@ -1,0 +1,29 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "../support/_compare-variables.scss";
+
+.yw-compareview-header-title {
+    font-size: $_compareview__header-title--font-size;
+    // padding-left: $_compareview__header-title--padding-left;
+}
+
+// .yw-compareview-header {
+//     display: inline;
+// }
+
+.yw-compareview-leftslot-widget {
+    display: inline-block;
+    .yw-navigationhistory {
+        padding-left: 16px;
+    }
+}
+
+// .yw-compareview-toolbarcontainer {
+//     padding-right: 0px;
+//     padding-left: 0px;
+// }
+
+.yw-compareview-rightslot {
+    padding-right: $_compareview__toolbar-rightslot-padding-right;
+}

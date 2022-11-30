@@ -1,0 +1,215 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-brand-setting {
+  height: 100%;
+  overflow: auto;
+  background: var(--bo-base-background); }
+  .yw-brand-setting .brand-setting-header {
+    height: 72px;
+    background: var(--bo-container-background);
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    box-shadow: var(--bo-content-shadow-small); }
+    .yw-brand-setting .brand-setting-header-title {
+      font-size: 1.5rem; }
+    .yw-brand-setting .brand-setting-header-buttons {
+      margin-right: 0px;
+      margin-left: auto; }
+      .yw-brand-setting .brand-setting-header-buttons .z-button {
+        margin-left: 16px; }
+  .yw-brand-setting .brand-setting-container {
+    background: var(--bo-container-background);
+    padding: 24px;
+    margin: 24px;
+    border-radius: 4px;
+    box-shadow: var(--bo-content-shadow-small);
+    max-height: calc(100% - 120px);
+    overflow: scroll; }
+
+/* Status */
+/* Button Color Scheme */
+.yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view {
+  height: calc(100% - 120px);
+  margin: 24px;
+  overflow-y: scroll;
+  background: var(--bo-container-background);
+  box-shadow: var(--bo-content-shadow-small);
+  border-radius: 4px; }
+  .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .theme-list-item-btns {
+    display: flex;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    padding-top: 12px; }
+    .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .theme-list-item-btns .theme-edit-btn,
+    .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .theme-list-item-btns .theme-delete-btn {
+      font-size: 16px;
+      font-family: var(--bo-content-icon-font-family);
+      width: 28px;
+      min-height: 28px;
+      padding: 0;
+      height: 28px; }
+    .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .theme-list-item-btns .theme-edit-btn {
+      margin-left: auto;
+      margin-right: 0; }
+      .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .theme-list-item-btns .theme-edit-btn:after {
+        content: "\e038"; }
+    .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .theme-list-item-btns .theme-delete-btn {
+      margin-left: 8px; }
+      .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .theme-list-item-btns .theme-delete-btn:after {
+        content: "\e03d"; }
+  .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .z-listbox {
+    height: 100%;
+    overflow: auto;
+    border: none; }
+    .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .z-listbox .z-listbox-body {
+      box-shadow: none; }
+      .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .z-listbox .z-listbox-body > table > tbody {
+        text-align: center;
+        display: flex;
+        align-content: flex-start;
+        flex-flow: row wrap;
+        padding: 12px;
+        overflow: scroll; }
+      .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .z-listbox .z-listbox-body .z-listitem {
+        flex: 0 0 30%;
+        box-shadow: var(--bo-content-shadow-small);
+        border-radius: 4px;
+        margin: 12px;
+        max-width: 265px;
+        border: 0; }
+      .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .z-listbox .z-listbox-body .z-listcell {
+        height: 100%;
+        border: none;
+        display: flex;
+        justify-content: center; }
+        .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .z-listbox .z-listbox-body .z-listcell .z-listcell-content {
+          padding-top: 24px;
+          padding-bottom: 0px;
+          height: 218px;
+          width: 265px; }
+          .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .z-listbox .z-listbox-body .z-listcell .z-listcell-content .themeLabel {
+            padding-top: 12px;
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden; }
+          .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .z-listbox .z-listbox-body .z-listcell .z-listcell-content .z-image {
+            height: 60%;
+            width: 60%;
+            border-radius: 8px;
+            background-size: 100% 100%; }
+  .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .empty-list-view {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center; }
+    .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .empty-list-view .z-image {
+      max-width: 420px;
+      max-height: 158px; }
+    .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .empty-list-view-title {
+      display: block;
+      font-size: 1.5rem;
+      margin-top: 24px;
+      margin-bottom: 8px; }
+    .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-display-view .empty-list-view-subtitle {
+      display: block;
+      font-size: 1rem;
+      color: var(--bo-content-label-color); }
+
+/* Status */
+/* Button Color Scheme */
+.yw-com_hybris_backoffice_widgets_customthemes_themes .header-back-btn {
+  font-family: var(--bo-content-icon-font-family);
+  margin-right: 4px; }
+  .yw-com_hybris_backoffice_widgets_customthemes_themes .header-back-btn:after {
+    content: "\e1eb"; }
+.yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view {
+  max-height: calc(100% - 120px);
+  margin: 24px;
+  height: 100%; }
+  .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view-section-title {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    line-height: 34px; }
+  .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-preview {
+    float: left;
+    margin-left: 16px;
+    width: calc(75% - 16px);
+    height: 100%; }
+    .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-preview-content {
+      max-height: calc(100% - 58px);
+      overflow-y: scroll;
+      box-shadow: var(--bo-content-shadow-small);
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px; }
+  .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container {
+    width: 25%;
+    height: 100%;
+    float: left;
+    overflow: scroll;
+    border-radius: 4px;
+    box-shadow: var(--bo-content-shadow-small);
+    background: var(--bo-container-background);
+    padding: 0 16px; }
+    .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute {
+      margin-top: 16px;
+      width: 100%; }
+      .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute .yw-loceditor .yw-loceditor-row-editor .z-div {
+        height: 100%; }
+        .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute .yw-loceditor .yw-loceditor-row-editor .z-div > input {
+          height: 100%; }
+      .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute .yw-loceditor .z-label {
+        display: inline;
+        margin-bottom: 0px;
+        color: var(--bo-content-label-color); }
+      .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute .z-label {
+        margin-bottom: 4px;
+        display: block;
+        color: var(--bo-content-label-color); }
+        .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute .z-label.yw-label-mandatory {
+          float: left; }
+          .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute .z-label.yw-label-mandatory:after {
+            content: "*";
+            color: var(--bo-input-required-color);
+            font-size: 14px;
+            position: relative;
+            top: -2px;
+            font-weight: 700; }
+      .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute .z-textbox {
+        width: 100%;
+        height: 36px; }
+      .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute-colorTextBox.z-textbox {
+        width: 60%;
+        height: 36px; }
+      .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute-colorBox.z-colorbox {
+        width: calc(40% - 12px);
+        height: 36px;
+        margin-right: 12px;
+        border-color: var(--bo-input-border-color);
+        background: var(--bo-container-background); }
+        .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute-colorBox.z-colorbox .z-colorbox-current {
+          width: 24px;
+          height: 24px;
+          margin: 3px 9px; }
+        .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute-colorBox.z-colorbox .z-colorbox-button {
+          width: 24px;
+          height: 24px;
+          top: 14px;
+          right: 2px;
+          background-color: var(--bo-container-background); }
+        .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute-colorBox.z-colorbox .z-colorbox-icon {
+          color: var(--bo-button-icon-color);
+          font-family: var(--bo-content-icon-font-family); }
+          .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute-colorBox.z-colorbox .z-colorbox-icon:before {
+            content: "\e1e2"; }
+      .yw-com_hybris_backoffice_widgets_customthemes_themes .theme-edit-view .yw-customizeTheme-container .yw-customTheme-attribute .ye-validation-error .ye-validation-panel .ye-validation-exclamation-icon:before {
+        position: inherit; }

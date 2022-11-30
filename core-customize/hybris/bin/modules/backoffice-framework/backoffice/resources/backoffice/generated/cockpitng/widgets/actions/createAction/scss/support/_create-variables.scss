@@ -1,0 +1,104 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Create Button Variables
+================================*/
+// Variables for the Create Button
+
+
+
+
+$create__create-new-button--border-width: $boxes--border__thin;
+$create__create-new-button--border: $create__create-new-button--border-width solid $_button__action-tool--border-color;
+$create__create-new-button--bg-color: $_action__icon-button--bg-color;
+$_create__create-new-button--color: $_action__icon-button--color;
+$create__create-new-button-hover--bg-color: var(--bo-button-hover-background);
+$create__create-new-button-hover--color: var(--bo-button-hover-color);
+$_create__create-new-button-hover--border-color: var(--bo-button-hover-border-color);
+$create__create-new-button-hover--transition: background-color .2s ease-in-out, border-color .15s ease-in-out .05s, color .2s ease-in-out;
+$create__create-new-button--height: $toolbar__vertical-centering-base--height;
+
+$_create__create-new-button-icon--font-size: $font-size__base;
+$_create__create-new-button-icon--font-family: $font-family__icon;
+$_create__create-new-button-icon--content: _getIconGlyphContentValue('slim-arrow-down');
+$_create__create-new-button-open-icon--content: _getIconGlyphContentValue('slim-arrow-up');
+$_create__create-new-button-icon--top: 1px;
+
+$create__create-action-default--size: $toolbar__vertical-centering-base--height;
+$create__create-new-button-caret-icon--size: $toolbar__button-small--size;
+$create__create-new-button--caret-button--width: $create__create-new-button--height;
+$create__create-no-subtype-popup--padding: 8px 5px;
+$create__create-no-subtype-popup--color: var(--bo-text-color);
+
+$create__create-action-group-popup--padding: 10px 15px 10px 10px;
+$create__create-action-group-popup-cell--height: 20px;
+$create__create-action-group-popup-cell--color: var(--bo-list-text-color);
+$create__create-action-group-popup-cell--disabled-opacity: 0.4;
+
+$create__create-new-action--box-shadow: var(--bo-content-shadow-small);
+
+$create__create-new-button-opened--bg-color: $_button__action-tool-hover-active-focus--bg-color;
+$create__create-new-button-opened--border-color: $_button__action-tool-hover-active-focus--bg-color;
+$create__create-new-button-opened--border: $create__create-new-button--border-width solid $create__create-new-button-opened--border-color;
+$create__create-new-button-opened--color: $_button__action-tool-hover-active-focus--color;
+$create__create-new-button-select-disabled--bg-position: 4px -13px!important;
+
+$create__create-new-button-opened--box-shadow: $create__create-new-action--box-shadow;
+$create__create-new-button-action-text-label--margin-right: 5px;
+$create__create-type-action-text--color: var(--bo-button-text-color);
+
+$create__create-type-popup-lvl-1--bg-color: false; //$grey__light--500;
+$create__create-type-popup-lvl-2--bg-color: false; //$grey__light--100;
+$create__create-type-popup-lvl-3--bg-color: false; //$grey__default--1000;
+$create__create-type-popup-lvl-4--bg-color: false; //$grey__light--1000;
+$create__create-type-popup--max-height: $editor-defaults__popup-box--max-height;
+
+$create__create-type-popup-row-hover--bg-color: var(--bo-list-hover-background);
+$create__create-type-popup-row-selected--bg-color: var(--bo-list-selected-background);
+$create__create-type-popup-row-selected--color: var(--bo-selected-color);
+
+$create__create-type-popup-list-item--padding: 5px 0;
+
+// $create__create-type-toolbar-item-delimiter--color: $grey__light--800;
+$create__create-type-selector-button--margin-left: -$create__create-new-button--border-width;
+$create__create-new-action-hover--box-shadow: false; //inset 0 0 0 $editor-defaults__action-button--border-width $editor-defaults__action-button-hover--border-color;
+
+$_create__toolbar-action-button--border-radius: $toolbar__button-default--border-radius;
+$_create__toolbar-action-container--bg-color: $_button__action-tool--bg-color;
+$_create__toolbar-action-container--border-color: $_button__action-tool--border-color;
+$_create__toolbar-action-container--color: $_button__action-tool--color;
+$_create__toolbar-action-button--border: $boxes--border__thin solid $_create__toolbar-action-container--border-color;
+$_create__toolbar-action-button-selected--color: $_button__action-tool-hover-active-focus--color;
+$_create__toolbar-action-button-selected--bg-color: $_button__action-tool-hover-active-focus--bg-color;
+$_create__toolbar-action-button-selected--border-color: $_button__action-tool-hover-active-focus--bg-color;
+$_create__toolbar-action-disabled--opacity: $_button__action-tool-disabled--opacity;
+
+$create__toolbar-action-group-item-create-type-button--width: 20px;
+$create__toolbar-action-group-item-create-type-button-content--right: 0;
+$create__toolbar-action-group-item-create-type-button-content--left: auto;
+$create__toolbar-action-group-item-create-type-button-content--color: inherit;
+$create__toolbar-action-group-item-create-type-button-hover-content--bg-position: (-$create__create-new-button-caret-icon--size) (-$create__create-new-button-caret-icon--size);
+$create__toolbar-action-group-item-create-type-button-hover--color: var(--bo-button-hover-color);
+$create__toolbar-action-extended-group-create-type-button--width: $toolbar__button-default--size;
+$create__toolbar-action-extended-group-create-type-button--height: $toolbar__button-default--size;
+//$_create__toolbar-action-extended-group-create-type-button-icon--content: _getIconGlyphContentValue('dropdown');
+$_create__toolbar-action-extended-group-create-type-button-icon--right: 3px;
+$_create__toolbar-action-extended-group-create-type-button-icon--top: 2px;
+$create__toolbar-action-extended-group-image--z-index: 1;
+$create__toolbar-action-split-group-label--padding-x: 5px;
+$create__toolbar-action-split-group-label--width: 100%;
+
+
+$create__toolbar-action-split-group-items-overlap--margin: nth($editor-defaults__action-button--border-width,1) * -1;
+
+//$create__toolbar-action-split-group-table--border-color: $_create__toolbar-action-container--border-color; //nth($create__create-new-button--border,3);
+$create__toolbar-action-split-group-simple-create-type-hover--width: $create__toolbar-action-group-item-create-type-button--width + $create__toolbar-action-split-group-items-overlap--margin;
+$create__toolbar-action-split-group-simple-create-type--margin-right: false; //$create__toolbar-action-split-group-items-overlap--margin * -1;
+$create__toolbar-action-split-group-create-button--width: $toolbar__button-default--size;
+$_create__toolbar-action-split-group-create-button-icon--top: auto;
+
+$create__three-dots-group-popup--margin-top: 3px;
+$create__three-dots-group-popup--margin-left: 8px;
+$create__three-dots-group-popup--pointer-right: 10px;
+$create__three-dots-group-popup-content--padding: 7px 15px 7px 7px;

@@ -1,0 +1,210 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+/*================================
+   Y PERMISSION SKINNING
+================================*/
+
+$permission-management__borderlayout-color: var(--bo-container-background);
+$permission-management__controll-cell--size: 20px;
+$permission-management__cell-bg-icon--size: 20px;
+$permission-management__borderlayout-container--padding-x: 20px;
+$permission-management__header-container--padding-bottom: 5px;
+$permission-management__header-allow-down-icon-top: -2px;
+$permission-management__header-container--padding-top: $_container-spacing-default__tiny;
+$permission-management__header-container--padding: $_container-spacing-default__tiny $_container-spacing-default__small;
+$permission-management__filter-search--padding: 1px $_container-spacing-default__small;
+$permission-management__body-container--padding: 0px 10px;
+$permission-management__list-body--bg-color: var(--bo-container-background);
+$permission-management__center-container--bg-color: var(--bo-container-background);
+
+$permission-management__permission-inherited-icon--color: var(--bo-neutral-color);
+$permission-management__permission-granted-icon--color: var(--bo-success-color);
+$permission-management__permission-granted-icon--content: _getIconGlyphContentValue('accept');
+$permission-management__permission-denied-icon--color: var(--bo-error-color);
+$permission-management__permission-denied-icon--content: _getIconGlyphContentValue('decline');
+
+$permission-management__cell-icon--font-size: 16px;
+$permission-management__cell-icon--font-family: $font-family__icon;
+
+$permission-management__permission-filter-container--bg-color: var(--bo-container-background);
+$permission-management__permission-legend-container--bg-color: var(--bo-container-background);
+$permission-management__permission-legend-container--height: 64px;
+
+$permission-management__align-horizontal-splitter-color: false;
+
+@mixin _permission-cell-bg-icon-position ($type, $x-pos: 1, $incl-hover: true) {
+	&-#{$type} {
+		background-position: (-($x-pos * $permission-management__cell-bg-icon--size)) 0px;
+		
+		@if $incl-hover {	
+			&:hover {
+				background-position: (-($x-pos * $permission-management__cell-bg-icon--size)) (-$permission-management__cell-bg-icon--size);
+			}
+		}
+	}
+}
+
+@mixin _permission-cell-icon-font ($font-size, $container-size, $granted, $denied, $inherit-granted, $inherit-denied, $display-type: false, $add-hover:true) {
+	&-#{$inherit-granted},
+	&-#{$granted},
+	&-#{$inherit-denied},
+	&-#{$denied} {
+		height: $container-size;
+		width: $container-size;
+		position: relative;
+		@if $display-type {
+			display: $display-type;
+		}
+		&:before {
+			content: $permission-management__permission-denied-icon--content;
+        	position: absolute;
+        	font: normal normal normal #{$font-size} $permission-management__cell-icon--font-family;
+        	width: 100%;
+        	text-align: center;
+        	line-height: $container-size + 2;
+		}
+	}
+	&-#{$granted},
+	&-#{$inherit-granted} {
+		&:before {
+			content: $permission-management__permission-granted-icon--content;
+		}
+	}
+	&-#{$inherit-denied}, &-#{$inherit-granted} {
+		color: $permission-management__permission-inherited-icon--color;
+	}
+	&-#{$granted} {
+		color: $permission-management__permission-granted-icon--color;
+	}
+	&-#{$denied} {
+		color: $permission-management__permission-denied-icon--color;
+	}
+}
+
+.yw-modal-permissionmanagementgroup {
+
+	.yw-com_hybris_cockpitng_borderlayout .z-borderlayout,
+	.yw-borderlayout .opaquetrue .yw-layoutregion.z-south {
+		background: $permission-management__permission-legend-container--bg-color;
+	}
+	.z-north {
+		&, &.yw-collapsed-down .z-north-header {
+			background: $permission-management__permission-filter-container--bg-color;
+		}
+		.z-north-header {
+			button.yw-expandCollapse {
+				margin-top: -$permission-management__header-container--padding-top;
+			}
+		}
+	}
+	.z-center {
+		background: $permission-management__permission-filter-container--bg-color;
+
+		&.yw-collapsed-down {
+			background: $permission-management__center-container--bg-color;
+		}
+	}
+	.yw-collapsibleContainer-caption {
+	    > .z-north-header,
+	    > .z-center-header {
+	        .yw-caption-container > .z-caption-content {
+	        //    margin-right: $collapsible-container__caption-content-container--padding-right;
+	            > button.yw-expandCollapse, > button.yw-collapsibleContainer-locked, > button.yw-collapsibleContainer-unlocked {
+	            	top: 50%;
+	            	margin-top: -8px;
+	            }
+	        }
+	    }
+    }
+
+	tbody.z-listbox-emptybody td {
+		background: transparent;
+	}
+	@if $permission-management__align-horizontal-splitter-color {
+		.z-south-splitter {
+			background: $permission-management__permission-legend-container--bg-color;
+		}
+		.yw-collapsibleContainer-caption > .z-south-header {
+			border-color: $permission-management__permission-legend-container--bg-color;
+		}
+		.z-north-splitter {
+			background: $permission-management__permission-filter-container--bg-color;
+		}
+		.yw-collapsed-down .z-north-header {
+			border-color: $permission-management__permission-filter-container--bg-color !important;
+		}
+	}
+	@else {
+		@if $permission-management__borderlayout-color {
+
+			.yw-collapsed-down .z-north-header, .yw-collapsibleContainer-caption > .z-south-header {
+				border-color: $permission-management__borderlayout-color !important;
+				padding: $permission-management__header-container--padding;
+
+				.z-south-caption, .yw-caption-container, .z-caption-content > .z-button {
+					top: $permission-management__header-allow-down-icon-top;
+				}
+			}
+		}
+	}
+	
+	.yw-layoutregion{
+		&.z-south {
+			&, > .z-south-body {
+				min-height: $permission-management__permission-legend-container--height;
+			}
+		}
+	}
+
+	.yw-borderlayout .yw-caption-container {
+		min-height: auto;
+	}
+
+	.yw-textsearch-single {
+		padding: $permission-management__filter-search--padding;
+	}
+	.yw-collapsibleContainer-caption {
+		> .z-north-header, > .z-center-header {
+			height: auto;
+			padding: $permission-management__header-container--padding;
+		}
+		> .z-north-body {
+			height: auto !important;
+		}
+	}
+	// .yw-com_hybris_cockpitng_collectionBrowser .yw-listview-actioncontainer 
+	.yw-coll-browser .yw-listview-actioncontainer {
+		padding-top: 0;
+	}
+
+	.z-listbox-body {
+		background: $permission-management__list-body--bg-color;
+	}
+}
+
+.yw-permission {
+	&-controll-cell {
+		height: $permission-management__controll-cell--size;
+		width: $permission-management__controll-cell--size;
+	}
+
+	&-cell {
+		@include _permission-cell-icon-font ($permission-management__cell-icon--font-size, $permission-management__cell-icon--font-size, 'denied-false', 'denied-true', 'inherit-denied-false', 'inherit-denied-true');
+		
+		&-disabled {
+		    opacity: 0.5;
+		    cursor: default;
+
+		    &:hover{
+				cursor: default;
+			}
+		}
+
+	}
+	&-notpersisted {
+	   font-style: italic;
+	}
+}

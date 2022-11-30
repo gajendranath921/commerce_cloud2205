@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:util="http://www.springframework.org/schema/util"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<import resource="b2bpunchoutocc-spring-security-config.xml"/>
+
+	<context:component-scan base-package="de.hybris.platform.b2bpunchoutocc"/>
+
+	<alias name="defaultPunchOutCXMLCustomXmlHttpMessageConverter" alias="punchOutCXMLCustomXmlHttpMessageConverter"/>
+	<bean id="defaultPunchOutCXMLCustomXmlHttpMessageConverter"
+		  class="de.hybris.platform.b2bpunchoutocc.converter.PunchOutCXMLJaxb2HttpMessageConverter">
+		<property name="supportDtd" value="true"/>
+	</bean>
+
+	<bean id="commerceWebServicesMessageConvertersV2ListMergeDirective" depends-on="messageConvertersV2"
+		  parent="listMergeDirective">
+		<property name="add" ref="punchOutCXMLCustomXmlHttpMessageConverter"/>
+		<property name="beforeBeanNames">
+			<list>
+				<value>customXmlHttpMessageConverter</value>
+			</list>
+		</property>
+	</bean>
+
+	<alias name="b2bpunchoutOccSupportedTransactionURLPaths" alias="occSupportedTransactionURLPaths"/>
+	<util:map id="b2bpunchoutOccSupportedTransactionURLPaths">
+		<entry key="PunchOutSetUpRequest" value="${b2bpunchoutocc.mapping.punchout.setup.request}"/>
+		<entry key="OrderRequest" value="${b2bpunchoutocc.mapping.punchout.order.request}"/>
+	</util:map>
+
+</beans>

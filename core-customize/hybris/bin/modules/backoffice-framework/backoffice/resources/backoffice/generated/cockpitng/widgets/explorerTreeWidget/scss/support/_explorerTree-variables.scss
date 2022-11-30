@@ -1,0 +1,122 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Explorer Tree (Variables)
+================================*/
+
+
+// ========== //
+// Sizing
+// ========== //
+
+$explorertree__treecell-default--min-height: $toolbar__button-default--size;
+$explorertree__treecell-default--border-width: $boxes--border__thin;
+$explorertree__treecell--padding-y: floor(($editor-defaults__list-item-large--height - $explorertree__treecell-default--min-height)/2);
+$explorertree__treecell--padding: ($explorertree__treecell--padding-y - $explorertree__treecell-default--border-width) $_container-spacing-default__tiny $explorertree__treecell--padding-y $_container-spacing-default__small;
+
+$explorertree__tree-filter-div--padding: $_container-spacing-default__tiny $_container-spacing-default__small;
+$explorertree__item-content--padding: 0; // 0 0 $_container-spacing-default__small;
+$explorertree__item-icon--size: $toolbar__button-small--size;
+$explorertree__item-icon--margin-right: $container-spacing-default__half;
+$_explorertree__item-icon-tree-node--width: $toolbar__button-small--size; // previously $explorertree__vfiletree-icon--width
+$explorertree__item-icon--left: -$_explorertree__item-icon-tree-node--width; // -(floor($explorertree__item-icon--size/2));
+$_explorertree__item-node-label--line-height: $font-size__large;
+$_explorertree__item-node-label--padding-top: floor(($explorertree__treecell-default--min-height - $_explorertree__item-node-label--line-height)/2);
+$_explorertree__item-node-label--padding-bottom: $_explorertree__item-node-label--padding-top;
+$explorertree__item-icon--margin-top: $_explorertree__item-node-label--padding-top + 1px;
+
+$_explorertree__item-node-label--font-weight: $font-weight-normal;
+
+$explorertree__nested-plain-item-icon--left: 0;
+$explorertree__nested-plain-item--margin-left: $explorertree__item-icon--left;
+$explorertree__nested-plain-item--padding-left: $_explorertree__item-icon-tree-node--width;
+
+$explorerTree__toolbar-action-selected-icon--border-width: $editor-defaults__action-button--border-width;
+$explorerTree__toolbar-actions--padding: floor(($toolbar__default--height - $toolbar__vertical-centering-base--height) / 2);
+$_explorertree__filter-input--border-right-width: $boxes--border__thin;
+$explorertree__item--padding: 0 0 0 $container-spacing-default_two-thirds;
+$explorertree__filter-box--padding: $container-spacing-default_two-thirds;
+
+// ========== //
+// Coloring
+// ========== //
+$explorertree__default--bg-color: var(--bo-container-background);
+$explorertree__default-label--color: var(--bo-content-label-color);
+
+$explorertree__row--color: var(--bo-text-color);
+$explorertree__row--bg-color: false;
+$explorertree__row-l1--bg-color: false;
+$explorertree__row-l2--bg-color: false;
+$explorertree__row-l3--bg-color: false;
+$explorertree__row--border-color: var(--bo-list-border-color);
+$explorertree__row-depth-delimiter--border-color: var(--bo-list-border-color);
+$explorertree__row-selected--box-shadow: inset $_boxes__border__selected 0 0 0 var(--bo-selected-color);
+$explorertree__row-selected--bg-color: var(--bo-list-selected-background);
+$explorertree__row-selected-hover--bg-color: var(--bo-list-selected-hover-background);
+$explorertree__row-selected--border-bottom: $explorertree__treecell-default--border-width solid var(--bo-list-selected-border-color);
+$explorertree__row-selected--color: false;
+$explorertree__row-focus--color: false;
+$explorertree__row-focus--bg-color: false;
+$explorertree__row-hover--bg-color: var(--bo-list-hover-background);
+$explorertree__row-hover--color: false;
+$explorertree__row-highlighted--bg-color: false;
+$explorertree__row-highlighted--color: false;
+
+
+$explorertree__filter-input--color: var(--bo-text-color);
+$explorertree__filter-input--bg-color: transparent;
+$explorertree__filter-input--border-color: var(--bo-input-border-color);
+$explorertree__filter-input-focus--color: var(--bo-text-color);
+$explorertree__filter-input-focus--bg-color: var(--bo-input-focus-background);
+$explorertree__filter-input-focus--border-color: var(--bo-input-focus-border-color);
+$explorertree__filter-input-placeholder--color: var(--bo-placeholder-text-color);
+
+$explorerTree__toolbar--border-color: var(--fd-colors-border);
+$explorerTree__toolbar--border-bottom: $boxes--border__thin solid $explorerTree__toolbar--border-color;
+$explorerTree__toolbar-action-selected-icon--border-color: var(--fd-colors-border);
+
+$explorerTree__toolbar-catalog-selector--bg: var(--bo-container-background);
+$explorerTree__toolbar-catalog-selector--color: var(--bo-text-color);
+
+$explorertree__filter-button-focus--bg-color: var(--bo-button-background);
+$explorertree__filter-button-focus--border-color: var(--bo-button-border-color);
+$explorertree__filter-button-icon--content: _getIconGlyphContentValue('action-settings'); //"\e0a6"; //action-settings
+$explorertree__filter-button-icon--color: var(--bo-content-icon-color);
+$explorertree__filter-button-icon-selected--color: var(--bo-selected-color);
+$explorertree__filter-button-icon-hover--color: var(--bo-content-icon-color);
+
+
+$_explorerTree__filter-popup--transform: translateY($container-spacing-default__third / 2);
+$_explorerTree__filter-popup--padding: ($container-spacing-default__third / 2) $container-spacing-default__third;
+$_explorerTree__filter-popup-arrow--right: 8px;
+$_explorerTree__filter-popup-arrow--bottom: 100%;
+$_explorerTree__filter-popup-arrow--border-width: 7px 9px;
+$_explorerTree__filter-popup-arrow--border-bottom-color: var(--bo-container-background);
+$_explorerTree__filter-popup-arrow--bottom-color: $_explorerTree__filter-popup-arrow--border-bottom-color;
+$_explorerTree__filter-popup-arrow-shadow--border-width: 8px 10px;
+$_explorerTree__filter-popup-arrow-shadow--border-bottom-color:var(--bo-field-border-color);
+$_explorerTree__filter-popup-arrow-shadow--margin: -$boxes--border__thin;
+$_explorerTree__filter-popup-arrow-shadow--transform: translateY($_explorerTree__filter-popup-arrow-shadow--margin);
+
+//extendsplitlayout variables
+$explorertree-extendsplitlayout--tree-body--border-width: $boxes--border__thin;
+
+$explorertree-extendsplitlayout--tree-container--border-color: var(--bo-list-border-color);
+$explorertree-extendsplitlayout--row-hover--bg-color: var(--bo-list-hover-background);
+$explorertree-extendsplitlayout--row-hover--color: var(--bo-text-color);
+$explorertree-extendsplitlayout--row-selected-hover--color: var(--bo-list-active-text-color);
+
+$explorertree-extendsplitlayout--row-focus--bg-color: var(--bo-list-active-background);
+$explorertree-extendsplitlayout--row-focus-hover--bg-color: var(--bo-list-selected-hover-background);
+$explorertree-extendsplitlayout--row-selected-hover--bg-color: var(--bo-list-selected-hover-background);
+
+$explorertree-extendsplitlayout--row-selected--bg-color: var(--bo-list-selected-background);
+$explorertree-extendsplitlayout--row-selected-focus--bg-color: var(--bo-list-selected-hover-background);
+$explorertree-extendsplitlayout--row-selected-focus-hover--bg-color: var(--bo-list-selected-hover-background);
+
+$explorertree__treerow-dragged--bg: var(--bo-list-selected-background);
+$explorertree__treerow-dragged--color: var(--bo-selected-color);
+$explorertree-extendsplitlayout--row-dragged--bg-color: $explorertree__treerow-dragged--bg;
+$explorertree-extendsplitlayout--row-dragged--color: $explorertree__treerow-dragged--color;
+$explorertree__treecell-arrow-color: var(--fd-colors-icon-color);

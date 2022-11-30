@@ -1,0 +1,62 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-workflow-actions-list.z-listbox {
+  overflow-y: auto;
+  height: 100%;
+  border: 0; }
+.yw-workflow-actions-list-bottom {
+  padding: 8px 0 0;
+  text-align: right; }
+  .yw-workflow-actions-list-bottom-start {
+    float: left; }
+.yw-workflow-actions-list .z-listitem, .yw-workflow-actions-list .z-listitem:hover, .yw-workflow-actions-list .z-listitem-selected, .yw-workflow-actions-list .z-listitem-selected:hover {
+  background-color: transparent; }
+.yw-workflow-actions-list .z-listitem:hover {
+  cursor: default; }
+.yw-workflow-actions-list-item {
+  text-align: left; }
+  .yw-workflow-actions-list-item:last-child > .z-listcell {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    margin-bottom: -1px; }
+  .yw-workflow-actions-list-item .z-listcell {
+    border-color: var(--bo-list-border-color); }
+    .yw-workflow-actions-list-item .z-listcell > .z-listcell-content {
+      padding: 20px 8px 20px 4px; }
+  .yw-workflow-actions-list .yw-workflow-actions-list-item.z-listitem-selected {
+    background-color: transparent; }
+  .yw-workflow-actions-list .yw-workflow-actions-list-item:hover, .yw-workflow-actions-list .yw-workflow-actions-list-item:hover, .yw-workflow-actions-list .yw-workflow-actions-list-item.z-listitem-selected:hover, .yw-workflow-actions-list .yw-workflow-actions-list-item.z-listitem-selected:hover {
+    background-color: var(--bo-list-hover-background); }
+.yw-workflow-actions-list-content {
+  padding: 0 0 0 20px; }
+  .yw-workflow-actions-list-content .yw-workflow-actions-list-content-middle, .yw-workflow-actions-list-content .yw-workflow-actions-list-content-bottom {
+    padding: 8px 8px 0 0; }
+    .yw-workflow-actions-list-content .yw-workflow-actions-list-content-middle .z-label, .yw-workflow-actions-list-content .yw-workflow-actions-list-content-bottom .z-label {
+      max-width: 100%;
+      white-space: normal;
+      color: var(--bo-content-label-color);
+      word-break: break-all; }
+.yw-workflow-actions-list-info-container {
+  padding-top: 5px;
+  display: table;
+  width: 100%; }
+.yw-workflow-actions-list-info.z-label {
+  display: table-cell;
+  padding-right: 5px; }
+  .yw-workflow-actions-list-info.z-label:last-child {
+    text-align: right;
+    padding-right: 0;
+    padding-left: 5px; }
+.yw-workflow-actions-list .yw-workflow-actions-list-title {
+  font-size: 14px;
+  color: var(--bo-button-icon-color);
+  display: inline-block; }
+  .yw-workflow-actions-list .yw-workflow-actions-list-title:hover {
+    color: var(--bo-button-hover-color);
+    text-decoration: underline; }
+.yw-workflow-actions-list tbody.z-listbox-emptybody td {
+  background: transparent; }

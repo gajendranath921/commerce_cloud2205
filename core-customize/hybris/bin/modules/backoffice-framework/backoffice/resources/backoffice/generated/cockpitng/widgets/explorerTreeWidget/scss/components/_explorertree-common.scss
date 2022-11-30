@@ -1,0 +1,145 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Explorer Tree
+================================*/
+@import "../support/_explorerTree-mixins.scss";
+
+.yw-explorerTree {
+	&-widget {
+		border: none;
+	}
+
+	&-filterDiv {
+		background: none;
+		padding: $explorertree__filter-box--padding;
+
+		.z-bandbox-open,
+		.yw-filter-textbox:hover {
+			.z-bandbox {
+				&-input {
+					border-radius: 4px 0 0 4px;
+					border: 1px solid var(--bo-input-hover-border-color);
+					border-right-width: 0;
+				}
+
+				&-button {
+					border-radius: 0 4px 4px 0;
+					border: 1px solid var(--bo-input-hover-border-color);
+					border-left-width: 0;
+				}
+			}
+		}
+
+		.z-bandbox {
+			&-input {
+				border-right-width: $_explorertree__filter-input--border-right-width;
+				overflow: hidden;
+	    		text-overflow: ellipsis;
+	    		white-space: nowrap;
+		  	}
+
+			&-button {
+				display: none;
+				background: transparent;
+				border-left: none;
+
+				.z-bandbox-icon {
+					&:before  {
+						content: $explorertree__filter-button-icon--content;
+					}
+				}
+			}
+			&-open,
+			&:hover {
+				.z-bandbox-input {
+					border-right: none;
+				}
+
+				.z-bandbox-button {
+					display: table-cell;
+				}
+			}
+// 			&-icon {
+// 				color: $explorertree__filter-button-icon--color;
+// 			}
+		}
+	}
+
+	&-filterTextbox {
+
+		&.z-bandbox-popup {
+			overflow: visible;
+			transform: $_explorerTree__filter-popup--transform;
+			background: $_popup__wrapper--bg-color;
+			border: none;
+			color: $_default__content--color;
+			box-shadow: $window__popup--box-shadow;
+		}
+
+		&-options {
+			position: relative;
+
+			.z-vlayout {
+				padding: $_explorerTree__filter-popup--padding;
+			}
+
+			&:after,
+			&:before {
+				position: absolute;
+				right: $_explorerTree__filter-popup-arrow--right;
+				bottom: $_explorerTree__filter-popup-arrow--bottom;
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-color: transparent;
+				z-index: -1;
+				color: $_explorerTree__filter-popup-arrow--bottom-color;
+			}
+
+			&:before {
+    			margin-left: $_explorerTree__filter-popup-arrow-shadow--margin;
+				margin-right: $_explorerTree__filter-popup-arrow-shadow--margin;
+				transform: $_explorerTree__filter-popup-arrow-shadow--transform;
+    			border-width: $_explorerTree__filter-popup-arrow-shadow--border-width;
+    			border-bottom-color: $_explorerTree__filter-popup-arrow-shadow--border-bottom-color;
+			}
+
+			&:after {
+    			border-width: $_explorerTree__filter-popup-arrow--border-width;
+    			border-bottom-color: $_explorerTree__filter-popup-arrow--border-bottom-color;
+			}
+		}
+	}
+
+
+	&-hideTextBoxDiv {
+		float: right;
+	}
+
+	&-inlineActions {
+		display: table-cell;
+		float: right;
+	}
+
+}
+
+// explorer Tree related defintions
+// ====================
+//
+
+.yw-no-permission-label {
+  opacity: 0.3;
+  cursor: not-allowed !important;
+
+  > td {
+    cursor: not-allowed;
+  }
+}
+
+.yw-navigationNode-cannot-access {
+  opacity: 0.5;
+  font-style: italic;
+}

@@ -1,0 +1,20 @@
+/* Status */
+/* Button Color Scheme */
+/* Icons for explorer tree */
+div.yw-explorerTree .y-tree-icon-organization_typenode_units_sales.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-organization_typenode_units_sales.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e6c1";
+    color: var(--bo-content-icon-color); }
+
+.yw-modal-occ-coll-container.z-window {
+  min-width: 640px;
+  min-height: 580px;
+  max-width: 990px;
+  max-height: 880px; }
+
+.yw-editor-area-main-content .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox.yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-org-section-status .z-groupbox-content > table {
+  width: 100% !important; }
+.yw-editor-area-main-content .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox.yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-org-section-status .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed-editor .ye-de_hybris_platform_commerceservices_backoffice_editor_orgunitactivecheckbox .z-checkbox {
+  margin-bottom: 8px; }

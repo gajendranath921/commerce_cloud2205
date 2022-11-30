@@ -1,0 +1,21 @@
+/* Status */
+/* Button Color Scheme */
+.defaultTabWidget {
+  background-color: var(--bo-container-background) !important; }
+  .defaultTabWidget .z-tab div {
+    background: var(--bo-page-header-background) !important; }
+  .defaultTabWidget .z-tab .z-tab-text {
+    color: var(--bo-title-color);
+    font-weight: 400;
+    line-height: 28px;
+    font-size: 14px; }
+  .defaultTabWidget .z-tab-selected .z-tab-text {
+    color: var(--bo-highlight-color);
+    border-bottom: 2px solid var(--bo-highlight-color); }
+    .defaultTabWidget .z-tab-selected .z-tab-text .z-label:focus {
+      outline-offset: -0.0625rem;
+      outline-style: var(--bo-content-focus-outline-style);
+      outline-width: var(--bo-content-focus-outline-width);
+      outline-color: var(--bo-content-focus-outline-color); }
+  .defaultTabWidget > .widget_cnt > .z-tabbox > .z-tabs > .z-tabs-header > .z-tabs-content {
+    border-bottom: none; }

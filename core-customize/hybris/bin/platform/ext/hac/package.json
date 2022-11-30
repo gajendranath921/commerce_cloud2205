@@ -1,0 +1,18 @@
+{
+    "name": "hac",
+    "version": "6.6.0.0",
+    "dependencies": {
+        "jquery.flot": "0.8.3",
+        "jquery.flot.tooltip": "https://github.com/krzysu/flot.tooltip/tree/b74f0fc223d496369f0c481bcd72d1acd6a40e33",
+        "javascript-debug": "https://github.com/maruilian11/javascript-debug/tree/patch-1",
+        "codemirror": "3.11.1",
+        "jquery": "3.5.1",
+        "jquery-ui-dist": "1.13.1",
+        "js-cookie": "2.2.1",
+        "datatables.net": "1.12.1",
+        "html5shiv": "3.7.3",
+        "jquery.ztree.js": "https://github.com/zTree/zTree_v3/tree/v3.5.29",
+        "jquery-validation": "1.19.5",
+        "chart.js": "2.9.4"
+    }
+}

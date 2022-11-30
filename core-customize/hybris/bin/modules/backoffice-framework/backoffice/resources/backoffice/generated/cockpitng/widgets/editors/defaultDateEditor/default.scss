@@ -1,0 +1,59 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "scss/support/_defaultDateEditor-variables.scss";
+
+.ye-com_hybris_cockpitng_editor_defaultdate {
+	.z-datebox {
+		display: table;
+		position: relative;
+		width: 100%;
+		
+		&-button {
+			display: table-cell;
+			vertical-align: middle;
+			white-space: nowrap;
+			box-sizing: border-box;
+		}
+		&-input {
+			margin-bottom: 0;
+			width: 100%;
+			display: table-cell;
+			border-right: none;
+			box-sizing: border-box;
+		}
+		&-input.z-datebox-invalid {
+			box-shadow: none;
+			border-right-width: 0 !important;
+			border-color: $date-editor__invalid-box--border-color !important;
+			
+			+ .z-datebox-button {
+				border-color: $date-editor__invalid-box--border-color !important;
+			}
+		}
+	}
+	.z-datebox-disabled {
+		* {
+			background-color: $editor-defaults__input-box-disabled--bg-color;
+		}
+		.z-datebox-icon {
+			background-position: center -33px !important;
+		}
+	}
+	.ye-inline-editing-disabled {
+		.z-datebox-input[readonly] {
+			border-color: $editor-defaults__input-box-disabled--border-color;
+			background-color: $editor-defaults__input-box-disabled--bg-color;
+			&:focus {
+				border-color: $date-editor__box-focus--border-color;
+			}
+		}
+	}
+}
+
+.z-window-highlighted .ye-com_hybris_cockpitng_editor_defaultdate {
+	&,
+	table {
+		width: 100%;
+	}
+}

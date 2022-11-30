@@ -1,0 +1,50 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$dndconfig__popup--width: 260px;
+$dndconfig__popup--padding: $container-spacing-default__half $_container-spacing-default__small;
+$dndconfig__popup--margin: 7px;
+$dndconfig__popup-main-info-label--font-size: $font-size__large;
+$dndconfig__popup-main-info-label--font-weight: $font-weight-bold;
+$dndconfig__popup-content-delimiter--border: $boxes--border__thin solid $_default__delimiter--border-color;
+$dndconfig__popup-additional-info-label--color: $form-defaults__label-info--color;
+$dndconfig__popup-additional-info-label--padding-top: $container-spacing-default__half;
+$dndconfig__popup-delimiting-label--spacing: $container-spacing-default__half;
+
+.yw-dnd-config {
+    &-popup {
+        width: $dndconfig__popup--width;
+        margin: $dndconfig__popup--margin;
+        padding: $dndconfig__popup--padding;
+        overflow: visible;
+    }
+
+    &-main-info.z-label {
+        display: block;
+        font-size: $dndconfig__popup-main-info-label--font-size;
+        font-weight: $dndconfig__popup-main-info-label--font-weight;
+        padding-bottom: $dndconfig__popup-delimiting-label--spacing;
+    }
+
+    &-additional-info.z-label {
+        display: block;
+        color: $dndconfig__popup-additional-info-label--color;
+        padding-top: $dndconfig__popup-additional-info-label--padding-top;
+    }
+    &-type-combo + &-additional-info.z-label {
+        margin-top: $dndconfig__popup-delimiting-label--spacing;
+
+        &:before {
+            content: "";
+            position: absolute;
+            margin-top: $dndconfig__popup-additional-info-label--padding-top * -1;
+            border-top: $dndconfig__popup-content-delimiter--border;
+            left: 0;
+            top: auto;
+            bottom: auto;
+            right: 0;
+        }
+    }
+}

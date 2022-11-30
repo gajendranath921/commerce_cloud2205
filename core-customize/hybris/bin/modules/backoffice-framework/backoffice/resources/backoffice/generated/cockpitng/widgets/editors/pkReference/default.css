@@ -1,0 +1,32 @@
+/* Status */
+/* Button Color Scheme */
+.ye-onpremise-reference-pk-editor .ye-default-reference-container {
+  background: #ffffff;
+  border: 1px solid #acacac;
+  height: 40px;
+  padding: 7px 8px 8px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  .ye-onpremise-reference-pk-editor .ye-default-reference-container .z-label {
+    line-height: 16px;
+    display: inline;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0; }
+  .ye-onpremise-reference-pk-editor .ye-default-reference-container .ye-remove-reference {
+    margin-top: -12px;
+    width: 24px;
+    min-height: 24px;
+    height: 24px;
+    position: absolute;
+    display: none;
+    padding: 0; }
+    .ye-onpremise-reference-pk-editor .ye-default-reference-container .ye-remove-reference, .ye-onpremise-reference-pk-editor .ye-default-reference-container .ye-remove-reference:hover, .ye-onpremise-reference-pk-editor .ye-default-reference-container .ye-remove-reference:active, .ye-onpremise-reference-pk-editor .ye-default-reference-container .ye-remove-reference:focus {
+      background: transparent;
+      box-shadow: none; }
+  .ye-onpremise-reference-pk-editor .ye-default-reference-container:hover {
+    background: #eaf1f6;
+    padding-right: 32px; }
+    .ye-onpremise-reference-pk-editor .ye-default-reference-container:hover .ye-remove-reference {
+      display: block; }

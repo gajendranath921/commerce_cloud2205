@@ -1,0 +1,19 @@
+/* Status */
+/* Button Color Scheme */
+.ye-validation-error {
+  background: var(--bo-error-background);
+  color: var(--bo-error-color); }
+
+.ye-validation-warn {
+  background: var(--bo-warning-background);
+  color: var(--bo-warning-color); }
+
+.ye-validation-info {
+  background: var(--bo-information-background);
+  color: var(--bo-information-color); }
+
+.cke_editable p {
+  margin: 0px; }
+
+.cke.cke_combopanel .cke_panel_frame .cke_panel_listItem a {
+  border: none; }

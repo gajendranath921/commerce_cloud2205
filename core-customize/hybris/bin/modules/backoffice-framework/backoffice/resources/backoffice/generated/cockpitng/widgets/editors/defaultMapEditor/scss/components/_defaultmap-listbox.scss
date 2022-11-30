@@ -1,0 +1,284 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "../support/_defaultmap-variables.scss";
+.ye-map-editor-btn-container {
+    .z-image {
+        padding: $editor-defaults__listitem--padding + 1px;
+        border: $editor-defaults__list-box--border;
+        @if $editor-defaults__list-box-button--border-radius {
+            border-radius: $editor-defaults__list-box-button--border-radius;
+        }
+        @if $_editor-defaults__list-box-button--margin-right {
+            margin-right: $_editor-defaults__list-box-button--margin-right;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        @if $_editor-defaults__list-box-button--margin-right == false and $editor-defaults__list-box-button--border-radius == false {
+            &:first-child {
+                border-right: none;
+            }
+        }
+    }
+    .ye-map-btn {
+        &-save {
+            border-color: $_editor-defaults__list-box-button-save--border-color;
+        }
+        &-clear {
+            border-color: $_editor-defaults__list-box-button-clear--border-color;
+        }
+    }
+}
+
+
+.ye-list-listbox-defaultmap {
+    .z-listbox-paging-top .z-paging {
+        border-bottom-width: 0;
+    }
+    .z-listcell {
+       div.z-listcell-content {
+            &,
+            &:hover {
+                height: auto;
+                line-height: $editor-defaults__list-box--height - $editor-defaults__listitem--padding * 2;
+                min-height: $editor-defaults__list-box--height;
+                padding: $editor-defaults__listitem--padding;
+                display: flex;
+            }
+            &:hover {
+                @if $editor-defaults__list-box-hover--color {
+                    background: $editor-defaults__list-box-hover--color;
+                }
+
+            }
+            .ye-map-value,
+            .ye-map-key {
+                color: $editor-defaults__listitem--color;
+                &.z-label {
+                    margin-bottom: 0;
+                    max-width: $_editor-defaults__listitem-label--max-width;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    line-height: $_editor-defaults__listitem-label--line-height;
+                    display: block;
+                }
+            }
+            .ye-map-value {
+                font-weight: $editor-defaults__listitem-map-value--font-weight;
+                display: inline;
+            }
+        }
+
+        &:not(.ye-list-line-editor) {
+            .z-listcell-content:hover {
+                padding-right: $editor-defaults__listitem--padding + $editor-defaults__listitem-btn--size !important;
+            }
+        }
+        &-selected {
+            // &.z-listitem {
+            //     background-color: initial;
+            // }
+            .ye-default-reference-editor .ye-default-reference-editor-selected-item-container.ye-remove-enabled {
+                padding-right: $editor-defaults__listitem-removable-container--padding-right;
+            }
+        }
+    }
+    // .ye-list-listbox .z-listitem:hover .ye-list-line-editor {
+    //     background-color: transparent;
+    // }
+    .ye-map {
+        // &-editor-btn-container {
+        //     .z-image {
+        //         padding: $editor-defaults__listitem--padding + 1px;
+        //         border: $editor-defaults__list-box--border;
+        //         @if $editor-defaults__list-box-button--border-radius {
+        //             border-radius: $editor-defaults__list-box-button--border-radius;
+        //         }
+        //         @if $_editor-defaults__list-box-button--margin-right {
+        //             margin-right: $_editor-defaults__list-box-button--margin-right;
+
+        //             &:last-child {
+        //                 margin-right: 0;
+        //             }
+        //         }
+        //         @if $_editor-defaults__list-box-button--margin-right == false and $editor-defaults__list-box-button--border-radius == false {
+        //             &:first-child {
+        //                 border-right: none;
+        //             }
+        //         }
+        //     }
+        // }
+        &-footer {
+            .z-listfooter-content {
+                padding: $editor-defaults__list-footer-item--padding;
+                line-height: $_editor-defaults__list-footer--line-height;//$editor-defaults__list-box-empty--min-height;
+
+                .z-label {
+                    // color: $editor-defaults__listitem--color;
+                    margin-bottom: 0;
+                    vertical-align: middle;
+                }
+            }
+
+            > .z-listfoot-bar:empty {
+                display: none;
+            }
+            // .ye-map-add-div.z-div {
+            //     background-color: $form-defaults__input--bg-color;
+            //     border: $boxes--border__thin solid $form-defaults__box--border-color;
+            //     &:hover {
+            //         border-color: $_form-defaults__input-hover--border-color;
+            //     }
+            // }
+        }
+    }
+
+    &.ye-list-listbox {
+        .z-paging {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .ye-list-content & {
+            border: none;
+        }
+
+        >.z-listbox-footer {
+            padding-top: $_editor-defaults__list-footer--padding-y;
+            background-color: transparent;
+
+            @if $editor-defaults__list-box-footer--border {
+                border: $editor-defaults__list-box-footer--border;
+            }
+            &,
+            .z-listfooter {
+                width: 100% !important;
+                background-color: transparent;
+            }
+            .z-listfoot-bar,
+            .z-listfooter-bar {
+                &:empty {
+                    display: none;
+                }
+            }
+        }
+
+        > .z-listbox-body {
+            position: relative;
+            border-radius: $editor-defaults__list-box--border-radius;
+            border-color: $editor-defaults__list-box--border-color;
+            z-index: 0;
+            box-shadow: none;
+            > table > tbody:before,
+            .z-listbox-emptybody:after {
+                content: "";
+                display: none;
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                border: $editor-defaults__list-box--border;
+                border-color: inherit;
+            }
+
+            > table {
+                border-radius: $editor-defaults__list-box--border-radius;
+                max-width: calc(100% - #{ 2 * $editor-defaults__list-box--border-width});
+                margin: $editor-defaults__list-box--border-width;
+                border-color: $editor-defaults__list-box--border-color;
+                overflow: hidden;
+
+                &,
+                > tbody {
+                    position: static;
+                    border-color: inherit;
+                    border-radius: $toolbar__button-small--border-radius;
+                }
+
+                > tbody {
+                    &:before {
+                        display: block;
+                        right: 0;
+                        border-radius: $editor-defaults__list-box--border-radius;
+                    }
+
+                    &.z-listbox-emptybody {
+                        td {
+                            padding: $editor-defaults__list-box-empty--padding !important;
+                            min-height: $editor-defaults__list-box-empty--min-height;
+                            text-align: left;
+                            font-style: normal;
+                            box-sizing: border-box;
+                            border: $boxes--border__thin solid $form-defaults__box--border-color;
+                        }
+
+                        &:before {
+                            opacity: $editor-defaults__list-box-empty--opacity;
+                            display: none;
+                        }
+                        .z-listbox-emptybody-content {
+                            line-height: $editor-defaults__list-box-empty--line-height;
+                            padding: 0;
+                            color: $form-defaults__box--color;
+
+                        }
+                    }
+
+                    &:empty {
+                        &:before {
+                            display: none;
+                        }
+
+                        + .z-listbox-emptybody {
+                            &:before {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ye-map-separator {
+        margin: floor($editor-defaults__listitem--margin/2) $editor-defaults__listitem--margin $editor-defaults__listitem--margin;
+    }
+}
+
+
+
+.ye-map-editor-btn {
+    &-container & {
+        &.z-button {
+            margin-top: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 0;
+            width: $editor-defaults__listitem-map-btn--size;
+            height: $editor-defaults__listitem-map-btn--size;
+
+            &:active {
+                box-shadow: $editor-defaults__listitem-map-btn-active--box-shadow;
+            }
+        }
+        &.y-btn-primary,
+        &.y-btn-accept {
+            margin-left: 0;
+            & .z-icon-check:before {
+                content: $globals-icons-accept--content;
+                font-family: $globals-font-family;
+            }
+        }
+        &.y-btn-secondary,
+        &.y-btn-reject {
+            margin-right: 8px;
+
+            & .z-icon-close:before {
+            	content: $globals-icons-decline--content;
+            	font-family: $globals-font-family;
+            }
+        }
+    }
+}

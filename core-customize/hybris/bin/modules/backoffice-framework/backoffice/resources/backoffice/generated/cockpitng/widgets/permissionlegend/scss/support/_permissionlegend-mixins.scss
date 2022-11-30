@@ -1,0 +1,57 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "_permissionlegend-variables.scss";
+
+@mixin _permission-cell-icon-font ($font-size, $container-size, $granted, $denied, $inherit-granted, $inherit-denied, $display-type: false, $add-hover:true) {
+	&-#{$inherit-granted},
+	&-#{$granted},
+	&-#{$inherit-denied},
+	&-#{$denied} {
+		height: $container-size;
+		width: $container-size;
+		position: relative;
+		@if $display-type {
+			display: $display-type;
+		}
+		&:before {
+			content: $permissionlegend__denied-icon--content;
+        	position: absolute;
+        	font: normal normal normal #{$font-size} $permissionlegend__icon--font-family;
+        	color: inherit;
+        	width: 100%;
+        	text-align: center;
+        	line-height: $container-size + 2;
+		}
+	}
+	&-#{$granted},
+	&-#{$inherit-granted} {
+		&:before {
+			content: $permissionlegend__granted-icon--content;
+		}
+	}
+	&-#{$inherit-denied}, &-#{$inherit-granted} {
+		color: $permissionlegend__inherited-icon--color;
+		// @if $add-hover {
+		// 	&:hover {
+		// 		color: $permissionlegend__inherited-icon-hover--color;
+		// 	}
+		// }
+	}
+	&-#{$granted} {
+		color: $permissionlegend__granted-icon--color;
+		// @if $add-hover {
+		// 	&:hover {
+		// 		color: $permissionlegend__granted-icon-hover--color;
+		// 	}
+		// }
+	}
+	&-#{$denied} {
+		color: $permissionlegend__denied-icon--color;
+		// @if $add-hover {
+		// 	&:hover {
+		// 		color: $permissionlegend__denied-icon-hover--color;
+		// 	}
+		// }
+	}
+}

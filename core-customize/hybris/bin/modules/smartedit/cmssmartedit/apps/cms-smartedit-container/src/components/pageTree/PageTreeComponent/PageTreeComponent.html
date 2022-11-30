@@ -1,0 +1,35 @@
+<div>
+    <div
+        class="se-page-tree-node"
+        [ngClass]="component.isExpanded && 'se-page-tree-node-expand'"
+        [attr.node-smartedit-element-uuid]="!component.isHidden ?
+                     component.elementUuid :
+                     'hidden-component-has-no-uuid'"
+    >
+        <div (click)="onClickComponentNode($event)" class="se-page-tree-component-node--content">
+            <span
+                [ngClass]="component.isExpanded ?
+                                'sap-icon--navigation-down-arrow' :
+                                'sap-icon--navigation-right-arrow'"
+                class="se-page-tree-node--icon se-page-tree-component-node se-page-tree-component-node--icon"
+            ></span>
+            <span
+                class="se-page-tree-node--icon se-page-tree-component-node--icon sap-icon--vertical-grip"
+            ></span>
+            <span
+                class="se-page-tree-node--icon se-page-tree-component-node--icon sap-icon--background"
+            ></span>
+
+            <div class="se-page-tree-component-node--name">
+                <span class="se-page-tree-component-node--name--up">{{component.name}}</span>
+                <span class="se-page-tree-component-node--name--down">{{component.typeCode}}</span>
+            </div>
+        </div>
+        <se-page-tree-component-menu
+            [component]="component"
+            [slotId]="slotId"
+            [slotUuid]="slotUuid"
+            class="se-page-tree-component-node-menu"
+        ></se-page-tree-component-menu>
+    </div>
+</div>

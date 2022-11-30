@@ -1,0 +1,42 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "../support/_defaultmap-variables.scss";
+
+.ye-validation {
+    &-error,
+    &-warn,
+    &-info {
+        .ye-list-listbox .ye-map-footer {
+            input, input.z-textbox, .z-longbox, .z-intbox, .z-decimalbox, .z-doublebox {
+                border-color: $editor-area__box--border-color;
+                background: none;
+                color: $editor-area__input-field--color;
+
+                &:focus {
+                    border-color: $editor-area__box-focus--border-color;
+                    background: none;
+                }
+            }
+            .z-bandbox-input:focus + .z-bandbox-button {
+                border-color: $editor-area__box-focus--border-color;
+            }
+            .z-combobox-button {
+                border-color: $editor-area__box--border-color;
+                background: none;
+            }
+            input:focus + .z-combobox-button {
+                border-color: $editor-area__box-focus--border-color;
+            }
+            @if $selectbox__combobox-hover--bg-color {
+                .z-combobox:focus,
+                .z-combobox:hover {
+                    .z-combobox-input,
+                    .z-combobox-button {
+                        background-color: $selectbox__combobox-hover--bg-color;
+                    }
+                }
+            }
+        }
+    }
+}

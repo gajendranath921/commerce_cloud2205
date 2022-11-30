@@ -1,0 +1,6 @@
+lib
+test
+node_modules
+.vscode
+*.log
+.travis.yml

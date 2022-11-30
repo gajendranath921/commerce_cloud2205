@@ -1,0 +1,46 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$refineby__widget--bg-color: $form-defaults__box--bg-color;
+$refineby__widget--color: $_default__content--color;
+
+$refineby__main-container--padding: $_container-spacing-default__small;
+
+//$refineby__info-container--font-style: italic;
+//$refineby__facet-container--margin-left: $container-spacing-default__half;
+
+//$refineby__facet-slot--margin-bottom: $container-spacing-default__third;
+
+$refineby__facet-name--font-weight: $font-weight-bold;
+$refineby__facet-name--padding: $container-spacing-default__third 0;
+$refineby__facet-name--padding-top: $_container-spacing-default__small;
+$refineby__facet-name--color: $_default-list__item--color;
+
+$refineby__toggle-facets--margin: $container-spacing-default__third 0 $container-spacing-default__half;
+$refineby__toggle-facets--color: $_action__text--color;
+
+$refineby__colour-facet-box--size: $toolbar__button-default--size;
+$refineby__colour-facet-box--border-radius: $toolbar__button-default--border-radius;
+$refineby__colour-facet-box--text-align: center;
+$refineby__colour-facet-box--margin: 0 $_container-spacing-default__tiny $_container-spacing-default__tiny 0;
+$refineby__colour-facet-box--bg-color: $form-defaults__box--bg-color;
+$refineby__colour-facet-box--border: $boxes--border__thin solid $_button__action-tool--border-color;
+
+$refineby__colour-facet-box-selected--border: $boxes--border__medium solid var(--bo-list-selected-border-color);
+
+$refineby__colour-facet-box-selected--text-shadow: 0px 0px 2px var(--bo-content-shadow-small);
+$refineby__colour-facet-box-selected--font: $font-family__icon;
+$refineby__colour-facet-box-selected--content: _getIconGlyphContentValue('accept');
+$refineby__colour-facet-box-selected--color: $form-defaults__input-icon-mark--color;
+//$refineby__colour-facet-box-selected--line-height: $refineby__colour-facet-box--size - 2px;
+$refineby__colour-facet-box-selected--font-size: $font-size__base;
+
+
+//$refineby__checkbox--padding-left: 20px;
+$refineby__checkbox--margin-bottom: $container-spacing-default__half;
+//$refineby__checkbox-label-after--width: 14px;
+//$refineby__checkbox-label-after--height: 14px;
+$refineby__checkbox-label-after--margin-top: 2px;
+//$refineby__checkbox-label-before--bg-size: 14px;

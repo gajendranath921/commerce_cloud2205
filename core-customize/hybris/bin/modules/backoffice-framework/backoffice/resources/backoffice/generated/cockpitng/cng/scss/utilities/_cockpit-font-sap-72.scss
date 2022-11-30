@@ -1,0 +1,34 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@charset "UTF-8";
+@mixin sap-72-font-face($weight: normal, $style: normal, $font-style-name: "Regular", $font-family-name: "72") {
+    font-family: $font-family-name;
+    src: url(('font/SAP-72/72-' + $font-style-name + '.eot'));
+    src: url(('font/SAP-72/72-' + $font-style-name + '.eot?#iefix')) format("embedded-opentype"),
+        url(('font/SAP-72/72-' + $font-style-name + '.woff')) format("woff"),
+        url(('font/SAP-72/72-' + $font-style-name + '.ttf')) format("truetype"),
+        url(('font/SAP-72/72-' + $font-style-name + '.svg#72' + $font-style-name)) format("svg");
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@font-face {
+    @include sap-72-font-face(normal, normal, "Regular");
+}
+
+@font-face {
+    @include sap-72-font-face(700, normal, "Bold", "72-Bold");
+}
+
+@font-face {
+    @include sap-72-font-face(300, normal, "Light", "72-Light");
+}
+
+@font-face {
+    @include sap-72-font-face(normal, italic, "Italic", "72-Italic");
+}
+
+@font-face {
+    @include sap-72-font-face(700, italic, "BoldItalic", "72-BoldItalic");
+}

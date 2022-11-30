@@ -1,0 +1,203 @@
+@import '../support/_workflowsearch-variables.scss';
+
+.yw-workflowsearch {
+	&-filters-search {
+		margin-left: $workflowsearch__button--margin-left;
+		display: inline-block;
+	    float: right;
+	    position: relative;
+
+  		.yw-workflowsearch-filters &.z-button{
+  			width: $workflowsearch__button--size;
+	        height: $workflowsearch__button--size;
+	        min-height: $workflowsearch__button--size;
+	        box-sizing: border-box;
+	        padding: 0;
+	        @include _getIconGlyph("search");
+	        font-family: $_workflowsearch__button-icon--font-family;
+			border-color: $workflowsearch__button--border-color;
+			border-radius: $workflowsearch__button--border-radius;
+  		}
+	}
+
+	&-filters-input {
+		margin: $workflowsearch__input-container--margin;
+	}
+
+	&-filters-range {
+		border: $workflowsearch__toolbar-filters--border;
+		width: $workflowsearch__range-container--width;
+		min-height: $workflowsearch__button--height;
+		border-right: none;
+		font-size: 0;
+		text-align: left;
+		display: inline-block;
+		border-radius: $_workflowsearch__range-container--border-radius;
+
+		&:hover {
+			border-color: $_workflowsearch__range-container-hover--border-color;
+		}
+
+		.ye-range-editor-java-util-date {
+			display: inline-block;
+
+			a {
+				border: none;
+			}
+			input {
+				border-color: transparent;
+			}
+			.z-datebox-button.z-datebox-disabled {
+				right: 0;
+			}
+		}
+		.ye-range-endpoint {
+			margin-top: 0;
+		}
+
+		.z-datebox {
+			min-height: $workflowsearch__filter-container-box--height;
+
+			&-input {
+				padding: $workflowsearch__input--padding;
+				line-height: $workflowsearch__input--line-height;
+				height: $workflowsearch__filter-container-box--height;
+				box-shadow: none;
+				background: transparent;
+				z-index: 1;
+				border: none;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $workflowsearch__input-focus--color;
+				}
+
+				&::-ms-clear {
+				    display: none;
+				}
+			}
+			&-button.z-datebox-disabled {
+				background-color: transparent;
+				position: absolute;
+				width: 200%;
+				height: 0;
+				z-index: 0;
+				top: 0;
+				left: 0;
+			    border-bottom-width: 0;
+			    overflow: visible;
+			    display: none;
+
+				> i {
+					display: none !important;
+				}
+				&:hover {
+					cursor: default;
+				}
+				&:before,
+				&:after {
+					content: "";
+					position: absolute;
+					border-color: inherit;
+					border-width: 0;
+				}
+				&:before {
+					height: $workflowsearch__search-button--size;
+					border-left-width: $workflowsearch__input--border-width;
+					left: $workflowsearch__search-button-disabled-before--side;
+					width: 0;
+				}
+				&:after {
+					border-top-width: $workflowsearch__input--border-width;
+					top: $workflowsearch__search-button-disabled-after--top;
+					width: 100%;
+					height: 0;
+					left: 0;
+				}
+
+			}
+		}
+
+		.ye-range-endpoint {
+			display: inline-block;
+			width: $workflowsearch__date-container--width;
+			overflow: visible;
+
+			span, div {
+				display: block;
+			}
+
+			&-start {
+				z-index: 1;
+				position: relative;
+
+				.ye-range-editor-java-util-date {
+					display: inline-block;
+					@include _getIconGlyph("arrow-right");
+	        		font-family: $_workflowsearch__button-icon--font-family;
+
+	        		&:before {
+	        			position: absolute;
+	        			right: $workflowsearch__range-start-end-icon--right;
+	        			top: $workflowsearch__range-start-end-icon--top;
+	        			transform: $workflowsearch__range-start-end-icon--transform;
+	        			font-size: $workflowsearch__range-start-end-icon--font-size;
+	        			color: $workflowsearch__range-start-end-icon--color;
+	        			width: $workflowsearch__range-start-end-icon--width;
+	        			text-align: center;
+	        			z-index: 2;
+	        		}
+				}
+
+				.z-datebox {
+					&-input {
+				 		position: relative;
+				 		border-right-width: 0;
+
+				 		+ .z-datebox-button.z-datebox-disabled {
+				 			&:before {
+				 				left: auto;
+								right: $workflowsearch__search-button-disabled-before--side;
+							}
+				 		}
+				 	}
+				}
+			}
+			&-end {
+				z-index: 0;
+				padding-top: 0;
+				margin-left: $workflowsearch__date-end-container--margin-left;
+				position: absolute;
+				.z-datebox {
+					margin-left: -100%;
+
+					&-input {
+						margin-left: 100%;
+						z-index: 1;
+					}
+				}
+			}
+		}
+		.ye-range-label {
+			padding-left: $workflowsearch__input--padding-left;
+			font-size: $workflowsearch__input-label--font-size;
+			line-height: $workflowsearch__input-label--line-height;
+			margin-top: $workflowsearch__input-label--margin-top;
+			color: $workflowsearch__input-label--color;
+			max-width: 100%;
+			white-space: nowrap;
+			display: block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			position: absolute;
+		}
+	}
+
+	&-filters {
+		margin: $workflowsearch__button-wrapper--margin;
+		height: $workflowsearch__filter-container-box--height;
+		min-width: $workflowsearch__filter-container--min-width;
+		float: right;
+	}
+}

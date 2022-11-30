@@ -1,0 +1,302 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+//    DefaultReferenceEditor Defaults
+// ================================
+
+@import "../support/_defaultreferenceeditor-variables.scss";
+
+.ye-default-reference-editor {
+    &-bandpopup {
+        /* DO NOT REMOVE  - FIX FOR 100% WIDTH BUG */
+        overflow: hidden;
+        display: inline;
+    }
+    .z-bandbox-button {
+        @if $default-reference-editor__bandbox-button--bg-color {
+            background-color: $default-reference-editor__bandbox-button--bg-color;
+        }
+        background-position: center center;
+        border-radius: $default-reference-editor__box-inner--border-radius $default-reference-editor__box--border-radius $default-reference-editor__box--border-radius $default-reference-editor__box-inner--border-radius;
+        width: $default-reference-editor__bandbox-button--size;
+        height: $default-reference-editor__bandbox-button--size;
+        color: $editor-area__box--icon-color;
+
+        &.ye-create-only {
+            top: -$default-reference-editor__create-new-button--size;
+            height: $default-reference-editor__create-new-button--size;
+            width: $default-reference-editor__create-new-button--size;
+            right: $default-reference-editor__create-only-button--right;
+
+            &[disabled] {
+                background-position: center center;
+                border-radius: $default-reference-editor__box-inner--border-radius $default-reference-editor__box--border-radius $default-reference-editor__box--border-radius $default-reference-editor__box-inner--border-radius;
+            }
+            .z-bandbox-icon {
+                // line-height: $editor-defaults__inline-box--height - 2;
+                // height: $editor-defaults__inline-box--height;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%,-50%,0);
+                &:active {
+                    color: $_button__icon-active--color;
+                }
+            }
+        }
+        .z-icon-search {
+            &:before {
+                font-family: $default-reference-editor__bandbox-ellipsis-icon--font-family;
+                content: $default-reference-editor__bandbox-ellipsis-icon--content;
+                @if ($default-reference-editor__bandbox-ellipsis-icon--font-size){
+                    font-size: $default-reference-editor__bandbox-ellipsis-icon--font-size;
+                }
+            }
+        }
+        &:hover {
+            color: $default-reference-editor__bandbox-button-icon-hover--color;
+        }
+        &:focus {
+            @if $_default-reference-editor__bandbox-button-focus--border-color {
+                border-color: $_default-reference-editor__bandbox-button-focus--border-color;
+            }
+            @if ($_default-reference-editor__bandbox-button-focus--bg-color) {
+                background-color: $_default-reference-editor__bandbox-button-focus--bg-color !important;
+            }
+        }
+    }
+
+    &-bandbox {
+        &.ye-create-only {
+            position: relative;
+            padding-right: 0;
+            padding-top: 0;
+
+            .z-bandbox-input{
+                &:focus {
+                    padding-left: $default-reference-editor__list-item-add-button-label--margin-left + $_default-reference-editor__bandbox-input--border-width - $_default-reference-editor__input-field-focus--border-width;
+                }
+                @if $_default-reference-editor__bandbox-create-new-input--color {
+                    color: $_default-reference-editor__bandbox-create-new-input--color;
+                }
+                padding-left: $default-reference-editor__list-item-add-button-label--margin-left;
+
+                cursor: pointer;
+                @if $_default-reference-editor__bandbox-input--border-color {
+                    border-color: $_default-reference-editor__bandbox-input--border-color;
+                }
+                @if $_default-reference-editor__create-only-add-icon--bg-image {
+                    background-image: $_default-reference-editor__create-only-add-icon--bg-image !important;
+                    background-repeat: no-repeat !important;
+                    background-position: $default-reference-editor__create-only-add-icon--bg-postion !important;
+                } @else {
+                    + .z-bandbox-button {
+                        position: static;
+
+                        .z-bandbox-icon {
+                            opacity: 0;
+                        }
+                        &:before {
+                            background: transparent;
+                            color: $_default-reference-editor__create-only-add-icon--color;
+                            font-family: $_default-reference-editor__create-only-add-icon--font-family;
+                            font-size: $_default-reference-editor__create-only-add-icon--font-size;
+                            content: $_default-reference-editor__create-only-add-icon--content;
+                            position: absolute;
+                            left: $default-reference-editor__create-only-add-icon--left;
+                            top: $default-reference-editor__create-only-add-icon-top;
+                            width: $_default-reference-editor__create-only-add-icon--width;
+                            height: $_default-reference-editor__create-only-add-icon--height;
+                            line-height: $_default-reference-editor__create-only-add-icon--height;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                // &.z-bandbox-rightedge {
+                //     &:focus {
+                //         + .z-bandbox-disabled {
+                //             position: relative;
+                //             top: auto;
+                //             left: auto;
+                //             overflow: visible;
+
+                //             &:before {
+                //                 border-left: $default-reference-editor__box--border-width solid transparent;
+                //                 position: absolute;
+                //                 top: 0;
+                //                 bottom: 0;
+                //                 margin-left: $default-reference-editor__box--border-width * -1;
+                //                 left: $default-reference-editor__box--border-width * -1;
+                //                 width: $default-reference-editor__box--border-width;
+                //                 box-sizing: border-box;
+                //                 content: "";
+                //             }
+                //         }
+                //     }
+                // }
+            }
+
+            + .z-bandbox-button.ye-create-only {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: $default-reference-editor__create-only-button--bg-color;
+                border-color: $default-reference-editor__create-only-button--border-color;
+                &:active,
+                &:focus {
+                    @if $_default-reference-editor__create-only-button-focus--border-width {
+                        border-width: $_default-reference-editor__create-only-button-focus--border-width;
+                    }
+                    @if $_default-reference-editor__bandbox-button-focus--border-color {
+                        border-color: $_default-reference-editor__bandbox-button-focus--border-color;
+                    }
+                    @if ($_default-reference-editor__bandbox-button-focus--bg-color) {
+                        background-color: $_default-reference-editor__bandbox-button-focus--bg-color !important;
+                    }
+                    .z-bandbox-icon.z-icon-caret-down {
+                        color: $_button__icon-active--color;
+                    }
+                }
+                &:hover {
+                    color: $_button__icon-hover--color;
+                    background-color: $_button__icon-hover--bg-color;
+                    border-color: $editor-defaults__action-button-hover--border-color;
+                }
+            }
+
+            &.z-bandbox-disabled {
+                .z-bandbox-input + .z-bandbox-button {
+                    &:before {
+                        color: inherit;
+                    }
+                }
+                + .z-bandbox-button.ye-create-only {
+                    &,
+                    &:active,
+                    &:hover,
+                    &:focus {
+                        border-color: $_default-reference-editor__bandbox-disabled--border-color;
+                        background-color: transparent !important;
+                        color: $_default-reference-editor__bandbox-disabled--color;
+                        border-width: $_default-reference-editor__bandbox-disabled-button--border-width;
+
+                        .z-bandbox-icon {
+                            background: transparent !important;
+                        }
+                    }
+                }
+            }
+
+            &:only-child {
+                .z-bandbox-button {
+                    position: relative;
+                    display: table-cell;
+
+                    .z-bandbox-icon {
+                        opacity: 1;
+                    }
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &-autocorrection-value {
+            padding-left: 5px;
+        }
+        .z-bandbox-input {
+            margin-bottom: 0;
+            width: 100%;
+            border-right-width: 0;
+            border-radius: $default-reference-editor__box--border-radius $default-reference-editor__box-inner--border-radius $default-reference-editor__box-inner--border-radius $default-reference-editor__box--border-radius;
+
+            &:focus {
+                @if ($default-reference-editor__bandbox-input-focus--bg-color){
+                    background-color: $default-reference-editor__bandbox-input-focus--bg-color;
+                }
+                @if ($_default-reference-editor__bandbox-input-focus--border-color){
+                    border-color: $_default-reference-editor__bandbox-input-focus--border-color;
+                }
+            }
+        }
+        .z-bandbox-icon {
+            color: $editor-area__box--icon-color;
+        }
+    }
+}
+
+div.ye-default-reference-editor {
+    &-bandbox {
+        width: 100%;
+        display: table;
+    }
+}
+
+div.ye-default-reference-container {
+    position: relative;
+}
+
+div.ye-default-reference-container .ye-delete-btn,
+div.ye-default-reference-editor-remove-button {
+    right: $default-reference-editor__list-item-remove-button--right;
+    margin-top: $default-reference-editor__list-item-remove-button--margin-top;
+    width: $default-reference-editor__list-item-remove-button--size;
+    height: $default-reference-editor__list-item-remove-button--size;
+    background: transparent;
+    color: $_action__button--color;
+    box-shadow: none;
+    position: absolute;
+    top: 50%;
+    display: none;
+}
+
+.ye-create-type-selector-container .z-treecell > .z-treecell-content > .z-treecell-text {
+    display: inline;
+}
+
+.ye-com_hybris_cockpitng_editor_extendedmultireferenceeditor .z-listitem .z-listcell,
+.ye-create-type-selector-container .z-treecell > .z-treecell-content,
+.ye-default-reference-editor-listbox .z-listitem div.z-listcell-content {
+    height: auto;
+    white-space: normal;
+    padding-right: $default-reference-editor__list-item-remove-enabled-hover--padding-right;
+}
+
+.ye-default-reference-editor-selected-listbox .z-listitem div.ye-default-reference-editor-selected-item-container {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.z-listcell {
+    &-content {
+        .ye-default-reference-editor {
+            &-item-container,
+            &-selected-item-container {
+                &.ye-remove-enabled:hover {
+                    padding-right: $default-reference-editor__list-item-remove-enabled-hover--padding-right;
+                    background-color: $_default-list__item-hover--bg-color;
+                }
+            }
+        }
+    }
+}
+
+.referenceEditorPaging.z-paging {
+    height: $default-reference-editor__paging--height;
+    text-align: center;
+    background-color: $default-reference-editor__paging--bg-color;
+    padding: $default-reference-editor__paging--padding;
+    border-width: $default-reference-editor__paging--border-width;
+    border-color: $editor-area__box--border-color;
+    line-height: 0;
+    .z-paging-input {
+        padding: 3px 3px 5px 3px;
+    }
+
+    ul {
+        line-height: $_default-reference-editor__paging--line-height;
+    }
+}

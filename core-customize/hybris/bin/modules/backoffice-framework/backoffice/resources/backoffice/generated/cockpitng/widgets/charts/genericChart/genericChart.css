@@ -1,0 +1,93 @@
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Generic Charts
+================================*/
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Generic Charts
+================================*/
+.yw-generic-chart {
+  height: 100%;
+  width: 100%;
+  box-shadow: var(--bo-content-shadow-small);
+  border-radius: 4px;
+  background-color: var(--bo-container-background); }
+  .yw-generic-chart-container {
+    width: 100%;
+    height: 100%;
+    display: table;
+    background-color: var(--bo-container-background);
+    border-radius: 4px;
+    table-layout: fixed; }
+    .yw-generic-chart-container .highcharts-container .highcharts-background {
+      background-color: var(--bo-container-background) !important;
+      fill: var(--bo-container-background) !important; }
+    .yw-generic-chart-container .highcharts-container .highcharts-title {
+      font-family: var(--bo-font-family);
+      font-size: 1.25rem !important;
+      color: var(--bo-group-title-text-color) !important;
+      fill: var(--bo-group-title-text-color) !important; }
+    .yw-generic-chart-container .highcharts-container:first-child {
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px; }
+    .yw-generic-chart-container .highcharts-container .highcharts-axis-title {
+      font-family: var(--bo-font-family);
+      font-size: 14px;
+      color: var(--bo-tile-title-color) !important;
+      fill: var(--bo-tile-title-color) !important; }
+    .yw-generic-chart-container .highcharts-container .highcharts-axis-labels text {
+      font-family: var(--bo-font-family);
+      font-size: 14px !important;
+      color: var(--bo-tile-title-color) !important;
+      fill: var(--bo-tile-title-color) !important; }
+    .yw-generic-chart-container .highcharts-container .highcharts-grid.highcharts-yaxis-grid path {
+      stroke: var(--bo-list-border-color) !important; }
+    .yw-generic-chart-container .highcharts-container .highcharts-axis.highcharts-xaxis path {
+      stroke: var(--bo-list-border-color) !important; }
+    .yw-generic-chart-container .highcharts-container:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: auto;
+      margin-top: 50px;
+      height: 1px;
+      border-top: 1px solid var(--bo-list-border-color); }
+  .yw-generic-chart-infoContainer {
+    width: 100%;
+    min-height: 88px;
+    display: table;
+    padding: 12px 20px;
+    text-align: center;
+    border-top-color: var(--bo-list-border-color);
+    position: relative; }
+    .yw-generic-chart-infoContainer:before {
+      border-top: 1px solid;
+      height: 1px;
+      top: 4px;
+      content: "";
+      border-top-color: inherit;
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: block; }
+    .yw-generic-chart-infoContainer:last-child {
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px; }
+    .yw-generic-chart-infoContainer-wrapper {
+      display: table-row; }
+  .yw-generic-chart-info-wrapper {
+    display: table-cell; }
+  .yw-generic-chart-info-value {
+    display: block;
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: var(--bo-list-text-color);
+    line-height: 2rem;
+    padding-top: 10px; }
+  .yw-generic-chart-info-label {
+    font-size: 14px;
+    color: var(--bo-list-text-color);
+    line-height: 19px; }

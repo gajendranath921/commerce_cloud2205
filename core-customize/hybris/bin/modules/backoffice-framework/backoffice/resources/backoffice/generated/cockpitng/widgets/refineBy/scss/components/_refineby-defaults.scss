@@ -1,0 +1,51 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Refine By Widget
+================================*/
+@import "../support/_refineby-variables.scss";
+
+.yw-refineby {
+    height: 100%;
+    background: $refineby__widget--bg-color;
+    color: $refineby__widget--color;
+    overflow: auto;
+
+    .yw-main-container {
+        padding: $refineby__main-container--padding;
+    }
+
+    .yw-info-container {
+        font-style: italic;
+    }
+
+    .yw-facet-container {
+        > .yw-facet-slot:not(:first-child) {
+            .yw-facet-name {
+                padding-top: $refineby__facet-name--padding-top;
+            }
+        }
+    }
+
+    .yw-facet-name {
+        display: block;
+        font-weight: $refineby__facet-name--font-weight;
+        padding: $refineby__facet-name--padding;
+        color: $refineby__facet-name--color;
+        &.z-label {
+            color: $form-defaults__label--color;
+        }
+    }
+
+    .yw-toggle-facets {
+        display: block;
+        margin: $refineby__toggle-facets--margin;
+        color: $refineby__toggle-facets--color;
+
+        &:hover {
+            cursor: pointer;
+            color: $refineby__toggle-facets--color;
+        }
+    }
+}

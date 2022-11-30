@@ -1,0 +1,503 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Box-Defaults
+================================*/
+// Default Defintions on Basic Box-Elements (Focus on Combobox, Bandbox)
+
+
+@charset "UTF-8";
+@import "../support/_cockpit-mixins.scss";
+
+
+/* textboxes / label / checkbox- & radio-button container */
+
+.z-label, .z-radio-content, .z-checkbox-content,
+.z-textbox, .z-decimalbox, .z-intbox, .z-longbox, .z-doublebox, .z-combobox-input {
+    font-family: $font-family__text;
+    font-size: $font-size__base;
+}
+
+.z-textbox, .z-decimalbox, .z-intbox, .z-longbox, .z-doublebox, .z-combobox-input {
+    background: $editor-defaults__input-field--bg-color;
+    color: $editor-defaults__input-field--color;
+    border-radius: $editor-defaults__input-field--border-radius;
+    width: 100%;
+    padding: $editor-boxes__input-field--padding;
+
+    &[disabled] {
+        color: var(--bo-content-disabled-text-color) !important;
+        background: $editor-defaults__input-field--bg-color !important;
+    	opacity: var(--bo-content-disabled-opacity) !important;
+    	border-color: var(--bo-input-border-color) !important;
+    }
+}
+
+
+
+input.z-textbox {
+    background: $editor-defaults__input-field--bg-color;
+    color: $editor-defaults__input-field--color;
+    border-width: $editor-defaults__input-field--border-width;
+    border-style: solid;
+}
+
+input::-ms-clear{
+    display: none;
+}
+input:-webkit-autofill{
+    color: $editor-defaults__input-field--color !important;
+    outline: none;
+    border-color: $editor-defaults__box-focus--border-color;
+    @if ($_editor-defaults__input-field-focus--border-width){
+        padding-left: $editor-defaults__input-field-focus--text-indent;
+        border-width: $_editor-defaults__input-field-focus--border-width;
+        padding-top: $_editor-boxes__input-field-focus--padding-top;
+        padding-bottom: $_editor-boxes__input-field-focus--padding-bottom;
+    }
+}
+
+textarea.z-textbox {
+    @if $editor-boxes__textarea-field--padding {
+        padding: $editor-boxes__textarea-field--padding;
+    }
+}
+
+.z-textbox, .z-decimalbox, .z-intbox, .z-longbox, .z-doublebox, .z-bandbox-input, .z-textbox-focus, .z-timebox-input, .z-spinner-input, .z-doublespinner-input, .z-paging-input {
+    outline: none;
+    @if ($editor-defaults__input-field--box-shadow) {
+        -webkit-box-shadow: $editor-defaults__input-field--box-shadow;
+        -moz-box-shadow: $editor-defaults__input-field--box-shadow;
+        box-shadow: $editor-defaults__input-field--box-shadow;
+    }
+
+    &:focus {
+        outline: none;
+        @if ($editor-defaults__input-field-focus--box-shadow){
+            -webkit-box-shadow: $editor-defaults__input-field-focus--box-shadow;
+            -moz-box-shadow: $editor-defaults__input-field-focus--box-shadow;
+            box-shadow: $editor-defaults__input-field-focus--box-shadow;
+        }
+    }
+
+}
+
+.z-datebox-input, .z-textbox, .z-decimalbox, .z-intbox, .z-longbox, .z-doublebox, .z-bandbox-input, .z-combobox-input, .z-textbox-focus, .z-timebox-input, .z-spinner-input, .z-doublespinner-input, .z-paging-input {
+    line-height: $editor-defaults__input-field--line-height;
+    height: $editor-defaults__box--height;
+    padding-left: $editor-defaults__input-field--text-indent;
+    border-color: $editor-defaults__box--border-color;
+    color: $editor-defaults__input-field--color;
+    box-sizing: border-box;
+    max-width: 100%;
+
+    &:hover {
+        border-color: $editor-defaults__input-field-hover--border-color;
+    }
+    &:focus {
+        border-color: $editor-defaults__box-focus--border-color;
+        @if ($_editor-defaults__input-field-focus--border-width){
+            padding-left: $editor-defaults__input-field-focus--text-indent;
+            border-width: $_editor-defaults__input-field-focus--border-width;
+            padding-top: $_editor-boxes__input-field-focus--padding-top;
+            padding-bottom: $_editor-boxes__input-field-focus--padding-bottom;
+        }
+        @if ($editor-defaults__box-focus--outline-style){
+        	outline-style: $editor-defaults__box-focus--outline-style;
+        	outline-offset: $editor-defaults__box-focus--outline-offset;
+            outline-width: $editor-defaults__box-focus--outline-width;
+            outline-color: $editor-defaults__box-focus--outline-color;
+        }
+    }
+}
+
+/*======= z-select ====*/
+select,
+.z-select {
+    border-radius: $editor-defaults__input-field--border-radius;
+    padding: $editor-boxes__input-field--padding;
+    padding-left: $editor-defaults__input-field--text-indent;
+    height: $editor-defaults__box--height;
+    border-color: $editor-defaults__box--border-color;
+    color: $editor-defaults__input-field--color;
+    background: $_editor-defaults__select-field--background;
+    border-width: $editor-defaults__input-field--border-width;
+    border-style: solid;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    @if ($editor-defaults__input-field--box-shadow) {
+        -webkit-box-shadow: $editor-defaults__input-field--box-shadow;
+        -moz-box-shadow: $editor-defaults__input-field--box-shadow;
+        box-shadow: $editor-defaults__input-field--box-shadow;
+    }
+    &:hover {
+        border-color: $editor-defaults__input-field-hover--border-color;
+    }
+
+    &::-ms-expand {
+        display: none;
+    }
+    &:focus,
+    &:active {
+        outline: none;
+        border-color: $editor-defaults__box-focus--border-color;
+        background: $_editor-defaults__select-field-focus--background;
+        @if ($editor-defaults__input-field-focus--box-shadow){
+            -webkit-box-shadow: $editor-defaults__input-field-focus--box-shadow;
+            -moz-box-shadow: $editor-defaults__input-field-focus--box-shadow;
+            box-shadow: $editor-defaults__input-field-focus--box-shadow;
+        }
+        @if ($_editor-defaults__input-field-focus--border-width){
+            padding-left: $editor-defaults__input-field-focus--text-indent;
+            border-width: $_editor-defaults__input-field-focus--border-width;
+            padding-top: $_editor-boxes__input-field-focus--padding-top;
+            padding-bottom: $_editor-boxes__input-field-focus--padding-bottom;
+        }
+    }
+    &:-moz-focusring,
+    &::-moz-focus-inner {
+        outline: 0;
+        outline-color: transparent;
+        color: transparent !important;
+        text-shadow: 0 0 0 $editor-defaults__input-field--color !important;
+        border-color: $editor-defaults__box-focus--border-color;
+        background: $_editor-defaults__select-field-focus--background;
+        @if ($_editor-defaults__input-field-focus--border-width){
+            padding-left: $editor-defaults__input-field-focus--text-indent;
+            border-width: $_editor-defaults__input-field-focus--border-width;
+            padding-top: $_editor-boxes__input-field-focus--padding-top;
+            padding-bottom: $_editor-boxes__input-field-focus--padding-bottom;
+        }
+    }
+}
+
+
+/*======== z-combobox, z-bandbox =======*/
+
+.z-combobox,
+.z-bandbox {
+    width: 100%;
+    display: table;
+    border-spacing: 0;
+
+    &-icon.z-icon-caret-down {
+        &:before {
+            font-family: $editor-defaults__box-button-icon--font-family;
+            content: $_editor-defaults__box-combobox-button-icon--content;
+        }
+    }
+}
+
+//taken from zk
+.z-combobox-button,
+.z-bandbox-button,
+.z-datebox-button,
+.z-timebox-button,
+.z-spinner-button,
+.z-doublespinner-button {
+    &:hover {
+        color: $editor-defaults__box-button-hover--color;
+        background-color: $editor-defaults__box-button-hover--bg-color;
+
+        > i {
+            color: inherit;
+        }
+    }
+    input[disabled] + & {
+        &:hover,
+        &:active {
+            border-color: $editor-default-disabled-opacity;
+        }
+    }
+}
+
+.z-combobox,
+.z-datebox,
+.z-bandbox {
+    & &-button,
+    & &-input {
+        &:hover {
+            border-color: $editor-defaults__inputbox-hover--border-color;
+        }
+    }
+    input:hover + &-button {
+        border-left-color: $editor-defaults__inputbox-hover--border-color;
+    }
+    & &-button {
+        border: $editor-defaults__inputbox--border-width solid $editor-defaults__box--border-color;
+        border-left-width: $editor-defaults__input-split-inner--border-width;
+        border-radius: $editor-defaults__input-split-inner--border-radius $editor-defaults__input-box--border-radius $editor-defaults__input-box--border-radius $editor-defaults__input-split-inner--border-radius;
+        @if $_editor-defaults__box-icon-button--bg-color {
+            background-color: $_editor-defaults__box-icon-button--bg-color;
+        }
+        display: table-cell;
+        position: relative;
+        text-align: center;
+        width: $_editor-defaults__box-icon-button--width;
+        text-align: center;
+        vertical-align: middle;
+    }
+    & &-input {
+        padding-right: $editor-defaults__inputbox-input--padding-right;
+        background: $editor-defaults__input-field--bg-color;
+        border-color: $editor-defaults__box--border-color;
+        color: $editor-defaults__box--text-color;
+        border-radius: $editor-defaults__input-field--border-radius $editor-defaults__input-split-inner--border-radius $editor-defaults__input-split-inner--border-radius $editor-defaults__input-field--border-radius;
+        box-sizing: border-box;
+        margin-bottom: 0;
+        width: 100%;
+        display: table-cell;
+
+        &,
+        &:hover,
+        &:focus {
+            border-right-width: 0;
+        }
+    }
+    & &-button:hover {
+    	background: $editor-defaults__box-button-hover--bg-color;
+    	color: $editor-defaults__box-button-hover--color;
+    }
+
+    &-button &-icon {
+        background-image: none;
+        width: $_editor-defaults__box-button-icon--size;
+        height: $_editor-defaults__box-button-icon--size;
+        font-size: $_editor-defaults__box-button-icon--font-size;
+        line-height: $_editor-defaults__box-button-icon--size;
+        margin: auto;
+        @if $_editor-defaults__box-button-icon--color {
+            color: $_editor-defaults__box-button-icon--color;
+        }
+
+        &:before {
+            font-family: $editor-defaults__box-button-icon--font-family;
+            display: block;
+            // content: $_editor-defaults__box-settings-button-icon--content;
+        }
+    }
+    &-button:active &-icon {
+    	color: $_editor-defaults__box-icon-button-active--color;//$_editor-defaults__box-button-icon--color;
+    }
+
+    & &-input:focus + &-button {
+        border-left-color: $editor-defaults__box-focus--border-color;
+    }
+    & &-input:focus,
+    &-open &-input:focus + &-button {
+        border-color: $editor-defaults__box-focus--border-color;
+    }
+    @if ($_editor-defaults__input-field-focus--border-width){
+        & &-input:not([disabled]):focus {
+            border-right-width: $_editor-defaults__input-field-focus--border-width - $editor-defaults__input-field--border-width;
+            border-right-style: solid;
+            padding-right: $editor-defaults__inputbox-input--padding-right + $editor-defaults__input-field--border-width - $_editor-defaults__input-field-focus--border-width;
+        }
+        &-button:focus,
+        &-open &-input:not([disabled]):focus + &-button {
+            border-width: $_editor-defaults__input-field-focus--border-width;
+        }
+        &-open &-input:not([disabled]):focus {
+            padding-right: $editor-defaults__inputbox-input--padding-right;
+            padding-top: $_editor-boxes__input-field-focus--padding-top;
+            padding-bottom: $_editor-boxes__input-field-focus--padding-bottom;
+            border-right-width: 0;
+        }
+    }
+    input[disabled] + &-button:hover {
+        border-color: $editor-defaults__box--border-color;
+    }
+    &-button:focus,
+    &-open &-button {
+        @if $_editor-defaults__box-icon-button-focus--bg-color {
+            background-color: $_editor-defaults__box-icon-button-focus--bg-color !important;
+        }
+
+        i {
+        	color: $_editor-defaults__box-icon-button-active--color;
+        }
+    }
+    &-disabled &-button,
+    &-disabled &-input {
+        &,
+        &:hover,
+        &:focus {
+            background: $editor-defaults__input-box-disabled--bg-color;
+            border-color: $editor-defaults__input-box-disabled--border-color;
+        }
+    }
+    &-disabled input:hover + &-button {
+        background: $editor-defaults__input-box-disabled--bg-color;
+        border-color: $editor-defaults__input-box-disabled--border-color;
+    }
+    &-disabled &-icon {
+        color: inherit;
+    }
+}
+
+@if $editor-boxes__combobox-combine {
+    @include _combineInputAndButtonBox(z-combobox);
+}
+@if $editor-boxes__datebox-combine {
+    @include _combineInputAndButtonBox(z-datebox);
+}
+
+.z-combobox-input, .z-bandbox-input, .z-datebox-input, .z-timebox-input,
+.z-spinner-input, .z-doublespinner-input {
+    font-size: $editor-defaults__input-field--font-size;
+}
+
+.z-datebox .z-datebox-icon,
+.z-icon-calendar {
+    &:before {
+        content: $_editor-defaults__box-datebox-button-icon--content;
+        font-family: $editor-defaults__box-button-icon--font-family;
+    }
+}
+
+.z-icon-search,
+.z-icon-check {
+    font-family: $editor-defaults__box-button-icon--font-family;
+}
+
+.z-icon-search {
+    &:before {
+        content: $_editor-defaults__box-search-button-icon--content;
+    }
+}
+.z-icon-check {
+    &:before {
+        content: $_editor-defaults__box-check-icon--content;
+    }
+}
+
+.z-combobox {
+    & &-icon {
+        &:before {
+            content: $_editor-defaults__box-combobox-button-icon--content;
+        }
+    }
+}
+
+/*====== z-timebox, z-spinner, z-doublespinner =========*/
+
+.z-timebox,
+.z-spinner,
+.z-doublespinner {
+    td > &:only-child {
+        display: block;
+    }
+}
+
+.z-timebox,
+.z-spinner,
+.z-doublespinner {
+    & &-input{
+        border-right-width: $editor-defaults__inputbox--border-width;
+        width: $editor-defaults__timebox-input--width;
+        border-radius: $editor-defaults__input-field--border-radius $editor-defaults__input-split-inner--border-radius $editor-defaults__input-split-inner--border-radius $editor-defaults__input-field--border-radius;
+        box-sizing: border-box;
+        position: relative;
+        color: $editor-defaults__input-field--color;
+        border-color: $editor-defaults__box--border-color;
+        background: $editor-defaults__input-field--bg-color;
+
+        &:hover {
+            border-color: $editor-defaults__input-field-hover--border-color;
+            background: $editor-defaults__box-hover--bg-color;
+        }
+
+        &:focus{
+            z-index: 1;
+            border-right: $editor-defaults__inputbox--border-width solid $editor-defaults__box-focus--border-color;
+        }
+    }
+    & &-button {
+        @include _add-default-button-styles();
+//         @if($editor-defaults__timebox-spinner--bordered){
+//             border: none;
+//         }else{
+//             border-color: $editor-defaults__box--border-color;
+//         }
+		border-color: $editor-defaults__box--border-color;
+        height: $editor-defaults__inline-button--size;
+        width: $editor-defaults__inline-button--size;
+        border-radius: $editor-defaults__input-split-inner--border-radius $editor-defaults__input-box--border-radius $editor-defaults__input-box--border-radius $editor-defaults__input-split-inner--border-radius;
+        margin-left: $editor-defaults__inputbox--border-width * -1;
+        box-sizing: border-box;
+        padding: 0;
+
+        > a {
+            width: auto;
+            line-height: $editor-defaults__timebox-button--line-height;
+            height: $editor-defaults__timebox-button--height;
+            position: relative;
+            background: $editor-defaults__button--bg-color;
+
+            border: none;//$editor-defaults__inputbox--border-width solid $editor-defaults__box--border-color;
+            &:first-child {
+                border-radius: $editor-defaults__input-split-inner--border-radius $editor-defaults__input-box--border-radius $editor-defaults__input-split-inner--border-radius $editor-defaults__input-split-inner--border-radius;
+                border-bottom: none; //make up/down parts separated with one line
+            }
+            &:last-child {
+                border-radius: $editor-defaults__input-split-inner--border-radius $editor-defaults__input-split-inner--border-radius $editor-defaults__input-box--border-radius $editor-defaults__input-split-inner--border-radius;
+            }
+
+            &:hover {
+            	color: $editor-defaults__box-button-hover--color;
+                background: $editor-defaults__box-button-hover--bg-color;
+                border-color: $editor-defaults__button-hover--border-color;
+                i {
+                	color: $editor-defaults__box-button-hover--color;
+                }
+            }
+            &:focus,
+            &:active {
+                color: $editor-defaults__button-active--color;
+                background: $editor-defaults__button-active--bg-color;
+                border-color: $editor-defaults__button-active--border-color;
+                i {
+                	color: $editor-defaults__button-active--color;
+                }
+            }
+
+            & i {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: $_editor-defaults__timebox-button--top;
+                transform: $_editor-defaults__timebox-button--transform;
+                color: $_editor-defaults__timebox-button--color;
+
+                &.z-icon-angle-up {
+                    &:before {
+                        content: $_editor-defaults__timebox-button-icon-up--content;
+                        font-family: $_editor-defaults__timebox-button-icon--font-family;
+                    }
+                }
+                &.z-icon-angle-down {
+                    &:before {
+                        content: $_editor-defaults__timebox-button-icon-down--content;
+                        font-family: $_editor-defaults__timebox-button-icon--font-family;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ye-validation{
+    &-error, &-info, &-warn {
+        .z-timebox-button .z-timebox-icon,
+        .z-spinner-button .z-spinner-icon,
+        .z-doublespinner-button .z-doublespinner-icon {
+            border: none;
+        }
+    }
+}
+

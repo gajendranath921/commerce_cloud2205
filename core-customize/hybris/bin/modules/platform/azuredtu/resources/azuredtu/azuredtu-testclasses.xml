@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testclasses><azuredtu><testclass>de.hybris.platform.azure.dtu.impl.AzureDatabaseUtilizationServiceTest</testclass><testclass>de.hybris.platform.azure.dtu.impl.BufferedDatabaseUtilizationServiceTest</testclass><testclass>de.hybris.platform.azure.dtu.impl.DefaultDatabaseUtilizationServiceTest</testclass></azuredtu></testclasses>

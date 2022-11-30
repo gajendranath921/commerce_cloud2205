@@ -1,0 +1,30 @@
+import { OnInit, ChangeDetectorRef } from '@angular/core';
+import { ComponentAttributes, IContextualMenuButton, IContextualMenuConfiguration, PopupOverlayConfig, TypedMap } from 'smarteditcommons';
+import { ComponentNode } from '../../../services/pageTree/NodeInfoService';
+import { PageTreeComponentMenuService } from '../../../services/pageTree/PageTreeComponentMenuService';
+import { ParentMenu } from './ParentMenu';
+export declare class PageTreeComponentMenuComponent implements ParentMenu, OnInit {
+    private readonly pageTreeComponentMenuService;
+    private readonly cdr;
+    component: ComponentNode;
+    slotId: string;
+    slotUuid: string;
+    componentAttributes: ComponentAttributes;
+    remainOpenMap: TypedMap<boolean>;
+    items: IContextualMenuButton[];
+    leftButton: IContextualMenuButton;
+    moreMenuIsOpen: boolean;
+    moreMenuPopupConfig: PopupOverlayConfig;
+    itemTemplateOverlayWrapper: PopupOverlayConfig;
+    menuConfiguration: IContextualMenuConfiguration;
+    private displayedItem;
+    constructor(pageTreeComponentMenuService: PageTreeComponentMenuService, cdr: ChangeDetectorRef);
+    getItems(): IContextualMenuButton[];
+    ngOnInit(): Promise<void>;
+    setRemainOpen(key: string, remainOpen: boolean): void;
+    showOverlay(active: boolean): boolean;
+    canShowTemplate(menuItem: IContextualMenuButton): boolean;
+    onHideItemPopup(hideMoreMenu?: boolean): void;
+    triggerMenuItemAction(item: IContextualMenuButton, $event: Event): void;
+    toggleMoreMenu(): void;
+}

@@ -1,0 +1,11 @@
+#Ant properties
+#Wed Nov 02 12:34:53 CET 2022
+version.api=2205
+vendor=hybris
+group.id=de.hybris.platform
+name=previewpersonalizationweb
+description=previewpersonalizationweb
+builddate=20221102 1232
+releasedate=20220601 2009
+version=2205.6
+module.name=platform-module

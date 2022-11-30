@@ -1,0 +1,28 @@
+{
+  "name": "@rush-temp/webappinjector",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@types/scriptjs": "0.0.2",
+    "@typescript-eslint/eslint-plugin": "4.1.1",
+    "@typescript-eslint/parser": "4.1.1",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-ban": "1.5.1",
+    "eslint-plugin-deprecation": "1.2.1",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jsdoc": "30.5.1",
+    "eslint-plugin-prefer-arrow": "1.2.2",
+    "eslint-plugin-prettier": "3.1.4",
+    "scriptjs": "2.5.9",
+    "ts-loader": "7.0.4",
+    "typescript": "4.1.5",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12"
+  },
+  "rushDependencies": {
+    "smartedit": "0.0.1",
+    "smartedit-build": "0.0.1",
+    "smarteditcontainer": "0.0.1"
+  }
+}

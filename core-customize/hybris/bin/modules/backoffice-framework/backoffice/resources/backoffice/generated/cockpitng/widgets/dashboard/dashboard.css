@@ -1,0 +1,139 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/*================================
+		Dashboard Charts Defaults
+================================*/
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Dashboard Charts
+================================*/
+.yw-dashboard {
+  height: 100%;
+  overflow: auto;
+  position: relative; }
+  .yw-dashboard-lock {
+    right: 8px;
+    float: right;
+    position: absolute;
+    top: 0; }
+  .yw-dashboard-toolbar, .yw-dashboard-toolbar.y-toolbar {
+    padding: 12px 32px;
+    background-color: var(--bo-page-header-background);
+    border-top-width: 0;
+    border-bottom-width: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .yw-dashboard-toolbar .yw-dashboard-lock {
+    position: static; }
+  .yw-dashboard-actions {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    display: block; }
+    .yw-dashboard-actions .cng-action-enabled .cng-action-icon {
+      box-shadow: inset 0 0 0 1px var(--bo-button-hover-border-color); }
+      .yw-dashboard-actions .cng-action-enabled .cng-action-icon:hover, .yw-dashboard-actions .cng-action-enabled .cng-action-icon:focus {
+        box-shadow: inset 0 0 0 1px var(--bo-button-hover-border-color); }
+  .yw-dashboard-slot-ghost {
+    border: 2px solid var(--bo-button-border-color);
+    border-radius: 4px;
+    max-width: 500px;
+    opacity: 0.8 !important;
+    overflow: hidden; }
+  .yw-dashboard .yw-children-container {
+    background: var(--bo-base-background);
+    padding: 8px; }
+    .yw-dashboard .yw-children-container .yw-dashboard-top-container {
+      background-color: var(--bo-base-background);
+      margin: 8px; }
+    .yw-dashboard .yw-children-container .yw-dashboard-dnd-enabled .yw-dashboard-slot {
+      position: relative; }
+      .yw-dashboard .yw-children-container .yw-dashboard-dnd-enabled .yw-dashboard-slot-draggable {
+        width: 100%;
+        z-index: 2;
+        background-color: var(--bo-base-background);
+        position: absolute;
+        box-sizing: border-box;
+        cursor: move; }
+        .yw-dashboard .yw-children-container .yw-dashboard-dnd-enabled .yw-dashboard-slot-draggable + .widget_cnt {
+          border-radius: 4px;
+          box-shadow: 0 0 0 0.0625rem var(--bo-highlight-color); }
+          .yw-dashboard .yw-children-container .yw-dashboard-dnd-enabled .yw-dashboard-slot-draggable + .widget_cnt .yw-generic-chart {
+            box-shadow: 0 0 0 0.0625rem var(--bo-highlight-color); }
+          .yw-dashboard .yw-children-container .yw-dashboard-dnd-enabled .yw-dashboard-slot-draggable + .widget_cnt.z-drag-matching-drop-target.z-drag-over {
+            background-color: var(--bo-highlight-color); }
+            .yw-dashboard .yw-children-container .yw-dashboard-dnd-enabled .yw-dashboard-slot-draggable + .widget_cnt.z-drag-matching-drop-target.z-drag-over > .widget_body {
+              opacity: 0.9; }
+        .yw-dashboard .yw-children-container .yw-dashboard-dnd-enabled .yw-dashboard-slot-draggable:before {
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          content: "\e1e8";
+          color: var(--bo-button-icon-color);
+          font-size: 16px;
+          font-family: var(--bo-content-icon-font-family);
+          background-color: transparent;
+          border-radius: var(--bo-button-border-radius);
+          top: 6px;
+          z-index: 2;
+          background-repeat: no-repeat;
+          background-position: center center;
+          left: 50%;
+          position: absolute;
+          text-align: center;
+          transform: translate3d(-50%, 0, 0); }
+  .yw-dashboard-title {
+    color: var(--bo-page-header-text-color);
+    font-size: 3rem; }
+  .yw-dashboard, .yw-dashboard-container {
+    background-color: var(--bo-base-background); }
+
+/* Status */
+/* Button Color Scheme */
+/*================================
+		Dashboard Column
+================================*/
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Dashboard Charts
+================================*/
+.yw-dashboard-top-container > .yw-dashboard-column {
+  padding-right: 0; }
+.yw-dashboard-top-container {
+  overflow-x: hidden; }
+.yw-dashboard-row {
+  display: inline-table;
+  width: 100%; }
+.yw-dashboard-column {
+  background: var(--bo-base-background);
+  position: relative;
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: top; }
+  .yw-dashboard-column > .yw-dashboard-row {
+    display: block; }
+  .yw-dashboard-column .yw-dashboard-row .yw-dashboard-slot-draggable + .z-drag-over {
+    position: relative; }
+.yw-dashboard-slot {
+  flex: 1 1 auto;
+  background: var(--bo-base-background);
+  margin: 8px;
+  border-radius: 0.25rem;
+  box-shadow: var(--bo-content-shadow-small);
+  min-height: 500px;
+  padding: 0; }
+  .yw-dashboard-slot > .widget_cnt {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px; }

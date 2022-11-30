@@ -1,0 +1,1359 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Cockpit variables
+================================*/
+@charset "UTF-8";
+
+
+$body-bg-color: var(--bo-base-background);
+$component__default--border-color: var(--bo-container-border-color);
+$component__default--bg-color: var(--bo-container-background);
+$component__default--text-color: var(--bo-container-color);
+$component__default--label-color: var(--bo-content-label-color);
+$component__default-selected--text-color: var(--bo-selected-color);
+
+
+// $body__default--color: #f00; //$grey__default--900;
+
+$editor-defaults__label--color: $form-defaults__label--color;
+$editor-default-disabled-opacity: var(--bo-content-disabled-opacity);
+
+// $editor-defaults__label-inactive--color: $grey__default--700;
+// $editor-defaults__input-inactive--color: $grey__light--700;
+
+$editor-defaults__drag-element--bg-color: var(--bo-container-background);
+
+// Input-Field Definitions
+$editor-defaults__input-field--border-width: $boxes--border__thin;
+$editor-defaults__input-field--box-shadow: false; // inset 3px 3px 6px -3px rgba(0,0,0,0.2);
+$editor-defaults__input-field-focus--box-shadow: false; //inset 0 0 0 1px $form-defaults__input-focus--color; //inset 3px 3px 6px -3px rgba(0,0,0,0.1);
+// $editor-defaults__input-field--box-shadow-inactive: inset 3px 3px 6px -3px rgba(0,0,0,0.1);
+$editor-defaults__input-field--font-size: $font-size__base;
+$_editor-defaults__input-field-focus--border-width: $boxes--border__thin;
+@if $_editor-defaults__input-field-focus--border-width == $editor-defaults__input-field--border-width {
+	$_editor-defaults__input-field-focus--border-width: false;
+}
+// $editor-defaults__input-field--padding-left: 8px;
+$editor-defaults__input-field--line-height: $font-size__large;
+$editor-defaults__input-field--text-indent: $container-spacing-default__half;
+$editor-defaults__input-field-focus--text-indent: ($editor-defaults__input-field--text-indent + $editor-defaults__input-field--border-width - $_editor-defaults__input-field-focus--border-width);
+$editor-defaults__input-field--color: var(--bo-input-text-color);
+$editor-defaults__input-field--bg-color: var(--bo-input-background);
+$editor-defaults__input-field-hover--border-color: var(--bo-input-hover-border-color);
+
+$_editor-defaults__select-field--background: url(images/selectbox_arrow.svg) no-repeat center right, url(images/selectbox_arrow-bg.gif) repeat-y top right;
+$_editor-defaults__select-field-focus--background: url(images/selectbox-focus_arrow.svg) no-repeat center right, url(images/selectbox-focus_arrow-bg.gif) repeat-y top right;
+
+$_editor-defaults__editor-localized-icon--font-family: $font-family__icon;
+$_editor-defaults__editor-localized-icon--font-size: $font-size__base;
+$_editor-defaults__editor-localized-icon--content: _getIconGlyphContentValue('globe');
+$_editor-defaults__editor-localized-icon--top: 50%;
+$_editor-defaults__editor-localized-icon--left: 50%;
+$_editor-defaults__editor-localized-icon--transform: translate(-50%, -50%);
+$_editor-defaults__editor-localized-icon--color: $default-icon--color;
+$_editor-defaults__editor-localized-icon-active--color: $_button__icon--color;
+$editor-defaults__editor-label-description-icon--margin-left: $_container-spacing-default__core;
+$editor-defaults__editor-label-description-icon--margin: 0 0 0 $editor-defaults__editor-label-description-icon--margin-left;
+$editor-defaults__editor-label-description-icon--top: 2px;
+$editor-defaults__editor-label-description-icon--content: _getIconGlyphContentValue('sys-help');
+$editor-defaults__editor-label-description-icon--font-family: $font-family__icon;
+$editor-defaults__editor-label-description-icon--font-size: $font-size__base;
+$editor-defaults__editor-label-description-icon--color: $form-defaults__label-info--color;
+$editor-defaults__editor-label-description-icon-selected--color: $_container__action--color;
+$editor-defaults__editor-rows-height: 2 * $editor-defaults__list-item--height;
+
+// $editor-defaults__action-button-hover--bg-color: $_button__action-tool-hover-active-focus--bg-color;
+// $editor-defaults__action-button-hover--color: $_button__action-tool-hover-active-focus--color;
+// $editor-defaults__action-button--transition: background-color .2s ease, border-color .15s ease .05s;
+// $editor-defaults__action-button-hover--border-color: $editor-defaults__action-button-hover--border-color;
+// $editor-defaults__action-button--border-width: $editor-defaults__action-button--border-width;
+$_editor-defaults__action-button-disabled-text--color: $_button__action-tool--color;
+$editor-defaults__action-button--font-family: $font-family__icon;
+$editor-defaults__action-button--font-size: $font-size__large;
+
+$editor-defaults__box-button-hover--color: var(--bo-button-hover-color);
+$editor-defaults__box-button-hover--bg-color: var(--bo-button-hover-background);
+
+$editor-defaults__box-button-icon--font-family: $font-family__icon;
+$_editor-defaults__box-check-icon--color: var(--bo-content-icon-color);
+$_editor-defaults__box-datebox-button-icon--content: _getIconGlyphContentValue('calendar');
+$_editor-defaults__box-combobox-button-icon--content: _getIconGlyphContentValue('slim-arrow-down');
+$_editor-defaults__box-search-button-icon--content: _getIconGlyphContentValue('search');
+$_editor-defaults__box-check-icon--content: _getIconGlyphContentValue('accept');
+
+$editor-defaults__pagin--font-family: var(--bo-font-family);
+$editor-defaults__pagin--font-size: $font-size__base;
+$_editor-defaults__pagin-icon--font-family: $font-family__icon;
+$editor-defaults__pagin-info--line-height: $toolbar__vertical-centering-base--height;
+$editor-defaults__pagin--padding: 0 $_container-spacing-default__tiny;
+$_editor-defaults__pagin-inner--margin: $_container-spacing-default__core;
+
+$editor-defaults__pagin-input--height: $toolbar__vertical-centering-base--height;
+$editor-defaults__pagin-input--width: 32px;
+$editor-defaults__pagin-text--line-height: $toolbar__vertical-centering-base--height;
+$editor-defaults__pagin-text--padding-left: 5px;
+
+$editor-defaults__pagin-button-disabled--opacity: var(--bo-content-disabled-opacity);
+$editor-defaults__pagin-button-color: var(--bo-button-icon-color);
+// $editor-defaults__pagin-button-first--bg-image: url("images/icon_step_end_left.svg");
+// $editor-defaults__pagin-button-last--bg-image: url("images/icon_step_end_right.svg");
+$editor-defaults__pagin-button-first--icon-font: _getIconGlyphContentValue("media-rewind");
+$editor-defaults__pagin-button-last--icon-font: _getIconGlyphContentValue("media-forward");
+// $editor-defaults__pagin-button-icon--width: 12px;
+
+$editor-defaults__pagin-button-previous--icon: _getIconGlyphContentValue("navigation-left-arrow");
+$editor-defaults__pagin-button-next--icon: _getIconGlyphContentValue("navigation-right-arrow");
+$editor-defaults__pagin-button-top--icon: _getIconGlyphContentValue("arrow-top");
+$editor-defaults__pagin-button-bottom--icon: _getIconGlyphContentValue("arrow-bottom");
+$editor-defaults__pagin-button--tiny-spacing: $_container-spacing-default__tiny;
+
+$editor-defaults__pagin-os-cnt--bg-color: var(--bo-container-background);
+$editor-defaults__pagin-os-cnt-selected--bg-color: var(--bo-content-selected-background);
+$editor-defaults__pagin-os-cnt--color: var(--bo-text-color);
+$editor-defaults__pagin-os-cnt-selected-hover--color: var(--bo-selected-color);
+$editor-defaults__pagin-os-cnt--margin: 2px;
+
+
+$editor-defaults__pagin-input--padding: 0 3px;
+$_editor-defaults__pagin-input-focus--padding: $editor-defaults__pagin-input--padding;
+@if $_editor-defaults__input-field-focus--border-width and ($_editor-defaults__input-field-focus--border-width != $editor-defaults__input-field--border-width) {
+	$_editor-defaults__pagin-input-focus--padding: nth($editor-defaults__pagin-input--padding, 1) (nth($editor-defaults__pagin-input--padding, 2) + $editor-defaults__input-field--border-width - $_editor-defaults__input-field-focus--border-width);
+}
+$_editor-defaults__pagin-input--border-radius: $toolbar__button-small--border-radius;
+
+$editor-defaults__box--font-size: $font-size__small;
+$editor-defaults__box--height: $editor-defaults__inline-box--height;
+$editor-defaults__box--border-color: var(--bo-input-border-color);
+$editor-defaults__box--text-color: var(--bo-text-color); //$black;
+$editor-defaults__box-focus--border-color: var(--bo-input-focus-border-color);//$grey__default--600;//$blue__default;//$blue__greyish--600;
+$editor-defaults__box-hover--color: var(--bo-text-color);
+$editor-defaults__box-focus--outline-style: var(--bo-content-focus-outline-style);
+$editor-defaults__box-focus--outline-width: var(--bo-content-focus-outline-width);
+$editor-defaults__box-focus--outline-color: var(--bo-content-focus-outline-color);
+$editor-defaults__box-focus--outline-offset: $content-focus-outline-offset;
+
+$editor-defaults__input-box-disabled--border-color: var(--bo-input-readonly-border-color);
+$_editor-defaults__input-box-disabled--padding: $container-spacing-default__third 0;
+$_editor-defaults__input-box-disabled-label--line-height: $font-size__large;
+$_editor-defaults__input-box-disabled-label--height: $container-spacing-default_two-thirds;
+$editor-defaults__box-hover--bg-color: var(--bo-input-hover-background);
+//ToDo: Check this
+//$editor-defaults__box-hover--bg-color: $_container__action-selected--bg-color;
+$_editor-defaults__box-hover--border-width: $boxes--border__medium;
+
+//$editor-defaults__box--shadow-color: $grey__light--500;
+
+$_editor-defaults__box-header--border-bottom: $boxes--border__thin solid var(--bo-container-border-color);
+$_editor-defaults__box-delimit--border: $boxes--border__thin solid var(--bo-container-border-color);
+
+$_editor-defaults__input-read-only--bg-color: transparent;
+$_editor-defaults__input-read-only--color: false;
+$_editor-defaults__input-read-only--border-color: false;
+$_editor-defaults__input-read-only--border-bottom-color: true; // query value true enables only having the other borders transparent
+$editor-defaults__locedit-box--border-color: var(--bo-list-border-color);
+$editor-defaults__box-disabled--border-color: var(--bo-input-readonly-border-color);
+
+$editor-defaults__loading--bg-color: $_editor-defaults__popup-box--bg-color;
+$editor-defaults__loading--color: $_default__content--color;
+$editor-defaults__loading--margin-y: 10px;
+$editor-defaults__loading--font-size: $font-size__large;
+$editor-defaults__loading-icon--size: 56px;
+$editor-defaults__loading-indicator--padding: 15px 18px;
+$editor-defaults__component--bg-color: var(--bo-container-background);
+$editor-defaults__loading-mask--bg-color: $_editor-defaults__popup-box--bg-color;
+$_editor-defaults__loading-small--font-size: $font-size__large;
+$_editor-defaults__loading-small-icon--size: 24px;
+$_editor-defaults__loading-small-icon--margin-right: 4px;
+$_editor-defaults__loading-small--line-height: $_editor-defaults__loading-small-icon--size;
+$_editor-defaults__loading-small--padding: 4px;
+$_editor-defaults__loading-tiny-icon--size: 16px;
+$_editor-defaults__loading-icon--min-height: 16px;
+$_editor-defaults__loading-icon--animation-duration: 0.8s;
+
+$editor-defaults__action-button-hover--bg-color: var(--bo-button-hover-background);
+$editor-defaults__action-button-hover--color: var(--bo-button-hover-color);
+$editor-defaults__action-button--transition: background-color .2s ease-in-out, border-color .15s ease-in-out .05s, color .2s ease-in-out;
+$editor-defaults__action-button-hover--border-color: var(--bo-button-hover-border-color);
+$editor-defaults__action-button--border-width: $editor-defaults__action-button--border-width;
+
+$editor-defaults__button--color: var(--bo-button-text-color);
+$editor-defaults__button--bg-color: var(--bo-button-background);
+$editor-defaults__button--border-color: var(--bo-button-border-color);
+$editor-defaults__button--border-width: $boxes--border__thin;
+$editor-defaults__button--border: $editor-defaults__button--border-width solid $editor-defaults__button--border-color;
+$editor-defaults__button--border-radius: $editor-defaults__input-box--border-radius;
+$editor-defaults__button-hover--color: var(--bo-button-hover-color);
+$editor-defaults__button-hover--bg-color: var(--bo-button-hover-background);
+$editor-defaults__button-hover--border-color: var(--bo-button-hover-border-color);
+$editor-defaults__button-hover-border: $editor-defaults__button--border-width solid $editor-defaults__button-hover--border-color;
+$editor-defaults__button-active--color: var(--bo-button-active-color);
+$editor-defaults__button-active--bg-color: var(--bo-button-active-background);
+$editor-defaults__button-active--border-color: var(--bo-button-active-border-color);
+$editor-defaults__button-active--outline-color: var(--bo-contrast-text-color);
+$editor-defaults__button-disabled--opacity: var(--bo-content-disabled-opacity);
+$editor-defaults__button-disabled--color: $_button-disabled--color;
+$editor-defaults__button-focus-outline-color: var(--bo-button-focus-outline-color);
+$editor-defaults__button-focus-outline-width: var(--bo-content-focus-outline-width,.0625rem);
+$editor-defaults__button-focus-outline-offset: $content-focus-outline-offset;
+
+$editor-defaults__button-primary--color: var(--bo-button-primary-text-color);
+$editor-defaults__button-primary--bg-color: var(--bo-button-primary-background);
+$editor-defaults__button-primary--border-color: var(--bo-button-primary-border-color);
+$editor-defaults__button-primary--font-weight: $font-weight-bold;
+$editor-defaults__button-primary-hover--color: var(--bo-button-primary-hover-text-color);
+$editor-defaults__button-primary-hover--bg-color: var(--bo-button-primary-hover-background);
+$editor-defaults__button-primary-hover--border-color: var(--bo-button-primary-hover-border-color);
+$editor-defaults__button-primary-active--color: var(--bo-button-primary-active-text-color);
+$editor-defaults__button-primary-active--bg-color: var(--bo-button-primary-active-background);
+$editor-defaults__button-primary-active--border-color: var(--bo-button-primary-active-border-color);
+
+$editor-defaults__button-secondary--color: var(--bo-button-icon-color);
+$editor-defaults__button-secondary--bg-color: var(--bo-button-background);
+$editor-defaults__button-secondary--border-color: var(--bo-button-border-color);
+$editor-defaults__button-secondary--font-weight: $font-weight-normal;
+$editor-defaults__button-secondary-hover--color: var(--bo-button-hover-color);
+$editor-defaults__button-secondary-hover--bg-color: var(--bo-button-hover-background);
+$editor-defaults__button-secondary-hover--border-color: var(--bo-button-hover-border-color);
+$editor-defaults__button-secondary-active--color: var(--bo-button-active-color);
+$editor-defaults__button-secondary-active--bg-color: var(--bo-button-active-background);
+$editor-defaults__button-secondary-active--border-color: var(--bo-button-active-border-color);
+
+
+$editor-defaults__button-warning--color: var(--bo-button-warning-text-color);
+$editor-defaults__button-warning--bg-color: var(--bo-button-warning-background);
+$editor-defaults__button-warning--border-color: var(--bo-button-warning-border-color);
+//$editor-defaults__button-warning--font-weight: $font-weight-normal;
+$editor-defaults__button-warning-hover--color: var(--bo-button-warning-hover-text-color);
+$editor-defaults__button-warning-hover--bg-color: var(--bo-button-warning-hover-background);
+$editor-defaults__button-warning-hover--border-color: var(--bo-button-warning-hover-border-color);
+$editor-defaults__button-warning-active--color: var(--bo-button-warning-active-border-color);
+$editor-defaults__button-warning-active--bg-color: var(--bo-button-warning-active-background);
+$editor-defaults__button-warning-active--border-color: var(--bo-button-warning-active-border-color);
+
+$editor-defaults__button-success--color: var(--bo-button-success-text-color);
+$editor-defaults__button-success--bg-color: var(--bo-button-success-background);
+$editor-defaults__button-success--border-color: var(--bo-button-success-border-color);
+// $_editor-defaults__button-success--font-weight: $font-weight-normal;
+$editor-defaults__button-success-hover--color: var(--bo-button-success-hover-text-color);
+$editor-defaults__button-success-hover--bg-color: var(--bo-button-success-hover-background);
+$editor-defaults__button-success-hover--border-color: var(--bo-button-success-hover-border-color);
+$editor-defaults__button-success-active--color: var(--bo-button-success-active-border-color);
+$editor-defaults__button-success-active--bg-color: var(--bo-button-success-active-background);
+$editor-defaults__button-success-active--border-color: var(--bo-button-success-active-border-color);
+
+$editor-defaults__button-danger--color: var(--bo-button-error-text-color);
+$editor-defaults__button-danger--bg-color: var(--bo-button-error-background);
+$editor-defaults__button-danger--border-color: var(--bo-button-error-border-color);
+// $_editor-defaults__button-danger--font-weight: $font-weight-normal;
+$editor-defaults__button-danger-hover--color: var(--bo-button-error-hover-text-color);
+$editor-defaults__button-danger-hover--bg-color: var(--bo-button-error-hover-background);
+$editor-defaults__button-danger-hover--border-color: var(--bo-button-error-hover-border-color);
+$editor-defaults__button-danger-active--color: var(--bo-button-error-active-border-color);
+$editor-defaults__button-danger-active--bg-color: var(--bo-button-error-active-background);
+$editor-defaults__button-danger-active--border-color: var(--bo-button-error-active-border-color);
+
+$editor-defaults__button-reject--color: var(--bo-button-reject-text-color);
+$editor-defaults__button-reject--bg-color: var(--bo-button-reject-background);
+$editor-defaults__button-reject--border-color: var(--bo-button-reject-border-color);
+// $_editor-defaults__button-danger--font-weight: $font-weight-normal;
+$editor-defaults__button-reject-hover--color: var(--bo-button-reject-hover-text-color);
+$editor-defaults__button-reject-hover--bg-color: var(--bo-button-reject-hover-background);
+$editor-defaults__button-reject-hover--border-color: var(--bo-button-reject-hover-border-color);
+$editor-defaults__button-reject-active--color: var(--bo-button-reject-active-border-color);
+$editor-defaults__button-reject-active--bg-color: var(--bo-button-reject-active-background);
+$editor-defaults__button-reject-active--border-color: var(--bo-button-reject-active-border-color);
+
+$editor-defaults__button-accept--color: var(--bo-button-accept-text-color);
+$editor-defaults__button-accept--bg-color: var(--bo-button-accept-background);
+$editor-defaults__button-accept--border-color: var(--bo-button-accept-border-color);
+// $_editor-defaults__button-danger--font-weight: $font-weight-normal;
+$editor-defaults__button-accept-hover--color: var(--bo-button-accept-hover-text-color);
+$editor-defaults__button-accept-hover--bg-color: var(--bo-button-accept-hover-background);
+$editor-defaults__button-accept-hover--border-color: var(--bo-button-accept-hover-border-color);
+$editor-defaults__button-accept-active--color: var(--bo-button-accept-active-border-color);
+$editor-defaults__button-accept-active--bg-color: var(--bo-button-accept-active-background);
+$editor-defaults__button-accept-active--border-color: var(--bo-button-accept-active-border-color);
+
+$editor-defaults__button-attention--color: var(--bo-button-attention-text-color);
+$editor-defaults__button-attention--bg-color: var(--bo-button-attention-background);
+$editor-defaults__button-attention--border-color: var(--bo-button-attention-border-color);
+// $_editor-defaults__button-danger--font-weight: $font-weight-normal;
+$editor-defaults__button-attention-hover--color: var(--bo-button-attention-hover-text-color);
+$editor-defaults__button-attention-hover--bg-color: var(--bo-button-attention-hover-background);
+$editor-defaults__button-attention-hover--border-color: var(--bo-button-attention-hover-border-color);
+$editor-defaults__button-attention-active--color: var(--bo-button-attention-active-border-color);
+$editor-defaults__button-attention-active--bg-color: var(--bo-button-attention-active-background);
+$editor-defaults__button-attention-active--border-color: var(--bo-button-attention-active-border-color);
+
+$editor-defaults__button-icon--size: $editor-defaults__inline-box-compact--size;
+
+// $editor-defaults__button-primary-active--box-shadow-color: rgba($black, .1);
+
+$editor-defaults__button-text-hover--color: var(--bo-button-hover-color);
+$editor-defaults__button-text--color: inherit;
+$editor-defaults__button-text--bg-color: transparent;
+$editor-defaults__button-text-hover--text-decoration: underline;
+$editor-defaults__button-text-disabled--opacity: var(--bo-content-disabled-opacity);
+
+$editor-defaults__button-link--color: var(--bo-link-color);
+$editor-defaults__button-link-hover--color: var(--bo-link-color);
+// $editor-defaults__button-text--font-weight: $font-weight-normal;
+
+$editor-defaults__button--font-size: $font-size__base;
+$editor-defaults__button--line-height: $font-size__base; // should probably be larger than font-size
+$editor-defaults__button--height: $toolbar__button-default--size;
+$editor-defaults__button--padding: 0 $container-spacing-default__half;
+
+$editor-defaults__inline-button--size: $editor-defaults__inline-box--height;
+
+
+
+$editor-defaults__item-delete-button-disabled--opacity: var(--bo-content-disabled-opacity);
+
+$editor-defaults__item-delete-button--color: var(--bo-button-error-text-color);
+$editor-defaults__item-delete-button-disabled--color: var(--bo-neutral-color);
+$editor-defaults__item-delete-button--font-size: $font-size__base;
+$editor-defaults__item-delete-button--line-height: $font-size__base;
+// $editor-defaults__item-delete-button--size: $font-size__large - 1;
+$_editor-defaults__item-delete-button--content: _getIconGlyphContentValue('decline');
+$_editor-defaults__item-delete-button--font-family: $editor-defaults__box-button-icon--font-family;
+
+$editor-defaults__icon--color: var(--bo-content-icon-color);
+$editor-defaults__icon--size: 16px; //width & height
+$editor-defaults__headline--color: var(--bo-title-color);
+$editor-defaults__headline--font-weight: $font-weight-bold;
+
+$editor-boxes__default-hover--color: var(--bo-input-text-color);
+
+$editor-boxes__input-field--padding: $_container-spacing-default__tiny 0 ($_container-spacing-default__tiny - 1px) $editor-defaults__input-field--text-indent;
+$_editor-boxes__input-field-focus--padding-top: nth($editor-boxes__input-field--padding, 1);
+$_editor-boxes__input-field-focus--padding-bottom: nth($editor-boxes__input-field--padding, 3);
+
+$editor-boxes__textarea-field--padding: false; //($editor-defaults__box--height - $editor-defaults__input-field--border-width *2 - $editor-defaults__input-field--line-height)/2 0 ($editor-defaults__box--height - $editor-defaults__input-field--border-width *2 - $editor-defaults__input-field--line-height)/2 $editor-defaults__input-field--text-indent;
+// $editor-boxes__textarea-buttons--margin-top: $container-spacing-default__third;
+
+$editor-boxes__combobox-combine: false;
+$editor-boxes__datebox-combine: false;
+
+$_editor-defaults__box-icon-button--width: $editor-defaults__box--height;
+$_editor-defaults__box-button-icon--size: $form-defaults__input-icon--size;
+$_editor-defaults__box-button-icon--font-size: $font-size__large;
+$_editor-defaults__box-button-icon--color: var(--bo-button-icon-color);
+
+$_editor-defaults__box-icon-button--bg-color: var(--bo-button-background);
+$_editor-defaults__box-icon-button-focus--bg-color: var(--bo-button-selected-background);
+$_editor-defaults__box-icon-button-active--color: var(--bo-button-active-color);
+
+//Toolbar Definitions
+$toolbar-defaults__statusbar--bg-color: $_default__footer--bg-color;
+
+$toolbar-defaults__ztoolbar--bg-color: $form-defaults__box--bg-color; //$grey__light--300;
+$toolbar-defaults__ztoolbar--padding: 0;
+$toolbar-defaults__ztoolbar--min-height: $toolbar__button-default--size;
+
+$toolbar-defaults__ztoolbar-button--margin: 0 !important;
+$toolbar-defaults__ztoolbar-button--padding: 6px 10px;
+
+$toolbar-defaults__ytoolbar-number-of-items--padding: 0 $_container-spacing-default__tiny;
+$toolbar-defaults__ytoolbar-number-of-items--line-height: $toolbar__vertical-centering-base--height;
+
+$toolbar-defaults__ytoolbar-leftslot-action-group--margin: -1px;
+$toolbar-defaults__ytoolbar-rightslot-action-group--margin: $toolbar-defaults__ytoolbar-leftslot-action-group--margin;
+
+$toolbar-defaults__ytoolbar-separator--width: $_container-spacing-default__tiny !important; // should be $_container-spacing-default__small
+$toolbar-defaults__ytoolbar-separator--bg-color: false;
+
+$toolbar-defaults__ytoolbar-button--shadow: false; //inset 0 0 0 $editor-defaults__action-button--border-width rgba($editor-defaults__action-button-hover--border-color, 0);
+$toolbar-defaults__ytoolbar-button-hover-focus--shadow: false; //inset 0 0 0 $editor-defaults__action-button--border-width $editor-defaults__action-button-hover--border-color;
+$toolbar-defaults__ytoolbar-button-disabled-hover-focus--shadow: false; //none;
+
+$toolbar-defaults__toolbarbutton--margin: 0;
+$toolbar-defaults__toolbarbutton--padding: 0;
+$toolbar-defaults__toolbarbutton-hover--bg-color: var(--bo-button-hover-background);
+$toolbar-defaults__toolbarbutton-content--color: var(--bo-button-icon-color);
+
+$_toolbar-defaults__action-button--bg-color: $_button__action-tool--bg-color;
+$_toolbar-defaults__action-button--color: $_button__action-tool--color;
+$_toolbar-defaults__action-button--border-color: $_button__action-tool--border-color;
+$_toolbar-defaults__action-button--border: $boxes--border__thin solid $_toolbar-defaults__action-button--border-color;
+$_toolbar-defaults__action-button--border-radius: $toolbar__button-default--border-radius;
+$_toolbar-defaults__action-button-icon--margin: 0 auto;
+$_toolbar-defaults__action-button-icon--font-size: $font-size__base;
+@if $_toolbar-defaults__action-button--border {
+	$_toolbar-defaults__action-button-icon--margin: nth($_toolbar-defaults__action-button--border, 1) * -1;
+}
+$_toolbar-defaults__action-button-hover--color: var(--bo-button-hover-color);
+$_toolbar-defaults__action-button-hover--bg-color: var(--bo-button-hover-background);
+$_toolbar-defaults__action-button-hover--border-color: var(--bo-button-hover-border-color);
+$_toolbar-defaults__action-button-active--color: var(--bo-button-active-color);
+$_toolbar-defaults__action-button-active--bg-color: var(--bo-button-active-background);
+$_toolbar-defaults__action-button-active--border-color: var(--bo-button-active-border-color);
+
+//Checkbox & Radio-Box Defaults
+$editor-defaults__inputbox--size: $form-defaults__input-icon--size;
+$_editor-defaults__inputbox--font-size: $font-size__small;
+$editor-defaults__inputbox-selected-contents--size: $form-defaults__input-icon-mark--size;
+$editor-defaults__inputbox-container--margin-bottom: 0;
+$editor-defaults__inputbox-container--padding-right: $_container-spacing-default__small;
+$editor-defaults__inputbox-container--padding-left: $editor-defaults__inputbox--size + $_container-spacing-default__tiny; //+8px
+$editor-defaults__inputbox-disabled-label--color: false; //$form-defaults__label-disabled--color;
+$editor-defaults__inputbox--border-width: $form-defaults__input-icon--border-width;
+$editor-defaults__inputbox-input--padding-right: nth($editor-boxes__input-field--padding, 2);
+@if ($_editor-defaults__input-field-focus--border-width)
+	and ($_editor-defaults__input-field-focus--border-width > $editor-defaults__inputbox-input--padding-right)
+	and ($_editor-defaults__input-field-focus--border-width > $editor-defaults__input-field--border-width) {
+		$editor-defaults__inputbox-input--padding-right : $_editor-defaults__input-field-focus--border-width;
+		$_editor-boxes__input-field-focus--padding-top: nth($editor-boxes__input-field--padding, 1) + $editor-defaults__input-field--border-width - $_editor-defaults__input-field-focus--border-width;
+		$_editor-boxes__input-field-focus--padding-bottom: nth($editor-boxes__input-field--padding, 3) + $editor-defaults__input-field--border-width - $_editor-defaults__input-field-focus--border-width;
+}
+
+$editor-defaults__inputbox--bg-color: var(--bo-input-background);
+// $editor-defaults__inputbox--color: $form-defaults__input-icon--color;
+$editor-defaults__inputbox--border-color: var(--bo-input-border-color);
+$editor-defaults__inputbox-hover--color: var(--bo-input-text-color);
+$editor-defaults__inputbox-hover--border-color: var(--bo-input-hover-border-color);
+$editor-defaults__inputbox-selected--color: var(--bo-input-text-color);
+$editor-defaults__inputbox-selected--border-color: var(--bo-input-active-border-color);
+$editor-defaults__inputbox-selected-contents--color: var(--bo-selected-color);
+// $editor-defaults__inputbox-disabled--color: $form-defaults__input-icon-disabled--color;
+$editor-defaults__inputbox-disabled--border-color: $form-defaults__input-icon-disabled--color;
+$editor-defaults__inputbox-selected-disabled--color: var(--bo-button-icon-color);
+$editor-defaults__inputbox-selected-disabled--bg-color: var(--bo-button-background);
+$editor-defaults__inputbox-selected-disabled--border-color: $form-defaults__input-icon-selected-disabled--color;
+
+
+//Checkbox Defaults
+$editor-defaults__checkbox-checked--bg-color: var(--bo-input-background);
+$editor-defaults__checkbox-checked--color: var(--bo-selected-color);
+$editor-defaults__checkbox-checked--border-color: var(--bo-input-border-color);
+$editor-defaults__checkbox-checked--hover-border-color: var(--bo-input-hover-border-color);
+$editor-defaults__checkbox-checked-icon--line-height: $font-size__base;
+$_editor-defaults__checkbox-checked-icon--font-size: $font-size__base;
+// $editor-defaults__checkbox-checked--bg-image-width: 16px;
+
+//Radiobox Defaults
+$editor-defaults__radiobox-selected--color:  var(--bo-highlight-color);
+$editor-defaults__radiobox-selected--bg-color: var(--bo-highlight-color);
+$editor-defaults__radiobox-selected--border-width: $editor-defaults__inputbox--border-width;
+$editor-defaults__radiobox-selected--border-color: $editor-defaults__inputbox-selected--border-color;
+$editor-defaults__radiobox-selected-icon--size: $editor-defaults__inputbox-selected-contents--size;
+$editor-defaults__radiobox-selected-icon--left: 0;
+@if($editor-defaults__radiobox-selected-icon--size){
+	$editor-defaults__radiobox-selected-icon--left: round($editor-defaults__inputbox--size/2);
+}
+
+$editor-defaults__wizard-popup-locedtior-icont--top: 1px;
+$editor-defaults__loceditor-caption--min-height: 16px;
+$editor-defaults__loceditor-action-icon--spacing-x: 4px;
+$editor-defaults__loceditor-caption--padding-right: $editor-defaults__icon--size + $editor-defaults__loceditor-action-icon--spacing-x;
+$editor-defaults__loceditor-caption--background: var(--bo-list-table-header-background);
+$editor-defaults__loceditor-caption--border-right: $boxes--border__thin solid var(--bo-input-border-color);
+$editor-defaults__editor-validation-label--padding-right: $editor-defaults__loceditor-caption--padding-right;
+$editor-defaults__editor-validation-loceditor-caption--padding-right: $editor-defaults__loceditor-caption--padding-right + 18px;
+
+$_editor-defaults__validation-icon--font-size: $font-size__base;
+$_editor-defaults__validation-icon--font-family: $font-family__icon;
+$_editor-defaults__validation-icon--content: _getIconGlyphContentValue('error');
+$_editor-defaults__validation-icon--size: 16px;
+$_editor-defaults__validation-icon--line-height: 16px;
+
+$_editor-defaults__validation-error--color: $_default__status-negative--color;
+$_editor-defaults__validation-warn--color: $_default__status-alert--color;
+$_editor-defaults__validation-info--color: $_default__status-info--color;
+$_editor-defaults__validation-error--bg-color: $_default__status-negative--background;
+// $_editor-defaults__validation-warn--bg-color: $_default__status-alert--background;
+// $_editor-defaults__validation-info--bg-color: $_default__status-info--background;
+$_editor-defaults__validation-error-icon--content: _getIconGlyphContentValue('message-warning');
+$_editor-defaults__validation-warn-icon--content: _getIconGlyphContentValue('message-warning');
+$_editor-defaults__validation-info-icon--content: _getIconGlyphContentValue('message-warning');
+
+$_editor-defaults__editor-validation-loceditor-caption--width: calc(100% - (#{$editor-defaults__icon--size} + $editor-defaults__loceditor-action-icon--spacing-x));
+$_editor-defaults__editor-validation-loceditor-icon--right: $editor-defaults__icon--size + $editor-defaults__loceditor-action-icon--spacing-x;
+
+//Window popup
+$window__popup--text-color: var(--bo-text-color);
+$window__popup--bg-color: var(--bo-container-background);
+$window__popup-header--padding: 0 $_container-spacing-default__small;
+$window__popup-header--bg-color: var(--bo-list-group-header-background);
+$window__popup-header--color: var(--bo-list-group-header-text-color);
+$window__popup-header--font-size: $font-size__h5;
+$_window__popup-header--font-weight: $font-weight-normal;
+$_window__popup-header-caption-content--margin-top: 6px;
+$_window__popup-header--border-bottom: 1px solid var(--bo-list-group-header-border);
+$_window__popup-header--box-shadow: var(--bo-content-header-shadow);
+
+$window__popup--border-color: transparent;
+$window__popup--border: none;
+$window__popup--border-radius: var(--bo-border-radius);
+$window__popup--box-shadow: var(--bo-content-shadow-large);
+$window__popup-plain--box-shadow: $window__popup--box-shadow;
+$window__popup__footer-padding: $_container-spacing-default__tiny $_container-spacing-default__small;
+$window__popup__content-padding: $_container-spacing-default__tiny $_container-spacing-default__small;
+$window__popup-content--color: var(--bo-list-text-color);
+$window__popup-content--padding: 0;
+$window__popup-content-tooltip--padding: $_container-spacing-default__tiny;
+
+$_window__info-box--padding: $container-spacing-default_two-thirds;
+$_window__info-box--bg-color: var(--bo-information-background);
+$_window__info-box--color: var(--bo-text-color);
+$_window__info-box--border-color: var(--bo-information-border-color);
+$_window__info-box--border-width: $boxes--border__thin;
+$_window__info-box--margin-bottom: $container-spacing-default__third;
+
+$_window__info-box-editorarea--padding-x: $container-spacing-default__base;
+
+$_window__info-box-editorarea-section--padding-y: $container-spacing-default__half;
+$_window__info-box-editorarea-section--padding-x: $container-spacing-default_two-thirds;
+$_window__info-box-editorarea-section--padding: $_window__info-box-editorarea-section--padding-y $_window__info-box-editorarea-section--padding-x;
+
+$window__toolbar-list-add-popup--width: 230px;
+
+$window__box-popup-shadow--box-shadow: $window__popup--box-shadow; //0 2px 5px rgba(0, 0, 0, 0.6);
+$window__box-popup-shadow--border-radius: 1px;
+$window__box-popup-shadow--border: $boxes--border__thin solid $window__popup--border-color;
+
+$window__custom-popup-reference-editor--width: 280px;
+$window__custom-popup-reference-editor--height: $editor-defaults__inline-box--height;
+
+//Window highlighted (eg. Error-prompt, Wizard)
+$window-highlighted__navigation-button--color: var(--bo-button-text-color);
+$window-highlighted__header-element--padding-x: ($container-spacing-default__third * 2);
+$window-highlighted__modal--box-shadow: var(--bo-content-shadow-x-large);
+$window-highlighted__modal--border-radius: $_default__modal--border-radius;
+$window-highlighted__modal-mask--bg-color: var(--bo-container-background);
+$_window-highlighted__modal-mask--opacity: var(--bo-content-disabled-opacity);
+$window-highlighted__modal--bg-color: var(--bo-container-background);
+$window-highlighted__modal--border-color: $window__popup--border-color;
+$window-highlighted__modal-ghost--bg-color: var(--bo-container-background);
+$window-highlighted__modal-ghost--opacity: 0.8;
+// $window-highlighted__modal-ghost--bg-color: mix($window__popup--bg-color, $window-highlighted__modal-ghost--bg-color, 50%);
+$window-popup__separator-line: 1px solid var(--bo-list-border-color);
+
+//window
+$window__icon--color: $_container__action--color;
+$_window__icon--bg-color: transparent;
+$window__icon-hover--color: false; //$white;
+
+$window__icon-close--bg-color: transparent;
+$window__icon-close--color: var(--bo-button-icon-color);
+$window__icon-close--size: $toolbar__button-small--size; // 16px
+$_window__icon-close--content: _getIconGlyphContentValue('decline');
+$_window__icon-close--font-size: $font-size__large; // 16px
+$window__icon-close-button--size: $toolbar__button-medium--size; //24px
+$window__icon-close--position-top: (($window__icon-close-button--size - $boxes--border__thin * 2) - $window__icon-close--size) / 2; // 3px
+$window__icon-close--position-right: floor($window__icon-close--position-top/2); //1px;
+$_window__icon-close-button--margin-top: floor(($editor-defaults__inline-box--height - $window__icon-close-button--size)/2);
+$window__icon-button--font-family: $font-family__icon;
+$window__icon-button-right--content: _getIconGlyphContentValue('slim-arrow-right');
+$window__icon-button-left--content: _getIconGlyphContentValue('slim-arrow-left');
+$window__icon-button-up--content: _getIconGlyphContentValue('slim-arrow-up');
+$window__icon-button-down--content: _getIconGlyphContentValue('slim-arrow-down');
+$window__icon-button--color: var(--bo-button-icon-color);
+
+$window__borderlayout--bg-color: var(--bo-container-background);
+$window__splitter--size: $_layout--splitter-default--size;
+$window__splitter-hit--size: $_layout--splitter-large--size + $_layout--splitter-default--size + $_layout--splitter-large--size;
+$window__splitter--color: $_default__splitter--color;
+$window__splitter-hover--color: var(--bo-content-icon-color);
+$window__splitter-button--color: var(--bo-button-icon-color);
+$_window__splitter-button--bg-color: var(--bo-container-border-color);
+$window__splitter-button-hover--color: var(--bo-button-hover-color);
+$window__splitter-button-hover--bg-color: var(--bo-button-hover-background);
+$_window__splitter-button--spacing-v: $_container-spacing-default__core;
+$_window__splitter-button--border-width: $boxes--border__thin;
+$_window__splitter-button--border: $_window__splitter-button--border-width solid;
+$_window__splitter-button-vertical--size: 16px;
+$_window__splitter-button-horizontal--size: 20px;
+$_window__splitter-button-vertical--line-height: $_window__splitter-button-vertical--size - 2 * $_window__splitter-button--border-width;
+$_window__splitter-button-horizontal--line-height: $_window__splitter-button-horizontal--size - 2 * $_window__splitter-button--border-width;
+$_window__splitter-button--border-radius: $toolbar__button-small--border-radius;
+$_window__borderlayout-icon--font-size: $font-size__small;
+$_window__borderlayout-icon--line-height: $font-size__large;
+
+$window__borderlayout-icon--bg-color: false;
+$window__borderlayout-icon--color: false;
+$window__borderlayout-icon-hover--color: var(--bo-content-icon-color);
+$window__borderlayout-icon-hover--bg-color: var(--bo-button-hover-background);
+
+$window__default--bg-color: $_default__content-wrapper--bg-color;
+$window__default-hover--bg-color: $_default__content-wrapper--bg-color;
+$window__default--padding: $container-spacing-default__third;
+$_window__default-collapsed-spacing--right: false; // $window__default--padding
+
+$window__default-container--border-color: $form-defaults__box--border-color;
+
+$window__default-header-caption--padding-right: $editor-defaults__inline-box--height;
+$window__default-header-caption--min-height: $editor-defaults__inline-box--height;
+$_window__default-header-caption--line-height: $window__icon-close-button--size;
+$_window__default-header-caption--padding-top: floor(($editor-defaults__inline-box--height - $_window__default-header-caption--line-height)/2);
+$_window__default-header-caption--font-weight: $font-weight-normal;
+
+$window__collapsed--padding: 1px;
+
+$_window-highlighted__messagebox-content--padding: $window__default--padding 0 $window__default--padding 0;
+$_window-highlighted__messagebox-button--width: 85pt;
+$_window-highlighted__messagebox-contents--padding: 5px;
+$_window-highlighted__messagebox-label--font-family: var(--bo-font-family);
+$_window-highlighted__messagebox-label--font-size: $font-size__base;
+$_window-highlighted__messagebox-label--font-color: var(--bo-text-color);
+$_window-highlighted__messagebox-icon--size: $toolbar__button-medium--size;
+$_window-highlighted__messagebox-separator--width: $_container-spacing-default__tiny;
+
+$_window__overlay-mask--bg-color: var(--bo-container-background);
+$_window__overlay-mask--opacity: 0.9;
+
+$window__action-group-popup-action--border: $boxes--border__thin solid $_default-list__item--border-color;
+$window__action-group-popup-action-text--padding: 0 5px;
+$window__action-group-popup-action--width: 100%;
+$window__action-group-popup-action-text--height: 30px;
+$window__action-group-popup-action-hover--bg-color: $_default-list__item-hover--bg-color;
+$window__action-group-popup-action-hover--color: false; //$blue__default;
+$window__action-group-delimiter--border: var(--bo-container-border-width) solid var(--bo-toolbar-separator-color);
+$window__action-group-delimiter--margin-x: $_container-spacing-default__tiny;
+$window__action-group-delimiter--z-index: -1;
+$window__action-group-delimiter--height: $toolbar__button-default--height;
+$window__action-group-label--line-height: $font-size__large;
+$window__action-group-label--color: var(--bo-content-label-color);
+$window__action-group-label--padding: floor(($toolbar__button-default--height - $window__action-group-label--line-height)/2) 2px;
+
+//Container Defaults
+//$container-defaults__collapsible--padding: 7px;
+
+//Listbox Colors
+$list-box-default-shadow: var(--bo-content-shadow-small);
+
+//List-Header
+$list-default__header--bg-color: var(--bo-list-table-header-background);
+$list-default__header--color: var(--bo-list-table-header-color);
+$list-default__header--line-height: $font-size__large;
+$list-default__header--font-size: $font-size__base;
+$list-default__header--padding: round(($editor-defaults__list-item--height - $list-default__header--line-height)/2) 6px;
+$list-default__header-checkable--margin-right: $container-spacing-default__half; //$container-spacing-default__third;
+$_list-default__header--font-weight: $font-weight-normal; //600;
+$_list-default__header--text-transform: capitalize;
+
+$_list-default__header-sortable-icon--width: 12px;
+$_list-default__header-sortable-icon--height: $list-default__header--line-height;
+$_list-default__header-sortable-icon--bg-size: auto 12px;
+$_list-default__header-sortable-icon--margin-left: $container-spacing-default__half;
+$_list-default__header-sortable-icon--bg-image: url(_getIconImageData('sort'));
+$_list-default__header-sort-asc-icon--bg-image: url(_getIconImageData('sort-asc'));
+$_list-default__header-sort-desc-icon--bg-image: url(_getIconImageData('sort-desc'));
+$_list-default__header-sortable--padding-right: $_list-default__header-sortable-icon--width;
+
+//Tree Popup
+$tree-popup__menu--max-width: 260px;
+
+//Tree row
+$treerow-default__text-color: var(--bo-list-text-color);
+$treerow-default__bg-color: var(--bo-list-background);
+$treerow-default__border-bottom: $boxes--border__thin solid var(--bo-list-border-color);
+$treerow-hover__bg-color: var(--bo-list-hover-background);
+$treerow-active__bg-color: var(--bo-list-active-background);
+$treerow-active__text-color: var(--bo-list-active-text-color);
+
+//Tree Content
+$treecell-default__content--font-size: $font-size__base;
+$treecell-default__content--font-color: var(--bo-list-text-color);
+$treecell-default__content--line-height: $font-size__large;
+$treecell-default__content--color: $_default-list__item--color;
+$treecell-default__content--padding: 0;
+$_treecell-default__content-empty--color: $form-defaults__box-emtpy--color !important;
+
+//Tree Cell
+$treecell-default__cell--padding-y: floor(($editor-defaults__inline-box--height - $treecell-default__content--line-height)/2);
+//$treecell-default__cell--padding: $treecell-default__cell--padding-y $container-spacing-default__third;
+$treecell-default__type-selector-cell--padding: $treecell-default__cell--padding-y ($container-spacing-default__half) $treecell-default__cell--padding-y $container-spacing-default__third;
+$treecell-default__cell--border-color: $_default-list__item--border-color;
+$treecell-default__cell--border: $boxes--border__thin solid $treecell-default__cell--border-color;
+
+$treecell-default__tree-spacer--width: $container-spacing-default__third;
+$treecell-default__row-selected--bg-color: $_default-list__item-selected--bg-color;
+$treecell-default__row-selected-hover--bg-color: $_default-list__item-selected-hover--bg-color;
+// $_treecell-default__tree-checkable-first--border-right: $list-default__header-checkable--margin-right solid transparent;
+$_treecell-default__treecheckable-first--margin-right: $_container-spacing-default__tiny;//$list-default__header-checkable--margin-right;
+
+$treecell-default__type-selector-popup-action-hover--color: $window__action-group-popup-action-hover--color;
+
+//Tree Icon
+$tree-default__icon--color: $_menu-item-check-icon--color;
+$tree-default__icon--width: $toolbar__button-small--size;
+
+//Abstracttype
+$createTypeSelector__abstracttype-cell--cursor: not-allowed;
+$createTypeSelector__abstracttype-text--font-style: italic;
+$createTypeSelector__abstracttype-text--color: var(--bo-text-color);
+
+//vFiletree
+$vfiletree__icon--width: $tree-default__icon--width;
+$vfiletree__icon--font-family: $font-family__icon;
+$vfiletree__icon--font-weight: $font-weight-normal;
+$vfiletree__icon-close--content: _getIconGlyphContentValue('navigation-right-arrow');
+$vfiletree__icon-open--content: _getIconGlyphContentValue('navigation-down-arrow');
+$vfiletree__icon-adjustment--margin-x: false;
+$vfiletree__icon--line-height: false;
+$vfiletree__item-indent-spacer--width: $vfiletree__icon--width;
+$vfiletree__item-label--padding: $boxes--border__thin 0 0 $_container-spacing-default__tiny;
+$vfiletree__row--padding-y: $treecell-default__cell--padding-y; //floor(($editor-defaults__list-item--height - $treecell-default__content--line-height)/2);
+$vfiletree__row--padding-x: $_container-spacing-default__tiny;
+$vfiletree__row--border-color: $treecell-default__cell--border-color; //$_default-list__table-row--border-color; //$grey__light--800;
+$vfiletree__row--font-weight: $font-weight-normal;
+$vfiletree__row-cell--border: $boxes--border__thin solid $vfiletree__row--border-color;
+$vfiletree__row-cell-content--min-height: ($editor-defaults__inline-box--height - 2 * $vfiletree__row--padding-y);
+$vfiletree__treebody--border: $vfiletree__row-cell--border;
+$vfiletree__row-selected--color: $_default-list__item--color;
+$vfiletree__row-selected--font-weight: $font-weight-bold;
+
+$_grid-defaults__header--bg-color: var(--bo-object-header-background);
+$_grid-defaults__header--font-weight: $font-weight-bold;
+$_grid-defaults__header--color: var(--bo-page-header-text-color);
+$_grid-defaults__row-hover--color: var(--bo-list-text-color);
+$_grid-defaults__cell--border: $treecell-default__cell--border;
+
+//List Content Colors
+$_list-default__content-bg-color: var(--bo-list-background);
+$list-default__content--color: var(--bo-list-text-color);
+$list-default__content-hover--color: var(--bo-list-text-color);
+$list-default__content-hover--bg-color: var(--bo-list-hover-background);
+$list-default__content-selected--color: var(--bo-list-text-color);
+$list-default__content-selected--bg-color: var(--bo-list-selected-background);
+$list-default__content-selected-hover--bg-color: var(--bo-list-selected-hover-background);
+$_list-default__content-empty--color: var(--bo-tile-title-color);
+$list-default__content-selected--border-color: var(--bo-list-selected-border-color);
+
+// $listitem-default__selected--color: $blue__light--100;
+
+//List Content
+$list-default__content--font-size: $font-size__large;
+$list-default__content--line-height: $font-size__large;
+
+$list-default__content--border-width: $boxes--border__thin;
+$list-default__content--cell-padding-y: round(($editor-defaults__list-item--height - $list-default__content--line-height)/2) - $list-default__content--border-width;
+
+//$container-spacing-default__third - 3px;
+$list-default__content--cell-padding: ($list-default__content--cell-padding-y) 5px ($list-default__content--cell-padding-y);
+@if (($list-default__content--cell-padding-y * 2 + $list-default__content--line-height + $list-default__content--border-width) < $editor-defaults__list-item--height) {
+	$list-default__content--cell-padding: nth($list-default__content--cell-padding, 1) nth($list-default__content--cell-padding, 2) (nth($list-default__content--cell-padding, 3) + $list-default__content--border-width);
+}
+$list-default__content--border-color: var(--bo-list-border-color);
+
+$list-default__content-empty--padding-y: $list-default__content--cell-padding-y;
+$list-default__content-empty--bg-color: transparent; //$grey__light--500;
+
+// $list-default__treecell-indent--width: $container-spacing-default__third;
+
+// Label-Field Defintions
+$editor-defaults__content--font-family: var(--bo-font-family);
+$editor-defaults__content--font-size: $font-size__base;
+$editor-defaults__content--color: $_default__content--color;
+$editor-defaults__label-field--line-height: $font-size__base;
+$editor-defaults__label-field--color: $form-defaults__label--color;//$_default__content--color; //$grey__dark--500;
+$editor-defaults__label-field--margin-bottom: 10px;
+$editor-defaults__label-field--margin-top: 10px;
+
+$editor-defaults__range-label-field--font-size: $font-size__small;
+$editor-defaults__range-label-field--margin-top: 10px;
+$editor-defaults__range-localized-label-field--padding-left: 5px;
+$editor-defaults__range-featurevalue--width-percentage: 62%;
+$editor-defaults__range-featurevalue--padding-right: 2%;
+$editor-defaults__range-combobox--width-percentage: 100% - $editor-defaults__range-featurevalue--width-percentage - $editor-defaults__range-featurevalue--padding-right;
+$editor-defaults__range-endpoint-label--margin-top: $editor-defaults__range-label-field--margin-top;
+$editor-defaults__range-endpoint-container--margin-top: 12px;
+
+//default sizes
+$editor-defaults__locedit-label--bg-color: $_form-defaults__localized-label--bg-color;//$form-defaults__input--bg-color; //$white;
+$editor-defaults__locedit-label--padding: 0 $container-spacing-default__semi-third;
+$editor-defaults__locedit-label--width: 65px; //81px;
+$editor-defaults__locedit-label--font-weight: $font-weight-bold;
+$editor-defaults__locedit-label--color: $editor-defaults__label--color;
+$_editor-defaults__locedit-label--border-radius: $editor-defaults__input-field--border-radius 0 0 $editor-defaults__input-field--border-radius;
+$editor-defaults__locedit-box--border-width: $boxes--border__thin;
+$_editor-defaults__locedit-label--line-height: $editor-defaults__inline-box--height - 2*$editor-defaults__locedit-box--border-width;
+$_editor-defaults__locedit-label--vertical-align: top;
+$editor-defaults__locedit-label--border: $editor-defaults__locedit-box--border-width solid $editor-defaults__box--border-color;
+$editor-defaults__locedit-options--margin-y: $_container-spacing-default__tiny;
+$editor-defaults__locedit-options--margin-x: $_container-spacing-default__regular - $_container-spacing-default__core;
+
+$editor-defaults__icon--size: $form-defaults__input-icon--size; //width & height
+$editor-defaults__timebox-spinner--bordered: true;
+
+$editor-defaults__timebox-button--height: $editor-defaults__box--height/2 - $editor-defaults__inputbox--border-width;
+@if ($editor-defaults__timebox-spinner--bordered){
+	$editor-defaults__timebox-button--height: $editor-defaults__box--height/2;
+}
+$editor-defaults__timebox-button--line-height: round($editor-defaults__timebox-button--height * 0.85);
+$_editor-defaults__timebox-button--top: 50%;
+$_editor-defaults__timebox-button--transform: translateY(-50%);
+$_editor-defaults__timebox-button--color: var(--bo-button-icon-color);
+$_editor-defaults__timebox-button-icon-up--content: _getIconGlyphContentValue('slim-arrow-up');
+$_editor-defaults__timebox-button-icon-down--content: _getIconGlyphContentValue('slim-arrow-down');
+$_editor-defaults__timebox-button-icon--font-family: $font-family__icon;
+$editor-defaults__timebox-input--width: calc(100% - #{$editor-defaults__inline-button--size});
+
+$editor-defaults__chosenbox--min-height: $editor-defaults__inline-box--height;
+$editor-defaults__chosenbox--padding: 5px;
+$editor-defaults__chosenbox-input--margin-bottom: $editor-defaults__chosenbox--padding * -1;
+$editor-defaults__chosenbox-input--height: $editor-defaults__chosenbox--min-height - 2 * $boxes--border__thin;
+$editor-defaults__chosenbox-item--margin: $editor-defaults__chosenbox--padding;
+$editor-defaults__chosenbox-item--border-radius: 5px;
+$editor-defaults__chosenbox-item--height: 28px;
+$editor-defaults__chosenbox-item--color: var(--bo-input-text-color);
+$editor-defaults__chosenbox-item--max-width: calc(100% - #{$editor-defaults__chosenbox--padding * 2});
+$editor-defaults__chosenbox-item--bg-color: var(--bo-input-background);
+
+$editor-defaults__chosenbox-item-close-btn--color: $editor-defaults__chosenbox-item--color;
+$editor-defaults__chosenbox-item-close-btn--right: 6px;
+$editor-defaults__chosenbox-item-close-btn--opacity: 0.7;
+$editor-defaults__chosenbox-item-close-btn-hover--color: $editor-defaults__chosenbox-item-close-btn--color;
+$editor-defaults__chosenbox-item-close-btn-hover--opacity: 1;
+
+
+$editor-defaults__chosenbox-item--line-height: $font-size__base;
+$editor-defaults__chosenbox-item--font-size: $font-size__small;
+$editor-defaults__chosenbox-item--padding-left: $container-spacing-default__third;
+$editor-defaults__chosenbox-item--padding-right: #{10px + $editor-defaults__chosenbox-item--padding-left + $editor-defaults__chosenbox-item-close-btn--right};
+$editor-defaults__chosenbox-item--padding: 7px $editor-defaults__chosenbox-item--padding-right 7px $editor-defaults__chosenbox-item--padding-left;
+$editor-defaults__chosenbox-option--color: var(--bo-input-text-color);
+$editor-defaults__chosenbox-option-hover--color: $editor-defaults__chosenbox-option--color;
+
+// rich editor
+$editor-defaults__richeditor-text--font-family: var(--bo-font-family);
+$editor-defaults__richeditor-text--font-size: $font-size__base;
+$editor-defaults__richeditor-icon--font-family: $font-family__icon;
+$editor-defaults__richeditor-icon--font-size: $font-size__base;
+$editor-defaults__richeditor-icon--color: var(--bo-button-icon-color);
+$editor-defaults__richeditor-icon--line-height: 18px;
+$editor-defaults__richeditor-container--box-shadow: var(--bo-content-shadow-small);
+$editor-defaults__richeditor-container--bg-color: var(--bo-base-background);
+$editor-defaults__richeditor-container--padding: $_container-spacing-default__tiny;
+$editor-defaults__richeditor-header--button-bg-color: var(--bo-button-background);
+$editor-defaults__richeditor-header--button-color: var(--bo-button-icon-color);
+$editor-defaults__richeditor-header--button-border-color: var(--bo-button-border-color);
+$editor-defaults__richeditor-footer--action-color: var(--bo-tile-text-color);
+$editor-defaults__richeditor-footer--button-hover-color: var(--bo-highlight-color);
+$editor-defaults__richeditor-content--padding: $_container-spacing-default__tiny;
+$editor-defaults__richeditor-content--bg-color: var(--bo-input-background);
+$editor-defaults__richeditor-content--border: $boxes--border__thin solid var(--bo-input-border-color);
+$editor-defaults__richeditor-content--hover-border-color: var(--bo-input-hover-border-color);
+$editor-defaults__richeditor-content--focused-outline-width: var(--bo-content-focus-outline-width);
+$editor-defaults__richeditor-content--focused-outline-offset: -.1875rem;
+$editor-defaults__richeditor-content--focused-outline-style: var(--bo-content-focus-outline-style);
+$editor-defaults__richeditor-content--focused-outline-color: var(--bo-content-focus-outline-color);
+$editor-defaults__richeditor-content--color: var(--bo-input-text-color);
+$editor-defaults__richeditor-popover-container--bg-color: var(--bo-list-background);
+$editor-defaults__richeditor-popover-container--border: $boxes--border__thin solid var(--bo-list-border-color);
+$editor-defaults__richeditor-popover-container--box-shadow: var(--bo-content-shadow-large);
+$editor-defaults__richeditor-popover-title--bg-color: var(--bo-group-title-background);
+$editor-defaults__richeditor-popover-title--text-color: var(--bo-group-title-text-color);
+$editor-defaults__richeditor-popover-title--border-bottom: $boxes--border__thin solid var(--bo-group-title-border-color);
+$editor-defaults__richeditor-popover-sub-title--bg-color: $editor-defaults__richeditor-popover-title--bg-color;
+$editor-defaults__richeditor-popover-sub-title--color: var(--bo-text-color);
+$editor-defaults__richeditor-popover-sub-title-selected--color: var(--bo-selected-color);
+$editor-defaults__richeditor-popover-sub-title-selected--border-bottom: $boxes--border__medium solid var(--bo-selected-color);
+$editor-defaults__richeditor-popover-content--bg-color: var(--bo-base-background);
+$editor-defaults__richeditor-popover-label-title--color: var(--bo-content-label-color);
+$editor-defaults__richeditor-popover-label-input--color: var(--bo-text-color);
+$editor-defaults__richeditor-popover-label-input--bg-color: var(--bo-input-background);
+$editor-defaults__richeditor-popover-label-input--border-color: var(--bo-input-border-color);
+$editor-defaults__richeditor-popover-label-input--border: $boxes--border__thin solid var(--bo-input-border-color);
+$editor-defaults__richeditor-popover-label-input--hover-border-color: var(--bo-input-hover-border-color);
+$editor-defaults__richeditor-popover-footer--bg-color: var(--bo-page-footer-background);
+$editor-defaults__richeditor-popover-footer--border-top: $boxes--border__thin solid var(--bo-page-footer-border-color);
+$editor-defaults__richeditor-popover-special-char--bg-color: var(--bo-legend-nonworking-background);
+$editor-defaults__richeditor-popover-special-char--hover-bg-color: var(--bo-list-hover-background);
+
+//selectbox variables
+$selectbox__combobox--border-color: false; //to not override popup-defaults
+$selectbox__combobox-disabled--bg-color: var(--bo-input-background);
+@if($form-defaults__box-shadow--color){
+	$selectbox__combobox--box-shadow: -2px 2px 2px $form-defaults__box-shadow--color;
+}
+$_selectbox__combobox-comboitem--color: $form-defaults__box--color;
+$selectbox__combobox-hover--bg-color: var(--bo-list-hover-background);
+$selectbox__combobox-comboitem-hover--color: $_selectbox__combobox-comboitem--color;
+$_selectbox__combobox-comboitem-selected--font-weight: $font-weight-bold;
+$selectbox__combobox-comboitem-selected--bg-color: $_default-list__item-selected--bg-color; //$blue__light;
+$selectbox__combobox-comboitem-selected-hover--bg-color: $_default-list__item-selected-hover--bg-color;
+$selectbox__combobox-comboitem--border-color: $_default-list__item--border-color; // #ebebeb
+$selectbox__combobox-comboitem--border-width: $editor-defaults__inputbox--border-width;
+$selectbox__combobox-comboitem--font-size: $font-size__small;
+$selectbox__combobox-comboitem--height: auto !important;
+$selectbox__combobox-comboitem--max-height: $editor-defaults__popup-box--max-height;
+$selectbox__combobox-comboitem--min-height: $editor-defaults__inline-box--height;
+$selectbox__combobox-input--font-size: $font-size__base;
+$selectbox__combobox-popup--padding-y: floor(($editor-defaults__inline-box--height - $selectbox__combobox-input--font-size)/2);
+$selectbox__combobox-popup--text-indent: $selectbox__combobox-popup--padding-y $editor-defaults__input-field--text-indent ($selectbox__combobox-popup--padding-y - $selectbox__combobox-comboitem--border-width);
+$selectbox__combobox-popup--box-shadow: none;
+$_selectbox__combobox-popup--padding: 0;
+//Content tabs
+$editorarea__tab--bg-color: var(--bo-list-group-header-background);
+$editorarea__tab-hover--bg-color: $editorarea__tab--bg-color;
+$editorarea__tab-pinned--font-weight: 600;
+$editorarea__tab--height: $_default__tab-bar--height;
+$editorarea__tab--padding: 0 $_container-spacing-default__small;
+$_editorarea__tab--line-height: 24px;
+$editorarea__tab-first--padding-left: $_container-spacing-default__medium;//$_container-spacing-default__regular;
+$editorarea__tab-last--padding-right: $_container-spacing-default__medium;//$_container-spacing-default__regular;
+
+$editorarea__tab-caret--font-family: $font-family__icon;
+$editorarea__tab-caret--font-size: $font-size__large;
+
+$editorarea__tab-text--font-color: var(--bo-title-color);
+$editorarea__tab-text-hover--font-color: $editorarea__tab-text--font-color;
+$editorarea__tab-text-selected--font-color: var(--bo-selected-color);
+$editorarea__tab-text--font-weight: $font-weight-normal;
+$editorarea__tab-text--font-size: $font-size__base;
+
+$editorarea__tab-caret--font-family: $font-family__icon;
+$editorarea__tab-caret--font-size: $font-size__large;
+
+$editorarea__tab--padding: 0 10px;
+$editorarea__tab-first--padding-left: $_container-spacing-default__regular;
+$editorarea__tab-last--padding-right: $_container-spacing-default__regular;
+$editorarea__tab--border-color: var(--bo-container-border-color);
+$editorarea__tab--border-width: $boxes--border__medium;
+$editorarea__tab--border: $editorarea__tab--border-width solid $editorarea__tab--border-color;
+$editorarea__tab-text--border-width: $_boxes__border__selected;
+//$editorarea__tab-text--border-width: $boxes--border__medium;
+$editorarea__tab-text--text-transform: none;
+$_editorarea__tab-text--padding-top: ceil(($editorarea__tab--height - $_editorarea__tab--line-height - $editorarea__tab-text--border-width)/2);
+$editorarea__tab-selected--border-color: var(--bo-selected-color);
+$editorarea__tab-selected--border-bottom: 2px solid $editorarea__tab-selected--border-color;
+
+$editorarea__tabpanel-content--bg-color: transparent;
+$editorarea__tabpanel-accordion--bg-color: transparent;
+$editorarea__tabpanel-accordion-tab--bg-color: $_default__header--bg-color;
+
+$editorarea__tabpanel-accordion-caret--width: $toolbar__button-small--size;
+$editorarea__tabpanel-accordion-caret--right: $container-spacing-default__half;
+$editorarea__tabpanel-accordion-caret--left: $container-spacing-default__half;
+$editorarea__tabpanel-accordion-caret--padding-left: $editorarea__tabpanel-accordion-caret--left + $editorarea__tabpanel-accordion-caret--right + $editorarea__tabpanel-accordion-caret--width;
+$editorarea__tabpanel-accordion-caret--margin-left: ($editorarea__tabpanel-accordion-caret--width + $editorarea__tabpanel-accordion-caret--right)* -1;
+$editorarea__tabpanel-accordion-caret--color: var(--bo-button-icon-color);
+
+$editorarea__tabpanel-accordion-tab-text--line-height: floor($editorarea__tab-text--font-size * 1.4);
+$editorarea__tabpanel-accordion-tab-text--min-height: 20px;
+$editorarea__tabpanel-accordion-tab-label--color: $form-defaults__box--color;
+$editorarea__tabpanel-accordion-tab--padding-y: floor(($editor-defaults__list-item--height - $editorarea__tabpanel-accordion-tab-text--min-height)/2);
+@if($editorarea__tabpanel-accordion-tab--padding-y < 0){
+	$editorarea__tabpanel-accordion-tab--padding-y: 0;
+}
+$editorarea__tabpanel-accordion-tab--padding: $editorarea__tabpanel-accordion-tab--padding-y $editorarea__tabpanel-accordion-caret--left $editorarea__tabpanel-accordion-tab--padding-y $editorarea__tabpanel-accordion-caret--padding-left;
+
+$editorarea__tabs-content--padding-bottom: 0;
+$editorarea__tabs-content--border-bottom-width: 0;
+$editorarea__tabs--border-color: $_navigation__tabs--border-color;
+$editorarea__tabs-top--bg-color: $_default__header--bg-color;
+$editorarea__tabs-caption-content--padding: 0;
+$editorarea__tabs-caption-content--margin-bottom: 0;//3px;
+$editorarea__tabs-caption-content--margin: 0;
+
+$editorarea__tabs-accordion-caption-content--margin-bottom: 0;
+
+$editorarea__tabs-content--shadow: var(--bo-content-shadow-small);
+
+$editorarea__tabs-panel--bg-color: var(--bo-base-background);
+
+$editorarea__tabpanel-accordion--shadow: var(--bo-content-shadow-small);
+
+$editorarea__tabpanel-accordion-selected--bg-color: $editorarea__tabpanel-accordion-tab--bg-color;
+$editorarea__tabpanel-accordion-selected--shadow: none;
+$editorarea__tabpanel-accordion-selected--shadow-color: false;//rgba(80, 116, 143, 0.25);
+@if($editorarea__tabpanel-accordion-selected--shadow-color){
+	$editorarea__tabpanel-accordion-selected--shadow: 0 -2px 5px 0 $editorarea__tabpanel-accordion-selected--shadow-color inset;
+}
+$editorarea__tabpanel-accordion-selected--padding: 0 0 5px;
+
+$editorarea__tabbox-icon-chevron--width: ($toolbar__button-default--size + 2 * $boxes--border__thin);
+$editorarea__tabbox-icon-chevron--height: $toolbar__button-medium--size;
+// $editorarea__tabbox-icon-chevron--line-height: $editorarea__tabbox-icon-chevron--height;
+$editorarea__tabbox-icon-chevron--padding-top: 2px;
+
+$editorarea__tabs-scroll--margin: 0 $editorarea__tabbox-icon-chevron--width;
+$editorarea__tabs-scroll-popup--margin: 0;
+$editorarea__tabs-scroll--left: $container-spacing-default__base;
+
+$editorarea__tabbox-scroll--bg-color: transparent;
+$editorarea__tabbox-scroll--border-color: $editorarea__tabs--border-color;
+$editorarea__tabbox-scroll--border: $boxes--border__thin solid $editorarea__tabbox-scroll--border-color;
+
+$editorarea__tabbox-accordion-tab-closed--content: _getIconGlyphContentValue('navigation-right-arrow');//$caretarrow__down--content;
+$editorarea__tabbox-accordion-tab-opened--content: _getIconGlyphContentValue('navigation-down-arrow');//$caretarrow__up--content;
+$editorarea__tabbox-accordion-tab-opened--color: var(--bo-button-icon-color);
+
+$editorarea__tabbox-scroll-left--content: _getIconGlyphContentValue('navigation-left-arrow');//$caretarrow__left--content;
+$editorarea__tabbox-scroll-right--content: _getIconGlyphContentValue('navigation-right-arrow');//$caretarrow__right--content;
+
+$editorarea__tabbox-icon-chevron--font-size: $font-size__large;
+$editorarea__tabbox-icon-chevron--font-color: $editorarea__tab-text--font-color;
+$editorarea__tabbox-icon-chevron-hover--font-color: $editorarea__tab-text-hover--font-color;
+
+$editorarea__password_panel--padding: $container-spacing-default__half;
+$editorarea__password-panel-label-validation--color: $validation__error--color;
+
+$_editor-defaults__switch-checkbox-label--font-size: $font-size__base;
+$editor-defaults__switch-checkbox--height: $toolbar__button-default--size;
+$editor-defaults__switch-checkbox--min-height: $editor-defaults__switch-checkbox--height;
+$editor-defaults__switch-checkbox--line-height: $font-size__large;
+$editor-defaults__switch-checkbox--width: 22px; //38px
+$editor-defaults__switch-checkbox--padding-left: $container-spacing-default__half;
+$_editor-defaults__switch-checkbox-padding-top: floor(($editor-defaults__switch-checkbox--height - $editor-defaults__switch-checkbox--line-height)/2);
+$_editor-defaults__switch-checkbox-padding-bottom: ceil(($editor-defaults__switch-checkbox--height - $editor-defaults__switch-checkbox--line-height)/2);
+
+$editor-defaults__switch-checkbox-guide--width: 2.375rem;
+$editor-defaults__switch-checkbox-guide--height: 1rem;
+$editor-defaults__switch-checkbox-guide--border-radius: .75rem;
+$editor-defaults__switch-checkbox-guide--border: $boxes--border__thin solid var(--bo-field-border-color);
+$editor-defaults__switch-checkbox-guide--bg-color: var(--bo-button-background);
+$editor-defaults__switch-checkbox-guide-checked--bg-color: var(--bo-button-hover-background);
+$editor-defaults__switch-checkbox-guide-checked--border-color: var(--bo-button-selected-border-color);
+
+$editor-defaults__switch-checkbox-btn--size: 1.5rem;
+$editor-defaults__switch-checkbox-btn--border-radius: 1rem;
+
+$editor-defaults__switch-checkbox--border-color: var(--bo-field-border-color);
+$editor-defaults__switch-checkbox-hover--border-color: var(--bo-button-hover-border-color);
+$editor-defaults__switch-checkbox-hover--bg-color: var(--bo-button-hover-background);
+$editor-defaults__switch-checkbox--border: $boxes--border__thin solid var(--bo-field-border-color);
+$editor-defaults__switch-checkbox-btn--bg-color: var(--bo-button-background);
+$editor-defaults__switch-checkbox-checked--bg-color: var(--bo-button-selected-background);
+$editor-defaults__switch-checkbox-checked--border-color: var(--bo-button-selected-border-color);
+$editor-defaults__switch-checkbox--transition: background-color .15s ease, margin-left .15s ease, left .15s ease;
+$editor-defaults__switch-checkbox--margin-left: ($editor-defaults__switch-checkbox-guide--width - $editor-defaults__switch-checkbox-btn--size);
+$editor-defaults__invalid-box--border-color: var(--bo-error-border-color);
+
+
+$editor-defaults__switch-checkbox-disabled-opacity: var(--bo-content-disabled-opacity);
+
+$editor-area__groupbox--border-color: var(--bo-container-border-color);
+$editor-area__groupbox--border-top: $boxes--border__thin solid $editor-area__groupbox--border-color;
+$editor-area__groupbox--padding-y: $container-spacing-default__third;
+
+$notification-box-defaults__box-padding--base: $container-spacing-default__half;
+$notification-box-defaults__box--bg-color: $_default__status-neutral--background; //$validation__error--color;
+$notification-box-defaults__box--border-color: var(--bo-neutral-border-color); //$validation__error--color;
+$notification-box-defaults__box--border-width: $boxes--border__thin;
+$_notification-box-defaults__box-content--color: $_default__header--color;
+$_notification-box-defaults__box-content--line-height: $font-size__large;
+$notification-box-defaults__box--width: 250px;
+$notification-box-defaults__box--min-height: $editor-defaults__list-item--height;
+$notification-box-defaults__box--padding: (floor(($editor-defaults__list-item--height - $_notification-box-defaults__box-content--line-height)/2) - $notification-box-defaults__box--border-width) ($notification-box-defaults__box-padding--base + $form-defaults__input-icon--size + $boxes--border__thin) (floor(($editor-defaults__list-item--height - $_notification-box-defaults__box-content--line-height)/2) - $notification-box-defaults__box--border-width) ($notification-box-defaults__box-padding--base + $form-defaults__input-icon--size + $_container-spacing-default__tiny);
+$notification-box-defaults__box--box-shadow: 0 0 $_editor-defaults__popup-box--default-shadow-blur rgba(0, 0, 0, $_editor-defaults__popup-box--default-shadow-opacity);
+$notification-box-defaults__box--border-radius: $_layout-panels__panel--border-radius;
+$_notification-box-defaults__box-close-icon--color: var(--bo-content-icon-color);
+$notification-box-defaults__box-close-icon-hover--color: var(--bo-content-icon-color);
+
+$notification-box-defaults__pointer--size: 7px;
+$notification-box-defaults__pointer-inner--z-index: 10;
+$notification-box-defaults__pointer-inner--border-width: $notification-box-defaults__pointer--size;
+$notification-box-defaults__pointer-outer--border-width: $notification-box-defaults__pointer-inner--border-width + $notification-box-defaults__box--border-width;
+$notification-box-defaults__pointer-inner--margin-top: -($notification-box-defaults__pointer-inner--border-width + 2 * $notification-box-defaults__box--border-width);
+$notification-box-defaults__pointer-outer--margin-top: -($notification-box-defaults__pointer-outer--border-width + 2 * $notification-box-defaults__box--border-width);
+
+$notification-box-defaults__side-pointer--size: 11px;
+$notification-box-defaults__errorbox-icon--top: $editor-area__groupbox--padding-y;
+$notification-box-defaults__errorbox-icon--left: $editor-area__groupbox--padding-y + 2px;
+$notification-box-defaults__errorbox-up--top: 8px;
+$notification-box-defaults__errorbox-right--right: 7px;
+$notification-box-defaults__errorbox-close--top: 7px;
+$notification-box-defaults__errorbox-close--right: 5px;
+$notification-box-defaults__errorbox--padding: $editor-area__groupbox--padding-y ($editor-area__groupbox--padding-y + $form-defaults__input-icon--size + $boxes--border__thin) $editor-area__groupbox--padding-y ($editor-area__groupbox--padding-y + $form-defaults__input-icon--size + $_container-spacing-default__tiny);
+
+$notification-box-defaults__notification-box--width: ($notification-box-defaults__box--width - 2*$notification-box-defaults__box--border-width);
+$notification-box-defaults__icon--top: nth($notification-box-defaults__box--padding, 1) + ceil(($_notification-box-defaults__box-content--line-height - $editor-defaults__icon--size)/2);
+$notification-box-defaults__icon--left: $notification-box-defaults__box-padding--base;
+$notification-box-defaults__close--right: 5px;
+$_notification-box-defaults__icon--font-family: $font-family__icon;
+$_notification-box-defaults__icon--content: _getIconGlyphContentValue('message-error');
+$_notification-box-defaults__icon--font-size: $font-size__large;
+$_notification-box-defaults__icon--line-height: $_notification-box-defaults__box-content--line-height;
+
+$notification-box_icon-close--content: _getIconGlyphContentValue('decline');
+$notification-box_icon-close--font-family: $font-family__icon;
+$notification-box_icon-close--font-size: $font-size__large;
+$notification-box_icon-close--right: $notification-box-defaults__box-padding--base;//: $container-spacing-default__half;
+$notification-box_icon-close--top: $container-spacing-default__semi-third + 1px;
+
+$_notification-box-warning__box--color: $_default__status-alert--color;
+$_notification-box-error__box-icon--content: _getIconGlyphContentValue('error');
+$_notification-box-error__box-icon--font-size: $font-size__base;
+$_notification-box-error__box--bg-color: $_editor-defaults__validation-error--bg-color;
+$_notification-box-error__box--color: $_editor-defaults__validation-error--color;
+$notification-box-error__box--padding-x: $container-spacing-default__third;
+$notification-box-error__close-icon--size: $form-defaults__input-icon--size;
+$notification-box-error__box--padding: $editor-area__groupbox--padding-y ($container-spacing-default__third + $notification-box-error__close-icon--size + $notification-box-defaults__close--right) $editor-area__groupbox--padding-y $notification-box-error__box--padding-x;
+$notification-box-error__close-icon--top: $editor-area__groupbox--padding-y;
+$notification-box-error__close-icon--right: $notification-box-error__box--padding-x;
+
+$_notification-box-warning__box--color: $_default__status-alert--color;
+$_notification-box-warning__box-icon--content: _getIconGlyphContentValue('message-warning');
+
+$navigation-popup__menu--bg-color: $_default__content-container--bg-color;
+$navigation-popup__menu--color: var(--bo-text-color);
+$navigation-popup__menu-icon--bg-color: var(--bo-button-background);
+$navigation-popup__menu-item-hover--bg-color: var(--bo-list-hover-background);
+$navigation-popup__menu-item-hover-color: var(--bo-list-text-color);
+$navigation-popup__menu-item-active-color: var(--bo-list-active-text-color);
+$navigation-popup__menu-item-active-bg-color: var(--bo-list-active-background);
+$navigation-popup__menu-item--color: var(--bo-text-color);
+$navigation-popup__menu-icon--color: var(--bo-content-icon-color);
+$navigation-popup__menu-item--font-size: $font-size__base;
+$_navigation-popup__menu-item--padding-x: $_container-spacing-default__tiny;
+$_navigation-popup__menu-item-separator--margin: 0 $_navigation-popup__menu-item--padding-x;
+$_navigation-popup__menu-item-separator--min-height: $boxes--border__thin;
+$_navigation-popup__menu-item-separator--border-color: var(--bo-list-border-color);
+$_navigation-popup__menu-item-caret-icon--right: $_container-spacing-default__core;
+$_navigation-popup__menu-item-caret-icon--width: 8px;
+$_navigation-popup__menu-item--line-height: $toolbar__button-medium--size;
+$_navigation-popup__menu-item--border-width: $boxes--border__thin;
+$_navigation-popup__menu-item--min-height: $editor-defaults__list-item--height;
+$_navigation-popup__menu-item--padding: ceil(($_navigation-popup__menu-item--min-height - $_navigation-popup__menu-item--line-height)/2 - $_navigation-popup__menu-item--border-width) ($_navigation-popup__menu-item-caret-icon--right + $_navigation-popup__menu-item-caret-icon--width + $_container-spacing-default__core) floor(($_navigation-popup__menu-item--min-height - $_navigation-popup__menu-item--line-height)/2 - $_navigation-popup__menu-item--border-width) $_navigation-popup__menu-item--padding-x;
+$_navigation-popup__menu-item-image--margin-right: $_container-spacing-default__tiny;
+// $_navigation-popup__menu--border-radius: $_editor-defaults__popup-box--border-radius;
+
+$navigation-popup__pointer-menu--bg-color: $_default__content-container--bg-color;
+
+$navigation-popup__pointer-menu-item--color: var(--bo-list-text-color); 
+$navigation-popup__pointer-menu-item-hover--color: var(--bo-highlight-color);
+$navigation-popup__pointer-menu-item-hover--bg-color: $window__action-group-popup-action-hover--bg-color;
+$navigation-popup__pointer-menu-item-disabled--color: $editor-defaults__button-disabled--color;
+$_navigation-popup__pointer-menu-content--padding: $_container-spacing-default__core 0;
+
+$navigation-popup__pointer-menu-pointer-default--border-size: 7px;
+$navigation-popup__pointer-menu-pointer-default--border-width: $boxes--border__thin;
+
+$navigation-popup__pointer-menu-pointer--border-width: $navigation-popup__pointer-menu-pointer-default--border-size;  // 7px
+$navigation-popup__pointer-menu-pointer-shadow--margin: 1px;
+$navigation-popup__pointer-menu-pointer-shadow--border-width: $navigation-popup__pointer-menu-pointer--border-width + $navigation-popup__pointer-menu-pointer-shadow--margin;  // 8px
+
+$navigation-popup__pointer-menu-pointer-side--border-width: ($navigation-popup__pointer-menu-pointer-default--border-size + 2 * $navigation-popup__pointer-menu-pointer-default--border-width) $navigation-popup__pointer-menu-pointer-default--border-size;
+$navigation-popup__pointer-menu-pointer-side-shadow--border-width: (nth($navigation-popup__pointer-menu-pointer-side--border-width, 1) + $navigation-popup__pointer-menu-pointer-default--border-width) (nth($navigation-popup__pointer-menu-pointer-side--border-width, 2) + $navigation-popup__pointer-menu-pointer-default--border-width);
+
+$navigation-popup__pointer-menu-pointer--spacing: ($navigation-popup__pointer-menu-pointer-default--border-size * 2) * -1;
+
+$navigation-popup__pointer-menu-pointer-shadow--spacing: ($navigation-popup__pointer-menu-pointer-default--border-size * 2 + 2* $navigation-popup__pointer-menu-pointer-default--border-width) * -1;
+
+$navigation-popup__pointer-menu-pointer--indent: $container-spacing-default__half;
+$navigation-popup__pointer-menu-pointer-side--indent: $container-spacing-default__third;
+
+// $navigation-popup__pointer-menu-pointer--border-color: $_editor-defaults__popup-box--border-color;
+$navigation-popup__pointer-menu-pointer-before--border-color: var(--bo-field-border-color);
+$navigation-popup__pointer-menu-pointer-after--border-color: var(--bo-list-background);
+$navigation-popup__pointer-menu-secondary--margin-top: $navigation-popup__pointer-menu-pointer-shadow--margin;
+
+
+// $navigation-popup__pointer-menu-pointer-shadow--color: $black__blueish--200;
+// $navigation-popup__pointer-menu-pointer-shadow--border-color: rgba($navigation-popup__pointer-menu-pointer-shadow--color, 0.5);
+
+$navigation-popup__pointer-menu-pointer-menu-item--border: false; //$boxes--border__thin solid $_default-list__item--border-color;
+
+//Validation
+
+//Validation popup
+$_validation-popup__window--bg-color: $_default__content-container--bg-color;
+$_validation-popup__window--border-width: $boxes--border__thin;
+$_validation-popup__window-pointer--indent: $navigation-popup__pointer-menu-pointer--indent;
+$_validation-popup__window-pointer-shadow--indent: $_validation-popup__window-pointer--indent - $_validation-popup__window--border-width;
+$_validation-popup__window-pointer--border-width: $navigation-popup__pointer-menu-pointer--border-width;
+$_validation-popup__window-pointer-shadow--border-width: $navigation-popup__pointer-menu-pointer-shadow--border-width;
+$_validation-popup__window-pointer-border-bottom-color: var(--bo-field-border-color);
+$_validation-popup__window-pointer-top: -1px;
+$-validation-popup__window-pointer-margin-bottom: -1px;
+$_validation-popup__window-pointer-after-bottom: -0.5px;
+
+$validation-popup__box--margin-top: -6px;
+$validation-popup__box--margin-left: 8px;
+// $validation-popup__box-arrow-after--right: $notification-box-defaults__icon--top;
+// $validation-popup__box-arrow-after--bottom: -18px;
+// $validation-popup__box-arrow-before--bottom: -17px;
+// $validation-popup__box-arrow--border-color: $blue__dark;
+
+// $validation-popup__box-arrow--border: 9px solid $editorarea__tabbox-scroll--bg-color; // transparent
+// $validation-popup__box-arrow--border-top: 9px solid $validation-popup__box-arrow--border-color; // #384d66
+// $validation-popup__box-arrow--border-width: 9px;
+
+$_validation-popup__validation-icon--spacing: $_container-spacing-default__tiny;
+$_validation-popup__validation-icon-container--padding-left: $_editor-defaults__validation-icon--size + $_validation-popup__validation-icon--spacing; //$window__action-group-popup-action-text--height;
+
+$validation-popup__content-listcell--padding: $container-spacing-default__half;
+$validation-popup__content-listcell--line-height: $font-size__large;
+// $validation-popup__content-vlayout--padding-left: $container-spacing-default__base;
+$validation-popup__content-vlayout-inner--padding: $container-spacing-default__half;
+$validation-popup__content-vlayout-inner--border-color: $_default__delimiter--border-color;
+$validation-popup__content-vlayout-inner--border-bottom: $boxes--border__thin solid $validation-popup__content-vlayout-inner--border-color;
+$validation-popup__content-label--top: $editor-defaults__radiobox-selected--border-width;
+$_validation-popup__content--max-height: 400px;
+$validation-popup__button-primary--margin: $container-spacing-default__third;
+$validation-popup__button-primary--color: var(--bo-button-primary-text-color);
+$validation-popup__button-confirm--color: var(--bo-button-text-color);
+$_validation-popup__content-footer--padding: floor(($toolbar__default--height - $editor-defaults__inline-box--height)/2) $container-spacing-default__half;
+
+$validation-popup-results__default--width: $notification-box-defaults__box--width;
+
+$validation-popup-results__list--max-height: 350px;
+$validation-popup-results__list--bg-color: var(--bo-list-background);
+$validation-popup-results__list-row-validation--max-height: 224px;
+$_validation-popup-results__list-item--padding-left: 36px;
+$validation-popup-results__default--border: $boxes--border__thin solid var(--bo-list-border-color);
+$validation-popup-results__default--margin-left: -4px;
+$validation-popup-results__default--margin-top: $_container-spacing-default__tiny;
+$validation-popup-results__pointer-above--margin-top: -$validation-popup-results__default--margin-top;
+$validation-popup-results__header-text--font-size: $font-size__base;
+$validation-popup-results__header-text--font-weight: $font-weight-bold;
+$validation-popup-results__header-text--padding: floor(($toolbar__default--height - $window__icon-close-button--size)/2) $container-spacing-default__half;
+$validation-popup-results__header-text--line-height: $window__icon-close-button--size;
+$validation-popup-results__listcell--border-color: var(--bo-list-border-color);
+
+$validation-popup-results__validation-icon--margin: 2px 5px 3px 0;
+
+$validation-popup__pointer-default--border: 8px solid var(--bo-container-border-color);
+$validation-popup__pointer-default--border-width: $boxes--border__thin;
+
+$validation-popup__pointer-default-before--border-width: 8px 10px;
+$validation-popup__pointer-default-before--top: -14px;
+$validation-popup__pointer-default-before--left: 18px;
+$validation-popup__pointer-default-before--right: 18px;
+$validation-popup__pointer-default-before--border-color: var(--bo-container-border-color);
+$validation-popup__pointer-default-before--z-index: 5;
+
+$validation-popup__pointer-default-after--border-width: (nth($validation-popup__pointer-default-before--border-width, 1) - $validation-popup__pointer-default--border-width) (nth($validation-popup__pointer-default-before--border-width, 2) - $validation-popup__pointer-default--border-width);
+$validation-popup__pointer-default-after--top: -15px;
+$validation-popup__pointer-default-after--left: $validation-popup__pointer-default-before--left + $validation-popup__pointer-default--border-width;
+$validation-popup__pointer-default-after--right: $validation-popup__pointer-default-before--right + $validation-popup__pointer-default--border-width;
+$validation-popup__pointer-default-after--border-color: var(--bo-container-border-color);
+$validation-popup__pointer-default-after--opacity: 0.7;
+
+$validation-popup__pointer--before-above--top: 100%;
+$validation-popup__pointer-above--top: $validation-popup__pointer--before-above--top;
+$validation-popup__pointer-above-before--side: 19px;
+$validation-popup__pointer-above-before--border-width: 6px 8px;
+
+$validation-popup__pointer-above-before--border-top-color: var(--bo-container-border-color);
+$validation-popup__pointer-left--margin-left: 0;
+
+$validation-popup__pointer-above-after--border-width: (nth($validation-popup__pointer-above-before--border-width, 1) + $validation-popup__pointer-default--border-width) (nth($validation-popup__pointer-above-before--border-width, 2) + 2* $validation-popup__pointer-default--border-width);
+$validation-popup__pointer-above-after--side: $validation-popup__pointer-above-before--side - 2* $validation-popup__pointer-default--border-width;
+
+$table-scroll-container-size: 200px;
+
+//modal messagebox
+$messagebox-popup__icon-font: $font-family__icon;
+$messagebox-popup__icon-color: var(--bo-content-icon-color);
+$messagebox-popup__mask--top: 0;
+$messagebox-popup__mask--left: 0;
+$messagebox-popup__mask--bg-color: var(--bo-container-background);
+$messagebox-popup__mask--opacity: 0.9;
+
+$messagebox-popup__messagebox--border-radius: var(--bo-border-radius);
+$messagebox-popup__messagebox-header-height: 2.75rem;
+$messagebox-popup__messagebox-header-shadow: var(--bo-content-header-shadow);
+$messagebox-popup__messagebox-content-box-padding: $_container-spacing-default__tiny $_container-spacing-default__small $_container-spacing-default__small $_container-spacing-default__small;
+$messagebox-popup__messagebox-content-font-size: $font-size__large;
+$messagebox-popup__messagebox-footer-border-top: 1px solid var(--bo-list-border-color);
+$messagebox-popup__messagebox-footer-padding: $_container-spacing-default__tiny $_container-spacing-default__small 0 $_container-spacing-default__small;
+$messagebox-popup__messagebox-btn-min-width: 80px;
+$messagebox-popup__messagebox-btn-margin-left: $_container-spacing-default__tiny;
+
+$messagebox-popup__messagebox--bg-color: var(--bo-container-background);
+$messagebox-popup__messagebox--width: 400px;
+$messagebox-popup__messagebox--text-color: var(--bo-text-color);
+$messagebox-popup__messagebox--top: 50%;
+$messagebox-popup__messagebox--left: 0;
+$messagebox-popup__messagebox--right: $messagebox-popup__messagebox--left;
+$messagebox-popup__messagebox--box-shadow: var(--bo-content-shadow-x-large);
+
+$messagebox-popup__messagebox-btn-secondary--margin-left: 8px;
+
+$messagebox-popup__messagebox-title--padding: $container-spacing-default__third 40px $container-spacing-default__third $container-spacing-default__third;
+$messagebox-popup__messagebox-title--border-bottom: $boxes--border__thin solid var(--bo-container-border-color);
+$messagebox-popup__messagebox-title--font-size: $font-size__large;
+
+$messagebox-popup__messagebox-label--font-weight: $font-weight-bold;
+
+$messagebox-popup__messagebox-close-btn--top: $container-spacing-default__third;
+$messagebox-popup__messagebox-close-btn--right: $container-spacing-default__third;
+$messagebox-popup__messagebox-close-btn--size: 24px;
+
+$messagebox-popup__messagebox-navigation--border-top: $messagebox-popup__messagebox-title--border-bottom;
+$messagebox-popup__messagebox-navigation--padding: $container-spacing-default__third;
+
+$messagebox-popup__messagebox-navigation-btn--padding: 7px $container-spacing-default__half;
+$messagebox-popup__messagebox-navigation-btn--color: var(--bo-button-text-color);
+$messagebox-popup__messagebox-navigation-btn-hover--color: var(--bo-button-hover-color);
+
+$messagebox-popup__messagebox-message--padding: $messagebox-popup__messagebox-navigation--padding;
+
+$messagebox-popup__messagebox-message-span--padding: $messagebox-popup__messagebox-message--padding;
+
+$messagebox-popup__messagebox-message-footer--font-size: $font-size__small;
+
+$messagebox-popup__messagebox-message-warn--color: $validation__warn--color;
+$messagebox-popup__messagebox-message-warn--font-weight: $font-weight-bold;
+
+$messagebox-popup__messagebox-question-icon--content: _getIconGlyphContentValue("question-mark");
+$messagebox-popup__messagebox-infomation-icon--content: _getIconGlyphContentValue("message-information");
+
+$_colorpalette-popup__palette--width: 264px;
+$_colorpalette-popup__palette--height: 232px;
+$_colorpalette-popup__palette--bg-color: var(--bo-container-background);
+$_colorpalette-popup__palette-hex--color: var(--bo-content-label-color);
+$_colorpalette-popup__palette--padding-x: $_container-spacing-default__core;
+$_colorpalette-popup__palette--padding: 0 ($_colorpalette-popup__palette--padding-x + $boxes--border__thin) $_container-spacing-default__core ($_colorpalette-popup__palette--padding-x + $boxes--border__thin);
+$_colorpalette-popup__picker--left: $_colorpalette-popup__palette--padding-x;
+$_colorpalette-popup__colorfield--margin: $_colorpalette-popup__palette--padding-x $_colorpalette-popup__palette--padding-x $_colorpalette-popup__palette--padding-x 116px;
+$_colorpalette-popup__colorfield-input--margin-left: $_colorpalette-popup__palette--padding-x;
+
+$popup-defaults__config-add-setting-popup-content--padding: 8px;
+$_calendar__header-title--left-padding: 8px;
+$_calendar__header-title--top-padding: 16px;
+
+
+$_calendar__header--height: $editor-defaults__popup-box-header--height;
+$_calendar__header--padding: $_container-spacing-default__core ($_container-spacing-default__regular - $_container-spacing-default__core);
+$_calendar__header-title--font-size: $font-size__large;
+$_calendar__header-title--color: var(--bo-link-color);
+$_calendar__header-title--font-weight: $font-weight-normal;
+$_calendar__header--line-height: 2;
+$_calendar__wrapper--bg-color: var(--bo-list-background);
+
+$_calendar__button-icon-right--content: _getIconGlyphContentValue('navigation-right-arrow');
+$_calendar__button-icon-left--content: _getIconGlyphContentValue('navigation-left-arrow');
+$_calendar__button-icon--font-family: $font-family__icon;
+
+$_calendar__body--padding: $_container-spacing-default__small nth($_calendar__header--padding,2);
+$_calendar__body--font-size: $font-size__base;
+$_calendar__header-button--border-radius: 0.25rem;
+$_calendar__calendar-cell-hover--bg-color: var(--bo-list-hover-background);
+$_calendar__calendar-time--margin: $_calendar__body--padding;
+$_calendar__calendar-cell--size: $editor-defaults__inline-box--height;
+$_calendar__calendar-cell--font-weight: $font-weight-normal;
+$_calendar__calendar-cell--border-radius: $editor-defaults__inline-box--border-radius;
+$_calendar__calendar-cell-day--color: var(--bo-list-text-color);
+$_calendar__calendar-cell-day-first-letter--font-size: $font-size__small;
+$_calendar__calendar-cell-selected--bg-color: var(--bo-list-active-background);
+$_calendar__calendar-cell-selected--color: var(--bo-list-active-text-color);
+$_calendar__calendar-cell-selected-hover--bg-color: var(--bo-content-selected-hover-background);
+$_calendar__calendar-cell-text--color: var(--bo-list-text-color);
+$_calendar__calendar-cell-outside--color: $form-defaults__input-icon-disabled--color;
+$_calendar__calendar-cell-nonworking--color: var(--bo-list-text-color);
+$_calendar__calendar-cell-nonworking--bg-color: var(--bo-legend-nonworking-background);
+
+$_calendar__calendar-cell-working--color: var(--bo-list-text-color);
+$_calendar__calendar-cell-working--bg-color: var(--bo-legend-working-background);
+
+$_view-notifyer__overlay--z-index: 99;
+$_view-notifyer__overlay--bg-color: $editor-defaults__loading--bg-color;
+$_view-notifyer__overlay--opacity: 0.6;
+$_view-notifyer__overlay--height: 2px;
+$_view-notifyer__overlay--color: var(--bo-content-label-color);
+$_view-notifyer__overlay-label--font-size: $font-size__h4;
+$_view-notifyer__overlay-label--padding: 0 0.2em;
+$_view-notifyer__overlay-label--font-weight: $font-weight-bold;
+$_view-notifyer__overlay-label--line-height: floor($_view-notifyer__overlay-label--font-size * 1.2);
+$_view-notifyer__overlay-progressmeter--bg-color: var(--bo-container-background); //transparent
+$_view-notifyer__overlay-progressmeter-image--bg-color: var(--bo-container-background);
+$_view-notifyer__overlay-progressmeter--width: 100%;
+$_view-notifyer__overlay-progressmeter-container--width: auto;
+$fileupload-progress-image--bg-color: var(--bo-brand-color);

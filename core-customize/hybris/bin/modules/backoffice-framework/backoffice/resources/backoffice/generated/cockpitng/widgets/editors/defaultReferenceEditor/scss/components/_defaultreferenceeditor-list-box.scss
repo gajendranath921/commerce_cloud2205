@@ -1,0 +1,267 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+tr.ye-default-reference-editor-bandbox-listcell-noaccess {
+    .z-listcell {
+        .z-listcell-content {
+            .z-label:last-child:after {
+                display: none !important;
+            }
+        }
+    }
+}
+
+
+div.ye-default-reference-editor {
+    .z-listitem div.z-listcell-content,
+    .z-listitem:first-child .z-listcell-content {
+        padding: $default-reference-editor__list-item-content--padding;
+    }
+    &-item-container {
+        background: $_default-list__item--bg-color;
+    }
+    &-item-container,
+    &-selected-item-container {
+        border: $default-reference-editor__box--border-width solid $editor-area__box--border-color;
+        padding: $default-reference-editor__list-item-content--padding;
+        position: relative;
+        min-height: $editor-area__box--height;
+        height: $editor-area__box--height;
+        line-height: $editor-area__input-field--line-height;
+        font-size: $editor-area__input-field--font-size;
+    }
+    &-selected-item-container {
+        border-radius: $default-reference-editor__box-inner--border-radius;
+    }
+    &-listbox,
+    &-selected-listbox {
+        span.z-label {
+            font-weight: normal;
+            font-size: $editor-area__input-field--font-size;
+            margin-bottom: 0;
+            display: inline;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+        }
+        .z-listitem div.z-listcell-content,
+        .z-listitem:first-child .z-listcell-content {
+            padding: $default-reference-editor__list-item-content--padding;
+        }
+    }
+
+    &-listbox {
+        border: none;
+
+        .z-listitem {
+            @if $default-reference-editor__list-item--bg-color {
+                background-color: $default-reference-editor__list-item--bg-color;
+            }
+            > td {
+                border-bottom: none;
+                position: relative;
+            }
+        }
+
+        // deprecated
+        // .z-listitem:not(.ye-create-new-reference) {
+        //     .z-listcell-content > .z-label:last-child:after {
+        //         content: "";
+        //         width: $default-reference-editor__list-item-add-icon--size;
+        //         height: $default-reference-editor__list-item-add-icon--size;
+        //         background-image: url("images/icon_action_add_sprite_15.png");
+        //         background-repeat: no-repeat;
+        //         background-position: 0 0;
+        //         position: absolute;
+        //         right: $default-reference-editor__list-item-add-icon--right;
+        //         top: 50%;
+        //         margin-top: $default-reference-editor__list-item-add-icon--margin-top;
+        //         display: none;
+        //     }
+        // }
+
+        .z-listitem {
+            &, &-selected {
+                &:hover:not(.ye-create-new-reference) {
+                    //remove if not necessary
+                    @if $default-reference-editor__list-item-hover--bg-color {
+                        background-color: $default-reference-editor__list-item-hover--bg-color;
+                    }
+
+                    // .z-listcell-content > .z-label:last-child:after {
+                    //     display: block;
+                    // }
+                }
+            }
+        }
+
+        .ye-default-reference-editor-bandbox-autocorrection-reference:hover > td  {
+            background-image: none;
+        }
+    }
+    &-selected-listbox {
+        border: $default-reference-editor__box--border-width solid $_default-reference-editor__box--border-color;
+
+        @if($editor-area__input-field--border-radius){
+            border-radius: $default-reference-editor__box--border-radius;
+            > div.z-listbox-body > table {
+                overflow: hidden;
+            }
+        }
+
+        &.yw-listbox-disabled {
+            border-color: $_default-reference-editor__box-disabled--border-color;
+        }
+        > div.z-listbox-body {
+            @if $default-reference-editor__list-body-loading--bg-color {
+                background-color: $default-reference-editor__list-body-loading--bg-color;
+            }
+            margin-top: $default-reference-editor__box--border-width * -1;
+            margin-bottom: $default-reference-editor__box--border-width * -1;
+            // background-image: url("images/icon_loading_indicator_default.gif");
+            background-position: $default-reference-editor__list-body-loading-icon--bg-position;
+            background-repeat: no-repeat;
+            /* FIX FOR WRONG ZK WIDTH CALCULATION */
+            // width: 100% !important;
+            max-width: 100%;
+            /* fix no scroll issue. */
+            // height: auto !important;
+
+            .z-listcell {
+                padding: 0;
+                border: none;
+            }
+        }
+        .z-listitem {
+            background-color: $_default-list__item--bg-color;
+        }
+        .z-listitem-selected:hover,
+        .z-listitem:hover {
+            @if ($default-reference-editor__list-item-hover--bg-color){
+                background-color: $default-reference-editor__list-item-hover--bg-color;
+            }
+        }
+        //to take defaults defined in _cockpit-listbox.scss
+        /*        .z-listitem,
+        .z-listitem tr.z-listitem:hover > td.z-listcell {
+            background: none !important;
+        }
+        */
+        div.ye-default-reference-editor {
+            &-item-container,
+            &-selected-item-container {
+                // border: 0 solid $_default-reference-editor__listbox-selected-list-item--border-color;
+                border-width: $default-reference-editor__box--border-width 0 0;
+            }
+        }
+        .z-listitem-selected,
+        .z-listitem {
+            &:first-child {
+                div.ye-default-reference-editor {
+                    &-item-container,
+                    &-selected-item-container {
+                        border-top-width: 0; //$default-reference-editor__box--border-width;
+                    }
+                }
+            }
+        }
+    }
+    .yw-loceditor-row-editor > .z-div > & {
+        .yw-loceditor-fixed-open &,
+        .yw-loceditor-dynamic-content & {
+            position: relative;
+            z-index: 0;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                border-left: $default-reference-editor__box--border-width solid $_default-reference-editor__box--border-color;
+                width: $default-reference-editor__box--border-width;
+                z-index: -1;
+            }
+            > .ye-default-reference-editor-bandbox .z-bandbox-input,
+            > .ye-default-reference-editor-selected-listbox {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+}
+
+.yw-loceditor-fixed-open .yw-loceditor-row-locale.z-label + .yw-loceditor-row-editor >.z-div > .ye-com_hybris_cockpitng_editor_defaultreferenceeditor {
+    .ye-default-reference-editor-selected-listbox {
+        margin-bottom: 0;
+
+        .ye-default-reference-editor-selected-item-container {
+            border: none;
+        }
+    }
+}
+
+.ye-default-reference-editor {
+    &-listbox {
+        .ye-create-new-reference.z-listitem div.z-listcell-content {
+            white-space: normal;
+            text-overflow: clip;
+            padding: $default-reference-editor__list-item-create-new-content--padding;
+            line-height: $default-reference-editor__create-new-container--line-height;
+        }
+        // .z-listitem > .z-listcell > div.z-listcell-content:hover {
+        //     padding-right: $default-reference-editor__list-item-remove-enabled-hover--padding-right;
+        // }
+    }
+    &-selected-listbox {
+        .z-listcell-content{
+            padding: 0 !important;
+            background: transparent;
+        }
+        + .z-div {
+            position: relative;
+            display: table;
+            width: 100%;
+        }
+    }
+    &-listbox .z-listitem img,
+    .ye-default-reference-editor-selected-listbox .ye-default-reference-editor-selected-item-container img {
+        max-width: 16px;
+        max-height: 16px;
+        padding: 0 5px 0 0;
+        vertical-align: middle;
+    }
+    &-preview-popup-image {
+        max-width: 150px;
+        max-height: 200px;
+    }
+}
+
+.z-listitem-selected:hover,
+.z-listitem:hover {
+    div.ye-default-reference-editor-selected-item-container.ye-remove-enabled {
+        /* @if ($default-reference-editor__list-item-hover--bg-color){
+            background: $default-reference-editor__list-item-hover--bg-color;
+        }*/
+        .ye-default-reference-editor-remove-button {
+            display: block;
+        }
+    }
+}
+
+.yw-listbox-disabled .z-listitem-selected:hover,
+.yw-listbox-disabled .z-listitem:hover {
+    div.ye-default-reference-editor-selected-item-container {
+        background: $default-reference-editor__list-item-disabled--bg-color;
+        cursor: default;
+    }
+}
+
+
+// Overrides
+/*
+.yw-wizard-property .ye-default-reference-editor-selected-listbox .z-listitem div.ye-default-reference-editor-item-container,
+.yw-wizard-property .ye-default-reference-editor-selected-listbox .z-listitem div.ye-default-reference-editor-selected-item-container {
+    height: $editor-area__box--height - 2px;
+    background-color: #f0f !important;
+}
+*/

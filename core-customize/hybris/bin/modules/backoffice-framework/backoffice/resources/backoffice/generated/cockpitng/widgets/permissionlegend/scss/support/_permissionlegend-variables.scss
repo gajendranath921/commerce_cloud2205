@@ -1,0 +1,22 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$permissionlegend__icon--font-size: $font-size__large;
+$permissionlegend__icon--font-family: $font-family__icon;
+$permissionlegend__container--padding: $container-spacing-default__half $container-spacing-default__half $container-spacing-default__two-thirds;
+
+$permissionlegend__icon--size: 17px;
+$permissionlegend__holder--padding-right: $container-spacing-default__third;
+$permissionlegend__holder--padding-left: floor($permissionlegend__holder--padding-right/2);
+$permissionlegend__holder--padding: 5px $container-spacing-default__third;
+
+$permissionlegend__inherited-icon--color: var(--bo-neutral-color);
+// $permissionlegend__inherited-icon-hover--color: lighten($permissionlegend__inherited-icon--color, 1);
+$permissionlegend__granted-icon--color: var(--bo-success-color);
+$permissionlegend__granted-icon--content: _getIconGlyphContentValue('accept');
+// $permissionlegend__granted-icon-hover--color: lighten($permissionlegend__granted-icon--color, 1);
+$permissionlegend__denied-icon--color: var(--bo-error-color);
+$permissionlegend__denied-icon--content: _getIconGlyphContentValue('decline');
+// $permissionlegend__denied-icon-hover--color: lighten($permissionlegend__denied-icon--color, 1);

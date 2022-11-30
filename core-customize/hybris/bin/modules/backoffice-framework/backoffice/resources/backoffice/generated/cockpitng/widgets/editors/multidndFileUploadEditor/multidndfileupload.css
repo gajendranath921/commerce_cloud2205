@@ -1,0 +1,44 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.ye-multidndfileupload .ye-dndfileupload-preview-container {
+  display: block;
+  padding: 0; }
+.ye-multidndfileupload .ye-dndfileupload-preview-list {
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border-color: var(--bo-list-border-color); }
+.ye-multidndfileupload .ye-dndfileupload-preview-listitem {
+  position: relative;
+  height: 40px;
+  text-align: left; }
+  .ye-multidndfileupload .ye-dndfileupload-preview-listitem > .z-listcell {
+    border: none; }
+  .ye-multidndfileupload .ye-dndfileupload-preview-listitem .z-listcell-content {
+    padding-right: 32px;
+    padding-left: 8px; }
+.ye-multidndfileupload .ye-dndfileupload-preview-image {
+  max-height: 16px;
+  max-width: 24px;
+  position: absolute;
+  top: 50%;
+  margin-left: 12px;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 0; }
+.ye-multidndfileupload .ye-dndfileupload-preview-filename, .ye-multidndfileupload .ye-dndfileupload-preview-filename.z-label {
+  border-top: none;
+  max-width: calc(100% - 32px);
+  padding: 0 0 0 32px;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  display: inline;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+.ye-multidndfileupload .ye-dndfileupload-preview-image, .ye-multidndfileupload .ye-dndfileupload-preview-filename {
+  display: inline;
+  margin-bottom: 0; }
+.ye-multidndfileupload .ye-dndfileupload-preview-remove-btn {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px; }

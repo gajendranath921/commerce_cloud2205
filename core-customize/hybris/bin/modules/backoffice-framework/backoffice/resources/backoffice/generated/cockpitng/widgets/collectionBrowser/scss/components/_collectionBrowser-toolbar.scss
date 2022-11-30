@@ -1,0 +1,260 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Collection Browser - Toolbar
+================================*/
+// All Defaults connected to the Collection Browser
+
+
+@import "../support/_collectionBrowser-mixins.scss";
+
+.y-toolbar {
+    padding: $collection-browser__toolbar--padding;
+    border-top: $collection-browser__toolbar--border;
+    border-bottom: $collection-browser__toolbar--border;
+    
+    .z-button {
+        height: $collection-browser__toolbar-z-button--height;
+        padding-top: $collection-browser__toolbar-z-button--padding-y;
+        padding-bottom: $collection-browser__toolbar-z-button--padding-y;
+        min-height: 0;
+    }
+    
+    table.cng-action {
+        td {
+            text-align: center;
+            vertical-align: middle;
+
+            table {
+                margin: auto;
+            }
+            div, td, span {
+                text-align: left;
+            }
+        }
+    }
+}
+.y-toolbar .cng-action,
+.yw-navigationhistory .ye-toolbarbutton {
+    height: $collection-browser__action-button--height;
+    min-width: $collection-browser__action-button--height;
+    vertical-align: middle;
+
+    &-icon {
+        max-height: $collection-browser__action-button--height;
+    }
+}
+
+
+.yw-coll-browser-mold-sel {
+    &-container {
+        float: right;
+        border-radius: $_collection-browser__toolbar-mold-select-button--border-radius;
+
+        .z-hbox-separator {
+            display: none;
+        }
+        td {
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $collection-browser__toolbar-mold-select-button--size;
+        height: $collection-browser__toolbar-mold-select-button--size;
+        
+        @if $_collection-browser__toolbar-mold-select-button--border {
+            border: $_collection-browser__toolbar-mold-select-button--border;
+        }
+        margin: $_collection-browser__toolbar-mold-select-button--margin;
+        transition: background-color .1s, border-color .1s;
+        
+        @include _add_collection-browser-mold-select-icon ('list');
+        @include _add_collection-browser-mold-select-icon ('tree');
+        @include _add_collection-browser-mold-select-icon ('grid');
+    }
+    &-container table td:first-child &-btn:first-child {
+        border-top-left-radius: $_collection-browser__toolbar-mold-select-button--border-radius;
+        border-bottom-left-radius: $_collection-browser__toolbar-mold-select-button--border-radius;
+        @if $_collection-browser__toolbar-mold-select-button--border {
+            margin-left: 0;
+        }
+    }
+    &-container table td:last-child &-btn:last-child {
+        border-top-right-radius: $_collection-browser__toolbar-mold-select-button--border-radius;
+        border-bottom-right-radius: $_collection-browser__toolbar-mold-select-button--border-radius;
+    }
+}
+
+.z-paging, .z-label {
+    &[style*="display:none"] + .yw-coll-browser-mold-sel-container {
+        border-right-width: 0;
+    }
+}
+
+.yw-listview{
+    &-actioncontainer {
+        padding: $collection-browser__header--padding;
+        background: $collection-browser__header--bg-color;
+
+
+
+        .yw-listview-actionSlot {
+            float: left;
+        }
+
+        > .y-toolbar {
+            @if variable-exists(collection-browser__header-toolbar--padding-x) and ($collection-browser__header-toolbar--padding-x > 0){
+                padding-left: $collection-browser__header-toolbar--padding-x;
+                padding-right: $collection-browser__header-toolbar--padding-x;
+            }
+            .yw-collaboration-center-overview & {
+                padding: 0;
+            }
+        }
+
+        .z-label.number-of-items-label {
+            float: right;
+        }
+
+        // .yw-com_hybris_cockpitng_collectionBrowser &
+        .yw-coll-browser & {
+            padding: $collection-browser__action-container--padding;
+
+            .ya-create-container {
+                border-color: $collection-browser__toolbar-item-delimiter--color;
+                background-color: transparent;
+            }
+
+            .y-toolbar {
+                .yw-viewMode-btn,
+                .z-toolbarbutton {
+                //    border: $collection-browser__button--border-width solid transparent;
+                    box-sizing: border-box;
+                }
+                .z-toolbarbutton[disabled] {
+                    &:hover, &:focus {
+                //        border-color: transparent;
+                    }
+                }
+                .ya-create-type-selector-button {
+                    &:hover, &:focus {
+                //        border-left-color: inherit;
+                    }
+                }
+                .ya-extended-group-cnt {
+                    .ya-create-type-selector-button {
+                        &, &:hover, &:focus {
+                            border-left-color: transparent;
+                            border-width: 0;
+                        }
+                    }
+                }
+                .cng-action-group.ya-split-group-cnt {
+                    .ya-create-type-selector-button {
+                        border-top: 0;
+                        border-bottom: 0;
+                    }
+                }
+                .yw-viewMode-btn,
+                .z-toolbarbutton {
+                    &:hover, &:focus {
+                //        border-color: $collection-browser__button-hover--border-color;
+                    }
+                }
+            }
+        }
+    }
+    &-paging-container-top {
+        float: right;
+    }
+    &-pagingcontainer {
+        padding-left: $_container-spacing-default__core;
+        padding-right: $_container-spacing-default__core;
+        
+        .z-label.number-of-items-label,
+        .z-paging {
+            padding-right: $_container-spacing-default__core;
+            padding-left: $_container-spacing-default__core;
+        }
+    }
+}
+
+.yw-listview {
+    /* STATUSBAR */
+    &-statusbar {
+        &-button {
+            &.z-button {
+                left: inherit;
+                padding: $collection-browser__list-view-status-button--padding;
+                background: none !important;
+                border: none !important;
+            }
+        }
+        &-popup {
+            border-radius: $_collection-browser__list-view-status-popup--border-radius;
+        }
+    }
+    &-bottom-bar {
+        min-height: $toolbar__default--height;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: $collection-browser__list-view-bottom-bar--bg-color;
+        padding: $collection-browser__list-view-bottom-bar--padding;
+        height: auto;
+        overflow: hidden;
+
+        .yw-listview-paging-container-bottom,
+        .number-of-items-label {
+            float: right;
+        }
+        .yw-listview-pagingcontainer {
+            padding: $collection-browser__list-view-toolbar-bottom-container--padding;
+            display: inline-block;
+            
+        }
+        .y-statusbar {
+            float: left;
+        }
+        > div {
+            height: $collection-browser__list-view-bottom-bar--height;
+            display: inline-block;
+            background: transparent;
+        }
+        .z-paging {
+            border-width: 0;
+        }
+    }
+}
+
+
+.yw-listview-actioncontainer, 
+.yw-listview-bottom-bar .yw-listview-paging-container-bottom  {
+    .z-paging, 
+    .z-paging-os {
+        float: right;
+        background: none;
+    }
+    .z-paging {
+        height: $collection-browser__list-view-toolbar-pagin--height;
+    }
+}
+
+.yw-toolbar-center-container {
+	float: right;
+}

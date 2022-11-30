@@ -1,0 +1,15 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+
+div.yw-explorerTree .y-tree-icon {
+	@include setTreeIconGlyph("hmc.yforms", "form");
+}
+
+.yforms-button--toggle {
+    color: var(--bo-button-active-color) !important;
+    border-color: var(--bo-button-active-border-color) !important;
+    background-color: var(--bo-button-active-background) !important;
+}

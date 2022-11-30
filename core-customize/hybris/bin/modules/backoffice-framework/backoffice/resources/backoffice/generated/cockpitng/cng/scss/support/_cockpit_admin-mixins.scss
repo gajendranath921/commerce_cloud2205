@@ -1,0 +1,37 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "_cockpit_admin-variables.scss";
+
+//    Mixins
+//================================
+
+@mixin _addBarHeaderBackground() {
+    background-color: $admin-defaults__headerToolbar--bg-color;
+    @if $admin-defaults__headerToolbar--bg-image {
+        background-image: $admin-defaults__headerToolbar--bg-image;
+        background-repeat: repeat-x;
+    }
+}
+@mixin _addAlignedZeroHeightEndPoints ($top1, $top2){
+    .endPoint {
+        left: -4px;
+        top: $top1;
+    }
+    .endPoint2 {
+        top: $top2;
+    }
+}
+
+@mixin _addFontIcon($content, $color: $admin-defaults-icon--color, $position: "after") {
+    @if ($content) {
+        &::#{$position} {
+            font-family: $admin-defaults-icon--font-family;
+            font-size: $admin-defaults-icon--font-size;
+            color: $color;
+            content: $content;
+        }
+    } @else {
+        @warn "no content set";
+    }
+}

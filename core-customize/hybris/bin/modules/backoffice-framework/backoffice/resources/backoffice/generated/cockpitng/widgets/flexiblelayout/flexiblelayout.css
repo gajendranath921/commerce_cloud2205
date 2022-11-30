@@ -1,0 +1,432 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-flexlayout-rootpane {
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row; }
+  .yw-flexlayout[style*="width: 100%"] .yw-flexlayout-rootpane {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden; }
+    .yw-flexlayout[style*="width: 100%"] .yw-flexlayout-rootpane.yw-flexlayout-sidbar-overlap.yw-flexlayout-sidebar-right.yw-flexlayout-sidebar-closed > .yw-flexlayout-sidebar {
+      display: none; }
+  .yw-flexlayout-rootpane.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar {
+    order: 1; }
+  .yw-flexlayout-rootpane.yw-flexlayout-sidebar-closed > .yw-flexlayout-sidebar {
+    width: 0; }
+  .yw-flexlayout-rootpane.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-sidebar {
+    overflow: hidden; }
+    .yw-flexlayout-rootpane.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper {
+      width: 100%; }
+
+.yw-flexlayout-sidebar {
+  width: 300px;
+  height: 100%;
+  display: block;
+  position: relative;
+  top: 0;
+  vertical-align: top;
+  visibility: hidden;
+  z-index: 1;
+  box-shadow: 0 0 2px var(--bo-container-border-color); }
+  .yw-flexlayout-sidebar-opened:not(.yw-flexlayout-sidebar-collapsed) > .yw-flexlayout-sidebar {
+    width: 300px; }
+  .yw-flexlayout-sidebar-wrapper {
+    width: 300px;
+    height: 100%;
+    transition: transform 0.5s, visibility 0s linear 0.5s; }
+  .yw-flexlayout-sidebar-collapsed > .yw-flexlayout-sidebar {
+    width: 50px; }
+  .yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar {
+    right: 0; }
+  .yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper {
+    float: right; }
+  .yw-flexlayout-sidebar-right:not(.yw-flexlayout-sidebar-collapsed) > .yw-flexlayout-sidebar, .yw-flexlayout-sidebar-left:not(.yw-flexlayout-sidebar-collapsed) > .yw-flexlayout-sidebar {
+    transform: none;
+    width: 0; }
+  .yw-flexlayout-sidebar-right:not(.yw-flexlayout-sidebar-collapsible) > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper {
+    transform: translateX(100%);
+    box-shadow: -1px 0 3px 0 var(--bo-container-border-color); }
+    .yw-flexlayout-sidebar-right:not(.yw-flexlayout-sidebar-collapsible) > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper .yw-flexlayout-sidebar-header-btn {
+      opacity: 0; }
+  .yw-flexlayout-sidebar-left:not(.yw-flexlayout-sidebar-collapsible) > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper {
+    transform: translateX(-100%);
+    box-shadow: 1px 0 3px 0 var(--bo-container-border-color); }
+    .yw-flexlayout-sidebar-left:not(.yw-flexlayout-sidebar-collapsible) > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper .yw-flexlayout-sidebar-header-btn {
+      opacity: 0; }
+  .yw-flexlayout-sidebar-opened:not(.yw-flexlayout-sidebar-collapsible) > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper {
+    transform: translateX(0);
+    transition: transform 0.5s; }
+    .yw-flexlayout-sidebar-opened:not(.yw-flexlayout-sidebar-collapsible) > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper .yw-flexlayout-sidebar-header-btn {
+      opacity: 1; }
+  .yw-flexlayout-sidebar-header {
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 9; }
+    .yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-header {
+      right: 0; }
+    .yw-flexlayout-sidebar-header .yw-flexlayout-sidebar-header-btn {
+      width: auto;
+      height: auto;
+      min-height: auto;
+      background-color: transparent;
+      position: absolute;
+      cursor: pointer;
+      top: 16px;
+      padding: 0; }
+      .yw-flexlayout-sidebar-header .yw-flexlayout-sidebar-header-btn:before {
+        font-size: 16px;
+        font-family: var(--bo-content-icon-font-family);
+        display: inline-block;
+        content: "\e03e";
+        color: var(--bo-button-icon-color); }
+  .yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-header-btn {
+    left: -20px;
+    transform: translateX(-100%); }
+  .yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-header-btn {
+    right: -20px;
+    transform: translateX(100%); }
+  .yw-flexlayout-sidebar-hover-overlap:not(.yw-flexlayout-sidebar-overlap) > .yw-flexlayout-sidebar:hover {
+    width: 300px; }
+  .yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-hover-overlap) > .yw-flexlayout-sidebar {
+    position: absolute; }
+
+.yw-flexlayout-contents {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  z-index: 0; }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+@media (min-width: 1200px) {
+  .yw-flexlayout-sidebar-opened > .yw-flexlayout-sidebar {
+    visibility: visible; }
+  .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar, .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar {
+    overflow: visible;
+    position: relative; }
+    .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper {
+      position: relative; }
+  .yw-flexlayout-sidebar-opened:not(.yw-flexlayout-sidebar-collapsed) > .yw-flexlayout-contents {
+    width: calc(100% - 300px); }
+  .yw-flexlayout-sidebar-opened:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    transform: none; }
+  .yw-flexlayout-sidebar-opened:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar, .yw-flexlayout-sidebar-opened:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar {
+    width: 300px; }
+    .yw-flexlayout-sidebar-opened:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-sidebar-opened:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper {
+      transform: translateX(0);
+      transition: transform 0.5s; }
+  .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar, .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar {
+    width: 0;
+    overflow: visible; }
+  .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-contents, .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    width: 100%; }
+  .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-contents {
+    width: calc(100% - 50px); }
+  .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-collapsed.yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    transform: none; } }
+@media (max-width: 1199px) {
+  .yw-flexlayout-sidebar-opened > .yw-flexlayout-sidebar {
+    visibility: visible; }
+  .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar, .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar {
+    overflow: visible;
+    position: relative; }
+    .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper {
+      position: relative; } }
+.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-overlap > .yw-flexlayout-contents {
+  width: 100%; }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+@media (min-width: 1920px) {
+  .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive > .yw-flexlayout-sidebar {
+    visibility: visible; }
+  .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar {
+    overflow: visible;
+    position: relative; }
+    .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper {
+      position: relative; }
+  .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed) > .yw-flexlayout-contents {
+    width: calc(100% - 300px); }
+  .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    transform: none; }
+  .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar {
+    width: 300px; }
+    .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper {
+      transform: translateX(0);
+      transition: transform 0.5s; }
+  .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar {
+    width: 0;
+    overflow: visible; }
+  .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-contents, .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    width: 100%; }
+  .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-contents {
+    width: calc(100% - 50px); }
+  .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-collapsed.yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    transform: none; }
+  .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-trigger {
+    display: none; } }
+@media (max-width: 1199px) {
+  .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened > .yw-flexlayout-sidebar {
+    visibility: visible; }
+  .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar {
+    overflow: visible;
+    position: relative; }
+    .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-responsive-breakpoint-xl.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper {
+      position: relative; } }
+
+@media (min-width: 1600px) {
+  .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive > .yw-flexlayout-sidebar {
+    visibility: visible; }
+  .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar {
+    overflow: visible;
+    position: relative; }
+    .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper {
+      position: relative; }
+  .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed) > .yw-flexlayout-contents {
+    width: calc(100% - 300px); }
+  .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    transform: none; }
+  .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar {
+    width: 300px; }
+    .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper {
+      transform: translateX(0);
+      transition: transform 0.5s; }
+  .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar {
+    width: 0;
+    overflow: visible; }
+  .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-contents, .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    width: 100%; }
+  .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-contents {
+    width: calc(100% - 50px); }
+  .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-collapsed.yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    transform: none; }
+  .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-trigger {
+    display: none; } }
+@media (max-width: 1199px) {
+  .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened > .yw-flexlayout-sidebar {
+    visibility: visible; }
+  .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar {
+    overflow: visible;
+    position: relative; }
+    .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-responsive-breakpoint-l.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper {
+      position: relative; } }
+
+@media (min-width: 1366px) {
+  .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive > .yw-flexlayout-sidebar {
+    visibility: visible; }
+  .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar {
+    overflow: visible;
+    position: relative; }
+    .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper {
+      position: relative; }
+  .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed) > .yw-flexlayout-contents {
+    width: calc(100% - 300px); }
+  .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    transform: none; }
+  .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar {
+    width: 300px; }
+    .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper {
+      transform: translateX(0);
+      transition: transform 0.5s; }
+  .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar {
+    width: 0;
+    overflow: visible; }
+  .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-contents, .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    width: 100%; }
+  .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-contents {
+    width: calc(100% - 50px); }
+  .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-collapsed.yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    transform: none; }
+  .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-trigger {
+    display: none; } }
+@media (max-width: 1199px) {
+  .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened > .yw-flexlayout-sidebar {
+    visibility: visible; }
+  .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar {
+    overflow: visible;
+    position: relative; }
+    .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-responsive-breakpoint-m.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper {
+      position: relative; } }
+
+@media (min-width: 1024px) {
+  .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive > .yw-flexlayout-sidebar {
+    visibility: visible; }
+  .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar {
+    overflow: visible;
+    position: relative; }
+    .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper {
+      position: relative; }
+  .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed) > .yw-flexlayout-contents {
+    width: calc(100% - 300px); }
+  .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    transform: none; }
+  .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar {
+    width: 300px; }
+    .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper {
+      transform: translateX(0);
+      transition: transform 0.5s; }
+  .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar {
+    width: 0;
+    overflow: visible; }
+  .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-right > .yw-flexlayout-contents, .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-overlap:not(.yw-flexlayout-sidebar-collapsed).yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    width: 100%; }
+  .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-contents {
+    width: calc(100% - 50px); }
+  .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-collapsed.yw-flexlayout-sidebar-left > .yw-flexlayout-contents {
+    transform: none; }
+  .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-trigger {
+    display: none; } }
+@media (max-width: 1199px) {
+  .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened > .yw-flexlayout-sidebar {
+    visibility: visible; }
+  .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar, .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar {
+    overflow: visible;
+    position: relative; }
+    .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper, .yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-responsive.yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-wrapper {
+      position: relative; } }
+
+@media (max-width: 1199px) {
+  .yw-flexlayout-sidebar {
+    z-index: 100; }
+    .yw-flexlayout-sidebar-opened:not(.yw-flexlayout-responsive-breakpoint-s) > .yw-flexlayout-contents, .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-collapsed:not(.yw-flexlayout-responsive-breakpoint-s) > .yw-flexlayout-contents {
+      width: 100%; }
+    .yw-flexlayout-sidebar-header {
+      display: block; } }
+@media (max-width: 1199px) {
+  .yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar, .yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar {
+    transform: none;
+    width: 0; }
+  .yw-flexlayout-sidebar-opened > .yw-flexlayout-contents > .yw-flexlayout-contents-dimmer {
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bo-block-layer-background);
+    z-index: 99; }
+  .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-overlap > .yw-flexlayout-contents > .yw-flexlayout-contents-dimmer {
+    display: none; }
+  .yw-flexlayout-sidebar-opened.yw-flexlayout-responsive-breakpoint-s > .yw-flexlayout-contents, .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-collapsed.yw-flexlayout-responsive-breakpoint-s > .yw-flexlayout-contents {
+    width: 100%; }
+  .yw-flexlayout-sidebar-opened.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-sidebar {
+    width: 300px; } }
+@media (min-width: 1025px) {
+  .yw-flexlayout-sidebar-right.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-sidebar, .yw-flexlayout-sidebar-left.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-sidebar {
+    transform: none; }
+  .yw-flexlayout-sidebar-right.yw-flexlayout-sidebar-opened.yw-flexlayout-responsive-breakpoint-s > .yw-flexlayout-sidebar, .yw-flexlayout-sidebar-left.yw-flexlayout-sidebar-opened.yw-flexlayout-responsive-breakpoint-s > .yw-flexlayout-sidebar {
+    width: 300px; }
+  .yw-flexlayout-sidebar-right.yw-flexlayout-sidebar-opened.yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-sidebar, .yw-flexlayout-sidebar-left.yw-flexlayout-sidebar-opened.yw-flexlayout-responsive-breakpoint-s.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-sidebar {
+    width: 50px; }
+  .yw-flexlayout-sidebar-hover-overlap > .yw-flexlayout-sidebar:hover {
+    z-index: 1; } }
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-footer-collapse {
+  text-align: right; }
+.yw-flexlayout-sidebar-right > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-footer-collapse:before, .yw-flexlayout-sidebar-left.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-footer-collapse:before {
+  content: "\e066"; }
+.yw-flexlayout-sidebar-right.yw-flexlayout-sidebar-collapsed > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-footer-collapse:before, .yw-flexlayout-sidebar-left > .yw-flexlayout-sidebar .yw-flexlayout-sidebar-footer-collapse:before {
+  content: "\e067"; }
+.yw-flexlayout-sidebar-collapsible > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper {
+  padding-bottom: 52px; }
+.yw-flexlayout-sidebar-collapsible .yw-flexlayout-sidebar-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--bo-page-footer-background); }
+  .yw-flexlayout-sidebar-collapsible .yw-flexlayout-sidebar-footer-collapse {
+    height: 52px;
+    padding: 12px 12px;
+    cursor: pointer; }
+    .yw-flexlayout-sidebar-collapsible .yw-flexlayout-sidebar-footer-collapse:before {
+      width: 100%;
+      color: var(--bo-button-icon-color);
+      font-family: var(--bo-content-icon-font-family);
+      font-size: 16px;
+      line-height: 16px;
+      display: block;
+      width: auto;
+      opacity: 0.7;
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      transform: translate3d(50%, -50%, 0); }
+
+@media (max-width: 1024px) {
+  .yw-flexlayout-sidebar-footer {
+    display: none; }
+  .yw-flexlayout-sidebar-collapsible > .yw-flexlayout-sidebar > .yw-flexlayout-sidebar-wrapper {
+    padding-bottom: 0; } }
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-flexlayout-trigger {
+  background: var(--bo-button-background); }
+  .yw-flexlayout-trigger:after {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e1de";
+    font-size: 16px;
+    position: relative; }
+  .yw-flexlayout-trigger, .yw-flexlayout-trigger-summary {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--bo-button-border-radius);
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top; }
+    .ya-toggle-active .yw-flexlayout-trigger, .yw-flexlayout-trigger:hover, .yw-flexlayout-trigger:focus, .ya-toggle-active .yw-flexlayout-trigger-summary, .yw-flexlayout-trigger-summary:hover, .yw-flexlayout-trigger-summary:focus {
+      background-color: var(--bo-button-hover-background); }
+  .yw-flexlayout-trigger-summary {
+    font-family: var(--bo-content-icon-font-family);
+    font-size: 16px;
+    background: var(--bo-button-background);
+    color: var(--bo-button-icon-color);
+    text-align: center; }
+    .yw-flexlayout-trigger-summary:after {
+      content: "\e202";
+      line-height: 28px; }
+    .yw-flexlayout-trigger-summary:hover {
+      color: var(--bo-button-hover-color); }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-flexlayout-sidebar {
+  transition: transform 0.5s, visibility 0s linear 0.5s; }
+  .yw-flexlayout-sidebar-opened > .yw-flexlayout-sidebar {
+    transition: transform 0.5s; }
+  @media (min-width: 1025px) {
+    .yw-flexlayout-sidebar-hover-overlap > .yw-flexlayout-sidebar {
+      transition: width 0.3s; }
+      .yw-flexlayout-sidebar-hover-overlap > .yw-flexlayout-sidebar:hover {
+        transition: width 0.3s; } }
+
+.yw-flexlayout-contents {
+  transition: transform 0.5s; }

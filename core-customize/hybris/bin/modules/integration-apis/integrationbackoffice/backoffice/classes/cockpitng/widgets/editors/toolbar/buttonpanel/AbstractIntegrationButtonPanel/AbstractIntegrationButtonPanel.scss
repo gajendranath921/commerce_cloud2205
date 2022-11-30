@@ -1,0 +1,40 @@
+/*
+ * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
+ */
+
+.yw-de_hybris_platform_integrationbackoffice_widgets_AbstractIntegrationButtonPanel {
+    padding: 5px 15px 0 0;
+}
+
+.yw-integrationbackoffice-filter-btn {
+    background: no-repeat;
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+    padding: 0;
+    border: none;
+
+    &:before {
+         font-family: var(--bo-content-icon-font-family);
+         content: _getIconGlyphContentValue("filter")
+     }
+
+    &:hover {
+         font-family: var(--bo-content-icon-font-family);
+         content: _getIconGlyphContentValue("filter")
+     }
+
+    &:disabled {
+      font-family: var(--bo-content-icon-font-family);
+      content: _getIconGlyphContentValue("filter")
+    }
+}
+
+.yw-integrationbackoffice-filterMenu .z-menuitem-image {
+    border: none !important;
+    background: transparent !important;
+}
+
+.yw-integrationbackoffice-filterMenu .z-menuitem-icon {
+    color: white !important;
+}

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testclasses><customerticketingocctests><testclass>de.hybris.platform.customerticketingocctests.AllCustomerTicketingOccSpockTests</testclass><testclass>de.hybris.platform.customerticketingocctests.controllers.TicketControllerTest</testclass></customerticketingocctests></testclasses>

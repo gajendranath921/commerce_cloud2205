@@ -1,0 +1,24 @@
+This workspace does not appear to be tracked by Git. Rush will proceed without
+incremental execution, caching, and change detection.
+
+Invoking: webpack --config=webpack.config.js 
+
+Hash: 2abee8a4fea663fb47a6
+Version: webpack 4.44.1
+Time: 5061ms
+Built at: 30/11/2022 5:08:03 pm
+                  Asset      Size            Chunks                   Chunk Names
+                main.js  40.2 KiB              main  [emitted]        main
+            main.js.map  33.3 KiB              main  [emitted] [dev]  main
+             runtime.js  6.15 KiB           runtime  [emitted]        runtime
+         runtime.js.map  6.13 KiB           runtime  [emitted] [dev]  runtime
+    storefrontvendor.js  5.24 MiB  storefrontvendor  [emitted]        storefrontvendor
+storefrontvendor.js.map  4.87 MiB  storefrontvendor  [emitted] [dev]  storefrontvendor
+Entrypoint main = runtime.js runtime.js.map storefrontvendor.js storefrontvendor.js.map main.js main.js.map
+[../../common/temp/node_modules/.pnpm/webpack@4.44.1_webpack-cli@3.3.12/node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {main} [built]
+[./src lazy recursive] ./src lazy namespace object 160 bytes {main} [built]
+[./src/AppComponent.ts] 576 bytes {main} [built]
+[./src/Page1Component.ts] 1.2 KiB {main} [built]
+[./src/Page2Component.ts] 1.2 KiB {main} [built]
+[./src/index.ts] 1.4 KiB {main} [built]
+    + 753 hidden modules

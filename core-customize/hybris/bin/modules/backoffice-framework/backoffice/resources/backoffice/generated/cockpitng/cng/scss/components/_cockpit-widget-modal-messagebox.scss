@@ -1,0 +1,94 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@charset "UTF-8";
+@import "../support/_cockpit-variables.scss";
+
+.yw-widget-modal {
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  position: absolute;
+  top: $messagebox-popup__mask--top;
+  left: $messagebox-popup__mask--left;
+
+    &:before {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      content: '';
+      background: $messagebox-popup__mask--bg-color;
+      opacity: $messagebox-popup__mask--opacity;
+    }
+
+  &-messagebox {
+    width: $messagebox-popup__messagebox--width;
+    background: $messagebox-popup__messagebox--bg-color;
+    color: $messagebox-popup__messagebox--text-color;
+    z-index: 100;
+    margin: auto;
+    position: absolute;
+    top: $messagebox-popup__messagebox--top;
+    left: $messagebox-popup__messagebox--left;
+    right: $messagebox-popup__messagebox--right;
+    transform: translate(0, -50%);
+    box-shadow: $messagebox-popup__messagebox--box-shadow;
+    border-radius: $messagebox-popup__messagebox--border-radius;
+
+    &-title {
+      padding: $messagebox-popup__messagebox-title--padding;
+      border-bottom: $messagebox-popup__messagebox-title--border-bottom;
+      position: relative;
+
+      &-label {
+        font-weight: $messagebox-popup__messagebox-label--font-weight;
+        font-size: $messagebox-popup__messagebox-title--font-size;
+      }
+
+      &-btn-close,
+      &-btn-close:hover,
+      &-btn-close:focus {
+        position: absolute;
+        top: $messagebox-popup__messagebox-close-btn--top;
+        right: $messagebox-popup__messagebox-close-btn--right;
+        width: $messagebox-popup__messagebox-close-btn--size;
+        height: $messagebox-popup__messagebox-close-btn--size;
+        min-height: 0;
+        padding: 0;
+        background: url(images/icon_close-window.png) no-repeat 50% 50%;
+        border: 0;
+        box-shadow: none;
+      }
+    }
+
+    &-navigation {
+      text-align: right;
+      border-top: $messagebox-popup__messagebox-navigation--border-top;
+      padding: $messagebox-popup__messagebox-message--padding;
+
+      .z-button {
+        margin-left: $messagebox-popup__messagebox-btn-secondary--margin-left;
+
+        &[disabled]{
+          color: $editor-defaults__button-disabled--color;
+        }
+      }
+    }
+
+    &-message {
+      padding: $messagebox-popup__messagebox-message--padding;
+      
+      > .z-label {
+        padding: $messagebox-popup__messagebox-message-span--padding;
+        display: block;
+      }
+      .yw-widget-modal-messagebox-warning.z-label {
+        color: $messagebox-popup__messagebox-message-warn--color;
+        font-weight: $messagebox-popup__messagebox-message-warn--font-weight;
+      }
+      &-footer {
+        font-size: $messagebox-popup__messagebox-message-footer--font-size;
+      }
+    }
+  }
+}

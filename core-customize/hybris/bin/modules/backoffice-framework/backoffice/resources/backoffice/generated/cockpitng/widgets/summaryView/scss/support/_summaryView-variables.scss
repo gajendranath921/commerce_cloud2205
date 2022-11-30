@@ -1,0 +1,171 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$summaryView__widget--side-spacing: $_container-spacing-default__small;
+
+$summaryView__widget--height: 100%;
+$summaryView__widget--color: var(--bo-text-color);
+$summaryView__widget--bg-color: var(--bo-base-background);
+$summaryView__widget--padding: 0;
+$summaryView__widget--line-height: 17px;
+$summaryView__widget--padding-v: $container-spacing-default__half;
+$summaryView__widget--default--font-size: $font-size__large;
+$summaryView__widget--smaller--font-size: $font-size__base;
+$_summaryView__widget--smaller--line-height: floor(($summaryView__widget--smaller--font-size * 1.43));
+$summaryView__widget--smaller--color: $form-defaults__box--color;
+$summaryView__widget--smaller--font-weight: $font-weight-normal;
+
+$summaryView__content-noitem--text-align: right;
+$summaryView__content-noitem--font-weight: $font-weight-bold;
+$summaryView__content-noitem--margin-top: $summaryView__widget--padding-v;
+$summaryView__content-noitem--padding: 0 $summaryView__widget--side-spacing;
+
+$summaryView__widget-thumbnail--padding: $summaryView__widget--padding-v 0;
+$summaryView__widget-thumbnail--max-size: 260px;
+$summaryView__widget-thumbnail--min-size: 180px;
+$summaryView__widget-thumbnail--text-align: center;
+$summaryView__widget-thumbnail--bg-color: $_default__content-container--bg-color;
+$summaryView__widget-thumbnail-before--margin-left: floor($summaryView__widget-thumbnail--max-size/2) *-1;
+$summaryView__widget-thumbnail-before--top: nth($summaryView__widget-thumbnail--padding, 1);
+
+$summaryView__main-content--overflow: auto;
+$summaryView__main-content--padding-bottom: 40px;
+
+$summaryView__title-container--max-height: $toolbar__default--height + $boxes--border__thin;
+$summaryView__title-container--font-weight: $font-weight-normal;
+$summaryView__title-container--color: $_default__header--color;
+$summaryView__title-container--margin: 0 $summaryView__widget--side-spacing;
+$summaryView__title-container--padding-top: $summaryView__widget--padding-v;
+$summaryView__title-label--margin: 0 $container-spacing-default__half;
+$_summaryView__title-label--font-size: $font-size__large;
+$_summaryView__title-label--line-height: floor(($_summaryView__title-label--font-size * 1.2));
+
+$summaryView__widget-container--padding: 0;
+$summaryView__widget-container--border: none;
+
+$summaryView__contetent-container--padding-bottom: $boxes--border__thin !important;
+$summaryView__content-container--margin-bottom: -1px;
+$summaryView__groupbox-header--height: $toolbar__default--height;
+
+$summaryView__groupbox-header--border-color: $_default-list__item--border-color;
+$summaryView__groupbox-header--border: $boxes--border__thin solid $summaryView__groupbox-header--border-color;
+
+
+$summaryView__groupbox-header-collapse-icon--content: _getIconGlyphContentValue('navigation-up-arrow');;
+$summaryView__groupbox-header-collapsed-collapse-icon--content: _getIconGlyphContentValue('navigation-down-arrow');;
+
+$_summaryView__groupbox-header-collapse-icon--size: $toolbar__button-small--size;
+$summaryView__groupbox-header-collapse-icon--font-size: $font-size__base;
+$summaryView__groupbox-header-collapse-icon--font: $font-family__icon;
+$summaryView__groupbox-header-collapse-icon--color: var(--bo-content-icon-color);
+$summaryView__groupbox-header-collapse-icon--border: none;
+
+$summaryView__groupbox-header-collapsible--padding: ($_container-spacing-default__regular / 2) $summaryView__widget--side-spacing;
+
+$summaryView__section-groupbox-header-content--line-height: $toolbar__button-medium--size;
+$summaryView__section-groupbox-header-caption--padding: $container-spacing-default__third;
+$summaryView__section-groupbox-header-caption-content--padding-bottom: 2px;
+$summaryView__section-groupbox-header-caption-content--font-size: $font-weight-normal;
+
+$summaryView__section-groupbox-header-collapsible-icon--right: $summaryView__widget--side-spacing;
+$summaryView__section-groupbox-header-caption--padding: 0;
+$summaryView__section-groupbox-header-caption--font-size: $font-size__h4;
+
+$summaryView__groupbox-content--padding: 0 0 $_container-spacing-default__small;
+
+$summaryView__groupbox-header-caption--bg-color: transparent;
+$summaryView__groupbox-header-caption--position: static;
+
+$summaryView__groupbox-header-caption-content--color: $_default__header--color;
+
+$summaryView__widget-attribute-container--color: var(--bo-text-color);
+
+$summaryView__widget-attribute-label--padding-y: $container-spacing-default__third;
+$summaryView__widget-attribute-label-value--padding-top: 3px;
+$summaryView__widget-attribute-label-value--font-weight: $font-weight-light;
+$summaryView__widget-attribute-label-value--color: $form-defaults__label-info--color;
+$summaryView__widget-attribute-label-value-elements--padding-top: 2px;
+$summaryView__widget-attribute-label-value-text-button--font-size: $font-size__base;
+
+$summaryView__widget-custom-attribute-label--padding: $summaryView__widget-attribute-label--padding-y $summaryView__widget--side-spacing;
+
+$summaryView__widget-attribute-editable-hover--color: $_button__icon-hover--bg-color; // //#fcfdfe
+
+$summaryView__widget-state-icon--size: $form-defaults__input-icon--size;
+$summaryView__widget-state-icon-default--font-family: $font-family__icon;
+$summaryView__widget-state-icon-default--font-size: $font-size__large;
+$summaryView__widget-state-icon-default--color: var(--bo-content-icon-color);
+
+$summaryView__widget-attribute-icon--margin-right: $_container-spacing-default__small;
+$summaryView__widget-attribute-container--padding: $_container-spacing-default__small;
+
+$summaryView__widget-inline-edit-attribute-editor-localized-icon--margin-top: nth($summaryView__widget-attribute-container--padding, 1);
+
+$summaryView__widget-attribute-icon-element--margin-top: -($summaryView__widget-state-icon--size/2);
+$summaryView__widget-attribute-icon-element--margin-left: $summaryView__widget--side-spacing + $_container-spacing-default__tiny;
+
+$summaryView__approval-status-approved--content: _getIconGlyphContentValue('accept');
+$summaryView__approval-status-approved--icon-color: var(--bo-button-accept-text-color);
+$summaryView__approval-status-unapproved--content: _getIconGlyphContentValue('decline');
+$summaryView__approval-status-unapproved--icon-color: var(--bo-button-reject-text-color);
+$summaryView__approval-status-check--content: _getIconGlyphContentValue('validate');
+$summaryView__approval-status-check--icon-color: var(--bo-warning-color);
+$summaryView__source-target-sync--content: _getIconGlyphContentValue('synchronize');
+$summaryView__digital-assets--content: _getIconGlyphContentValue('background');
+$summaryView__type--content: _getIconGlyphContentValue('filter-fields');
+$summaryView__variants--content: _getIconGlyphContentValue('filter-facets');
+
+$summaryView__online-state-online--content: _getIconGlyphContentValue('circle-task-2');
+$summaryView__online-state-online--color: $_default__status-positive--color;
+$summaryView__online-state-offline--color: $_default__status-negative--color;
+
+$summaryView__instant-editor-button-container--right: $summaryView__widget--side-spacing;
+
+$summaryView__quallity-bar--bg: $_default__splitter--color;
+$summaryView__quallity-bar--height: (floor($toolbar__button-small--size/2) + $boxes--border__thin);
+$summaryView__quallity-bar--border-radius: $toolbar__button-small--border-radius;
+$summaryView__quallity-bar--border: none;
+$summaryView__quallity-bar--margin-top: $container-spacing-default__third;
+$summaryView__quallity-bar-progressmeter-valid--color: $_default__status-positive--color;
+$summaryView__quallity-bar-progressmeter-warning--color: $_default__status-alert--color;
+$summaryView__quallity-bar-progressmeter-error--color: $_default__status-negative--color;
+
+$summaryView__quality-header--padding: $_container-spacing-default__small $summaryView__widget--side-spacing  $_container-spacing-default__tiny $summaryView__widget--side-spacing;
+$summaryView__quality-content--padding: $_container-spacing-default__tiny 0 ($container-spacing-default__semi-third) ($summaryView__widget--side-spacing * 2);
+$_summaryView__quality-content--border-bottom: $summaryView__groupbox-header--border;
+$_summaryView__quality-content--transition: border-color 0.2s ease-out;
+// $_summaryView__quality-container-first--padding-top: $_container-spacing-default__tiny;
+
+$summaryView__quality-item-label--padding: $_container-spacing-default__tiny 0;
+$summaryView__quality-item-label--margin-right: nth($summaryView__quality-header--padding, 2) + $container-spacing-default__third;
+$summaryView__quality-item-status-button--height: $toolbar__button-medium--size;
+$summaryView__quality-item-status-button--width: 20px;
+$summaryView__quality-item-status-button--right: nth($summaryView__quality-header--padding, 2) - $summaryView__quality-item-status-button--width;
+$summaryView__quality-item-status-button--margin-top: -(floor($summaryView__quality-item-status-button--height/2));
+
+$summaryView__sync-state-hover-icon--content: _getIconGlyphContentValue('synchronize');
+$summaryView__sync-state-hover-icon--font-family: $font-family__icon;
+$summaryView__sync-state-hover-icon--color: var(--bo-content-icon-color);
+$summaryView__sync-state-hover-icon--size: 20px;
+$summaryView__sync-state-hover-icon--right: $summaryView__widget--side-spacing;
+$summaryView__sync-state-hover-text-container--width: calc(100% - #{$summaryView__sync-state-hover-icon--size});
+$summaryView__sync-state-error--color: $_default__status-negative--color;
+
+@mixin _ellipsis {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin _ellipsis-clamp {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

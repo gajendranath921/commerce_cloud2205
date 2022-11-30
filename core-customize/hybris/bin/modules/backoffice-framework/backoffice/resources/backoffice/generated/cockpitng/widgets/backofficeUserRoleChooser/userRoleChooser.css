@@ -1,0 +1,15 @@
+/* Status */
+/* Button Color Scheme */
+/*================================
+    UserRoleChooser Popup (Systembar)
+================================*/
+.yw-roleChooser-empty-list-state {
+  display: none; }
+.yw-roleChooser-widget .z-toolbarbutton > span:after {
+  content: "\e0a9";
+  font-size: 16px;
+  color: var(--bo-shell-interactive-color);
+  font-family: var(--bo-content-icon-font-family);
+  font-weight: normal; }
+.yw-roleChooser-popup .z-popup-content .z-listbox-body .z-listitem-selected .z-listcell {
+  border-bottom: 1px solid var(--bo-list-selected-border-color); }

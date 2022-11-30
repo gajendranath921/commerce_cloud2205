@@ -1,0 +1,161 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+$_default-boolean-editor__content--line-height: $editor-defaults__inline-box--height - (2* $boxes--border__thin) !important;
+$_default-boolean-editor__wrapper--border-color: $_default-list__item--border-color;
+$_default-boolean-editor__wrapper--border-radius: $editor-defaults__input-field--border-radius;
+$_default-boolean-editor__wrapper--border-width: $boxes--border__thin;
+$_default-boolean-editor__wrapper--padding-left: $container-spacing-default__half; //$_container-spacing-default__tiny;
+
+.ye-default_boolean_editor_wrapper {
+    float: left;
+
+    .yw-editorarea-tabbox .z-groupbox-content & {
+    	.z-hbox {
+			width: auto;
+			max-width: 100%;
+
+			td table {
+				border-collapse: collapse;
+
+				td {
+					display: inline-block;
+					height: auto !important;
+					line-height: $_default-boolean-editor__content--line-height;
+					margin-right: 5px;
+
+					&.z-hbox-separator {
+						line-height: 0 !important;
+						display: inline;
+						margin: 0;
+
+						@media (max-width: 1100px){
+							display: none;
+						}
+					}
+
+					.y-editor-area-attributes-cnt-min & {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+.yw-bulkedit-groupbox .bulkedit-attr {
+	span.ye-com_hybris_cockpitng_editor_defaultboolean.z-radiogroup {
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 100%;
+	}
+	.ye-com_hybris_cockpitng_editor_boolean_wrapper {
+		.z-hbox {
+			min-width: 100%;
+			width: 100%;
+			max-width: 100%;
+
+			td table {
+				border-collapse: collapse;
+				width: 100%;
+			}
+		}
+	}
+	.yw-loceditor .yw-loceditor-fixed-open,
+	.yw-loceditor .yw-loceditor-dynamic-content {
+		.ye-com_hybris_cockpitng_editor_boolean_wrapper .z-hbox td table td {
+			margin-left: 5px;
+			margin-right: 0;
+		}
+	}
+}
+
+.y-editor-area-attributes-cnt-min {
+	.yw-editorarea-tabbox .z-groupbox-content {
+		.ye-com_hybris_cockpitng_editor_boolean_wrapper .z-hbox {
+			td table td {
+				width: auto;
+		@media screen and (min-width : 400px) and (max-width : 1199px) {
+			width: 100%;
+
+			.z-hbox {
+				table-layout: inherit;
+				table {
+					width: auto;
+					max-width: 100%;
+				}
+			}
+		}
+		@media screen and (min-width : 1200px) and (max-width : 2000px) {
+			.z-hbox {
+				min-width: 50%;
+			}
+		}
+    }
+}
+
+.ye-default_boolean_editor_radiogroup {
+	border-color: $_default-boolean-editor__wrapper--border-color; //$_default-list__item--border-color;
+    border-radius: $_default-boolean-editor__wrapper--border-radius;
+
+.ye-com_hybris_cockpitng_editor_boolean_wrapper {
+	.yw-wizard-property &,
+	.z-radiogroup & {
+		float: none;
+
+		.ie10 &,
+		.ie11 &,
+		.edge & {
+			margin-top: 1px;
+		}
+	}
+	.yw-wizard-property .yw-loceditor-fixed-open .yw-loceditor-row &,
+	.yw-wizard-property .yw-loceditor-dynamic-content .yw-loceditor-row &,
+	.yw-loceditor-fixed-open .yw-loceditor-row .z-radiogroup &,
+	.yw-loceditor-dynamic-content .yw-loceditor-row .z-radiogroup & {
+		.ie10 &,
+		.ie11 &,
+		.edge & {
+			margin-top: 0;
+		}
+	.yw-editorarea-tabbox .z-groupbox-content &.z-radiogroup {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.ye-default_boolean_editor_wrapper {
+		float: none;
+		.ie10 &,
+	    .ie11 &,
+	    .edge & {
+	    	margin-top: 1px;
+	    }
+	}
+	.yw-loceditor-row-editor &,
+	.yw-feature-value-container & {
+		border-width: $_default-boolean-editor__wrapper--border-width;
+		border-style: solid;
+		padding-left: $_default-boolean-editor__wrapper--padding-left;
+
+		.ie10 &,
+	    .ie11 &,
+	    .edge & {
+	    	margin-top: 0;
+	    }
+	}
+	.yw-loceditor-fixed-open .yw-loceditor-row-editor &,
+	.yw-loceditor-dynamic-content .yw-loceditor-row-editor & {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+	.yw-feature-value-container-with-unit .yw-feature-value-subeditor & {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		margin-right: $_default-boolean-editor__wrapper--border-width * -1;
+	}
+}
+}
+}
+	}
+}

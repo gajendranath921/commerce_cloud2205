@@ -1,0 +1,16 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$labeled-toggle-action__label--bg-color: var(--bo-content-badge-background);
+$labeled-toggle-action__label--text-color: var(--bo-content-badge-text-color);
+$labeled-toggle-action__label--font-size: $font-size__small;
+$labeled-toggle-action__label--border-radius: 8px;
+$labeled-toggle-action__label--padding: 1px;
+$labeled-toggle-action__label--min-width: 8px;
+$labeled-toggle-action__label--right: 0.25rem;
+$labeled-toggle-action__label--top: 0.25rem;
+$labeled-toggle-action__systembar-button-label--border-width: $boxes--border__thin;
+$labeled-toggle-action__systembar-button-label--right: $labeled-toggle-action__label--right;
+$labeled-toggle-action__systembar-button-label--top: $labeled-toggle-action__label--top;

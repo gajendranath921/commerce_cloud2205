@@ -1,0 +1,40 @@
+.se-page-tree {
+    &-component-node {
+        margin-left: 8px;
+        &--icon {
+            height: 32px;
+        }
+
+        &--name {
+            display: flex;
+            flex-direction: column;
+            font-family: '72';
+            font-size: 14px;
+            line-height: 16px;
+            color: var(--sapContent_LabelColor);
+            overflow: hidden;
+
+            &--up {
+                font-weight: 600;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &--down {
+                font-style: oblique;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &-menu {
+            margin: 0 0 0 auto;
+        }
+
+        &--content {
+            min-width: calc(100% - 88.25px);
+            display: flex;
+        }
+    }
+}

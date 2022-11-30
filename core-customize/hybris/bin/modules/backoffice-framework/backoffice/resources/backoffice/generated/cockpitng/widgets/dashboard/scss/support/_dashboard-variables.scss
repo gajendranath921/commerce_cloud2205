@@ -1,0 +1,71 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Dashboard Charts
+================================*/
+// Defined Variables for Dashboard Charts
+
+
+
+
+$dashboard__default_container--bg-color: var(--bo-base-background);
+
+$dashboard__draggable-slot--margin: $_container-spacing-default__tiny;
+$dashboard__draggable-slot--bg-color: $dashboard__default_container--bg-color; //rgba($blue__default, 0.3);
+$dashboard__draggable-slot--border-color: $dashboard__default_container--bg-color;
+$dashboard__draggable-slot--box-shadow: var(--bo-content-shadow-small);
+$dashboard__draggable-slot--border-radius: 0.25rem;
+
+$dashboard__info-value--font-size: $font-size__h1;
+$dashboard__dashboard-header--color: var(--bo-page-header-text-color);
+
+$dashboard__children-container--bg-color: $dashboard__default_container--bg-color;
+$dashboard__children-container--padding: $_container-spacing-default__tiny;  // 8px
+
+$dashboard__draggable-slot--box-selected-shadow: 0 0 0 .0625rem var(--bo-highlight-color);
+$_dashboard__draggable-slot-drag-over--bg-color: var(--bo-highlight-color);
+$_dashboard__draggable-slot-drag-over--opacity: 0.9;
+$dashboard__draggable-slot-ghost--max-width: 500px;
+$dashboard__dashboard-slot--min-height: 500px;
+$dashboard__dashboard-slot--padding: 0;
+$_dashboard__dashboard-slot-gutter--size: $_container-spacing-default__small - 2 * $dashboard__dashboard-slot--padding;
+
+$dashboard__dashboard-slot-draggable--width: 100%; 
+$dashboard__dashboard-slot-draggable--z-index: 2;
+$_dashboard__draggable-slot-ghost--border-width: $boxes--border__medium;
+$_dashboard__draggable-slot-ghost--border-color: var(--bo-button-border-color);
+$_dashboard__draggable-slot-ghost--opacity: 0.8 !important;
+$_dashboard__dashboard-slot-draggable--border-width: $boxes--border__medium;
+$_dashboard__dashboard-slot--border-radius: $_layout-panels__panel--border-radius;
+
+$dashboard__dashboard-slot-draggable-icon--size: $editor-defaults__inline-box--height;
+$_dashboard__dashboard-slot-draggable-icon--bg-color: transparent;
+$_dashboard__dashboard-slot-draggable-icon--border-radius: $toolbar__button-default--border-radius;
+$_dashboard__dashboard-slot-draggable-icon--top: $_container-spacing-default__tiny - $_dashboard__dashboard-slot-draggable--border-width;
+$_dashboard__dashboard-slot-draggable-icon--color: var(--bo-button-icon-color);
+$_dashboard__dashboard-slot-draggable-icon--font-size: $font-size__large;
+$_dashboard__dashboard-slot-draggable-icon--content: _getIconGlyphContentValue('move');
+$_dashboard__dashboard-slot-draggable-icon--font-family: $font-family__icon;
+
+$_dashboard__dashboard-slot-draggable--border: $_dashboard__dashboard-slot-draggable--border-width solid $_dashboard__dashboard-slot-draggable-icon--bg-color;
+
+
+$dashboard__dashboard-lock--right: $container-spacing-default__third;
+
+$_dashboard__dashboard-container--margin: $_container-spacing-default__tiny;
+
+$_dashboard__column-bp-s--max-width: 700px;
+
+$dashboard__action-button-hover--border-color: var(--bo-button-hover-border-color);
+$dashboard__action-button--border-width: $boxes--border__thin;
+$_dashboard__action-button--height: $toolbar__button-default--size;
+
+$dashboard__dashboard-actions--margin: 0; //$container-spacing-default__third;
+$_dashboard__dashboard-actions--padding: 0; //floor(($toolbar__default--height - $_dashboard__action-button--height)/2) $_container-spacing-default__medium;
+$_dashboard__dashboard-actions--bg-color: transparent;
+
+$_dashboard__dashboard-toolbar--bg-color: $_default__header--bg-color;
+$_dashboard__dashboard-toolbar--border-top-width: 0;
+$_dashboard__dashboard-toolbar--border-bottom-width: 0;
+$_dashboard__dashboard-toolbar--padding: floor(($toolbar__default--height - $_dashboard__action-button--height - $_dashboard__dashboard-toolbar--border-top-width - $_dashboard__dashboard-toolbar--border-bottom-width)/2) $_container-spacing-default__medium;

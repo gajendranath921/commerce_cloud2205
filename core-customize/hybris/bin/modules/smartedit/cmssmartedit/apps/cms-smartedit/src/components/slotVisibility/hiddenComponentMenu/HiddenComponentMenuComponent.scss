@@ -1,0 +1,17 @@
+.se-hidden-component-menu {
+    @include se-dropdown-menu('right', 'no-arrow');
+
+    &__toggle {
+        cursor: pointer;
+        color: fd-color('action', 1);
+    }
+
+    &__item {
+        @include se-flex-row;
+    }
+
+    &__item-icon {
+        @include fd-type('-1');
+        margin-right: fd-space('xxs');
+    }
+}

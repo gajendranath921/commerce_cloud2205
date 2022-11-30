@@ -1,0 +1,9 @@
+/* Status */
+/* Button Color Scheme */
+/*Icons for explorer tree */
+div.yw-explorerTree .y-tree-icon-cxnode.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-cxnode.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e242";
+    color: var(--bo-content-icon-color); }

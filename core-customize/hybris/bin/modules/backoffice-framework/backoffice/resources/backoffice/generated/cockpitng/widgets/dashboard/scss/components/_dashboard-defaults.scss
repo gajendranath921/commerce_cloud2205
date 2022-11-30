@@ -1,0 +1,140 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+		Dashboard Charts Defaults
+================================*/
+
+
+@import "../support/_dashboard-variables.scss";
+
+.yw-dashboard {
+	height: 100%;
+	overflow: auto;
+	position: relative;
+
+	&-lock {
+		right: $dashboard__dashboard-lock--right;
+		float: right;
+		position: absolute;
+		top: 0;
+	}
+	&-toolbar {
+		&,
+		&.y-toolbar {
+			padding: $_dashboard__dashboard-toolbar--padding;
+			background-color: $_dashboard__dashboard-toolbar--bg-color;
+			border-top-width: $_dashboard__dashboard-toolbar--border-top-width;
+			border-bottom-width: $_dashboard__dashboard-toolbar--border-bottom-width;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+		}
+	}
+
+	&-toolbar &-lock {
+		position: static;
+	}
+
+	&-actions {
+		margin: $dashboard__dashboard-actions--margin;
+		padding: $_dashboard__dashboard-actions--padding;
+		background-color: $_dashboard__dashboard-actions--bg-color;
+		display: block;
+
+		.cng-action-enabled .cng-action-icon {
+			box-shadow: inset 0 0 0 $dashboard__action-button--border-width $dashboard__action-button-hover--border-color;//rgba($dashboard__action-button-hover--border-color, 0);
+			&:hover, &:focus {
+				box-shadow: inset 0 0 0 $dashboard__action-button--border-width $dashboard__action-button-hover--border-color;
+			}
+		}
+	}
+
+	&-slot-ghost {
+		border: $_dashboard__draggable-slot-ghost--border-width solid $_dashboard__draggable-slot-ghost--border-color;
+		border-radius: $_dashboard__dashboard-slot--border-radius;
+		max-width: $dashboard__draggable-slot-ghost--max-width;
+		opacity: $_dashboard__draggable-slot-ghost--opacity;
+		overflow: hidden;
+	}
+
+	.yw-children-container {
+		background: $dashboard__children-container--bg-color;
+		padding: $dashboard__children-container--padding;
+
+		.yw-dashboard {
+			&-top-container {
+				background-color: $dashboard__draggable-slot--border-color;
+				margin: $_dashboard__dashboard-container--margin;
+			}
+
+			&-dnd-enabled {
+				.yw-dashboard {
+					&-slot {
+						position: relative;
+
+						&-draggable {
+							width: $dashboard__dashboard-slot-draggable--width;
+							z-index: $dashboard__dashboard-slot-draggable--z-index;
+							background-color: $dashboard__draggable-slot--bg-color;
+							position: absolute;
+							box-sizing: border-box;
+							cursor: move;
+
+							+ .widget_cnt {
+								border-radius: $_dashboard__dashboard-slot--border-radius;
+								box-shadow: $dashboard__draggable-slot--box-selected-shadow;
+
+								.yw-generic-chart {
+									box-shadow: $dashboard__draggable-slot--box-selected-shadow;
+								}
+								&.z-drag-matching-drop-target.z-drag-over {
+									background-color: $_dashboard__draggable-slot-drag-over--bg-color;
+
+									> .widget_body {
+										opacity: $_dashboard__draggable-slot-drag-over--opacity;
+									}
+								}
+							}
+
+							&:before {
+								width: $dashboard__dashboard-slot-draggable-icon--size;
+								height: $dashboard__dashboard-slot-draggable-icon--size;
+								line-height: $dashboard__dashboard-slot-draggable-icon--size;
+								content: $_dashboard__dashboard-slot-draggable-icon--content;
+								color: $_dashboard__dashboard-slot-draggable-icon--color;
+								font-size: $_dashboard__dashboard-slot-draggable-icon--font-size;
+								font-family: $_dashboard__dashboard-slot-draggable-icon--font-family;
+								background-color: $_dashboard__dashboard-slot-draggable-icon--bg-color;
+								border-radius: $_dashboard__dashboard-slot-draggable-icon--border-radius;
+								top: $_dashboard__dashboard-slot-draggable-icon--top;
+								z-index: $dashboard__dashboard-slot-draggable--z-index;
+								background-repeat: no-repeat;
+								background-position: center center;
+								left: 50%;
+								position: absolute;
+								text-align: center;
+								transform: translate3d(-50%,0,0);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-title {
+		color: $dashboard__dashboard-header--color;
+		font-size: $dashboard__info-value--font-size;
+	}
+	&,
+	&-container {
+		background-color: $dashboard__default_container--bg-color;
+	}
+}

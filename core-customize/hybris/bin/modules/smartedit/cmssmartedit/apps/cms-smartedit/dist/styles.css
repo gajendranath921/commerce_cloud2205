@@ -1,0 +1,184 @@
+@import '../node_modules/cmscommons/dist/styles.css';#smarteditoverlay .se-slot-ctx-menu__divider::after {
+  content: "";
+  background-color: white;
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 16px;
+  top: 8px;
+  left: -2px;
+  opacity: 0.6;
+}
+#smarteditoverlay .se-slot-ctx-menu__dropdown-toggle-wrapper {
+  margin-right: 3px;
+  position: relative;
+}
+#smarteditoverlay .se-slot-ctx-menu__dropdown-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2857142857rem;
+  line-height: 1.3333333333;
+  font-weight: 400;
+  background-color: transparent;
+  color: white;
+  width: 55px;
+  height: 32px;
+  border: none;
+}
+#smarteditoverlay .se-slot-ctx-menu__dropdown-toggle:hover:not(.se-slot-ctx-menu__dropdown-toggle--open) {
+  opacity: 0.6;
+}
+#smarteditoverlay .se-slot-ctx-menu__dropdown-toggle--open {
+  background-color: white;
+  color: #0a6ed1 !important;
+}
+#smarteditoverlay .se-slot-ctx-menu__dropdown-toggle--open .se-slot-ctx-menu__dropdown-toggle-add-on {
+  color: #0a6ed1;
+}
+#smarteditoverlay .se-slot-ctx-menu__dropdown-toggle-icon {
+  font-size: 1.2857142857rem;
+  line-height: 1.3333333333;
+  font-weight: 400;
+}
+#smarteditoverlay .se-slot-ctx-menu__dropdown-toggle-icon--disabled {
+  cursor: not-allowed;
+}
+#smarteditoverlay .se-slot-ctx-menu__dropdown-toggle-add-on {
+  margin-left: 4px;
+  font-size: 1rem;
+  line-height: 1.4285714286;
+  font-weight: 400;
+  color: white;
+}
+#smarteditoverlay .se-slot-ctx-menu__popover-ancor {
+  position: absolute;
+  display: block;
+  cursor: not-allowed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#smarteditoverlay .se-slot-contextual-menu__header {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9d9d9;
+  height: 53px;
+}
+#smarteditoverlay .se-slot-contextual-menu__header:first-child {
+  font-size: 1.1428571429rem;
+  line-height: 1.25;
+  font-weight: 400;
+  color: #32363a;
+}
+#smarteditoverlay .se-slot__dropdown-menu {
+  border: none;
+  border-radius: 0;
+  transform: translateY(-2px);
+  min-width: 265px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #fff;
+  position: absolute;
+  left: auto;
+  right: 0;
+}
+#smarteditoverlay .se-sync-panel__info-checkbox input {
+  margin: 0;
+}
+#smarteditoverlay::before {
+  margin-right: 0 !important;
+  font-size: 1.7142857143rem;
+  line-height: 1.3333333333;
+  font-weight: 400;
+}
+#smarteditoverlay .se-sync-panel__sync-btn {
+  color: white;
+}
+#smarteditoverlay .se-slot-visibility-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-items: flex-start;
+}
+#smarteditoverlay .se-slot-visibility__icon-wrapper {
+  position: relative;
+}
+#smarteditoverlay .se-slot-visibility__icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7142857143rem;
+  line-height: 1.3333333333;
+  font-weight: 400;
+  height: 48px;
+  width: 48px;
+  border-radius: 4px;
+  background-color: #2b78c5;
+  color: white;
+  margin-right: 16px;
+}
+#smarteditoverlay .se-slot-visibility__icon--shared {
+  color: fd-type("text", 5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#smarteditoverlay .se-slot-visibility__icon--shared {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 14px;
+  border-color: #354a5f transparent transparent #354a5f;
+  border-radius: 4px 0px 0px 0px;
+}
+#smarteditoverlay .se-slot-visibility__icon--shared::before {
+  font-size: 1.1428571429rem;
+  line-height: 1.25;
+  font-weight: 400;
+  position: absolute;
+  left: -12px;
+  top: -15px;
+  color: white;
+}
+#smarteditoverlay .se-shared-slot__body {
+  padding: 16px 20px;
+  width: 350px;
+  font-size: 14px;
+  white-space: normal;
+}
+#smarteditoverlay .se-shared-slot__sub-header {
+  margin-bottom: 12px;
+}
+#smarteditoverlay .se-shared-slot__option {
+  color: #0a6ed1;
+  margin-bottom: 8px;
+}
+#smarteditoverlay .se-shared-slot__option:last-child {
+  margin-bottom: 0;
+}
+#smarteditoverlay .se-shared-slot__description {
+  margin-bottom: 16px;
+}
+#smarteditoverlay .se-shared-slot__link {
+  cursor: pointer;
+  color: #0a6ed1;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+#smarteditoverlay .se-shared-slot__link:hover {
+  text-decoration: none;
+  color: #085caf;
+}
+#smarteditoverlay .se-shared-slot-replace__div {
+  margin-bottom: 8px;
+}

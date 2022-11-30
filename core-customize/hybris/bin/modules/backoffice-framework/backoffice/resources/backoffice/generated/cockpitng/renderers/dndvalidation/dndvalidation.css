@@ -1,0 +1,194 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.y-dnd-validation-popup {
+  width: 700px;
+  background-color: var(--bo-container-background); }
+  .y-dnd-validation-popup .z-window-header {
+    padding-bottom: 0;
+    background: none;
+    box-shadow: none;
+    padding-top: 8px;
+    justify-content: space-between;
+    flex-direction: row-reverse; }
+  .y-dnd-validation-popup .z-window-content {
+    max-height: 440px; }
+  .y-dnd-validation-popup .z-checkbox,
+  .y-dnd-validation-popup .z-radio {
+    line-height: 24px;
+    height: 24px; }
+  .y-dnd-validation-popup .y-window-container {
+    /*    display: flex;
+        flex-direction: column;
+    */
+    height: 100%; }
+  .y-dnd-validation-popup .y-summary-error-info {
+    padding: 0 0 8px 16px;
+    color: var(--bo-negative-color); }
+  .y-dnd-validation-popup .y-multi-select {
+    display: inline-block;
+    margin: 0 0 8px 16px; }
+  .y-dnd-validation-popup .y-control-container {
+    padding: 12px 16px 11px;
+    text-align: right; }
+  .y-dnd-validation-popup .y-ignore-save.z-button {
+    margin-left: 30px; }
+
+.y-multi-select.y-multi-state-check.z-checkbox:after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  width: 14px;
+  height: 4px;
+  background: var(--bo-button-background); }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.y-dnd-validation-popup .y-validation-details-container .z-label {
+  max-width: 95%;
+  font-size: 12px;
+  display: inline-flex;
+  white-space: pre-line; }
+.y-dnd-validation-popup .y-validation-details-container > div {
+  margin-top: 7px; }
+  .y-dnd-validation-popup .y-validation-details-container > div > li {
+    padding: 12px 0;
+    list-style: none; }
+    .y-dnd-validation-popup .y-validation-details-container > div > li:last-child {
+      padding-bottom: 5px; }
+    .y-dnd-validation-popup .y-validation-details-container > div > li:before {
+      margin-top: -12px;
+      height: 1px;
+      width: 150%;
+      left: -16px;
+      background: var(--bo-field-border-color);
+      content: '';
+      position: absolute; }
+    .y-dnd-validation-popup .y-validation-details-container > div > li:first-child:before {
+      height: 1px;
+      width: 150%;
+      left: -60px;
+      background: var(--bo-field-border-color);
+      position: absolute;
+      content: ''; }
+.y-dnd-validation-popup .y-validation-details-container li > .y-validation-icon-cell {
+  display: table-cell;
+  table-layout: fixed; }
+.y-dnd-validation-popup .y-validation-details-container li > .z-label {
+  display: table-cell;
+  table-layout: fixed; }
+.y-dnd-validation-popup .y-validation-details-container .y-validation-icon-cell .y-error,
+.y-dnd-validation-popup .y-validation-details-container .y-validation-icon-cell .y-warn {
+  top: 3px;
+  margin-right: 16px;
+  position: relative; }
+.y-dnd-validation-popup .y-row-selected .y-validation-details-container > div > li:before {
+  background: var(--bo-list-selected-border-color); }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.y-dnd-validation-popup .y-content-list {
+  border: 1px solid var(--bo-field-border-color);
+  border-width: 1px 0;
+  max-height: 305px; }
+  .y-dnd-validation-popup .y-content-list > .z-listbox-body {
+    max-height: 305px;
+    overflow-y: auto; }
+    .y-dnd-validation-popup .y-content-list > .z-listbox-body > table {
+      overflow: hidden; }
+  .y-dnd-validation-popup .y-content-list .z-listitem:hover {
+    background-color: inherit; }
+  .y-dnd-validation-popup .y-content-list .z-listitem > .z-listcell {
+    padding: 7px 0;
+    border-color: var(--bo-field-border-color); }
+    .y-dnd-validation-popup .y-content-list .z-listitem > .z-listcell:nth-child(2) {
+      overflow: visible; }
+      .y-dnd-validation-popup .y-content-list .z-listitem > .z-listcell:nth-child(2) .z-listcell-content {
+        overflow: visible; }
+  .y-dnd-validation-popup .y-content-list .z-listitem .z-listcell-content {
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap; }
+  .y-dnd-validation-popup .y-content-list .z-listitem.y-row-selected {
+    background: var(--bo-list-selected-background); }
+    .y-dnd-validation-popup .y-content-list .z-listitem.y-row-selected > .z-listcell {
+      border-color: var(--bo-list-selected-border-color); }
+  .y-dnd-validation-popup .y-content-list .y-validation-overview-container .z-label {
+    display: block; }
+  .y-dnd-validation-popup .y-content-list .y-select-cell {
+    vertical-align: baseline;
+    position: relative;
+    width: 60px; }
+    .y-dnd-validation-popup .y-content-list .y-select-cell .z-listcell-content {
+      margin: 0 5px 0 16px; }
+  .y-dnd-validation-popup .y-content-list .y-validation-icon-cell {
+    vertical-align: baseline;
+    position: relative; }
+    .y-dnd-validation-popup .y-content-list .y-validation-icon-cell .y-error:after,
+    .y-dnd-validation-popup .y-content-list .y-validation-icon-cell .y-warn:after {
+      width: 16px;
+      height: 16px;
+      font-family: var(--bo-content-icon-font-family);
+      font-size: 16px;
+      border: none;
+      box-shadow: none;
+      background: transparent; }
+    .y-dnd-validation-popup .y-content-list .y-validation-icon-cell .y-error:after {
+      content: "\e0b1";
+      color: var(--bo-error-color); }
+    .y-dnd-validation-popup .y-content-list .y-validation-icon-cell .y-warn:after {
+      content: "\e201";
+      color: var(--bo-warning-color); }
+  .y-dnd-validation-popup .y-content-list td.y-validation-icon-cell {
+    width: 60px; }
+    .y-dnd-validation-popup .y-content-list td.y-validation-icon-cell .y-error,
+    .y-dnd-validation-popup .y-content-list td.y-validation-icon-cell .y-warn {
+      float: right; }
+  .y-dnd-validation-popup .y-content-list .y-details-cell {
+    text-align: right;
+    width: 70px;
+    vertical-align: baseline;
+    position: relative; }
+    .y-dnd-validation-popup .y-content-list .y-details-cell .z-listcell-content {
+      line-height: 20px; }
+  .y-dnd-validation-popup .y-content-list .y-show-details-btn {
+    height: 16px;
+    line-height: 16px;
+    margin-right: 16px;
+    display: inline-block;
+    background: transparent; }
+    .y-dnd-validation-popup .y-content-list .y-show-details-btn.y-expanded-details:after {
+      content: "\f106"; }
+    .y-dnd-validation-popup .y-content-list .y-show-details-btn:after {
+      content: "\f107";
+      color: var(--bo-button-background);
+      font-size: 16px;
+      font-family: var(--bo-content-icon-font-family);
+      top: 0;
+      right: 16px;
+      display: inline-block;
+      width: 100%;
+      position: absolute; }
+  .y-dnd-validation-popup .y-content-list .y-validation-icon-cell > .z-listcell-content,
+  .y-dnd-validation-popup .y-content-list .y-details-cell > .z-listcell-content,
+  .y-dnd-validation-popup .y-content-list .y-select-cell > .z-listcell-content {
+    top: 10px;
+    position: absolute;
+    width: 100%; }
+  .y-dnd-validation-popup .y-content-list .y-title {
+    font-weight: bold;
+    white-space: pre-line; }
+  .y-dnd-validation-popup .y-content-list .y-message {
+    font-size: 12px;
+    white-space: pre-line;
+    display: block !important; }

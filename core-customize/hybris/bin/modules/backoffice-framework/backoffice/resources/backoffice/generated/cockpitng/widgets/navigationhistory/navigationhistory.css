@@ -1,0 +1,88 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-navigationhistory {
+  padding-left: 32px;
+  vertical-align: middle;
+  height: 100%;
+  max-width: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .yw-navigationhistory-back.ye-toolbarbutton {
+    padding: 4px 8px 8px 8px;
+    line-height: 16px;
+    border-radius: var(--bo-button-border-radius) 0 0 var(--bo-button-border-radius);
+    position: relative;
+    text-decoration: none; }
+    .yw-navigationhistory-back.ye-toolbarbutton:before {
+      content: "\e067";
+      font-family: var(--bo-content-icon-font-family);
+      margin-right: 8px;
+      font-size: 14px;
+      top: 1px;
+      position: relative;
+      display: inline-block; }
+    .yw-navigationhistory-back.ye-toolbarbutton-disabled, .yw-navigationhistory-back.ye-toolbarbutton-disabled:hover {
+      opacity: 0.4; }
+    @media all and (max-width: 640px) {
+      .yw-navigationhistory-back.ye-toolbarbutton span {
+        display: none; }
+      .yw-navigationhistory-back.ye-toolbarbutton:before {
+        margin-right: 0; } }
+    .yw-navigationhistory-back.ye-toolbarbutton span {
+      line-height: 16px;
+      font-size: 14px;
+      padding: 0; }
+  .yw-navigationhistory-stack.ye-toolbarbutton {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    border-radius: 0 var(--bo-button-border-radius) var(--bo-button-border-radius) 0;
+    border-left-width: 0;
+    text-align: center;
+    line-height: 28px; }
+    .yw-navigationhistory-stack.ye-toolbarbutton:after {
+      font-family: var(--bo-content-icon-font-family);
+      content: "\e1f2";
+      font-size: 14px; }
+    .yw-navigationhistory-stack.ye-toolbarbutton-disabled, .yw-navigationhistory-stack.ye-toolbarbutton-disabled:hover {
+      opacity: 0.4; }
+  .yw-navigationhistory-nostack .yw-navigationhistory-stack.ye-toolbarbutton {
+    display: none; }
+  .yw-navigationhistory-nostack .yw-navigationhistory-back.ye-toolbarbutton {
+    border-bottom-right-radius: var(--bo-button-border-radius);
+    border-top-right-radius: var(--bo-button-border-radius); }
+  .yw-navigationhistory-title {
+    color: var(--bo-page-header-text-color);
+    padding-left: 16px;
+    height: 28px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    padding-bottom: 0;
+    padding-top: 0;
+    line-height: 28px; }
+    .yw-navigationhistory-title .z-label {
+      display: inline-block;
+      font-size: 1.5rem;
+      height: 28px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+  .yw-navigationhistory-history {
+    min-width: 38px;
+    min-height: 8px;
+    margin-left: -7px; }
+    .yw-navigationhistory-history:before, .yw-navigationhistory-history:after {
+      left: 14px; }
+    .yw-navigationhistory-history .z-menuitem-text {
+      font-size: 14px; }

@@ -1,0 +1,210 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    z-Paging
+================================*/
+// Defintions of the z-Paging-Element (Navigation)
+@charset "UTF-8";
+@import "../support/_cockpit-mixins.scss";
+
+.yw-itemSelectorButton,
+.z-paging-button {
+    height: $editor-defaults__button-icon--size;
+    width: $editor-defaults__button-icon--size;
+    min-width: auto;
+    // @include _add-default-button-styles();
+    line-height: $editor-defaults__button-icon--size;
+    margin-right: 0;
+    padding: 0;
+    position: relative;
+
+    &, &:hover, &:focus, &:active {
+        cursor: pointer;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        color: $editor-defaults__button--color;
+    }
+
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:active {
+        opacity: $editor-default-disabled-opacity;
+        cursor: not-allowed;
+    }
+}
+
+.yw-itemSelectorButton,
+.z-paging-button .z-paging-icon {
+    &:before {
+        font-family: $_editor-defaults__pagin-icon--font-family;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.yw-itemSelectorButton {
+    &[disabled],
+    &[disabled]:hover {
+        background-color: transparent !important;
+    }
+}
+
+.z-paging {
+    height: auto;
+    padding: $editor-defaults__pagin--padding;
+    background-color: transparent;
+
+    ul > li {
+        display: inline-block;
+        float: left;
+    }
+
+    &-button &-icon {
+        font-size: $editor-defaults__pagin--font-size;
+        position: static;
+        color: inherit;
+        transform: none;
+    }
+
+    &-button:hover &-icon {
+        color: inherit;
+    }
+
+    &-previous {
+        .z-paging-icon:before {
+            content: $editor-defaults__pagin-button-previous--icon;
+            color: $editor-defaults__pagin-button-color;
+        }
+
+        &.yw-itemSelectorButton {
+            margin-right: $editor-defaults__pagin-button--tiny-spacing;
+            &:before {
+                content: $editor-defaults__pagin-button-top--icon;
+            }
+        }
+    }
+    &-next {
+        .z-paging-icon:before {
+            content: $editor-defaults__pagin-button-next--icon;
+            color: $editor-defaults__pagin-button-color;
+        }
+        &.yw-itemSelectorButton {
+            margin-left: $editor-defaults__pagin-button--tiny-spacing;
+            &:before {
+                content: $editor-defaults__pagin-button-bottom--icon;
+            }
+        }
+    }
+
+	&-previous,
+	&-next,
+    &-first,
+    &-last {
+        // will later be removed, when disabled state for buttons in general is done to be opacity-driven
+        &[disabled] {
+            .z-paging-icon:before {
+                opacity: $editor-defaults__pagin-button-disabled--opacity;
+            }
+        }
+    }
+
+    @if $editor-defaults__pagin-button-first--icon-font {
+        &-first &-icon:before {
+            content: $editor-defaults__pagin-button-first--icon-font;
+            color: $editor-defaults__pagin-button-color;
+        }
+    }
+    @if $editor-defaults__pagin-button-last--icon-font {
+        &-last &-icon:before {
+            content: $editor-defaults__pagin-button-last--icon-font;
+            color: $editor-defaults__pagin-button-color;
+        }
+    }
+    &-info {
+        height: auto;
+        font-size: $editor-defaults__pagin--font-size;
+        line-height: $editor-defaults__pagin-info--line-height;
+    }
+
+    &-input,
+    &-text {
+        font-family: $editor-defaults__pagin--font-family;
+        line-height: $editor-defaults__pagin--font-size;
+        text-align: center;
+        margin: 0;
+        float: left;
+
+        &:first-child {
+            margin-left: $_editor-defaults__pagin-inner--margin;
+        }
+        &:last-child {
+            margin-right: $_editor-defaults__pagin-inner--margin;
+        }
+    }
+
+    &-input {
+        width: $editor-defaults__pagin-input--width;
+        height: $editor-defaults__pagin-input--height;
+        padding: $editor-defaults__pagin-input--padding;
+        border-radius: $_editor-defaults__pagin-input--border-radius;
+        background: $editor-defaults__input-field--bg-color;
+        color: $editor-defaults__input-field--color;
+        @if $_editor-defaults__pagin-input-focus--padding and ($_editor-defaults__pagin-input-focus--padding != $editor-defaults__pagin-input--padding)  {
+            &:focus {
+                padding: $_editor-defaults__pagin-input-focus--padding;
+            }
+        }
+    }
+
+    &-text {
+        line-height: $editor-defaults__pagin-text--line-height;
+        padding-left: $editor-defaults__pagin-text--padding-left;
+        display: inline-block;
+        color: $editor-defaults__box--text-color;
+    }
+
+    &-selected {
+        &,
+        &:hover,
+        &:active {
+            color: $editor-defaults__button-active--color;
+            background-color: $editor-defaults__button-active--bg-color;
+        }
+    }
+}
+
+div.z-paging-os-cnt {
+    &-l {
+        background: $editor-defaults__pagin-os-cnt--bg-color;
+        margin: $editor-defaults__pagin-os-cnt--margin;
+    }
+
+    &-selected-l {
+        background: $editor-defaults__pagin-os-cnt-selected--bg-color;
+        margin: $editor-defaults__pagin-os-cnt--margin;
+    }
+}
+
+.z-paging-os {
+
+    div.z-paging-os-cnt-l .z-paging-os-cnt {
+        color: $editor-defaults__pagin-os-cnt--color;
+    }
+
+    .z-paging-os-selected:hover {
+        color: $editor-defaults__pagin-os-cnt-selected-hover--color;
+        font-weight: bold;
+    }
+
+    .z-paging-button {
+        width: auto;
+    }
+    .z-paging-button[disabled] {
+        width: auto;
+        opacity: $editor-defaults__button-disabled--opacity;
+    }
+}

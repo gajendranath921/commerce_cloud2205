@@ -1,0 +1,75 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@charset "UTF-8";
+/*================================
+    Advanced Search - Save-Query 
+================================*/
+// Styling of defaults on the advanced-search component.
+
+// SECTION TEMPORARY !!
+@import "../support/_advancedsearch-variables.scss";
+/* TEMPORARY - until DOM is changed accordingly */
+
+/* Query Container (part) */
+
+.yw-add-field-row .cng-action-group {
+	position: absolute;
+	right: 0;
+	margin-top: -$advancedsearch__attributes-grid-item--space-y;
+}
+
+.yw-advancedsearch-actionslot{
+	margin: $advancedsearch__actions-slot--margin;
+	display: inline-block;
+	float: right;
+}
+
+/* Query Container */
+
+.ya-com_hybris_platformbackoffice_action_saveAdvancedSearchQuery {
+    background: $advancedsearch__save-query-tigger--bg-color;
+    height: $advancedsearch__default-button--size;
+    width: $advancedsearch__default-button--size;
+    @if $_advancedsearch__save-query-tigger--border {
+        border: $_advancedsearch__save-query-tigger--border;
+    }
+    color: $_advancedsearch__save-query-tigger--color;
+    border-radius: $_advancedsearch__save-query-tigger--border-radius;
+    float: right;
+    
+    &.cng-action {
+        &-enabled {
+            &:hover {
+                background: $advancedsearch__save-query-tigger-hover--bg-color;
+                color: $_advancedsearch__save-query-tigger-hover--color;
+            }
+            .cng-action-icon {
+                @if $_advancedsearch__save-query-tigger--border {
+                    margin: nth($_advancedsearch__save-query-tigger--border, 1) * -1;
+                }
+                &:hover, &:focus {
+                    background: transparent;
+                }
+            }
+        }
+        &-disabled {
+            color: $_advancedsearch__save-query-tigger-disabled--color;
+            background-color: $_advancedsearch__save-query-tigger-disabled--bg-color;
+            border-color: $_advancedsearch__save-query-tigger-disabled--border-color;
+        }
+    }
+    table {
+        width: 100%;
+        td {
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+    // > tbody {
+    //     display: inline-table;
+    //     width: inherit;
+    //     height: inherit;
+    //     margin: -1px;
+    // }
+}

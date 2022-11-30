@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import "fundamental/__fd-icon-settings.scss";
+$fd-icons-name: "SAP-icons";
+
+@mixin _setIconFont($path, $name:false, $filename:false) {
+	@if($name) {
+		$fd-icons-name: $name;
+		$fd-icons-filename: $name;
+	}
+
+	@if($filename) {
+		$fd-icons-filename: $filename;
+	}
+
+	$fd-scss-icons-path: "" !default;
+	$fd-scss-icons-name: "SAP-icons";
+	$fd-scss-icons-filename: $fd-scss-icons-name;
+	$fd-icons-path: $path;
+
+	@if variable-exists(fd-icons-name) {
+		$fd-scss-icons-name: $fd-icons-name;
+	}
+
+	@if variable-exists(fd-icons-filename) {
+		$fd-scss-icons-filename: $fd-icons-filename;
+	}
+
+	@if variable-exists(fd-icons-path) {
+		$fd-scss-icons-path: $fd-icons-path;
+	}
+
+	@font-face {
+		font-family: $fd-scss-icons-name;
+		src: url("#{$fd-scss-icons-path}#{$fd-scss-icons-filename}.woff") format("woff");
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+@mixin _createIconFontClass() {
+
+	@each $name,
+	$code in $fd-icons {
+		.font-icon--#{$name} {
+			&:after {
+				content: _getGlyph($code);
+			}
+		}
+	}
+}
+
+@function _getIconGlyphContentValue($glyph, $iconsfont: $fd-icons) {
+	@if map-has-key($iconsfont, $glyph) {
+		@return _getGlyph(map-get($iconsfont, $glyph));
+	}
+
+	@else {
+		@return "";
+	}
+}
+
+@mixin _getIconGlyph($glyph, $position: "before", $iconsfont: $fd-icons) {
+	@if map-has-key($iconsfont, $glyph) {
+		@if ($position==false) {
+			content: _getGlyph(map-get($iconsfont, $glyph));
+		}
+
+		@else {
+			&::#{$position} {
+				content: _getGlyph(map-get($iconsfont, $glyph));
+				@content;
+			}
+		}
+	}
+
+	@else {
+		&::before {
+			content: "";
+		}
+	}
+}
+
+// handle for sass issue https://github.com/sass/sass/issues/1395#issuecomment-57483844
+@function _getGlyph($icon) {
+	@return unquote("\"\\#{$icon}\"");
+}
+
+$fd-image-data: (sort: $fd-table-column-sort-icon,
+	sort-asc: $fd-table-column-sort-icon--asc,
+	sort-desc: $fd-table-column-sort-icon--dsc,
+	select: $fd-forms-select-background-image,
+	select-expanded: $fd-forms-select-background-image--expanded,
+	select-disabled: $fd-forms-select-background-image--disabled,
+	menu: $fd-table-context-menu-icon);
+
+@function _getIconImageData($type) {
+	@if map-has-key($fd-image-data, $type) {
+		@return map-get($fd-image-data, $type);
+	}
+
+	@else {
+		@warn "Unknown `#{$type}` in $fd-image-data map";
+	}
+}
+
+//Icon Font Mapping
+
+//awsomefont icons
+$awsomefont-icons: (caret-down: "f0d7",
+	caret-up: "f0d8",
+	caret-left: "f0d9",
+	caret-right: "f0da",
+	arrow-right: "203A",
+	angle-left: "f104",
+	angle-right: "f105",
+	angle-up: "f106",
+	angle-down: "f107",
+	ellipsis: "f141",
+	ellipsis-v: "f142",
+	close: "f00d",
+	check: "f00c",
+	search: "f002",
+	circle-task-2: "f111"
+);
+
+
+//Font Awsome Caret Arrows
+$caretarrow__down--content: _getGlyph(map-get($awsomefont-icons, "caret-down")); // "\f0d7";
+$caretarrow__up--content: _getGlyph(map-get($awsomefont-icons, "caret-up")); // "\f0d8";
+$caretarrow__left--content: _getGlyph(map-get($awsomefont-icons, "caret-left")); // "\f0d9";
+$caretarrow__right--content: _getGlyph(map-get($awsomefont-icons, "caret-right")); // "\f0da";
+
+$simple-arrow__right--content: _getGlyph(map-get($awsomefont-icons, "arrow-right")); // '\203A';
+
+$anglearrow__left--content: _getGlyph(map-get($awsomefont-icons, "angle-left")); // "\f104";
+$anglearrow__right--content: _getGlyph(map-get($awsomefont-icons, "angle-right")); // "\f105";
+$anglearrow__up--content: _getGlyph(map-get($awsomefont-icons, "angle-up")); // "\f106";
+$anglearrow__down--content: _getGlyph(map-get($awsomefont-icons, "angle-down")); // "\f107";
+
+$ellipsis--content: _getGlyph(map-get($awsomefont-icons, "ellipsis")); // "\f141";
+$ellipsis-v--content: _getGlyph(map-get($awsomefont-icons, "ellipsis-v")); // "\f142";
+
+$close--content: _getIconGlyphContentValue("decline");
+$check--content: _getGlyph(map-get($awsomefont-icons, "check")); // "\f00c";
+$search--content: _getIconGlyphContentValue("search");

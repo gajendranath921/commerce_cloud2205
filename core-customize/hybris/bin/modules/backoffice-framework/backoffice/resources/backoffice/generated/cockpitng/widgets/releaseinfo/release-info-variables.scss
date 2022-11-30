@@ -1,0 +1,38 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$releaseinfo__component--color: var(--bo-text-color);
+$releaseinfo__component--bg: var(--bo-base-background);
+$releaseinfo__component--font-size: $font-size__base;
+$releaseinfo__component--light-font: 200;
+$releaseinfo__component--font-family: $font-family__text;
+
+$releaseinfo__component-z-div--margin: $container-spacing-default__two-thirds $container-spacing-default__two-thirds 0;
+
+$releaseinfo__list-li--padding-left: 1em;
+
+$releaseinfo__list-level1--font-weight: $releaseinfo__component--light-font;
+$releaseinfo__list-level1--font-size: $font-size__base;
+$releaseinfo__list-level1--margin-top: $container-spacing-default__two-thirds;
+$releaseinfo__list-level1--margin-left: -1em;
+
+$releaseinfo__list-level2--margin-left: 1.4em;
+$releaseinfo__list-level2--color: var(--bo-text-color);
+
+$releaseinfo__title-label--font-size: 25px;
+$releaseinfo__title-label--font-weight: $releaseinfo__component--light-font;
+$releaseinfo__title-label--color: var(--bo-title-color);
+
+$releaseinfo__teaser-label--color: var(--bo-content-label-color);
+$releaseinfo__teaser-label--font-size: $font-size__base;
+$releaseinfo__teaser-label--font-weight: $font-weight-normal;
+
+$releaseinfo__featureheader--border-bottom: $boxes--border__thin solid $grey__default;
+$releaseinfo__featureheader--font-size: $font-size__large;
+$releaseinfo__featureheader--font-weight: $releaseinfo__component--light-font;
+$releaseinfo__featureheader--margin: 50px ($container-spacing-default__two-thirds*-1) 0 0;
+$releaseinfo__featureheader--padding-bottom: floor($container-spacing-default__third * 0.5);
+$releaseinfo__featureheader--padding-right: $container-spacing-default__two-thirds;
+

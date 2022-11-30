@@ -1,0 +1,276 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+@import "../support/_configurableFlow-mixins.scss";
+
+.yw-modal-configurableFlow {
+    min-width: $configurableflow__window--min-width;
+    height: auto;
+
+    .z-window-content {
+        height: auto !important;
+    }
+    .yw-wizard-breadcrumb {
+        color: $configurableflow__breadcrumb--color;
+        padding: $_configurableflow__breadcrumb--padding;
+        position: relative;
+        display: table-cell;
+        overflow: visible;
+        -ms-word-break: break-all;
+        word-break: break-word;
+
+        //Breadcrumb centering Container
+        &-cnt {
+            display: table;
+            table-layout: fixed;
+            padding: 0;
+            margin: 0;
+            // border-bottom: $configurableflow__navigation--border;
+
+            &:empty {
+                display: none;
+            }
+        }
+        &-wrapper {
+            position: relative;
+            background: $configurableflow__breadcrumb--bg-color;
+            padding: 0;
+            border-top: $configurableflow__navigation--border;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                display: block;
+                height: 0;
+                border-bottom: $configurableflow__navigation--border;
+            }
+        }
+
+        &:first-child {
+            .yw-wizard-breadcrumb-spacer {
+                display: none;
+            }
+        }
+
+        &-active {
+            color: $_configurableflow__breadcrumb-active--color;
+            font-weight: $font-weight-bold;
+
+            .yw-wizard-breadcrumb-label {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    bottom: 0;
+                    border-bottom: $_configurableflow__breadcrumb-active--border-bottom;
+                    right: $_configurableflow__breadcrumb-label--right;
+                    left: $_configurableflow__breadcrumb-label--left;
+                    // height: 1px;
+                }
+            }
+
+            + .yw-wizard-breadcrumb-after {
+                .yw-wizard-breadcrumb-spacer {
+                    color: $configurableflow__info--color;
+                }
+            }
+        }
+
+        &-spacer {
+            position: absolute;
+            left: 0;
+            width: $_configurableflow__breadcrumb-arrow--width;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: $configurableflow__breadcrumb-arrow--color;
+            font-family: $_configurableflow__breadcrumb-arrow--font-family;
+            font-size: $_configurableflow__breadcrumb-arrow--font-size;
+
+            &:before {
+                content: $_configurableflow__breadcrumb-arrow--content;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        &-sublabel .z-label {
+            font-size: $configurableflow__breadcrumb-sublabel--font-size;
+        }
+
+        &-label .z-label {
+            font-size: $configurableflow__breadcrumb-label--font-size;
+            text-transform: uppercase;
+        }
+
+        &-label,
+        &-sublabel {
+            display: block;
+        }
+        &-before {
+            // color: $black;
+            cursor: pointer;
+        }
+    }
+
+    .yw-wizard-msgArea-cnt {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .yw-labelstyle {
+        color: $configurableflow__info--color;
+    }
+
+    .yw-wizard-info {
+        padding: $_configurableflow__info--padding;
+        font-size: $_configurableflow__info--font-size;
+        color: $configurableflow__info--color;
+        overflow: auto;
+        background: $configurableflow__info--bg-color;
+        border-bottom: $_configurableflow__info--border-bottom;
+    }
+
+    .yw-wizard-tabpanel.z-tabpanel {
+        padding: 0;
+    }
+
+    .yw-wizard-tabs{
+        &> .z-tabs-header {
+            .z-tab-hm,.z-tab-hr, .z-tab-hl {
+                background: none;
+            }
+        }
+    }
+    .yw-wizard-layout {
+        > .z-vlayout-inner {
+            height: auto !important;
+            width: 100% !important;
+        }
+    }
+    .yw-wizard-content {
+        padding: $_configurbleflow__content--padding;
+        min-height: $configurableflow__content--min-height;
+        max-height: $configurableflow__content--max-height;
+        overflow: hidden;
+        overflow-y: auto;
+        width: 100% !important;
+        height: auto !important;
+
+        @media screen and (min-height: $configurableflow__bp-m--min-height){
+            max-height: $configurableflow__content-bp-m--max-height;
+        }
+
+        .ye-qualifier-not-found-error.z-label {
+            border: $_configurableflow__z-label-error--border;
+            color: $configurableflow__z-label-error--color;
+            padding: $_configurableflow__z-label-error--padding;
+            display: block;
+        }
+    }
+
+    //To Do: should be set elsewhere
+    .ye-validation {
+        &-info, &-warn, &-error {
+            .yw-loceditor-row-wysiwyg {
+                & > .yw-loceditor-row-locale{
+                    &:before, &:after{
+                        display: none;
+                    }
+                }
+            }
+
+            .ye-validation-exclamation-icon {
+                top: 0; //1px;
+                right: 1px;
+                position: absolute;
+            }
+            // .yw-loceditor-caption span.y-icon-loceditor {
+            //     // left: -($configurableflow__base--space);
+            // }
+
+            // .ye-localized {
+            //     .ye-validation-exclamation-icon {
+            //         top: 1px;
+            //     }
+            // }
+            .ye-com_hybris_cockpitng_editor_localized {
+                margin-top: 0;
+            }
+        }
+        // &-info {
+        //     @include _configurableflow-validation-coloring (info, $configurableflow__info--bg-color, $configurableflow__info--color, $configurableflow__info-loceditor--color);
+        // }
+        // &-warn {
+        //     @include _configurableflow-validation-coloring (warn, $configurableflow__warn--bg-color, $configurableflow__warn--color, $configurableflow__warn--color);
+        // }
+        // &-error {
+        //     @include _configurableflow-validation-coloring (error, $configurableflow__error--bg-color, $configurableflow__error--color, $configurableflow__error--color);
+        // }
+    }
+
+    .yw-wizard-property {
+        margin-bottom: $_configurableflow__wizard-property--margin-bottom;
+        position: relative;
+        overflow: hidden;
+
+        &-label{
+            color: $_configurableflow__wizard-property-label--color;
+            font-weight: normal;
+
+            &-mandatory {
+                @include _addDefaultMandatoryFlag();
+            }
+        }
+        .z-spinner,
+        .z-timebox {
+            display: block;
+        }
+
+        textarea.z-textbox {
+            & + * button {
+                margin-top: $configurableflow__textarea-buttons--margin-top;
+            }
+        }
+    }
+
+    .yw-wizard-navigation {
+        border-top: $configurableflow__navigation--border;
+        height: $configurableflow__navigation--height;
+
+        .yw-left-pack, .yw-right-pack {
+
+            //changed in sass-integration, on develop still .compontent-wrapper
+            .yw-component-wrapper, .component-wrapper{
+                display: inline-block;
+                .z-button {
+                    margin: $_configurableflow__navigation-button--margin;
+                }
+            }
+        }
+        .yw-right-pack {
+            position: absolute;
+            right: 0;
+            top: 0;
+            .yw-component-wrapper + .yw-component-wrapper,
+            .component-wrapper + .component-wrapper {
+                .z-button {
+                    margin-left: 0;
+                }
+            }
+        }
+        .yw-left-pack {
+            .yw-component-wrapper + .yw-component-wrapper,
+            .component-wrapper + .component-wrapper {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .ye-com_hybris_cockpitng_editor_defaultboolean.z-radiogroup {
+        clear: both;
+        display: block;
+    }
+}

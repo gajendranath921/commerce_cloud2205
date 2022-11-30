@@ -1,0 +1,171 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+.cockpit-config-filter {
+    background: $admin-defaults__config-filter-container--bg-color;
+    overflow: auto;
+    padding-left: 5px;
+    padding-top: 5px;
+    height: auto;
+
+    .attribute {
+        &-container {
+            background-color: $admin-defaults__config-filter-attribute-container--bg-color;
+            padding: $admin-defaults__config-filter-attribute-container--padding;
+            margin: $admin-defaults__config-filter-attribute-container--margin;
+            tbody.z-listbox-emptybody td {
+                font-size: smaller;
+            }
+        }
+        &-name-label {
+            font-weight: bold;
+            text-transform: capitalize;
+            padding-left: $admin-defaults__config-filter-attribute-name-label--padding-left;
+        }
+        &-find-parent {
+            line-height: $editor-defaults__inline-box--height;
+            width: 100%;
+        }
+    }
+    .selected-attribute {
+        &-container {
+            display: inline-table;
+            background-color: $admin-defaults__filter-selected-attribute-container--background;
+            border-radius: $admin-defaults__filter-selected-attribute-container--border-radius;
+        }
+        &-value-label {
+            color: $admin-defaults__filter-selected-attribute-label--color;
+            padding-left: 8px;
+            padding-right: 8px;
+            height: 24px;
+            line-height: 24px;
+            display: inline-block;
+            max-width: 220px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        &-value-remove {
+            border: none;
+            background: transparent;
+            height: 24px;
+            min-height: 24px;
+            width: 16px;
+            margin-left: 0px;
+            margin-right: 10px;
+            padding: 0px;
+        }
+    }
+    .search-parent {
+        position: relative;
+        &:after {
+            font-family: $font-family__icon;
+            content: $search--content;
+            color: inherit;
+            font-size: $font-size__base;
+            line-height: 1;
+            width: $admin-defaults__filter-attribute-button-icon--size;
+            text-align: center;
+            height: $admin-defaults__filter-attribute-button-icon--size;
+            margin-top: -$admin-defaults__filter-attribute-button-icon--size/2;
+            margin-left: -$admin-defaults__filter-attribute-button-icon--size/2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    }
+    .clear-parent {
+        &, &:hover, &:active, &:focus {
+            color: $admin-defaults__filter-container-attribute-button--color;
+        }
+    }
+
+    .selected-attribute-value-remove {
+        &, &:hover, &:active, &:focus {
+            &:after {
+                color: $admin-defaults__filter-selected-attribute-label--color !important;
+            }
+        }
+    }
+    div.z-listbox-body {
+        background-color: $admin-defaults__filter-container-attribute-list-bg-color;
+
+        .z-listcell {
+            border-style: none;
+        }
+    }
+    .disabled_listbox {
+        opacity: $admin-defaults-disabled--opacity;
+    }
+    .btn_minimalize {
+        background-color: transparent;
+        background-image: url("images/icon_func_colapse_sprite.png") !important;
+        background-repeat: no-repeat;
+        height: 16px;
+        min-height: 16px;
+        padding: 0;
+        width: 16px;
+        margin-top: 5px;
+        
+        &[disabled] {
+            background-color: transparent;
+            cursor: default;
+        }
+        &.expanded {
+            background-position: 0px 0px;
+
+            &-disabled {
+                background-position: 0px -16px;
+            }
+        }
+        &.collapsed {
+            background-position: -16px 0px;
+        }
+    }
+    > .z-hlayout-inner {
+        height: auto;
+        display: table-cell;
+    }
+}
+
+.yw-xmlConfigWin .filterDiv {
+    background-color: $admin-defaults__filter-component-container--bg-color;
+
+    .searchButtonSection {
+        background: $admin-defaults__filter-options-searchsection-bg-color;
+        line-height: $admin-defaults__filter-search-button-section--line-height;
+    }
+}
+
+.show-filter-options-button {
+    width: 100%;
+    color: $admin-defaults__filter-container-toggle-button--color;
+    background-color: $admin-defaults__filter-container-toggle-button--bg-color;
+    margin: 0;
+    padding: 0;
+    line-height: $admin-defaults__filter-container-toggle-button--line-height;
+    height: $admin-defaults__filter-container-toggle-button--height;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: $admin-defaults__filter-container-toggle-button--border-bottom;
+}
+
+.yw-admin-filter-options-searchsection {
+    padding: 8px 16px;
+
+    .z-button {
+        width: 250px;
+        position: absolute;
+    }
+
+    .label-warning {
+        max-width: calc(100% - 270px);
+        margin-left: 270px;
+    }
+}
+
+.yw-admin-searchbuttonsection {
+    .z-hlayout-inner {
+        width: 100%;
+    }
+}

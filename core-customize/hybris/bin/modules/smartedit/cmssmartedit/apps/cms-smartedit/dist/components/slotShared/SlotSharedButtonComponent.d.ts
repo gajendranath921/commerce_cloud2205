@@ -1,0 +1,30 @@
+import { DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { ComponentAttributes, CrossFrameEventService, ICatalogService, PopupOverlayConfig, ContextualMenuItemData, ComponentHandlerService, SlotSharedService, IPageInfoService } from 'smarteditcommons';
+export declare class SlotSharedButtonComponent implements OnInit, OnDestroy, DoCheck {
+    private contextualMenuItem;
+    private catalogService;
+    private componentHandlerService;
+    private crossFrameEventService;
+    private pageInfoService;
+    private slotSharedService;
+    isExternalSlot: boolean;
+    isSlotShared: boolean;
+    isGlobalSlot: boolean;
+    isPopupOpened: boolean;
+    popupConfig: PopupOverlayConfig;
+    labelL10nKey: string;
+    descriptionL10nKey: string;
+    private isPopupOpenedPreviousValue;
+    private readonly buttonName;
+    private unRegOuterFrameClicked;
+    constructor(contextualMenuItem: ContextualMenuItemData, catalogService: ICatalogService, componentHandlerService: ComponentHandlerService, crossFrameEventService: CrossFrameEventService, pageInfoService: IPageInfoService, slotSharedService: SlotSharedService);
+    ngOnInit(): Promise<void>;
+    ngOnDestroy(): void;
+    ngDoCheck(): void;
+    get componentAttributes(): ComponentAttributes;
+    get slotId(): string;
+    onButtonClick(): void;
+    hidePopup(): void;
+    replaceSlot(event: MouseEvent): Promise<void>;
+    private reload;
+}

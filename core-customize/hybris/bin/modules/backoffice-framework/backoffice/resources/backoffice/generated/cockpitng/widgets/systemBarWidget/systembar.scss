@@ -1,0 +1,317 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Systembar (General)
+================================*/
+// Defined Styling relevant for Systembar
+
+
+@import "scss/support/_systembar-mixins.scss";
+
+@mixin _systembarClearBefore () {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.yw-systemBarContainer {
+    background-color: $systembar__container--bg-color;
+    padding: $systembar__container--padding;
+    height: $systembar__container--height;
+
+    @include _systembarClearBefore;
+
+    .yw-statusToolbar {
+        line-height: 0;
+        height: auto;
+        @include _systembarClearBefore;
+
+        &-left{
+            float: $systembar__toolbar-part-left--float;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding-left: $systembar__container--padding-x;
+            @media (max-width: $systembar__default--bp-m){
+                padding-left: $systembar__container-bp-m--padding-x;
+            }
+            @media (max-width: $systembar__default--bp-ms){
+                padding-left: $systembar__container-bp-s--padding-x;
+            }
+            .ya-action-slot .ya-toggle > .yw-flexlayout-trigger {
+                margin-right: $systembar__toolbar-button--margin-left;
+                @media (max-width: $systembar__default--bp-m){
+                    margin-right: $systembar__toolbar-button-bp-m--margin-left;
+                }
+                @media (max-width: $systembar__default--bp-ms){
+                    margin-right: $systembar__toolbar-button-bp-s--margin-left;
+                }
+            }
+        }
+
+        &-center{
+            width: $systembar__toolbar-part-center--width;
+            height: $systembar__toolbar-part-center--height;
+            position: $systembar__toolbar-part-center--position;
+            text-align: $systembar__toolbar-part-center--text-align;
+        }
+
+        &-right{
+            float: $systembar__toolbar-part-right--float;
+            text-align: $systembar__toolbar-part-right--text-align;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding-right: $systembar__container--padding-x;
+            @media (max-width: $systembar__default--bp-m){
+                padding-right: $systembar__container-bp-m--padding-x;
+            }
+            @media (max-width: $systembar__default--bp-ms){
+                padding-right: $systembar__container-bp-s--padding-x;
+            }
+
+            > .z-toolbarbutton:last-child {
+                margin-right: 0;
+            }
+            .ie10 & > .widget_cnt > .widget_children_list > .widget_cnt {
+                float: left;
+            }
+            .yw-toolbar > .yw-toolbar-content > .yw-toolbar-actions {
+                float: left;
+            }
+            .yw-flexlayout-trigger {
+                &,
+                &-summary {
+                    margin-left: $systembar__toolbar-button-bp-m--margin-left;
+                    
+                    @media (max-width: $systembar__default--bp-ms){
+                        margin-left: $systembar__toolbar-button-bp-s--margin-left;
+                    }
+                }
+            }
+        }
+        > .widget_children > .widget_children_list > .widget_cnt {
+            vertical-align: top;
+        }
+        .yw-toolbar > .yw-toolbar-content {
+             display: inline-table;
+        }
+        .yw-toolbar-before,
+        .yw-toolbar-after {
+            > .widget_cnt:empty {
+                display: none;
+            }
+        }
+
+        .yw-perspectiveChooser {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .yw-systemItemsContainer {
+            // line-height: $systembar__system-items-container--line-height;
+            display: inline-flex;
+            vertical-align: top;
+        }
+
+
+        span[style="display: none;"] + .z-toolbarbutton {
+            background-color: $systembar__toolbar-button-toggle-active--bg-color;
+        }
+
+        .yw-pointer-menupopup-widget span[style="display: none;"] + .z-toolbarbutton {
+            &:before,
+            &:after {
+                display: block;
+                bottom: -5px;
+                z-index: 9999;
+            }
+            &:after {
+                border-bottom-color: $systembar-popup__after--border-bottom-color;
+            }
+        }
+
+        .ya-toggle {
+            position: $systembar__toolbar-button-toggle--position;
+            
+            .yw-flexlayout-trigger {
+                &,
+                &-summary {
+                    width: $systembar__toolbar-button--width;
+                    height: $systembar__toolbar-button--height;
+                    border-radius: $systembar__toolbar-button--border-radius;
+                    background-color: $systembar__toolbar-button-toggle--bg-color;
+                    
+                    &:hover{
+                        background-color: $systembar__toolbar-button-toggle-hover--bg-color;
+                    }
+                }
+            }
+
+            &-active > .z-toolbarbutton,
+            &-active > .cng-action,
+            > .yw-flexlayout-trigger.cng-action-enabled {
+                background-color: $systembar__toolbar-button-toggle-active--bg-color;
+            }
+        }
+        .widget_cnt {
+            display: inline-block;
+        }
+    }
+
+    .z-toolbarbutton {
+        width: $systembar__toolbar-button--width;
+        height: $systembar__toolbar-button--height;
+        line-height: $systembar__toolbar-button--line-height;
+        text-align: $systembar__toolbar-button--text-align;
+        border-radius: $systembar__toolbar-button--border-radius;
+        margin: 0 0 0 $systembar__toolbar-button--margin-left;
+        vertical-align: top;
+        padding: 0;
+        
+        + .z-label {
+            border-color: $systembar__container--bg-color;
+        }
+
+        &:hover {
+            background-color: $systembar__container-hover--bg-color !important;
+        }
+
+        &:focus, &:active {
+            background-color: transparent;
+        }
+        
+        &:hover, &:focus, &:active {
+            + .z-label {
+                border-color: $systembar__container-hover--bg-color;
+            }
+        }
+        @media (max-width: $systembar__default--bp-m){
+            margin-left: $systembar__toolbar-button-bp-m--margin-left;
+        }
+        @media (max-width: $systembar__default--bp-ms){
+            margin-left: $systembar__toolbar-button-bp-s--margin-left;
+        }
+    }
+
+    &_flexible {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+
+        .yw-statusToolbar-left {
+            -webkit-flex: auto;
+            -ms-flex: auto;
+            flex: auto;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+
+            .yw-logoContainer {
+                -webkit-flex: 0 0 auto;
+                -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+            }
+        }
+        .yw-statusToolbar-right {
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            
+            @media (min-width: $systembar__default--bp-s){
+                white-space: nowrap;
+            }
+
+            > .widget_cnt {
+                height: auto;
+            }
+        }
+    }
+}
+
+.yw-systemBarMenu {
+    &-popup {
+        @include _default_systembar_popup();
+        
+        &-title {
+            display: block;
+            padding: $systembar-popup__plain-label--padding;
+            line-height: $systembar-popup__plain-label--line-height;
+            border-bottom: $systembar-popup__list-cell--border-top;
+        }
+        .z-listbox-emptybody td {
+            padding: $systembar-popup__list-cell--padding;
+            background-color: $systembar-popup__item--bg-color;
+            border-top: $systembar-popup__list-cell--border-top;
+            @include _systembar_fonts ();
+        }
+    }
+}
+
+.yw-dev-toolbar-actions {
+    .z-hbox-separator {
+        display: none;
+    }
+
+    .cng-action {
+        width: $systembar__toolbar-button--width;
+        height: $systembar__toolbar-button--height;
+        line-height: $systembar__toolbar-button--line-height;
+        border-radius: $systembar__toolbar-button--border-radius;
+        margin-left: $systembar__toolbar-button--margin-left;
+        color: $systembar__toolbar-button--color;
+
+        img {
+            &:hover, &:focus, &:active {
+                background: transparent !important;
+            }
+        }
+
+        table {
+            width: 100%;
+            text-align: center !important;;
+        }
+
+        &:hover {
+            background: $systembar__toolbar-button-toggle-hover--bg-color !important;
+            color: $systembar__toolbar-button-toggle-hover--color;
+        }
+        &:focus, &:active {
+            background: $systembar__toolbar-button-toggle-active--bg-color !important;
+            color: $systembar__toolbar-button-toggle-active--color;
+        }
+        @media (max-width: $systembar__default--bp-m){
+            margin-left: $systembar__toolbar-button-bp-m--margin-left;
+        }
+        @media (max-width: $systembar__default--bp-ms){
+            margin-left: $systembar__toolbar-button-bp-s--margin-left;
+        }
+    }
+}
+
+.cng-adminmode .mainToolbar > ,
+.yw-systemBarContainer .yw-statusToolbar {
+    .yw-shellbar-logo {
+        max-height: $systembar__logo--max-height;
+    }
+}
+.cng-adminmode .mainToolbar {
+    padding-left: $systembar__container--padding-x;
+    padding-right: $systembar__container--padding-x;
+    @media (max-width: $systembar__default--bp-m){
+        padding-left: $systembar__container-bp-m--padding-x;
+        padding-right: $systembar__container-bp-m--padding-x;
+    }
+    @media (max-width: $systembar__default--bp-ms){
+        padding-left: $systembar__container-bp-s--padding-x;
+        padding-right: $systembar__container-bp-m--padding-x;
+    }
+}

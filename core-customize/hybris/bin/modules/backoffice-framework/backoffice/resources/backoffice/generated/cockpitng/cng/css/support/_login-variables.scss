@@ -1,0 +1,211 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$login__default--icon-font: 'SAP-icons';
+$login__select-icon--content:  _getIconGlyphContentValue('slim-arrow-down'); //'slim-arrow-down'
+$login__select-icon--color: inherit;
+$login__default-label--color: var( --bo-content-label-color);
+$login__default--bp-xs: 500px;
+$login__default--bp-m: 1050px;
+
+// Input Default (temporary)
+$login__input-box--height: 36px;
+
+// Primary Buttons Styling adjustments (temporary)
+$login__primary-button--border-radius: 4px;
+$login__primary-button--height: $login__input-box--height;
+$login__primary-button--bg-color: var(--bo-button-primary-background);
+$login__primary-button--color: var(--bo-button-primary-text-color);
+$login__primary-button--border-color: var(--bo-button-primary-border-color);
+$login__primary-button--text-transform: none;
+$login__primary-button--line-height: ceil(($login__input-box--height * 0.61));
+
+$login__primary-button-hover--bg-color: var(--bo-button-primary-hover-background);
+$login__primary-button-hover--color: var(--bo-button-primary-hover-text-color);
+$login__primary-button-hover--border-color: var(--bo-button-primary-hover-border-color);
+
+$login__input-box--padding: $_container-spacing-default__core $_container-spacing-default__tiny;
+$login__input-box--border-color: var(--bo-input-border-color);
+$login__input-box--color: var(--bo-input-text-color);
+$login__input-box--border: $boxes--border__thin solid $login__input-box--border-color;
+$login__input-box--border-radius: 4px;
+$login__input-box--width: 100%;
+$_login__default--bp-xs: 500px;
+$_login__default--bp-m: 1050px;
+
+
+$login__input-box--margin-bottom: $_container-spacing-default__small;
+
+
+$login__input-box--font-size: $font-size__base;
+$login__input-box--box-shadow: none;
+$login__input-box--bg-color: var(--bo-input-background);
+
+$login__radio--width: $login__input-box--width;
+
+$login__editor-box--bg-color: false;
+
+@if $login__editor-box--bg-color {
+  $login__input-box--bg-color: $login__editor-box--bg-color;
+}
+
+$login__select-box--bg-color: $login__input-box--bg-color;
+$login__select-box--bg: url(images/selectbox_arrow.svg) no-repeat center right, url(images/selectbox_arrow-bg.gif) repeat-y top right;
+$login__select-box--height: $login__input-box--height;
+$login__select-box--border-radius: $login__input-box--border-radius;
+
+$login__z-window--bg: var(--bo-base-background);
+
+$login__grid--bp-xs: 350px;
+$login__grid--bp-s: 440px;
+$login__grid--width: 400px;
+$login__grid--margin: 10% auto 20px;
+$login__grid-bp-xs--padding-left: 10px;
+$login__grid-bp-s--padding-left: 20px;
+$login__grid-hbox-separator-width: 2px;
+
+$_login__grid--bp-xs: 350px;
+$_login__grid--bp-s: 440px;
+$_login__grid--bp-m: 600px;
+$_login__grid--width: 400px;
+$_login__grid--margin: 10% auto $_container-spacing-default__small;
+$_login__grid-hbox-separator-width: 2px;
+
+$login__grid-label--width: 156px;
+$login__grid-label-bp-xs--width: 95px;
+$login__grid-label-bp-s--width: 110px;
+$login__grid-label--height: $editor-defaults__inline-box--height;
+$_login__grid-label-bp-xs--width: 95px;
+$_login__grid-label-bp-s--width: 110px;
+
+$login__grid-label--font-size: $font-size__base;
+$login__grid-label--line-height: $font-size__large;
+$login__grid-label--padding-right: $container-spacing-default__third;
+$login__grid-label--margin-bottom: 5px;
+$_login__grid-label--min-height: $editor-defaults__inline-box--height;
+$_login__grid-label--font-weight: $font-weight-normal;
+$_login__grid-radio-label--padding-y: floor(($editor-defaults__inline-box--height - $login__grid-label--line-height)/2);
+$_login__grid-radio-label--padding: ($editor-defaults__inline-box--height - $login__grid-label--line-height - $_login__grid-radio-label--padding-y) $login__grid-label--padding-right $_login__grid-radio-label--padding-y 0;
+$_login__grid-label-container--width: 35%;
+
+$login__grid-form--margin: 0 0 20px;
+
+$login__grid-form-label--width: 40%;
+$login__grid-form-row--padding-bottom: $container-spacing-default__third + 8px;
+
+
+$login__grid-spinner--width: $login__input-box--width;
+$login__grid-spinner-input-box--width: calc($login__grid-spinner--width - 19px);
+
+$login__error-notification-box--bg-color: var(--bo-error-background);
+
+$login__error-notification-box--border-radius: $login__input-box--border-radius;
+$login__error-notification-box-icon--margin-right: $container-spacing-default__third;
+$login__error-notification-box-icon--bg: url("images/icon_status_error_white.png") no-repeat scroll;
+$login__error-notification-box--margin: 0 0 $container-spacing-default__base;
+$login__error-notification-box--padding: 10px;
+$login__error-notification-box-label--font-weight: $font-weight-bold;
+
+// changed login variables
+
+$login__body--bg-color: var(--bo-base-background);
+$login__body-logo--bg: false;
+
+$login__logo--bg: url("images/logo_transparent.png") no-repeat transparent center;
+$login__logo--height: 48px;
+
+$login__container--bg-color: var(--bo-container-background);
+$login__container--shadow: var(--bo-content-shadow-small);
+$login__container--left: 0;
+$login__container--right: $login__container--left;
+$login__container--top: 45%;
+$login__container--transform: translateY(-60%);
+$login__container--margin: 0 auto;
+$login__container--max-width: 600px;
+$login__container--width: 100%;
+$login__container--min-width: 350px;
+$login__container--border-radius: 4px;
+$login__container--box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);//Deprecated
+$login__container--padding: $container-spacing-default__base;
+$login__container-bp-xs--transform: translateY(0);
+
+$login__logo-container--marging-bottom: $container-spacing-default__base + $container-spacing-default__third;
+
+$login__content--min-height: 200px;
+$login__content-label--margin: $container-spacing-default__third 0;
+$login__content-label--min-height: 65px;
+$_login__content-label--line-height: 40px;
+$login__content-main-label--font-size: 28px;
+$login__content-main-label--color: var(--bo-content-label-color);
+$login__content-info-label--font-size: $font-size__base;
+
+$login__footer--padding: $container-spacing-default__base;
+$login__footer-sso-link--margin-right: $container-spacing-default__half;
+$login__footer-sso-link--color: var(--bo-link-color);
+
+$_login__grid-row--margin-bottom: $_container-spacing-default__tiny;
+
+$login__grid-spinner--width: $login__input-box--width;
+
+
+$_login__error-notification-box--border: $boxes--border__thin solid var(--bo-error-border-color);
+$login__error-notification-box--border-radius: $editor-defaults__inline-box--border-radius;
+$login__error-notification-box--margin: 0 0 $container-spacing-default__base;
+$login__error-notification-box-icon--size: $form-defaults__input-icon--size;
+$_login__error-notification-box-icon--color: var(--bo-negative-color);
+$_login__error-notification-box-icon--font-size: $login__error-notification-box-icon--size;
+$_login__error-notification-box-icon--content: _getIconGlyphContentValue('message-error');
+$_login__error-notification-box-icon--font-family: $font-family__icon;
+$_login__error-notification-box-icon--left: $login__error-notification-box--padding;
+$_login__error-notification-box-icon--top: 50%;
+$_login__error-notification-box-icon--transform: translateY(-50%);
+$login__error-notification-box-label--color: var(--bo-content-label-color);
+$_login__error-notification-box-label--padding-left: $login__error-notification-box-icon--size + $login__error-notification-box-icon--margin-right; //$white;
+
+// changed login variables
+
+$_login__logo--bg: url("images/logo_transparent.png") no-repeat transparent center;
+$_login__logo--height: 45px;
+
+$_login__container--left: 50%;
+$_login__container--right: $_login__container--left;
+$_login__container--top: 45%;
+$_login__container--transform: translate(-50%, -60%);
+$_login__container--margin: 0 auto;
+$_login__container--max-width: 600px;
+$_login__container--width: 100%;
+$_login__container--min-width: 350px;
+$_login__container--border-radius: $_layout-panels__panel--border-radius;
+$_login__container--padding: $container-spacing-default__base;
+$_login__container-bp-xs--transform: translate(-50%, 0);
+$_login__container-bp-s--left: 0;
+$_login__container-bp-s--transform: translate(0, -60%);
+
+$_login__logo-container--marging-bottom: $container-spacing-default__base + $container-spacing-default__third;
+
+$_login__content--min-height: 200px;
+$_login__content-label--margin: $container-spacing-default__third 0;
+$_login__content-label--min-height: 65px;
+$_login__content-main-label--font-size: 28px; //$font-size__h1;
+$_login__content-main-label--color: $grey__dark--700;//Deprecated
+$_login__content-info-label--font-size: $font-size__base;
+
+$_login__footer--padding: $container-spacing-default__base;
+$_login__footer-link--font-size: $font-size__small;
+$_login__footer-link--font-weight: $font-weight-bold;
+$_login__footer-button--margin-left: $_login__grid-label-container--width;
+
+
+$login__input-box-focus--color: var(--bo-input-text-color);
+$login__input-box-focus--border-color: var(--bo-input-focus-border-color);
+$login__input-box-focus--border: $boxes--border__thin solid $login__input-box-focus--border-color;
+$login__input-box-focus--box-shadow: 0 0 0 $boxes--border__thin $login__input-box-focus--border-color;//Deprecated
+$login__input-box-focus--bg-color: var(--bo-input-focus-background);
+$login__input-box-focus--outline-offset: -.1875rem;
+$login__input-box-focus--outline-style: var(--bo-content-focus-outline-style);
+$login__input-box-focus--outline-width: var(--bo-content-focus-outline-width);
+$login__input-box-focus--outline-color: var(--bo-content-focus-outline-color);
+$login__input-box-hover--bg-color: var(--bo-input-hover-background);
+$login__input-box-hover--border-color: var(--bo-input-hover-border-color);

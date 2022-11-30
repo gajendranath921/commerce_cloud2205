@@ -1,0 +1,29 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@charset "UTF-8";
+@font-face {
+    font-family: "commerce_BO_extended";
+    src: url("font/Commerce_BO_Extended.eot");
+    src: url("font/Commerce_BO_Extended.eot?#iefix") format("embedded-opentype"),
+         url("font/Commerce_BO_Extended.woff") format("woff"), 
+         url("font/Commerce_BO_Extended.ttf") format("truetype"),
+         url("font/Commerce_BO_Extended.svg#commerce_BO_extended") format("svg");
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: "commerce_BO_extended_horizon";
+    src: url("font/SAP-Horizon/Commerce_BO_Extended/iconfont.eot");
+    src: url("font/SAP-Horizon/Commerce_BO_Extended/iconfont.eot?#iefix") format("embedded-opentype"),
+         url("font/SAP-Horizon/Commerce_BO_Extended/iconfont.woff") format("woff"),
+         url("font/SAP-Horizon/Commerce_BO_Extended/iconfont.ttf") format("truetype"),
+         url("font/SAP-Horizon/Commerce_BO_Extended/iconfont.svg#Horizon_BO") format("svg");
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

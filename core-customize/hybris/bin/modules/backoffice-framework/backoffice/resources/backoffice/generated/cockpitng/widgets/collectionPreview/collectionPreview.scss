@@ -1,0 +1,93 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$collection-preview__container--bg-color: $body__default--bg-color;
+$collection-preview__listcell--padding: $container-spacing-default__third;
+$collection-preview__imgcontainer--bg-color: $_editor-defaults__popup-box--bg-color;
+$collection-preview__imgcontainer--size: 100px;
+$collection-preview__imgcontainer--border: $boxes--border__thin solid $_editor-defaults__popup-box--border-color;
+$collection-preview__imgcontainer--border-radius: $editor-defaults__input-box--border-radius;
+$collection-preview__item-selected-imgcontainer-image--border-color: $_default-list__item-box-selected--border-color;
+$collection-preview__list-label--padding: $_container-spacing-default__tiny 0 0 0;
+
+.yw-collection-preview-cnt {
+    width: 100%;
+    height: 100%;
+    background: $collection-preview__container--bg-color;
+
+    > div.z-listbox {
+        border:none;
+    }
+    > div.z-listboxdiv .z-listbox-body {
+        .z-listitem {
+            background: none;
+        }
+        .z-listcell{
+            padding: $collection-preview__listcell--padding;
+        }
+    }
+    div.z-listbox-body .z-listitem-selected div.yw-collection-prev-imgcontainer img {
+       border-color: $collection-preview__item-selected-imgcontainer-image--border-color;
+    }
+}
+.yw-collection-prev {
+    &-imgcontainer  {
+        background-color: $collection-preview__imgcontainer--bg-color;
+        width: $collection-preview__imgcontainer--size;
+        height: $collection-preview__imgcontainer--size;
+        border: $collection-preview__imgcontainer--border;
+        border-radius: $collection-preview__imgcontainer--border-radius;
+        position: relative;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &-label,
+    &-descr {
+        > .z-label {
+            padding: $collection-preview__list-label--padding;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+
+            &:empty {
+                display: none;
+            }
+        }
+    }
+
+    &-descr {
+        //
+        //span.z-label {
+        //color: #303030 !important;
+        //}
+    }
+}
+
+.yw-collection-preview-center {
+    .z-window & {
+        .mediaInfoCnt {
+          float: left;
+          width: 40%;
+
+          > .z-vlayout-inner {
+            padding-bottom: 0 !important;
+          }
+        }
+        .mediaPreviewCnt {
+          float: left;
+          width: 60%;
+        }
+        .mediaPreview {
+            overflow: hidden;
+        }
+    }
+}

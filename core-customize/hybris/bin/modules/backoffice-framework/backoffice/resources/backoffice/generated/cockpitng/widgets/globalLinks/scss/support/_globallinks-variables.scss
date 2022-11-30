@@ -1,0 +1,41 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Global Links Variables
+================================*/
+// Relevant Changes applied to the Global Links Variables
+
+
+
+$globallinks__default--bp-xs: 380px;
+$globallinks__default--bp-s: 680px;
+$globallinks__default--bp-m: 1020px;
+
+$globallinks__popup--padding: 4px 0;
+$globallinks__popup--max-height: calc(100vh - #{nth($globallinks__popup--padding,1) * 2});
+$globallinks__popup--bg-color: var(--bo-list-background);
+$globallinks__popup--border-radius: 4px;
+$globallinks__popup--box-shadow: var(--bo-content-shadow-large);
+$globallinks__popup-container--width: 40%;
+$globallinks__popup-container-bp-xs--width: 80%;
+$globallinks__popup-container-bp-s--width: 60%;
+$globallinks__popup-container--max-width: 540px;
+$globallinks__popup-container--padding: 10px;
+$globallinks__popup-item--margin: 15px;
+$globallinks__popup-item--border-radius: 8px;
+$globallinks__popup-item--width: calc(33% - #{$globallinks__popup-item--margin * 2});
+$globallinks__popup-item-bp-s--width: calc(50% - #{$globallinks__popup-item--margin * 2});
+$globallinks__popup-item--bg-color: $navigation__popup--bg-color;
+$globallinks__popup-item-hover--bg-color: var(--bo-list-hover-background);
+$globallinks__popup-item-selected--bg-color: var(--bo-list-selected-background);
+$globallinks__popup-item--transition: background-color 0.5s ease;
+
+$globallinks__navigation-icon--height: 30px;
+$globallinks__navigation-icon--padding: 0px 5px;
+$globallinks__navigation-icon--margin: 20px auto 15px;
+$globallinks__navigation-btn--height: 28px;
+$globallinks__navigation-label--padding: 0 5px 20px 5px;
+$globallinks__navigation-label--color: var(--bo-tile-title-color);
+$globallinks__navigation-label--text-align: center;
+$globallinks__navigation-label--line-height: 18px;

@@ -1,0 +1,159 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Action Group 
+================================*/
+// Styling of the Action Group 
+
+@import "../support/_create-variables.scss";
+
+.cng-action-group.ya-split-group-cnt {
+    //general
+	> tbody table {
+        td.z-hbox-separator + td {
+            .z-label,
+            .cng-action,
+            .ya-create-type-selector-button {
+                margin-left: $create__toolbar-action-split-group-items-overlap--margin;
+            }
+        }
+        td {
+            > .z-label {
+                padding-left: $create__toolbar-action-split-group-label--padding-x;
+                padding-right: $create__toolbar-action-split-group-label--padding-x;
+                width: $create__toolbar-action-split-group-label--width;
+            }
+        }
+    }
+	&:hover {
+        > tbody table {
+            .z-label,
+            .cng-action,
+            .ya-create-type-selector-button {
+                @if $create__create-new-action-hover--box-shadow {
+                    box-shadow: $create__create-new-action-hover--box-shadow;
+                }
+            }
+        }
+    }
+
+	//create-action specific
+    > tbody table {
+        td {
+            > .z-div > .ya-create-container {
+                margin-left: $create__toolbar-action-split-group-items-overlap--margin;
+            }
+            &:first-child {
+                > .z-div > .ya-create-container {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    &:hover {
+        td .ya-create-type-selector-button,
+        .ya-create-container .ya-create-type-selector-button {
+            border-left: none;
+        }
+    }
+    .ya-create-type-selector-button {
+        border-top: 0;
+        border-bottom: 0;
+        &.z-toolbarbutton {
+            &:hover {
+                background-color: $_button__action-tool-hover-active-focus--bg-color;
+                color: $_button__action-tool-hover-active-focus--color;
+            }
+            .z-toolbarbutton-content {
+                top: $_create__toolbar-action-split-group-create-button-icon--top;
+            }
+        }
+    }
+    td > .ya-create-type-selector-button {
+        box-sizing: border-box;
+        width: $create__toolbar-action-group-item-create-type-button--width;
+        margin-right: 0;
+
+        &:hover, 
+        &:focus {
+            border: none;
+            width: $create__toolbar-action-split-group-simple-create-type-hover--width;
+            @if $create__toolbar-action-split-group-simple-create-type--margin-right {
+                margin-right: $create__toolbar-action-split-group-simple-create-type--margin-right;
+            }
+        }
+    }
+    td > a.ya-create-type-selector-button.z-toolbarbutton {
+        width: $create__toolbar-action-split-group-create-button--width;
+    }
+    .ya-create-container .ya-create-type-selector-button {
+        width: $create__toolbar-action-split-group-create-button--width; //$create__create-action-default--size;
+        margin-left: $create__toolbar-action-split-group-items-overlap--margin;
+        margin-right: $create__toolbar-action-split-group-items-overlap--margin;
+        
+        &:hover,
+        &:focus {
+            width: $create__create-action-default--size;
+            margin-left: $create__toolbar-action-split-group-items-overlap--margin;
+            margin-right: $create__toolbar-action-split-group-items-overlap--margin;
+        }
+    }
+    .z-hbox-separator {
+        display: none;
+    }
+    .y-toolbar &,
+    .ye-toolbar &,
+    .yw-explorerTree-toolbar & {
+        > tbody {
+            border-radius: $_create__toolbar-action-button--border-radius;
+            box-shadow: $create__create-new-action--box-shadow;
+            display: inline-table;
+            margin: 0;
+            overflow: hidden;
+
+            > tr > td > table {
+                background-color: $_create__toolbar-action-container--bg-color;
+                color: $_create__toolbar-action-container--color;
+                border-radius: $_create__toolbar-action-button--border-radius;
+                border: $_create__toolbar-action-button--border;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-wrap: no-wrap;
+                -ms-flex-wrap: no-wrap;
+                flex-wrap: no-wrap;
+                margin: 0;
+                
+                > tbody {
+                    display: table;
+                    margin: $create__toolbar-action-split-group-items-overlap--margin;
+                }
+            } 
+        }
+
+        .cng-action,
+        .ya-create-type-selector-button {
+            border-radius: 0;
+            border-left: 1px solid var(--bo-button-border-color);
+        }
+
+        table tbody td {
+            &:first-child {
+                .cng-action,
+                .ya-create-type-selector-button {
+                    border-top-left-radius: $_create__toolbar-action-button--border-radius;
+                    border-bottom-left-radius: $_create__toolbar-action-button--border-radius;
+                }
+            }
+            &:last-child {
+                .cng-action,
+                .ya-create-type-selector-button {
+                    border-top-right-radius: $_create__toolbar-action-button--border-radius;
+                    border-bottom-right-radius: $_create__toolbar-action-button--border-radius;
+                }
+            }
+        }
+    }
+}

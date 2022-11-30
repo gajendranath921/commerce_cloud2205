@@ -1,0 +1,260 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$compareview__container--font: $font-family__text;
+$compareview__container--bg-color: var(--bo-base-background);
+$compareview__content--bg-color: $_default__content-wrapper--bg-color;
+$compareview__container--border-color: $_default-list__item--border-color;
+$compareview__container--margin-left: $container-spacing-default__half;
+$compareview__container-grid--margin: $_container-spacing-default__small;
+$compareview__container-grid--size: calc(100% - 32px);
+$compareview__container-grid-height--size: calc(100% - 32px - 24px - 2 * 16px);
+$compareview__cell-fill--bg-color: var(--bo-list-background);
+$compareview__cell-defaults--padding: $_container-spacing-default__tiny $_container-spacing-default__small;
+$compareview__cell-defaults--border-width: $boxes--border__thin;
+$compareview__cell-defaults--color: $_default-list__item--color;
+$compareview__cell-inprogress--color: $_default-list__item--color;
+$_compareview__cell-defaults--line-height: 20px;
+
+// $compareview__header--height: 340px;
+$compareview__header--border-radius: $_layout-panels__panel--border-radius;
+$_compareview__header--border-bottom-color: $_default__splitter--color;
+$compareview__rows-container--margin-top: $compareview__cell-defaults--border-width * -1;
+$compareview__row-header--border-color: $_default-list__item--border-color;
+$compareview__row-header-border-top: $compareview__cell-defaults--border-width solid $compareview__row-header--border-color;
+$compareview__name-column--width: 286px;
+$compareview__name-column--margin-left: $_container-spacing-default__small; // 16px
+$compareview__value-column--width: 328px;
+$compareview__column--border: $compareview__cell-defaults--border-width solid $_default-list__item--border-color;
+$compareview__column--border-left-width: $boxes--border__medium;
+$_compareview__row-header--color: $_default__header--color;
+
+$compareview__scroll-animate--transition: top 0.1s 0.02s ease-out, left 0.1s 0.02s ease-out;
+
+$compareview__column-selected--box-shadow: false; //0 5px 5px 1px rgba(0, 0, 0, 0.25);
+$compareview__column-selected--bg-color: false;
+$_compareview__column-selected--transition: background-color 0.2s ease-in-out;
+$compareview__column-body-selected--box-shadow: none;
+@if $compareview__column-selected--box-shadow {
+	$compareview__column-body-selected--box-shadow: nth($compareview__column-selected--box-shadow, 1) -1px nth($compareview__column-selected--box-shadow, 2) nth($compareview__column-selected--box-shadow, 4) nth($compareview__column-selected--box-shadow, 5);
+	$compareview__column-selected-box-shadow--width: 3px;
+	$compareview__column-selected-box-shadow--top: 15px;
+}
+$compareview__column-selected-box-shadow--height: 1500px;
+
+$compareview__component-mask--size: $compareview__column-selected-box-shadow--height;
+$compareview__side-component-mask--left: $compareview__component-mask--size * -1;
+// $compareview__side-component-mask--height: $compareview__component-mask--size;
+$compareview__side-component-mask--width: $compareview__name-column--margin-left;
+$compareview__header-mask--top: $compareview__component-mask--size  * -1;
+
+$_compareview__cell--padding-x: $_container-spacing-default__small;
+$_compareview__cell--padding-y: floor(($editor-defaults__list-item-small--height - $_compareview__cell-defaults--line-height)/2);
+$compareview__cell--padding: ($_compareview__cell--padding-y - nth($compareview__column--border, 1)) $_compareview__cell--padding-x $_compareview__cell--padding-y ($_compareview__cell--padding-x + $compareview__cell-defaults--border-width);
+$compareview__cell-fill--margin-left: nth($compareview__cell--padding, 4) * -1;
+$compareview__cell-fill--width: 100%;
+$compareview__cell-img--height: 20px;
+$compareview__cell-img--margin-right: $container-spacing-default__third;
+
+$compareview__cell-localized-border--left: 0;
+$compareview__cell-localized-border--right: 0;
+$compareview__cell-localized-translation-border--left: $container-spacing-default__half;
+$compareview__cell-localized-translation-border--right: $compareview__cell-localized-border--right;
+$compareview__name-column-cell-localized-translation--border-color: transparent;
+$compareview__column-header-cell--top: $_container-spacing-default__small; // 16px
+$compareview__selected-column-header-cell--top: $container-spacing-default__third;
+$compareview__selected-column-cell-fill--width: calc(100% + #{nth($compareview__column--border,1)});
+$compareview__selected-column-cell-fill--margin-right: nth($compareview__column--border,1) * -1;
+// $compareview__selected-column-cell-fill--bg-color: mix($blue__light, $white, 3%);
+// $compareview__header-cell--padding-top: $compareview__column-header-cell--top + $container-spacing-default__half;
+$compareview__header-cell--padding-bottom: $_container-spacing-default__small + $boxes--border__medium;
+$compareview__section-title-label--font-size: $font-size__base;
+$compareview__section-title-label--line-height: $font-size__large;
+$compareview__section-title-label--font-weight: $font-weight-bold;
+$_compareview__section-title-label--color: $_compareview__row-header--color;
+$compareview__section-cell--height: $editor-defaults__list-item--height;
+$compareview__section-cell--padding-v: floor(($compareview__section-cell--height - $compareview__section-title-label--line-height)/2);
+$compareview__section-label--margin: 0;
+
+$compareview__subsection-title-label--font-size: $font-size__base;
+$compareview__subsection-title-label--line-height: $compareview__subsection-title-label--font-size;
+$compareview__subsection-title-label--font-weight: $font-weight-bold;
+$compareview__subsection-title-label--padding: $container-spacing-default__third nth($compareview__cell--padding, 2) $container-spacing-default__third ($_compareview__cell--padding-x * 2);
+$compareview__subsection-title-label-bg-mask--margin-left: nth($compareview__subsection-title-label--padding, 4) * -1;
+
+$compareview__subsection-attribute-name-cell--padding-left: ($_compareview__cell--padding-x * 2);
+$compareview__subsection-attribute-name-cell--margin-left: $compareview__name-column--margin-left;//$container-spacing-default__half;
+$_compareview__subsection-attribute-name-cell-content--padding-left: $_container-spacing-default__small * 3;
+$compareview__subsection-attribute-name-cell--width: $compareview__name-column--width - $compareview__subsection-attribute-name-cell--padding-left;
+$compareview__subsection-attribute-name-cell--bg-color: $compareview__cell-fill--bg-color;
+
+$compareview__section-expand-button--content: _getIconGlyphContentValue('navigation-down-arrow');
+$compareview__section-collapse-button--content: _getIconGlyphContentValue('navigation-up-arrow');
+
+$compareview__hyperlink--color: var(--bo-link-color);
+$compareview__hyperlink-disabled--bg-color: transparent;
+
+// $compareview__map-arrow-icon--bg-image: url("images/icon_arrow_small_default.png");
+$compareview__map-arrow-icon--content: _getIconGlyphContentValue("slim-arrow-right");
+$compareview__map-arrow-icon--size: 8px;
+$compareview__map-arrow-icon--margin: 0 8px;
+$compareview__map-arrow-icon--color: var(--bo-button-icon-color);
+
+$compareview__header-icon--size: $toolbar__button-default--size;
+// $compareview__header-icon-centered--margin-top: ceil($compareview__header-icon--size/2) * -1;
+// $compareview__header-icon-centered--margin-left: $compareview__header-icon-centered--margin-top;
+$compareview__header-icon--font: $font-family__icon;
+$_compareview__header-icon-button--color: $_button__icon--color;
+$_compareview__header-icon-button--font-size: $font-size__large;
+$_compareview__header-icon-button--min-height: $compareview__header-icon--size;
+$_compareview__header-expand-button--color: $_button__icon--color;
+$_compareview__header-expand-button--size: $form-defaults__input-icon--size;
+$_compareview__header-expand-button-icon--margin-top: ceil($_compareview__header-expand-button--size/2) * -1;
+$_compareview__header-expand-button-icon--margin-left: $_compareview__header-expand-button-icon--margin-top;
+
+$compareview-flex__header-cell--padding-top: $container-spacing-default__half;
+$_compareview-flex__header-cell-container--padding-top: $compareview__header-icon--size;
+$compareview-flex__selected-column-header-cell-before--top: false; //$compareview__selected-column-header-cell--top - $compareview__column-header-cell--top;
+
+// $compareview__header-tile-top-button-content--height: $compareview__header-icon--size + $container-spacing-default__half;
+$compareview__header-tile-image--border: $compareview__column--border;
+$compareview__header-tile-image-container--margin: 0 auto;
+$compareview__header-tile-image-container--height: 150px;
+$compareview__header-tile-image--max-height: $compareview__header-tile-image-container--height;
+$compareview__header-tile-image-container--line-height: floor($compareview__header-tile-image-container--height * 0.94);
+$compareview__header-tile-selected--color: $_default-list__item-focused--color;
+$_compareview__header-tile-selected-image--border-color: false;
+$compareview__header-tile-label--margin: 0 0 5px;
+$compareview__header-tile-image-label--margin-top: $container-spacing-default__half;
+$compareview__header-tile-label--height: 58px;
+$compareview__header-tile-label--font-size: $font-size__base;
+// $compareview__header-tile-only-label--margin-top: nth($compareview__header-tile-image-container--margin, 1);
+$compareview__header-tile-label-hover--color: $_default-list__item-focused--color;
+$_compareview__header-compound-panel--height: $form-defaults__input-icon--size;
+$compareview__header-tile-compound-container--margin-right: $container-spacing-default__third;
+$_compareview__header-tile-compound-panel--bottom: $compareview__header-cell--padding-bottom;
+$_compareview__header-tile-last-content--margin-bottom: $_compareview__header-compound-panel--height + $_container-spacing-default__small;
+
+
+$compareview__header-close-button--top: $container-spacing-default__half;
+$compareview__header-close-button--right: $compareview__header-close-button--top - $boxes--border__thin;
+$_compareview__header-close-button--content: _getIconGlyphContentValue('decline');
+
+$compareview__header-pin-button--top: $compareview__header-close-button--top;
+$compareview__header-pin-button--right: ($compareview__header-close-button--right + $compareview__header-icon--size + $_container-spacing-default__core);
+$_compareview__header-pin-button--content: _getIconGlyphContentValue('pushpin-off');
+$_compareview__header-pin-button--sticky-color: var(--bo-button-active-color);
+$_compareview__header-pin-button--sticky-background: var(--bo-button-active-background);
+
+$compareview__header-buttons-icon--top: 1px;
+// $compareview__header-buttons--padding-bottom: 2px;
+$compareview__header-buttons-icon--margin-right: $_container-spacing-default__tiny;
+$compareview__header-buttons--font-size: $font-size__base;
+
+$compareview__header-show-diff-only--bottom: $toolbar__button-default--size - $_container-spacing-default__core + $compareview__header-cell--padding-bottom;
+$_compareview__header-show-diff-only--padding-x: $_container-spacing-default__tiny;
+$compareview__header-add-button--bottom: $compareview__header-show-diff-only--bottom + $_container-spacing-default__small;//$container-spacing-default__base + $container-spacing-default__two-thirds;
+$compareview__header-add-button--line-height: $font-size__h4;//$compareview__header-icon--size;
+$_compareview__header-add-icon--content: _getIconGlyphContentValue('add');
+$_compareview__header-title-label--padding-bottom: $compareview__header-add-button--bottom + $_compareview__header-icon-button--min-height;
+$_compareview__header-title-label--padding-top: floor(($compareview__header-icon--size - $compareview__section-title-label--font-size)/2);
+
+$compareview-flex__header-difference-indicator--top: $compareview-flex__header-cell--padding-top;
+$compareview__header-difference-indicator--left: nth($compareview__cell--padding, 4);
+$_compareview__header-difference-indicator-icon--size: $form-defaults__input-icon--size;
+$_compareview__header-difference-indicator--margin-top: floor(($compareview__header-icon--size - $_compareview__header-difference-indicator-icon--size)/2);
+
+
+$compareview__icon-default--font-family: $font-family__icon;
+$compareview__difference-indicator--color: $_default__status-negative--color;
+$compareview__difference-indicator-icon--content: _getIconGlyphContentValue("overlay");
+$compareview__difference-indicator-icon--color: var(--bo-negative-color);
+$compareview__difference-indicator-icon--size: 8px;
+$compareview__difference-indicator-icon--border-radius: ceil($compareview__difference-indicator-icon--size/2);
+$compareview__difference-indicator-icon--margin: 0 2px;
+$compareview__difference-indicator-icon-v-middle--margin-top: $compareview__difference-indicator-icon--border-radius * -1;
+$compareview__difference-indicator-icon-h-middle--margin-left: $compareview__difference-indicator-icon-v-middle--margin-top;
+$compareview__difference-indicator-icon--font-size: $font-size__small;
+
+$compareview__progress-icon--size: $compareview__header-icon--size;
+$compareview__progress-icon-spinner--bg-size: $toolbar__button-small--size;
+$compareview__progress-icon-spinner--margin-top: floor($compareview__progress-icon--size/2) * -1;
+$compareview__progress-icon-spinner--border-radius: ceil($compareview__progress-icon--size/2);
+$compareview__progress-icon-spinner--animation-duration: 700ms;
+$compareview__process-container--opacity: 0.4;
+
+$compareview__value-error--font-style: italic;
+
+$compareview__empty-container--width: 310px;
+$compareview__empty-container--padding: 370px 0 0;
+$compareview__empty-content--top: 50%;
+$compareview__empty-content--left: 50%;
+$compareview__empty-content--padding-top: -40px;
+$compareview__empty-item--padding: 30px;
+$compareview__empty-button--bottom: 30px;
+$compareview__empty-button--color: $_action__button--color;
+$_compareview__empty-button--bg-color: var(--bo-button-background);
+$compareview__empty-button--border: $boxes--border__thin solid var(--bo-button-border-color);
+// $compareview__empty-button--border-radius: 2px;
+// $compareview__empty-button--padding-space-x: $container-spacing-default__half;
+// $compareview__empty-button--padding-space-y: 7px;
+$compareview__empty-button--font-size: $font-size__base;
+$compareview__empty-button--line-height: $font-size__base;
+$compareview__empty-button--padding: (floor(($editor-defaults__inline-box--height - $compareview__empty-button--line-height)/2) - nth($compareview__empty-button--border, 1)) $container-spacing-default__half;
+$compareview__empty-button-hover--color: var(--bo-button-hover-color);
+$compareview__empty-button-hover--bg-color: var(--bo-button-hover-background);
+
+// $compareview__empty-button-icon--margin-right: $compareview__empty-button--padding-space-x + 5px;
+// $compareview__empty-button-icon--thickness: 2px;
+// $compareview__empty-button-icon--size: 20px;
+// $compareview__empty-button-icon-adjust--margin: floor($compareview__empty-button-icon--size/2)*-1;
+// $compareview__empty-button-icon-border--margin: floor($compareview__empty-button-icon--thickness/2) * -1;
+
+//$compareview__empty-button-icon--left: floor($compareview__empty-button-icon--size/2) + $compareview__empty-button--padding-space-x - 5px;
+
+$compareview__localized-row-current--opacity: 1;
+// $compareview__localized-row-main--opacity: 0;
+
+$compareview__localized-icon--top: $_container-spacing-default__tiny;
+$compareview__localized-icon--right: $_container-spacing-default__small + $_container-spacing-default__core;
+$compareview__localized-icon--padding: 0;
+
+$compareview__localized-language-differentiator--top: 5px;
+$compareview__localized-language-differentiator--right: 45px;
+$compareview__localized-language-differentiator--color: $_default-list__item--color;
+$compareview__localized-language-differentiator-different--color: var(--bo-negative-color);
+
+$compareview__collection-expand-button--content: _getIconGlyphContentValue('navigation-down-arrow');//$compareview__section-expand-button--content;
+$compareview__collection-collapse-button--content: _getIconGlyphContentValue('navigation-up-arrow');//$compareview__section-collapse-button--content;
+$compareview__collection-button-hover--color: $_button-hover--color;
+
+$compareview__collection-header-button--size: $compareview__header-icon--size;
+$compareview__collection-header-button--top: 7px;
+$_compareview__collection-header-button--font-size: $font-size__base;
+$compareview__collection-header-button--right: $container-spacing-default__half;
+$compareview__collection-header-span--font-style: italic;
+
+$compareview__collection-values-container--border-top: $boxes--border__thin solid var(--bo-list-border-color);
+$compareview__collection-values-container--spacing: 5px;
+
+$compareview__collection-value-entry--margin-bottom: $compareview__collection-values-container--spacing;
+
+$_compareview__collection-button--color: $_button__icon--color;
+$_compareview__collection-button--cursor: pointer;
+$_compareview__collection-button--font: $font-family__icon;
+$_compareview__collection-button--margin-top: 5px;
+$_compareview__collection-button--margin-right: $container-spacing-default__half;
+$_compareview__collection-expand-button--color: $_button__icon--color;
+$_compareview__collection-expand-button--content: $compareview__section-expand-button--content;
+$_compareview__collection-collapse-button--content: $compareview__section-collapse-button--content;
+
+$_compareview__show-more-container--font-size: $font-size__base;
+$_compareview__show-more-container--line-height: ceil(($_compareview__show-more-container--font-size * 1.35));;
+
+$_compareview__header-title--font-size: $font-size__h3;
+$_compareview__header-title--padding-left: $_container-spacing-default__small;
+$_compareview__toolbar-rightslot-padding-right: $_container-spacing-default__small;
+
+$compareview_drag-drop-drag-over-color: $_default-list__item-selected--bg-color;

@@ -1,0 +1,193 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Editor-Area: Tabs
+================================*/
+// Defines Tabs in the Tab-Panel of the Editor-Area
+
+
+@import "../support/_defaultEditorArea-mixins.scss";
+
+.yw-editorarea-tabbox-tabpanels-tabpanel-groupbox {
+    &-caption {
+        text-align: $editor-area__tabpanel-groupbox-header-caption--text-align;
+        border-top: $editor-area__tabpanel-delimit-horizontal--border-width solid $editor-area__tabpanel-delimit-horizontal--border-color;
+        padding: $editor-area__tabpanel-groupbox-header--padding;
+        position: relative;
+
+        .z-caption-content {
+            background-color: transparent;
+            color: $editor-area__tabpanel-groupbox-header-caption--color;
+            padding-top: 0;
+            padding-right: $editor-area__tabpanel-groupbox-header-caption--padding-right;
+        }
+        &:hover .yw-expandCollapse {
+            background-position: 0 (-$editor-area__tabpanel-groupbox-header-collapse-icon--size);
+        }
+        .yw-expandCollapse {
+            background-position: 0 0;
+
+            &:hover {
+                background-position: 0 (-$editor-area__tabpanel-groupbox-header-collapse-icon--size);
+                box-shadow: none;
+            }
+        }
+
+    }
+    &.z-groupbox-collapsed .z-caption {
+        .yw-expandCollapse {
+            background-position: (-$editor-area__tabpanel-groupbox-header-collapse-icon--size) 0;
+
+            &:hover {
+                background-position: (-$editor-area__tabpanel-groupbox-header-collapse-icon--size) (-$editor-area__tabpanel-groupbox-header-collapse-icon--size);
+            }
+        }
+        &:hover .yw-expandCollapse {
+            background-position: (-$editor-area__tabpanel-groupbox-header-collapse-icon--size) (-$editor-area__tabpanel-groupbox-header-collapse-icon--size);
+        }
+    }
+
+    &.z-groupbox:first-child .z-groupbox-header {
+        border:none;
+    }
+    .z-groupbox-content {
+        >table.z-tablelayout {
+            width: 100%;
+            table-layout: fixed;
+        }
+    }
+}
+
+.yw-editorarea-tabbox-tabs-tab {
+    &:first-child {
+        padding-left: $_editor-area__tabbox-tab--padding-x;
+
+        .z-window-highlighted & {
+            padding-left: $_editor-area__window-highlighted-tabbox-tab--padding-x;
+        }
+    }
+    &:last-child {
+        padding-right: $_editor-area__tabbox-tab--padding-x;
+
+        .z-window-highlighted & {
+            padding-right: $_editor-area__window-highlighted-tabbox-tab--padding-x;
+        }
+    }
+}
+
+.z-window-highlighted {
+
+    .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox .z-groupbox-content > .z-hlayout > .z-hlayout-inner {
+        padding-right: 0 !important;
+        width: 100%;
+        > .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed {
+            padding-right: $editor-area__fluid-mode-default-element--padding-right;
+        }
+    }
+}
+
+.yw-editor-area-main-content {
+    & .yw-editorarea-tabbox,
+    .cng-adminmode & .yw-editorarea-tabbox {
+        position: relative;
+
+        .z-tabbox-content {
+            background: $editor-area__tabbox--bg-color;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+        }
+        .z-tabbox-content-wrapper,
+        > .z-tabbox-content {
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            height: auto;
+            width: 100%;
+        }
+        .yw-editorarea-tabbox-tabs + .z-tabbox-content-wrapper,
+        .yw-editorarea-tabbox-tabs + .z-tabbox-content {
+            top: $editor-area__tabbox-split-tabs-content--top;
+        }
+        .yw-editorarea-tabbox-tabpanels {
+            .z-tabpanel {
+                overflow: visible;
+                height: auto !important;
+            }
+        }
+    }
+    & .yw-editorarea-tabbox.yw-static-section-active,
+    .cng-adminmode & .yw-editorarea-tabbox {
+        > .yw-editorarea-tabbox-tabs {
+            height: $editor-area__tabbox-split-tabs--height;
+        }
+        .yw-editorarea-tabbox-tabpanels {
+            float: left;
+            width: $editor-area__tabbox-split-section-tabpanels--width;
+        }
+        .z-tabbox-static-section {
+            width: $editor-area__tabbox-split-section-static-section--width;
+            background: $editor-area__tabpanel-groupbox--bg-color;
+            float: right;
+        }
+        > .z-tabbox-content-wrapper {
+            overflow: auto;
+            display: inline-block;
+            padding: $editor-area__tabbox-split-content-wrapper--padding;
+
+            .z-tabbox-content {
+                display: table;
+                table-layout: fixed;
+                min-height: 100%;
+                box-shadow: $defaults__content-box-shadow-small;
+                .z-tabbox-static-section,
+                .yw-editorarea-tabbox-tabpanels {
+                    display: table-cell;
+                    float: none;
+                    vertical-align: top;
+                }
+                .yw-static-section-slot {
+                    min-height: 100%;
+                    overflow: visible;
+                }
+                @media all and (max-width: 540px) {
+                    .z-tabbox-static-section,
+                    .yw-editorarea-tabbox-tabpanels {
+                        width: 100%;
+                        display: block;
+                        float: none;
+                    }
+                }
+            }
+            .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox:first-child {
+                margin-top: 0;
+            }
+            .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .yw-editorarea-tabbox-tabpanels button.yw-expandCollapse {
+            @if $editor-area__tabbox-split-groupbox-header-collapse--right {
+                right: $editor-area__tabbox-split-groupbox-header-collapse--right;
+            }
+        }
+    }
+
+
+    .cng-adminmode & {
+        .yw-editorarea-tabbox .z-tabbox-static-section .widget_cnt {
+            width: $editor-area__tabbox-split-section-static-section--width;
+            float: right;
+            left: auto;
+        }
+        .yw-static-section-slot.yw-static-section-inactive {
+            display: block;
+        }
+    }
+    .yw-editorarea-tabbox.yw-static-section-inactive .z-tabbox-static-section,
+    .yw-static-section-slot.yw-static-section-inactive {
+        display: none;
+    }
+}

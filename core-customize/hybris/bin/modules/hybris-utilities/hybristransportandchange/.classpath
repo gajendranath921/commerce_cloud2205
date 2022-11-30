@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="eclipsebin/notused"/>
+
+				
+				
+	<classpathentry exported="true" kind="lib" path="lib/gmbal-api-only-4.0.3.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/istack-commons-runtime-3.0.12.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jakarta.activation-api-1.2.2.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jakarta.jws-api-2.1.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jakarta.xml.soap-api-1.4.2.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jakarta.xml.ws-api-2.3.3.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jaxb-runtime-2.3.6.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/mimepull-1.9.15.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/policy-2.7.10.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/rt-2.3.5.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/saaj-impl-1.5.3.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/stax-ex-1.8.3.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/streambuffer-2.0.2.jar" />
+	<classpathentry exported="true" kind="lib" path="bin/hybristransportandchangeserver.jar" />
+	<classpathentry exported="true" kind="lib" path="resources" />
+	<classpathentry exported="true" output="eclipsebin/classes" kind="src" path="testsrc" />
+	<classpathentry exported="false" kind="src" path="/platform" />
+				
+</classpath>
+				

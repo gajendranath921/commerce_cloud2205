@@ -1,0 +1,48 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+.ye-com_hybris_cockpitng_editor_enummultireferenceeditor,
+.ye-com_hybris_cockpitng_editor_defaultmultireferenceeditor {
+
+    // .ye-default-reference-editor-bandbox.ye-create-only.z-bandbox-readonly {
+    //     .z-bandbox-button.z-bandbox-disabled {
+    //         display: none;
+    //     }
+    // }
+    div.ye-default-reference-editor-selected-listbox {
+    //    margin-bottom: $default-reference-editor__listbox-to-create-only-box--margin-bottom;
+        &.yw-listbox-disabled {
+            div.ye-default-reference-editor-item-container.ye-remove-enabled:hover,
+            div.ye-default-reference-editor-selected-item-container:hover {
+                padding-right: $default-reference-editor__multi-reference-list-item--padding-right;
+            }
+        }
+    }
+    
+    div.ye-default-reference-editor-item-container.ye-remove-enabled:hover,
+    div.ye-default-reference-editor-selected-item-container:hover {
+        padding-right: $default-reference-editor__list-item-remove-enabled-hover--padding-right;
+
+    }
+
+}
+
+.ye-default-reference-editor-bandbox {
+    .ye-default-reference-editor & {
+        &,
+        &.ye-create-only + .z-bandbox-button.ye-create-only {
+            margin-top: $default-reference-editor__listbox-to-create-only-box--margin-bottom;
+        }
+    }
+    .ye-default-reference-editor .ye-default-reference-editor-selected-listbox.hidden ~ &,
+    .ye-default-reference-editor .ye-default-reference-editor-selected-listbox.hidden ~ .z-div &,
+    .ye-default-reference-editor .ye-default-reference-editor-selected-listbox[style*="display:none"] ~ &,
+    .ye-default-reference-editor .ye-default-reference-editor-selected-listbox[style*="display:none"] ~ .z-div &,
+    .ye-default-reference-editor .ye-default-reference-editor-selected-listbox[style*='display: none'] ~ &,
+    .ye-default-reference-editor .ye-default-reference-editor-selected-listbox[style*='display: none'] ~ .z-div & {
+        &,
+        &.ye-create-only + .z-bandbox-button.ye-create-only {
+            margin-top: 0;
+        }
+    }
+}

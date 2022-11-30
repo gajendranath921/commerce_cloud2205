@@ -1,0 +1,145 @@
+<div class="pe-datetime-range">
+    <!-- date from -->
+    <div class="col-md-6 pe-datetime-range__from" [ngClass]="{ 'has-error': !isFromDateValid }">
+        <label
+            for="customization-start-date"
+            translate="personalization.modal.customizationvariationmanagement.basicinformationtab.details.startdate"
+            class="fd-form__label perso__datetimepicker__label"
+        ></label>
+        <se-help>
+            <span
+                translate="personalization.modal.customizationvariationmanagement.basicinformationtab.details.startdate.help"
+            ></span>
+        </se-help>
+        <!-- editable -->
+        <div
+            id="date-picker-range-from"
+            #datePickerRangeFrom
+            class="input-group se-date-field pe-date-field"
+            *ngIf="isEditable"
+        >
+            <input
+                type="text"
+                name="data-date-time-from-to-key"
+                id="customization-start-date"
+                class="fd-form-control se-date-field--input pe-date-field__input"
+                [placeholder]="placeholderText | translate"
+                [attr.disabled]="!isEditable ? true : null"
+                [(ngModel)]="dateFrom"
+                (keyup)="dateFromInputOnKeyup($event)"
+            />
+            <span
+                class="input-group-addon se-date-field--button pe-datetime-range__picker"
+                *ngIf="isEditable"
+            >
+                <span class="sap-icon--calendar pe-datetime-range__picker__icon"></span>
+            </span>
+        </div>
+        <!-- non editable -->
+        <div
+            id="date-picker-range-from"
+            #datePickerRangeFrom
+            class="input-group se-date-field pe-date-field"
+            *ngIf="!isEditable"
+        >
+            <input
+                type="text"
+                name="data-date-time-from-to-key"
+                id="customization-start-date"
+                class="
+                    fd-form-control
+                    se-date-field--input
+                    pe-date-field__input
+                    pe-input--is-disabled
+                "
+                disabled
+                data-date-formatter
+                data-format-type="short"
+                [(ngModel)]="dateFrom"
+            />
+        </div>
+        <span
+            *ngIf="!isFromDateValid"
+            class="help-block pe-datetime__error-msg pe-datetime__msg"
+            translate="personalization.modal.customizationvariationmanagement.basicinformationtab.details.wrongdateformatfrom.description"
+        >
+        </span>
+    </div>
+    <!-- date to -->
+    <div
+        class="col-md-6 pe-datetime-range__to"
+        [ngClass]="{ 'has-error': !isToDateValid, 'has-warning': isEndDateInThePast }"
+    >
+        <label
+            for="customization-end-date"
+            translate="personalization.modal.customizationvariationmanagement.basicinformationtab.details.enddate"
+            class="fd-form__label perso__datetimepicker__label"
+        ></label>
+        <se-help>
+            <span
+                translate="personalization.modal.customizationvariationmanagement.basicinformationtab.details.enddate.help"
+            ></span>
+        </se-help>
+        <!-- editable -->
+        <div
+            id="date-picker-range-to"
+            #datePickerRangeTo
+            class="input-group se-date-field pe-date-field"
+            *ngIf="isEditable"
+        >
+            <input
+                type="text"
+                name="data-date-time-from-to-key"
+                id="customization-end-date"
+                class="fd-form-control se-date-field--input pe-date-field__input"
+                [placeholder]="placeholderText | translate"
+                [attr.disabled]="!isEditable ? true : null"
+                [(ngModel)]="dateTo"
+                (keyup)="dateToInputOnKeyup($event)"
+            />
+            <span
+                class="input-group-addon se-date-field--button pe-datetime-range__picker"
+                *ngIf="isEditable"
+            >
+                <span class="sap-icon--calendar pe-datetime-range__picker__icon"></span>
+            </span>
+        </div>
+        <!-- non editable -->
+        <div
+            id="date-picker-range-to"
+            #datePickerRangeTo
+            class="input-group se-date-field pe-date-field"
+            *ngIf="!isEditable"
+        >
+            <input
+                type="text"
+                name="data-date-time-from-to-key"
+                id="customization-end-date"
+                class="
+                    fd-form-control
+                    se-date-field--input
+                    pe-date-field__input
+                    pe-input--is-disabled
+                "
+                disabled
+                data-date-formatter
+                data-format-type="short"
+                [(ngModel)]="dateTo"
+            />
+        </div>
+        <span
+            *ngIf="!isToDateValid"
+            class="help-block pe-datetime__error-msg pe-datetime__msg"
+            translate="personalization.modal.customizationvariationmanagement.basicinformationtab.details.wrongdateformat.description"
+        >
+        </span>
+        <span
+            *ngIf="isEndDateInThePast"
+            class="help-block pe-datetime__warning-msg pe-datetime__msg"
+        >
+            <span
+                translate="personalization.modal.customizationvariationmanagement.basicinformationtab.details.enddateinthepast.description"
+            ></span>
+        </span>
+    </div>
+</div>

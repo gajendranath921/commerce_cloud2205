@@ -1,0 +1,138 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+//    DefaultReferenceEditor Validation
+// ================================
+
+@import "../support/_defaultreferenceeditor-variables.scss";
+@import "../../../../defaultEditorArea/scss/support/_defaultEditorArea-mixins.scss";
+
+@mixin _addReferenceEditorElementsInValidationStates ($type, $color, $bg-color, $change-reference-editor-selected-listbox:true, $button-hover-bg-color:false) {
+    .ye-validation-#{$type} {
+        &.yw-loceditor-row .ye-default-reference-editor,
+        > .ye-default-reference-editor {
+            div.ye-default-reference-editor-selected {
+                &-item-container {
+                    @include _colored-background-border ($color, $bg-color, true);
+
+                    .z-label {
+                        color: $color;
+                    }
+                }
+                &-listbox .z-listitem:hover {
+                    div.ye-default-reference-editor-selected-item-container.ye-remove-enabled {
+                        background-color: $bg-color;
+                    }
+                }
+            }
+            &-listbox .z-listitem:hover {
+                div.ye-default-reference-editor-selected-item-container.ye-remove-enabled {
+                    @if $bg-color {
+                        background-color: $bg-color;
+                    }
+                }
+                /*.ye-default-reference-editor-remove-button:after {
+                    background-position: center  (-$default-reference-editor__list-item-remove-icon--size*3);
+                }*/
+            }
+        }
+
+        .ye-default-reference-editor-selected-listbox .z-listitem div.ye-default-reference-editor-selected-item-container{
+            border-bottom: $default-reference-editor__box--border-width solid $color;
+        }
+
+        .ye-default-reference-editor-bandbox {
+            border-color: $color;
+            .z-bandbox-input {
+                border-right-width: 0;
+                @if $bg-color {
+                    background: $bg-color;
+                }
+                color: $color;
+            }
+            .z-bandbox-button,
+            .z-bandbox-input {
+                border: $default-reference-editor__box--border-width solid $color;
+            }
+
+        }
+
+        > .yw-loceditor-row-locale.z-label,
+        > .yw-loceditor-row-editor .ye-wysiwyg > .z-ckeditor > .cke {
+            border-color: $color;
+        }
+        > .yw-loceditor-row-editor .ye-wysiwyg > .z-ckeditor {
+            .cke_bottom, .cke_top {
+                background-color: transparent;
+            }
+            > .cke {
+                @if $bg-color {
+                    background: $bg-color;
+                }
+            }
+        }
+       /* > .yw-loceditor-row-editor .ye-wysiwyg > .z-ckeditor .cke_wysiwyg_frame {
+            background-color: $bg-color;
+        }
+        */
+        .yw-loceditor-dynamic-content {
+            .z-bandbox-input {
+                color: $editor-area__box--text-color;
+                background: inherit;
+            }
+            .z-bandbox-button,
+            .z-bandbox-input {
+                border-color: $editor-area__box--border-color;
+            }
+            .ye-default-reference-editor-bandbox {
+                border-color: $color;
+                .z-bandbox-input {
+                    border-right-width: 0;
+                    background: $bg-color !important;
+                    color: $color !important;
+                    border-color: inherit;
+                }
+                .z-bandbox-button {
+                    border-color: inherit;
+                }
+                &.ye-create-only {
+                    + .z-bandbox-button.ye-create-only {
+                        border-color: $color;
+                    }
+                }
+            }
+        }
+        @if $change-reference-editor-selected-listbox {
+            .ye-default-reference-editor-selected-listbox .ye-default-reference-editor-selected-item-container {
+                @if $bg-color {
+                    background: $bg-color;
+                }
+                color: $color;
+            }
+        }
+    }
+    @if $button-hover-bg-color {
+        .yw-loceditor-fixed-open,
+        .yw-loceditor-fixed-closed,
+        .yw-loceditor-dynamic-content  {
+            .ye-validation-#{$type} .z-bandbox-button:hover {
+                background: $button-hover-bg-color;
+            }
+        }
+    }
+}
+
+@include _addReferenceEditorElementsInValidationStates(error, $validation__error--color, $editor-area__validation_error--bg-color); //, true, $validation__error--color); //add (<-) for coloring bg in validation-state
+@include _addReferenceEditorElementsInValidationStates(warn, $validation__warn--color, $editor-area__validation_warn--bg-color);
+@include _addReferenceEditorElementsInValidationStates(info, $validation__info--color, $editor-area__validation_info--bg-color, false);
+
+.ye-validation-error,
+.ye-validation-warn,
+.ye-validation-info {
+    &.yw-loceditor-row .ye-default-reference-editor,
+    > .ye-default-reference-editor {
+        .ye-default-reference-editor-bandbox.ye-create-only + .z-bandbox-button.ye-create-only:focus {
+            border-color: $editor-area__box-focus--border-color;
+        }
+    }
+}

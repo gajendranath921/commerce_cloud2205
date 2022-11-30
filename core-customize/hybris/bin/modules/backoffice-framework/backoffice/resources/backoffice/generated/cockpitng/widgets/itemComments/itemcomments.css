@@ -1,0 +1,136 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-commentslist {
+  position: relative; }
+  .yw-commentslist-showpopup-btn {
+    color: var(--bo-button-icon-color);
+    background: var(--bo-button-background);
+    border: 1px solid var(--bo-button-border-color);
+    border-radius: var(--bo-button-border-radius);
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    padding: 0; }
+    .yw-commentslist-showpopup-btn:hover {
+      background-color: var(--bo-button-hover-background);
+      color: var(--bo-button-hover-color);
+      border-color: var(--bo-button-hover-border-color); }
+    .yw-commentslist-showpopup-btn:focus {
+      z-index: 5;
+      box-shadow: none;
+      outline: var(--bo-content-focus-outline-width) var(--bo-content-focus-outline-style) var(--bo-content-focus-outline-color);
+      outline-offset: -.1875rem;
+      border-color: var(--bo-button-hover-border-color);
+      background: var(--bo-button-background);
+      color: var(--bo-button-icon-color); }
+    .yw-commentslist-showpopup-btn:before {
+      content: "\e0b2";
+      font-family: var(--bo-content-icon-font-family);
+      font-size: 16px;
+      line-height: 40px;
+      color: var(--bo-button-icon-color); }
+      .yw-commentslist-showpopup-btn:before:hover {
+        color: var(--bo-button-hover-color); }
+  .yw-commentslist-comments-count-label {
+    border: transparent;
+    color: var(--bo-contrast-text-color);
+    top: -5px;
+    right: 0;
+    background-color: var(--bo-highlight-color);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    height: 20px;
+    min-width: 20px;
+    border-radius: 2px;
+    padding: 0 2px;
+    transform: translate3d(50%, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    text-align: center; }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-commentslist-popup {
+  width: 320px;
+  background: var(--bo-list-background); }
+  .yw-commentslist-popup .yw-add-comment-section-button-ok {
+    text-transform: uppercase; }
+.yw-commentslist-addcomment-button {
+  margin: 20px;
+  width: calc(100% - (20px * 2)); }
+.yw-commentslist-bottom-bar-popup {
+  bottom: 52px;
+  top: auto !important; }
+.yw-commentslist-list {
+  overflow: auto;
+  max-height: 380px;
+  border-bottom: 1px solid var(--bo-list-border-color); }
+.yw-commentslist-one-comment {
+  border-top: 1px solid var(--bo-list-border-color);
+  padding: 20px 20px; }
+  .yw-commentslist-one-comment:first-child {
+    border-top-width: 0; }
+.yw-commentslist-comment-header {
+  color: var(--bo-title-color);
+  margin: 0 0 8px;
+  vertical-align: top;
+  line-height: 16px; }
+  .yw-commentslist-comment-header > .z-label {
+    display: inline-block;
+    vertical-align: top; }
+.yw-commentslist-comment-author-label {
+  padding-right: 8px;
+  max-width: 136px;
+  font-size: 16px;
+  color: var(--bo-title-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+.yw-commentslist-comment-date-label {
+  color: var(--bo-tile-text-color);
+  font-size: 12px;
+  font-weight: 300;
+  text-align: right;
+  float: right; }
+.yw-commentslist-comment-content {
+  color: var(--bo-text-color); }
+.yw-commentslist-comment-empty {
+  padding: 20px 20px;
+  color: var(--bo-title-color); }
+
+.yw-add-comment-section {
+  padding: 16px 20px 20px;
+  width: 100%;
+  display: inline-block; }
+  .yw-add-comment-section-textbox {
+    background: var(--bo-input-background);
+    border-color: var(--bo-input-border-color);
+    color: var(--bo-input-text-color);
+    height: 90px;
+    width: 100%;
+    resize: none;
+    margin-bottom: 8px;
+    display: block;
+    clear: both; }
+    .yw-add-comment-section-textbox:focus {
+      outline-offset: -0.1875rem;
+      z-index: 5;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      outline-width: var(--bo-content-focus-outline-width);
+      outline-color: var(--bo-content-focus-outline-color);
+      outline-style: var(--bo-content-focus-outline-style); }
+  .yw-add-comment-section .z-button {
+    display: inline-block; }
+  .yw-add-comment-section-button-ok {
+    float: right; }
+  .yw-add-comment-section-button-cancel {
+    float: left; }

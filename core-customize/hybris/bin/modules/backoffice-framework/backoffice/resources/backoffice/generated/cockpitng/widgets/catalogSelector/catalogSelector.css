@@ -1,0 +1,273 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Catalog Selector Menu Button
+================================*/
+/* Status */
+/* Button Color Scheme */
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+.yw-catalog-selector {
+  color: var(--bo-text-color);
+  position: relative; }
+  .yw-catalog-selector:before, .yw-catalog-selector:after {
+    width: 1px;
+    content: "";
+    background-color: var(--bo-button-background);
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    z-index: 1; }
+  .yw-catalog-selector:before {
+    left: 0; }
+  .yw-catalog-selector:after {
+    right: 0; }
+  .yw-catalog-selector-button.z-button {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    min-height: 52px;
+    font-size: 14px;
+    background: var(--bo-button-background);
+    padding: 0 34px 0 16px;
+    color: var(--bo-text-color);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-transform: none;
+    font-weight: 500;
+    text-align: left;
+    position: relative;
+    border-color: transparent; }
+    .yw-catalog-selector-button.z-button:active {
+      box-shadow: none; }
+    .yw-catalog-selector-button.z-button:after {
+      right: 16px;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      content: "\e1ef";
+      margin-top: -8px;
+      font-family: var(--bo-content-icon-font-family);
+      font-size: 16px;
+      top: 50%;
+      text-align: center;
+      color: var(--bo-button-icon-color);
+      position: absolute; }
+  span:empty + .yw-catalog-selector-button.z-button:after {
+    content: "\e1f0"; }
+  .yw-catalog-selector-toolbarbutton {
+    min-height: 52px;
+    padding: 12px 8px; }
+    .yw-explorerTree-right-holder .yw-explorerTree-widget-slot .yw-catalog-selector-toolbarbutton.widget_body {
+      min-width: 72px;
+      float: right;
+      max-width: 100%; }
+  .yw-catalog-selector-toolbarbutton .yw-catalog-selector:after, .yw-catalog-selector-toolbarbutton .yw-catalog-selector:before {
+    display: none; }
+  .yw-catalog-selector-toolbarbutton .yw-catalog-selector-button.z-button {
+    padding: 0 24px 0 8px;
+    min-height: 28px;
+    min-width: 48px;
+    height: 28px;
+    border-radius: var(--bo-button-border-radius);
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--bo-button-icon-color); }
+    .yw-catalog-selector-toolbarbutton .yw-catalog-selector-button.z-button:after {
+      font-size: 14px;
+      color: var(--bo-button-icon-color);
+      right: 4px; }
+    .yw-catalog-selector-toolbarbutton .yw-catalog-selector-button.z-button, .yw-catalog-selector-toolbarbutton .yw-catalog-selector-button.z-button[disabled], .yw-catalog-selector-toolbarbutton .yw-catalog-selector-button.z-button[disabled]:hover, .yw-catalog-selector-toolbarbutton .yw-catalog-selector-button.z-button[disabled]:focus {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--bo-button-icon-color); }
+    .yw-catalog-selector-toolbarbutton .yw-catalog-selector-button.z-button:hover, .yw-catalog-selector-toolbarbutton .yw-catalog-selector-button.z-button:focus {
+      color: var(--bo-button-hover-color);
+      background-color: var(--bo-button-hover-background);
+      border-color: var(--bo-button-hover-border-color); }
+  .yw-catalog-selector-toolbarbutton span[style*="display: none"] + .yw-catalog-selector-button.z-button {
+    color: var(--bo-button-hover-color);
+    background-color: var(--bo-button-hover-background);
+    border-color: var(--bo-button-hover-border-color); }
+
+/* Status */
+/* Button Color Scheme */
+/*================================
+        Catalog Selector Popup
+================================*/
+/* Status */
+/* Button Color Scheme */
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+.yw-catalog-selector-popup {
+  width: 320px;
+  overflow: auto; }
+  .yw-catalog-selector-popup .z-popup-content {
+    padding: 0; }
+  .yw-catalog-selector-popup .z-icon-caret-right:after,
+  .yw-catalog-selector-popup .z-icon-caret-down:after,
+  .yw-catalog-selector-popup .yw-treerow-catalogVersion .z-treecell-content:after,
+  .yw-catalog-selector-popup .yw-treerow-all .z-treecell-content:after {
+    border-top: 1px solid var(--bo-list-border-color);
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: 0; }
+  .yw-catalog-selector-popup .z-tree-icon {
+    vertical-align: top; }
+  .yw-catalog-selector-popup .z-icon-caret-right,
+  .yw-catalog-selector-popup .z-icon-caret-down {
+    width: 24px;
+    height: 16px;
+    vertical-align: top;
+    display: inline; }
+    .yw-catalog-selector-popup .z-icon-caret-right:before,
+    .yw-catalog-selector-popup .z-icon-caret-down:before {
+      color: var(--bo-content-icon-color);
+      width: 24px;
+      text-align: center;
+      position: absolute; }
+  .yw-catalog-selector-popup .z-tree {
+    border: none; }
+  .yw-catalog-selector-popup .z-treecell-text {
+    font-size: 14px;
+    font-family: var(--bo-font-family);
+    padding-left: 3px;
+    padding-right: 16px;
+    display: inline-block;
+    position: relative;
+    word-break: break-all;
+    word-wrap: break-word; }
+  .yw-catalog-selector-popup .z-treecell-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--bo-text-color);
+    line-height: 20px;
+    padding: 0; }
+    .yw-catalog-selector-popup .z-treecell-content .z-tree-icon {
+      display: inline-block;
+      width: 24px;
+      height: 16px;
+      text-align: left; }
+    .yw-catalog-selector-popup .z-treecell-content .z-tree-line {
+      height: auto; }
+  .yw-catalog-selector-popup .z-treerow {
+    margin-top: -1px;
+    padding: 9px 0 10px 16px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background: var(--bo-list-background); }
+    .yw-catalog-selector-popup .z-treerow .z-treecell {
+      font-weight: 400;
+      background: none;
+      position: static; }
+    .yw-catalog-selector-popup .z-treerow:hover {
+      background-color: var(--bo-list-hover-background);
+      cursor: pointer; }
+    .yw-catalog-selector-popup .z-treerow-selected .z-treecell-text {
+      color: var(--bo-selected-color);
+      padding-left: 24px; }
+      .yw-catalog-selector-popup .z-treerow-selected .z-treecell-text:before {
+        content: "\e05b";
+        font-family: var(--bo-content-icon-font-family);
+        font-weight: 400;
+        text-indent: -16px;
+        width: 16px;
+        color: var(--bo-selected-color);
+        display: inline-block;
+        position: absolute; }
+    .yw-catalog-selector-popup .z-treerow-checkable {
+      display: none; }
+    .yw-catalog-selector-popup .z-treerow:hover .yw-treerow-catalogVersion-sync-cell-btn {
+      display: inline-block; }
+  .yw-catalog-selector-popup .yw-treerow-catalog .z-tree-line.z-tree-spacer, .yw-catalog-selector-popup .yw-treerow-catalogVersion .z-tree-line.z-tree-spacer, .yw-catalog-selector-popup .yw-treerow-all .z-tree-line.z-tree-spacer {
+    display: none; }
+  .yw-catalog-selector-popup .yw-treerow-catalog, .yw-catalog-selector-popup .yw-treerow-all {
+    position: relative; }
+  .yw-catalog-selector-popup .yw-treerow-catalog .z-tree-icon {
+    position: static; }
+    .yw-catalog-selector-popup .yw-treerow-catalog .z-tree-icon .z-tree-open:after {
+      content: ""; }
+  .yw-catalog-selector-popup .yw-treerow-catalogVersion {
+    padding-left: 40px;
+    position: relative;
+    z-index: 1; }
+    .yw-catalog-selector-popup .yw-treerow-catalogVersion .z-treecell-text {
+      padding-right: 44px; }
+    .yw-catalog-selector-popup .yw-treerow-catalogVersion .z-treecell-content:after {
+      content: "";
+      bottom: 0;
+      top: auto; }
+    .yw-catalog-selector-popup .yw-treerow-catalogVersion-sync-cell-btn {
+      top: 9px;
+      bottom: 9px;
+      width: 24px;
+      right: 16px;
+      position: absolute;
+      background-color: transparent;
+      border: transparent;
+      box-shadow: none;
+      height: auto;
+      min-height: 0;
+      display: none; }
+      .yw-catalog-selector-popup .yw-treerow-catalogVersion-sync-cell-btn:before {
+        width: 16px;
+        height: 16px;
+        line-height: 1;
+        margin-top: -8px;
+        margin-left: -8px;
+        content: "\e00a";
+        font-family: var(--bo-content-icon-font-family);
+        font-size: 16px;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        position: absolute;
+        transition: rotate 0.2s ease-out;
+        transform: rotate(0deg); }
+      .yw-catalog-selector-popup .yw-treerow-catalogVersion-sync-cell-btn:hover, .yw-catalog-selector-popup .yw-treerow-catalogVersion-sync-cell-btn:active, .yw-catalog-selector-popup .yw-treerow-catalogVersion-sync-cell-btn:focus {
+        box-shadow: none; }
+      .yw-catalog-selector-popup .yw-treerow-catalogVersion-sync-cell-btn:active:before, .yw-catalog-selector-popup .yw-treerow-catalogVersion-sync-cell-btn:focus:before {
+        animation: rotate-animation 1.4s linear infinite; }
+  .yw-catalog-selector-popup .yw-treerow-all {
+    background-color: var(--bo-list-background);
+    padding-left: 16px; }
+    .yw-catalog-selector-popup .yw-treerow-all .z-treecell-content .z-treecell-text {
+      padding-left: 27px;
+      position: relative; }
+      .yw-catalog-selector-popup .yw-treerow-all .z-treecell-content .z-treecell-text:before {
+        margin-top: -12px;
+        top: 50%;
+        text-indent: 0px;
+        left: 4px;
+        content: "\e1d3";
+        font-family: var(--bo-content-icon-font-family);
+        font-size: 16px;
+        position: absolute;
+        color: inherit; }
+    .yw-catalog-selector-popup .yw-treerow-all .z-treecell-content:after {
+      content: ""; }

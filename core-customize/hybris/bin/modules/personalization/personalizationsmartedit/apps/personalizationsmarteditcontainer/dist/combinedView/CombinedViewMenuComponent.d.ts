@@ -1,0 +1,30 @@
+import { OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { CombinedView, CombinedViewSelectItem, CustomizationVariation, PersonalizationsmarteditContextUtils, PersonalizationsmarteditMessageHandler, PersonalizationsmarteditUtils } from 'personalizationcommons';
+import { CrossFrameEventService, IPermissionService } from 'smarteditcommons';
+import { PersonalizationsmarteditContextService, PersonalizationsmarteditPreviewService, PersonalizationsmarteditRestService } from '../service/';
+import { CombinedViewCommonsService } from './CombinedViewCommonsService';
+export declare class CombinedViewMenuComponent implements OnInit {
+    private translateService;
+    private contextService;
+    private messageHandler;
+    private restService;
+    private contextUtils;
+    private personalizationsmarteditUtils;
+    private previewService;
+    private combinedViewCommonsService;
+    private crossFrameEventService;
+    private permissionService;
+    combinedView: CombinedView;
+    selectedItems: CombinedViewSelectItem[];
+    isCombinedViewConfigured: boolean;
+    constructor(translateService: TranslateService, contextService: PersonalizationsmarteditContextService, messageHandler: PersonalizationsmarteditMessageHandler, restService: PersonalizationsmarteditRestService, contextUtils: PersonalizationsmarteditContextUtils, personalizationsmarteditUtils: PersonalizationsmarteditUtils, previewService: PersonalizationsmarteditPreviewService, combinedViewCommonsService: CombinedViewCommonsService, crossFrameEventService: CrossFrameEventService, permissionService: IPermissionService);
+    ngOnInit(): void;
+    combinedViewClick(): void;
+    getAndSetComponentsForElement(customizationId: string, variationId: string, catalog: string, catalogVersion: string): Promise<void>;
+    itemClick(item: CombinedViewSelectItem): Promise<void>;
+    getClassForElement(index: number): string;
+    getLetterForElement(index: number): string;
+    isItemFromCurrentCatalog(itemVariation: CustomizationVariation): boolean;
+    clearAllCombinedViewClick(): void;
+}

@@ -1,0 +1,68 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$border-layout__region--bg-color: var(--bo-container-background);
+$border-layout__region--box-shadow: false;
+
+$border-layout__mold-splitter--bg-color: var(--bo-container-border-color);
+$border-layout__mold-splitter-color: var(--bo-content-icon-color);
+$border-layout__mold-splitter-button-hover--bg-color: var(--bo-button-hover-background);
+$border-layout__mold-collapsed--bg-color: var(--bo-container-background);
+
+@mixin _collapsedBorders($border-width:false){
+    @if $border-width and $border-width > 0 {
+        > .z-south-collapsed {
+            border-top-width: $border-width;
+        }
+        > .z-north-collapsed {
+            border-bottom-width: $border-width;
+        }
+        > .z-west-collapsed {
+            border-right-width: $border-width;
+        }
+        > .z-east-collapsed {
+            border-left-width: $border-width;
+        }
+    }
+}
+
+$border-layout__mold-dark-splitter-button-hover--color: $white;
+$border-layout__splitter-collapsed--size: 40px;
+
+.yw-borderlayout {
+	.opaquetrue .yw-layoutregion {
+        @if $border-layout__region--bg-color {
+            background: $border-layout__region--bg-color;
+        }
+		@if $border-layout__region--box-shadow {
+			box-shadow: $border-layout__region--box-shadow;
+		}
+	}
+
+    > .z-borderlayout > div {
+        > .z-south,
+        > .z-north,
+        > .z-west,
+        > .z-east {
+            &-splitter {
+                background-color: $border-layout__mold-splitter--bg-color;
+
+                > span {
+                    color: $border-layout__mold-splitter-color;
+                    background-color: $border-layout__mold-splitter--bg-color;
+                    &:hover {
+                        background-color: $border-layout__mold-splitter-button-hover--bg-color;
+                        color: $border-layout__mold-splitter-color;
+
+                    }
+                }
+            }
+            &-collapsed {
+                background-color: $border-layout__mold-collapsed--bg-color;
+            }
+        }
+        @include _collapsedBorders($_layout--splitter-default--size);
+    }
+}

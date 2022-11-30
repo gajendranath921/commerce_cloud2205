@@ -1,0 +1,7 @@
+@import "cockpitng-globals.scss";
+
+div.yw-explorerTree .y-tree-icon {
+    @include setTreeIconGlyph("marketplacebackoffice_treenode_vendor", "vendors");
+    @include setTreeIconGlyph("marketplacebackoffice_treenode_user", "vendor_users");
+    @include setTreeIconGlyph("customersupport_backoffice_explorerTree_vendorReviews", "feedback");
+}

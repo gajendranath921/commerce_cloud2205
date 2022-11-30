@@ -1,0 +1,27 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-shortcuts-widget.widget_body {
+  height: 100%; }
+.yw-shortcuts-widget .yw-shortcuts-header {
+  font-size: 14px;
+  padding: 16px;
+  border-bottom: var(--bo-container-border-width) solid var(--bo-list-border-color); }
+.yw-shortcuts-widget .yw-listbox-body {
+  border: none; }
+  .yw-shortcuts-widget .yw-listbox-body .z-listitem:hover > .z-listcell > .z-listcell-content {
+    color: var(--bo-list-text-color); }
+  .yw-shortcuts-widget .yw-listbox-body .z-listitem-selected:hover > .z-listcell > .z-listcell-content {
+    color: var(--bo-list-text-color); }
+  .yw-shortcuts-widget .yw-listbox-body .z-listitem.z-drag-over {
+    background: var(--bo-list-hover-background); }
+  .yw-shortcuts-widget .yw-listbox-body .z-listitem-selected .z-listcell {
+    border-bottom: var(--bo-container-border-width) solid var(--bo-list-selected-border-color); }
+  .yw-shortcuts-widget .yw-listbox-body .z-listcell {
+    border: none; }
+    .yw-shortcuts-widget .yw-listbox-body .z-listcell .z-listcell-content {
+      padding-left: 36px;
+      font-size: 14px;
+      background: transparent;
+      color: var(--bo-list-text-color); }

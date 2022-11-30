@@ -1,0 +1,15 @@
+/* Status */
+/* Button Color Scheme */
+/*Icons for explorer tree */
+div.yw-explorerTree .y-tree-icon-hmc_group_basecommerce.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_group_basecommerce.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e122";
+    color: var(--bo-content-icon-color); }
+div.yw-explorerTree .y-tree-icon-hmc_group_basecommerce_deeplink.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_group_basecommerce_deeplink.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e088";
+    color: var(--bo-content-icon-color); }

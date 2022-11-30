@@ -1,0 +1,95 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Systembar Variables
+================================*/
+.yw-notification {
+  position: absolute;
+  z-index: 12000;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto !important;
+  /* Special Skin changes for Wizzard/Window */ }
+  .yw-notification-type {
+    color: var(--bo-page-header-text-color); }
+  .yw-notification-message {
+    display: block;
+    padding: 10px 40px 10px 12px;
+    background-color: var(--bo-neutral-background);
+    border: 1px solid var(--bo-neutral-color);
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    word-wrap: break-word;
+    position: relative; }
+    .yw-notification-message .z-label {
+      color: var(--bo-page-header-text-color); }
+    .yw-notification-message a {
+      color: var(--bo-text-color); }
+    .yw-notification-message:before {
+      content: '';
+      font-family: var(--bo-content-icon-font-family);
+      font-size: 16px;
+      top: 11px;
+      left: 16px;
+      width: 16px;
+      display: none;
+      position: absolute; }
+    .yw-notification-message:after {
+      content: "\e03e";
+      font-family: var(--bo-content-icon-font-family);
+      display: inline-block;
+      font-size: 16px;
+      position: absolute;
+      right: 16px;
+      top: 11px;
+      cursor: pointer; }
+    .yw-notification-message.success, .yw-notification-message.failure, .yw-notification-message.warning, .yw-notification-message.info {
+      padding-left: 40px; }
+      .yw-notification-message.success:before, .yw-notification-message.failure:before, .yw-notification-message.warning:before, .yw-notification-message.info:before {
+        display: block; }
+    .yw-notification-message.success {
+      background-color: var(--bo-success-background);
+      border-color: var(--bo-positive-color); }
+      .yw-notification-message.success:before {
+        content: "\e203";
+        color: var(--bo-positive-color); }
+    .yw-notification-message.failure {
+      background-color: var(--bo-error-background);
+      border-color: var(--bo-negative-color); }
+      .yw-notification-message.failure:before {
+        content: "\e0b1";
+        color: var(--bo-negative-color); }
+    .yw-notification-message.warning {
+      background-color: var(--bo-warning-background);
+      border-color: var(--bo-warning-color); }
+      .yw-notification-message.warning:before {
+        content: "\e201";
+        color: var(--bo-warning-color); }
+    .yw-notification-message.info {
+      background-color: var(--bo-information-background);
+      border-color: var(--bo-information-color); }
+      .yw-notification-message.info:before {
+        content: "\e202";
+        color: var(--bo-information-color); }
+  .z-window-highlighted .yw-notification {
+    position: relative;
+    top: 0; }
+    .z-window-highlighted .yw-notification-message {
+      padding-right: 35px;
+      z-index: 1002;
+      border-radius: 0; }
+      .z-window-highlighted .yw-notification-message:after {
+        width: 24px;
+        margin-right: -1px;
+        text-align: center;
+        display: block; }
+      .z-window-highlighted .yw-notification-message .z-label {
+        word-wrap: break-word;
+        padding-left: 0; }
+        .z-window-highlighted .yw-notification-message .z-label.yw-notification-type {
+          word-wrap: normal;
+          padding: 0; }

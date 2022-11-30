@@ -1,0 +1,51 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$extendedsplitlayout__container-bg-color: var(--bo-base-background);
+
+$extendedsplitlayout__toolbar--width: 100%;
+$extendedsplitlayout__toolbar--height: $toolbar__default--height;
+$extendedsplitlayout__toolbar--bg-color: var(--bo-page-header-background);
+$_extendedsplitlayout__toolbar--padding: 0 $_container-spacing-default__medium;
+
+$extendedsplitlayout__toolbar-holder--padding-top: $extendedsplitlayout__toolbar--height;
+$extendedsplitlayout__toolbar-action--margin: 0; // $container-spacing-default__third;
+
+$extendedsplitlayout__content-box--min-width: 100px;
+$extendedsplitlayout__content-box--min-height: 100px;
+
+$_extendedsplitlayout__content-box--border-radius: $_layout-panels__panel--border-radius;
+
+$extendedsplitlayout__content-box-inner-holder-box--margin: $container-spacing-default__two-thirds;
+$extendedsplitlayout__content-box-inner-holder-box-content--bg-color: var(--bo-base-background);
+$extendedsplitlayout__content-box-inner-holder-box-content--box-shadow: var(--bo-content-shadow-small);
+$extendedsplitlayout__toolbar-box-resizable--border: 0 solid var(--bo-container-border-color);
+$extendedsplitlayout__toolbar-box-resizable--border-width: $_layout--splitter-large--size;
+
+$_extendsplitlayout__toolbar-action-icon--size: $toolbar__button-default--size;
+$_extendsplitlayout__toolbar-action-icon--font-size: $font-size__large;
+$_extendsplitlayout__toolbar-action-icon--font-family: $font-family__icon;
+$_extendsplitlayout__toolbar-action-icon-mixleft: _getIconGlyphContentValue("mixleft");
+$_extendsplitlayout__toolbar-action-icon-mixright: _getIconGlyphContentValue("mixright");
+$_extendsplitlayout__toolbar-action-icon-single: _getIconGlyphContentValue("single");
+$_extendsplitlayout__toolbar-action-icon-triple: _getIconGlyphContentValue("triple");
+$_extendsplitlayout__toolbar-action-icon-twixe: _getIconGlyphContentValue("twixe");
+$_extendsplitlayout__toolbar-action-icon-twixs: _getIconGlyphContentValue("twixs");
+
+$_extendsplitlayout__explorertree-toolbar--border-bottom-width: $boxes--border__thin;
+$_extendsplitlayout__explorertree-toolbar--padding: 0 $_container-spacing-default__core;
+
+$_extendsplitlayout__chooser-action-arrow-icon--content: _getIconGlyphContentValue('slim-arrow-down');
+$_extendsplitlayout__chooser-action-arrow-icon--font-family: $font-family__icon;
+$_extendsplitlayout__chooser-action-arrow-icon--font-size: $font-size__base;
+$_extendsplitlayout__chooser-action-arrow-icon--line-height: $font-size__large;
+$_extendsplitlayout__chooser-action-arrow-icon--width: $_container-spacing-default__small;
+$_extendsplitlayout__chooser-action-arrow-icon--margin-right: $_extendsplitlayout__chooser-action-arrow-icon--width + $boxes--border__medium;
+
+$_extendsplitlayout__dnd-config-action-icon--content: _getIconGlyphContentValue('action-settings');
+$_extendsplitlayout__dnd-config-action-icon--font-family: $font-family__icon;
+$_extendsplitlayout__dnd-config-action-icon--font-size: $font-size__base;
+$_extendsplitlayout__dnd-config-action-icon--line-height: $font-size__large;
+$_extendsplitlayout__dnd-config-action-icon--left: $boxes--border__thin * -1;

@@ -1,0 +1,30 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    UserRoleChooser Popup (Systembar)
+================================*/
+// Relevant Changes applied to the User Role Chooser Popup
+
+.yw-roleChooser {
+	&-empty-list-state {
+		display: none;
+	}
+	&-widget {
+		.z-toolbarbutton > span {
+			&:after {
+				content: _getIconGlyphContentValue('role');
+				font-size: $font-size__large;
+				color: var(--bo-shell-interactive-color);
+				font-family: $font-family__icon;
+				font-weight: normal;
+			}
+		}
+	}
+
+  	&-popup {
+		.z-popup-content .z-listbox-body .z-listitem-selected .z-listcell {
+		  	border-bottom: $boxes--border__thin solid var(--bo-list-selected-border-color);
+		}
+	}
+}

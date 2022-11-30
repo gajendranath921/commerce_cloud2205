@@ -1,0 +1,111 @@
+/*================================
+    User profile locale settings
+================================*/
+// Relevant Changes applied to the User Profile Locale
+
+@import "../../systemBarWidget/scss/support/_systembar-variables.scss";
+@import "scss/_localeSetting-variables.scss";
+
+.yw-com_hybris_backoffice_widgets_userprofile_localesetting {
+    height: 100%;
+    width: 100%;
+}
+
+.yw-localeSetting {
+    height: 100%;
+    width: 100%;
+    padding: $user-profile-locale-default--spacing;
+    .localeSetting-title {
+        height: $user-profile-locale-title-height;
+        > span {
+            font-size: $user-profile-locale-title-size;
+            padding-left: 24px;
+            color: $user-profile-locale-title-color;
+        }
+    }
+    .localeSetting-content {
+        height: calc(100% - #{$user-profile-locale-title-height});
+        .z-tabbox {
+            height: 100%;
+            .z-tabs {
+                padding: 20px 50px 20px 50px;
+                width: 100% !important;
+                height: $user-profile-tab-width;
+                .z-tabs-content {
+                    border: 1px solid $user-profile-locale-selected-bg-color;
+                    border-radius: 4px;
+                }
+                .z-tab {
+                    width: 50%;
+                    padding: 0px;
+                    background: transparent;
+                    .z-tab-text {
+                        min-height: auto;
+                        color: $user-profile-locale-text-color;
+                        background: $user-profile-locale-bg-color;
+                        border-color: $user-profile-locale-border-color;
+                        padding: 6px;
+                    }
+                }
+                .z-tab-selected {
+                    background-color: $user-profile-locale-selected-bg-color;
+                    height: 100%;
+                    .z-tab-text {
+                        color: $user-profile-locale-selected-color !important;
+                        background: $user-profile-locale-selected-bg-color;
+                        border-color: $user-profile-locale-selected-border-color;
+                    }
+                }
+            }
+            .z-tabpanels {
+                height: calc(100% - #{$user-profile-tab-width});
+                .z-tabpanel {
+                    height: 100% !important;
+                    border-width: $systembar-popup__tabpanel--border-width;
+                    padding: $user-profile-tab-panels-padding;
+                    background: transparent;
+                    padding-top: $user-profile-locale-tabpanel--spacing;
+                    .z-listbox {
+                        border: none;
+                        width: 85% !important;
+                        height: 100%;
+                        position: relative;
+                        left: 50px;
+                        overflow: auto;
+                        .z-listbox-body {
+                            box-shadow: none;
+                        }
+                    }
+                    .z-listitem {
+                        background: transparent;
+                        &:hover {
+                            background: var(--bo-list-selected-hover-background);
+                        }
+                        .z-listcell {
+                            .z-listcell-content {
+                                color: $user-profile-locale-text-color;
+                            }
+                            border-top: none;
+                            .z-listitem-checkable {
+                                border-color: $user-profile-locale-icon-border-color;
+                                border-radius: 2px;
+                                background: transparent;
+
+                                &:focus,
+                                &:hover{
+                                    border-color: $user-profile-locale-icon-hover-color;
+                                }
+
+                                .z-listitem-icon {
+                                    color: $user-profile-locale-icon-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}

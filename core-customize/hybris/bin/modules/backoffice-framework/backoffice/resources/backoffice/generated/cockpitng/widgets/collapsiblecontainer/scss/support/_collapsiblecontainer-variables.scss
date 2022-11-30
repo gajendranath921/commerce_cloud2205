@@ -1,0 +1,76 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+//Container Defaults
+$collapsible-container__button--size: $toolbar__button-default--size;
+$collapsible-container__button--spacing: $_container-spacing-default__small;
+$collapsible-container__button--top: $collapsible-container__button--spacing;
+$collapsible-container__button--right: 0;
+$collapsible-container__button-disabled--opacity: var(--bo-content-disabled-opacity);
+
+$collapsible-container__button--font-family: $font-family__icon;
+$collapsible-container__button--font-size: $_default__action-icon--font-size;
+$collapsible-container__button-expand--key: "expand-group";
+$collapsible-container__button-collapse--key: "collapse-group";
+$collapsible-container__button-locked--key: "locked";
+$collapsible-container__button-unlocked--key: "unlocked";
+
+$collapsible-container__button--color: var(--bo-button-icon-color);
+$collapsible-container__button-hover--color: var(--bo-button-hover-color);
+$collapsible-container__button-hover--bg-color: var(--bo-button-hover-background);
+$collapsible-container__button-hover--border: $boxes--border__thin solid var(--bo-button-hover-border-color);
+
+$collapsible-container__capcnt--min-height: 21px;
+
+$collapsible-container__header--padding: $container-spacing-default__third $_container-spacing-default__medium; //$container-spacing-default__base;
+$collapsible-container__header--height: $editor-defaults__inline-box--height;
+$collapsible-container__header--border-color: var(--bo-container-border-color); //$_default-negative__content-wrapper--bg-color;//$blue__dark--100;
+$collapsible-container__header--border-width: $_layout--splitter-default--size;
+$collapsible-container__header--bg-color: var(--bo-container-background);
+$collapsible-container__header-bottom--border-top: $collapsible-container__header--border-width solid $collapsible-container__header--border-color;
+$collapsible-container__header-bottom--bg-color: $collapsible-container__header--bg-color;
+$collapsible-container__header-top--bg-color: $collapsible-container__header--bg-color;
+$collapsible-container__header-button--top: 50%;
+$collapsible-container__header-button--margin-top: -0.5 * $collapsible-container__button--size;
+$collapsible-container__header-search-limited-button--top: $editor-defaults__inline-box--height/2; // Invastigate it
+$_collapsible-container__header-content--line-height: 19px;
+
+$collapsible-container__expand-button--size: $collapsible-container__button--size;
+$collapsible-container__expand-button--top: $collapsible-container__button--top;
+$collapsible-container__expand-button--right: $collapsible-container__button--right;
+
+$collapsible-container__expand-button-disabled--opacity: $collapsible-container__button-disabled--opacity;
+$collapsible-container__expand-button-header--top: $collapsible-container__header-button--top;
+$collapsible-container__expand-button-header--margin-top: $collapsible-container__header-button--margin-top;
+
+$collapsible-container__collapsed-down-expand-button-disabled--opacity: $collapsible-container__button-disabled--opacity;
+
+$collapsible-container__lock-unlock-button--size: $collapsible-container__button--size;
+$collapsible-container__lock-unlock-button--top: $collapsible-container__button--top;
+$collapsible-container__lock-unlock-button--right: $collapsible-container__button--right + $collapsible-container__button--size + $collapsible-container__button--spacing;
+
+$collapsible-container__buttons-use-bg-sprites: false;
+	//sprite-driven icons (deprectaded)
+	$collapsible-container__expand-button-disabled--bg-color: transparent !important;
+	$collapsible-container__expand-button-disabled--bg-position: 0px (-4 * $collapsible-container__button--size) !important;
+	$collapsible-container__expand-button--bg-position: 0 0;
+	$collapsible-container__expand-button-hover-active--bg-position: 0 (-1 * $collapsible-container__expand-button--size);
+	$collapsible-container__collapsed-down-expand-button-disabled--bg-color: transparent !important;
+	$collapsible-container__collapsed-down-expand-button-disabled--bg-position: (-1 * $collapsible-container__button--size) (-4 * $collapsible-container__button--size) !important;
+	$collapsible-container__collapsed-down-expand-button-top--bg-position: (-1 * $collapsible-container__button--size) 0;
+	$collapsible-container__collapsed-down-expand-button-top-hover--bg-position: (-1 * $collapsible-container__button--size) (-3 * $collapsible-container__button--size);
+	$collapsible-container__lock-button--bg-image: url('images/icon_action_lock_colapse_active.png') !important;
+	$collapsible-container__unlock-button--bg-image: url('images/icon_action_lock_colapse_default.png') !important;
+
+
+$collapsible-container__caption-label--color: var(--bo-page-header-text-color);
+$collapsible-container__caption-label--font-size: $font-size__large;
+$collapsible-container__caption-label--large-font-size: $font-size__h3;
+$collapsible-container__caption-label--yw-textsearch-font-size: $font-size__base;
+$collapsible-container__caption-label--padding: floor(($editor-defaults__inline-box--height - $_container-spacing-default__regular)/2) 0;
+$collapsible-container__caption-content-container--padding-right: $collapsible-container__lock-unlock-button--right + $collapsible-container__button--size + $collapsible-container__button--right;
+
+$collapsible-container__search-button--margin-left: $boxes--border__thin * -1;
+$collapsible-container__search-button--border-left-width: $boxes--border__thin !important;

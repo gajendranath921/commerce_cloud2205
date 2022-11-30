@@ -1,0 +1,16 @@
+/* Status */
+/* Button Color Scheme */
+/* Tree */
+.integrationbackoffice-editor-tree .z-treecol {
+  height: 54px;
+  background: var(--bo-list-table-header-background);
+  padding-left: 15px; }
+
+.integrationbackoffice-editor-tree .z-treecol-content {
+  color: var(--bo-page-header-text-color);
+  font-size: 14px; }
+
+.integrationbackoffice-editor-tree .z-treecell {
+  height: 45px;
+  padding-left: 15px;
+  border-bottom: 1px solid var(--bo-list-border-color); }

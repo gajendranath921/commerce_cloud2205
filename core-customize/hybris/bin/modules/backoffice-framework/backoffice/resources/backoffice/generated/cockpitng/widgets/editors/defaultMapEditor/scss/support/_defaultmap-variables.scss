@@ -1,0 +1,85 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$editor-defaults__list-box-hover--color: false; //$blue__light--300;
+$editor-defaults__listitem--color: $_default-list__item--color;
+$editor-defaults__listitem--bg-color: var(--bo-list-background);
+$editor-defaults__list-box--height: $editor-defaults__inline-box--height - 2 * $editor-defaults__input-field--border-width;
+$editor-defaults__editor-key--font-size: $font-size__base;
+$editor-defaults__listitem-btn--size: $font-size__large;
+$editor-defaults__listitem-editor--button-width: $editor-defaults__inline-box--height;
+$_editor-defaults__list-box-button--margin-right: $_container-spacing-default__tiny;
+$editor-defaults__listitem-map-inline-edit--min-width: $editor-defaults__listitem-editor--button-width * 2;
+// $editor-defaults__listitem-editor--padding-right: $editor-defaults__listitem-map-inline-edit--min-width + $container-spacing-default__third;
+$editor-defaults__listitem--padding: $_container-spacing-default__tiny;
+$editor-defaults__listitem--margin: $_container-spacing-default__tiny;
+$editor-defaults__listitem-map-value--font-weight: $font-weight-bold;
+$_editor-defaults__listitem-label--max-width: calc(50% - 8px);
+$_editor-defaults__listitem-label--line-height: 17px;
+$editor-defaults__list-box--border-width: $editor-defaults__input-field--border-width;
+$editor-defaults__list-box--border-color: $_default-list__item--border-color;
+$editor-defaults__list-box--border: $editor-defaults__list-box--border-width solid $editor-defaults__list-box--border-color;
+$editor-defaults__list-box-empty--border: $editor-defaults__list-box--border-width solid $editor-defaults__list-box--border-color;
+$editor-defaults__list-box--border-radius: $editor-defaults__input-box--border-radius;
+$editor-defaults__list-box-empty--opacity: 0.4;
+$editor-defaults__list-box-empty--line-height: $font-size__large;
+$editor-defaults__list-box-empty--min-height: $editor-defaults__inline-box--height - 2* $editor-defaults__list-box--border-width;
+$editor-defaults__list-box-empty--padding: ceil(($editor-defaults__list-box-empty--min-height - $editor-defaults__list-box-empty--line-height)/2) $_container-spacing-default__small floor(($editor-defaults__list-box-empty--min-height - $editor-defaults__list-box-empty--line-height)/2);
+$editor-defaults__list-box-button--border-radius: $editor-defaults__input-box--border-radius;
+@if $_editor-defaults__list-box-button--margin-right {
+    $editor-defaults__listitem-map-inline-edit--min-width: $editor-defaults__listitem-editor--button-width * 2 + $_editor-defaults__list-box-button--margin-right;
+}
+
+$_editor-defaults__list-box-button-save--border-color: $_default__status-positive--color;
+$_editor-defaults__list-box-button-clear--border-color: $_default__status-negative--color;
+
+$editor-defaults__list-footer-item--padding: 0;
+$_editor-defaults__list-footer--padding-y: $_container-spacing-default__tiny;
+$_editor-defaults__list-footer--line-height: $editor-defaults__inline-box--height;
+
+$editor-defaults__list-box-footer--border: none;
+$_editor-defaults__list-box-add-action--color: $_container__action--color;
+$_editor-defaults__list-box-add-action-icon--content: _getIconGlyphContentValue('add');
+$_editor-defaults__list-box-add-action-icon--font-family: $font-family__icon;
+$_editor-defaults__list-box-add-action-icon--font-size: $font-size__small;
+
+$_editor-defaults__list-container-localized--padding-x: $_container-spacing-default__tiny;
+$_editor-defaults__list-container-localized--border-width: $editor-defaults__list-box--border-width;
+$_editor-defaults__list-container-localized--border: $_editor-defaults__list-container-localized--border-width solid $_default-list__item--border-color;
+$_editor-defaults__list-container-localized--border-radius: $editor-defaults__input-box--border-radius;
+$_editor-defaults__list-container-localized--border-left-color: $form-defaults__box--border-color;
+
+$editor-defaults__listitem-removable-container--padding-right: 26px;
+
+$editor-defaults__listitem-map-btn-container--margin-top: $container-spacing-default__third * -2;
+
+
+$editor-defaults__listitem-map-inline-edit--margin-y: 6px;
+$editor-defaults__listitem-map-inline-edit--margin-x: $_container-spacing-default__tiny;
+$editor-defaults__listitem-map-inline-edit-container--margin-bottom: $editor-defaults__listitem-map-inline-edit--margin-y * -1;
+$editor-defaults__listitem-map-inline-edit-editor--margin-bottom: $editor-defaults__listitem-map-inline-edit--margin-y;
+$editor-defaults__listitem-map-inline-edit-editor--margin-right: $editor-defaults__listitem-map-inline-edit--margin-x;
+// $editor-defaults__listitem-map-inline-edit-btn-container--margin-top: $editor-defaults__listitem-map-btn-container--margin-top + ($editor-defaults__listitem-map-inline-edit--margin-y/2) * -1;
+$editor-defaults__listitem-map-btn-container-inline--margin-top: $editor-defaults__listitem-map-inline-edit--margin-y * -1;
+$editor-defaults__listitem-map-inline-edit--min-width: 60px;
+$_editor-defaults__listitem-map-inline-edit--flex-basis: 100px;
+$editor-defaults__listitem-map-inline-edit-fields--min-width: 80px;
+//taken from _editorArea-variables.scss
+
+$editor-area__box--border-color: $form-defaults__box--border-color;
+$editor-area__box-focus--color: $form-defaults__input-focus--color;
+$editor-area__box-focus--border-color: var(--bo-input-focus-border-color);
+
+$editor-area__input-field--color: $form-defaults__input--color; //$grey__dark--700;
+
+//taken from _cockpit-variables.scss
+$selectbox__combobox-hover--bg-color: false; //$blue__light--300;
+
+$editor-defaults__listitem-map-btn--size: $editor-defaults__inline-box--height;
+$editor-defaults__listitem-map-btn--bg-color: var(--bo-button-background);
+$editor-defaults__listitem-map-btn-save--bg-image: url(icons/icon-checkbox-green.svg);
+$editor-defaults__listitem-map-btn-cancel--bg-image: url(icons/icon-delete-red.svg);
+$editor-defaults__listitem-map-btn--border: $editor-defaults__list-box--border;
+$editor-defaults__listitem-map-btn-active--box-shadow: var(--bo-content-shadow-small);

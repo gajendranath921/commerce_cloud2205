@@ -1,0 +1,68 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+		Dashboard Column
+================================*/
+
+
+@import "../support/_dashboard-variables.scss";
+
+.yw-dashboard {
+	&-top-container > &-column {
+		padding-right: 0;
+	}
+	&-top-container {
+		overflow-x: hidden;
+	}
+
+	&-row {
+		display: inline-table;
+		width: 100%;
+	}
+
+	&-column {
+		background: $dashboard__default_container--bg-color;
+		position: relative;
+		overflow: hidden;
+		display: table-cell;
+		vertical-align: top;
+
+		> .yw-dashboard-row {
+			display: block;
+		}
+
+		.yw-dashboard-row {
+			.yw-dashboard {
+				&-slot-draggable {
+
+					& + .z-drag-over {
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+	&-slot {
+		flex: 1 1 auto;
+		background: $dashboard__draggable-slot--bg-color;
+		margin: $dashboard__draggable-slot--margin;
+		border-radius: $dashboard__draggable-slot--border-radius;
+		box-shadow: $dashboard__draggable-slot--box-shadow;
+		min-height: $dashboard__dashboard-slot--min-height;
+		padding: $dashboard__dashboard-slot--padding;
+
+		// // for some chart the height could over 500px
+		// // force the 'style="500px"' slot height to be auto
+		// &[style*="height:#{$dashboard__dashboard-slot--min-height}"],
+        // &[style*="height: #{$dashboard__dashboard-slot--min-height}"] {
+		// 	height: auto !important;
+		// }
+
+		> .widget_cnt {
+			width: 100%;
+			height: 100%;
+			border-radius: $_dashboard__dashboard-slot--border-radius;
+		}
+	}
+}

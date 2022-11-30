@@ -1,0 +1,34 @@
+/* Status */
+/* Button Color Scheme */
+.yw-borderlayout .opaquetrue .yw-layoutregion {
+  background: var(--bo-container-background); }
+.yw-borderlayout > .z-borderlayout > div > .z-south-splitter,
+.yw-borderlayout > .z-borderlayout > div > .z-north-splitter,
+.yw-borderlayout > .z-borderlayout > div > .z-west-splitter,
+.yw-borderlayout > .z-borderlayout > div > .z-east-splitter {
+  background-color: var(--bo-container-border-color); }
+  .yw-borderlayout > .z-borderlayout > div > .z-south-splitter > span,
+  .yw-borderlayout > .z-borderlayout > div > .z-north-splitter > span,
+  .yw-borderlayout > .z-borderlayout > div > .z-west-splitter > span,
+  .yw-borderlayout > .z-borderlayout > div > .z-east-splitter > span {
+    color: var(--bo-content-icon-color);
+    background-color: var(--bo-container-border-color); }
+    .yw-borderlayout > .z-borderlayout > div > .z-south-splitter > span:hover,
+    .yw-borderlayout > .z-borderlayout > div > .z-north-splitter > span:hover,
+    .yw-borderlayout > .z-borderlayout > div > .z-west-splitter > span:hover,
+    .yw-borderlayout > .z-borderlayout > div > .z-east-splitter > span:hover {
+      background-color: var(--bo-button-hover-background);
+      color: var(--bo-content-icon-color); }
+.yw-borderlayout > .z-borderlayout > div > .z-south-collapsed,
+.yw-borderlayout > .z-borderlayout > div > .z-north-collapsed,
+.yw-borderlayout > .z-borderlayout > div > .z-west-collapsed,
+.yw-borderlayout > .z-borderlayout > div > .z-east-collapsed {
+  background-color: var(--bo-container-background); }
+.yw-borderlayout > .z-borderlayout > div > .z-south-collapsed {
+  border-top-width: 2px; }
+.yw-borderlayout > .z-borderlayout > div > .z-north-collapsed {
+  border-bottom-width: 2px; }
+.yw-borderlayout > .z-borderlayout > div > .z-west-collapsed {
+  border-right-width: 2px; }
+.yw-borderlayout > .z-borderlayout > div > .z-east-collapsed {
+  border-left-width: 2px; }

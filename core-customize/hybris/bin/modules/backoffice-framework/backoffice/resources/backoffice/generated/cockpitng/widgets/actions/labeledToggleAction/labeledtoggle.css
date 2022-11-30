@@ -1,0 +1,24 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-labeled-toggle-label {
+  top: 0.25rem;
+  background-color: var(--bo-content-badge-background);
+  color: var(--bo-content-badge-text-color);
+  font-size: 12px;
+  padding: 1px;
+  border-radius: 8px;
+  min-width: 8px;
+  right: 0.25rem;
+  border-width: 0;
+  box-sizing: content-box;
+  text-align: center;
+  position: absolute;
+  line-height: 1;
+  pointer-events: none; }
+  .yw-systemBarContainer .yw-statusToolbar .z-toolbarbutton .yw-labeled-toggle-label {
+    top: 0.25rem;
+    right: 0.25rem;
+    border-width: 1px;
+    border-style: solid; }

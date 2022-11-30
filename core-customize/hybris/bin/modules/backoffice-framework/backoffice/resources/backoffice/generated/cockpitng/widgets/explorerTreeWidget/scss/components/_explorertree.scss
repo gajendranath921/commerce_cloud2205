@@ -1,0 +1,168 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Explorer Tree Mold - Dark (default)
+================================*/
+@import "../support/_explorerTree-mixins.scss";
+
+.yw-explorerTree {
+  &-widget {
+    &,
+    .cng-adminmode {
+        background: $explorertree__default--bg-color;
+    }
+  }
+
+  @include _rowStateColor("z-treerow", $explorertree__row--color);
+  @include _rowStateColor("z-treerow:hover", $explorertree__row-hover--color, $explorertree__row-hover--bg-color);
+  @include _rowStateColor("z-treerow.yw-highlighted", $explorertree__row-highlighted--color, $explorertree__row-highlighted--bg-color);
+  @include _rowStateColor("z-treerow.yw-selected", $explorertree__row-selected--color, $explorertree__row-selected--bg-color);
+  @include _rowStateColor("z-treerow.yw-selected:hover", $explorertree__row-selected--color, $explorertree__row-selected-hover--bg-color);
+  @include _rowStateColor("z-treerow.z-treerow-focus", $explorertree__row-focus--color, $explorertree__row-focus--bg-color);
+  @include _rowStateColor("z-treerow.z-treerow-focus:hover", $explorertree__row-focus--color, $explorertree__row-focus--bg-color);
+
+  .yw-caption-label {
+    color: $explorertree__default-label--color;
+  }
+
+  .z-treerow {
+    @if $explorertree__row--bg-color {
+      background-color: $explorertree__row--bg-color;
+    }
+
+    &.yw-selected > .z-treecell {
+        box-shadow: none;
+        // border-bottom: $explorertree__row-selected--border-bottom;
+    }
+    &.yw-navigationNode {
+      &-level1 {
+        @if $explorertree__row-l1--bg-color {
+          background-color: $explorertree__row-l1--bg-color;
+        }
+      }
+      &-level2 {
+        @if $explorertree__row-l2--bg-color {
+          background: $explorertree__row-l2--bg-color;
+        }
+      }
+      &-level3 {
+        @if $explorertree__row-l3--bg-color {
+          background: $explorertree__row-l3--bg-color;
+        }
+      }
+    }
+    &.yw-navigationnode {
+      &-first,
+      &-last + .z-treerow {
+          border-color: $explorertree__row-depth-delimiter--border-color;
+      }
+    }
+  }
+
+  &-filterDiv {
+    .z-bandbox {
+      &-input {
+        @include _filter-textbox-colors ($explorertree__filter-input--color,
+          $explorertree__filter-input--border-color,
+          $explorertree__filter-input--bg-color,
+          $explorertree__filter-input-focus--color,
+          $explorertree__filter-input-focus--border-color,
+          $explorertree__filter-input-focus--bg-color);
+        @include _placeholder-text-color ( $explorertree__filter-input-placeholder--color );
+        border: 1px solid $explorertree__filter-input--border-color;
+        border-radius: 4px;
+
+        &:hover {
+          border-radius: 4px 0 0 4px !important;
+          border-right-width: 0 !important;
+        }
+
+        &:focus {
+          border-right-width: 1px;
+        }
+      }
+
+//       &-button {
+//         background-color: $explorertree__filter-input--bg-color;
+//         border-color: $explorertree__filter-input--border-color;
+//       }
+    }
+
+  }
+}
+
+/**
+ * Leverage explorerTree to display as sideNavigation, you should add "yw-sideNavigation" for field
+ * "widgetStyleClass" in your explorerTree widget settings.
+ */
+.yw-explorerTree-sideNavigation {
+    //arrow align right
+	.z-vfiletree-icon {
+		position: absolute;
+        right: 8px;
+        top:13px;
+	}
+
+	.yw-explorerTree .yw-treeCellInner {
+
+		.y-tree-icon {
+		    position: relative;
+		    margin-right: 10px;
+		    left: 0;
+		    font-size: 20px;
+		}
+
+		.z-label {
+			margin-right: 16px; // give space for up/down arrow
+		}
+	}
+
+	//only show icon for 1th level node
+	.z-treerow:not(.yw-navigationNode-level1) {
+
+		.y-tree-icon {
+			display:none;
+		}
+
+		.z-vfiletree-icon+.yw-treeCellInner {
+
+		     .z-label {
+		     	padding-left: 12px !important;
+		     }
+		}
+
+	}
+
+	.z-vfiletree-spacer+.z-vfiletree-icon+.yw-treeCellInner {
+		padding-left:10px;
+	}
+
+	.z-treerow.yw-navigationNode-level1 {
+
+	    .z-vfiletree-spacer {
+	        width: 0;
+            min-width: 0;
+        }
+
+        .yw-treeCellInner {
+
+        	.z-label {
+        		margin-left: 6px;
+        	}
+        }
+	}
+
+	.z-vfiletree .z-vfiletree-spacer {
+
+	    + .yw-treeCellInner {
+	        margin-left: 0 !important;
+	    }
+	}
+
+	.z-treerow.yw-selected > .z-treecell {
+        border-bottom: $explorertree__row-selected--border-bottom;
+    }
+}
+
+@import "_explorertree__extendsplitlayout.scss";

@@ -1,0 +1,25 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+@import "_configurableFlow-variables.scss";
+
+@mixin _configurableflow-validation-coloring ($keyname, $bg-color, $color, $loc-edit-color){
+    .yw-loceditor-row-wysiwyg.ye-validation-#{$keyname} .cke_wysiwyg_frame, &.ye-validation-#{$keyname} > .yw-loceditor-row-editor {
+        background: $bg-color;
+    }
+
+    .yw-loceditor {
+        .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-attrcell-label.z-label,
+        .yw-loceditor-row.ye-validation-#{$keyname} .z-label {
+            color: $color;
+        }
+    }
+}
+
+@each $key, $value in $configurableflow__window-size {
+    .yw-modal-configurableFlow-#{$key} {
+        width: map_get(map_get($configurableflow__window-size, $key), width);
+        max-width: map_get(map_get($configurableflow__window-size, $key), max-width);
+    }
+}

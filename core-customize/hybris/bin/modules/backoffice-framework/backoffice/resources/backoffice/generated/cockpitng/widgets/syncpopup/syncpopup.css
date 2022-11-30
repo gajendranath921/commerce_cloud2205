@@ -1,0 +1,137 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-modal-synchronizationPopup .z-window-header {
+  padding-bottom: 0;
+  border-bottom: transparent;
+  box-shadow: none; }
+  .yw-modal-synchronizationPopup .z-window-header .z-caption {
+    min-height: 0; }
+
+.yw-syncpopup .z-tabs-content {
+  background: var(--bo-list-group-header-background); }
+.yw-syncpopup-title {
+  font-size: 16px;
+  padding: 0 48px 8px 16px;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+.yw-syncpopup-subtitle {
+  padding: 8px 16px;
+  display: block; }
+.yw-syncpopup-textbox-holder {
+  padding: 8px 16px;
+  margin: 0 auto; }
+.yw-syncpopup-textbox {
+  font-family: var(--bo-content-icon-font-family); }
+  .yw-syncpopup-textbox::-webkit-input-placeholder {
+    color: var(--bo-placeholder-text-color); }
+  .yw-syncpopup-textbox::-moz-placeholder {
+    color: var(--bo-placeholder-text-color); }
+  .yw-syncpopup-textbox:-moz-placeholder {
+    color: var(--bo-placeholder-text-color); }
+  .yw-syncpopup-textbox:-ms-input-placeholder {
+    color: var(--bo-placeholder-text-color); }
+.yw-syncpopup-bold-label {
+  font-size: 16px;
+  font-weight: 700; }
+.yw-syncpopup-bold-label, .yw-syncpopup-label {
+  width: 100%;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 0; }
+.yw-syncpopup-cell-icon {
+  width: 32px;
+  text-align: center;
+  box-sizing: content-box; }
+.yw-syncpopup-pull, .yw-syncpopup-push, .yw-syncpopup-insync, .yw-syncpopup-outofsync {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px; }
+.yw-syncpopup-pull:before {
+  content: "\e157";
+  font-size: var(--bo-content-icon-font-family);
+  font-family: var(--bo-content-icon-font-family);
+  color: var(--bo-neutral-color); }
+.yw-syncpopup-push:before {
+  content: "\e0af";
+  font-size: var(--bo-content-icon-font-family);
+  font-family: var(--bo-content-icon-font-family);
+  color: var(--bo-neutral-color); }
+.yw-syncpopup-insync:before {
+  content: "\e1ae";
+  font-size: var(--bo-content-icon-font-family);
+  font-family: var(--bo-content-icon-font-family);
+  color: var(--bo-positive-color); }
+.yw-syncpopup-outofsync:before {
+  content: "\e1ad";
+  font-size: var(--bo-content-icon-font-family);
+  font-family: var(--bo-content-icon-font-family);
+  color: var(--bo-negative-color); }
+.yw-syncpopup-content {
+  border-top: 1px solid var(--bo-list-border-color); }
+.yw-syncpopup-navigation {
+  background: var(--bo-page-footer-background);
+  height: 72px;
+  border-top: 1px solid var(--bo-list-border-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .yw-syncpopup-navigation .yw-left-pack, .yw-syncpopup-navigation .yw-right-pack {
+    padding: 8px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto; }
+    .yw-syncpopup-navigation .yw-left-pack:empty, .yw-syncpopup-navigation .yw-right-pack:empty {
+      display: none; }
+    .yw-syncpopup-navigation .yw-left-pack .yw-component-wrapper,
+    .yw-syncpopup-navigation .yw-left-pack .component-wrapper, .yw-syncpopup-navigation .yw-right-pack .yw-component-wrapper,
+    .yw-syncpopup-navigation .yw-right-pack .component-wrapper {
+      display: inline-block;
+      padding: 8px; }
+  .yw-syncpopup-navigation .yw-right-pack {
+    text-align: right; }
+    .yw-syncpopup-navigation .yw-right-pack .yw-component-wrapper + .yw-component-wrapper,
+    .yw-syncpopup-navigation .yw-right-pack .component-wrapper + .component-wrapper {
+      padding-left: 0; }
+  .yw-syncpopup-navigation .yw-left-pack .yw-component-wrapper + .yw-component-wrapper,
+  .yw-syncpopup-navigation .yw-left-pack .component-wrapper + .component-wrapper {
+    padding-right: 0; }
+.yw-syncpopup .z-tabpanel {
+  max-height: 305px;
+  overflow: auto;
+  padding: 0; }
+  .yw-syncpopup .z-tabpanel .z-listbox .z-listitem .z-listcell-content, .yw-syncpopup .z-tabpanel .z-listbox .z-listitem:first-child .z-listcell-content {
+    padding-left: 8px;
+    padding-right: 8px; }
+  .yw-syncpopup .z-tabpanel .z-listbox .z-listcell {
+    padding-left: 0;
+    padding-right: 0; }
+    .yw-syncpopup .z-tabpanel .z-listbox .z-listcell:first-child {
+      padding-left: 8px; }
+    .yw-syncpopup .z-tabpanel .z-listbox .z-listcell:last-child {
+      padding-right: 8px; }
+.yw-syncpopup .z-tabbox-top > .z-tabpanels > .z-tabpanel {
+  padding: 0; }
+.yw-syncpopup .z-tabpanel,
+.yw-syncpopup .z-listbox {
+  border: none; }
+.yw-syncpopup .z-tab {
+  width: auto;
+  padding: 0 16px; }
+  .yw-syncpopup .z-tab-text {
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 8px; }
+.yw-syncpopup .yw-btn-primary {
+  min-width: 110px; }

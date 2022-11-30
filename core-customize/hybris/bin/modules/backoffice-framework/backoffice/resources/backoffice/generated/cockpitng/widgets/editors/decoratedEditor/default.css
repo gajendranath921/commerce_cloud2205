@@ -1,0 +1,6 @@
+/* Status */
+/* Button Color Scheme */
+.ye-decorated-editor.z-div::after {
+  content: ' ';
+  display: block;
+  clear: both; }

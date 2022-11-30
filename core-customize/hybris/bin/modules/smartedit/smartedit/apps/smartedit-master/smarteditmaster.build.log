@@ -1,0 +1,280 @@
+Invoking: npm run build:prod 
+
+
+> smarteditmaster@0.0.1 build:prod
+> npm run build-container:prod && npm run build-inner:prod
+
+
+> smarteditmaster@0.0.1 build-container:prod
+> npm run build-container-only:prod && npm run copy-to-webroot -- --container
+
+
+> smarteditmaster@0.0.1 build-container-only:prod
+> webpack --config=webpack/container/webpack.prod.js
+
+Hash: 33b36b9535c02989d4c9
+Version: webpack 4.44.1
+Time: 21297ms
+Built at: 30/11/2022 5:10:05 pm
+                                 Asset      Size  Chunks                    Chunk Names
+01ac77423d4553d60e5c767bdc7566db.woff2    31 KiB          [emitted]         
+  060b2710bdbbe3dfe48b58d59bd5f1fb.svg   106 KiB          [emitted]         
+  065fbc09256a2bd6ca8e43dc79e1e38b.ttf  24.5 KiB          [emitted]         
+  099f4053beec784ab9d0dc7043a872c2.svg  54.5 KiB          [emitted]         
+  0a53beab01762f0c7864c7ad887d3784.ttf   260 KiB          [emitted]  [big]  
+  110cd9306c4a6f2d3578461e65da5493.ttf   131 KiB          [emitted]         
+  16ff59f8a9b1ce9e7dae05fa547ce588.ttf  95.4 KiB          [emitted]         
+  1d0d8b66fa1da76d69b95b6d0ed5cca9.svg  54.9 KiB          [emitted]         
+  232648bf7760cfe8665ec1b4a549c5f7.ttf  13.8 KiB          [emitted]         
+ 2509c35b0cfc629f81e50ce5ef62e4d3.woff    18 KiB          [emitted]         
+  252a41f69d4c320154a12092f6fbbedd.ttf    27 KiB          [emitted]         
+27152396a129082ada86fd6444b9ad4b.woff2  14.2 KiB          [emitted]         
+ 2fe0bd4462a39d775da4215e8c3cb042.woff  35.3 KiB          [emitted]         
+30e38142e06c4c0ee948fc7d851ad780.woff2  13.1 KiB          [emitted]         
+33874f994aeda3d12a40eceeec17465f.woff2  37.7 KiB          [emitted]         
+  3a9ed93414d9101ceabbc83f4b5a1b1e.ttf  26.9 KiB          [emitted]         
+3c26a9fa51187db90b832bc181ceee0c.woff2  27.2 KiB          [emitted]         
+3f48ae80e43cb30fddada672d479dec8.woff2  49.8 KiB          [emitted]         
+3f665e5940024ec80ad45c214c2c5d7b.woff2  7.26 KiB          [emitted]         
+  4692b9ec53fd5972caa2f2372ae20d16.ttf  44.3 KiB          [emitted]         
+  470adc1c05bcd33fdf330ee938b814b1.ttf   134 KiB          [emitted]         
+ 48d01d6cf2ab4e6a9751d075a034e476.woff  17.9 KiB          [emitted]         
+51eaeb49dc44f35563bfcd42fdb1c399.woff2  64.7 KiB          [emitted]         
+521b3b9bd0f9210c2a1b01d372847c84.woff2  52.5 KiB          [emitted]         
+ 5641b256e2c5e26f814c96d8b849af46.woff  72.4 KiB          [emitted]         
+  567e1282d5111cec5a685bcb9ea9d526.jpg  4.02 KiB          [emitted]         
+  5be1347c682810f199c7f486f40c5974.eot  19.7 KiB          [emitted]         
+614f625b81c5e3bc675388caffb88f9a.woff2    55 KiB          [emitted]         
+  61747992dd9a412e601e3defa3f3baa6.ttf  25.9 KiB          [emitted]         
+ 680bccad9565228acf34b3ad3189fca4.woff    38 KiB          [emitted]         
+6cc63330172535b6495697c36c318752.woff2    37 KiB          [emitted]         
+7435e6c2064f36f486266e516e9838b8.woff2  14.4 KiB          [emitted]         
+ 76c107b581de145d1437a2046266b5b8.woff  65.9 KiB          [emitted]         
+ 82b1212e45a2bc35dd731913b27ad813.woff  22.9 KiB          [emitted]         
+ 87a454b233bedae23f8d1be11e8b4f68.woff  17.3 KiB          [emitted]         
+ 88cd3c24aa3438cb929cb867daec4fd6.woff  73.4 KiB          [emitted]         
+89dcca3c32ed8c00d6211b4662d92c39.woff2  57.6 KiB          [emitted]         
+ 8ec85d9a51f914c36d89187f2cb5d3a4.woff  36.7 KiB          [emitted]         
+  926388f043fc8117b35b84b241a7f688.svg  54.3 KiB          [emitted]         
+  9d8618b8ecb10c0742a3c08e9c55e1f3.eot  13.9 KiB          [emitted]         
+ 9f996dc0812a5bc41072c27338406f24.woff  68.9 KiB          [emitted]         
+ a090fd46eddfccd25f397c3a699c7436.woff  52.8 KiB          [emitted]         
+  a22ebf4d763fb54ea727c065cbc1f714.ttf   122 KiB          [emitted]         
+  a80aff34ae9733004fbcd60e8ec850d2.svg    58 KiB          [emitted]         
+ a93291dd80fce240dd7175d90e7f0352.woff  69.2 KiB          [emitted]         
+  b7111b9cb0f0fc99b9e20a23fffa12b1.eot   251 KiB          [emitted]  [big]  
+  bb3b405a4608d51ddb1306c2f641f3dd.svg  53.9 KiB          [emitted]         
+be810be3a3e14c682a257d6eff341fe4.woff2  17.6 KiB          [emitted]         
+  c96735ddae1ef4e82b954b156caefb59.ttf  96.4 KiB          [emitted]         
+ce13ee452ca565937b69da0a253272eb.woff2  52.1 KiB          [emitted]         
+ d3fb8bbda19386a8f71b140e57520e70.woff   128 KiB          [emitted]         
+ df17d4e30091735253a854052256d95d.woff  17.9 KiB          [emitted]         
+  e5fb228473a3197d15811ffcaab09c2a.ttf   127 KiB          [emitted]         
+  ec12308917a49959b22a3a42f25eef4e.svg   107 KiB          [emitted]         
+  ec32d6be7329ece0789ccf9d0d519c4d.ttf  27.5 KiB          [emitted]         
+ec806460121999bcfb12bc264d46d41e.woff2  13.7 KiB          [emitted]         
+ ed604e8ff95c251694129fa75fcc3460.woff  76.3 KiB          [emitted]         
+f2ebdee8c2343f558a0221d276957606.woff2  14.2 KiB          [emitted]         
+f37fd1c47a1a5d3ea0e483fb5249b523.woff2  26.1 KiB          [emitted]         
+ f47fa01e731ad05fcf97665741e9e978.woff    52 KiB          [emitted]         
+f560a024a1491ac36a2b69833b85f715.woff2  90.6 KiB          [emitted]         
+ f63b324141eab66d1f9ce3252599994d.woff   128 KiB          [emitted]         
+  fc25bf4c79c31dd2d7598993d45fbf55.ttf   141 KiB          [emitted]         
+ fdbf3154a22f0e7205a72f7befabb4b8.woff  16.7 KiB          [emitted]         
+                              main.css   819 KiB       0  [emitted]  [big]  main
+                 smarteditcontainer.js  2.15 MiB       0  [emitted]  [big]  main
+     smarteditcontainer.js.LICENSE.txt  1.01 KiB          [emitted]         
+                            vendors.js  4.57 MiB       1  [emitted]  [big]  vendors~main
+                vendors.js.LICENSE.txt  7.13 KiB          [emitted]         
+Entrypoint main [big] = vendors.js main.css smarteditcontainer.js
+[182] ../smartedit-container/dist/index.js 473 KiB {0} [built]
+[584] ./src/container/master_index.ts 1.99 KiB {0} [built]
+[819] ./src/container/thirdparties.js 299 bytes {0} [built]
+[822] ../smartedit-commons/dist/styles.css 39 bytes {0} [built]
+[823] ../smartedit-container/dist/styles.css 39 bytes {0} [built]
+[947] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization/personalizationsmartedit/apps/personalizationsmarteditcontainer/dist/styles.css 39 bytes {0} [built]
+[948] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization/personalizationsmartedit/apps/personalizationsmarteditcontainer/dist/index.js 424 KiB {0} [built]
+[949] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/cds-merchandising/merchandisingsmartedit/apps/merchandisingsmarteditContainer/dist/styles.css 39 bytes {0} [built]
+[950] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/cds-merchandising/merchandisingsmartedit/apps/merchandisingsmarteditContainer/dist/index.js 3.51 KiB {0} [built]
+[952] ../smartedit-loader/dist/styles.css 39 bytes {0} [built]
+[953] ../smartedit-loader/dist/index.js 10 KiB {0} [built]
+[955] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-search/personalizationsearchsmartedit/apps/personalizationsearchsmarteditContainer/dist/styles.css 39 bytes {0} [built]
+[956] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-search/personalizationsearchsmartedit/apps/personalizationsearchsmarteditContainer/dist/index.js 35 KiB {0} [built]
+[957] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-promotion/personalizationpromotionssmartedit/apps/personalizationpromotionssmarteditContainer/dist/styles.css 39 bytes {0} [built]
+[958] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-promotion/personalizationpromotionssmartedit/apps/personalizationpromotionssmarteditContainer/dist/index.js 11.3 KiB {0} [built]
+    + 1070 hidden modules
+
+WARNING in /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/@angular+core@8.2.14_rxjs@6.5.4+zone.js@0.9.1/node_modules/@angular/core/fesm5/core.js 27316:15-36
+Critical dependency: the request of a dependency is an expression
+ @ ../smartedit-container/dist/index.js
+ @ ./src/container/master_index.ts
+
+WARNING in /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/@angular+core@8.2.14_rxjs@6.5.4+zone.js@0.9.1/node_modules/@angular/core/fesm5/core.js 27328:15-102
+Critical dependency: the request of a dependency is an expression
+ @ ../smartedit-container/dist/index.js
+ @ ./src/container/master_index.ts
+
+WARNING in /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/@angular+core@8.2.14_rxjs@6.5.4+zone.js@0.9.1/node_modules/@angular/core/fesm5/core.js 27316:15-36
+System.import() is deprecated and will be removed soon. Use import() instead.
+For more info visit https://webpack.js.org/guides/code-splitting/
+ @ ../smartedit-container/dist/index.js 5:11-35
+ @ ./src/container/master_index.ts
+
+WARNING in /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/@angular+core@8.2.14_rxjs@6.5.4+zone.js@0.9.1/node_modules/@angular/core/fesm5/core.js 27328:15-102
+System.import() is deprecated and will be removed soon. Use import() instead.
+For more info visit https://webpack.js.org/guides/code-splitting/
+ @ ../smartedit-container/dist/index.js 5:11-35
+ @ ./src/container/master_index.ts
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  0a53beab01762f0c7864c7ad887d3784.ttf (260 KiB)
+  b7111b9cb0f0fc99b9e20a23fffa12b1.eot (251 KiB)
+  main.css (819 KiB)
+  smarteditcontainer.js (2.15 MiB)
+  vendors.js (4.57 MiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (7.51 MiB)
+      vendors.js
+      main.css
+      smarteditcontainer.js
+
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+Child mini-css-extract-plugin ../../../smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!../../../../cds-merchandising/merchandisingsmartedit/apps/merchandisingsmarteditContainer/dist/styles.css:
+    Entrypoint mini-css-extract-plugin = *
+    [0] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/cds-merchandising/merchandisingsmartedit/apps/merchandisingsmarteditContainer/dist/styles.css 332 bytes {0} [built]
+        + 1 hidden module
+Child mini-css-extract-plugin ../../../smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!../../../../personalization-promotion/personalizationpromotionssmartedit/apps/personalizationpromotionssmarteditContainer/dist/styles.css:
+    Entrypoint mini-css-extract-plugin = *
+    [0] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-promotion/personalizationpromotionssmartedit/apps/personalizationpromotionssmarteditContainer/dist/styles.css 2.81 KiB {0} [built]
+        + 1 hidden module
+Child mini-css-extract-plugin ../../../smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!../../../../personalization-search/personalizationsearchsmartedit/apps/personalizationsearchsmarteditContainer/dist/styles.css:
+    Entrypoint mini-css-extract-plugin = *
+    [0] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-search/personalizationsearchsmartedit/apps/personalizationsearchsmarteditContainer/dist/styles.css 1.73 KiB {0} [built]
+        + 1 hidden module
+Child mini-css-extract-plugin ../../../smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!../../../../personalization/personalizationsmartedit/apps/personalizationsmarteditcontainer/dist/styles.css:
+    Entrypoint mini-css-extract-plugin = *
+    [0] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization/personalizationsmartedit/apps/personalizationsmarteditcontainer/dist/styles.css 52.5 KiB {0} [built]
+        + 1 hidden module
+Child mini-css-extract-plugin ../../../smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!../../../cmssmartedit/apps/cms-smartedit-container/dist/styles.css:
+    Entrypoint mini-css-extract-plugin = *
+    [1] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/cmssmartedit/apps/cms-smartedit-container/dist/styles.css 3.05 KiB {0} [built]
+    [2] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/cmssmartedit/apps/cms-commons/dist/styles.css 319 bytes {0} [built]
+        + 1 hidden module
+Child mini-css-extract-plugin ../../../smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!../smartedit-commons/dist/styles.css:
+    Entrypoint mini-css-extract-plugin = *
+    [0] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!../smartedit-commons/dist/styles.css 123 KiB {0} [built]
+        + 1 hidden module
+Child mini-css-extract-plugin ../../../smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!../smartedit-container/dist/styles.css:
+    Entrypoint mini-css-extract-plugin = *
+     [0] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!../smartedit-container/dist/styles.css 869 KiB {0} [built]
+     [3] ../smartedit-container/dist/assets/glyphicons-halflings-regular.eot 80 bytes {0} [built]
+     [4] ../smartedit-container/dist/assets/glyphicons-halflings-regular.woff2 82 bytes {0} [built]
+     [5] ../smartedit-container/dist/assets/glyphicons-halflings-regular.woff 81 bytes {0} [built]
+     [6] ../smartedit-container/dist/assets/glyphicons-halflings-regular.ttf 80 bytes {0} [built]
+     [7] ../smartedit-container/dist/assets/glyphicons-halflings-regular.svg 80 bytes {0} [built]
+     [8] ../smartedit-container/assets/google-fonts/open-sans-v15-latin/open-sans-v15-latin-300.woff2 82 bytes {0} [built]
+     [9] ../smartedit-container/assets/google-fonts/open-sans-v15-latin/open-sans-v15-latin-300.woff 81 bytes {0} [built]
+    [10] ../smartedit-container/assets/google-fonts/open-sans-v15-latin/open-sans-v15-latin-300.ttf 80 bytes {0} [built]
+    [11] ../smartedit-container/assets/google-fonts/open-sans-v15-latin/open-sans-v15-latin-300.svg 80 bytes {0} [built]
+    [12] ../smartedit-container/assets/google-fonts/open-sans-v15-latin/open-sans-v15-latin-regular.woff2 82 bytes {0} [built]
+    [13] ../smartedit-container/assets/google-fonts/open-sans-v15-latin/open-sans-v15-latin-regular.woff 81 bytes {0} [built]
+    [14] ../smartedit-container/assets/google-fonts/open-sans-v15-latin/open-sans-v15-latin-regular.ttf 80 bytes {0} [built]
+    [15] ../smartedit-container/assets/google-fonts/open-sans-v15-latin/open-sans-v15-latin-regular.svg 80 bytes {0} [built]
+    [16] ../smartedit-container/assets/google-fonts/open-sans-v15-latin/open-sans-v15-latin-italic.woff2 82 bytes {0} [built]
+        + 56 hidden modules
+Child mini-css-extract-plugin ../../../smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!../smartedit-loader/dist/styles.css:
+    Entrypoint mini-css-extract-plugin = *
+    [0] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/css-loader@3.5.3_webpack@4.44.1/node_modules/css-loader/dist/cjs.js??ref--5-1!../smartedit-loader/dist/styles.css 319 bytes {0} [built]
+        + 1 hidden module
+
+> smarteditmaster@0.0.1 copy-to-webroot
+> node ./scripts/copy-to-webroot.js
+
+Copying generated container sources to webroot
+Copying CKEditor sources to webroot
+
+> smarteditmaster@0.0.1 build-inner:prod
+> npm run build-inner-only:prod && npm run copy-to-webroot -- --inner
+
+
+> smarteditmaster@0.0.1 build-inner-only:prod
+> webpack --config=webpack/inner/webpack.prod.js
+
+Hash: 5093bbe84106bd7131df
+Version: webpack 4.44.1
+Time: 18657ms
+Built at: 30/11/2022 5:10:26 pm
+                   Asset      Size  Chunks                    Chunk Names
+            smartedit.js  4.16 MiB       0  [emitted]  [big]  main
+smartedit.js.LICENSE.txt  1.01 KiB          [emitted]         
+              vendors.js   6.7 MiB       1  [emitted]  [big]  vendors~main
+  vendors.js.LICENSE.txt  7.13 KiB          [emitted]         
+Entrypoint main [big] = vendors.js smartedit.js
+[518] ./src/inner/master_index.ts 1.75 KiB {0} [built]
+[753] ./src/inner/thirdparties.js 480 bytes {0} [built]
+[757] ../smartedit/dist/styles.css 706 bytes {0} [built]
+[809] ../smartedit/dist/index.js 204 KiB {0} [built]
+[933] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization/personalizationsmartedit/apps/personalizationsmartedit/dist/styles.css 732 bytes {0} [built]
+[935] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization/personalizationsmartedit/apps/personalizationsmartedit/dist/index.js 82.5 KiB {0} [built]
+[937] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/cds-merchandising/merchandisingsmartedit/apps/merchandisingsmartedit/dist/styles.css 732 bytes {0} [built]
+[939] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/cds-merchandising/merchandisingsmartedit/apps/merchandisingsmartedit/dist/index.js 3.54 KiB {0} [built]
+[940] ../smartedit-bootstrap/dist/styles.css 706 bytes {0} [built]
+[942] ../smartedit-bootstrap/dist/index.js 2.49 KiB {0} [built]
+[944] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-search/personalizationsearchsmartedit/apps/personalizationsearchsmartedit/dist/styles.css 732 bytes {0} [built]
+[946] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-search/personalizationsearchsmartedit/apps/personalizationsearchsmartedit/dist/index.js 2.46 KiB {0} [built]
+[947] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-promotion/personalizationpromotionssmartedit/apps/personalizationpromotionssmartedit/dist/styles.css 732 bytes {0} [built]
+[949] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-promotion/personalizationpromotionssmartedit/apps/personalizationpromotionssmartedit/dist/index.js 2.35 KiB {0} [built]
+[950] /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/cmssmartedit/apps/cms-smartedit/dist/styles.css 706 bytes {0} [built]
+    + 940 hidden modules
+
+WARNING in /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/@angular+core@8.2.14_rxjs@6.5.4+zone.js@0.9.1/node_modules/@angular/core/fesm5/core.js 27316:15-36
+Critical dependency: the request of a dependency is an expression
+ @ /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-search/personalizationsearchsmartedit/apps/personalizationsearchsmartedit/dist/index.js
+ @ ./src/inner/master_index.ts
+
+WARNING in /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/@angular+core@8.2.14_rxjs@6.5.4+zone.js@0.9.1/node_modules/@angular/core/fesm5/core.js 27328:15-102
+Critical dependency: the request of a dependency is an expression
+ @ /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-search/personalizationsearchsmartedit/apps/personalizationsearchsmartedit/dist/index.js
+ @ ./src/inner/master_index.ts
+
+WARNING in /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/@angular+core@8.2.14_rxjs@6.5.4+zone.js@0.9.1/node_modules/@angular/core/fesm5/core.js 27316:15-36
+System.import() is deprecated and will be removed soon. Use import() instead.
+For more info visit https://webpack.js.org/guides/code-splitting/
+ @ /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-search/personalizationsearchsmartedit/apps/personalizationsearchsmartedit/dist/index.js 5:11-35
+ @ ./src/inner/master_index.ts
+
+WARNING in /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/smartedit/smartedittools/common/temp/node_modules/.pnpm/@angular+core@8.2.14_rxjs@6.5.4+zone.js@0.9.1/node_modules/@angular/core/fesm5/core.js 27328:15-102
+System.import() is deprecated and will be removed soon. Use import() instead.
+For more info visit https://webpack.js.org/guides/code-splitting/
+ @ /home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/personalization-search/personalizationsearchsmartedit/apps/personalizationsearchsmartedit/dist/index.js 5:11-35
+ @ ./src/inner/master_index.ts
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  smartedit.js (4.16 MiB)
+  vendors.js (6.7 MiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (10.9 MiB)
+      vendors.js
+      smartedit.js
+
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+> smarteditmaster@0.0.1 copy-to-webroot
+> node ./scripts/copy-to-webroot.js
+
+Copying generated inner frame sources to webroot
+Copying CKEditor sources to webroot

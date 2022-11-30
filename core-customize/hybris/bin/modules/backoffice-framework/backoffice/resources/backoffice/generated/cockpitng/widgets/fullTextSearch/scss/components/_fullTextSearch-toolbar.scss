@@ -1,0 +1,148 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import '../support/fullTextSearch-variables';
+
+.yw-fulltextsearch {
+
+    &-search-button,
+    &-fieldquery-button {
+        @include _actionToolDefaults();
+        position: relative;
+        font-family: $fullTextSearch__button-icon--font-family;
+        transition: $fullTextSearch__toolbar-button--transition;
+        min-height: auto;
+
+        &:before {
+            font-size: $fullTextSearch__button-icon--font-size;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &-search-button {
+        @include _getIconGlyph('search');
+
+        .yw-fulltextsearch-container-expanded & {
+            box-shadow: none;
+            border-left: none !important;
+            border-radius: $fullTextSearch__input-box-expanded-button--border-radius;
+            border: $boxes--border__thin solid $fullTextSearch__input-box-expanded--border-color;
+        }
+        .yw-fulltextsearch-container-collapsed & {
+            transition: $fullTextSearch__toolbar-button-collapsed--transition;
+        }
+    }
+
+    &-wrapper {
+        display: inline-block;
+        position: relative;
+        margin-right: $fullTextSearch__button-wrapper--margin-right;
+    }
+
+    &-input{
+        width: $fullTextSearch__input--width;
+        min-height: $fullTextSearch__button--height;
+        
+        &-wrapper {
+            padding: 0;
+            transition: $fullTextSearch__input-wrapper--transition;
+
+            .yw-fulltextsearch-container-expanded & {
+                padding-left: $fullTextSearch__input-box-expanded--width;
+            }
+        }
+
+        &-box {
+            overflow: hidden;
+            position: absolute;
+            right: $fullTextSearch__input-box--right;
+            transition: $fullTextSearch__input-box--transition;
+
+            .yw-fulltextsearch-container-collapsed & {
+                width: $fullTextSearch__input-box-collapsed--width;
+                border-right: $fullTextSearch__input--border;
+            }
+
+            .yw-fulltextsearch-container-expanded & {
+                width: $fullTextSearch__input-box-expanded--width;
+                                
+                &:hover {
+                    border-color: $fullTextSearch__input-box-expanded-focus--border-color !important;
+                }
+            }
+        }
+        .z-bandbox-input {
+            height: $fullTextSearch__button--height;
+            padding-right: $fullTextSearch__button--padding-right;
+            border-right-width: 0 !important;
+            box-shadow: none;
+
+            .yw-fulltextsearch-container-expanded & {
+                &:focus,
+                &:active{
+                    border-color: $fullTextSearch__input-box-expanded-focus--border-color;
+                }
+            }
+        }
+
+        .z-bandbox-button {
+            display: none;
+        }
+    }
+
+    &-container {
+        font-size: 0;
+        text-align: right;
+    }
+
+    &-clear-button {
+        &.ye-delete-btn {
+            border: none !important;
+            box-shadow: none;
+            background-color: transparent;
+            width: $fullTextSearch__button-clear--width;
+            height: $_fullTextSearch__button-clear--height;
+            min-height: $_fullTextSearch__button-clear--min-height;
+        }
+
+        .yw-fulltextsearch-container-expanded & {
+            padding: $fullTextSearch__button-clear--padding;
+            position: relative;
+        }
+    }
+
+    &-fieldquery-button {
+        @include _getIconGlyph('filter');
+    }
+
+    &-filters-counter {
+        min-width: $fullTextSearch__filters-counter--min-width;
+        height: $fullTextSearch__filters-counter--height;
+        font-size: $fullTextSearch__filters-counter--font-size;
+        line-height: $fullTextSearch__filters-counter--line-height;
+        color: $fullTextSearch__filters-counter--color;
+        text-align: $fullTextSearch__filters-counter--text-align;
+        display: inline-block;
+        background: $fullTextSearch__filters-counter--bg;
+        border-radius: $fullTextSearch__filters-counter--border-radius;
+        padding: $fullTextSearch__filters-counter--padding;
+
+        &:empty {
+            display: none;
+        }
+
+        &-wrapper {
+            pointer-events: none;
+            text-align: center;
+            width: auto;
+            min-width: $fullTextSearch__filters-counter--min-width;
+            right: $fullTextSearch__filters-counter-wrappper--right;
+            top: $fullTextSearch__filters-counter-wrappper--top;
+            position: absolute;
+            z-index: 99;
+        }
+    }
+}

@@ -1,0 +1,191 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-backoffice-compareview-container .yw-backoffice-compareview-navigationhistory {
+  background-color: var(--bo-object-header-background);
+  height: 52px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .yw-backoffice-compareview-container .yw-backoffice-compareview-navigationhistory .yw-navigationhistory-title {
+    height: 32px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .yw-backoffice-compareview-container .yw-backoffice-compareview-navigationhistory .yw-navigationhistory-title .z-label {
+      height: auto;
+      font-size: 1.5rem;
+      font-weight: 400; }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-bulkedit-groupbox {
+  border-top: 1px solid var(--bo-container-border-color);
+  padding: 0; }
+  .yw-bulkedit-groupbox:first-child {
+    border-top: 0; }
+  .yw-bulkedit-groupbox .z-groupbox-header {
+    height: auto;
+    padding: 0;
+    box-sizing: border-box; }
+  .yw-bulkedit-groupbox .yw-bulkedit-groupbox-caption.z-caption {
+    padding: 16px 0;
+    background: transparent;
+    top: auto !important;
+    display: block; }
+    .yw-bulkedit-groupbox .yw-bulkedit-groupbox-caption.z-caption .z-caption-content {
+      width: 100%;
+      padding: 0;
+      font-size: 16px;
+      line-height: 14px;
+      font-weight: bold; }
+      .yw-bulkedit-groupbox .yw-bulkedit-groupbox-caption.z-caption .z-caption-content:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        border-bottom: 1px solid transparent;
+        width: 100%;
+        display: block; }
+    .yw-bulkedit-groupbox .yw-bulkedit-groupbox-caption.z-caption:hover button.yw-expandCollapse {
+      background-position: 0px -16px; }
+    .yw-bulkedit-groupbox .yw-bulkedit-groupbox-caption.z-caption:hover .z-caption-content:after {
+      border-color: var(--bo-container-border-color); }
+  .yw-bulkedit-groupbox .yw-bulkedit-groupbox-caption button.yw-expandCollapse {
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    background-position: 0px 0px; }
+  .yw-bulkedit-groupbox.z-groupbox-collapsed button.yw-expandCollapse {
+    background-position: -16px 0px; }
+  .yw-bulkedit-groupbox.z-groupbox-collapsed .z-caption:hover button.yw-expandCollapse {
+    background-position: -16px -16px; }
+  .yw-bulkedit-groupbox.z-groupbox-collapsed .z-caption:hover .z-caption-content:after {
+    border: none; }
+  .yw-bulkedit-groupbox .z-groupbox-content {
+    padding: 8px 0 12px; }
+
+.media-fileupload {
+  margin-top: 16px; }
+.media-fileupload, .media-download-btn, .media-clear-content-btn {
+  width: 160px;
+  margin-bottom: 15px; }
+
+/* Fix for IE versions <=10 */
+/* http://tracker.zkoss.org/browse/ZK-2471 */
+/* Fix version set to 7.0.4, but it seems it's still there, */
+/* at least for ie10 emulation in ie11 */
+.ie8 span.z-upload, .ie9 span.z-upload, .ie10 span.z-upload {
+  display: inline-block; }
+.ie8 input, .ie9 input, .ie10 input {
+  z-index: 1; }
+
+/* End of IE fix for ZK-2471 */
+/* there is not table as a nested html component */
+/* IE 9 FIX */
+/*.media-fileupload.z-button > table{
+    width: 160px;
+}*/
+.yw-import-wizard-toolbar input {
+  width: 100px; }
+
+.y-workflow-apply.z-button {
+  height: 40px; }
+
+.yw-workflowaction-decision-section .yw-workflowaction-selected-decision {
+  width: 300px; }
+
+/*Icons for explorer tree */
+div.yw-explorerTree .y-tree-icon-backoffice_dashboard.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-backoffice_dashboard.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e070";
+    color: var(--bo-content-icon-color); }
+div.yw-explorerTree .y-tree-icon-hmc_backoffice-workflow-inbox.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_backoffice-workflow-inbox.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e02b";
+    color: var(--bo-content-icon-color); }
+div.yw-explorerTree .y-tree-icon-hmc_treenode_system.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_treenode_system.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e158";
+    color: var(--bo-content-icon-color); }
+div.yw-explorerTree .y-tree-icon-hmc_treenode_catalog.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_treenode_catalog.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e124";
+    color: var(--bo-content-icon-color); }
+div.yw-explorerTree .y-tree-icon-hmc_treenode_medias.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_treenode_medias.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e07e";
+    color: var(--bo-content-icon-color); }
+div.yw-explorerTree .y-tree-icon-hmc_treenode_user.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_treenode_user.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e001";
+    color: var(--bo-content-icon-color); }
+div.yw-explorerTree .y-tree-icon-hmc_treenode_order.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_treenode_order.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e0c3";
+    color: var(--bo-content-icon-color); }
+div.yw-explorerTree .y-tree-icon-hmc_treenode_pricesettings.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_treenode_pricesettings.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e126";
+    color: var(--bo-content-icon-color); }
+div.yw-explorerTree .y-tree-icon-hmc_treenode_c2l.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_treenode_c2l.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e0e8";
+    color: var(--bo-content-icon-color); }
+div.yw-explorerTree .y-tree-icon-hmc_treenode_marketing.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_treenode_marketing.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e0b0";
+    color: var(--bo-content-icon-color); }
+div.yw-explorerTree .y-tree-icon-hmc_cockpit.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_cockpit.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e22d";
+    color: var(--bo-content-icon-color); }
+
+.yw-generate-out-doc-data-row .z-combobox {
+  display: inline-table;
+  width: 49%;
+  margin-right: 1%; }
+.yw-generate-out-doc-data-row .yw-generate-out-doc-data-row-top-selector {
+  padding-bottom: 15px;
+  display: flex; }
+  .yw-generate-out-doc-data-row .yw-generate-out-doc-data-row-top-selector > * {
+    flex: 0 1 auto; }
+
+.ya-download-media-inline {
+  width: 28px;
+  height: 28px;
+  background-image: url("images/custom-renderer/icons/download-icon-active.png"); }
+  .ya-download-media-inline:hover {
+    background-image: url("images/custom-renderer/icons/download-icon-active-hover.png"); }

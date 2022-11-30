@@ -1,0 +1,111 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@charset "UTF-8";
+/*================================
+    Advanced Search - Text-Search
+================================*/
+// Styling of the simpletext text-search
+
+@import "../support/_advancedsearch-variables.scss";
+
+.yw-textsearch {
+    padding: $advancedsearch__textsearch--padding;
+    
+    &-searchbox {
+        width: $advancedsearch__textsearch-box--width;
+        height: $advancedsearch__textsearch--height;
+        line-height: $advancedsearch__textsearch--line-height;
+        border-radius: $editor-defaults__input-field--border-radius;
+        color: $advancedsearch__textsearch--color;
+        margin-left: $advancedsearch__textsearch--margin-left;
+        vertical-align: $advancedsearch__textsearch--vertical-align;
+        box-sizing: border-box;
+
+        .z-bandbox {
+            &-input {
+                &,
+                &:hover {
+                    vertical-align: top;
+                    border-right-width: $advancedsearch-header__search-input-field--border-width;
+                }
+            }
+            &-popup.z-bandbox-open {
+                top: auto !important;
+                left: auto !important;
+            }
+
+            &-button {
+                // we want to hide default magnifier icon for simple search bandbox
+                display: none;
+            }
+
+        }
+    }
+    .yw-search-mode-container .z-bandbox {
+        &-button {
+            height: $advancedsearch__default-button--size;
+            width: $advancedsearch__default-button--size;
+        }
+
+        &-icon {
+            width: $advancedsearch__textsearch-bandbox-icon--width;
+            line-height: $advancedsearch__textsearch-bandbox-icon--line-height;
+        }
+    }
+
+    &-searchbutton {
+        height: $editor-defaults__inline-box--height;
+
+        
+        
+        &:not([class*="y-btn-"]){
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            color: $advancedsearch__button--color;
+
+            @if $advancedsearch__button--border-color {
+                border: $advancedsearch__button--border;
+            }
+
+            &:hover,
+            &:focus {
+                @if $advancedsearch__button-active--border-color {
+                    border-color: $advancedsearch__button-active--border-color;
+                }
+            }
+        }
+    }
+    &:not(.yw-toggle-open){
+        .yw-search-mode-container,
+        .yw-buttons-container {
+            position: relative;
+            z-index: 0;
+            
+            &:hover {
+                z-index: 1;
+            }
+        }
+        .yw-textsearch-searchbox {
+            .z-bandbox-input {
+                &,
+                &:hover {
+                    border-right-width: $advancedsearch-header__search-input-field--border-width;
+                }
+                &:focus {
+                    border-right-width: $advancedsearch-header__search-input-field-focus--border-width;
+                }
+            }
+        }
+    }
+    &.yw-toggle-open {
+        .yw-textsearch-searchbutton {
+            display: inline-block;
+            vertical-align: top;
+            float: left;
+            text-indent: 0;
+            margin-left: $advancedsearch__search-button--margin-x;
+            margin-right: $advancedsearch__search-button--margin-x;
+        }
+    }
+}

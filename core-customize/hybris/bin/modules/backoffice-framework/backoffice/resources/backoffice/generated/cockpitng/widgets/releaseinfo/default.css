@@ -1,0 +1,40 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-cng-release-releaseinfo {
+  color: var(--bo-text-color);
+  font-size: 14px;
+  background: var(--bo-base-background);
+  font-family: var(--bo-font-family);
+  overflow: auto; }
+  .yw-cng-release-releaseinfo > .z-div {
+    margin: 16px 16px 0; }
+  .yw-cng-release-releaseinfo ul li {
+    padding-left: 1em;
+    list-style: none; }
+    .yw-cng-release-releaseinfo ul li.level1 {
+      font-weight: 200;
+      font-size: 14px;
+      margin-top: 16px;
+      margin-left: -1em; }
+    .yw-cng-release-releaseinfo ul li.level2 {
+      margin-left: 1.4em;
+      color: var(--bo-text-color);
+      list-style: disc outside none; }
+  .yw-cng-release-releaseinfo-titleContainer .z-label {
+    font-size: 25px;
+    font-weight: 200;
+    color: var(--bo-title-color); }
+  .yw-cng-release-releaseinfo-teaserContainer > .z-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--bo-content-label-color); }
+  .yw-cng-release-releaseinfo .featureheader {
+    border-bottom: 1px solid #cccccc;
+    font-size: 16px;
+    font-weight: 200;
+    margin: 50px -16px 0 0;
+    padding-bottom: 4px;
+    padding-right: 16px;
+    display: block; }

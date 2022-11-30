@@ -1,0 +1,73 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+// Input Default (temporary)
+
+$authorityGroup-login__default--bp-xs: 500px;
+$authorityGroup-login__default--bp-m: 1050px;
+
+$authorityGroup-login__body--bg-color: var(--bo-base-background);
+$authorityGroup-login__body-logo--bg: false;
+
+// defaults and container styling
+$authorityGroup-login__logo--height: 48px;
+$authorityGroup-login__logo-container-marging-bottom: $container-spacing-default__base + $container-spacing-default__third;
+
+
+$authorityGroup-login__container--bg-color: var(--bo-container-background);
+$authorityGroup-login__container--left: 0;
+$authorityGroup-login__container--right: $authorityGroup-login__container--left;
+$authorityGroup-login__container--top: 45%;
+$authorityGroup-login__container--transform: translateY(-60%);
+$authorityGroup-login__container--margin: 0 auto;
+$authorityGroup-login__container--max-width: 600px;
+$authorityGroup-login__container--width: 100%;
+$authorityGroup-login__container--min-width: 350px;
+$authorityGroup-login__container--border-radius: 4px;
+$authorityGroup-login__container--box-shadow: var(--bo-content-shadow-small);
+$authorityGroup-login__container--padding: $container-spacing-default__base;
+$authorityGroup-login__container-bp-xs--transform: translateY(0);
+
+//list-item 
+$authorityGroup__footer-container--margin-top: $container-spacing-default__base;
+
+// authority group-selector styling
+
+$authorityGroupSelector__selector-body--width: 100%;
+$authorityGroupSelector__selector-body--height: 100%;
+
+$authorityGroupSelector__group-list--width: 100%;
+$authorityGroupSelector__group-list-cell--transition: background-color .5s;
+
+$authorityGroupSelector__listcell-content--bg-color: $authorityGroup-login__container--bg-color;
+$authorityGroupSelector__listcell-content--text-overflow: initial;
+$authorityGroupSelector__listcell-content--white-space: initial;
+$authorityGroupSelector__listcell-content-first-child--padding-left: ($toolbar__button-small--size + $container-spacing-default__half);
+$authorityGroupSelector__listcell-content--line-height: $font-size__large;
+$authorityGroupSelector__listcell-content--padding-left: $authorityGroupSelector__listcell-content-first-child--padding-left + $container-spacing-default__half;
+$authorityGroupSelector__listcell-content--text-indent: $authorityGroupSelector__listcell-content-first-child--padding-left * -1;
+$authorityGroupSelector__listcell-content--word-wrap: break-word;
+
+$authorityGroupSelector__check-radio--margin-top: 2px;
+
+$_authorityGroupSelector__grid--max-width: $authorityGroup-login__container--min-width;
+$_authorityGroupSelector__grid--margin: 10% auto 20px;
+
+$authorityGroupSelector__label--font-weight: normal;
+$authorityGroupSelector__label--font-size: $font-size__base;
+$authorityGroupSelector__label--line-height: $font-size__large;
+$authorityGroupSelector__label--margin-bottom: $container-spacing-default__third - floor((($authorityGroupSelector__label--line-height - $authorityGroupSelector__label--font-size)/2));
+
+$authorityGroupSelector__label--text-color: var(--bo-text-color);
+$authorityGroupSelector__label--selected-color: var(--bo-selected-color);
+
+$authorityGroupSelector__image--size: 17px;
+$authorityGroupSelector__image--padding-left: 85%;
+$authorityGroupSelector__image--bg: url("images/icon_questionmark.png") no-repeat 1px 0;
+
+$authorityGroupSelector__selector-button--margin-top: 20px;
+
+$authorityGroupSelector__holder-divs--border: none;
+$authorityGroupSelector__holder-divs--bg: none;
+$authorityGroupSelector__holder-divs--box-shadow: none;

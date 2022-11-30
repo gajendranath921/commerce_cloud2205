@@ -1,0 +1,53 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-show-menu-action.z-button {
+  width: 28px;
+  height: 28px;
+  min-height: 28px;
+  line-height: 28px;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--bo-button-text-color);
+  font-family: var(--bo-content-icon-font-family);
+  font-size: 14px;
+  text-align: center;
+  display: inline-block; }
+  .yw-show-menu-action.z-button::before {
+    content: "\e1f2"; }
+  .yw-show-menu-action.z-button:hover {
+    color: var(--bo-button-hover-color);
+    box-shadow: none; }
+  .yw-show-menu-action.z-button:focus {
+    z-index: 5;
+    outline: var(--bo-content-focus-outline-width, 0.0625rem) dotted var(--bo-button-focus-outline-color);
+    outline-offset: -0.1875rem; }
+  .yw-show-menu-action.z-button:active {
+    color: var(--bo-button-active-color);
+    box-shadow: none; }
+  .yw-show-menu-action.z-button[disabled], .yw-show-menu-action.z-button[disabled]:hover, .yw-show-menu-action.z-button[disabled]:active {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none; }
+  .yw-show-menu-action.z-button:before {
+    width: 16px;
+    height: 16px; }
+.yw-show-menu-action-disabled {
+  opacity: 0.4; }
+  .yw-show-menu-action-disabled, .yw-show-menu-action-disabled:hover, .yw-show-menu-action-disabled:focus {
+    border: none;
+    background: none; }
+.yw-show-menu-action-container {
+  vertical-align: middle; }
+.yw-show-menu-action-content {
+  display: inline-block;
+  width: auto;
+  height: auto; }
+.yw-show-menu-action:hover {
+  cursor: pointer; }

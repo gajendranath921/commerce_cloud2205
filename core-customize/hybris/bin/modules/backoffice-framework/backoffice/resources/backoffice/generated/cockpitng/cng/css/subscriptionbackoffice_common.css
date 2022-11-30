@@ -1,0 +1,8 @@
+/* Status */
+/* Button Color Scheme */
+div.yw-explorerTree .y-tree-icon-hmc_treenode_subscription.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_treenode_subscription.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e061";
+    color: var(--bo-content-icon-color); }

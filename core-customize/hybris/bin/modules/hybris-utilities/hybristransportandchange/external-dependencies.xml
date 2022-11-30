@@ -1,0 +1,89 @@
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2018 SAP SE or an SAP affiliate company.  All rights reserved.
+
+ This software is the confidential and proprietary information of SAP
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with SAP.
+-->
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.hybris.platform</groupId>
+	<artifactId>hybristransportandchange</artifactId>
+	<version>2205.6</version>
+
+	<packaging>jar</packaging>
+
+		<dependencies>
+			<dependency>
+			    <groupId>org.glassfish.gmbal</groupId>
+			    <artifactId>gmbal-api-only</artifactId>
+			    <version>4.0.3</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.sun.istack</groupId>
+			    <artifactId>istack-commons-runtime</artifactId>
+			    <version>3.0.12</version>
+			</dependency>
+			<dependency>
+			    <groupId>jakarta.activation</groupId>
+			    <artifactId>jakarta.activation-api</artifactId>
+			    <version>1.2.2</version>
+			</dependency>
+			<dependency>
+			    <groupId>jakarta.jws</groupId>
+			    <artifactId>jakarta.jws-api</artifactId>
+			    <version>2.1.0</version>
+			</dependency>
+			<dependency>
+					<groupId>jakarta.xml.soap</groupId>
+					<artifactId>jakarta.xml.soap-api</artifactId>
+					<version>1.4.2</version>
+			</dependency>
+			<dependency>
+					<groupId>jakarta.xml.ws</groupId>
+					<artifactId>jakarta.xml.ws-api</artifactId>
+					<version>2.3.3</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.glassfish.jaxb</groupId>
+			    <artifactId>jaxb-runtime</artifactId>
+			    <version>2.3.6</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jvnet.mimepull</groupId>
+				<artifactId>mimepull</artifactId>
+				<version>1.9.15</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.sun.xml.ws</groupId>
+			    <artifactId>policy</artifactId>
+			    <version>2.7.10</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.sun.xml.ws</groupId>
+			    <artifactId>rt</artifactId>
+			    <version>2.3.5</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.sun.xml.messaging.saaj</groupId>
+			    <artifactId>saaj-impl</artifactId>
+			    <version>1.5.3</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.jvnet.staxex</groupId>
+			    <artifactId>stax-ex</artifactId>
+			    <version>1.8.3</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.sun.xml.stream.buffer</groupId>
+			    <artifactId>streambuffer</artifactId>
+			    <version>2.0.2</version>
+			</dependency>
+	</dependencies>
+</project>

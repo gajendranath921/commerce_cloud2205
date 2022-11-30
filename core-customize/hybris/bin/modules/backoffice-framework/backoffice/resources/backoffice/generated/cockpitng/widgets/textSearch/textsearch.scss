@@ -1,0 +1,69 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+$textsearch-single__container--height: $editor-defaults__inline-box--height + 2 * $boxes--border__thin;
+$textsearch-single__container--padding: 0 $_container-spacing-default__tiny;
+$textsearch-single__searchbox--height: $editor-defaults__inline-box--height;
+$textsearch-single__searchbox--padding: false; //0 5px;
+$textsearch-single__searchbox--font-size: $font-size__base;
+$textsearch-single__searchbox--line-height: $font-size__large;
+$textsearch-single__searchbox--border-width: $boxes--border__thin;
+$textsearch-single__searchbox--color: var(--bo-input-text-color);
+$textsearch-single__searchbox--border-color: var(--bo-input-border-color);
+$textsearch-single__searchbox__hover--border-color: var(--bo-input-hover-border-color);
+$textsearch-single__searchbutton--border: $textsearch-single__searchbox--border-width solid $textsearch-single__searchbox--border-color;
+
+.yw-textsearch-single {
+	padding: $textsearch-single__container--padding;
+    height: $textsearch-single__container--height;
+    display: inline-table;
+
+    .yw-textsearch {
+        &-searchbox{
+            font-size: $textsearch-single__searchbox--font-size;
+            line-height: $textsearch-single__searchbox--font-size;
+            height: $textsearch-single__searchbox--height;
+            @if $textsearch-single__searchbox--padding {
+                padding: $textsearch-single__searchbox--padding;
+            }
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            background-position: 3px 50%;
+            background-repeat: no-repeat;
+            display: inline-block;
+            font-weight: 200;
+            float: left;
+            margin: 0;
+            margin-right: $textsearch-single__searchbox--border-width * -1;
+            position: relative;
+            z-index: 0;
+            border-right: none;
+        }
+        &-searchbutton.z-button {
+            margin-left: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border: $textsearch-single__searchbutton--border;
+            position: relative;
+            z-index: 0;
+            color: $textsearch-single__searchbox--color;
+
+            &:focus,
+            &:hover {
+                border-color: $textsearch-single__searchbox__hover--border-color;
+            }
+        }
+        &-searchbox,
+        &-searchbutton.z-button {
+            &:focus {
+                z-index: 1;
+            }
+        }
+        .yw-buttons-container {
+            display: inline-block;
+            margin:0;
+            height: $textsearch-single__searchbox--height;
+        }
+    }
+}

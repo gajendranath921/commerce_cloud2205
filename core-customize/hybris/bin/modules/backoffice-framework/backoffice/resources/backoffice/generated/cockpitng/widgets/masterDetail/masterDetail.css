@@ -1,0 +1,53 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-modal-masterdetail {
+  max-width: 1021px; }
+  .yw-modal-masterdetail .z-window-header .z-caption-content {
+    width: 100%;
+    text-align: center; }
+  .yw-modal-masterdetail .yw-masterdetail-footer {
+    width: 100%;
+    text-align: right;
+    min-height: 44px;
+    border-top: 1px solid var(--bo-container-border-color);
+    bottom: 0;
+    position: absolute; }
+    .yw-modal-masterdetail .yw-masterdetail-footer .z-button {
+      height: 36px;
+      margin: 4px 7px 4px 0; }
+
+.yw-masterdetail-content {
+  height: calc(100% - 44px); }
+  .yw-masterdetail-content .yw-masterdetail-sidebar {
+    float: left;
+    border-right: 1px solid var(--bo-list-border-color);
+    overflow: auto; }
+    .yw-masterdetail-content .yw-masterdetail-sidebar .yw-sidebar-item {
+      border-bottom: 1px solid var(--bo-list-border-color);
+      background-color: var(--bo-list-background);
+      padding: 16px;
+      cursor: pointer;
+      display: flex; }
+      .yw-masterdetail-content .yw-masterdetail-sidebar .yw-sidebar-item-title {
+        font-size: 14px;
+        color: var(--bo-title-color);
+        padding-left: 8px; }
+      .yw-masterdetail-content .yw-masterdetail-sidebar .yw-sidebar-item-subtitle {
+        color: var(--bo-content-label-color);
+        padding-left: 8px; }
+      .yw-masterdetail-content .yw-masterdetail-sidebar .yw-sidebar-item:hover {
+        background-color: var(--bo-list-hover-background); }
+      .yw-masterdetail-content .yw-masterdetail-sidebar .yw-sidebar-item .cng-action-icon {
+        color: var(--bo-content-label-color) !important;
+        font-size: 1.5rem; }
+      .yw-masterdetail-content .yw-masterdetail-sidebar .yw-sidebar-item-selected {
+        background-color: var(--bo-list-selected-background);
+        border-bottom: var(--bo-container-border-width) solid var(--bo-list-selected-border-color); }
+        .yw-masterdetail-content .yw-masterdetail-sidebar .yw-sidebar-item-selected:hover {
+          background-color: var(--bo-list-selected-hover-background); }
+  .yw-masterdetail-content .yw-masterdetail-details {
+    float: right; }

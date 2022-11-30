@@ -1,0 +1,25 @@
+<fd-popover
+    *ngIf="showDropdown"
+    [triggers]="[]"
+    [closeOnOutsideClick]="false"
+    [isOpen]="isOpen"
+    [placement]="'bottom-end'"
+>
+    <fd-popover-control>
+        <button
+            (click)="onClickDropdown()"
+            class="se-page-approval-selector__toggle-btn fd-button--light sap-icon--navigation-down-arrow"
+        ></button>
+    </fd-popover-control>
+    <fd-popover-body>
+        <div *ngIf="showApprovalInfo" class="se-page-approval-info">{{ approvalInfo }}</div>
+        <fd-menu *ngIf="!showApprovalInfo">
+            <ul fd-menu-list class="se-dropdown-menu__list se-page-approval-selector-list">
+                <se-dropdown-menu-item
+                    *ngFor="let dropdownItem of pageApprovalOptions$ | async"
+                    [dropdownItem]="dropdownItem"
+                ></se-dropdown-menu-item>
+            </ul>
+        </fd-menu>
+    </fd-popover-body>
+</fd-popover>

@@ -1,0 +1,122 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Create Container
+================================*/
+// Styling of the Create Container visible on different Widgets
+
+
+@import "../support/_create-variables.scss";
+
+.ya-create-container {
+    border: $create__create-new-button--border;
+    background-color: $create__create-new-button--bg-color;
+    display: table;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .cng-action-text {
+        color: $create__create-type-action-text--color;
+        display: inline-block;
+        vertical-align: middle;
+
+        .z-label {
+            margin-right: $create__create-new-button-action-text-label--margin-right;
+        }
+    }
+
+    //todo: check if parent (&) is needed here!?
+    &.cng-action-disabled .cng-action-text {
+        font-style: italic;
+    }
+
+    .ya-create-type-selector-button {
+        margin-right: 0;
+        margin-left: 0;
+        &:hover {
+            background-color: $_button__action-tool-hover-active-focus--bg-color;
+            color: $_button__action-tool-hover-active-focus--color !important;
+        }
+    }
+
+    .y-toolbar &,
+    .ye-toolbar &,
+    .yw-explorerTree-toolbar & {
+        background-color: $_create__toolbar-action-container--bg-color;
+        color: $_create__toolbar-action-container--color;
+        border-radius: $toolbar__button-default--border-radius;
+        border-width: 0;
+        border-color: $_create__toolbar-action-container--border-color;
+        overflow: hidden;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        margin: 0;
+
+        .cng-action,
+        .ya-create-type-selector-button {
+            border-radius: 0;
+            margin-left: $create__toolbar-action-split-group-items-overlap--margin;
+
+            &:first-child {
+                border-top-left-radius: $_create__toolbar-action-button--border-radius;
+                border-bottom-left-radius: $_create__toolbar-action-button--border-radius;
+                margin-left: 0;
+            }
+            &:last-child {
+                border-top-right-radius: $_create__toolbar-action-button--border-radius;
+                border-bottom-right-radius: $_create__toolbar-action-button--border-radius;
+            }
+        }
+
+
+        .z-hbox-sep {
+            display: none;
+        }
+        .cng-action-text {
+            display: none;
+        }
+        .ya-create-type-selector-button {
+            box-sizing: border-box;
+            background-color: $_create__toolbar-action-container--bg-color;
+            color: $_create__toolbar-action-container--color;
+            border: $_create__toolbar-action-button--border;
+            position: relative;
+            padding-top: 0;
+            padding-bottom: 0;
+            display: block;
+
+            &-opened,
+            &:hover,
+            &:focus {
+                color: $_create__toolbar-action-button-selected--color;
+                background-color: $_create__toolbar-action-button-selected--bg-color;
+                border-color: $_create__toolbar-action-button-selected--border-color;
+            }
+            &[disabled] {
+                opacity: $_create__toolbar-action-disabled--opacity;
+
+                &:hover,
+                &:focus {
+                    background-color: $_create__toolbar-action-container--bg-color;
+                    color: $_create__toolbar-action-container--color;
+                    border-color: $_create__toolbar-action-container--border-color;
+                }
+            }      
+        }
+        > .ya-create-type-selector-button:last-child {
+            .z-toolbarbutton-content {
+                margin-left: $create__create-type-selector-button--margin-left;
+            }
+        }
+    }
+}

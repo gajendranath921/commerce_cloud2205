@@ -1,0 +1,154 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-workflowsearch-additional-filters {
+  clear: both; }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-workflowsearch-filters-search {
+  margin-left: -1px;
+  display: inline-block;
+  float: right;
+  position: relative; }
+  .yw-workflowsearch-filters .yw-workflowsearch-filters-search.z-button {
+    width: 28px;
+    height: 28px;
+    min-height: 28px;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: var(--bo-content-icon-font-family);
+    border-color: var(--bo-input-border-color);
+    border-radius: 0 4px 4px 0; }
+    .yw-workflowsearch-filters .yw-workflowsearch-filters-search.z-button::before {
+      content: "\e00d"; }
+.yw-workflowsearch-filters-input {
+  margin: -1px; }
+.yw-workflowsearch-filters-range {
+  border: 1px solid var(--bo-input-border-color);
+  width: 220px;
+  min-height: 28px;
+  border-right: none;
+  font-size: 0;
+  text-align: left;
+  display: inline-block;
+  border-radius: 4px 0 0 4px; }
+  .yw-workflowsearch-filters-range:hover {
+    border-color: var(--bo-input-hover-border-color); }
+  .yw-workflowsearch-filters-range .ye-range-editor-java-util-date {
+    display: inline-block; }
+    .yw-workflowsearch-filters-range .ye-range-editor-java-util-date a {
+      border: none; }
+    .yw-workflowsearch-filters-range .ye-range-editor-java-util-date input {
+      border-color: transparent; }
+    .yw-workflowsearch-filters-range .ye-range-editor-java-util-date .z-datebox-button.z-datebox-disabled {
+      right: 0; }
+  .yw-workflowsearch-filters-range .ye-range-endpoint {
+    margin-top: 0; }
+  .yw-workflowsearch-filters-range .z-datebox {
+    min-height: 28px; }
+    .yw-workflowsearch-filters-range .z-datebox-input {
+      padding: 0 8px;
+      line-height: 28px;
+      height: 28px;
+      box-shadow: none;
+      background: transparent;
+      z-index: 1;
+      border: none; }
+      .yw-workflowsearch-filters-range .z-datebox-input:hover, .yw-workflowsearch-filters-range .z-datebox-input:focus, .yw-workflowsearch-filters-range .z-datebox-input:active {
+        color: var(--bo-highlight-color); }
+      .yw-workflowsearch-filters-range .z-datebox-input::-ms-clear {
+        display: none; }
+    .yw-workflowsearch-filters-range .z-datebox-button.z-datebox-disabled {
+      background-color: transparent;
+      position: absolute;
+      width: 200%;
+      height: 0;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      border-bottom-width: 0;
+      overflow: visible;
+      display: none; }
+      .yw-workflowsearch-filters-range .z-datebox-button.z-datebox-disabled > i {
+        display: none !important; }
+      .yw-workflowsearch-filters-range .z-datebox-button.z-datebox-disabled:hover {
+        cursor: default; }
+      .yw-workflowsearch-filters-range .z-datebox-button.z-datebox-disabled:before, .yw-workflowsearch-filters-range .z-datebox-button.z-datebox-disabled:after {
+        content: "";
+        position: absolute;
+        border-color: inherit;
+        border-width: 0; }
+      .yw-workflowsearch-filters-range .z-datebox-button.z-datebox-disabled:before {
+        height: 28px;
+        border-left-width: 1px;
+        left: -1px;
+        width: 0; }
+      .yw-workflowsearch-filters-range .z-datebox-button.z-datebox-disabled:after {
+        border-top-width: 1px;
+        top: 26px;
+        width: 100%;
+        height: 0;
+        left: 0; }
+  .yw-workflowsearch-filters-range .ye-range-endpoint {
+    display: inline-block;
+    width: 102px;
+    overflow: visible; }
+    .yw-workflowsearch-filters-range .ye-range-endpoint span, .yw-workflowsearch-filters-range .ye-range-endpoint div {
+      display: block; }
+    .yw-workflowsearch-filters-range .ye-range-endpoint-start {
+      z-index: 1;
+      position: relative; }
+      .yw-workflowsearch-filters-range .ye-range-endpoint-start .ye-range-editor-java-util-date {
+        display: inline-block;
+        font-family: var(--bo-content-icon-font-family); }
+        .yw-workflowsearch-filters-range .ye-range-endpoint-start .ye-range-editor-java-util-date::before {
+          content: "\e04c"; }
+        .yw-workflowsearch-filters-range .ye-range-endpoint-start .ye-range-editor-java-util-date:before {
+          position: absolute;
+          right: -16px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 12px;
+          color: var(--bo-text-color);
+          width: 16px;
+          text-align: center;
+          z-index: 2; }
+      .yw-workflowsearch-filters-range .ye-range-endpoint-start .z-datebox-input {
+        position: relative;
+        border-right-width: 0; }
+        .yw-workflowsearch-filters-range .ye-range-endpoint-start .z-datebox-input + .z-datebox-button.z-datebox-disabled:before {
+          left: auto;
+          right: -1px; }
+    .yw-workflowsearch-filters-range .ye-range-endpoint-end {
+      z-index: 0;
+      padding-top: 0;
+      margin-left: 17px;
+      position: absolute; }
+      .yw-workflowsearch-filters-range .ye-range-endpoint-end .z-datebox {
+        margin-left: -100%; }
+        .yw-workflowsearch-filters-range .ye-range-endpoint-end .z-datebox-input {
+          margin-left: 100%;
+          z-index: 1; }
+  .yw-workflowsearch-filters-range .ye-range-label {
+    padding-left: 8px;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 0;
+    color: transparent;
+    max-width: 100%;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute; }
+.yw-workflowsearch-filters {
+  margin: 16px;
+  height: 28px;
+  min-width: 248px;
+  float: right; }

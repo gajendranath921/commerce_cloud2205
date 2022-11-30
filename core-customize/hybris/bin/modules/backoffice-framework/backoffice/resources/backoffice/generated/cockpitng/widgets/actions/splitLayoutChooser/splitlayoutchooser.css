@@ -1,0 +1,43 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Split Layout Chooser Button
+================================*/
+.z-button.yw-split-layout-chooser-button {
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+  display: block;
+  background: var(--bo-button-background) !important;
+  color: var(--bo-button-icon-color) !important;
+  border: none;
+  outline: none; }
+  .z-button.yw-split-layout-chooser-button:hover {
+    background: var(--bo-button-hover-background) !important;
+    color: var(--bo-button-hover-color) !important; }
+  .z-button.yw-split-layout-chooser-button:active {
+    background: var(--bo-button-active-background) !important;
+    color: var(--bo-button-active-color) !important; }
+  .z-button.yw-split-layout-chooser-button.yw-split-layout-chooser-button-with-label {
+    width: 100px;
+    font-size: 14px;
+    font-family: var(--bo-font-family);
+    text-align: left;
+    text-transform: none; }
+
+.ya-com_hybris_cockpitng_action_splitlayoutchooser.cng-action {
+  line-height: 1; }
+
+.yw-split-layout-chooser-popup {
+  margin: 28px 0 0 0;
+  padding: 2px 0;
+  min-width: 46px; }
+  .yw-split-layout-chooser-popup .z-button.yw-split-layout-chooser-button {
+    width: 100%;
+    text-align: center;
+    border-width: 0; }
+    .yw-split-layout-chooser-popup .z-button.yw-split-layout-chooser-button.yw-split-layout-chooser-button-with-label {
+      text-align: left; }

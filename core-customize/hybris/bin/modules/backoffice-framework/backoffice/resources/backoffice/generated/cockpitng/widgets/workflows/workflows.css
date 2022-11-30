@@ -1,0 +1,263 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-com_hybris_backoffice_widgets_workflows {
+  height: 100%; }
+
+.yw-workflows-panel {
+  border-top: 0;
+  padding: 0;
+  height: 100%; }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-workflows-droparea, .yw-workflows-droparea-plus-button {
+  border-radius: 4px;
+  border: 2px dotted var(--bo-button-icon-color);
+  padding: 8px;
+  text-align: center;
+  position: relative;
+  line-height: 16px;
+  margin-top: 8px; }
+.yw-workflows-droparea-plus-icon:before, .yw-workflows-droparea-plus-button:before {
+  font-family: var(--bo-content-icon-font-family);
+  font-size: 16px;
+  content: "\e058";
+  color: var(--bo-button-icon-color);
+  display: block; }
+.yw-workflows-droparea-plus-icon {
+  height: 16px;
+  width: 16px;
+  cursor: default;
+  border-width: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px; }
+.yw-workflows-droparea-plus-button {
+  height: 40px;
+  width: 40px;
+  min-height: 0;
+  margin: 0 auto; }
+.yw-workflows-droparea.z-drag-over {
+  background: transparent; }
+.yw-workflows-droparea.z-drag-matching-drop-target.z-drag-over {
+  color: var(--bo-list-text-color);
+  border-color: var(--bo-list-text-color); }
+  .yw-workflows-droparea.z-drag-matching-drop-target.z-drag-over span {
+    color: var(--bo-list-text-color); }
+.yw-workflows-droparea-plus-button:hover, .yw-workflows-droparea-plus-button:active, .yw-workflows-droparea-plus-button:focus, .yw-workflows-droparea.z-drag-matching-drop-target.z-drag-over .yw-workflows-droparea-plus-button, .yw-workflows-droparea.z-drag-matching-drop-target.z-drag-over .yw-workflows-droparea-plus-icon {
+  background-color: var(--bo-button-hover-background); }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-workflows-list.z-listbox {
+  overflow-y: auto;
+  height: auto !important;
+  max-height: calc(100% - 90px);
+  border: 0; }
+  .yw-workflows-list.z-listbox > .z-listbox-body {
+    max-height: 100%;
+    height: auto !important; }
+.yw-workflows-list-bottom {
+  padding-top: 8px;
+  display: table;
+  width: 100%; }
+  .yw-workflows-list-bottom .yw-workflows-list-bottom-start.ye-text-button {
+    font-size: 14px;
+    color: var(--bo-list-text-color); }
+    .yw-workflows-list-bottom .yw-workflows-list-bottom-start.ye-text-button:hover {
+      color: var(--bo-link-hover-color);
+      text-decoration: underline; }
+  .yw-workflows-list-bottom .yw-workflows-list-bottom-start-disabled {
+    opacity: 0.4;
+    cursor: not-allowed !important;
+    text-decoration: none !important; }
+.yw-workflows-list .z-listitem:hover {
+  cursor: default; }
+.yw-workflows-list-item {
+  text-align: left; }
+  .yw-workflows-list-item:last-child > .z-listcell {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    margin-bottom: -1px; }
+  .yw-workflows-list-item .z-listcell {
+    border-color: var(--bo-list-border-color); }
+    .yw-workflows-list-item .z-listcell > .z-listcell-content {
+      padding: 20px 8px 20px 4px; }
+  .yw-workflows-list .yw-workflows-list-item.z-listitem-selected {
+    background-color: transparent; }
+  .yw-workflows-list .yw-workflows-list-item:hover, .yw-workflows-list .yw-workflows-list-item:hover, .yw-workflows-list .yw-workflows-list-item.z-listitem-selected:hover, .yw-workflows-list .yw-workflows-list-item.z-listitem-selected:hover {
+    background-color: var(--bo-list-hover-background); }
+.yw-workflows-list-content {
+  padding: 0 0 0 16px; }
+  .yw-workflows-list-content-top {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row-reverse; }
+  .yw-workflows-list-content-bottom {
+    padding: 8px 8px 0 0; }
+  .yw-workflows-list-content .z-label {
+    max-width: 100%;
+    white-space: normal; }
+.yw-workflows-list-content-bottom .yw-workflows-list-bottom-start, .yw-workflows-list-content-bottom .yw-workflows-list-info.z-label {
+  padding-right: 5px;
+  display: table-cell;
+  color: var(--bo-list-text-color);
+  line-height: 20px; }
+  .yw-workflows-list-content-bottom .yw-workflows-list-bottom-start:last-child, .yw-workflows-list-content-bottom .yw-workflows-list-info.z-label:last-child {
+    padding-left: 5px;
+    text-align: right;
+    padding-right: 0; }
+.yw-workflows-list-info-bottom, .yw-workflows-list-info-container {
+  padding-top: 5px;
+  display: table;
+  width: 100%; }
+.yw-workflows-list .yw-workflows-list-subtitle,
+.yw-workflows-list .yw-workflows-list-title {
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  font-size: 16px;
+  color: var(--bo-list-group-header-text-color);
+  max-width: calc(100% - 24px);
+  line-height: 20px;
+  display: inline-block;
+  word-break: break-all; }
+  .yw-workflows-list .yw-workflows-list-subtitle:hover,
+  .yw-workflows-list .yw-workflows-list-title:hover {
+    color: var(--bo-link-hover-color);
+    text-decoration: none; }
+.yw-workflows-list .yw-workflows-list-subtitle {
+  color: var(--bo-list-text-color); }
+  .yw-workflows-list .yw-workflows-list-subtitle:hover {
+    text-decoration: underline; }
+  .yw-workflows-list .yw-workflows-list-subtitle:active {
+    text-decoration: underline;
+    color: var(--bo-link-active-color); }
+  .yw-workflows-list .yw-workflows-list-subtitle:focus {
+    text-decoration: underline; }
+.yw-workflows-list-button {
+  clear: left;
+  float: right;
+  text-align: center; }
+  .yw-workflows-list-button:empty {
+    width: 24px;
+    height: 24px;
+    display: block;
+    padding: 0;
+    min-height: 0;
+    background: url("images/dots.png") center 0 no-repeat;
+    box-shadow: none; }
+    .yw-workflows-list-button:empty:hover, .yw-workflows-list-button:empty:focus, .yw-workflows-list-button:empty:active {
+      background: url("images/dots.png") center -24px no-repeat;
+      box-shadow: none; }
+.yw-workflows-list tbody.z-listbox-emptybody td {
+  background: transparent; }
+.yw-workflows-list .yw-custom-menu-popup {
+  margin-top: 7px; }
+.yw-workflows-list .yw-show-menu-action-container {
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto; }
+
+.yw-workflows-menu-popup.yw-pointer-menupopup-right {
+  margin-top: -32px;
+  margin-left: -24px; }
+.yw-workflows-menu-popup.yw-pointer-menupopup-top {
+  margin-top: 7px; }
+  .yw-workflows-menu-popup.yw-pointer-menupopup-top-right {
+    margin-top: -4px;
+    margin-left: 6px; }
+    .yw-workflows-menu-popup.yw-pointer-menupopup-top-right:before, .yw-workflows-menu-popup.yw-pointer-menupopup-top-right:after {
+      right: 8px; }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-workflows-footer {
+  border: none;
+  border-top: 1px solid var(--bo-list-border-color);
+  padding: 16px;
+  border-radius: 0;
+  margin: 0; }
+  .yw-workflows-footer > .z-label {
+    margin-top: 8px;
+    display: block;
+    color: var(--bo-tile-title-color); }
+  .yw-workflows-footer.z-drag-matching-drop-target.z-drag-over {
+    border-top: 1px solid var(--bo-list-border-color); }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-workflowview-link-container {
+  width: 100%;
+  text-align: right;
+  padding-bottom: 20px; }
+
+.yw-workflowview-link {
+  text-align: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  text-transform: none;
+  white-space: normal;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  font-size: 14px; }
+  .yw-workflowview-link, .yw-workflowview-link:hover, .yw-workflowview-link:focus, .yw-workflowview-link:active {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    box-shadow: none; }
+  .yw-workflowview-link:hover {
+    color: #0486e0;
+    text-decoration: underline; }
+  .yw-workflowview-link[disabled], .yw-workflowview-link[disabled]:hover, .yw-workflowview-link[disabled]:active {
+    color: inherit;
+    background-color: transparent !important;
+    border: none;
+    opacity: .4;
+    text-decoration: none; }
+
+/* Status */
+/* Button Color Scheme */
+.vis-tooltip {
+  font-family: var(--bo-font-family) !important;
+  color: #2a3b4c !important;
+  padding: 8px;
+  background-color: #ffffff;
+  border: 1px solid #d2dae4 !important;
+  border-radius: 1px !important;
+  box-shadow: 0 2px 4px 0 rgba(30, 40, 48, 0.3) !important; }
+
+.yw-modal-workflowOverview-workflows-flow-presentation.z-window .yw-visjs-chart-container > .action-slot {
+  position: absolute;
+  top: 8px;
+  right: 48px;
+  margin-right: 8px; }
+.yw-modal-workflowOverview-workflows-flow-presentation.z-window > .z-window-content {
+  overflow: visible; }
+.yw-modal-workflowOverview-workflows-flow-presentation.z-window > .z-window-header {
+  border-bottom: 1px solid #d2dae4; }
+  .yw-modal-workflowOverview-workflows-flow-presentation.z-window > .z-window-header .z-caption {
+    padding-right: 160px; }

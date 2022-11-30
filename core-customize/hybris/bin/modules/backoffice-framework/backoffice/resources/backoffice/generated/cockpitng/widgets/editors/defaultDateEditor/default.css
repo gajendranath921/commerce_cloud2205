@@ -1,0 +1,38 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.ye-com_hybris_cockpitng_editor_defaultdate .z-datebox {
+  display: table;
+  position: relative;
+  width: 100%; }
+  .ye-com_hybris_cockpitng_editor_defaultdate .z-datebox-button {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+    box-sizing: border-box; }
+  .ye-com_hybris_cockpitng_editor_defaultdate .z-datebox-input {
+    margin-bottom: 0;
+    width: 100%;
+    display: table-cell;
+    border-right: none;
+    box-sizing: border-box; }
+  .ye-com_hybris_cockpitng_editor_defaultdate .z-datebox-input.z-datebox-invalid {
+    box-shadow: none;
+    border-right-width: 0 !important;
+    border-color: var(--bo-error-color) !important; }
+    .ye-com_hybris_cockpitng_editor_defaultdate .z-datebox-input.z-datebox-invalid + .z-datebox-button {
+      border-color: var(--bo-error-color) !important; }
+.ye-com_hybris_cockpitng_editor_defaultdate .z-datebox-disabled * {
+  background-color: var(--bo-input-readonly-background); }
+.ye-com_hybris_cockpitng_editor_defaultdate .z-datebox-disabled .z-datebox-icon {
+  background-position: center -33px !important; }
+.ye-com_hybris_cockpitng_editor_defaultdate .ye-inline-editing-disabled .z-datebox-input[readonly] {
+  border-color: var(--bo-input-readonly-border-color);
+  background-color: var(--bo-input-readonly-background); }
+  .ye-com_hybris_cockpitng_editor_defaultdate .ye-inline-editing-disabled .z-datebox-input[readonly]:focus {
+    border-color: var(--bo-input-focus-border-color); }
+
+.z-window-highlighted .ye-com_hybris_cockpitng_editor_defaultdate,
+.z-window-highlighted .ye-com_hybris_cockpitng_editor_defaultdate table {
+  width: 100%; }

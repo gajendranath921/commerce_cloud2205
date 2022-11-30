@@ -1,0 +1,85 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "../support/_valueChooser-variables";
+
+.yw-valuechooser {
+	&-container {
+		width: 50%;
+		display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+		table-layout: fixed;
+		color: $valueChooser__option--color;
+	}
+	&-option {
+		&-container {
+			padding: $valueChooser__option-container--padding;
+			transition: $valueChooser__option-container-transition;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex: 1 1 auto;
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+			align-items: center;
+			justify-content: flex-start;
+			text-align: center;
+			vertical-align: middle;
+			position: relative;
+			padding-left: $_container-spacing-default__large;
+
+			&:before {
+            	content: "";
+            	width: $_valueChooser__option-checkbox--width;
+            	height: $_valueChooser__option-checkbox--height;
+            	border: $_valueChooser__option-checkbox--border;
+            	border-radius: $_valueChooser__option-checkbox--border-radius;
+            	margin-right: $_valueChooser__option-checkbox--margin-right;
+            	margin-left: $_valueChooser__option-checkbox--margin-left;
+            	line-height: $_valueChooser__option-checkbox--line-height;
+            	font-family: $_valueChooser__option-checkbox--font-family;
+            	color: $_valueChooser__option-checkbox--color;
+            	font-size: $_valueChooser__option-checkbox--font-size;
+            	display: block;
+          	}
+          	&:hover {
+            	&:before {
+								background-color: $valueChooser__option-checkbox--hover--bg-color;
+            		border-color: $valueChooser__option-checkbox--hover--border-color;
+            	}
+          	}
+          	&:first-child {
+				border-left-width: 0;
+			}
+        }
+        &-selected {
+          &:before {
+			  content: $_valueChooser__option-checkbox--content;
+          }
+        }
+	}
+	&-selection-handler {
+		cursor: pointer;
+	}
+	&-option {
+		padding: $valueChooser__option--padding;
+		font-size: $valueChooser__option--font-size;
+
+		&.z-button {
+			&, 
+			&:focus, 
+			&:active,
+			&:hover {
+				border-color: transparent;
+				background-color: transparent;
+				box-shadow: none;
+				color: inherit;
+				min-height: auto;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

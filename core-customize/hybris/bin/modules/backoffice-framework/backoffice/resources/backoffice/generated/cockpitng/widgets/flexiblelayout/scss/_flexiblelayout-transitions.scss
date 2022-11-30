@@ -1,0 +1,26 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "support/_flexiblelayout-variables.scss";
+
+.yw-flexlayout-sidebar {
+    transition: $flexlayout__sidebar--transition;
+
+    &-opened > & {
+        transition: $flexlayout__sidebar-opened--transition;
+    }
+
+    @media (min-width: $flexlayout__media-query-xs--min-width + 1px) {
+        &-hover-overlap > & {
+            transition: $flexlayout__sidebar-overlap--transition;
+
+            &:hover {
+                transition: $flexlayout__sidebar-overlap-hover--transition;
+            }
+        }
+    }
+}
+
+.yw-flexlayout-contents {
+    transition: $flexlayout__contents--transition;
+}

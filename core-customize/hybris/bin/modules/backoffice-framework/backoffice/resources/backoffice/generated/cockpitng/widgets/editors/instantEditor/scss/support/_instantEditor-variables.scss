@@ -1,0 +1,33 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$instantEditor__editor-buttons--size: $editor-defaults__inline-box--height;
+$instantEditor__editor-buttons--bg-color: $form-defaults__box--bg-color;
+$instantEditor__editor-buttons-hover--bg-color: $_button__icon-hover--bg-color;
+$instantEditor__editor-buttons--border: $boxes--border__thin solid $_default__delimiter--border-color;
+$instantEditor__editor-buttons--border-top-width: 0;
+$instantEditor__editor-buttons--padding: 7px 0;
+
+$instantEditor__editor-buttons-container--right: 0;
+$instantEditor__editor-buttons-container--z-index: 1;
+
+$instantEditor__editor-confirm-button--color: $_default__status-positive--color;
+$instantEditor__editor-cancel-button--color: $_default__status-negative--color;
+$instantEditor__editor-cancel-button--border-right-width: 0;
+
+$instantEditor__editor-label-editable-border--width: $boxes--border__thin;
+$instantEditor__editor-icon-loceditor--margin-bottom: $_container-spacing-default__tiny;
+
+$instantEditor__editor-label-editable--margin-top: $container-spacing-default__third + $instantEditor__editor-label-editable-border--width;
+$instantEditor__editor-label-editable--margin-left: $container-spacing-default__third + $instantEditor__editor-label-editable-border--width;
+$instantEditor__editor-label-editable--margin-bottom: $container-spacing-default__half;
+$instantEditor__editor-label-editable--line-height: $font-size__large;
+
+$instantEditor__editor-localized-container--margin-top: $toolbar__button-medium--size * -1;
+
+$_instantEditor__editor-label-container--height: $editor-defaults__inline-box--height;
+$_instantEditor__editor-label-container--line-height: $font-size__large;
+$instantEditor__label-container--line-height: $font-size__large;
+

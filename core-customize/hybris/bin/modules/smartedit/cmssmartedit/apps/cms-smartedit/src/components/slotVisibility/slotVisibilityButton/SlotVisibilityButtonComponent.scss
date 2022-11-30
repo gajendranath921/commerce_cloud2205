@@ -1,0 +1,19 @@
+// #smarteditoverlay selector instead of Host Element attribute because
+// #smarteditoverlay has a selector that overrides .se-slot-visibility__component-list styles
+// It is meant to prevent using !important.
+#smarteditoverlay {
+    .se-slot-visibility {
+        &__component-list {
+            padding: 16px 20px;
+            list-style: none;
+        }
+
+        &__component-list-item {
+            margin-bottom: fd-space('s');
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

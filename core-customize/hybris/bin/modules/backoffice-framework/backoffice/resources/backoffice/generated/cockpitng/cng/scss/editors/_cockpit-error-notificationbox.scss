@@ -1,0 +1,237 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Validation- / Error- / Notification-Boxes
+================================*/
+// Layout & Coloring for Validation, Error & Notification-Boxes or Popups
+
+@charset "UTF-8";
+@import "../support/_cockpit-mixins.scss";
+
+.z-errorbox {
+    width: $notification-box-defaults__box--width;
+    color: $_notification-box-error__box--color;
+    padding: 0 !important;
+
+    > .z-errorbox-icon {
+        top: $notification-box-defaults__errorbox-icon--top; //$notification-box-defaults__icon--top;
+        left: $notification-box-defaults__errorbox-icon--left; //$notification-box-defaults__icon--left;
+    }
+
+    > .z-errorbox-right ~ .z-errorbox-close {
+        right: $notification-box-defaults__errorbox-right--right;
+    }
+
+    > .z-errorbox-up ~ .z-errorbox-close {
+        top: $notification-box-defaults__errorbox-up--top;
+        right: $notification-box-defaults__errorbox-right--right;
+    }
+
+    > .z-errorbox-left + .z-errorbox-icon {
+        left: $notification-box-defaults__errorbox-icon--left;
+        top: $notification-box-defaults__errorbox-icon--top;
+    }
+    &-close {
+        top: $notification-box-defaults__errorbox-close--top;
+        right: $notification-box-defaults__errorbox-close--right;
+    }
+    &-content {
+        color: $_notification-box-error__box--color;
+        padding: $notification-box-defaults__errorbox--padding;
+    }
+    & &-icon {
+        &,
+        &.z-icon-exclamation {
+            &-circle,
+            &-triangle {
+                font-size: $_notification-box-error__box-icon--font-size;
+                color: inherit;
+
+                &:before {
+                    content: $_notification-box-error__box-icon--content;
+                }
+            }
+        }
+    }
+}
+
+.z-notification {    
+    &-content {
+        min-height: $notification-box-defaults__box--min-height;
+        @if ($_notification-box-defaults__box-content--line-height) {
+            line-height: $_notification-box-defaults__box-content--line-height;
+        }
+        @if $_notification-box-defaults__box-content--color {
+            color: $_notification-box-defaults__box-content--color;
+        }
+    }
+    &.z-notification-error .z-notification,
+    &.z-notification-warning .z-notification {
+        &-icon {
+            &.z-icon-exclamation-triangle, 
+            &.z-icon-exclamation-circle {
+                top: $notification-box-defaults__icon--top;
+                line-height: $_notification-box-defaults__icon--line-height;
+                font-size: $_notification-box-defaults__icon--font-size;
+                margin-top: 0;
+            }
+            &.z-icon-times,
+            &.z-icon-times-circle {
+                position: absolute;
+                left: auto;
+                margin-top: 0;
+                right: $notification-box_icon-close--right; //$notification-box-error__close-icon--right;
+                top: $notification-box_icon-close--top; //$notification-box-error__close-icon--top;
+                width: $notification-box-error__close-icon--size;
+                min-height: $notification-box-error__close-icon--size;
+                color: $_notification-box-defaults__box-close-icon--color;
+                line-height: 0;
+
+                &:before {
+                    content: $notification-box_icon-close--content;
+                    width: $notification-box-error__close-icon--size;
+                    height: $notification-box-error__close-icon--size;
+                    font-family: $notification-box_icon-close--font-family;
+                    font-size: $notification-box_icon-close--font-size;
+                    line-height: $notification-box-error__close-icon--size;
+                    text-align: center;
+                }
+                &:hover {
+                    color: $notification-box-defaults__box-close-icon-hover--color;
+                }
+            }
+        }
+        &-content {
+            padding: $notification-box-defaults__box--padding;
+        }
+    }
+    &-right  ~ .z-notification-close {
+        right: $notification-box-defaults__close--right;
+    }
+    .z-notification-pointer {
+        + .z-notification-icon {
+            left: $notification-box-defaults__icon--top;
+        }
+        ~ .z-notification-content {
+            width: $notification-box-defaults__notification-box--width;
+            height: $notification-box-defaults__box--min-height;
+            min-height: $notification-box-defaults__box--min-height;
+        }
+    }
+}
+
+.z-errorbox .z-errorbox,
+.z-notification.z-notification-error .z-notification,
+.z-notification.z-notification-warning .z-notification {
+    &-content {
+        background: $notification-box-defaults__box--bg-color;
+        border-radius: $notification-box-defaults__box--border-radius;
+        border: $notification-box-defaults__box--border-width solid $notification-box-defaults__box--border-color;
+        box-shadow: $notification-box-defaults__box--box-shadow;
+        width: $notification-box-defaults__box--width;
+    }
+    &-pointer {
+        border: none;
+        top: 50% !important;
+
+        &:after,
+        &:before {
+            width: 0;
+            height: 0;
+            content: '';
+            position: absolute;
+            top: 0;
+        }
+        &:before {
+            border: $notification-box-defaults__pointer-inner--border-width solid transparent;
+            margin-top: $notification-box-defaults__pointer-inner--margin-top;
+            z-index: $notification-box-defaults__pointer-inner--z-index;
+        }
+        &:after {
+            border: $notification-box-defaults__pointer-outer--border-width solid transparent;
+            margin-top: $notification-box-defaults__pointer-outer--margin-top;
+        }
+    }
+    &-icon {
+        &.z-icon-exclamation-circle,
+        &.z-icon-exclamation-triangle {
+            &:before {
+                width: $editor-defaults__icon--size;
+                height: $editor-defaults__icon--size;
+                line-height: $editor-defaults__icon--size;
+                font-family: $_notification-box-defaults__icon--font-family;
+                text-align: center;
+            }
+        }
+    }
+    @include _add-error-notification-box-side-directional-pointers (left);
+    @include _add-error-notification-box-side-directional-pointers (right);
+}
+
+.z-notification.z-notification {
+    &-error .z-notification {
+        &-content {
+            background: $_notification-box-error__box--bg-color;
+            border-color: $_notification-box-error__box--color;
+        }
+        &-icon {
+            &.z-icon-exclamation-circle,
+            &.z-icon-exclamation-triangle {
+                color: $_notification-box-error__box--color;
+                
+                &:before {
+                    content: $_notification-box-defaults__icon--content;
+                }
+            }
+        }
+        &-pointer {
+            &-pointer.z-notification-right {
+                &:after {
+                    border-left-color: $_notification-box-error__box--color;
+                }          
+            }
+            &-pointer.z-notification-left {
+                &:after { 
+                    border-right-color: $_notification-box-error__box--color;
+                }
+            }
+        }
+    }
+    &-warning .z-notification {
+        &-content {
+            border-color: $_notification-box-warning__box--color;
+        }
+        &-icon {
+            &.z-icon-exclamation-circle,
+            &.z-icon-exclamation-triangle {
+                color: $_notification-box-warning__box--color;
+                
+                &:before {
+                    content: $_notification-box-warning__box-icon--content;
+                }
+            }
+        }
+        &-pointer.z-notification-right {
+            &:after {
+                border-left-color: $_notification-box-warning__box--color;
+            }          
+        }
+        &-pointer.z-notification-left {
+            &:after { 
+                border-right-color: $_notification-box-warning__box--color;
+            }
+        }
+    }
+}
+
+.z-notification-open .z-notification-close,
+.z-errorbox-open .z-errorbox-close {
+    color: $_notification-box-defaults__box-close-icon--color;
+    background: transparent;
+
+    &:hover {
+        color: $notification-box-defaults__box-close-icon-hover--color;
+        background: transparent;
+    }
+}

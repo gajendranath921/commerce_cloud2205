@@ -1,0 +1,29 @@
+/* Status */
+/* Button Color Scheme */
+/*================================
+    User profile Appearance Container
+================================*/
+/* Status */
+/* Button Color Scheme */
+.yw-com_hybris_backoffice_widgets_userprofile_appearancecontainer {
+  height: calc(100% - 2px);
+  overflow: auto; }
+  .yw-com_hybris_backoffice_widgets_userprofile_appearancecontainer .userProfileAppearanceContainer-title {
+    height: 40px;
+    padding-top: 16px; }
+    .yw-com_hybris_backoffice_widgets_userprofile_appearancecontainer .userProfileAppearanceContainer-title > span {
+      font-size: 1.25rem;
+      padding-left: 32px;
+      color: var(--bo-title-color); }
+  .yw-com_hybris_backoffice_widgets_userprofile_appearancecontainer .widget_children {
+    height: calc(100% - 40px) !important; }
+    .yw-com_hybris_backoffice_widgets_userprofile_appearancecontainer .widget_children .z-tabs {
+      height: 53px; }
+      .yw-com_hybris_backoffice_widgets_userprofile_appearancecontainer .widget_children .z-tabs .z-tabs-content {
+        border-bottom: 1px solid var(--bo-container-border-color);
+        padding-left: 8px; }
+    .yw-com_hybris_backoffice_widgets_userprofile_appearancecontainer .widget_children .z-tabpanels {
+      height: calc(100% - 53px) !important; }
+      .yw-com_hybris_backoffice_widgets_userprofile_appearancecontainer .widget_children .z-tabpanels .z-tabpanel {
+        height: 100% !important;
+        background: var(--bo-container-background); }

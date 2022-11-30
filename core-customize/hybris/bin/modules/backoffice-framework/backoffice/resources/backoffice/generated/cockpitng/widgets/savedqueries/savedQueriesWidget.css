@@ -1,0 +1,161 @@
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Saved Queries Widget
+================================*/
+/* Status */
+/* Button Color Scheme */
+/*================================
+    Saved-Queries Widget variables
+================================*/
+/* Status */
+/* Button Color Scheme */
+.filterDiv .z-checkbox {
+  line-height: 40px; }
+.filterDiv.z-vlayout .z-checkbox {
+  line-height: normal;
+  margin-top: 12px;
+  display: block; }
+  .filterDiv.z-vlayout .z-checkbox-content {
+    padding-top: 3px; }
+
+.yw-savedqueries-container {
+  height: 100%;
+  background-color: var(--bo-container-background);
+  color: var(--bo-container-color); }
+  .yw-savedqueries-container .z-vlayout-inner {
+    padding-bottom: 0px !important; }
+  .yw-savedqueries-container .filterDiv {
+    padding: 0 16px 16px;
+    border-bottom: 1px solid;
+    border-bottom-color: var(--bo-object-header-border-color);
+    color: var(--bo-container-color); }
+  .yw-savedqueries-container .yw-filter-textbox {
+    background-color: transparent;
+    border-color: var(--bo-input-border-color);
+    color: var(--bo-text-color); }
+    .yw-savedqueries-container .yw-filter-textbox::-webkit-input-placeholder {
+      color: var(--bo-placeholder-text-color); }
+    .yw-savedqueries-container .yw-filter-textbox::-moz-placeholder {
+      /* Firefox 19+ */
+      color: var(--bo-placeholder-text-color); }
+    .yw-savedqueries-container .yw-filter-textbox:-ms-input-placeholder {
+      color: var(--bo-placeholder-text-color); }
+    .yw-savedqueries-container .yw-filter-textbox:focus {
+      color: var(--bo-text-color);
+      background-color: var(--bo-input-focus-background); }
+      .yw-savedqueries-container .yw-filter-textbox:focus::-webkit-input-placeholder {
+        color: transparent; }
+      .yw-savedqueries-container .yw-filter-textbox:focus::-moz-placeholder {
+        /* Firefox 19+ */
+        color: transparent; }
+      .yw-savedqueries-container .yw-filter-textbox:focus:-ms-input-placeholder {
+        color: transparent; }
+.yw-savedqueries-list {
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  overflow: auto; }
+  .yw-savedqueries-list .z-listitem {
+    background-color: transparent;
+    transition: background-color 0.2s ease-in-out !important; }
+    .yw-savedqueries-list .z-listitem .z-listcell {
+      border-color: transparent; }
+      .yw-savedqueries-list .z-listitem .z-listcell-content {
+        color: var(--bo-text-color); }
+      .yw-savedqueries-list .z-listitem .z-listcell:first-child {
+        padding-left: 16px; }
+      .yw-savedqueries-list .z-listitem .z-listcell:last-child {
+        padding-right: 16px; }
+    .yw-savedqueries-list .z-listitem .z-label {
+      color: inherit; }
+    .yw-savedqueries-list .z-listitem:hover, .yw-savedqueries-list .z-listitem.z-listitem-selected:hover {
+      background-color: var(--bo-list-selected-hover-background); }
+      .yw-savedqueries-list .z-listitem:hover .z-listcell-content, .yw-savedqueries-list .z-listitem.z-listitem-selected:hover .z-listcell-content {
+        background-color: transparent;
+        color: var(--bo-container-color); }
+      .yw-savedqueries-list .z-listitem:hover .ye-delete-btn, .yw-savedqueries-list .z-listitem.z-listitem-selected:hover .ye-delete-btn {
+        display: block; }
+    .yw-savedqueries-list .z-listitem.yw-savedqueries-recently-added-item {
+      background-color: var(--bo-selected-color); }
+  .yw-savedqueries-list .ye-delete-btn {
+    line-height: 14px;
+    min-height: 28px;
+    max-height: 28px;
+    min-width: 28px;
+    display: none;
+    background-color: transparent;
+    position: absolute;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    border: none; }
+  .yw-savedqueries-list .cell-btn {
+    width: 44px; }
+    .yw-savedqueries-list .cell-btn .z-listcell-content {
+      text-align: center;
+      padding-right: 0; }
+  .yw-savedqueries-list .cell-name .z-listcell-content {
+    padding-left: 0; }
+  .yw-savedqueries-list tbody.z-listbox-emptybody td {
+    background: transparent;
+    text-align: left;
+    font-style: normal; }
+    .yw-savedqueries-list tbody.z-listbox-emptybody td .z-listbox-emptybody-content {
+      padding-left: 16px;
+      padding-right: 16px;
+      margin: 0 -8px; }
+  .yw-savedqueries-container .yw-savedqueries-list {
+    background-color: var(--bo-container-background); }
+    .yw-savedqueries-container .yw-savedqueries-list .z-listitem {
+      background-color: transparent; }
+      .yw-savedqueries-container .yw-savedqueries-list .z-listitem:hover, .yw-savedqueries-container .yw-savedqueries-list .z-listitem.z-listitem-selected:hover {
+        background-color: var(--bo-list-selected-hover-background); }
+        .yw-savedqueries-container .yw-savedqueries-list .z-listitem:hover .z-listcell-content, .yw-savedqueries-container .yw-savedqueries-list .z-listitem.z-listitem-selected:hover .z-listcell-content {
+          color: var(--bo-container-color); }
+      .yw-savedqueries-container .yw-savedqueries-list .z-listitem.yw-savedqueries-recently-added-item {
+        background-color: var(--bo-selected-color);
+        color: false; }
+    .yw-savedqueries-container .yw-savedqueries-list .z-listcell-content {
+      color: var(--bo-container-color); }
+.yw-savedqueries-header {
+  padding: 6px 16px;
+  background-color: inherit;
+  color: inherit; }
+  .yw-savedqueries-header .z-label {
+    padding: 11px 0 10px 0;
+    text-transform: none;
+    font-weight: 700;
+    line-height: 19px;
+    display: inline-block; }
+  .yw-savedqueries-header .yw-filter-toolbarbutton {
+    height: 28px;
+    width: 28px;
+    border-radius: var(--bo-button-border-radius);
+    color: var(--bo-button-icon-color);
+    background-color: transparent;
+    margin: 6px 0 6px 0;
+    float: right;
+    position: relative; }
+    .yw-savedqueries-header .yw-filter-toolbarbutton.z-toolbarbutton-checked {
+      color: var(--bo-button-selected-color);
+      background-color: var(--bo-button-selected-background); }
+    .yw-savedqueries-container .yw-savedqueries-header .yw-filter-toolbarbutton {
+      color: var(--bo-button-icon-color);
+      background-color: transparent; }
+      .yw-savedqueries-container .yw-savedqueries-header .yw-filter-toolbarbutton.z-toolbarbutton-checked {
+        color: var(--bo-button-selected-color);
+        background-color: var(--bo-button-selected-background); }
+    .yw-savedqueries-header .yw-filter-toolbarbutton .z-toolbarbutton-content, .yw-savedqueries-header .yw-filter-toolbarbutton .z-toolbarbutton-content:hover {
+      color: inherit; }
+    .yw-savedqueries-header .yw-filter-toolbarbutton .z-toolbarbutton-content:before {
+      content: "\e076";
+      font-family: var(--bo-content-icon-font-family);
+      font-size: 14px;
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0); }

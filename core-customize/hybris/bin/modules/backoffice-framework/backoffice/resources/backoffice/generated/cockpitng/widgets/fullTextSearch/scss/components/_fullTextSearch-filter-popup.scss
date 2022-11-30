@@ -1,0 +1,81 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import '../support/fullTextSearch-variables';
+
+.yw-fulltextsearch-fieldquery-popup {
+    width: $fullTextSearch__fieldquery-popup--width;
+    overflow: auto;
+    // box-shadow: none;
+    border: $fullTextSearch__fieldquery-popup--border;
+    margin-top: $fullTextSearch__fieldquery-popup--margin-top;
+    overflow: visible;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: $fullTextSearch__fieldquery-popup-arrow--top;
+        right: $fullTextSearch__fieldquery-popup-arrow--right;
+        border-bottom: $fullTextSearch__fieldquery-popup-arrow--border-bottom;
+        border-left: $fullTextSearch__fieldquery-popup-arrow--border-left;
+        border-right: $fullTextSearch__fieldquery-popup-arrow--border-right;
+    }
+
+    &:before {
+        border-bottom-color: $fullTextSearch__fieldquery-popup--border-shadow-color;
+        top: $fullTextSearch__fieldquery-popup-arrow--top - 2;
+    }
+
+    &-layout > .z-vlayout-inner {
+        padding: 0 !important;
+    }
+
+    &-header {
+        padding: $fullTextSearch__fieldquery-popup--padding;
+
+        .yw-fulltextsearch-fieldquery-popup-title {
+            font-size: $fullTextSearch__fieldquery-popup-header-title--font-size;
+            color: $fullTextSearch__fieldquery-popup-header-title--color;
+        }
+    }
+
+    &-body {
+        padding: $fullTextSearch__fieldquery-popup-body--padding;
+        max-height: $fullTextSearch__fieldquery-popup-body--max-height;
+        border-top: $fullTextSearch__fieldquery-popup-delimiter-applied--border;
+        overflow: auto;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &-footer {
+        padding: $fullTextSearch__fieldquery-popup--padding;
+        border-top: $fullTextSearch__fieldquery-popup-delimiter--border;
+        position: relative;
+
+        > .z-hlayout-inner {
+            position: static;
+        }
+    }
+
+    &-button-add-filter {
+        text-transform: initial;
+        position: relative;
+
+        &:before {
+            font-family: $fullTextSearch__fieldquery-popup-add-icon--font-family;
+            font-size: $fullTextSearch__fieldquery-popup-add-icon--font-size;
+            top: $fullTextSearch__fieldquery-popup-add-icon--top;
+            margin-right: $fullTextSearch__fieldquery-popup-add-icon--margin-right;
+            content: $fullTextSearch__fieldquery-popup-add-icon--content;
+            position: relative;
+        }
+    }
+
+    &-apply-filters.z-button {
+        float:right;
+    }
+}

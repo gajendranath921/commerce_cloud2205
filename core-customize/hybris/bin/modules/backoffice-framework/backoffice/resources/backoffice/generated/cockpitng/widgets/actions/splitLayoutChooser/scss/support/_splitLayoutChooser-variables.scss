@@ -1,0 +1,35 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Split Layout Chooser Button
+================================*/
+
+
+$actionSplitLayoutChooser__btn--width: $toolbar__vertical-centering-base--height;
+$actionSplitLayoutChooser__btn--height: $toolbar__vertical-centering-base--height;
+$actionSplitLayoutChooser__btn--padding: 0;
+
+$actionSplitLayoutChooser__btn--bg: var(--bo-button-background);
+$actionSplitLayoutChooser__btn--color: var(--bo-button-icon-color);
+$actionSplitLayoutChooser__btn--hover-bg: var(--bo-button-hover-background);
+$actionSplitLayoutChooser__btn--hover-color: var(--bo-button-hover-color);
+$actionSplitLayoutChooser__btn--active-bg: var(--bo-button-active-background);
+$actionSplitLayoutChooser__btn--active-color: var(--bo-button-active-color);
+$actionSplitLayoutChooser__btn-before--bg-color: false;//$_default-list__item-focused--color;
+$actionSplitLayoutChooser__btn-before--transition: all 0.2s ease;
+$actionSplitLayoutChooser__btn-before-hover--width: $boxes--border__medium;
+$actionSplitLayoutChooser__btn-before--left: $actionSplitLayoutChooser__btn-before-hover--width * -1;
+
+
+$actionSplitLayoutChooser__btn-label--width: 100px;
+$actionSplitLayoutChooser__btn-label--font-size: $font-size__base;
+$actionSplitLayoutChooser__btn-label--font-family: $font-family__text;
+$actionSplitLayoutChooser__btn-label--text-align: left;
+
+$actionSplitLayoutChooser__popup-container--margin: $actionSplitLayoutChooser__btn--height 0 0 0;
+$actionSplitLayoutChooser__popup-container--padding: $boxes--border__medium 0;
+@if $actionSplitLayoutChooser__btn-before--bg-color {
+	$actionSplitLayoutChooser__popup-container--padding: $boxes--border__medium $actionSplitLayoutChooser__btn-before-hover--width;
+}
+$_actionSplitLayoutChooser__popup-container--min-width: 46px;

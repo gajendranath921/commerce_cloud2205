@@ -1,0 +1,70 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$quicklist-preview-popup-image__max-width: 200px;
+$quicklist-preview-popup-image__max-height: 150px;
+
+$quicklist__widget--color: $_default__content--color;
+$quicklist__widget--bg-color: $_default__content-container--bg-color;
+$quicklist__widget--info-container--height: $toolbar__default--height;
+$quicklist__widget--main-container--height: calc(100% - #{$quicklist__widget--info-container--height});
+$quicklist__widget-inner-default--padding: $_container-spacing-default__small;
+
+$quickList__info-container--font-weight: $font-weight-bold;
+$quickList__info-container--min-height: $quicklist__widget--info-container--height;
+$quicklist__info-container--padding: $container-spacing-default__half $quicklist__widget-inner-default--padding $container-spacing-default__half;
+$_quicklist__info-label--font-size: $font-size__large;
+$_quicklist__info-label--line-height: $font-size__large;
+
+$quickList__tile--line-height: $font-size__large;
+$quickList__tile--padding: $quicklist__widget-inner-default--padding $quicklist__widget-inner-default--padding $quicklist__widget-inner-default--padding;
+$quickList__tile--border-bottom-color: $_default-list__item--border-color;
+$quickList__tile--border-bottom: $boxes--border__thin solid $quickList__tile--border-bottom-color;
+$quickList__tile--border-x: $_boxes__border__selected solid transparent;
+
+$quickList__tile-hover--bg-color: $_default-list__item-hover--bg-color; //rgba($white, 0.5);
+
+$quickList__tile-selected--bg-color: $_default-list__item-selected--bg-color;
+$quickList__tile-selected--border-color: $_default-list__item-box-selected--border-color;
+$_quickList__tile-selected-hover--bg-color: $_default-list__item-selected-hover--bg-color;
+
+$quickList__hyperlink--color: var(--bo-link-color);
+
+$quickList__tile-title--webkit-line-clamp: 3;
+$_quickList__tile-title--font-size: $font-size__large;
+$_quickList__tile-title--line-height: floor($_quickList__tile-title--font-size * 1.22);
+$quickList__tile-title--max-height: $_quickList__tile-title--line-height * $quickList__tile-title--webkit-line-clamp + ($quickList__tile-title--webkit-line-clamp - 1) * 1px;
+$quickList__tile-title--font-weight: $font-weight-bold;
+$quickList__tile-title--margin-bottom: $_container-spacing-default__small;
+$quickList__tile-title--padding-right: $container-spacing-default__half;
+
+$quickList__tile-thumbnail--max-width: 86px;
+$quickList__tile-thumbnail--border: $boxes--border__thin solid $_editor-defaults__popup-box--border-color;
+$quickList__tile-thumbnail--border-radius: $_editor-defaults__popup-box--border-radius;
+
+$quickList__tile-subtitle-container--max-width: calc(100% - #{$quickList__tile-thumbnail--max-width});
+$quickList__tile-subtitle-container--color: $_default-list__item--color;
+$quickList__tile-subtitle-container--padding-left: $_container-spacing-default__small;
+
+$quickList__tile-subtitle--max-height: $quickList__tile-title--max-height;
+$quickList__tile-subtitle--font-size: $font-size__base; //$font-size__small;
+$quickList__tile-subtitle--margin-bottom: 5px;
+
+$quickList__tile-ghost--border: $quickList__tile--border-bottom;
+$quickList__tile-ghost--max-width: 300px;
+$quickList__tile-ghost--box-shadow: var(--bo-content-shadow-large);
+$quickList__tile-dragged--opacity: 0.8;
+$quickList__remove-btn--size: $toolbar__button-small--size;
+$quickList__remove-btn--border-radius: floor($quickList__remove-btn--size/2);
+
+$_quickList__remove-btn--font-size: $font-size__large;
+$quickList__remove-btn--bg-color: transparent;
+$quickList__remove-btn--right: $container-spacing-default__half;
+$quickList__remove-btn--top: $quicklist__widget-inner-default--padding;
+
+$quickList__remove-btn-hover-after--content: false;// "\f057";
+$quickList__remove-btn-hover-after--font-size: false; // 26px;
+$quickList__remove-btn-hover-after--margin-top: -5px;
+$quickList__remove-btn-hover-after--margin-left: -10px;

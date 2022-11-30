@@ -1,0 +1,19 @@
+/* Status */
+/* Button Color Scheme */
+.catalog-diff-container .sync-job-container {
+  padding: 8px; }
+  .catalog-diff-container .sync-job-container table td {
+    padding-right: 8px; }
+.catalog-diff-container .diff-results-table {
+  border-top: 1px solid var(--bo-list-group-header-border); }
+  .catalog-diff-container .diff-results-table-headers {
+    background: var(--bo-list-table-header-background); }
+  .catalog-diff-container .diff-results-table .z-row-content,
+  .catalog-diff-container .diff-results-table .z-column-content {
+    font-weight: normal;
+    font-size: var(--bo-font-size);
+    font-family: var(--bo-font-family);
+    color: var(--bo-text-color);
+    padding: 0 8px; }
+  .catalog-diff-container .diff-results-table .z-grid-header-border {
+    border-bottom: 1px solid var(--bo-list-group-header-border); }

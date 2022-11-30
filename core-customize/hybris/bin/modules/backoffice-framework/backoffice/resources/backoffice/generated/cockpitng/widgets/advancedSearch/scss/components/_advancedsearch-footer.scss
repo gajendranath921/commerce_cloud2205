@@ -1,0 +1,15 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@charset "UTF-8";
+/*================================
+    Advanced Search - Footer
+================================*/
+// Styling of the footer of the advanced-search component.
+
+@import "../support/_advancedsearch-variables.scss";
+
+.yw-advancedsearch .yw-advancedsearch-footer {
+    padding: $advancedsearch__footer--padding;
+    min-height: $advancedsearch__footer--min-height;
+}

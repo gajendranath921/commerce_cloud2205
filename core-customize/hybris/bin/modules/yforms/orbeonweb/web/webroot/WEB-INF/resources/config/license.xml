@@ -1,0 +1,18 @@
+<signed-data>
+    <data>
+        <license>
+            <licensor>Orbeon, Inc.</licensor>
+            <licensee>SAP Hybris Commerce</licensee>
+            <organization>SAP</organization>
+            <email>info@sap.com</email>
+            <issued>2021-12-13</issued>
+            <version/>
+            <expiration>2023-04-01</expiration>
+            <subscription-start>2022-01-01</subscription-start>
+            <subscription-end>2023-01-01</subscription-end>
+            <license-id>1</license-id>
+            <license-description>Demo, for evaluation only</license-description>
+        </license>
+    </data>
+    <signature>MC0CFD9Nap06m31OSQiyYcmkxK5nPREMAhUAh2qTr0VkjYQy0hl7xhsknpnY4eE=</signature>
+</signed-data>

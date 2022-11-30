@@ -1,0 +1,189 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.z-window-content .image-cropper {
+  height: 100%;
+  width: 100%; }
+  .z-window-content .image-cropper-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; }
+  .z-window-content .image-cropper-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 8px 8px 56px 8px;
+    overflow: auto; }
+  .z-window-content .image-cropper-image {
+    max-height: 300px;
+    max-width: 600px; }
+  .z-window-content .image-cropper-warning {
+    position: absolute;
+    top: 50%;
+    font-style: italic; }
+  .z-window-content .image-cropper-actions {
+    position: absolute;
+    bottom: 8px;
+    padding-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    width: 100%;
+    border-top: 1px solid var(--bo-page-footer-border-color); }
+    .z-window-content .image-cropper-actions button {
+      margin-right: 8px;
+      min-width: 64px;
+      min-height: 32px; }
+
+/* JCropper */
+.jcrop-widget .jcrop-handle {
+  display: none;
+  position: absolute;
+  border: 1px solid var(--bo-field-border-color);
+  width: 5px;
+  height: 5px;
+  box-sizing: border-box;
+  background: var(--bo-button-background); }
+
+.jcrop-widget .jcrop-handle.nw {
+  top: -3px;
+  left: -3px;
+  cursor: nwse-resize; }
+
+.jcrop-widget .jcrop-handle.w {
+  top: 50%;
+  transform: translateY(-50%);
+  left: -3px;
+  cursor: ew-resize; }
+
+.jcrop-widget .jcrop-handle.sw {
+  bottom: -3px;
+  left: -3px;
+  cursor: nesw-resize; }
+
+.jcrop-widget .jcrop-handle.ne {
+  top: -3px;
+  right: -3px;
+  cursor: nesw-resize; }
+
+.jcrop-widget .jcrop-handle.e {
+  top: 50%;
+  transform: translateY(-50%);
+  right: -3px;
+  cursor: ew-resize; }
+
+.jcrop-widget .jcrop-handle.se {
+  bottom: -3px;
+  right: -3px;
+  cursor: nwse-resize; }
+
+.jcrop-widget .jcrop-handle.n {
+  left: 50%;
+  transform: translateX(-50%);
+  top: -3px;
+  cursor: ns-resize; }
+
+.jcrop-widget .jcrop-handle.s {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -3px;
+  cursor: ns-resize; }
+
+.jcrop-widget.active .jcrop-handle {
+  display: block; }
+
+.jcrop-widget {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px dashed;
+  border-color: var(--bo-field-border-color);
+  opacity: 0.7;
+  background: transparent;
+  transition: opacity 1s;
+  padding: 0;
+  margin: 0;
+  cursor: move; }
+
+.jcrop-widget:hover {
+  transition: opacity 0.8s;
+  opacity: 0.8; }
+
+.jcrop-widget:focus {
+  transition: opacity 0.5s;
+  opacity: 1;
+  border-color: var(--bo-highlight-color); }
+
+.jcrop-shade {
+  background: var(--bo-block-layer-background);
+  opacity: 0.5;
+  transition: opacity 0.4s, background-color 0.7s;
+  position: absolute; }
+
+.jcrop-shade.l {
+  top: 0px;
+  left: 0px;
+  height: 100%; }
+
+.jcrop-shade.r {
+  top: 0px;
+  right: 0px;
+  height: 100%; }
+
+.jcrop-shade.t {
+  top: 0px; }
+
+.jcrop-shade.b {
+  bottom: 0px; }
+
+.jcrop-stage {
+  position: absolute;
+  width: 100%; }
+
+.jcrop-image-stage img {
+  position: absolute;
+  z-index: -1; }
+
+.jcrop-ux-inactive-handles .jcrop-widget .jcrop-handle {
+  display: block; }
+
+.jcrop-widget img {
+  width: 100%;
+  height: auto; }
+
+.jcrop-ux-fade-more .jcrop-widget {
+  opacity: 0.25; }
+
+.jcrop-ux-fade-more .jcrop-widget:hover {
+  transition: opacity 0.4s;
+  opacity: 0.8; }
+
+.jcrop-ux-fade-more .jcrop-widget:focus {
+  transition: opacity 0.5s;
+  opacity: 1;
+  outline-style: auto;
+  outline-width: 3px;
+  outline-color: var(--bo-input-border-color); }
+
+.jcrop-ux-fade-more .jcrop-widget {
+  opacity: 0.25; }
+
+.jcrop-ux-fade-more .jcrop-widget:hover {
+  opacity: 0.65; }
+
+.jcrop-ux-keep-current .jcrop-widget.active {
+  opacity: 1;
+  outline-style: auto;
+  outline-width: 3px;
+  outline-color: var(--bo-input-border-color); }
+
+.jcrop-ux-no-outline .jcrop-widget {
+  outline: none !important; }
+
+.jcrop-disable.jcrop-stage {
+  opacity: 0.8; }
+
+.jcrop-disable.jcrop-stage .jcrop-widget {
+  outline: none !important; }

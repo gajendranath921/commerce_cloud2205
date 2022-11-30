@@ -1,0 +1,25 @@
+$catalogVersion=catalogVersion(catalog(id[default='_boconfig']),version[default='hidden'])[unique=true]
+$siteImageResource=jar:com.hybris.backoffice.constants.BackofficeConstants&/impex/images
+$siteThemeResource=jar:com.hybris.backoffice.constants.BackofficeConstants&/backoffice/generated/cockpitng/cng/css/themes
+$thumbnail=thumbnail(code, $catalogVersion)
+$style=style(code, $catalogVersion)
+
+# Insert thumbnail
+INSERT_UPDATE Media; code[unique=true]; $catalogVersion; @media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true]; mime[default = 'image/png']; folder(qualifier)[default = backofficethemes]
+;backoffice_theme_quartz_light_thumbnail;;$siteImageResource/sap_quartz_light.png;;
+;backoffice_theme_quartz_dark_thumbnail;;$siteImageResource/sap_quartz_dark.png;;
+
+# Insert style
+INSERT_UPDATE Media; code[unique=true]; $catalogVersion; @media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true]; mime[default = 'text/css']; folder(qualifier)[default = backofficethemes]
+;backoffice_theme_quartz_light_style;;$siteThemeResource/sap_quartz_light/variables.css;;
+;backoffice_theme_quartz_dark_style;;$siteThemeResource/sap_quartz_dark/variables.css;;
+
+INSERT_UPDATE Theme; code[unique=true]; $style; $thumbnail; sequence
+;sap_quartz_light;backoffice_theme_quartz_light_style;backoffice_theme_quartz_light_thumbnail;1
+;sap_quartz_dark;backoffice_theme_quartz_dark_style;backoffice_theme_quartz_dark_thumbnail;2
+
+
+# Insert constraint
+INSERT_UPDATE NotNullConstraint;id[unique = true];severity(code);active;target;type(code);qualifier;descriptor(enclosingType(code),qualifier);
+;CustomThemeCodeNotNullConstraint;ERROR;true;com.hybris.backoffice.model.CustomThemeModel;CustomTheme;code;CustomTheme:code;
+

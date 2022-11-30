@@ -1,0 +1,41 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+
+
+$navigationhistory__media-query-xs--max-width: 640px;
+
+$navigationhistory__container--padding-left: $_container-spacing-default__medium;
+$navigationhistory__button-icon--font-family: $font-family__icon;
+$navigationhistory__back-icon--content: _getIconGlyphContentValue('navigation-left-arrow');
+$navigationhistory__back-icon--font-size: $font-size__base;
+$navigationhistory__back-icon--margin-right: $_container-spacing-default__tiny;
+$navigationhistory__back-icon--top: 1px;
+
+$navigationhistory__back-button--line-height: $font-size__large;
+$navigationhistory__back-button--height: $toolbar__button-default--size;
+$navigationhistory__back-button--font-size: $font-size__base;
+
+$navigationhistory__back-button--border-width: $boxes--border__thin;
+$navigationhistory__back-button--padding: $_container-spacing-default__tiny/2 $_container-spacing-default__tiny $_container-spacing-default__tiny $_container-spacing-default__tiny;
+$navigationhistory__button-default--border: $boxes--border__thin solid $_button__action-tool--border-color;
+$navigationhistory__button-default--border-radius: $toolbar__button-default--border-radius;
+
+$navigationhistory__stack-button--content: _getIconGlyphContentValue('overflow');
+$navigationhistory__stack-button-disabled--opacity: 0.4;
+$navigationhistory__stack-button--font-size: $font-size__base;
+$navigationhistory__stack-button--line-height: $toolbar__button-default--size;
+// $navigationhistory__stack-button--position-top: 9px;
+// $navigationhistory__stack-button--position-left: 14px;
+
+$navigationhistory__title--padding-left: $container-spacing-default__two-thirds;
+$navigationhistory__title--height: $toolbar__button-default--size;
+$navigationhistory__title--font-size: $font-size__h3;
+
+$navigationhistory__content--color: $_default__header--color;
+$navigationhistory__menuitem-text--font-size: $font-size__base;
+
+$navigationhistory__history-menupopup--margin-left: -7px;
+$navigationhistory__history-menupopup-pointer--left: 14px;
+$navigationhistory__history-menupopup--min-width: $editor-defaults__inline-box--height - 2 * $boxes--border__thin;
+$navigationhistory__history-menupopup--min-height: $container-spacing-default__third; 

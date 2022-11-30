@@ -1,0 +1,5 @@
+@import "cockpitng-globals.scss";
+/*Icons for explorer tree */
+div.yw-explorerTree .y-tree-icon {
+@include setTreeIconGlyph("GenericDataSupplierGenerationWizard", "journey-depart");
+}

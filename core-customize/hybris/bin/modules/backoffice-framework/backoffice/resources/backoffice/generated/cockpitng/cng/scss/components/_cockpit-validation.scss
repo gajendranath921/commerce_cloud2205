@@ -1,0 +1,459 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@charset "UTF-8";
+@import "../support/_cockpit-mixins.scss";
+
+//Generel Defaults (over all Validation-types)
+// validation-defaults
+
+.ye-validation {
+	//for loceditor
+	&-info, &-warn, &-error {
+		.yw-loceditor-caption .z-label:after {
+			position: absolute;
+			@include _validation-icon();
+			right: 0;
+		}
+
+		.ye-validation-none, .ye-validation-none.yw-loceditor-row {
+			input, input.z-textbox, .z-longbox, .z-intbox, .z-decimalbox {
+				border-color: $editor-defaults__switch-checkbox--border-color;
+				background: none;
+				color: $editor-defaults__input-field--color;
+				&:focus {
+					border-color: $editor-defaults__box-focus--border-color;
+					background: none;
+				}
+			}
+			.z-bandbox-input:focus + .z-bandbox-button {
+				border-color: $editor-defaults__box-focus--border-color;
+			}
+		}
+	}
+
+	//in editor-area
+	&-exclamation-icon {
+		float: right;
+		cursor: pointer;
+		min-width: $_editor-defaults__validation-icon--size;
+		min-height: $_editor-defaults__validation-icon--size;
+		// background-attachment: scroll;
+		// background-clip: border-box;
+		// background-color: rgba(0, 0, 0, 0);
+		// background-image: url("images/icon_validation_sprite.png");
+		// background-origin: padding-box;
+		// background-repeat: no-repeat;
+		// background-size: auto auto;
+		//	background-position: 32px 32px;
+		&:before {
+			content: $_editor-defaults__validation-info-icon--content;
+			font-size: $_editor-defaults__validation-icon--font-size;
+			font-family: $_editor-defaults__validation-icon--font-family;
+			line-height: $_editor-defaults__validation-icon--line-height;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.ye-localized & {
+			position: relative;
+    		top: $editor-defaults__icon--size;
+		}
+	}
+
+	&-info &-exclamation-icon,
+	&-results-popup &-info .z-listcell-content:before {
+		color: $_editor-defaults__validation-info--color;
+	}
+	&-warn &-exclamation-icon,
+	&-results-popup &-warn .z-listcell-content:before {
+		color: $_editor-defaults__validation-warn--color;
+	}
+	&-error &-exclamation-icon,
+	&-results-popup &-error .z-listcell-content:before {
+		color: $_editor-defaults__validation-error--color;
+	}
+
+	&-results {
+		&-list {
+			width: $validation-popup-results__default--width;
+			max-height: $validation-popup-results__list--max-height;
+			background: $validation-popup-results__list--bg-color;
+			overflow: auto;
+			border-left: none;
+			border-right: none;
+			border-top: $validation-popup-results__default--border;
+			border-bottom: $validation-popup-results__default--border;
+
+			& &-item {
+				padding-left: $_validation-popup-results__list-item--padding-left;
+			}
+			// &.z-listbox {
+			// 	.z-listitem,
+			// 	.z-listitem-selected {
+			// 		background-color: $validation-popup-results__list--bg-color;
+
+			// 		&:hover {
+			// 			background-color: $list-default__content-hover--bg-color;
+			// 		}
+			// 	}
+			// }
+		}
+	}
+}
+
+
+//validation-popups
+.ye-validation-results-popup {
+	@include _popupDefaults();
+	background-color: $_validation-popup__window--bg-color;
+	margin-left: $validation-popup-results__default--margin-left;
+	margin-top: $validation-popup-results__default--margin-top;
+	overflow: visible;
+	border-width: $_validation-popup__window--border-width;
+
+	&:before {
+        @include _pointingPopupDefaults(-1){
+	        top: $_validation-popup__window-pointer-top;
+			margin-bottom: $_validation-popup__window-pointer-margin-bottom;
+			bottom: auto;
+	        right: $_validation-popup__window-pointer-shadow--indent;
+	        left: auto;
+	        transform: translate3d(0,-100%,0);
+	        border-width: $_validation-popup__window-pointer-shadow--border-width;
+	        border-color: transparent;
+	        border-bottom-color: $_validation-popup__window-pointer-border-bottom-color;
+    	}
+    }
+    &:after {
+        @include _pointingPopupDefaults(){
+	        top: 0;
+	        bottom: auto;
+	        right: $_validation-popup__window-pointer--indent;
+	        left: auto;
+	        transform: translate3d(0,-100%,0);
+	        border-width: $_validation-popup__window-pointer--border-width;
+	        border-color: transparent;
+	        border-bottom-color: $_validation-popup__window--bg-color;
+    	}
+
+    }
+	// &:before {
+	// 	position: absolute;
+	// 	top: $validation-popup__pointer-default-before--top;
+	// 	right: $validation-popup__pointer-default-before--left;
+	// 	border: $validation-popup__pointer-default--border;
+	// 	border-width: $validation-popup__pointer-default-before--border-width;
+	// 	border-bottom-color: $validation-popup__pointer-default-before--border-color;
+	// 	z-index: $validation-popup__pointer-default-before--z-index;
+	// 	content: '';
+	// 	width: 0;
+	// 	height: 0;
+	// }
+	// &:after {
+	// 	position: absolute;
+	// 	top: $validation-popup__pointer-default-after--top;
+	// 	right: $validation-popup__pointer-default-after--right;
+	// 	border: $validation-popup__pointer-default--border;
+	// 	border-width: $validation-popup__pointer-default-after--border-width;
+	// 	border-bottom-color: $validation-popup__pointer-default-after--border-color;
+	// 	opacity: $validation-popup__pointer-default-after--opacity;
+	// 	content: '';
+	// 	width: 0;
+	// 	height: 0;
+	// }
+	&-left {
+		margin-left: $validation-popup__pointer-left--margin-left;
+
+		&:before {
+		//	top: $validation-popup__pointer-default-before--top;
+			left: $_validation-popup__window-pointer-shadow--indent;
+			right: auto;
+		//	border: $validation-popup__pointer-default--border;
+		//	border-width: $validation-popup__pointer-default-before--border-width;
+		//	border-bottom-color: $validation-popup__pointer-default-before--border-color;
+		//	z-index: $validation-popup__pointer-default-before--z-index;
+		}
+		&:after {
+		//	top: $validation-popup__pointer-default-after--top;
+			left: $_validation-popup__window-pointer--indent;
+			right: auto;
+		//	border: $validation-popup__pointer-default--border;
+		//	border-width: $validation-popup__pointer-default-after--border-width;
+		//	border-bottom-color: $validation-popup__pointer-default-after--border-color;
+		//	opacity: $validation-popup__pointer-default-after--opacity;
+		}
+	}
+	&-above {
+		margin-top: $validation-popup-results__pointer-above--margin-top;
+
+		&:before {
+			bottom: 0;
+	        top: auto;
+	        transform: translate3d(0,100%,0);
+	        border-color: transparent;
+	        border-top-color: $_validation-popup__window-pointer-border-bottom-color;
+			// top: $validation-popup__pointer--before-above--top;
+			// right: $validation-popup__pointer-above-before--side;
+			// border: $validation-popup__pointer-default--border;
+			// border-width: $validation-popup__pointer-above-before--border-width;
+			// border-top-color: $validation-popup__pointer-above-before--border-top-color;
+		}
+		&:after {
+			bottom: 0;
+	        top: auto;
+	        transform: translate3d(0,100%,0);
+	        border-color: transparent;
+	        border-top-color: $_validation-popup__window--bg-color;
+			// top: $validation-popup__pointer-above--top;
+			// right: $validation-popup__pointer-above-after--side;
+			// border: $validation-popup__pointer-default--border;
+			// border-width: $validation-popup__pointer-above-after--border-width;
+			// border-top-color: $validation-popup__pointer-default-after--border-color;
+		}
+		// &.ye-validation-results-popup-left {
+		// 	&:before {
+		// 		top: $validation-popup__pointer--before-above--top;
+		// 		left: $validation-popup__pointer-above-before--side;
+		// 		border: $validation-popup__pointer-default--border;
+		// 		border-width: $validation-popup__pointer-above-before--border-width;
+		// 		border-top-color: $validation-popup__pointer-above-before--border-top-color;
+		// 	}
+		// 	&:after {
+		// 		top: $validation-popup__pointer-above--top;
+		// 		left: $validation-popup__pointer-above-after--side;
+		// 		border: $validation-popup__pointer-default--border;
+		// 		border-width: $validation-popup__pointer-above-after--border-width;
+		// 		border-top-color: $validation-popup__pointer-default-after--border-color;
+		// 	}
+		// }
+		&.ye-validation-popup-invisible {
+			opacity: 0.0;
+		}
+	}
+	&.ye-global-validation-result-popup,
+	&.ye-row-validation-result-popup {
+		.ye-validation-results-list {
+			max-height: $validation-popup-results__list-row-validation--max-height;
+			height: auto;
+		}
+	}
+	&.ye-opacity {
+		opacity: 0.0;
+	}
+	.z-window-header {
+		background: transparent;
+		font-size: $validation-popup-results__header-text--font-size;
+		font-weight: $validation-popup-results__header-text--font-weight;
+		padding: $validation-popup-results__header-text--padding;
+		line-height: $validation-popup-results__header-text--line-height;
+		border-top-left-radius: inherit;
+		border-top-right-radius: inherit;
+		overflow: hidden;
+
+		.z-window-icon {
+			margin-top: 0;
+		}
+	}
+	.z-window-content {
+		border-bottom-left-radius: inherit;
+		border-bottom-right-radius: inherit;
+		background: transparent;
+		overflow: hidden;
+
+		.z-vlayout-inner {
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+		}
+		> .z-vlayout {
+			.z-listcell {
+				border-color: $validation-popup-results__listcell--border-color;
+				&-content {
+					padding: $validation-popup__content-listcell--padding;
+					line-height: $validation-popup__content-listcell--line-height;
+					white-space: normal;
+
+					> .z-vlayout {
+						padding-left: $_validation-popup__validation-icon-container--padding-left;
+					}
+				}
+			}
+			> .z-vlayout-inner:last-child {
+				padding: $_validation-popup__content-footer--padding;
+				text-align: right;
+			}
+		}
+		// .y-btn-primary {
+		// 	margin: $validation-popup__button-primary--margin;
+		// 	color: $validation-popup__button-primary--color;
+		// 	float: right;
+		// 	background: none;
+
+		// 	&.ye-validation-results-confirm {
+		// 		color: $validation-popup__button-confirm--color;
+		// 	}
+		// }
+	}
+	.ye-validation {
+		&-warn,
+		&-info,
+		&-error {
+			.z-listcell-content:before {
+				@include _validation-icon(0, $_editor-defaults__validation-error-icon--content){
+					position: absolute;
+				};
+			}
+		}
+		&-info .z-listcell-content:before {
+			content: $_editor-defaults__validation-warn-icon--content;
+		}
+		&-warn .z-listcell-content:before {
+			content: $_editor-defaults__validation-warn-icon--content;
+		}
+	}
+	// button.ye-validation {
+	// 	&-results-close,
+	// 	&-results-confirm {
+	// 		margin: $validation-popup__button-primary--margin;
+	// 		float: right;
+	// 	}
+	// }
+}
+
+.ye-editor-validation-popup {
+	@include _popupDefaults();
+	overflow: visible;
+	margin-top: $validation-popup__box--margin-top;
+	margin-left: $validation-popup__box--margin-left;
+
+	&:before {
+        @include _pointingPopupDefaults(-1){
+	        top: auto;
+	        bottom: $_validation-popup__window-pointer-margin-bottom;
+	        right: $_validation-popup__window-pointer-shadow--indent;
+	        left: auto;
+	        transform: translate3d(0,100%,0);
+	        border-width: $_validation-popup__window-pointer-shadow--border-width;
+	        border-color: transparent;
+	        border-top-color: $_validation-popup__window-pointer-border-bottom-color;
+    	}
+    }
+    &:after {
+        @include _pointingPopupDefaults(){
+	        top: auto;
+	        bottom: $_validation-popup__window-pointer-after-bottom;
+	        right: $_validation-popup__window-pointer--indent;
+	        left: auto;
+	        transform: translate3d(0,100%,0);
+	        border-width: $_validation-popup__window-pointer--border-width;
+	        border-color: transparent;
+	        border-top-color: $_validation-popup__window--bg-color;
+    	}
+    }
+
+	// &:before {
+	// 	bottom: $validation-popup__box-arrow-before--bottom;
+	// 	right: $validation-popup__box-arrow-after--right;
+	// 	border: $validation-popup__box-arrow--border;
+	// 	border-top-color: $validation-popup__pointer-default-before--border-color;
+	// 	position: absolute;
+	// 	content: '';
+	// 	width: 0;
+	// 	height: 0;
+	// 	z-index: 5;
+	// }
+	// &:after {
+	// 	bottom: $validation-popup__box-arrow-after--bottom;
+	// 	right: $validation-popup__box-arrow-after--right;
+	// 	border: $validation-popup__box-arrow--border;
+	// 	border-top-color: $validation-popup__box-arrow--border-color;
+	// 	position: absolute;
+	// 	content: '';
+	// 	height: 0;
+	// 	width: 0;
+	// 	opacity: 0.7;
+	// }
+
+	&.z-window-popup {
+        background: $window__popup--bg-color;
+//        border: 1px solid #acacac;
+        // box-shadow: 0px 0px 12px 1px rgba(127, 144, 164, 0.23);
+        margin-top: -9px;
+        max-width: 270px;
+        min-width: 270px;
+
+        // &:after {
+        // 	border-top-color: #acacac;
+        // }
+
+        .ye-validation-popup-row-cnt {
+            &.ye-validation-error,
+            &.ye-validation-warn,
+            &.ye-validation-info {
+                &:before {
+                    @include _validation-icon(false, $_editor-defaults__validation-error-icon--content){
+                        margin: $_validation-popup__validation-icon--spacing/2 $_validation-popup__validation-icon--spacing 0 0;
+                        color: $_editor-defaults__validation-error--color;
+                        position: absolute;
+                    };
+                    // position: absolute;
+                    // content: '';
+                    // width: 16px;
+                    // height: 16px;
+                    // margin: 0px 10px 0px 0;
+                    // background: url("images/icon_validation_sprite.png") no-repeat;
+                }
+            }
+            &.ye-validation-warn:before {
+                color: $_editor-defaults__validation-warn--color;
+                content: $_editor-defaults__validation-warn-icon--content;
+                // background-position: -16px 0;
+            }
+            &.ye-validation-info:before {
+                color: $_editor-defaults__validation-info--color;
+                content: $_editor-defaults__validation-info-icon--content;
+                // background-position: -32px 0;
+            }
+        }
+    }
+
+	&-invisible {
+        opacity: 0;
+        visibility: hidden;
+    }
+	&-content {
+		.z-label {
+			position: relative;
+			top: $validation-popup__content-label--top;
+
+			.z-window-content & {
+				top: 0;
+				display: block;
+				padding-left: $_validation-popup__validation-icon-container--padding-left;
+				word-wrap: break-word;
+			}
+		}
+		.z-window-content & {
+			.z-vlayout-inner {
+				border-bottom: $validation-popup__content-vlayout-inner--border-bottom;
+				padding: $validation-popup__content-vlayout-inner--padding !important;
+
+				&:last-child {
+						border-bottom: none;
+						margin-bottom: 0 !important;
+				}
+			}
+		}
+	}
+	& &-content {
+		max-height: $_validation-popup__content--max-height;
+    	overflow: auto;
+	}
+}
+
+

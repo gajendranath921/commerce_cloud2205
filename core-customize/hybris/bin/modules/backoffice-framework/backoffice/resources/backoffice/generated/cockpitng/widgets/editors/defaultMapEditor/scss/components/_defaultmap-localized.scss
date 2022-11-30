@@ -1,0 +1,53 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "../support/_defaultmap-variables.scss";
+
+.yw-loceditor-fixed-open,
+.yw-loceditor-dynamic-content {
+    .ye-list-listbox.ye-list-listbox-defaultmap {
+
+        >.z-listbox-footer {
+            border-width: $editor-defaults__list-box--border-width 0 0;
+        }
+
+        &.ye-list-listbox > .z-listbox-body {
+            &,
+            > table,
+            > table > tbody:before {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+    .ye-list-listbox-defaultmap {
+        .z-listbox-footer {
+            margin-top: 0;
+        }
+        &.ye-list-listbox {
+            > .z-listbox-footer,
+            > .z-listbox-paging-top > .z-paging {
+                padding-left: $_editor-defaults__list-container-localized--padding-x;
+                padding-right: $_editor-defaults__list-container-localized--padding-x;
+                border: $_editor-defaults__list-container-localized--border;
+                border-width: 0 $_editor-defaults__list-container-localized--border-width;
+                border-left-color: $_editor-defaults__list-container-localized--border-left-color;
+            }
+            > .z-listbox-footer {
+                border-bottom-width: $_editor-defaults__list-container-localized--border-width;
+                border-bottom-right-radius: $_editor-defaults__list-container-localized--border-radius;
+                padding-bottom: $_editor-defaults__list-footer--padding-y;
+            }
+            > .z-listbox-paging-top > .z-paging {
+                border-top-width: $_editor-defaults__list-container-localized--border-width;
+                border-top-right-radius: $_editor-defaults__list-container-localized--border-radius;
+            }
+            > .z-listbox-body tbody:empty + tbody.z-listbox-emptybody:after {
+                width: $editor-defaults__list-box--border-width;
+                border-width: 0 0 0 $editor-defaults__list-box--border-width;
+                display: block;
+                z-index: 0;
+            }
+        }
+    }
+}

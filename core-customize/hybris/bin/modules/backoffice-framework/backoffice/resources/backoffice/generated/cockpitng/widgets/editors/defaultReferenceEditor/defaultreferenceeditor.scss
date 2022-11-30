@@ -1,0 +1,21 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Default Reference Editor
+================================*/
+// Defines Styling on Reference Editor
+
+
+@import "scss/support/_defaultreferenceeditor-variables.scss";
+
+@import "scss/components/_defaultreferenceeditor-defaults.scss";
+
+@import "scss/components/_defaultreferenceeditor-list-box.scss";
+@import "scss/components/_defaultreferenceeditor-create-type.scss";
+@import "scss/components/_defaultreferenceeditor-tree.scss";
+
+@import "scss/components/_defaultreferenceeditor-read-only.scss";
+@import "scss/components/_defaultreferenceeditor-validation.scss";
+
+@import "scss/editor/_defaultreferenceeditor-multi-reference.scss";

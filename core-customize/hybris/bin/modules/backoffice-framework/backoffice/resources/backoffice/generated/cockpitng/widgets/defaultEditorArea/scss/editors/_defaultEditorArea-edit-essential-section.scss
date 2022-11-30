@@ -1,0 +1,67 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Editor-Area: Editing Essentials
+================================*/
+// Editor-related Essentials
+
+
+/* ESSENTIAL SECTION */
+.yw-editor-area {
+    &-main-content {
+        .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox {
+            &-essential {
+                .z-groupbox-header,
+                + .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox .z-groupbox-header {
+                    border-top: none;
+                }
+            }
+            &-caption-essential {
+                .z-caption-content {
+                    font-weight: $editor-area__tabpanel-essentials-header-caption--font-weight;
+                }
+                &.z-caption {
+                    padding-top: $editor-area__tabpanel-essentials-header-caption--padding-top;
+                }
+            }
+        }
+    }
+}
+
+.yw-editorarea-navi-container,
+.ye-cancel-container,
+.ye-save-container {
+    display: inline-block;
+    vertical-align: middle;
+
+    .yw-editorarea-actioncontainer .y-toolbar-leftslot &,
+    .yw-editorarea-actioncontainer .y-toolbar-rightslot & {
+        margin-left: $_editor-area__toolbar-button--margin-x;
+        margin-right: $_editor-area__toolbar-button--margin-x;
+        display: inline-block;
+    }
+}
+.ye-cancel-container,
+.ye-save-container {
+    .yw-editorarea-actioncontainer .y-toolbar-leftslot & {
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    .yw-editorarea-actioncontainer .y-toolbar-rightslot & {
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.yw-editorarea-empty,
+.yw-collectionbrowser-empty {
+    font-size: $editor-area__defautl-content-empty--font-size;
+    color: $editor-area__defautl-content-empty--color;
+    font-style: $editor-area__defautl-content-empty--font-style;
+    padding: $editor-area__defautl-content-empty--padding;
+    text-align: center;
+    display:block;
+}

@@ -1,0 +1,82 @@
+/* Status */
+/* Button Color Scheme */
+/*================================
+    User profile Appearance
+================================*/
+/* Status */
+/* Button Color Scheme */
+.yw-com_hybris_backoffice_widgets_userprofile_appearancesetting {
+  height: 100%; }
+
+.yw-userProfileAppearance {
+  height: 100%; }
+  .yw-userProfileAppearance .userProfileAppearance-title {
+    height: 20px;
+    padding: 16px 16px 16px 40px; }
+    .yw-userProfileAppearance .userProfileAppearance-title > span {
+      font-size: 1.25rem;
+      color: var(--bo-title-color); }
+  .yw-userProfileAppearance .userProfileAppearance-notice {
+    height: 20px;
+    padding: 32px 32px 32px 40px;
+    color: var(--bo-tile-text-color); }
+  .yw-userProfileAppearance .userProfileAppearance-list {
+    height: calc(100% - 20px - 20px - 48px);
+    padding-top: 8px;
+    padding-bottom: 16px;
+    color: var(--bo-text-color); }
+    .yw-userProfileAppearance .userProfileAppearance-list .z-listbox {
+      height: 100%;
+      overflow: auto;
+      border: none;
+      padding-left: 32px; }
+      .yw-userProfileAppearance .userProfileAppearance-list .z-listbox .z-listbox-body {
+        box-shadow: none; }
+        .yw-userProfileAppearance .userProfileAppearance-list .z-listbox .z-listbox-body > table > tbody {
+          text-align: center;
+          display: flex;
+          align-content: flex-start;
+          flex-flow: row wrap; }
+        .yw-userProfileAppearance .userProfileAppearance-list .z-listbox .z-listbox-body .z-listitem {
+          flex: 0 0 30%;
+          box-shadow: var(--bo-content-shadow-small);
+          border-radius: 4px;
+          margin: 8px;
+          min-width: 140px;
+          border: 0; }
+        .yw-userProfileAppearance .userProfileAppearance-list .z-listbox .z-listbox-body .z-listitem-selected {
+          border: 1px solid var(--bo-selected-color); }
+          .yw-userProfileAppearance .userProfileAppearance-list .z-listbox .z-listbox-body .z-listitem-selected .selected-icon {
+            display: inline !important; }
+        .yw-userProfileAppearance .userProfileAppearance-list .z-listbox .z-listbox-body .z-listcell {
+          height: 100%;
+          border: none;
+          display: flex;
+          justify-content: center; }
+          .yw-userProfileAppearance .userProfileAppearance-list .z-listbox .z-listbox-body .z-listcell .z-listcell-content {
+            padding-top: 16px;
+            padding-bottom: 0px;
+            height: 154px;
+            width: 187px;
+            width: 100%; }
+            .yw-userProfileAppearance .userProfileAppearance-list .z-listbox .z-listbox-body .z-listcell .z-listcell-content .themeLabel {
+              padding-top: 16px;
+              width: 100%;
+              height: 40%;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden; }
+            .yw-userProfileAppearance .userProfileAppearance-list .z-listbox .z-listbox-body .z-listcell .z-listcell-content .z-image {
+              height: 60%;
+              width: 60%;
+              border-radius: 8px;
+              background-size: 100% 100%; }
+            .yw-userProfileAppearance .userProfileAppearance-list .z-listbox .z-listbox-body .z-listcell .z-listcell-content .selected-icon {
+              width: 10%;
+              display: none;
+              position: absolute;
+              right: 2px;
+              top: -54px; }
+              .yw-userProfileAppearance .userProfileAppearance-list .z-listbox .z-listbox-body .z-listcell .z-listcell-content .selected-icon:after {
+                font-size: large;
+                color: var(--bo-button-success-background); }

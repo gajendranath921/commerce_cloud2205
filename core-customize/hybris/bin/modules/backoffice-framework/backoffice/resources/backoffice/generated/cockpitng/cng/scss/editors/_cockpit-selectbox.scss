@@ -1,0 +1,93 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+	Selectbox widget
+================================*/
+//styling depending on the state of selectbox (-none,-info, -warn, -error)
+@charset "UTF-8";
+.ye-validation {
+    &-none {
+        .z-combobox {
+            @if variable-exists(selectbox__combobox--box-shadow){
+                box-shadow: $selectbox__combobox--box-shadow;
+            }
+            // @if $selectbox__combobox-hover--bg-color {
+            //     &:focus, &:hover{
+            //         .z-combobox-input, .z-combobox-button {
+            //             background-color: $selectbox__combobox-hover--bg-color;
+            //         }
+            //     }
+            // }
+            &.z-combobox-disabled {
+                box-shadow: none;
+                .z-combobox-input, .z-combobox-button, .z-combobox-button i {
+                    background-color: $selectbox__combobox-disabled--bg-color !important; //overrides for .z-combobox-disabled * in  zk.wcs
+                }
+                .z-combobox-button, .z-combobox-input {
+                    border-color: $selectbox__combobox--border-color;
+                    // color: $selectbox__combobox--border-color;
+                }
+            }
+        }
+    }
+}
+
+//comboitem (part of the popup)
+.z-comboitem {
+    color: $_selectbox__combobox-comboitem--color;
+    font-size: $selectbox__combobox-input--font-size;
+    padding: $selectbox__combobox-popup--text-indent;
+    border-bottom: $editor-defaults__input-field--border-width solid $selectbox__combobox-comboitem--border-color;
+    min-height: $selectbox__combobox-comboitem--min-height;
+    line-height: 1;
+
+    &:hover {
+        @if $selectbox__combobox-comboitem-hover--color {
+            color: $selectbox__combobox-comboitem-hover--color;
+        }
+        @if $selectbox__combobox-hover--bg-color {
+            background-color: $selectbox__combobox-hover--bg-color;
+        }
+    }
+    &-selected {
+        background-color: $selectbox__combobox-comboitem-selected--bg-color;
+        border-bottom: $_default-list__item-selected--border-bottom;
+        @if $_selectbox__combobox-comboitem-selected--font-weight {
+            font-weight: $_selectbox__combobox-comboitem-selected--font-weight;
+        }
+        &:hover {
+            @if $selectbox__combobox-comboitem-selected-hover--bg-color {
+                background-color: $selectbox__combobox-comboitem-selected-hover--bg-color;
+            }
+        }
+    }
+
+    &:last-child {
+    	border-bottom: none;
+    }
+}
+
+.z-combobox-popup {
+    @include _popupDefaults();
+    @if $selectbox__combobox--border-color {
+        border-color: $selectbox__combobox--border-color;
+    }
+    @if $_selectbox__combobox-popup--padding and ($_selectbox__combobox-popup--padding != 0){
+        padding: $_selectbox__combobox-popup--padding;
+    }
+    //border: $editor-defaults__input-field--border-width solid $selectbox__combobox--border-color;
+}
+
+//global styling of combobox dropdown, it is the same for all states
+// .z-combobox-open.z-combobox-popup {
+//     box-shadow: $selectbox__combobox-popup--box-shadow;
+// }
+
+.z-combobox {
+    & &-icon {
+        &:before {
+            content: $_editor-defaults__box-combobox-button-icon--content;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@rush-temp/smarteditbootstrap",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@angular/common": "8.2.14",
+    "@angular/core": "8.2.14",
+    "@angular/platform-browser": "8.2.14",
+    "@angular/platform-browser-dynamic": "8.2.14",
+    "@types/angular": "1.7.3",
+    "@typescript-eslint/eslint-plugin": "4.1.1",
+    "@typescript-eslint/parser": "4.1.1",
+    "angular": "1.8.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-ban": "1.5.1",
+    "eslint-plugin-deprecation": "1.2.1",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jsdoc": "30.5.1",
+    "eslint-plugin-prefer-arrow": "1.2.2",
+    "eslint-plugin-prettier": "3.1.4",
+    "rxjs": "6.5.4",
+    "tslib": "2.0.1",
+    "typescript": "4.1.5",
+    "zone.js": "0.9.1"
+  },
+  "rushDependencies": {
+    "@smartedit/packagr": "0.0.1",
+    "smartedit-build": "0.0.1",
+    "smarteditcommons": "0.0.1"
+  }
+}

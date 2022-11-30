@@ -1,0 +1,9 @@
+/* Status */
+/* Button Color Scheme */
+/*Icons for explorer tree */
+div.yw-explorerTree .y-tree-icon-hmc_cms2.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-hmc_cms2.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e114";
+    color: var(--bo-content-icon-color); }

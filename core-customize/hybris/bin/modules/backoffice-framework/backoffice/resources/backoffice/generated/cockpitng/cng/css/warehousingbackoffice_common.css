@@ -1,0 +1,262 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.oms-widget-atpformula-table {
+  padding-right: 16px; }
+
+.atpformulas-header {
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between; }
+
+.atpformulas-row > div:nth-child(3) {
+  padding-left: 22px; }
+
+.oms-widget-atpformula-table .z-vlayout-inner:nth-child(2) .atpformulas-row {
+  border-top: 1px solid var(--bo-list-border-color); }
+
+.yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row {
+  border-bottom: 1px solid var(--bo-list-border-color); }
+  .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row div.addvariableatpformula, .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row div.subvariableatpformula {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent; }
+  .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row div.addvariableatpformula {
+    text-align: center;
+    width: 30px;
+    height: 40px; }
+    .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row div.addvariableatpformula:before {
+      position: relative;
+      top: 10px;
+      font-family: var(--bo-content-icon-font-family);
+      content: "\e058";
+      color: var(--bo-button-accept-text-color);
+      font-size: 14px; }
+  .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row div.subvariableatpformula {
+    text-align: center;
+    width: 30px;
+    height: 40px; }
+    .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row div.subvariableatpformula:before {
+      position: relative;
+      top: 10px;
+      font-family: var(--bo-content-icon-font-family);
+      content: "\e069";
+      color: var(--bo-button-reject-text-color);
+      font-size: 14px; }
+  .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row .atpformulas-variables, .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row .atpformulas-variables__cancel {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0; }
+  .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row > div:first-child, .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row > div:nth-child(2), .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row > div:nth-child(3) {
+    float: left; }
+  .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row > div:last-child {
+    float: right; }
+  .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row > div:first-child, .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row > div:nth-child(2), .yw-editorarea-tabbox-tabpanels-tabpanel-groupbox-ed .atpformulas-row > div:last-child {
+    margin-top: 2px;
+    margin-bottom: 2px; }
+
+.atpformulas-row .ye-default-reference-editor-remove-button.ye-default_remove_formula {
+  position: initial;
+  display: inline-block;
+  margin-top: 0px; }
+
+.atpformulas-availability {
+  display: none; }
+
+.atpformulas-availability--bold {
+  font-weight: bold; }
+
+.atpformulas-variables .z-hlayout-inner .z-label {
+  margin-bottom: 0; }
+
+.atpformulas-variables .z-hlayout-inner .atpformulas-availability--description {
+  color: var(--bo-field-border-color); }
+
+/* Status */
+/* Button Color Scheme */
+td.ye-actiondots.ye-actiondots--consignment .z-listcell-content {
+  padding-right: 0 !important; }
+td.ye-actiondots.ye-actiondots--consignment button.ye-actiondots--btn.ye-actiondots--consignment--btn {
+  height: 24px;
+  width: 36px;
+  display: inline-block;
+  padding: 0;
+  float: right;
+  border: none;
+  transform: rotate(90deg);
+  background-color: transparent; }
+  td.ye-actiondots.ye-actiondots--consignment button.ye-actiondots--btn.ye-actiondots--consignment--btn:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e1f2";
+    color: var(--bo-button-icon-color);
+    font-size: 14px; }
+td.ye-actiondots.ye-actiondots--consignment:last-child {
+  text-align: right; }
+td.ye-actiondots.ye-actiondots--consignment:hover button.ye-actiondots--btn.ye-actiondots--consignment--btn {
+  background-position: 0 -24px;
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 36px; }
+td.ye-actiondots.ye-actiondots--consignment-focus button.ye-actiondots--btn.ye-actiondots--consignment--btn {
+  background-position: 0 -48px; }
+td.ye-actiondots.ye-actiondots--consignment-active button.ye-actiondots--btn.ye-actiondots--consignment--btn {
+  background-position: 0 -48px; }
+td.ye-actiondots.ye-actiondots--consignment-disabled, td.ye-actiondots.ye-actiondots--consignment-disabled:hover > button.ye-actiondots--btn.ye-actiondots--consignment--btn {
+  background-position: 0 -72px; }
+
+.ye-warehouse-inbox-collection-browser .yw-coll-browser-container .z-listbox-body .z-listitem .z-listcell {
+  border-top: 1px solid #f2f2f2; }
+
+.ye-warehouse-inbox-collection-browser .yw-coll-browser-container .z-listbox-body .z-listitem > td > .z-listcell-content:after {
+  border-top: 0px; }
+
+.yw-coll-browser-container .ye-actiondots--consignment.ye-actiondots .z-listcell-content {
+  min-height: initial;
+  margin-right: initial; }
+
+.yw-quicklist-warehousing-hbox-container {
+  width: 100%;
+  border-bottom: 1px solid var(--bo-list-border-color); }
+
+.yw-quicklist-warehousing--tile-title {
+  margin: 15px 0 0 10px;
+  font-weight: bold;
+  display: block; }
+
+.yw-quicklist-warehousing--tile {
+  border-bottom: 1px solid var(--bo-list-border-color); }
+
+.yw-quicklist-warehousing--tile--img {
+  margin: 10px; }
+
+.yw-quicklist-warehousing--tile--prod-code {
+  margin-top: 10px;
+  display: block; }
+
+/**
+* Add icon for ordermanagement explorer tree in admin cockpit
+*/
+div.yw-explorerTree .y-tree-icon-warehousing_treenode_order_management.y-tree-icon {
+  background-image: none; }
+  div.yw-explorerTree .y-tree-icon-warehousing_treenode_order_management.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e0d8";
+    color: var(--bo-content-icon-color); }
+
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group td.z-hbox-separator {
+  margin-left: -2px;
+  display: inline-block;
+  height: 32px; }
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .cng-action {
+  margin-right: 2px; }
+  .yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .cng-action td.z-hbox-separator {
+    margin: 0;
+    height: auto; }
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action.cng-action-disabled {
+  display: none;
+  position: relative;
+  padding: 0;
+  margin: 0; }
+  .yw-warehousingbackoffice .y-toolbar-leftslot .cng-action.cng-action-disabled:hover {
+    background: none; }
+  .yw-warehousingbackoffice .y-toolbar-leftslot .cng-action.cng-action-disabled tr {
+    display: none; }
+.yw-warehousingbackoffice .cng-action .z-hbox-separator {
+  background-color: inherit; }
+.yw-warehousingbackoffice button.z-button.edititem {
+  background-image: url("images/icon_action_edit_default.png");
+  background-color: #ffffff;
+  width: 20px;
+  border: 1px solid var(--bo-list-border-color);
+  background-position: center;
+  background-repeat: no-repeat; }
+  .yw-warehousingbackoffice button.z-button.edititem:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e038";
+    color: var(--bo-button-icon-color);
+    font-size: 14px; }
+.yw-warehousingbackoffice .y-editor-area-attributes-cnt-max .z-groupbox-content .z-hbox, .yw-warehousingbackoffice .y-editor-area-attributes-cnt-max.z-groupbox-content table {
+  width: 100%; }
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printpickslipaction.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printpackaction.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printshippinglabelaction.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_shipaction.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_confirmpickupaction.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_reallocateaction.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_returns_acceptgoods.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_returns_cancelreturnaction.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_exportforms.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_stock_adjustment.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_internaltransfer_accept:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_internaltransfer_reject:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_asn_accept.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_asn_reject.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printreturnshippinglabelaction.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printreturnformaction.cng-action:not(.cng-action-disabled) tr {
+  vertical-align: middle; }
+.yw-warehousingbackoffice .yw-listview-actioncontainer .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_taskassignment_done_doneaction.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .yw-listview-actioncontainer .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_taskassignment_done_doneaction.cng-action.cng-action-disabled
+.yw-listview-actioncontainer .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printconsolidatedpickslip_printconsolidatedpickslipaction.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .yw-listview-actioncontainer .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printconsolidatedpickslip_printconsolidatedpickslipaction.cng-action.cng-action-disabled tr,
+.yw-warehousingbackoffice .yw-listview-actioncontainer .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_exportpointsofservice.cng-action:not(.cng-action-disabled) tr,
+.yw-warehousingbackoffice .yw-listview-actioncontainer .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_exportpointsofservice.cng-action.cng-action-disabled tr {
+  vertical-align: middle; }
+.yw-warehousingbackoffice .yw-listview-actioncontainer .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_taskassignment_done_doneaction.cng-action.cng-action-disabled:hover,
+.yw-warehousingbackoffice .yw-listview-actioncontainer .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printconsolidatedpickslip_printconsolidatedpickslipaction.cng-action.cng-action-disabled:hover,
+.yw-warehousingbackoffice .yw-listview-actioncontainer .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_exportpointsofservice.cng-action.cng-action-disabled:hover {
+  color: inherit;
+  background: none; }
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_shipaction.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printpickslipaction.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printpackaction.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printshippinglabelaction.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_confirmpickupaction.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_reallocateaction.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_returns_acceptgoods.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_returns_cancelreturnaction.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_stock_adjustment.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_asn_accept.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_asn_reject.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_taskassignment_done_doneaction.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_internaltransfer_reject.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_internaltransfer_accept.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_exportforms.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printreturnshippinglabelaction.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printreturnformaction.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_printconsolidatedpickslip_printconsolidatedpickslipaction.cng-action-disabled:hover,
+.yw-warehousingbackoffice .y-toolbar-leftslot .cng-action-group .ya-de_hybris_platform_warehousingbackoffice_actions_exportpointsofservice.cng-action-disabled:hover {
+  color: inherit;
+  background: none; }
+.yw-warehousingbackoffice div.yw-explorerTree .y-tree-icon-warehousing_treenode_taskassignment_inbox.y-tree-icon {
+  background-image: none; }
+  .yw-warehousingbackoffice div.yw-explorerTree .y-tree-icon-warehousing_treenode_taskassignment_inbox.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e02b";
+    color: var(--bo-content-icon-color); }
+.yw-warehousingbackoffice div.yw-explorerTree .y-tree-icon-warehousing_treenode_inventory.y-tree-icon {
+  background-image: none; }
+  .yw-warehousingbackoffice div.yw-explorerTree .y-tree-icon-warehousing_treenode_inventory.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e15d";
+    color: var(--bo-content-icon-color); }
+.yw-warehousingbackoffice div.yw-explorerTree .y-tree-icon-warehousing_treenode_fulfillmentlocations.y-tree-icon {
+  background-image: none; }
+  .yw-warehousingbackoffice div.yw-explorerTree .y-tree-icon-warehousing_treenode_fulfillmentlocations.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e165";
+    color: var(--bo-content-icon-color); }
+.yw-warehousingbackoffice div.yw-explorerTree .y-tree-icon-warehousing_treenode_order_shipping.y-tree-icon {
+  background-image: none; }
+  .yw-warehousingbackoffice div.yw-explorerTree .y-tree-icon-warehousing_treenode_order_shipping.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e6ab";
+    color: var(--bo-content-icon-color); }
+.yw-warehousingbackoffice div.yw-explorerTree .y-tree-icon-warehousing_treenode_returns.y-tree-icon {
+  background-image: none; }
+  .yw-warehousingbackoffice div.yw-explorerTree .y-tree-icon-warehousing_treenode_returns.y-tree-icon:before {
+    font-family: var(--bo-content-icon-font-family);
+    content: "\e6a2";
+    color: var(--bo-content-icon-color); }

@@ -1,0 +1,36 @@
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-profile-setting {
+  height: 100%;
+  overflow: auto;
+  padding: 16px 40px; }
+  .yw-profile-setting .profile-setting-title {
+    font-size: 1.25rem; }
+  .yw-profile-setting .profile-setting-content .profile-setting-avatar-container {
+    display: inline-flex;
+    position: relative;
+    margin-bottom: 8px; }
+    .yw-profile-setting .profile-setting-content .profile-setting-avatar-container .profile-setting-avatar-upload-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: 16px;
+      font-family: var(--bo-content-icon-font-family);
+      padding: 0; }
+      .yw-profile-setting .profile-setting-content .profile-setting-avatar-container .profile-setting-avatar-upload-btn:after {
+        content: "\e038"; }
+    .yw-profile-setting .profile-setting-content .profile-setting-avatar-container .profile-setting-avatar {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%; }
+  .yw-profile-setting .profile-setting-content .z-vlayout {
+    padding-top: 24px; }
+  .yw-profile-setting .profile-setting-content .z-label {
+    color: var(--bo-content-label-color); }
+  .yw-profile-setting .profile-setting-content .profile-setting-field-values {
+    color: var(--bo-text-color); }

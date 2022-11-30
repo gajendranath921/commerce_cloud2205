@@ -1,0 +1,18 @@
+.se-ctx-menu-btn__msg {
+    @include se-dropdown-menu('left');
+    @include se-popover-box-shadow();
+    @include fd-type('1');
+    white-space: normal;
+    padding: 20px;
+    width: 250px;
+}
+
+.se-ctx-menu-btn__msg-title {
+    @include fd-weight('bold');
+    color: fd-color('text', 1);
+    margin-bottom: fd-space('xxs');
+}
+
+.se-ctx-menu-btn__msg-description {
+    color: fd-color('text', 2);
+}

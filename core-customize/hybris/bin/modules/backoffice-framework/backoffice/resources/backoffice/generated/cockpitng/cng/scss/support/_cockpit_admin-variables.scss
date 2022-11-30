@@ -1,0 +1,270 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+/*================================
+    Cockpit Admin variables
+================================*/
+// Styling variables
+
+
+
+$admin-defaults__z-button--size: $editor-defaults__inline-box--height;
+
+$admin-defaults__mainToolbar-logo--margin-right: 15px;
+
+$admin-defaults__headerToolbar--bg-color: var(--bo-shell-background); //$blue__default;
+$admin-defaults__headerToolbar--bg-image: false; //url("images/head_backgr.gif")
+$admin-defaults__mainToolbar--space-y: 4px;
+$admin-defaults__mainToolbar--space-x: 5px;
+$admin-defaults__mainToolbar--min-height: $navigation__top-menu--height - 2 * $admin-defaults__mainToolbar--space-y;
+$admin-defaults__mainToolbar--height: auto;
+$admin-defaults__mainToolbar-topCover--bg-color: $admin-defaults__headerToolbar--bg-color;
+$admin-defaults__mainToolbar-topCover--height: $admin-defaults__mainToolbar--space-y;
+$admin-defaults__mainToolbar-topCover--top: -$admin-defaults__mainToolbar-topCover--height;
+$admin-defaults__mainToolbar-topCover--left: 0;
+$admin-defaults__mainToolbar-topCover--right: 0;
+$admin-defaults__mainToolbar-td-element--border-color: var(--bo-list-border-color);
+$admin-defaults__mainToolbar-td-element--border-width: $boxes--border__thin;
+$admin-defaults__mainToolbar-separator--border-left: none; //$admin-defaults__mainToolbar-td-element--border-width solid $white;
+$admin-defaults__mainToolbar-separator--border-right: none;
+$admin-defaults__mainToolbar-separator--width: auto;
+$admin-defaults__mainToolbar-label--font-size: $font-size__base;
+$admin-defaults__mainToolbar-label--color: var(--bo-shell-text-color);
+$admin-defaults__mainToolbar-label--padding: 6px 0 6px;
+
+$admin-defaults__mainToolbar-inner--margin-bottom: $admin-defaults__mainToolbar--space-y;
+
+$admin-defaults__toolbar-button--border-radius: 4px;
+$admin-defaults__toolbar-button--size: 40px;
+$admin-defaults__toolbar-button--margin-left: 5px;
+$admin-defaults__toolbar-delimiter--height: 40px;
+$admin-defaults__toolbar-button-hover--bg-color: var(--bo-shell-hover-background); //$blue__default--100;
+
+$admin-defaults__toolbar-roleselector--min-width: 64px;
+$admin-defaults__toolbar-roleselector--padding: 0 4px;
+$admin-defaults__toolbar-roleselector--margin-right: $container-spacing-default__third - nth($admin-defaults__toolbar-roleselector--padding, 2);
+$admin-defaults__toolbar-roleselector-label--margin-right: $admin-defaults__mainToolbar--space-x;
+$admin-defaults__toolbar-roleselector-combobox--min-width: $editor-defaults__inline-box--height + $container-spacing-default__third;
+$admin-defaults__toolbar-roleselector-combobox-btn--min-size: 30px;
+$admin-defaults__toolbar-roleselector-combobox-btn--min-width: $admin-defaults__toolbar-roleselector-combobox-btn--min-size;
+$admin-defaults__toolbar-roleselector-combobox-btn--min-height: $admin-defaults__toolbar-button--size; //$editor-defaults__inline-box--height;
+$admin-defaults__toolbar-roleselector-combobox-btn--padding: floor(($admin-defaults__toolbar-roleselector-combobox-btn--min-height - $admin-defaults__toolbar-roleselector-combobox-btn--min-size)/2) 0;
+
+$admin-defaults__toolbar-checkbox--min-height: 24px;
+
+$admin-defaults__toolbar-connections-default--height: 20px;
+$admin-defaults__toolbar-connections-default--padding: $admin-defaults__mainToolbar--space-y;
+$admin-defaults__toolbar-connections--padding: $admin-defaults__mainToolbar--space-y 12px;
+$admin-defaults__toolbar--bp-xs: 320px;
+$admin-defaults__toolbar--bp-s: 400px;
+$admin-defaults__toolbar-connections-bp-xs--padding: $admin-defaults__toolbar-connections-default--padding;
+$admin-defaults__toolbar-connections-bp-s--margin-right: $admin-defaults__toolbar-button--size + $admin-defaults__mainToolbar--space-y;
+$admin-defaults__toolbar-connections-box-bp-s--margin-right: nth($admin-defaults__toolbar-connections--padding, 2) - $admin-defaults__mainToolbar--space-x;
+
+$admin-defaults__toolbar-clipboard-dropdown--max-height: $editor-defaults__popup-box--max-height;
+$admin-defaults__toolbar-clipboard-dropdown--bg-color: var(--bo-button-background);
+
+$admin-defaults__toolbar-clipboard-icon--size: $toolbar__button-small--size;
+
+$admin-defaults__toolbar-clipboard-header--min-height: $admin-defaults__toolbar-clipboard-icon--size;
+
+$admin-defaults__toolbar-clipboard-label--padding: 0 5px 0 24px;
+$admin-defaults__toolbar-clipboard-label--min-height: $admin-defaults__toolbar-clipboard-icon--size;
+$admin-defaults__toolbar-clipboard-label--line-height: $admin-defaults__toolbar-clipboard-icon--size;
+
+$admin-defaults__toolbar-slider--height: 14px;
+$admin-defaults__toolbar-slider--margin-top: 7px;
+$admin-defaults__toolbar-slider-center--height: 4px;
+$admin-defaults__toolbar-slider-center--border-radius: 2px;
+$admin-defaults__toolbar-slider-center--left: 4px;
+$admin-defaults__toolbar-slider-center--bg-color: var(--bo-input-border-color);
+$admin-defaults__toolbar-slider-button--bg-color: var(--bo-button-active-background);
+$admin-defaults__toolbar-slider-area--height: $admin-defaults__toolbar-slider-center--height;
+$admin-defaults__toolbar-slider-area--border-radius: $admin-defaults__toolbar-slider-center--border-radius 0 0 $admin-defaults__toolbar-slider-center--border-radius;
+$admin-defaults__toolbar-slider-area--bg-color: $admin-defaults__toolbar-slider-button--bg-color;
+$admin-defaults__toolbar-slider-button--size: 20px;
+$admin-defaults__toolbar-slider-button--border-radius: round($admin-defaults__toolbar-slider-button--size/2);
+
+
+$admin-defaults__widget-container--space-x: 5px;
+$admin-defaults__widget-container--space-y: 5px;
+$admin-defaults__widget-container--border: 1px dotted var(--bo-container-border-color);
+$admin-defaults__widget-container--bg-color: var(--bo-base-background);
+
+$admin-defaults__widget-toolbar--space-x: $admin-defaults__widget-container--space-x - 1px;
+
+$admin-defaults__widget-panel--top: $container-spacing-default__base; //$editor-defaults__inline-box--height;
+$admin-defaults__widget-panel--margin-top: $admin-defaults__widget-container--space-y;
+
+$admin-defaults__widget-body--top: $container-spacing-default__base;
+$admin-defaults__widget-body--margin-top: 50px !important;
+$admin-defaults__widget-body--bottom: $admin-defaults__widget-container--space-y;
+$admin-defaults__widget-body--space-x: $admin-defaults__widget-container--space-x;
+$admin-defaults__widget-body--bg-color: var(--bo-container-background);;
+
+$admin-defaults__main-widget--top: 60px !important;
+$admin-defaults__main-widget--space-x: $admin-defaults__widget-container--space-x;
+$admin-defaults__main-widget-label--margin: 2px $admin-defaults__widget-container--space-x;
+$admin-defaults__main-widget-label--color: var(--bo-page-header-text-color);
+
+$admin-defaults__symbolic-main-widget--top: $admin-defaults__main-widget--top;
+// $admin-defaults__symbolic-main-widget--bg-color: $black__blueish--200;
+$admin-defaults__symbolic-window--bg-color: var(--bo-list-background);
+$admin-defaults__symbolic-container--bg-color: var(--bo-base-background);
+$admin-defaults__symbolic-window--shadow: var(--bo-content-shadow-small);
+// $admin-defaults__symbolic-main-widget--margin-x: $admin-defaults__widget-container--space-x;
+
+$admin-defaults__widget-buttons-hover--bg-color: var(--bo-button-hover-background);
+$admin-defaults__widget-buttons-hover--color: var(--bo-button-hover-color);
+
+$admin-defaults__content--border-width: $boxes--border__thin;
+
+$admin-defaults__chooze-wizard-refreshLibraryButton--height: $toolbar__button-default--size;
+$admin-defaults__chooze-wizard-refreshLibraryButton-hover--color: var(--bo-button-hover-color);
+$admin-defaults__chooze-wizard-topToolbar--space-y: 3px;
+
+$admin-defaults__chooze-wizard-content--border: $admin-defaults__content--border-width solid var(--bo-container-border-color);
+$admin-defaults__chooze-wizard-content--bg-color: var(--bo-container-background);
+
+$admin-defaults-disabled--opacity: var(--bo-content-disabled-opacity);
+$admin-defaults__config-filter-container--bg-color: var(--bo-base-background);
+$admin-defaults__remove-widget-button--background: var(--bo-button-background);
+$admin-defaults__remove-widget-button--color: var(--bo-button-icon-color);
+$admin-defaults__remove-widget-button--hover-background: var(--bo-button-hover-background);
+$admin-defaults__remove-widget-button--hover-color: var(--bo-button-hover-color);
+$admin-defaults__remove-widget-button--active-background: var(--bo-button-active-background);
+$admin-defaults__remove-widget-button--active-color: var(--bo-button-active-color);
+$admin-defaults__filter-search-button-section--line-height: $editor-defaults__inline-box--height;
+$admin-defaults__filter-selected-attribute-container--background: var(--bo-button-selected-background);
+$admin-defaults__filter-selected-attribute-label--color: var(--bo-button-selected-color);
+$admin-defaults__filter-selected-attribute-container--border-radius: var(--bo-border-radius);
+$admin-defaults__filter-component-container--bg-color: var(--bo-base-background);
+$admin-defaults__filter-container-toggle-button--bg-color: var(--bo-button-background);
+$admin-defaults__filter-container-toggle-button--color: var(--bo-button-icon-color);
+$admin-defaults__filter-container-toggle-button--line-height: $editor-defaults__inline-box--height;
+$admin-defaults__filter-container-toggle-button--height: $editor-defaults__inline-box--height;
+$admin-defaults__filter-container-toggle-button--border-bottom: $boxes--border__thin solid var(--bo-list-border-color);
+
+$admin-defaults__filter-container-attribute-button--color: var(--bo-button-icon-color);
+$admin-defaults__filter-container-attribute-list-bg-color: var(--bo-list-background);
+// $admin-defaults__filter-container-attribute-button-hover--color: $white;
+$admin-defaults__filter-attribute-button-icon--size: 16px;
+
+$admin-defaults__button-hover--color: var(--bo-button-hover-color);
+$admin-defaults__button-hover--border-color: var(--bo-button-hover-border-color);
+$admin-defaults__button-hover--bg-color: var(--bo-button-hover-background);
+$admin-defaults__button-selected-color: var(--bo-button-selected-color);
+$admin-defaults__button--border-color: var(--bo-button-border-color);
+$admin-defaults__button-active--bg-color: var(--bo-button-active-background);
+$admin-defaults__button-active--outline-color: var(--bo-contrast-text-color);
+$admin-defaults__button--border-radius: var(--bo-border-radius);
+
+$_button-focus-outline-width: var(--bo-content-focus-outline-width,.0625rem);
+$_button-focus-outline-color: var(--bo-button-focus-outline-color);
+$_button-focus-outline-offset: -.1875rem;
+
+$admin-defaults__config-filter-attribute-container--margin: 8px;
+$admin-defaults__config-filter-attribute-container--padding: 8px;
+$admin-defaults__config-filter-attribute-container--bg-color: var(--bo-container-background);
+// $admin-defaults__config-filter-attribute-find-parent--line-height: $editor-defaults__inline-box--height;
+$admin-defaults__config-filter-attribute-name-label--padding-left: 0;
+$admin-defaults__config-popup-container--bg-color: var(--bo-list-background);
+$admin-defaults__filter-container-attribute-list-bg-color: var(--bo-list-background);
+
+$admin-defaults__popup-menu--padding-top: 4px;
+$admin-defaults__popup-menu-content--border-radius: 4px;
+$admin-defaults__popup-menu-content--padding: 4px 0;
+$admin-defaults__popup-menu-content--box-shadow: var(--bo-content-shadow-small);
+$admin-defaults__popup-menu-content--bg-color: var(--bo-list-background);
+$admin-defaults__popup-menu-item--color: var(--bo-list-text-color);
+$admin-defaults__popup-menu-separator--border-color: var(--bo-list-border-color); // $black__blueish--100;
+$admin-defaults__popup-menu-separator--min-height: $boxes--border__thin;
+$admin-defaults__popup-menu-separator--margin: 0 $container-spacing-default__half;
+$admin-defaults__popup-menu-pointer--right: 10px;
+$admin-defaults__popup-menu-pointer--margin-top: $admin-defaults__popup-menu--padding-top;
+
+$_admin-wizard__container--max-width: 800px;
+$_admin-wizard__container--min-width: 300px;
+$_admin-wizard__content--height: 350px;
+$_admin-wizard__content--padding: $container-spacing-default__third $container-spacing-default_two-thirds;
+$_admin-wizard__content--border: $boxes--border__thin solid $grey__default;
+$_admin-wizard__content-panel--padding: 5px;
+$_admin-wizard__content-delimiter--spacing: $container-spacing-default__third;
+$_admin-wizard__content-delimiter-before--margin-top: -18px;
+$_admin-wizard__footer-panel--border-top: $boxes--border__thin solid $grey__default;
+$_admin-wizard__footer-panel--padding: $container-spacing-default__third;
+$_admin-wizard__footer-panel-button--side-margin: 5px;
+
+$_admin-wizard__create-widget-group-content-label--padding: $container-spacing-default__third $container-spacing-default_two-thirds;
+$_admin-wizard__create-widget-group-content-label--color: var(--bo-list-text-color);
+$_admin-wizard__create-widget-group-preferences-row--padding-bottom: $container-spacing-default__third;
+$_admin-wizard__create-widget-group-preferences-grid--padding: 0 $container-spacing-default_two-thirds;
+
+$_admin-wizard__create-widget-group-sockets-list--padding: $_admin-wizard__content--padding;
+$_admin-wizard__create-widget-group-sockets-list--border: $boxes--border__thin solid $grey__default;
+
+$_admin-wizard__create-widget-group-sockets-list-item-icon--width: 25px;
+$_admin-wizard__create-widget-group-sockets-list-item-icon--padding: 0 5px;
+$_admin-wizard__create-widget-group-sockets-list-item-delete-button--width: 40px;
+$_admin-wizard__create-widget-group-sockets-list-item-2nd-level--margin-left: $container-spacing-default_two-thirds;
+$_admin-wizard__create-widget-group-sockets-list-item--margin-bottom: 5px;
+$_admin-wizard__create-widget-group-sockets-list-item--min-height: $editor-defaults__inline-box--height;
+$_admin-wizard__create-widget-group-sockets-list-item--border: $boxes--border__thin solid $grey__default;
+$_admin-wizard__create-widget-group-sockets-list-item--border-radius: 3px;
+$_admin-wizard__create-widget-group-sockets-list-item--padding: 0 10px;
+
+$_admin-wizard__widget-settings-virtual-sockets-label--border-top: $boxes--border__thin solid $grey__default;
+$_admin-wizard__widget-settings-virtual-sockets-label--margin-top: $container-spacing-default__third;
+$_admin-wizard__widget-settings-virtual-sockets-label--padding: $container-spacing-default__third 0;
+$_admin-wizard__widget-settings-virtual-sockets-popup-select--height: $editor-defaults__inline-box--height;
+
+$admin-defaults__filter-options-searchsection-bg-color: var(--bo-page-footer-background);
+
+$admin-defaults-icon--font-family: $font-family__icon;
+$admin-defaults-icon--font-size: $font-size__large;
+$admin-defaults-icon--color: var(--bo-content-icon-color);
+$admin-icon-warning-icon--color: var(--bo-warning-color);
+$admin-defaults-disabled-icon--opacity: var(--bo-content-disabled-opacity);
+$admin-defaults-shell-icon--color: var(--bo-shell-interactive-color);
+$admin-defaults-shell-icon--size: $font-size__large;
+$admin-defaults-shell-icon--hover-background: var(--bo-shell-hover-background);
+
+$admin-icon-preview--content: _getIconGlyphContentValue("show");
+$admin-icon-preview-disabled--content: _getIconGlyphContentValue("hide");
+$admin-icon-not-visible--content: $admin-icon-preview-disabled--content;
+$admin-icon-clipboard--content: _getIconGlyphContentValue("clinical-tast-tracker");
+$admin-icon-add--content: _getIconGlyphContentValue("add");
+$admin-icon-connect--content: _getIconGlyphContentValue("chain-link");
+$admin-icon-disconnect--content: _getIconGlyphContentValue("broken-link");
+$admin-icon-edit--content: _getIconGlyphContentValue("edit");
+$admin-icon-add-group--content: _getIconGlyphContentValue("add-folder");
+$admin-icon-template--content: _getIconGlyphContentValue("manager-insight");
+$admin-icon-menu-popup--content: _getIconGlyphContentValue("menu");
+$admin-icon-stub-container-open-icon: _getIconGlyphContentValue("open-command-field");
+$admin-icon-stub-container-close-icon: _getIconGlyphContentValue("close-command-field");
+$admin-icon-symbolic-add-icon: _getIconGlyphContentValue("add");
+$admin-icon-warning-icon: _getIconGlyphContentValue("message-warning");
+
+$admin_toolbar-default-header-background: var(--bo-page-header-background);
+$admin_toolbar-default-header-color: var(--bo-page-header-text-color);
+$admin_single-widget--background: var(--bo-list-background);
+$admin_single-widget--header-background: var(--bo-page-header-background);
+$admin_single-widget--header-color: var(--bo-page-header-text-color);
+$admin_single-widget--header-box-shadow: var(--bo-page-header-text-color);
+$admin_single-widget--header-border: 1px solid var(--bo-page-header-border-color);
+
+$admin_toolbar-default-header-drag-hover-color: var(--bo-object-header-hover-background);
+$admin-symbolic-add-btn--border: $boxes--border__thin dotted var(--bo-button-border-color);
+$admin-symbolic-widget-placeholder--border: $boxes--border__thin dotted var(--bo-button-border-color);
+
+// $admin-defaults__popup-menu--padding-top: 4px;
+// $admin-defaults__popup-menu-content--border-radius: 4px;
+// $admin-defaults__popup-menu-content--padding: 4px 0;
+// $admin-defaults__popup-menu-content--box-shadow: 0px 2px 5px 0px rgba($black, 0.1);
+// $admin-defaults__popup-menu-content--bg-color: $white;
+// $admin-defaults__popup-menu-item--color: #354a5f;
+// $admin-defaults__popup-menu-separator--border-color: #354a5f; // $black__blueish--100;
+// $admin-defaults__popup-menu-separator--min-height: $boxes--border__thin;
+// $admin-defaults__popup-menu-separator--margin: 0 $container-spacing-default__half;
+// $admin-defaults__popup-menu-pointer--right: 10px;
+// $admin-defaults__popup-menu-pointer--margin-top: // $admin-defaults__popup-menu--padding-top;

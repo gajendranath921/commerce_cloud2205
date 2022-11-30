@@ -1,0 +1,135 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@charset "UTF-8";
+/*================================
+    Advanced Search - Fields
+================================*/
+// Styling of Fields contained in the Advanced-Search Contents (Size, Bahaviour, Validation)
+@import "../support/_advancedsearch-variables.scss";
+
+.yw-search-btn {
+    float: right;
+}
+
+.yw-advancedsearch {
+
+    .ye-com_hybris_cockpitng_editor{
+        &_defaultinteger,
+        &_defaulttext,
+        &_defaultdecimal {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    /* LOCALISED VALUE */
+    &-editor .yw-advancedsearch-local {
+        display: table-cell;
+        width: $advancedsearch__local--width;
+        min-width: $advancedsearch__local--min-width;
+        vertical-align: top;
+        
+        &-editor {
+            box-sizing: border-box;
+            display: table-cell;
+            padding-left: $advancedsearch__attributes-grid-item--space-x;
+            width: 100%;
+            vertical-align: top;
+        }
+    }
+
+    &-add-btn.z-button,
+    &-delete-btn.z-button {
+        height: $advancedsearch__default-button--size;
+        width: $advancedsearch__default-button--size;
+        background-color: transparent;
+        color: $_advancedsearch__action-btn-icon--color;
+        border: none;  
+        
+        &:active,
+        &:hover,
+        &:focus {
+            background-color: $_advancedsearch__action-btn-icon-hover--bg-color;
+            border: 1px solid $_advancedsearch__action-btn-icon-hover--border-color;
+            box-shadow: none;
+        }
+    }
+    &-add-btn.z-button {
+        position: $_advancedsearch__action-btn-add--position;
+        right: $_advancedsearch__action-btn-add--right;
+        
+        &:after{
+            width: $advancedsearch__action-btn--size;
+            height: $advancedsearch__action-btn--size;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-family: $_advancedsearch__action-btn-icon--font-family;
+            content: $_advancedsearch__action-btn-add-icon--content;
+            transform: translate3d(-50%,-50%,0);
+        }
+        &:hover:after {
+            background-position: center (-1 * $advancedsearch__action-btn--size);
+        }
+        &:active:after {
+            background-position: center (-2 * $advancedsearch__action-btn--size);
+        }
+        &:disabled, &[disabled]{
+            &:after {
+                background-position: center (-3 * $advancedsearch__action-btn--size);
+            }
+        }
+    }
+    &-delete-btn.z-button {
+        float: right;
+    }
+    .yw-loceditor {
+        &-caption {
+            padding: 0;
+            
+            .y-icon-loceditor {
+                margin-top: 4px;
+            }
+
+            /* TEMPORARY FIX FOR CAPTION BUG - REMOVE AFTER FIX */
+            &-spacer {
+                display: none;
+            }
+        }
+        &-caption,
+        &-row {
+            padding-bottom: 0;
+        }
+        .ye-default-reference-editor-bandbox {
+            width: 90%;
+        }
+    }
+}
+
+.ye-as-lang-selector {
+    &.z-combobox {
+        border-spacing: 0;
+    }
+/*
+    .z-combobox-input, .z-comboitem-text {
+        text-transform: uppercase;
+    }
+*/
+}
+
+//read-only-styling of type-Selector
+// general, should be with the defaults
+/*
+.yw-global-typeSelector .z-bandbox-readonly {
+    background: none repeat scroll 0 0 #FFFFFF !important;
+    border-color: #B7BDC8 !important;
+    border-right: medium none #B7BDC8 !important;
+    color: #000000 !important;
+}
+*/
+
+.yw-buttons-container,
+.yw-textsearch-searchbox {
+    vertical-align: top;
+}

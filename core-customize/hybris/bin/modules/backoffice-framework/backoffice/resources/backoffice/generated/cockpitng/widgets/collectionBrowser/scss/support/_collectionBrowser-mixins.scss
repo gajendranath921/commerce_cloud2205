@@ -1,0 +1,133 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "_collectionBrowser-variables.scss";
+
+
+@mixin _add_collection-browser-mold-select-icon ($key) {
+    &-#{$key}-view {
+        &-active,
+        &-inactive {
+            &:after {
+                font-family: $collection-browser--icons-font-family;
+                font-size: $collection-browser--icons-font-size;
+                content: _getIconGlyphContentValue($key);
+                position: relative;
+                color: inherit !important;
+            }
+        }
+
+        &-inactive {
+            cursor: pointer;
+            background-color: $_collection-browser__toolbar-mold-select-button--bg-color;
+            color: $collection-browser--icons-color;
+        }
+        &-inactive:hover,
+        &-active {
+            // background-image: url("img/icon_view_#{$key}_active.svg");
+            background-color: $_collection-browser__toolbar-mold-select-button-selected--bg-color;
+            border-color: $_collection-browser__toolbar-mold-select-button-selected--border-color;
+            color: $collection-browser--icons-active-color
+        }
+    }
+}
+
+@mixin _single-row-tile ($row-padding-x:$collection-browser__side-content-indent--padding, $image-overflow: $collection-browser__grid-tile-image--overflow-x ){
+    .yw-grid-view {
+        &,
+        body.gecko &,
+        body.webkit &,
+        body.edge & {
+            display: block;
+        }
+
+        &-tile {
+            &,
+            body.gecko &,
+            body.webkit &,
+            body.edge & {
+                width: 100%;
+                min-height: 0;
+                max-height: none;
+                max-width: 100%;
+                height: auto;
+                margin-top: nth($collection-browser__grid-tile--margin, 1);
+                float: none;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+            
+            .yw-grid-view-tile-thumbnail {
+                position: relative;
+                height: auto;
+                min-height: 0;
+                max-height: none;
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                left: auto;
+                margin: 0 (-1 * $image-overflow);
+                transform: translate(0, 0);               
+            }
+            .yw-image-container,
+            .yw-grid-view-tile-thumbnail {
+                ~ .z-label {
+                    position: relative;
+                    top: auto;
+                }
+            }
+            &.yw-grid-view-tile-narrow {
+                .yw-grid-view-tile-thumbnail {
+                    max-height: none;
+                    width: auto;
+                    min-width: 60%;
+                }
+            }
+        }
+    }
+}
+
+@mixin _adjust-grid-view-tile-border ($border-width: false){
+    @if $border-width and ($border-width != nth($collection-browser__grid-tile--border, 1)) {
+        border-width: $border-width;
+        $border-adjustment: nth($collection-browser__grid-tile--border, 1) - $border-width;
+        .z-label {
+            padding-left: nth($collection-browser__grid-tile--padding, 2) + $border-adjustment;
+            padding-right: nth($collection-browser__grid-tile--padding, 2) + $border-adjustment;
+            bottom: $collection-browser__grid-tile-label--bottom + $border-adjustment;
+        }
+        &.yw-grid-view-tile-narrow {
+            &:before {
+                bottom: $collection-browser__grid-tile-narrow-image-part--bottom + $border-adjustment;    
+            }
+            .bottom-panel {
+                padding-top: $collection-browser__grid-tile--padding-value + $border-adjustment;
+                padding-left: $collection-browser__grid-tile--padding-value + $border-adjustment;
+                padding-right: $collection-browser__grid-tile--padding-value + $border-adjustment;
+                bottom: $collection-browser__grid-tile--padding-value + $border-adjustment;
+            }
+            .z-label {
+                bottom: $collection-browser__grid-tile-narrow-label--bottom + $border-adjustment;
+            }
+            .yw-grid-view-tile-thumbnail {
+                max-height: $collection-browser__grid-tile-narrow-image--max-height + $border-adjustment;
+            }
+        }
+        .yw-image-container {
+            margin-top: $border-adjustment;
+        }
+        .yw-grid-view-tile-thumbnail {
+            max-height: $collection-browser__grid-tile-image--max-height + $border-adjustment;
+        }
+        .yw-grid-view-tile-selection {
+            top: $collection-browser__grid-tile-select-button--indent + $border-adjustment;
+            left: $collection-browser__grid-tile-select-button--indent + $border-adjustment;
+        }
+    }
+}
+
+@function rgba-to-rgb($rgba, $background: $collection-browser__default--bg-color){
+  @return $background;
+}

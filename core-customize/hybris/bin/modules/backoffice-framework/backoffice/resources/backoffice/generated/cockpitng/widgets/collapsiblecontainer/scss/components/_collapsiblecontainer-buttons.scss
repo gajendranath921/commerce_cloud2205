@@ -1,0 +1,206 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+button.yw-expandCollapse {
+    &,
+    .z-window-highlighted & {   
+        position: absolute;
+        top: $collapsible-container__expand-button--top;
+        right: $collapsible-container__expand-button--right;
+        width: $collapsible-container__expand-button--size;
+        height: $collapsible-container__expand-button--size;
+        min-height: $collapsible-container__expand-button--size;
+        padding: 0;
+        background-color: transparent;
+        border-color: transparent;
+
+        @if ($collapsible-container__buttons-use-bg-sprites){
+            background-image: url('images/icon_func_colapse_sprite.png') !important;
+            background-repeat: no-repeat;
+            background-position: $collapsible-container__expand-button--bg-position;
+        }@else{
+            background-image: none;
+            color: $collapsible-container__button--color;
+            &:before {
+                font-family: $collapsible-container__button--font-family;
+                font-size: $collapsible-container__button--font-size;
+                position: absolute;
+                transform: translate3d(-50%,-50%,0);
+                left: 50%;
+            }
+        }
+
+        &:hover {
+            background-color: $collapsible-container__button-hover--bg-color;
+            color: $collapsible-container__button-hover--color;
+            border: $collapsible-container__button-hover--border;
+            box-shadow: none;
+        }
+
+        &:hover,
+        &:active {
+            @if ($collapsible-container__buttons-use-bg-sprites){
+                background-position: $collapsible-container__expand-button-hover-active--bg-position;
+            }
+        }
+    }
+    @if ($collapsible-container__buttons-use-bg-sprites == false) {
+        .z-groupbox > .z-groupbox-header & {
+            &,
+            .z-window-highlighted & {
+                @include _getIconGlyph($collapsible-container__button-collapse--key);
+            }
+        }
+        .z-groupbox-collapsed > .z-groupbox-header & {
+            &,
+            .z-window-highlighted & {
+                @include _getIconGlyph($collapsible-container__button-expand--key);
+            }
+        }
+    }
+}
+
+.yw-expandCollapse.z-button[disabled],
+.yw-expandCollapse.z-button[disabled]:hover,
+.yw-expandCollapse.z-button[disabled]:active {
+    opacity: $collapsible-container__button-disabled--opacity;
+    color: $collapsible-container__button--color;
+    background: transparent;
+    border: transparent;
+    cursor: not-allowed;
+}
+
+.yw-com_hybris_backoffice_perspectiveContainer .yw-collapsibleContainer {
+    &-locked, 
+    &-unlocked {
+        top: $collapsible-container__lock-unlock-button--top;
+        right: $collapsible-container__lock-unlock-button--right;
+        width: $collapsible-container__lock-unlock-button--size;
+        height: $collapsible-container__lock-unlock-button--size;
+        min-height: $collapsible-container__lock-unlock-button--size;
+        position: absolute;
+        padding: 0;
+        background: none;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:hover, 
+        &:active, 
+        &:focus {
+            min-height: $collapsible-container__lock-unlock-button--size;
+            // background-color: transparent;
+            box-shadow: none;
+        }
+    }
+    @if ($collapsible-container__buttons-use-bg-sprites){
+        &-locked, 
+        &-locked:hover, 
+        &-locked:active,
+        &-locked:focus {
+            @if ($collapsible-container__buttons-use-bg-sprites){
+                background-image: $collapsible-container__lock-button--bg-image;
+            }
+        }
+        &-unlocked, 
+        &-unlocked:hover, 
+        &-unlocked:active {
+            @if ($collapsible-container__buttons-use-bg-sprites){
+                background-image: $collapsible-container__unlock-button--bg-image;
+            }
+        }
+    } @else {
+        &-locked,
+        &-unlocked {
+            &,
+            &:hover,
+            &:active {
+                color: $collapsible-container__button--color;
+            }
+        }
+        &-locked {
+            &:focus {
+                color: $_container__action-hover--color;
+            }
+        } 
+        &-unlocked:before {
+            @include _getIconGlyph($collapsible-container__button-unlocked--key, false);
+            font-family: $collapsible-container__button--font-family;
+            font-size: $collapsible-container__button--font-size;
+            position: absolute;
+            transform: translate3d(-50%,-50%,0);
+            left: 50%;
+        }
+        &-locked:before {
+            @include _getIconGlyph($collapsible-container__button-locked--key, false);
+            font-family: $collapsible-container__button--font-family;
+            font-size: $collapsible-container__button--font-size;
+            position: absolute;
+            transform: translate3d(-50%,-50%,0);
+            left: 50%;
+        }
+    }
+    &-caption {
+        > .z-center-header,
+        > .z-north-header,
+        > .z-south-header {
+            .yw-caption-container {
+
+                button.yw-expandCollapse, 
+                button.yw-collapsibleContainer-locked, 
+                button.yw-collapsibleContainer-unlocked {
+                    top: $collapsible-container__expand-button-header--top;
+                    margin-top: $collapsible-container__expand-button-header--margin-top;
+                }
+            }
+        }
+    }
+}
+
+.yw-caption-container .yw-expandCollapse {
+    .z-center-header & {
+        @if ($collapsible-container__buttons-use-bg-sprites){
+            background-position: $collapsible-container__collapsed-down-expand-button-top--bg-position;
+            
+            &:hover {
+                background-position: $collapsible-container__collapsed-down-expand-button-top-hover--bg-position;
+            }
+        } @else {
+            &:before {
+                @include _getIconGlyph($collapsible-container__button-collapse--key, false);
+            }
+        }
+    }
+
+    .z-south-header & {
+        @if ($collapsible-container__buttons-use-bg-sprites){
+            background-position: $collapsible-container__collapsed-down-expand-button-top--bg-position;
+            
+            &:hover {
+                background-position: $collapsible-container__collapsed-down-expand-button-top-hover--bg-position;
+            }
+        } @else {
+            &:before {
+                @include _getIconGlyph($collapsible-container__button-expand--key, false);
+            }
+        }
+    }
+}
+
+.yw-expandCollapse-icon {
+    &-expand {
+        &:before {
+            @include _getIconGlyph($collapsible-container__button-expand--key, false);
+            font-family: $collapsible-container__button--font-family;
+            font-size: $collapsible-container__button--font-size;
+        }
+    }
+
+    &-collapse {
+        &:before {
+            @include _getIconGlyph($collapsible-container__button-collapse--key, false);
+            font-family: $collapsible-container__button--font-family;
+            font-size: $collapsible-container__button--font-size;
+        }
+    }
+}

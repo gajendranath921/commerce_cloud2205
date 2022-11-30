@@ -1,0 +1,33 @@
+<div>
+    <div
+        class="se-page-tree-node"
+        [ngClass]="node.isExpanded && 'se-page-tree-node-expand'"
+        [attr.node-smartedit-element-uuid]="node.elementUuid"
+    >
+        <span
+            (click)="onClickSlotNode($event)"
+            [ngClass]="node.isExpanded ?
+                    'sap-icon--navigation-down-arrow' :
+                    'sap-icon--navigation-right-arrow'"
+            class="se-page-tree-node--icon"
+        ></span>
+        <span class="se-page-tree-slot-node--name" (click)="onClickSlotNode($event)"
+            >{{node.componentId}}</span
+        >
+        <div class="se-page-tree-slot-node-menu">
+            <span class="se-page-tree-slot-node-menu--icon sap-icon--chain-link"></span>
+            <span class="se-page-tree-slot-node-menu--icon sap-icon--synchronize"></span>
+        </div>
+    </div>
+    <div *ngIf="node.isExpanded && node.componentNodes.length">
+        <div *ngFor="let child of node.componentNodes">
+            <se-page-tree-component
+                [component]="child"
+                [slotId]="node.componentId"
+                [slotUuid]="node.componentUuid"
+                [slotElementUuid]="node.elementUuid"
+                (onComponentExpanded)="onComponentExpanded($event)"
+            ></se-page-tree-component>
+        </div>
+    </div>
+</div>

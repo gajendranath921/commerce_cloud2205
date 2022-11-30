@@ -1,0 +1,194 @@
+/* Status */
+/* Button Color Scheme */
+/*================================
+	Configurable Flow Widget
+================================*/
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-modal-configurableFlow-small {
+  width: 30%;
+  max-width: 500px; }
+
+.yw-modal-configurableFlow-medium {
+  width: 60%;
+  max-width: 800px; }
+
+.yw-modal-configurableFlow-large {
+  width: 90%;
+  max-width: 1200px; }
+
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+/* Status */
+/* Button Color Scheme */
+.yw-modal-configurableFlow-small {
+  width: 30%;
+  max-width: 500px; }
+
+.yw-modal-configurableFlow-medium {
+  width: 60%;
+  max-width: 800px; }
+
+.yw-modal-configurableFlow-large {
+  width: 90%;
+  max-width: 1200px; }
+
+.yw-modal-configurableFlow {
+  min-width: 300px;
+  height: auto; }
+  .yw-modal-configurableFlow .z-window-content {
+    height: auto !important; }
+  .yw-modal-configurableFlow .yw-wizard-breadcrumb {
+    color: var(--bo-content-label-color);
+    padding: 16px;
+    position: relative;
+    display: table-cell;
+    overflow: visible;
+    -ms-word-break: break-all;
+    word-break: break-word; }
+    .yw-modal-configurableFlow .yw-wizard-breadcrumb-cnt {
+      display: table;
+      table-layout: fixed;
+      padding: 0;
+      margin: 0; }
+      .yw-modal-configurableFlow .yw-wizard-breadcrumb-cnt:empty {
+        display: none; }
+    .yw-modal-configurableFlow .yw-wizard-breadcrumb-wrapper {
+      position: relative;
+      background: var(--bo-list-background);
+      padding: 0;
+      border-top: 1px solid var(--bo-list-border-color); }
+      .yw-modal-configurableFlow .yw-wizard-breadcrumb-wrapper:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: block;
+        height: 0;
+        border-bottom: 1px solid var(--bo-list-border-color); }
+    .yw-modal-configurableFlow .yw-wizard-breadcrumb:first-child .yw-wizard-breadcrumb-spacer {
+      display: none; }
+    .yw-modal-configurableFlow .yw-wizard-breadcrumb-active {
+      color: var(--bo-step-active-color);
+      font-weight: 700; }
+      .yw-modal-configurableFlow .yw-wizard-breadcrumb-active .yw-wizard-breadcrumb-label:after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: 0;
+        border-bottom: 3px solid var(--bo-step-active-indicator-color);
+        right: 16px;
+        left: 16px; }
+      .yw-modal-configurableFlow .yw-wizard-breadcrumb-active + .yw-wizard-breadcrumb-after .yw-wizard-breadcrumb-spacer {
+        color: var(--bo-container-color); }
+    .yw-modal-configurableFlow .yw-wizard-breadcrumb-spacer {
+      position: absolute;
+      left: 0;
+      width: 8px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--bo-content-label-color);
+      font-family: var(--bo-content-icon-font-family);
+      font-size: 12px; }
+      .yw-modal-configurableFlow .yw-wizard-breadcrumb-spacer:before {
+        content: "\e1ed";
+        display: block;
+        width: 100%;
+        text-align: center; }
+    .yw-modal-configurableFlow .yw-wizard-breadcrumb-sublabel .z-label {
+      font-size: 14px; }
+    .yw-modal-configurableFlow .yw-wizard-breadcrumb-label .z-label {
+      font-size: 12px;
+      text-transform: uppercase; }
+    .yw-modal-configurableFlow .yw-wizard-breadcrumb-label, .yw-modal-configurableFlow .yw-wizard-breadcrumb-sublabel {
+      display: block; }
+    .yw-modal-configurableFlow .yw-wizard-breadcrumb-before {
+      cursor: pointer; }
+  .yw-modal-configurableFlow .yw-wizard-msgArea-cnt {
+    position: relative;
+    overflow: hidden; }
+  .yw-modal-configurableFlow .yw-labelstyle {
+    color: var(--bo-container-color); }
+  .yw-modal-configurableFlow .yw-wizard-info {
+    padding: 16px;
+    font-size: 14px;
+    color: var(--bo-container-color);
+    overflow: auto;
+    background: transparent;
+    border-bottom: 1px solid transparent; }
+  .yw-modal-configurableFlow .yw-wizard-tabpanel.z-tabpanel {
+    padding: 0; }
+  .yw-modal-configurableFlow .yw-wizard-tabs > .z-tabs-header .z-tab-hm, .yw-modal-configurableFlow .yw-wizard-tabs > .z-tabs-header .z-tab-hr, .yw-modal-configurableFlow .yw-wizard-tabs > .z-tabs-header .z-tab-hl {
+    background: none; }
+  .yw-modal-configurableFlow .yw-wizard-layout > .z-vlayout-inner {
+    height: auto !important;
+    width: 100% !important; }
+  .yw-modal-configurableFlow .yw-wizard-content {
+    padding: 8px 16px;
+    min-height: 250px;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100% !important;
+    height: auto !important; }
+    @media screen and (min-height: 720px) {
+      .yw-modal-configurableFlow .yw-wizard-content {
+        max-height: calc(100vh - 300px); } }
+    .yw-modal-configurableFlow .yw-wizard-content .ye-qualifier-not-found-error.z-label {
+      border: 1px dashed;
+      color: var(--bo-error-color);
+      padding: 5px;
+      display: block; }
+  .yw-modal-configurableFlow .ye-validation-info .yw-loceditor-row-wysiwyg > .yw-loceditor-row-locale:before, .yw-modal-configurableFlow .ye-validation-info .yw-loceditor-row-wysiwyg > .yw-loceditor-row-locale:after, .yw-modal-configurableFlow .ye-validation-warn .yw-loceditor-row-wysiwyg > .yw-loceditor-row-locale:before, .yw-modal-configurableFlow .ye-validation-warn .yw-loceditor-row-wysiwyg > .yw-loceditor-row-locale:after, .yw-modal-configurableFlow .ye-validation-error .yw-loceditor-row-wysiwyg > .yw-loceditor-row-locale:before, .yw-modal-configurableFlow .ye-validation-error .yw-loceditor-row-wysiwyg > .yw-loceditor-row-locale:after {
+    display: none; }
+  .yw-modal-configurableFlow .ye-validation-info .ye-validation-exclamation-icon, .yw-modal-configurableFlow .ye-validation-warn .ye-validation-exclamation-icon, .yw-modal-configurableFlow .ye-validation-error .ye-validation-exclamation-icon {
+    top: 0;
+    right: 1px;
+    position: absolute; }
+  .yw-modal-configurableFlow .ye-validation-info .ye-com_hybris_cockpitng_editor_localized, .yw-modal-configurableFlow .ye-validation-warn .ye-com_hybris_cockpitng_editor_localized, .yw-modal-configurableFlow .ye-validation-error .ye-com_hybris_cockpitng_editor_localized {
+    margin-top: 0; }
+  .yw-modal-configurableFlow .yw-wizard-property {
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden; }
+    .yw-modal-configurableFlow .yw-wizard-property-label {
+      color: var(--bo-content-label-color);
+      font-weight: normal; }
+      .yw-modal-configurableFlow .yw-wizard-property-label-mandatory:after {
+        content: "*";
+        color: var(--bo-input-required-color);
+        font-size: 14px;
+        position: relative;
+        top: -2px;
+        font-weight: 700; }
+    .yw-modal-configurableFlow .yw-wizard-property .z-spinner,
+    .yw-modal-configurableFlow .yw-wizard-property .z-timebox {
+      display: block; }
+    .yw-modal-configurableFlow .yw-wizard-property textarea.z-textbox + * button {
+      margin-top: 10px; }
+  .yw-modal-configurableFlow .yw-wizard-navigation {
+    border-top: 1px solid var(--bo-list-border-color);
+    height: 72px; }
+    .yw-modal-configurableFlow .yw-wizard-navigation .yw-left-pack .yw-component-wrapper, .yw-modal-configurableFlow .yw-wizard-navigation .yw-left-pack .component-wrapper, .yw-modal-configurableFlow .yw-wizard-navigation .yw-right-pack .yw-component-wrapper, .yw-modal-configurableFlow .yw-wizard-navigation .yw-right-pack .component-wrapper {
+      display: inline-block; }
+      .yw-modal-configurableFlow .yw-wizard-navigation .yw-left-pack .yw-component-wrapper .z-button, .yw-modal-configurableFlow .yw-wizard-navigation .yw-left-pack .component-wrapper .z-button, .yw-modal-configurableFlow .yw-wizard-navigation .yw-right-pack .yw-component-wrapper .z-button, .yw-modal-configurableFlow .yw-wizard-navigation .yw-right-pack .component-wrapper .z-button {
+        margin: 16px; }
+    .yw-modal-configurableFlow .yw-wizard-navigation .yw-right-pack {
+      position: absolute;
+      right: 0;
+      top: 0; }
+      .yw-modal-configurableFlow .yw-wizard-navigation .yw-right-pack .yw-component-wrapper + .yw-component-wrapper .z-button,
+      .yw-modal-configurableFlow .yw-wizard-navigation .yw-right-pack .component-wrapper + .component-wrapper .z-button {
+        margin-left: 0; }
+    .yw-modal-configurableFlow .yw-wizard-navigation .yw-left-pack .yw-component-wrapper + .yw-component-wrapper,
+    .yw-modal-configurableFlow .yw-wizard-navigation .yw-left-pack .component-wrapper + .component-wrapper {
+      padding-right: 0; }
+  .yw-modal-configurableFlow .ye-com_hybris_cockpitng_editor_defaultboolean.z-radiogroup {
+    clear: both;
+    display: block; }

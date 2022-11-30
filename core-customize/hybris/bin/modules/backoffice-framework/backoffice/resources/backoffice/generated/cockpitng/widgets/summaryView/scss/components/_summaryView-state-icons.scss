@@ -1,0 +1,103 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@import "../support/_summaryView-variables.scss";
+
+.yw-summaryview {
+    &-icon-item-icon {
+        width: $summaryView__widget-state-icon--size;
+        min-height: $summaryView__widget-state-icon--size;
+        background-repeat: no-repeat;
+        background-position: center center;
+        float: left;
+        position: relative;
+        
+        &:after {
+            font-family: $summaryView__widget-state-icon-default--font-family;
+            font-size: $summaryView__widget-state-icon-default--font-size;
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    &-workflows-status:after {
+        content: _getIconGlyphContentValue('complete');
+        color: $summaryView__widget-state-icon-default--color;
+    }
+    &-workflows-tasks:after {
+        content: _getIconGlyphContentValue('task');
+        color: $summaryView__widget-state-icon-default--color;
+    }
+    &-workflows-attachments:after {
+        content: _getIconGlyphContentValue('attachment');
+        color: $summaryView__widget-state-icon-default--color;
+    }
+    &-workflows-flow:after {
+        content: _getIconGlyphContentValue('synchronize');
+        color: $summaryView__widget-state-icon-default--color;
+    }
+    &-section-container-content &-icon-item-icon {
+        margin-right: $summaryView__widget-attribute-icon--margin-right;
+    }
+    &-approval-status {
+        &-approved:after {
+            content: $summaryView__approval-status-approved--content;
+            color: $summaryView__approval-status-approved--icon-color;
+        }
+        &-unapproved:after {
+            content: $summaryView__approval-status-unapproved--content;
+            color: $summaryView__approval-status-unapproved--icon-color;
+        }
+        &-check:after {
+            content: $summaryView__approval-status-check--content;
+            color: $summaryView__approval-status-check--icon-color;
+        }
+    }
+    &-online-status {
+        &-online:after {
+            content: $summaryView__online-state-online--content;
+            color: $summaryView__online-state-online--color;
+        }
+        &-offline:after {
+            content: $summaryView__online-state-online--content;
+            color: $summaryView__online-state-offline--color;
+        }
+    }
+    &-attribute-itemtype:after {
+        content: $summaryView__type--content;
+    }
+    &-attribute-variants:after {
+        content: $summaryView__variants--content;
+    }
+    &-attribute-catalogversion:after {
+        content: $summaryView__source-target-sync--content;
+    }
+    &-assets-thumbnail-picture-normal-thumbnails-detail-logo-data_sheet-others:after {
+        content: $summaryView__digital-assets--content;
+    }
+
+    &-icon-item-container {
+        &.yw-summaryview-container-editable.yw-summaryview-sync-status {
+            .yw-summaryview-icon-item-text-container {
+                width: $summaryView__sync-state-hover-text-container--width;
+
+                &:after {
+                    content: $summaryView__sync-state-hover-icon--content;
+                    font-family: $summaryView__sync-state-hover-icon--font-family;
+                    color: $summaryView__sync-state-hover-icon--color;
+                    font-size: $summaryView__widget-state-icon--size;
+                    right: $summaryView__sync-state-hover-icon--right;
+                    cursor: pointer;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            &:hover {
+                .yw-summaryview-icon-item-text-container:after {
+                    display: inline-block;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}

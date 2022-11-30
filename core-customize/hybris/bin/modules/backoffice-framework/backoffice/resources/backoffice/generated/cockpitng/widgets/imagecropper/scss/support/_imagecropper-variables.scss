@@ -1,0 +1,29 @@
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/cockpitng/cng/scss/cockpitng-globals.scss';
+@import '/home/wadmin/Documents/cloud-commerce-sample-setup-update-2211/core-customize/hybris/bin/modules/backoffice-framework/backoffice/resources/backoffice/generated/backoffice/scss/backoffice-variables.scss';
+
+@charset "utf-8";
+
+
+$image_cropper_preview_image--max-height: 300px;
+$image_cropper_preview_image--max-width: 600px;
+
+$image_cropper_preview_actions_container--height: $editor-defaults__inline-box--height; //40px
+$image_cropper_preview_actions_container--padding-top: $_container-spacing-default__tiny;
+$image_cropper_preview_actions_container--border-top: $boxes--border__thin solid var(--bo-page-footer-border-color);
+$image_cropper_preview_actions_button--margin-right: $_container-spacing-default__tiny;
+$image_cropper_preview_actions_button--min-height: 32px;
+$image_cropper_preview_actions_button--min-width: 64px;
+
+$image_cropper_preview_container--padding-bottom: 2 * $_container-spacing-default__tiny + $image_cropper_preview_actions_container--height;
+$image_cropper_preview_container--padding: $_container-spacing-default__tiny $_container-spacing-default__tiny $image_cropper_preview_container--padding-bottom $_container-spacing-default__tiny;
+
+// Override JCrop
+$jcrop-handle--border: $boxes--border__thin solid var(--bo-field-border-color);
+$jcrop-handle--size: 5px;
+$jcrop-handle--background: var(--bo-button-background);
+$jcrop-widget--border-color: var(--bo-field-border-color);
+$jcrop-widget--border: $boxes--border__thin dashed;
+$jcrop-shade--background: var(--bo-block-layer-background);
+$jcrop-shade--opacity: 0.5;
+$jcrop-widget--outline-color: var(--bo-input-border-color);
+$jcrop-widget--border-focus-color: var(--bo-highlight-color);

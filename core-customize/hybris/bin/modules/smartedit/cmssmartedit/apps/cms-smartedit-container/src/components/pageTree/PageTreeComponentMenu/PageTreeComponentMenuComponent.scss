@@ -1,0 +1,33 @@
+.se-page-tree {
+    &-component-menu {
+        margin: 0 0 0 auto;
+        display: flex;
+        flex-direction: row;
+        &--icon {
+            margin: 0 0 0 16px;
+            font-size: 14px;
+            line-height: 16px;
+            color: var(--sapContent_IconColor);
+        }
+    }
+
+    &-component-more {
+        min-width: 118px;
+        &-menu {
+            display: block;
+            &--span {
+                margin-left: 12px;
+                font-family: '72';
+                font-size: 14px;
+                line-height: 24px;
+                color: #000000;
+                display: block;
+                min-width: 104px;
+            }
+        }
+    }
+}
+
+.is-storefront .fd-popover__popper {
+    border-radius: 0;
+}
